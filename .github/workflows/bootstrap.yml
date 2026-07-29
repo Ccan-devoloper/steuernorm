@@ -37,22 +37,21 @@ jobs:
 
           datei = Path(".github/workflows/gesetze-aktualisieren.yml")
           text = datei.read_text(encoding="utf-8")
-          alt = '''      - name: Gesetzestexte laden
-                run: node tools/update.mjs
-          '''
-          neu = '''      - name: Gesetzestexte laden
-                shell: bash
-                run: |
-                  rm -rf /tmp/steuernorm-data-backup
-                  cp -a data /tmp/steuernorm-data-backup
-                  if node tools/update.mjs; then
-                    echo "Aktualisierung erfolgreich."
-                  else
-                    echo "::warning::Amtliche Quelle nicht vollständig erreichbar; bisheriger Datenstand bleibt vollständig erhalten."
-                    rm -rf data
-                    cp -a /tmp/steuernorm-data-backup data
-                  fi
-          '''
+          alt = "      - name: Gesetzestexte laden\n        run: node tools/update.mjs\n"
+          neu = (
+              "      - name: Gesetzestexte laden\n"
+              "        shell: bash\n"
+              "        run: |\n"
+              "          rm -rf /tmp/steuernorm-data-backup\n"
+              "          cp -a data /tmp/steuernorm-data-backup\n"
+              "          if node tools/update.mjs; then\n"
+              "            echo \"Aktualisierung erfolgreich.\"\n"
+              "          else\n"
+              "            echo \"::warning::Amtliche Quelle nicht vollständig erreichbar; bisheriger Datenstand bleibt vollständig erhalten.\"\n"
+              "            rm -rf data\n"
+              "            cp -a /tmp/steuernorm-data-backup data\n"
+              "          fi\n"
+          )
           if alt not in text:
               raise SystemExit("Erwarteter Aktualisierungsschritt wurde nicht gefunden")
           datei.write_text(text.replace(alt, neu), encoding="utf-8")
