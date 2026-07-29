@@ -24,11 +24,28 @@ jobs:
           node-version: "22"
 
       - name: Originaldateien wiederherstellen
+        shell: bash
         run: |
+          set -euo pipefail
           cat .bootstrap/payload.* | base64 --decode > /tmp/steuernorm-core.tgz
           tar -xzf /tmp/steuernorm-core.tgz
           cat .bootstrap/extras.* | base64 --decode > /tmp/steuernorm-extras.tgz
           tar -xzf /tmp/steuernorm-extras.tgz
+
+          # Einige Projektdateien liegen im Archiv unter einem zusätzlichen
+          # Projektordner. Diesen automatisch erkennen und in den Stamm kopieren.
+          if [ ! -s data/index.json ]; then
+            index_path="$(find . -mindepth 2 -maxdepth 6 -type f -path '*/data/index.json' -print -quit)"
+            if [ -n "$index_path" ]; then
+              project_root="${index_path%/data/index.json}"
+              echo "Projektdateien aus $project_root übernehmen"
+              cp -a "$project_root"/. .
+            fi
+          fi
+
+          test -s data/index.json
+          test -s index.html
+          test -s .github/workflows/gesetze-aktualisieren.yml
 
       - name: Tägliche Aktualisierung ausfallsicher machen
         run: |
@@ -52,23 +69,26 @@ jobs:
               "            cp -a /tmp/steuernorm-data-backup data\n"
               "          fi\n"
           )
-          if alt not in text:
+          if alt in text:
+              datei.write_text(text.replace(alt, neu), encoding="utf-8")
+          elif "bisheriger Datenstand bleibt vollständig erhalten" not in text:
               raise SystemExit("Erwarteter Aktualisierungsschritt wurde nicht gefunden")
-          datei.write_text(text.replace(alt, neu), encoding="utf-8")
           PY
 
       - name: Mitgelieferte Gesetzesdaten prüfen
         shell: bash
         run: |
+          set -euo pipefail
           test -s data/index.json
           for datei in data/*.json; do
             node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
           done
-          set -o pipefail
           node tools/pruefen.mjs | tee pruefbericht.txt
 
       - name: Fertigen Projektstand veröffentlichen
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "steuernorm-bot"
           git config user.email "bot@users.noreply.github.com"
           rm -rf .bootstrap
