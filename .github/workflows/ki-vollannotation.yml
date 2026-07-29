@@ -6,6 +6,7 @@ on:
       - "tools/ki-annotieren.mjs"
       - "tools/lib/**"
       - "tools/pruefen-v2.mjs"
+      - "tools/pruefen-fortschritt.mjs"
       - "config/referenzquellen.json"
       - ".github/workflows/ki-vollannotation.yml"
   push:
@@ -15,8 +16,11 @@ on:
       - "tools/ki-annotieren.mjs"
       - "tools/lib/**"
       - "tools/pruefen-v2.mjs"
+      - "tools/pruefen-fortschritt.mjs"
       - "config/referenzquellen.json"
       - ".github/workflows/ki-vollannotation.yml"
+  schedule:
+    - cron: "10 5 * * *"
   workflow_dispatch:
     inputs:
       gesetz:
@@ -25,9 +29,9 @@ on:
         default: ""
         type: string
       vollstaendig:
-        description: "Ausgewählte Normen unabhängig vom Text-Hash neu analysieren"
+        description: "Ausgewählte Normen und Zwischenstände neu beginnen"
         required: false
-        default: true
+        default: false
         type: boolean
 
 permissions:
@@ -45,6 +49,7 @@ env:
   BATCH_NORMEN: "2"
   BATCH_ZEICHEN: "9000"
   TEIL_ZEICHEN: "6500"
+  MAX_MODELLAUFRUFE: "40"
 
 jobs:
   smoke-test:
@@ -66,6 +71,7 @@ jobs:
       - name: SolzG vollständig mit KI und Logik analysieren
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_MODELLAUFRUFE: "20"
         run: node tools/ki-annotieren.mjs --nur solzg --voll
 
       - name: SolzG auf Vollständigkeit und Quellenkonsens prüfen
@@ -74,7 +80,7 @@ jobs:
   annotieren:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 180
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v5
@@ -84,17 +90,16 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Vollständige oder gezielte Analyse ausführen
+      - name: Automatische Tagesetappe ausführen
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EVENT_NAME: ${{ github.event_name }}
           INPUT_GESETZ: ${{ inputs.gesetz }}
           INPUT_VOLL: ${{ inputs.vollstaendig }}
         run: |
           set -euo pipefail
           args=()
-          if [ "$EVENT_NAME" = "push" ] || [ "$INPUT_VOLL" = "true" ]; then
+          if [ "${INPUT_VOLL:-false}" = "true" ]; then
             args+=(--voll)
           fi
           if [ -n "${INPUT_GESETZ:-}" ]; then
@@ -102,29 +107,20 @@ jobs:
           fi
           node tools/ki-annotieren.mjs "${args[@]}"
 
-      - name: Automatische Annotationen prüfen
-        shell: bash
-        env:
-          INPUT_GESETZ: ${{ inputs.gesetz }}
-        run: |
-          set -euo pipefail
-          args=()
-          if [ -n "${INPUT_GESETZ:-}" ]; then
-            args+=(--nur "$INPUT_GESETZ")
-          fi
-          node tools/pruefen-v2.mjs "${args[@]}" | tee pruefbericht.txt
+      - name: Finale Dateien und Zwischenstände prüfen
+        run: node tools/pruefen-fortschritt.mjs | tee pruefbericht-ki.txt
 
-      - name: Ergebnis veröffentlichen
+      - name: Fortschritt veröffentlichen
         shell: bash
         run: |
           set -euo pipefail
           rm -rf .cache .tmp
           git config user.name "steuernorm-ki-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add annotations reports pruefbericht.txt
+          git add annotations .ki-fortschritt reports pruefbericht-ki.txt
           if git diff --cached --quiet; then
-            echo "Alle Annotationen sind aktuell."
+            echo "Keine neuen KI-Annotationen in dieser Tagesetappe."
           else
-            git commit -m "KI-Vollannotation aktualisieren"
+            git commit -m "KI-Annotationsfortschritt aktualisieren"
             git push
           fi
