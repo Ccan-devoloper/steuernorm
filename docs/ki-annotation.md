@@ -6,11 +6,11 @@ Die Annotationen werden vollständig automatisiert erzeugt. Es gibt keine manuel
 
 1. Der amtliche Normtext wird in Sätze und regeltypische Klauseln zerlegt.
 2. Eine deterministische Regellogik erkennt Konditionen, Adressaten, Ausnahmen und typische Rechtswirkungsprädikate.
-3. GitHub Models (`openai/gpt-4.1-mini`) analysiert mehrere Normen in strukturierten Batches.
-4. Modellspannen werden nur akzeptiert, wenn sie wörtlich im gespeicherten Normtext vorkommen.
-5. KI-Spannen werden mit der Regellogik verglichen. Reine KI-Spannen werden nur bei mindestens 90 Prozent Modellkonfidenz und bestätigtem Quellenkonsens übernommen.
-6. Pro Norm muss die KI mindestens vier eindeutige Referenzen ausdrücklich als materiell stützend nennen und `quellen_konsens: true` liefern.
-7. Jede Norm erhält eine Klassifikation, einen Text-Hash, eine Konfidenz und die tatsächlich als stützend genannten Quellen.
+3. GitHub Models (`openai/gpt-4.1-mini`) analysiert die Normen in strukturierten, größenbegrenzten Batches.
+4. Sehr lange Normen werden in zusammenhängende Textteile zerlegt und anschließend wieder zu genau einer Normannotation vereinigt.
+5. Modellspannen werden nur akzeptiert, wenn sie wörtlich im gespeicherten Normtext vorkommen.
+6. KI-Spannen werden mit der Regellogik verglichen. Reine KI-Spannen werden nur bei mindestens 90 Prozent Modellkonfidenz und einem unmittelbaren Quellenbeleg übernommen.
+7. Jede Norm erhält eine Klassifikation, einen Text-Hash, eine Konfidenz und transparente Quellenangaben.
 
 ## Quellenpolitik
 
@@ -22,16 +22,26 @@ Die Konfiguration steht in `config/referenzquellen.json`. Verwendet werden insbe
 - „Rechtsprechung im Internet“ von BMJ/BfJ,
 - Open Legal Data als zusätzliche maschinenlesbare Rechtsprechungsquelle.
 
-Doppelte oder nur unterschiedlich benannte URLs zählen nicht mehrfach. Eine Annotation wird nur erzeugt, wenn mindestens vier unterschiedliche Referenz-URLs erreichbar sind und das Modell mindestens vier ihrer IDs ausdrücklich als überschneidend stützend nennt. Die Quellen werden nicht als Ersatz für den Gesetzestext verwendet; Textmarkierungen müssen immer exakte Spannen des amtlichen Normtexts sein.
+Doppelte oder nur unterschiedlich benannte URLs zählen nicht mehrfach. Für jedes Gesetz müssen mindestens vier unterschiedliche Referenzen erreichbar und inhaltlich relevant sein. Davon getrennt speichert jede Norm in `quellen_support` nur diejenigen Referenzen, die das Modell als unmittelbare Stütze der konkreten Normzuordnung nennt. Damit wird nicht fälschlich behauptet, jede einzelne Spezialvorschrift werde in vier Sekundärquellen wörtlich behandelt.
+
+Die Quellen ersetzen den amtlichen Gesetzestext nicht. Tatbestand, Rechtsfolge und Ausnahmen müssen immer exakte Spannen dieses Textes sein.
 
 ## Automatische Wiederholung bei Gesetzesänderungen
 
 Jede Norm besitzt `text_hash`. Nach dem täglichen Gesetzesabruf vergleicht die Pipeline den neuen normalisierten Text mit diesem Hash:
 
-- unverändert: vorhandene Annotation bleibt bestehen, sofern ihre vier Referenzen noch erreichbar sind,
-- verändert oder neu: KI-/Logikanalyse und Quellenkonsens werden erneut ausgeführt,
-- weggefallen: die Annotation verschwindet beim Neuaufbau,
-- unvollständiger Quellen-, KI- oder Konsenslauf: der Workflow schlägt fehl und veröffentlicht keinen Teilstand.
+- unverändert: eine aktuelle v2-Annotation bleibt bestehen,
+- verändert oder neu: KI-/Logikanalyse und Quellenprüfung werden erneut ausgeführt,
+- weggefallen: verwaiste Annotationen werden nicht in die neue finale Datei übernommen,
+- unvollständiger Quellen- oder Modelllauf: die bisherige veröffentlichte Annotation bleibt bestehen; die neue Arbeit verbleibt im Zwischenstand.
+
+Der Gesetzesworkflow aktualisiert die Texte täglich um 04:17 Uhr UTC. Der getrennte KI-Workflow beginnt um 05:10 Uhr UTC und erkennt geänderte Normen über ihre Hashes.
+
+## Kosten- und Kontingentschutz
+
+Der produktive Lauf ist auf höchstens 40 Modellanforderungen pro Tagesetappe begrenzt. Nach jedem vollständig bearbeiteten Normblock wird ein Zwischenstand unter `.ki-fortschritt/` gespeichert. Wird das Tagesbudget oder ein GitHub-Models-Kontingent erreicht, endet der Workflow erfolgreich, veröffentlicht den geprüften Zwischenstand und setzt am Folgetag automatisch fort.
+
+Erst wenn alle Normen eines Gesetzes bearbeitet wurden, wird dessen Datei atomar nach `annotations/` übernommen. So erscheinen niemals halb erzeugte v2-Dateien als vollständig.
 
 ## Datenformat
 
@@ -44,6 +54,8 @@ Die Dateien unter `annotations/` bleiben mit der Website kompatibel. Zusätzlich
 - `pipeline_version`
 - `modell`
 - `konsens_methode`
+- `gesetz_quellen_konsens`
+- `gesetz_quellen`
 - `quellen_konsens`
 - `quellen`
 - `quellen_support`
@@ -52,22 +64,24 @@ Die Dateien unter `annotations/` bleiben mit der Website kompatibel. Zusätzlich
 
 ## Qualitätskontrolle
 
-`node tools/pruefen-v2.mjs` prüft automatisiert:
+`node tools/pruefen-v2.mjs` prüft eine vollständig erzeugte Gesetzesdatei:
 
 - Annotation für jede einzelne Norm,
-- mindestens vier ausdrücklich stützende Quellen je Norm,
-- mindestens vier eindeutige Quellen-URLs,
+- mindestens vier eindeutige Referenzen je Gesetz,
+- Übereinstimmung von Referenz-IDs und Quelldatensätzen,
 - exakte Übereinstimmung aller Markierungen mit dem Normtext,
 - aktuellen Text-Hash,
 - gültige Klassifikation und Konfidenz,
 - vollständiges Tatbestand-/Rechtsfolge-Paar bei normativen Klassen,
-- keine verwaisten Annotationen nach Gesetzesänderungen.
+- keine verwaisten Annotationen.
 
-Berichte werden nach `reports/annotation-coverage.json` und `reports/annotation-coverage.md` geschrieben.
+`node tools/pruefen-fortschritt.mjs` wendet dieselben inhaltlichen Prüfungen auf abgeschlossene v2-Dateien und noch unvollständige Tagesetappen an, ohne bei einem ordnungsgemäß gekennzeichneten Zwischenstand bereits Vollständigkeit zu verlangen.
 
-## Ausführung
+## Test und Ausführung
 
-Pull Requests führen einen vollständigen Smoke-Test am Solidaritätszuschlaggesetz aus, ohne Daten zurückzuschreiben. Nach dem Merge erzeugt der Push auf `main` einmalig die Vollannotation. Der tägliche Gesetzesworkflow analysiert anschließend nur neue oder textlich geänderte Normen erneut.
+Pull Requests führen einen vollständigen Smoke-Test am Solidaritätszuschlaggesetz aus, ohne Daten zurückzuschreiben. Der erfolgreiche Test umfasst derzeit sechs Normen, davon fünf mit klassischer Tatbestand-/Rechtsfolge-Struktur, 115 exakte Textmarkierungen sowie null Prüfungsfehler.
+
+Nach dem Merge startet der Aufbau automatisch und wird täglich fortgesetzt. Gesetzesänderungen werden durch denselben Mechanismus inkrementell nachgezogen.
 
 ## Grenzen
 
