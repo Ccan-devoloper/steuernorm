@@ -1,6 +1,7 @@
 import { textDerNorm } from "./text.mjs";
 
 const API = "https://models.github.ai/inference/chat/completions";
+const REQUEST_TIMEOUT_MS = Math.max(30_000, Number(process.env.MODELL_TIMEOUT_MS || 120_000));
 
 export class ModellBudgetErschoepft extends Error {
   constructor(message = "Modellaufruf-Budget erschöpft") {
@@ -20,6 +21,11 @@ const SYSTEM = `Du analysierst deutsches Steuerrecht als strukturierter Informat
 Gib ausschließlich valides JSON zurück. Jede Phrase in tb, rf und ausnahmen muss eine wörtliche, zusammenhängende Teilzeichenkette aus dem gelieferten Normtext sein. Tatbestand sind Voraussetzungen, Adressaten, Gegenstände, Handlungen, Zeit-/Ortselemente und negative Voraussetzungen. Rechtsfolge sind Rechtswirkungen, Pflichten, Verbote, Erlaubnisse, Ansprüche, Fiktionen, Definitionsergebnisse, Berechnungs- und Verfahrensfolgen. Erfasse mehrere Regeln, liefere aber deduplizierte Span-Listen. Klassifiziere jede Norm als rule, definition, fiction, obligation, prohibition, permission, entitlement, calculation, procedure, competence, reference_only oder no_classic_rule.
 Quellen dienen zur Plausibilisierung. Nenne in quellen_support nur IDs von Referenzen, deren gelieferter Ausschnitt die Einordnung materiell stützt. Setze quellen_konsens nur dann auf true, wenn mehrere unterschiedliche Referenzen zu einem überschneidenden Ergebnis für die konkrete Norm führen. Der amtliche Normtext darf als eine Referenz zählen. Wenn die Referenzen die konkrete Norm nicht unmittelbar stützen, setze quellen_konsens auf false und nenne nur die tatsächlich stützenden IDs. Bei Unklarheit senke konfidenz. Keine Markdown-Codeblöcke.`;
 
+const KLASSEN = [
+  "rule", "definition", "fiction", "obligation", "prohibition", "permission",
+  "entitlement", "calculation", "procedure", "competence", "reference_only", "no_classic_rule",
+];
+
 const ANTWORT_SCHEMA = {
   name: "steuernorm_annotation",
   strict: true,
@@ -34,13 +40,7 @@ const ANTWORT_SCHEMA = {
           additionalProperties: false,
           properties: {
             id: { type: "string" },
-            klassifikation: {
-              type: "string",
-              enum: [
-                "rule", "definition", "fiction", "obligation", "prohibition", "permission",
-                "entitlement", "calculation", "procedure", "competence", "reference_only", "no_classic_rule",
-              ],
-            },
+            klassifikation: { type: "string", enum: KLASSEN },
             tb: { type: "array", items: { type: "string" } },
             rf: { type: "array", items: { type: "string" } },
             ausnahmen: { type: "array", items: { type: "string" } },
@@ -63,16 +63,14 @@ const ANTWORT_SCHEMA = {
 function nutzer(gesetz, batch, quellen) {
   return JSON.stringify({
     gesetz: { abk: gesetz.abk, titel: gesetz.titel },
-    referenzen: quellen
-      .filter((quelle) => quelle.erreichbar)
-      .map((quelle) => ({
-        id: quelle.id,
-        typ: quelle.typ,
-        herausgeber: quelle.herausgeber,
-        titel: quelle.titel,
-        url: quelle.url,
-        ausschnitt: quelle.ausschnitt.slice(0, 900),
-      })),
+    referenzen: quellen.filter((q) => q.erreichbar).map((q) => ({
+      id: q.id,
+      typ: q.typ,
+      herausgeber: q.herausgeber,
+      titel: q.titel,
+      url: q.url,
+      ausschnitt: q.ausschnitt.slice(0, 900),
+    })),
     normen: batch.map(({ norm, logik }) => ({
       id: String(norm.id),
       enbez: norm.enbez,
@@ -98,6 +96,26 @@ function budgetVerbrauchen(budget) {
   budget.verbraucht++;
 }
 
+async function fetchMitTimeout(body, token) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(new Error("Modell-Request-Timeout")), REQUEST_TIMEOUT_MS);
+  try {
+    return await fetch(API, {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2026-03-10",
+      },
+      body: JSON.stringify(body),
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
   const body = {
     model: modell,
@@ -117,28 +135,20 @@ async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
     budgetVerbrauchen(budget);
     let antwort;
     try {
-      antwort = await fetch(API, {
-        method: "POST",
-        headers: {
-          Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-          "X-GitHub-Api-Version": "2026-03-10",
-        },
-        body: JSON.stringify(body),
-      });
+      antwort = await fetchMitTimeout(body, token);
     } catch (fehler) {
       netzVersuche++;
+      const detail = fehler?.name === "AbortError" ? `Timeout nach ${REQUEST_TIMEOUT_MS / 1000}s` : fehler.message;
       if (rateVersuche > 0) {
-        throw new ModellKontingentErschoepft(`Netzwerkabbruch nach GitHub-Models-429: ${fehler.message}`);
+        throw new ModellKontingentErschoepft(`Netzwerkabbruch nach GitHub-Models-429: ${detail}`);
       }
       if (netzVersuche < 3) {
         const warten = 3_000 * netzVersuche;
-        console.warn(`Modellnetzwerkfehler; neuer Versuch in ${warten / 1_000}s`);
+        console.warn(`Modellnetzwerkfehler (${detail}); neuer Versuch in ${warten / 1_000}s`);
         await new Promise((resolve) => setTimeout(resolve, warten));
         continue;
       }
-      throw new ModellKontingentErschoepft(`GitHub Models wiederholt nicht erreichbar: ${fehler.message}`);
+      throw new ModellKontingentErschoepft(`GitHub Models wiederholt nicht erreichbar: ${detail}`);
     }
 
     if (antwort.ok) return antwortInhalt(await antwort.json());
@@ -180,7 +190,6 @@ export async function modellAufruf(args) {
   for (const eintrag of args.batch) {
     const id = String(eintrag.norm.id);
     if (vorhandene.has(id)) continue;
-
     console.warn(`Modellantwort fehlt für ${id}; Einzelwiederholung`);
     await new Promise((resolve) => setTimeout(resolve, 1_500));
     const einzelAntwort = await roherAufruf({ ...args, batch: [eintrag] });
