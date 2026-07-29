@@ -41,7 +41,7 @@ permissions:
 
 concurrency:
   group: steuernorm-ki-vollannotation-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 
 env:
   KI_MODELL: openai/gpt-4.1-mini
@@ -112,6 +112,7 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
           INPUT_GESETZ: ${{ inputs.gesetz }}
           INPUT_VOLL: ${{ inputs.vollstaendig }}
         run: |
@@ -122,6 +123,9 @@ jobs:
           fi
           if [ -n "${INPUT_GESETZ:-}" ]; then
             args+=(--nur "$INPUT_GESETZ")
+          elif [ "$EVENT_NAME" = "push" ]; then
+            # Nach Codeänderungen zuerst ein kleines Gesetz vollständig produktiv absichern.
+            args+=(--nur solzg)
           fi
           node tools/ki-annotieren.mjs "${args[@]}"
 
