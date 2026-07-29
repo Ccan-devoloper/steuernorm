@@ -1,0 +1,79 @@
+name: KI-Vollannotation erzeugen
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "tools/ki-annotieren.mjs"
+      - "tools/lib/**"
+      - "tools/pruefen-v2.mjs"
+      - "config/referenzquellen.json"
+      - ".github/workflows/ki-vollannotation.yml"
+  schedule:
+    - cron: "10 3 * * *"
+  workflow_dispatch:
+    inputs:
+      vollstaendig:
+        description: "Alle Normen unabhängig vom Text-Hash neu analysieren"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: steuernorm-ki-vollannotation
+  cancel-in-progress: false
+
+env:
+  KI_MODELL: openai/gpt-4.1-mini
+  MIN_QUELLEN: "4"
+  REQUIRE_AI: "1"
+
+jobs:
+  annotieren:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Vollständige oder inkrementelle Analyse ausführen
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_VOLL: ${{ inputs.vollstaendig }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$EVENT_NAME" = "push" ] || [ "$INPUT_VOLL" = "true" ]; then
+            args+=(--voll)
+          fi
+          node tools/ki-annotieren.mjs "${args[@]}"
+
+      - name: Automatische Annotationen prüfen
+        run: node tools/pruefen-v2.mjs | tee pruefbericht.txt
+
+      - name: Ergebnis veröffentlichen
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .cache .tmp
+          git config user.name "steuernorm-ki-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add annotations reports pruefbericht.txt
+          if git diff --cached --quiet; then
+            echo "Alle Annotationen sind aktuell."
+          else
+            git commit -m "KI-Vollannotation aktualisieren"
+            git push
+          fi
