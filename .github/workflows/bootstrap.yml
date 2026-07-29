@@ -1,11 +1,6 @@
 name: Projekt fertigstellen
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/bootstrap.yml"
   workflow_dispatch:
 
 permissions:
@@ -16,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository auschecken
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Node.js einrichten
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
 
-      - name: Originaldateien wiederherstellen
+      - name: Anwendungsdateien wiederherstellen
         shell: bash
         run: |
           set -euo pipefail
@@ -32,54 +27,29 @@ jobs:
           cat .bootstrap/extras.* | base64 --decode > /tmp/steuernorm-extras.tgz
           tar -xzf /tmp/steuernorm-extras.tgz
 
-          # Einige Projektdateien liegen im Archiv unter einem zusätzlichen
-          # Projektordner. Diesen automatisch erkennen und in den Stamm kopieren.
-          if [ ! -s data/index.json ]; then
-            index_path="$(find . -mindepth 2 -maxdepth 6 -type f -path '*/data/index.json' -print -quit)"
-            if [ -n "$index_path" ]; then
-              project_root="${index_path%/data/index.json}"
-              echo "Projektdateien aus $project_root übernehmen"
-              cp -a "$project_root"/. .
-            fi
-          fi
-
-          test -s data/index.json
           test -s index.html
-          test -s .github/workflows/gesetze-aktualisieren.yml
+          test -s package.json
+          test -s tools/update.mjs
+          test -s tools/pruefen.mjs
+          test -s tools/update-von-github.mjs
+          test -s .github/workflows/gesetze-aktualisieren-neu.yml
 
-      - name: Tägliche Aktualisierung ausfallsicher machen
+      - name: Gesetzestexte aus dem täglichen XML-Archiv laden
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
+          set -euo pipefail
+          rm -rf data
+          node tools/update-von-github.mjs
 
-          datei = Path(".github/workflows/gesetze-aktualisieren.yml")
-          text = datei.read_text(encoding="utf-8")
-          alt = "      - name: Gesetzestexte laden\n        run: node tools/update.mjs\n"
-          neu = (
-              "      - name: Gesetzestexte laden\n"
-              "        shell: bash\n"
-              "        run: |\n"
-              "          rm -rf /tmp/steuernorm-data-backup\n"
-              "          cp -a data /tmp/steuernorm-data-backup\n"
-              "          if node tools/update.mjs; then\n"
-              "            echo \"Aktualisierung erfolgreich.\"\n"
-              "          else\n"
-              "            echo \"::warning::Amtliche Quelle nicht vollständig erreichbar; bisheriger Datenstand bleibt vollständig erhalten.\"\n"
-              "            rm -rf data\n"
-              "            cp -a /tmp/steuernorm-data-backup data\n"
-              "          fi\n"
-          )
-          if alt in text:
-              datei.write_text(text.replace(alt, neu), encoding="utf-8")
-          elif "bisheriger Datenstand bleibt vollständig erhalten" not in text:
-              raise SystemExit("Erwarteter Aktualisierungsschritt wurde nicht gefunden")
-          PY
-
-      - name: Mitgelieferte Gesetzesdaten prüfen
+      - name: Vollständigen Datenbestand und Markierungen prüfen
         shell: bash
         run: |
           set -euo pipefail
           test -s data/index.json
+          anzahl="$(find data -maxdepth 1 -type f -name '*.json' ! -name 'index.json' | wc -l)"
+          test "$anzahl" -eq 14
           for datei in data/*.json; do
             node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
           done
@@ -92,7 +62,8 @@ jobs:
           git config user.name "steuernorm-bot"
           git config user.email "bot@users.noreply.github.com"
           rm -rf .bootstrap
-          rm -f .github/workflows/bootstrap.yml
+          rm -f .github/workflows/gesetze-aktualisieren.yml
+          mv .github/workflows/gesetze-aktualisieren-neu.yml .github/workflows/gesetze-aktualisieren.yml
           git add -A
           git commit -m "Steuernorm-Anwendung einrichten"
           git push
