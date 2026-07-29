@@ -1,0 +1,45 @@
+{
+ "abk": "BewG",
+ "normen": {
+  "9": {
+   "tb": [
+    "der im gewöhnlichen Geschäftsverkehr nach der Beschaffenheit des Wirtschaftsgutes bei einer Veräußerung zu erzielen wäre"
+   ],
+   "rf": [
+    "der gemeine Wert zugrunde zu legen"
+   ],
+   "hinweis": "Der gemeine Wert ist der Auffangmaßstab des Bewertungsrechts. Ungewöhnliche oder persönliche Verhältnisse bleiben außer Betracht.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Kein vorrangiger besonderer Wertmaßstab",
+     "art": "tb",
+     "sub": [
+      "Grundbesitzwerte §§ 176 ff., Betriebsvermögen §§ 95 ff."
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Gewöhnlicher Geschäftsverkehr",
+     "art": "tb",
+     "sub": [
+      "Erzielbarer Einzelveräußerungspreis"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Ungewöhnliche und persönliche Verhältnisse bleiben unberücksichtigt",
+     "art": "tb",
+     "sub": [
+      "Verfügungsbeschränkungen aus persönlichen Gründen zählen nicht"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: gemeiner Wert als Bemessungsgrundlage",
+     "art": "rf"
+    }
+   ]
+  }
+ }
+}
