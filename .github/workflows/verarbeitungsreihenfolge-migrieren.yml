@@ -1,5 +1,6 @@
 name: KI-Verarbeitungsreihenfolge optimieren
 
+# Einmaliger Migrationsworkflow; nach erfolgreicher Ausführung wird er entfernt.
 on:
   push:
     branches:
