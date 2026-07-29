@@ -57,22 +57,15 @@ jobs:
           datei.write_text(text.replace(alt, neu), encoding="utf-8")
           PY
 
-      - name: Aktuelle Gesetzestexte laden oder vorhandene Daten verwenden
+      - name: Mitgelieferte Gesetzesdaten prüfen
         shell: bash
         run: |
-          rm -rf /tmp/steuernorm-data-backup
-          cp -a data /tmp/steuernorm-data-backup
-          if node tools/update.mjs; then
-            echo "Aktualisierung erfolgreich."
-          else
-            echo "::warning::Amtliche Quelle nicht vollständig erreichbar; mitgelieferter Datenstand wird verwendet."
-            rm -rf data
-            cp -a /tmp/steuernorm-data-backup data
-          fi
           test -s data/index.json
-
-      - name: Markierungen prüfen
-        run: node tools/pruefen.mjs | tee pruefbericht.txt
+          for datei in data/*.json; do
+            node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
+          done
+          set -o pipefail
+          node tools/pruefen.mjs | tee pruefbericht.txt
 
       - name: Fertigen Projektstand veröffentlichen
         run: |
