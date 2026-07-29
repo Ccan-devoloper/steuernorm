@@ -1,121 +1,55 @@
 # steuernorm
 
-Textausgabe der vierzehn Steuergesetze aus dem Screenshot, im Volltext, mit
-zuschaltbaren Markierungen (Tatbestandsmerkmale gelb, Rechtsfolgen grün) und
-Prüfungsschemata. Statisches HTML, kein Framework, kein Build.
+Statische Textausgabe von 14 deutschen Steuergesetzen mit vollautomatisch erzeugten, positionsgebundenen Markierungen für Tatbestand, Rechtsfolge und Ausnahmen.
 
-**1.532 Normen** in AO, BewG, EStG, KStG, UStG, GewStG, ErbStG, GrStG, FGO,
-GrEStG, UmwStG, AStG, SolzG und InvStG.
+## Version 3
 
-## Starten
+Die Annotationspipeline verwendet:
 
-Ein Browser darf über `file://` keine Daten nachladen. Also über einen Server:
+- strukturerhaltende Zerlegung in adressierte Rechtssätze,
+- deterministische deutsche Satzgliedanalyse,
+- harte Validatoren als technisches Veto,
+- mehrere unabhängige GitHub-Models-Läufe,
+- eine getrennte Gegenprobe,
+- gemessene Übereinstimmung statt modellseitiger Selbsteinschätzung,
+- Zeichenpositionen statt globaler Phrasensuche.
 
-```
-python3 -m http.server 8000      # oder: npm start
-```
+Die vollständige technische Beschreibung, Messwerte, Datenstruktur und Grenzen des Verfahrens stehen in [`README-v3.md`](README-v3.md).
 
-Dann `http://localhost:8000`. Zum Veröffentlichen genügt jeder Statik-Hoster;
-GitHub Pages, Netlify und Cloudflare Pages funktionieren ohne Konfiguration.
+## Lokal starten
 
-## Wie sich die Texte aktualisieren
-
-Quelle ist **Gesetze im Internet** (Bundesministerium der Justiz und Bundesamt
-für Justiz). Das Portal stellt unter `gii-toc.xml` ein tagesaktuelles
-Inhaltsverzeichnis und je Gesetz ein `xml.zip` bereit — dieselbe Grundlage, aus
-der auch dejure seine Texte zieht.
-
-```
-node tools/update.mjs              # alle Gesetze
-node tools/update.mjs --nur estg,ustg
+```bash
+npm start
 ```
 
-Das Skript lädt die XML-Dateien, wandelt sie in schlankes JSON unter `data/`
-und schreibt ein Register `data/index.json`. Braucht `unzip` im Pfad.
+Danach ist die Anwendung unter `http://localhost:8000` erreichbar.
 
-`.github/workflows/gesetze-aktualisieren.yml` erledigt das täglich um 4:17 UTC
-und schreibt Änderungen als Commit fest. Jede Gesetzesänderung wird damit zu
-einem sichtbaren Diff — der Verlauf einer Norm lässt sich über `git log`
-nachvollziehen.
+## Gesetzestexte aktualisieren
 
-> **Die mitgelieferten Daten sind ein Startbestand vom Winter 2024/2025.**
-> Vor dem ersten Einsatz einmal `node tools/update.mjs` laufen lassen. Die
-> Seite zeigt bei jeder Norm den Datenstand an und warnt sichtbar, sobald er
-> älter als 90 Tage ist.
-
-## Markierungen und Schemata
-
-Getrennt vom Gesetzestext in `annotations/<gesetz>.json`, damit eine
-Aktualisierung sie nicht überschreibt:
-
-```json
-{
-  "abk": "EStG",
-  "normen": {
-    "15": {
-      "tb": ["selbständige nachhaltige Betätigung"],
-      "rf": ["ist Gewerbebetrieb"],
-      "hinweis": "Ungeschriebenes negatives Merkmal: …",
-      "schema": [
-        { "n": "I.", "t": "Selbständigkeit", "art": "tb",
-          "sub": ["Unternehmerrisiko und Unternehmerinitiative"] }
-      ]
-    }
-  }
-}
+```bash
+npm run update
 ```
 
-* `tb` und `rf` sind **wörtliche Auszüge aus dem amtlichen Text**. Die Seite
-  sucht sie zur Laufzeit und legt die Markierung darüber.
-* `art` färbt den Schemaschritt mit — so ist auf einen Blick zu sehen, welcher
-  Prüfungspunkt welches Merkmal abarbeitet.
-* Ändert der Gesetzgeber den Wortlaut, findet die Phrase ihre Stelle nicht
-  mehr. Die Seite meldet das dann offen als verwaiste Markierung, statt still
-  nichts anzuzeigen. `node tools/pruefen.mjs` meldet dasselbe im Terminal, der
-  Workflow setzt daraus eine Warnung.
+Der tägliche GitHub-Actions-Lauf vergleicht die amtlichen Gesetzesdaten und schreibt nur tatsächliche Änderungen fest.
 
-Derzeit annotiert: 25 Normen, 65 geprüfte Markierungen. Der Punkt im Register
-zeigt, welche Normen schon Markierungen haben.
+## Annotationen
 
-Nach dem Bearbeiten von `tools/annotationen.mjs`:
+Deterministische Baseline ohne Modellaufrufe:
 
-```
-node tools/annotationen.mjs && node tools/pruefen.mjs
+```bash
+npm run annotieren -- --ohne-ki
+npm run pruefen -- --streng
 ```
 
-## Bedienung
+Mehrfachmodell-Lauf mit Gegenprobe:
 
-| | |
-|---|---|
-| `/` | Suche fokussieren |
-| `Esc` | Register schließen |
-| Klick auf `§ 15 Abs. 2 EStG` im Text | springt zur Norm |
-| `#/ustg/15` | Direktlink auf jede Norm |
-
-Die Schalter für Tatbestand und Rechtsfolge lassen sich einzeln umlegen und
-bleiben gespeichert.
-
-## Aufbau
-
-```
-index.html                     die ganze Anwendung
-data/                          erzeugt, nicht von Hand bearbeiten
-annotations/                   kuratiert, von Hand gepflegt
-tools/update.mjs               Gesetzestexte holen und wandeln
-tools/annotationen.mjs         Annotationen erzeugen
-tools/pruefen.mjs              Markierungen gegen den Text prüfen
+```bash
+npm run annotieren
+npm run pruefen -- --streng
 ```
 
-Gesetze aufnehmen oder entfernen: die Liste `GESETZE` am Anfang von
-`tools/update.mjs` bearbeiten. Der `slug` ist das Kürzel aus der URL bei
-gesetze-im-internet.de, das Muster `ABK_MUSTER` in `index.html` steuert, welche
-Abkürzungen im Text verlinkt werden.
+Unveränderte Normen werden über ihren Text-Hash übernommen. Geänderte Normen werden automatisch neu verarbeitet; bei erschöpftem Modellkontingent wird ein fortsetzbarer Zwischenstand unter `.fortschritt/` gespeichert.
 
 ## Rechtliches
 
-Gesetzestexte sind amtliche Werke und nach § 5 Abs. 1 UrhG gemeinfrei. Die
-Deep-Link-Verlinkung auf Gesetze im Internet ist ausdrücklich gestattet.
-Maßgeblich ist allein die im Bundesgesetzblatt verkündete Fassung; diese Seite
-ist eine Lesehilfe und keine Rechtsberatung. Markierungen, Hinweise und
-Prüfungsschemata sind eine eigene didaktische Zutat und geben eine vertretbare,
-nicht die einzige mögliche Auffassung wieder.
+Maßgeblich ist ausschließlich die im Bundesgesetzblatt verkündete Gesetzesfassung. Die Markierungen sind eine automatisierte Strukturierungshilfe, nicht redaktionell geprüft und keine Rechtsberatung.
