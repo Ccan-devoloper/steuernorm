@@ -144,5 +144,6 @@ jobs:
             echo "Keine neuen KI-Annotationen in dieser Tagesetappe."
           else
             git commit -m "KI-Annotationsfortschritt aktualisieren"
+            git pull --rebase origin main
             git push
           fi
