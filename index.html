@@ -107,6 +107,7 @@
     -webkit-box-decoration-break:clone;box-decoration-break:clone}
   body[data-tb=an] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
   body[data-rf=an] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
+  body[data-tb=an][data-rf=an] mark.tb.rf{background:linear-gradient(180deg,var(--tb) 0 50%,var(--rf) 50% 100%);box-shadow:inset 0 -2px 0 var(--rf-kante)}
 
   .fussnote{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px;
     font-size:12.5px;color:var(--leise);white-space:pre-wrap;font-family:var(--mono);line-height:1.6}
@@ -244,52 +245,109 @@ async function gesetzLaden(abk){
 }
 
 /* --------------------------- Markierungen --------------------------- */
-/* Textknoten einsammeln, damit Treffer auch über Elementgrenzen laufen. */
-function knotenliste(wurzel){
+/* Kanonischer Textindex mit Zuordnung jedes Suchzeichens zum ursprünglichen Textknoten. */
+function textindex(wurzel){
   const gehe = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT, {
     acceptNode(n){
       if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
-      let p = n.parentElement;
-      while (p && p !== wurzel){
-        if (p.tagName === "MARK" || p.classList.contains("sn")) return NodeFilter.FILTER_REJECT;
-        p = p.parentElement;
-      }
+      if (n.parentElement.closest(".sn")) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
-  const knoten = [];
-  let n, pos = 0, text = "";
-  while ((n = gehe.nextNode())){
-    knoten.push({ n, von: pos, bis: pos + n.nodeValue.length });
-    text += n.nodeValue;
-    pos = text.length;
+
+  const knoten = [], karte = [];
+  let text = "", n;
+
+  function leerzeichen(ref = null){
+    if (text && !text.endsWith(" ")){
+      text += " ";
+      karte.push(ref);
+    }
   }
-  return { knoten, text };
+
+  function zeichen(ch, ref){
+    if (/\s/.test(ch)){
+      leerzeichen(ref);
+      return;
+    }
+    if (/[,.;:!?]/.test(ch) && text.endsWith(" ")){
+      text = text.slice(0, -1);
+      karte.pop();
+    }
+    text += ch;
+    karte.push(ref);
+  }
+
+  while ((n = gehe.nextNode())){
+    if (knoten.length) leerzeichen();
+    knoten.push(n);
+    for (let i = 0; i < n.nodeValue.length; i++){
+      zeichen(n.nodeValue[i], { n, i });
+    }
+  }
+  if (text.endsWith(" ")){
+    text = text.slice(0, -1);
+    karte.pop();
+  }
+  return { text, karte, knoten };
 }
 
-function markieren(wurzel, phrase, klasse){
-  const { knoten, text } = knotenliste(wurzel);
-  const start = text.indexOf(phrase);
-  if (start === -1) return false;
-  const ende = start + phrase.length;
-  // Von hinten arbeiten, damit frühere Offsets gültig bleiben.
-  for (let i = knoten.length - 1; i >= 0; i--){
-    const k = knoten[i];
-    if (k.bis <= start || k.von >= ende) continue;
-    const a = Math.max(0, start - k.von);
-    const b = Math.min(k.n.nodeValue.length, ende - k.von);
-    const knotenText = k.n.nodeValue;
-    const mitte = document.createTextNode(knotenText.slice(a, b));
-    const m = document.createElement("mark");
-    m.className = klasse;
-    m.appendChild(mitte);
-    const frag = document.createDocumentFragment();
-    if (a > 0) frag.appendChild(document.createTextNode(knotenText.slice(0, a)));
-    frag.appendChild(m);
-    if (b < knotenText.length) frag.appendChild(document.createTextNode(knotenText.slice(b)));
-    k.n.parentNode.replaceChild(frag, k.n);
+function fundstellen(text, phrase){
+  const treffer = [];
+  if (typeof phrase !== "string" || !phrase) return treffer;
+  let von = 0, start;
+  while ((start = text.indexOf(phrase, von)) !== -1){
+    treffer.push([start, start + phrase.length]);
+    von = start + Math.max(1, phrase.length);
   }
-  return true;
+  return treffer;
+}
+
+function markierungenAnlegen(wurzel, anm){
+  const { text, karte, knoten } = textindex(wurzel);
+  const klassen = new Map(knoten.map(n => [n, new Uint8Array(n.nodeValue.length)]));
+  let verwaist = 0;
+
+  for (const [art, bit] of [["tb", 1], ["rf", 2]]){
+    for (const phrase of anm[art] || []){
+      const treffer = fundstellen(text, phrase);
+      if (!treffer.length){
+        verwaist++;
+        continue;
+      }
+      for (const [start, ende] of treffer){
+        for (let pos = start; pos < ende; pos++){
+          const ref = karte[pos];
+          if (ref) klassen.get(ref.n)[ref.i] |= bit;
+        }
+      }
+    }
+  }
+
+  for (const n of knoten){
+    const roh = n.nodeValue;
+    const bits = klassen.get(n);
+    if (!bits.some(Boolean)) continue;
+    const frag = document.createDocumentFragment();
+    let start = 0;
+    while (start < roh.length){
+      const bit = bits[start];
+      let ende = start + 1;
+      while (ende < roh.length && bits[ende] === bit) ende++;
+      const ausschnitt = roh.slice(start, ende);
+      if (!bit){
+        frag.appendChild(document.createTextNode(ausschnitt));
+      } else {
+        const mark = document.createElement("mark");
+        mark.className = bit === 3 ? "tb rf" : (bit === 1 ? "tb" : "rf");
+        mark.textContent = ausschnitt;
+        frag.appendChild(mark);
+      }
+      start = ende;
+    }
+    n.parentNode.replaceChild(frag, n);
+  }
+  return verwaist;
 }
 
 /* --------------------------- Querverweise --------------------------- */
@@ -482,12 +540,8 @@ function normZeichnen(){
   }
   haupt.appendChild(text);
 
-  // Markierungen anlegen; nicht mehr passende Phrasen melden
-  let verwaist = 0;
-  if (anm){
-    for (const p of anm.tb || []) if (!markieren(text, p, "tb")) verwaist++;
-    for (const p of anm.rf || []) if (!markieren(text, p, "rf")) verwaist++;
-  }
+  // Alle Markierungen in einem Durchgang gegen denselben kanonischen Text wie im Backend anlegen.
+  const verwaist = anm ? markierungenAnlegen(text, anm) : 0;
   verweiseSetzen(text, S.abk);
 
   if (norm.fussnote){
