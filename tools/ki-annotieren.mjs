@@ -1,15 +1,20 @@
 #!/usr/bin/env node
 /** Vollautomatische, quellenbasierte Tatbestand-/Rechtsfolge-Annotation. */
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { eindeutig, hashText, logikAnalyse, textDerNorm } from "./lib/text.mjs";
 import { ladeQuellen } from "./lib/quellen.mjs";
-import { modellAufruf } from "./lib/model.mjs";
+import {
+  modellAufruf,
+  ModellBudgetErschoepft,
+  ModellKontingentErschoepft,
+} from "./lib/model.mjs";
 import { konsensAnnotation } from "./lib/konsens.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
 const DATEN = path.join(WURZEL, "data");
 const ANNOTATIONEN = path.join(WURZEL, "annotations");
+const FORTSCHRITT = path.join(WURZEL, ".ki-fortschritt");
 const REPORTS = path.join(WURZEL, "reports");
 const PIPELINE_VERSION = 2;
 const MODELL = process.env.KI_MODELL || "openai/gpt-4.1-mini";
@@ -17,20 +22,23 @@ const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const BATCH_NORMEN = Math.max(1, Number(process.env.BATCH_NORMEN || 2));
 const BATCH_ZEICHEN = Math.max(6_000, Number(process.env.BATCH_ZEICHEN || 9_000));
 const TEIL_ZEICHEN = Math.max(4_000, Number(process.env.TEIL_ZEICHEN || 6_500));
+const MAX_AUFRUFE_ROH = Number(process.env.MAX_MODELLAUFRUFE || Number.POSITIVE_INFINITY);
+const budget = {
+  maximum: Number.isFinite(MAX_AUFRUFE_ROH) ? Math.max(1, MAX_AUFRUFE_ROH) : Number.POSITIVE_INFINITY,
+  verbraucht: 0,
+};
 
 const args = process.argv.slice(2);
 function wert(flag) {
   const index = args.indexOf(flag);
   return index >= 0 ? args[index + 1] : null;
 }
-function schluessel(wert) {
-  return String(wert || "").trim().toLowerCase().replace(/\.json$/i, "").replace(/[^a-z0-9]/g, "");
+function schluessel(eingabe) {
+  return String(eingabe || "").trim().toLowerCase().replace(/\.json$/i, "").replace(/[^a-z0-9]/g, "");
 }
 
 const nurRoh = wert("--nur");
-const nur = nurRoh
-  ? new Set(nurRoh.split(",").map(schluessel).filter(Boolean))
-  : null;
+const nur = nurRoh ? new Set(nurRoh.split(",").map(schluessel).filter(Boolean)) : null;
 const voll = args.includes("--voll");
 const trocken = args.includes("--trocken");
 const ohneKi = args.includes("--ohne-ki") || !TOKEN;
@@ -86,7 +94,6 @@ function analyseTeile(eintrag) {
       ...eintrag.norm,
       id,
       enbez: texte.length === 1 ? eintrag.norm.enbez : `${eintrag.norm.enbez} – Teil ${index + 1}/${texte.length}`,
-      titel: eintrag.norm.titel,
       abs: [{ n: null, html: htmlSicher(text) }],
     };
     return {
@@ -119,11 +126,14 @@ function batches(liste) {
 }
 
 function kiTeileVereinen(originalId, teile) {
-  if (!teile.length) throw new Error(`Keine KI-Teilantwort für Norm ${originalId}`);
-  if (teile.some((teil) => !teil.ki)) throw new Error(`Unvollständige KI-Teilantwort für Norm ${originalId}`);
-
+  if (!teile.length || teile.some((teil) => !teil.ki)) {
+    throw new Error(`Unvollständige KI-Teilantwort für Norm ${originalId}`);
+  }
   const klassen = teile.map((teil) => teil.ki.klassifikation);
-  const normativ = new Set(["rule", "definition", "fiction", "obligation", "prohibition", "permission", "entitlement", "calculation", "procedure", "competence"]);
+  const normativ = new Set([
+    "rule", "definition", "fiction", "obligation", "prohibition", "permission",
+    "entitlement", "calculation", "procedure", "competence",
+  ]);
   const normativeKlassen = klassen.filter((klasse) => normativ.has(klasse));
   let klassifikation = "no_classic_rule";
   if (normativeKlassen.includes("rule")) klassifikation = "rule";
@@ -145,39 +155,61 @@ function kiTeileVereinen(originalId, teile) {
     konfidenz: Number(konfidenz.toFixed(3)),
     quellen_support: eindeutig(teile.flatMap((teil) => teil.ki.quellen_support || []).map(String)),
     quellen_konsens: teile.some((teil) => teil.ki.quellen_konsens === true),
-    begruendung_kurz: teile
-      .map((teil) => teil.ki.begruendung_kurz)
-      .filter(Boolean)
-      .join(" ")
-      .slice(0, 240),
+    begruendung_kurz: teile.map((teil) => teil.ki.begruendung_kurz).filter(Boolean).join(" ").slice(0, 240),
   };
+}
+
+function annotationsDatei(meta, gesetz, erreichbar, minimum, normen) {
+  return {
+    abk: meta.abk,
+    titel: gesetz.titel,
+    pipeline_version: PIPELINE_VERSION,
+    automatisch: true,
+    modell: ohneKi ? "nur-regellogik" : MODELL,
+    aktualisiert: new Date().toISOString(),
+    quellenpolitik: {
+      minimum,
+      erreichbar: erreichbar.length,
+      methode: "mindestens vier Referenzen je Gesetz; direkte Normbelege separat",
+    },
+    normen,
+  };
+}
+
+async function fortschrittSpeichern(datei, meta, gesetz, erreichbar, minimum, normen) {
+  if (trocken) return;
+  const inhalt = {
+    ...annotationsDatei(meta, gesetz, erreichbar, minimum, normen),
+    unvollstaendig: true,
+    bearbeitet: Object.keys(normen).length,
+    gesamt: gesetz.normen.length,
+    modellaufrufe: budget.verbraucht,
+  };
+  await writeFile(datei, `${JSON.stringify(inhalt, null, 2)}\n`);
 }
 
 function markdown(bericht) {
   const zeilen = [
-    "# KI-Annotationsabdeckung",
+    "# KI-Annotationsfortschritt",
     "",
     `Erzeugt: ${bericht.aktualisiert}`,
     `Pipeline: v${bericht.pipeline_version}; Modell: ${bericht.modell}`,
+    `Modellaufrufe in diesem Lauf: ${bericht.modellaufrufe}`,
     "",
-    "| Gesetz | Normen | mit TB/RF | anders klassifiziert | Quellen min. | Ø Konfidenz |",
-    "|---|---:|---:|---:|---:|---:|",
+    "| Gesetz | bearbeitet | gesamt | fertig | mit TB/RF |",
+    "|---|---:|---:|:---:|---:|",
   ];
   for (const gesetz of bericht.gesetze) {
-    zeilen.push(`| ${gesetz.abk} | ${gesetz.normen} | ${gesetz.mit_regel} | ${gesetz.ohne_klassische_regel} | ${gesetz.quellen_min} | ${(gesetz.konfidenz_mittel * 100).toFixed(1)} % |`);
+    zeilen.push(`| ${gesetz.abk} | ${gesetz.bearbeitet} | ${gesetz.normen} | ${gesetz.fertig ? "ja" : "nein"} | ${gesetz.mit_regel} |`);
   }
-  zeilen.push(
-    "",
-    `**Gesamt:** ${bericht.gesamt.normen} Normen; ${bericht.gesamt.mit_regel} mit automatisch erkannter Tatbestand-Rechtsfolge-Struktur.`,
-    "",
-    "Automatisierte Strukturierungshilfe, keine Rechtsberatung.",
-  );
+  zeilen.push("", "Automatisierte Strukturierungshilfe, keine Rechtsberatung.");
   return `${zeilen.join("\n")}\n`;
 }
 
 async function main() {
   await Promise.all([
     mkdir(ANNOTATIONEN, { recursive: true }),
+    mkdir(FORTSCHRITT, { recursive: true }),
     mkdir(REPORTS, { recursive: true }),
   ]);
 
@@ -194,18 +226,27 @@ async function main() {
     throw new Error(`Keine Gesetze für --nur ${nurRoh || "(leer)"} gefunden. Verfügbar: ${verfuegbar}`);
   }
   console.log(`Auswahl: ${gesetze.map((gesetz) => gesetz.abk).join(", ")}`);
+  console.log(`Modellbudget: ${Number.isFinite(budget.maximum) ? budget.maximum : "unbegrenzt"} Aufrufe`);
 
   const bericht = {
     aktualisiert: new Date().toISOString(),
     pipeline_version: PIPELINE_VERSION,
     modell: ohneKi ? "nur-regellogik" : MODELL,
+    modellaufrufe: 0,
+    fortsetzung_noetig: false,
     gesetze: [],
   };
+  let anhalten = false;
 
   for (const meta of gesetze) {
+    if (anhalten) break;
     const gesetz = await json(path.join(DATEN, meta.datei));
     const ziel = path.join(ANNOTATIONEN, meta.datei);
+    const standDatei = path.join(FORTSCHRITT, meta.datei);
     const alt = await json(ziel, { abk: meta.abk, normen: {} });
+    const stand = voll ? { normen: {} } : await json(standDatei, { normen: {} });
+    if (voll && !trocken) await rm(standDatei, { force: true });
+
     const quellen = await ladeQuellen(config, gesetz, WURZEL);
     const minimum = Math.max(4, Number(config.minimum_quellen || 4), minEnv);
     const erreichbar = quellen.filter((quelle) => quelle.erreichbar);
@@ -214,43 +255,49 @@ async function main() {
       throw new Error(`${meta.abk}: weniger als ${minimum} unabhängige Quellen erreichbar`);
     }
 
+    const ausgabe = {};
     const alle = gesetz.normen.map((norm) => {
       const textHash = hashText(textDerNorm(norm));
-      const vorhanden = alt.normen?.[norm.id];
-      const gesetzesquellenAktuell = Array.isArray(vorhanden?.gesetz_quellen)
-        && vorhanden.gesetz_quellen.length >= minimum
-        && vorhanden.gesetz_quellen.every((id) => erreichbareIds.has(id));
-      return {
-        norm,
-        logik: logikAnalyse(norm),
-        vorhanden,
-        wiederverwenden:
-          !voll
-          && vorhanden?.text_hash === textHash
-          && vorhanden?.pipeline_version === PIPELINE_VERSION
-          && vorhanden?.gesetz_quellen_konsens === true
-          && gesetzesquellenAktuell,
-      };
+      const kandidaten = voll ? [] : [stand.normen?.[norm.id], alt.normen?.[norm.id]].filter(Boolean);
+      const vorhanden = kandidaten.find((annotation) => {
+        const quellenAktuell = Array.isArray(annotation.gesetz_quellen)
+          && annotation.gesetz_quellen.length >= minimum
+          && annotation.gesetz_quellen.every((id) => erreichbareIds.has(id));
+        return annotation.text_hash === textHash
+          && annotation.pipeline_version === PIPELINE_VERSION
+          && annotation.gesetz_quellen_konsens === true
+          && quellenAktuell;
+      });
+      if (vorhanden) ausgabe[norm.id] = vorhanden;
+      return { norm, logik: logikAnalyse(norm), vorhanden };
     });
 
-    const neu = alle.filter((eintrag) => !eintrag.wiederverwenden);
-    const ausgabe = {};
-    for (const eintrag of alle.filter((x) => x.wiederverwenden)) {
-      ausgabe[eintrag.norm.id] = eintrag.vorhanden;
-    }
-
+    const neu = alle.filter((eintrag) => !eintrag.vorhanden);
     const analyseEinheiten = neu.flatMap(analyseTeile);
+    const teileSoll = new Map();
+    for (const einheit of analyseEinheiten) {
+      teileSoll.set(einheit.originalId, (teileSoll.get(einheit.originalId) || 0) + 1);
+    }
     const gruppen = batches(analyseEinheiten);
-    console.log(`\n${meta.abk}: ${gesetz.normen.length} Normen, ${neu.length} neu/geändert, ${analyseEinheiten.length} Analyseteile, ${gruppen.length} Batches`);
-
     const teilAntworten = new Map();
+    console.log(`\n${meta.abk}: ${gesetz.normen.length} Normen, ${neu.length} offen, ${gruppen.length} Batches`);
+
     for (const batch of gruppen) {
-      let antwort = null;
+      let antwort;
       try {
-        antwort = ohneKi ? null : await modellAufruf({ gesetz, batch, quellen, token: TOKEN, modell: MODELL });
+        antwort = ohneKi
+          ? null
+          : await modellAufruf({ gesetz, batch, quellen, token: TOKEN, modell: MODELL, budget });
       } catch (fehler) {
+        if (fehler instanceof ModellBudgetErschoepft || fehler instanceof ModellKontingentErschoepft) {
+          console.warn(`${meta.abk}: ${fehler.message}; Zwischenstand wird gespeichert.`);
+          anhalten = true;
+          bericht.fortsetzung_noetig = true;
+          break;
+        }
         if (requireKi) throw fehler;
         console.warn(`${meta.abk}: KI ausgefallen, Logik übernimmt: ${fehler.message}`);
+        antwort = null;
       }
 
       const map = new Map((antwort?.normen || []).map((eintrag) => [String(eintrag.id), eintrag]));
@@ -261,66 +308,59 @@ async function main() {
       for (const eintrag of batch) {
         teilAntworten.set(eintrag.analyseId, { ...eintrag, ki: map.get(eintrag.analyseId) });
       }
+
+      const beruehrteNormen = eindeutig(batch.map((eintrag) => eintrag.originalId));
+      for (const originalId of beruehrteNormen) {
+        if (ausgabe[originalId]) continue;
+        const teile = [...teilAntworten.values()].filter((teil) => teil.originalId === originalId);
+        if (teile.length !== teileSoll.get(originalId)) continue;
+        const original = alle.find((eintrag) => String(eintrag.norm.id) === originalId);
+        const ki = ohneKi ? null : kiTeileVereinen(originalId, teile);
+        ausgabe[originalId] = konsensAnnotation({
+          norm: original.norm,
+          logik: original.logik,
+          ki,
+          quellen,
+          gesetz,
+          modell: MODELL,
+          pipelineVersion: PIPELINE_VERSION,
+          minQuellen: minimum,
+        });
+        await fortschrittSpeichern(standDatei, meta, gesetz, erreichbar, minimum, ausgabe);
+      }
     }
 
-    for (const eintrag of neu) {
-      const teile = [...teilAntworten.values()].filter((teil) => teil.originalId === String(eintrag.norm.id));
-      const ki = ohneKi ? null : kiTeileVereinen(String(eintrag.norm.id), teile);
-      ausgabe[eintrag.norm.id] = konsensAnnotation({
-        norm: eintrag.norm,
-        logik: eintrag.logik,
-        ki,
-        quellen,
-        gesetz,
-        modell: MODELL,
-        pipelineVersion: PIPELINE_VERSION,
-        minQuellen: minimum,
-      });
+    const fertig = gesetz.normen.every((norm) => Boolean(ausgabe[norm.id]));
+    if (fertig) {
+      const geordnet = {};
+      for (const norm of gesetz.normen) geordnet[norm.id] = ausgabe[norm.id];
+      if (!trocken) {
+        await writeFile(ziel, `${JSON.stringify(annotationsDatei(meta, gesetz, erreichbar, minimum, geordnet), null, 2)}\n`);
+        await rm(standDatei, { force: true });
+      }
+      console.log(`${meta.abk}: vollständig; veröffentlichungsfähige Annotationsdatei erzeugt.`);
+    } else {
+      await fortschrittSpeichern(standDatei, meta, gesetz, erreichbar, minimum, ausgabe);
+      bericht.fortsetzung_noetig = true;
+      console.log(`${meta.abk}: ${Object.keys(ausgabe).length}/${gesetz.normen.length} Normen gesichert; Fortsetzung folgt.`);
     }
 
-    const geordnet = {};
-    for (const norm of gesetz.normen) {
-      if (!ausgabe[norm.id]) throw new Error(`${meta.abk} ${norm.enbez}: keine Annotation erzeugt`);
-      geordnet[norm.id] = ausgabe[norm.id];
-    }
-
-    const datei = {
-      abk: meta.abk,
-      titel: gesetz.titel,
-      pipeline_version: PIPELINE_VERSION,
-      automatisch: true,
-      modell: ohneKi ? "nur-regellogik" : MODELL,
-      aktualisiert: new Date().toISOString(),
-      quellenpolitik: {
-        minimum,
-        erreichbar: erreichbar.length,
-        methode: "mindestens vier Referenzen je Gesetz; direkte Normbelege separat",
-      },
-      normen: geordnet,
-    };
-    if (!trocken) await writeFile(ziel, `${JSON.stringify(datei, null, 2)}\n`);
-
-    const werte = Object.values(geordnet);
-    const mitRegel = werte.filter((annotation) => annotation.tb?.length && annotation.rf?.length).length;
+    const werte = Object.values(ausgabe);
     bericht.gesetze.push({
       abk: meta.abk,
-      normen: werte.length,
-      mit_regel: mitRegel,
-      ohne_klassische_regel: werte.length - mitRegel,
-      quellen_min: Math.min(...werte.map((annotation) => annotation.gesetz_quellen?.length || 0)),
-      konfidenz_mittel: werte.reduce((summe, annotation) => summe + Number(annotation.konfidenz || 0), 0) / Math.max(1, werte.length),
+      normen: gesetz.normen.length,
+      bearbeitet: werte.length,
+      fertig,
+      mit_regel: werte.filter((annotation) => annotation.tb?.length && annotation.rf?.length).length,
     });
   }
 
-  bericht.gesamt = {
-    normen: bericht.gesetze.reduce((summe, gesetz) => summe + gesetz.normen, 0),
-    mit_regel: bericht.gesetze.reduce((summe, gesetz) => summe + gesetz.mit_regel, 0),
-  };
+  bericht.modellaufrufe = budget.verbraucht;
   if (!trocken) {
-    await writeFile(path.join(REPORTS, "annotation-coverage.json"), `${JSON.stringify(bericht, null, 2)}\n`);
-    await writeFile(path.join(REPORTS, "annotation-coverage.md"), markdown(bericht));
+    await writeFile(path.join(REPORTS, "annotation-progress.json"), `${JSON.stringify(bericht, null, 2)}\n`);
+    await writeFile(path.join(REPORTS, "annotation-progress.md"), markdown(bericht));
   }
-  console.log(`\nFertig: ${bericht.gesamt.mit_regel}/${bericht.gesamt.normen} Normen mit TB/RF.`);
+  console.log(`\nModellaufrufe: ${budget.verbraucht}. Fortsetzung nötig: ${bericht.fortsetzung_noetig ? "ja" : "nein"}.`);
 }
 
 try {
