@@ -23,10 +23,12 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Weboberfläche wiederherstellen
+      - name: Originaldateien wiederherstellen
         run: |
           cat .bootstrap/payload.* | base64 --decode > /tmp/steuernorm-core.tgz
           tar -xzf /tmp/steuernorm-core.tgz
+          cat .bootstrap/extras.* | base64 --decode > /tmp/steuernorm-extras.tgz
+          tar -xzf /tmp/steuernorm-extras.tgz
 
       - name: Aktuelle Gesetzestexte laden
         run: node tools/update.mjs
