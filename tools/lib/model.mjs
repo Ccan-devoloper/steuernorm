@@ -96,11 +96,12 @@ function budgetVerbrauchen(budget) {
   budget.verbraucht++;
 }
 
+/** Timeout umfasst Verbindungsaufbau UND das vollständige Lesen des Antwort-Streams. */
 async function fetchMitTimeout(body, token) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(new Error("Modell-Request-Timeout")), REQUEST_TIMEOUT_MS);
   try {
-    return await fetch(API, {
+    const antwort = await fetch(API, {
       method: "POST",
       signal: controller.signal,
       headers: {
@@ -111,6 +112,8 @@ async function fetchMitTimeout(body, token) {
       },
       body: JSON.stringify(body),
     });
+    const antworttext = await antwort.text();
+    return { antwort, antworttext };
   } finally {
     clearTimeout(timer);
   }
@@ -134,26 +137,42 @@ async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
   for (let versuch = 1; versuch <= 6; versuch++) {
     budgetVerbrauchen(budget);
     let antwort;
+    let antworttext;
     try {
-      antwort = await fetchMitTimeout(body, token);
+      ({ antwort, antworttext } = await fetchMitTimeout(body, token));
     } catch (fehler) {
       netzVersuche++;
-      const detail = fehler?.name === "AbortError" ? `Timeout nach ${REQUEST_TIMEOUT_MS / 1000}s` : fehler.message;
+      const detail = fehler?.name === "AbortError"
+        ? `Timeout nach ${REQUEST_TIMEOUT_MS / 1000}s`
+        : (fehler?.message || String(fehler));
       if (rateVersuche > 0) {
         throw new ModellKontingentErschoepft(`Netzwerkabbruch nach GitHub-Models-429: ${detail}`);
       }
       if (netzVersuche < 3) {
         const warten = 3_000 * netzVersuche;
-        console.warn(`Modellnetzwerkfehler (${detail}); neuer Versuch in ${warten / 1_000}s`);
+        console.warn(`Modellantwort abgebrochen (${detail}); vollständiger neuer Versuch in ${warten / 1_000}s`);
         await new Promise((resolve) => setTimeout(resolve, warten));
         continue;
       }
       throw new ModellKontingentErschoepft(`GitHub Models wiederholt nicht erreichbar: ${detail}`);
     }
 
-    if (antwort.ok) return antwortInhalt(await antwort.json());
+    if (antwort.ok) {
+      try {
+        return antwortInhalt(JSON.parse(antworttext));
+      } catch (fehler) {
+        netzVersuche++;
+        if (netzVersuche < 3) {
+          const warten = 3_000 * netzVersuche;
+          console.warn(`Unvollständige oder ungültige Modellantwort (${fehler.message}); neuer Versuch in ${warten / 1_000}s`);
+          await new Promise((resolve) => setTimeout(resolve, warten));
+          continue;
+        }
+        throw new ModellKontingentErschoepft(`GitHub Models lieferte wiederholt keine vollständige JSON-Antwort: ${fehler.message}`);
+      }
+    }
 
-    const fehlertext = await antwort.text();
+    const fehlertext = antworttext;
     if ((antwort.status === 400 || antwort.status === 422) && formatStufe < 2) {
       formatStufe++;
       body.response_format = formatStufe === 1 ? { type: "json_object" } : undefined;
