@@ -1,0 +1,45 @@
+{
+ "abk": "GrStG",
+ "normen": {
+  "2": {
+   "tb": [
+    "die Betriebe der Land- und Forstwirtschaft",
+    "die Grundstücke"
+   ],
+   "rf": [
+    "Steuergegenstand ist der inländische Grundbesitz"
+   ],
+   "hinweis": "Die Grundsteuer knüpft an den Grundbesitz an. Seit der Reform richtet sich die Bewertung nach dem Siebenten Abschnitt des BewG, teils mit abweichenden Landesmodellen.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Inländischer Grundbesitz",
+     "art": "tb",
+     "sub": [
+      "Betrieb der Land- und Forstwirtschaft, Grundsteuer A",
+      "Grundstück, Grundsteuer B"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Keine Steuerbefreiung (§§ 3 bis 8)",
+     "art": "tb"
+    },
+    {
+     "n": "III.",
+     "t": "Grundsteuerwert und Steuermesszahl",
+     "art": "tb",
+     "sub": [
+      "Bewertung nach BewG oder Landesrecht",
+      "Messbetrag §§ 13 ff."
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Steuer nach Hebesatz der Gemeinde (§ 25)",
+     "art": "rf"
+    }
+   ]
+  }
+ }
+}
