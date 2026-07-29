@@ -54,6 +54,9 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
   if (ki && support.length < minQuellen) {
     throw new Error(`${gesetz.abk} ${norm.enbez}: KI nennt nur ${support.length} stützende Referenzen`);
   }
+  if (ki && ki.quellen_konsens !== true) {
+    throw new Error(`${gesetz.abk} ${norm.enbez}: kein überschneidender Vier-Quellen-Konsens`);
+  }
 
   const kiKonfidenz = modellKonfidenz(ki);
   const kiTb = eindeutig((ki?.tb || []).map((p) => sauberePhrase(p, volltext)).filter(Boolean));
@@ -134,6 +137,7 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
     pipeline_version: pipelineVersion,
     modell: ki ? modell : "nur-regellogik",
     konsens_methode: "ki_logik_quellen",
+    quellen_konsens: ki?.quellen_konsens === true,
     quellen: verwendeteQuellen.map((quelle) => ({
       id: quelle.id,
       typ: quelle.typ,
