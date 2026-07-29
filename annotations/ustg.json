@@ -1,0 +1,172 @@
+{
+ "abk": "UStG",
+ "normen": {
+  "1": {
+   "tb": [
+    "die Lieferungen und sonstigen Leistungen, die ein Unternehmer im Inland gegen Entgelt im Rahmen seines Unternehmens ausführt",
+    "die Einfuhr von Gegenständen im Inland",
+    "der innergemeinschaftliche Erwerb im Inland gegen Entgelt"
+   ],
+   "rf": [
+    "Der Umsatzsteuer unterliegen die folgenden Umsätze"
+   ],
+   "hinweis": "Fünf Merkmale, die in der Klausur nacheinander abzuarbeiten sind. Erst danach folgen Steuerbefreiung (§ 4), Bemessungsgrundlage (§ 10), Steuersatz (§ 12) und Entstehung (§ 13).",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Lieferung oder sonstige Leistung",
+     "art": "tb",
+     "sub": [
+      "Lieferung: Verschaffung der Verfügungsmacht (§ 3 Abs. 1)",
+      "Sonstige Leistung: alles Übrige (§ 3 Abs. 9)"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Unternehmer",
+     "art": "tb",
+     "sub": [
+      "§ 2 Abs. 1: selbständig, nachhaltig, Einnahmeerzielungsabsicht"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Im Rahmen des Unternehmens",
+     "art": "tb",
+     "sub": [
+      "Abgrenzung zur Privatsphäre",
+      "Sonst unentgeltliche Wertabgabe, § 3 Abs. 1b, Abs. 9a"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Im Inland",
+     "art": "tb",
+     "sub": [
+      "Ort der Lieferung §§ 3 Abs. 5a bis 8",
+      "Ort der sonstigen Leistung §§ 3a, 3b, 3e, 3g"
+     ]
+    },
+    {
+     "n": "V.",
+     "t": "Gegen Entgelt",
+     "art": "tb",
+     "sub": [
+      "Leistungsaustausch: unmittelbarer Zusammenhang zwischen Leistung und Gegenleistung",
+      "Kein Entgelt bei echtem Schadensersatz oder echtem Zuschuss"
+     ]
+    },
+    {
+     "n": "VI.",
+     "t": "Ergebnis: steuerbarer Umsatz",
+     "art": "rf",
+     "sub": [
+      "Anschluss: steuerpflichtig oder nach § 4 befreit"
+     ]
+    }
+   ]
+  },
+  "2": {
+   "tb": [
+    "wer eine gewerbliche oder berufliche Tätigkeit selbstständig ausübt",
+    "jede nachhaltige Tätigkeit zur Erzielung von Einnahmen"
+   ],
+   "rf": [
+    "Unternehmer ist"
+   ],
+   "hinweis": "Der umsatzsteuerliche Unternehmerbegriff ist weiter als der ertragsteuerliche Gewerbebetrieb: Gewinnerzielungsabsicht ist gerade nicht erforderlich, Einnahmeerzielungsabsicht genügt.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Selbständigkeit",
+     "art": "tb",
+     "sub": [
+      "Negativabgrenzung § 2 Abs. 2 Nr. 1 für Arbeitnehmer",
+      "Organschaft § 2 Abs. 2 Nr. 2"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Nachhaltigkeit",
+     "art": "tb",
+     "sub": [
+      "Wiederholte Tätigkeit oder Wiederholungsabsicht",
+      "Gesamtbild der Verhältnisse"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Einnahmeerzielungsabsicht",
+     "art": "tb",
+     "sub": [
+      "Gewinnerzielungsabsicht ausdrücklich entbehrlich"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Unternehmereigenschaft",
+     "art": "rf",
+     "sub": [
+      "Steuerbarkeit der Ausgangsumsätze",
+      "Berechtigung zum Vorsteuerabzug nach § 15"
+     ]
+    }
+   ]
+  },
+  "15": {
+   "tb": [
+    "die gesetzlich geschuldete Steuer für Lieferungen und sonstige Leistungen, die von einem anderen Unternehmer für sein Unternehmen ausgeführt worden sind"
+   ],
+   "rf": [
+    "Der Unternehmer kann die folgenden Vorsteuerbeträge abziehen"
+   ],
+   "hinweis": "Der Abzug ist ausgeschlossen, soweit die Eingangsleistung für steuerfreie Ausgangsumsätze verwendet wird (§ 15 Abs. 2), es sei denn, § 15 Abs. 3 greift ein. Spätere Nutzungsänderung führt zur Berichtigung nach § 15a.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Unternehmereigenschaft des Leistungsempfängers",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Leistung eines anderen Unternehmers für das Unternehmen",
+     "art": "tb",
+     "sub": [
+      "Zuordnungsentscheidung bei gemischt genutzten Gegenständen",
+      "Mindestens zehn Prozent unternehmerische Nutzung"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Gesetzlich geschuldete Steuer",
+     "art": "tb",
+     "sub": [
+      "Kein Abzug bei unrichtigem Steuerausweis, § 14c Abs. 1"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ordnungsgemäße Rechnung (§§ 14, 14a)",
+     "art": "tb",
+     "sub": [
+      "Pflichtangaben § 14 Abs. 4"
+     ]
+    },
+    {
+     "n": "V.",
+     "t": "Kein Ausschluss nach § 15 Abs. 2",
+     "art": "tb",
+     "sub": [
+      "Rückausnahme § 15 Abs. 3",
+      "Bei teilweiser Verwendung Aufteilung nach § 15 Abs. 4"
+     ]
+    },
+    {
+     "n": "VI.",
+     "t": "Ergebnis: Abzug im Besteuerungszeitraum des Leistungsbezugs",
+     "art": "rf"
+    }
+   ]
+  }
+ }
+}
