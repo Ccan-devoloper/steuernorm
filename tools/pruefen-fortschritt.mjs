@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /** Prüft veröffentlichte v2-Annotationen und noch nicht veröffentlichte KI-Zwischenstände. */
-import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { hashText, textDerNorm } from "./lib/text.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
 const register = JSON.parse(await readFile(path.join(WURZEL, "data", "index.json"), "utf8"));
@@ -25,26 +25,6 @@ async function json(datei, fallback = null) {
   }
 }
 
-function text(html = "") {
-  return html
-    .replace(/<br\s*\/?\s*>/gi, " ")
-    .replace(/<\/p>|<\/li>|<\/dd>|<\/dt>|<\/tr>|<\/h\d>/gi, ". ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&sect;/g, "§")
-    .replace(/\s+/g, " ")
-    .replace(/\s+([,.;:!?])/g, "$1")
-    .trim();
-}
-function normtext(norm) {
-  return norm.abs.map((absatz) => text(absatz.html)).filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
-}
-function hash(inhalt) {
-  return createHash("sha256").update(inhalt).digest("hex");
-}
 function urlKey(url) {
   try {
     const u = new URL(url);
@@ -55,6 +35,13 @@ function urlKey(url) {
   } catch {
     return "";
   }
+}
+
+function unbrauchbarePhrase(phrase) {
+  return typeof phrase !== "string"
+    || phrase.length < 3
+    || /[.!?]{2,}/.test(phrase)
+    || /^\d+\s+(?:Satz|Abs(?:atz|\.)|Nummer|Nr\.)\b/i.test(phrase);
 }
 
 let fehler = 0;
@@ -106,8 +93,8 @@ for (const meta of register.gesetze) {
       fehler++;
       continue;
     }
-    const volltext = normtext(norm);
-    if (annotation.text_hash !== hash(volltext)) {
+    const volltext = textDerNorm(norm);
+    if (annotation.text_hash !== hashText(volltext)) {
       console.error(`FEHLER ${meta.abk} ${norm.enbez}: veralteter Text-Hash`);
       fehler++;
     }
@@ -140,8 +127,11 @@ for (const meta of register.gesetze) {
         continue;
       }
       for (const phrase of annotation[art]) {
-        if (!volltext.includes(phrase)) {
-          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: Textspanne trifft nicht`);
+        if (unbrauchbarePhrase(phrase)) {
+          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: unbrauchbare Textspanne`);
+          fehler++;
+        } else if (!volltext.includes(phrase)) {
+          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: Textspanne trifft kanonischen Browsertext nicht`);
           fehler++;
         }
       }
