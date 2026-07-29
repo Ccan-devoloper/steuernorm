@@ -4,7 +4,7 @@ const API = "https://models.github.ai/inference/chat/completions";
 
 const SYSTEM = `Du analysierst deutsches Steuerrecht als strukturierter Informationsextraktor. Du erteilst keine Rechtsberatung.
 Gib ausschließlich valides JSON zurück. Jede Phrase in tb, rf und ausnahmen muss eine wörtliche, zusammenhängende Teilzeichenkette aus dem gelieferten Normtext sein. Tatbestand sind Voraussetzungen, Adressaten, Gegenstände, Handlungen, Zeit-/Ortselemente und negative Voraussetzungen. Rechtsfolge sind Rechtswirkungen, Pflichten, Verbote, Erlaubnisse, Ansprüche, Fiktionen, Definitionsergebnisse, Berechnungs- und Verfahrensfolgen. Erfasse mehrere Regeln, liefere aber deduplizierte Span-Listen. Klassifiziere jede Norm als rule, definition, fiction, obligation, prohibition, permission, entitlement, calculation, procedure, competence, reference_only oder no_classic_rule.
-Quellen dienen zur Plausibilisierung. Nenne in quellen_support nur IDs von Referenzen, deren gelieferter Ausschnitt die Einordnung materiell stützt. Setze quellen_konsens nur dann auf true, wenn mindestens vier unterschiedliche Referenzen zu einem überschneidenden Ergebnis führen. Der amtliche Normtext darf als eine Referenz zählen. Wenn weniger als vier Referenzen stützen, setze quellen_konsens auf false und nenne nur die tatsächlich stützenden IDs. Bei Unklarheit senke konfidenz. Keine Markdown-Codeblöcke.`;
+Quellen dienen zur Plausibilisierung. Nenne in quellen_support nur IDs von Referenzen, deren gelieferter Ausschnitt die Einordnung materiell stützt. Setze quellen_konsens nur dann auf true, wenn mehrere unterschiedliche Referenzen zu einem überschneidenden Ergebnis für die konkrete Norm führen. Der amtliche Normtext darf als eine Referenz zählen. Wenn die Referenzen die konkrete Norm nicht unmittelbar stützen, setze quellen_konsens auf false und nenne nur die tatsächlich stützenden IDs. Bei Unklarheit senke konfidenz. Keine Markdown-Codeblöcke.`;
 
 const ANTWORT_SCHEMA = {
   name: "steuernorm_annotation",
@@ -92,7 +92,7 @@ function antwortInhalt(json) {
   return JSON.parse(inhalt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "").trim());
 }
 
-export async function modellAufruf({ gesetz, batch, quellen, token, modell }) {
+async function roherAufruf({ gesetz, batch, quellen, token, modell }) {
   const body = {
     model: modell,
     messages: [
@@ -135,4 +135,28 @@ export async function modellAufruf({ gesetz, batch, quellen, token, modell }) {
     throw new Error(`GitHub Models ${antwort.status}: ${fehlertext.slice(0, 500)}`);
   }
   throw new Error("GitHub Models nicht erreichbar");
+}
+
+export async function modellAufruf(args) {
+  const antwort = await roherAufruf(args);
+  const vorhandene = new Map(
+    (antwort?.normen || []).map((eintrag) => [String(eintrag.id), eintrag]),
+  );
+  const erwartet = args.batch.map((eintrag) => String(eintrag.norm.id));
+
+  for (const eintrag of args.batch) {
+    const id = String(eintrag.norm.id);
+    if (vorhandene.has(id)) continue;
+
+    console.warn(`Modellantwort fehlt für ${id}; Einzelwiederholung`);
+    await new Promise((resolve) => setTimeout(resolve, 1_500));
+    const einzelAntwort = await roherAufruf({ ...args, batch: [eintrag] });
+    const treffer = (einzelAntwort?.normen || []).find((ausgabe) => String(ausgabe.id) === id);
+    if (!treffer) {
+      throw new Error(`Modellantwort fehlt nach Einzelwiederholung für ${id}`);
+    }
+    vorhandene.set(id, treffer);
+  }
+
+  return { normen: erwartet.map((id) => vorhandene.get(id)) };
 }
