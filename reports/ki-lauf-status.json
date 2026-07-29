@@ -1,7 +1,6 @@
 {
-  "status": "laeuft",
-  "gestartet": "2026-07-29T11:13:46Z",
-  "ereignis": "push",
+  "status": "erfolgreich",
+  "beendet": "2026-07-29T11:15:08Z",
   "commit": "58c83b49c0080c08bcc98b978f8d03548359df84",
   "lauf": "https://github.com/Ccan-devoloper/steuernorm/actions/runs/30446735343"
 }
