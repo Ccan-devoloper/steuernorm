@@ -1,0 +1,138 @@
+{
+  "erzeugt": "2026-07-29T12:52:35.523Z",
+  "format": 3,
+  "modelle": [
+    "nur-syntax"
+  ],
+  "laeufe": 0,
+  "gesetze": [
+    {
+      "abk": "AO",
+      "normen": 503,
+      "bearbeitet": 503,
+      "uebernommen": 0,
+      "markierbar": 494,
+      "abgelehnt": 870,
+      "vollstaendig": true
+    },
+    {
+      "abk": "BewG",
+      "normen": 204,
+      "bearbeitet": 204,
+      "uebernommen": 0,
+      "markierbar": 150,
+      "abgelehnt": 219,
+      "vollstaendig": true
+    },
+    {
+      "abk": "EStG",
+      "normen": 247,
+      "bearbeitet": 247,
+      "uebernommen": 0,
+      "markierbar": 220,
+      "abgelehnt": 1470,
+      "vollstaendig": true
+    },
+    {
+      "abk": "KStG",
+      "normen": 48,
+      "bearbeitet": 48,
+      "uebernommen": 0,
+      "markierbar": 44,
+      "abgelehnt": 224,
+      "vollstaendig": true
+    },
+    {
+      "abk": "UStG",
+      "normen": 93,
+      "bearbeitet": 93,
+      "uebernommen": 0,
+      "markierbar": 86,
+      "abgelehnt": 508,
+      "vollstaendig": true
+    },
+    {
+      "abk": "GewStG",
+      "normen": 41,
+      "bearbeitet": 41,
+      "uebernommen": 0,
+      "markierbar": 38,
+      "abgelehnt": 126,
+      "vollstaendig": true
+    },
+    {
+      "abk": "ErbStG",
+      "normen": 47,
+      "bearbeitet": 47,
+      "uebernommen": 0,
+      "markierbar": 44,
+      "abgelehnt": 197,
+      "vollstaendig": true
+    },
+    {
+      "abk": "GrStG",
+      "normen": 38,
+      "bearbeitet": 38,
+      "uebernommen": 0,
+      "markierbar": 38,
+      "abgelehnt": 55,
+      "vollstaendig": true
+    },
+    {
+      "abk": "FGO",
+      "normen": 173,
+      "bearbeitet": 173,
+      "uebernommen": 0,
+      "markierbar": 164,
+      "abgelehnt": 133,
+      "vollstaendig": true
+    },
+    {
+      "abk": "GrEStG",
+      "normen": 28,
+      "bearbeitet": 28,
+      "uebernommen": 0,
+      "markierbar": 26,
+      "abgelehnt": 87,
+      "vollstaendig": true
+    },
+    {
+      "abk": "UmwStG",
+      "normen": 28,
+      "bearbeitet": 28,
+      "uebernommen": 0,
+      "markierbar": 23,
+      "abgelehnt": 95,
+      "vollstaendig": true
+    },
+    {
+      "abk": "AStG",
+      "normen": 23,
+      "bearbeitet": 23,
+      "uebernommen": 0,
+      "markierbar": 20,
+      "abgelehnt": 104,
+      "vollstaendig": true
+    },
+    {
+      "abk": "SolzG",
+      "normen": 6,
+      "bearbeitet": 6,
+      "uebernommen": 0,
+      "markierbar": 5,
+      "abgelehnt": 15,
+      "vollstaendig": true
+    },
+    {
+      "abk": "InvStG",
+      "normen": 58,
+      "bearbeitet": 58,
+      "uebernommen": 0,
+      "markierbar": 57,
+      "abgelehnt": 197,
+      "vollstaendig": true
+    }
+  ],
+  "modellaufrufe": 0,
+  "abgebrochen": null
+}
