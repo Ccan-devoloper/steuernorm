@@ -1,0 +1,143 @@
+name: KI-Vollannotation erzeugen
+
+on:
+  pull_request:
+    paths:
+      - "tools/ki-annotieren.mjs"
+      - "tools/lib/**"
+      - "tools/pruefen-v2.mjs"
+      - "tools/pruefen-fortschritt.mjs"
+      - "config/referenzquellen.json"
+      - ".github/workflows/ki-vollannotation.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "tools/ki-annotieren.mjs"
+      - "tools/lib/**"
+      - "tools/pruefen-v2.mjs"
+      - "tools/pruefen-fortschritt.mjs"
+      - "config/referenzquellen.json"
+      - ".github/workflows/ki-vollannotation.yml"
+  schedule:
+    - cron: "10 5 * * *"
+  workflow_dispatch:
+    inputs:
+      gesetz:
+        description: "Optionales Gesetzeskürzel, z. B. SolzG; leer bedeutet alle Gesetze"
+        required: false
+        default: ""
+        type: string
+      vollstaendig:
+        description: "Ausgewählte Normen und Zwischenstände neu beginnen"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: steuernorm-ki-vollannotation-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  KI_MODELL: openai/gpt-4.1-mini
+  MIN_QUELLEN: "4"
+  REQUIRE_AI: "1"
+  BATCH_NORMEN: "2"
+  BATCH_ZEICHEN: "9000"
+  TEIL_ZEICHEN: "6500"
+  MAX_MODELLAUFRUFE: "40"
+
+jobs:
+  smoke-test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      models: read
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: SolzG mit KI, Logik und Tagesbudget analysieren
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_MODELLAUFRUFE: "20"
+        run: node tools/ki-annotieren.mjs --nur solzg --voll
+
+      - name: Vollständiges SolzG oder gültigen Fortsetzungscheckpoint prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          if node - <<'NODE'
+          const fs = require('fs');
+          try {
+            const a = JSON.parse(fs.readFileSync('annotations/solzg.json', 'utf8'));
+            process.exit(a.automatisch === true && Number(a.pipeline_version) >= 2 ? 0 : 1);
+          } catch {
+            process.exit(1);
+          }
+          NODE
+          then
+            node tools/pruefen-v2.mjs --nur solzg
+          else
+            test -s .ki-fortschritt/solzg.json
+            node tools/pruefen-fortschritt.mjs
+          fi
+
+  annotieren:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Automatische Tagesetappe ausführen
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_GESETZ: ${{ inputs.gesetz }}
+          INPUT_VOLL: ${{ inputs.vollstaendig }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "${INPUT_VOLL:-false}" = "true" ]; then
+            args+=(--voll)
+          fi
+          if [ -n "${INPUT_GESETZ:-}" ]; then
+            args+=(--nur "$INPUT_GESETZ")
+          fi
+          node tools/ki-annotieren.mjs "${args[@]}"
+
+      - name: Finale Dateien und Zwischenstände prüfen
+        run: node tools/pruefen-fortschritt.mjs | tee pruefbericht-ki.txt
+
+      - name: Fortschritt veröffentlichen
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .cache .tmp
+          git config user.name "steuernorm-ki-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add annotations .ki-fortschritt reports pruefbericht-ki.txt
+          if git diff --cached --quiet; then
+            echo "Keine neuen KI-Annotationen in dieser Tagesetappe."
+          else
+            git commit -m "KI-Annotationsfortschritt aktualisieren"
+            git push
+          fi

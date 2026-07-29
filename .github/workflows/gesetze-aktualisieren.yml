@@ -15,6 +15,7 @@ concurrency:
 jobs:
   aktualisieren:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v5
@@ -24,7 +25,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Bisherigen Datenstand sichern
+      - name: Bisherigen Gesetzesstand sichern
         shell: bash
         run: |
           set -euo pipefail
@@ -36,18 +37,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set +e
-          node tools/update-von-github.mjs
-          status=$?
-          set -e
-          if [ "$status" -ne 0 ]; then
-            echo "::error::Die Gesetzesaktualisierung war nicht vollständig. Der bisherige Datenstand bleibt erhalten."
+          set -euo pipefail
+          if ! node tools/update-von-github.mjs; then
+            echo "::error::Die Gesetzesaktualisierung war nicht vollständig. Der bisherige Datenstand wird wiederhergestellt."
             rm -rf data
             cp -a /tmp/steuernorm-data-backup data
-            exit "$status"
+            exit 1
           fi
 
-      - name: Daten und Markierungen prüfen
+      - name: Vollständigen Gesetzesbestand prüfen
         shell: bash
         run: |
           set -euo pipefail
@@ -57,15 +55,15 @@ jobs:
           for datei in data/*.json; do
             node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
           done
-          node tools/pruefen.mjs | tee pruefbericht.txt
 
       - name: Änderungen veröffentlichen
         shell: bash
         run: |
           set -euo pipefail
+          rm -rf .tmp
           git config user.name "steuernorm-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data pruefbericht.txt
+          git add data
           if git diff --cached --quiet; then
             echo "Keine Änderungen am Gesetzesbestand."
           else
