@@ -1,16 +1,16 @@
 {
-  "aktualisiert": "2026-07-29T10:50:45.461Z",
+  "aktualisiert": "2026-07-29T11:06:14.824Z",
   "pipeline_version": 2,
   "modell": "openai/gpt-4.1-mini",
-  "modellaufrufe": 4,
-  "fortsetzung_noetig": false,
+  "modellaufrufe": 9,
+  "fortsetzung_noetig": true,
   "gesetze": [
     {
       "abk": "SolzG",
       "normen": 6,
-      "bearbeitet": 6,
-      "fertig": true,
-      "mit_regel": 5
+      "bearbeitet": 5,
+      "fertig": false,
+      "mit_regel": 4
     }
   ]
 }

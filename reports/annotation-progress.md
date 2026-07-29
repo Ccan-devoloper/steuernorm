@@ -1,11 +1,11 @@
 # KI-Annotationsfortschritt
 
-Erzeugt: 2026-07-29T10:50:45.461Z
+Erzeugt: 2026-07-29T11:06:14.824Z
 Pipeline: v2; Modell: openai/gpt-4.1-mini
-Modellaufrufe in diesem Lauf: 4
+Modellaufrufe in diesem Lauf: 9
 
 | Gesetz | bearbeitet | gesamt | fertig | mit TB/RF |
 |---|---:|---:|:---:|---:|
-| SolzG | 6 | 6 | ja | 5 |
+| SolzG | 5 | 6 | nein | 4 |
 
 Automatisierte Strukturierungshilfe, keine Rechtsberatung.

@@ -1,0 +1,651 @@
+{
+  "abk": "SolzG",
+  "titel": "Solidaritätszuschlaggesetz",
+  "pipeline_version": 2,
+  "automatisch": true,
+  "modell": "openai/gpt-4.1-mini",
+  "aktualisiert": "2026-07-29T11:08:55.702Z",
+  "quellenpolitik": {
+    "minimum": 4,
+    "erreichbar": 4,
+    "methode": "mindestens vier Referenzen je Gesetz; direkte Normbelege separat"
+  },
+  "normen": {
+    "1": {
+      "tb": [
+        "Zur Einkommensteuer und zur Körperschaftsteuer",
+        "Auf die Festsetzung und Erhebung des Solidaritätszuschlags",
+        "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten oder werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst, gilt dies für den Solidaritätszuschlag entsprechend.",
+        "Die Vorauszahlungen auf den Solidaritätszuschlag",
+        "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
+        "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+        "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag"
+      ],
+      "rf": [
+        "wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben.",
+        "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden.",
+        "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben, so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden.",
+        "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden.",
+        "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten.",
+        "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß.",
+        "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden.",
+        "Wird die Bemessungsgrundlage geändert, ändert sich der Solidaritätszuschlag entsprechend."
+      ],
+      "ausnahmen": [
+        "Die Vorauszahlungen auf den Solidaritätszuschlag sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden.",
+        "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß."
+      ],
+      "hinweis": "Automatisch aus Normtext, KI und Regellogik unter Einbeziehung von 4 Gesetzesreferenzen abgeleitet. 3 Quelle(n) stützen diese Norm unmittelbar. Konfidenz 86 %. Keine Rechtsberatung.",
+      "schema": [
+        {
+          "n": "1.",
+          "t": "Zur Einkommensteuer und zur Körperschaftsteuer",
+          "art": "tb"
+        },
+        {
+          "n": "2.",
+          "t": "Auf die Festsetzung und Erhebung des Solidaritätszuschlags",
+          "art": "tb"
+        },
+        {
+          "n": "3.",
+          "t": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten oder werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst, gilt dies für den Solidaritätszuschlag entsprechend.",
+          "art": "tb"
+        },
+        {
+          "n": "4.",
+          "t": "Die Vorauszahlungen auf den Solidaritätszuschlag",
+          "art": "tb"
+        },
+        {
+          "n": "5.",
+          "t": "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
+          "art": "tb"
+        },
+        {
+          "n": "6.",
+          "t": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+          "art": "tb"
+        },
+        {
+          "n": "7.",
+          "t": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
+          "art": "tb"
+        },
+        {
+          "n": "8.",
+          "t": "Ausnahme: Die Vorauszahlungen auf den Solidaritätszuschlag sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden.",
+          "art": "tb"
+        },
+        {
+          "n": "9.",
+          "t": "Ausnahme: § 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß.",
+          "art": "tb"
+        },
+        {
+          "n": "10.",
+          "t": "wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben.",
+          "art": "rf"
+        },
+        {
+          "n": "11.",
+          "t": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden.",
+          "art": "rf"
+        },
+        {
+          "n": "12.",
+          "t": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben, so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden.",
+          "art": "rf"
+        },
+        {
+          "n": "13.",
+          "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden.",
+          "art": "rf"
+        },
+        {
+          "n": "14.",
+          "t": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten.",
+          "art": "rf"
+        },
+        {
+          "n": "15.",
+          "t": "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß.",
+          "art": "rf"
+        },
+        {
+          "n": "16.",
+          "t": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden.",
+          "art": "rf"
+        },
+        {
+          "n": "17.",
+          "t": "Wird die Bemessungsgrundlage geändert, ändert sich der Solidaritätszuschlag entsprechend.",
+          "art": "rf"
+        }
+      ],
+      "klassifikation": "rule",
+      "status": "automatisch_konsens",
+      "konfidenz": 0.861,
+      "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
+      "pipeline_version": 2,
+      "modell": "openai/gpt-4.1-mini",
+      "konsens_methode": "ki_logik_quellen",
+      "gesetz_quellen_konsens": true,
+      "gesetz_quellen": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata",
+        "bmf-schreiben"
+      ],
+      "quellen_konsens": true,
+      "quellen": [
+        {
+          "id": "amtlicher-text",
+          "typ": "gesetz",
+          "titel": "Solidaritätszuschlaggesetz – amtlicher Normtext",
+          "herausgeber": "Bundesministerium der Justiz / Bundesamt für Justiz; XML-Spiegel: QuantLaw",
+          "url": "https://www.gesetze-im-internet.de/solzg_1995/"
+        },
+        {
+          "id": "bfh",
+          "typ": "rechtsprechung",
+          "titel": "Entscheidungen online",
+          "herausgeber": "Bundesfinanzhof",
+          "url": "https://www.bundesfinanzhof.de/de/entscheidungen/entscheidungen-online"
+        },
+        {
+          "id": "openlegaldata",
+          "typ": "rechtsprechungsdaten",
+          "titel": "Maschinenlesbare Gesetze und Gerichtsentscheidungen",
+          "herausgeber": "Open Legal Data",
+          "url": "https://de.openlegaldata.io/"
+        },
+        {
+          "id": "bmf-schreiben",
+          "typ": "verwaltung",
+          "titel": "BMF-Schreiben und Verwaltungsanweisungen",
+          "herausgeber": "Bundesministerium der Finanzen",
+          "url": "https://www.bundesfinanzministerium.de/Web/DE/Service/Publikationen/BMF_Schreiben/bmf_schreiben.html"
+        }
+      ],
+      "quellen_support": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata"
+      ],
+      "begruendung_kurz": "Der § 1 regelt die Erhebung des Solidaritätszuschlags als Ergänzungsabgabe zur Einkommen- und Körperschaftsteuer und beschreibt die Anwendung entsprechender Vorschriften, Datenverarbeitung, Vorauszahlungen sowie Rechtsbehelfe.",
+      "aktualisiert": "2026-07-29T11:07:13.000Z"
+    },
+    "2": {
+      "tb": [
+        "Abgabepflichtig",
+        "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig"
+      ],
+      "rf": [
+        "sind 1. natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind, 2. natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind, 3.",
+        "sind."
+      ],
+      "ausnahmen": [],
+      "hinweis": "Automatisch aus Normtext, KI und Regellogik unter Einbeziehung von 4 Gesetzesreferenzen abgeleitet. 3 Quelle(n) stützen diese Norm unmittelbar. Konfidenz 86 %. Keine Rechtsberatung.",
+      "schema": [
+        {
+          "n": "1.",
+          "t": "Abgabepflichtig",
+          "art": "tb"
+        },
+        {
+          "n": "2.",
+          "t": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig",
+          "art": "tb"
+        },
+        {
+          "n": "3.",
+          "t": "sind 1. natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind, 2. natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind, 3.",
+          "art": "rf"
+        },
+        {
+          "n": "4.",
+          "t": "sind.",
+          "art": "rf"
+        }
+      ],
+      "klassifikation": "rule",
+      "status": "automatisch_konsens",
+      "konfidenz": 0.861,
+      "text_hash": "149408e302c8b8a557b59f73e66ac8b4ed0de419c6bc4b81f71cb545692667ec",
+      "pipeline_version": 2,
+      "modell": "openai/gpt-4.1-mini",
+      "konsens_methode": "ki_logik_quellen",
+      "gesetz_quellen_konsens": true,
+      "gesetz_quellen": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata",
+        "bmf-schreiben"
+      ],
+      "quellen_konsens": true,
+      "quellen": [
+        {
+          "id": "amtlicher-text",
+          "typ": "gesetz",
+          "titel": "Solidaritätszuschlaggesetz – amtlicher Normtext",
+          "herausgeber": "Bundesministerium der Justiz / Bundesamt für Justiz; XML-Spiegel: QuantLaw",
+          "url": "https://www.gesetze-im-internet.de/solzg_1995/"
+        },
+        {
+          "id": "bfh",
+          "typ": "rechtsprechung",
+          "titel": "Entscheidungen online",
+          "herausgeber": "Bundesfinanzhof",
+          "url": "https://www.bundesfinanzhof.de/de/entscheidungen/entscheidungen-online"
+        },
+        {
+          "id": "openlegaldata",
+          "typ": "rechtsprechungsdaten",
+          "titel": "Maschinenlesbare Gesetze und Gerichtsentscheidungen",
+          "herausgeber": "Open Legal Data",
+          "url": "https://de.openlegaldata.io/"
+        },
+        {
+          "id": "bmf-schreiben",
+          "typ": "verwaltung",
+          "titel": "BMF-Schreiben und Verwaltungsanweisungen",
+          "herausgeber": "Bundesministerium der Finanzen",
+          "url": "https://www.bundesfinanzministerium.de/Web/DE/Service/Publikationen/BMF_Schreiben/bmf_schreiben.html"
+        }
+      ],
+      "quellen_support": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata"
+      ],
+      "begruendung_kurz": "§ 2 definiert die Abgabepflichtigen des Solidaritätszuschlags als natürliche Personen und Körperschaften, die einkommen- oder körperschaftsteuerpflichtig sind.",
+      "aktualisiert": "2026-07-29T11:07:13.001Z"
+    },
+    "3": {
+      "tb": [
+        "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5, 1. soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen",
+        "Der Solidaritätszuschlag",
+        "Dezember 1997 endenden Lohnzahlungszeitraum gezahlt",
+        "Dezember 1997 zufließen; 4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+        "Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+        "Bei der Veranlagung zur Einkommensteuer",
+        "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
+        "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
+        "Bei Anwendung des § 39f des Einkommensteuergesetzes",
+        "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
+        "Beim Abzug vom laufenden Arbeitslohn",
+        "Beim Abzug von einem sonstigen Bezug",
+        "Beim Lohnsteuer-Jahresausgleich"
+      ],
+      "rf": [
+        "ist: nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt; 2. soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind: nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002; 3. soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31.",
+        "wird, b) sonstige Bezüge, die nach dem 31.",
+        "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1.",
+        "ist: nach dem ab 1.",
+        "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre.",
+        "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend.",
+        "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt.",
+        "ist von einkommensteuerpflichtigen Personen nur zu erheben, wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, 1. in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro, 2. in anderen Fällen 20 350 Euro übersteigt.",
+        "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben.",
+        "ist der Solidaritätszuschlag nur zu erheben, wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt: 1. in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2 und 2. in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1.",
+        "ist der Solidaritätszuschlag nur zu ermitteln, wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt."
+      ],
+      "ausnahmen": [
+        "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5, 1. soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist: nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt; 2. soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind: nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002; 3. soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31.",
+        "Dezember 1997 zufließen; 4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1.",
+        "Bei der Veranlagung zur Einkommensteuer ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre."
+      ],
+      "hinweis": "Automatisch aus Normtext, KI und Regellogik unter Einbeziehung von 4 Gesetzesreferenzen abgeleitet. 2 Quelle(n) stützen diese Norm unmittelbar. Konfidenz 84 %. Keine Rechtsberatung.",
+      "schema": [
+        {
+          "n": "1.",
+          "t": "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5, 1. soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen",
+          "art": "tb"
+        },
+        {
+          "n": "2.",
+          "t": "Der Solidaritätszuschlag",
+          "art": "tb"
+        },
+        {
+          "n": "3.",
+          "t": "Dezember 1997 endenden Lohnzahlungszeitraum gezahlt",
+          "art": "tb"
+        },
+        {
+          "n": "4.",
+          "t": "Dezember 1997 zufließen; 4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+          "art": "tb"
+        },
+        {
+          "n": "5.",
+          "t": "Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+          "art": "tb"
+        },
+        {
+          "n": "6.",
+          "t": "Bei der Veranlagung zur Einkommensteuer",
+          "art": "tb"
+        },
+        {
+          "n": "7.",
+          "t": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
+          "art": "tb"
+        },
+        {
+          "n": "8.",
+          "t": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
+          "art": "tb"
+        },
+        {
+          "n": "9.",
+          "t": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
+          "art": "tb"
+        },
+        {
+          "n": "10.",
+          "t": "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
+          "art": "tb"
+        },
+        {
+          "n": "11.",
+          "t": "Beim Abzug vom laufenden Arbeitslohn",
+          "art": "tb"
+        },
+        {
+          "n": "12.",
+          "t": "Beim Abzug von einem sonstigen Bezug",
+          "art": "tb"
+        },
+        {
+          "n": "13.",
+          "t": "Beim Lohnsteuer-Jahresausgleich",
+          "art": "tb"
+        },
+        {
+          "n": "14.",
+          "t": "Ausnahme: Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5, 1. soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist: nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt; 2. soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind: nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002; 3. soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31.",
+          "art": "tb"
+        },
+        {
+          "n": "15.",
+          "t": "Ausnahme: Dezember 1997 zufließen; 4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1.",
+          "art": "tb"
+        },
+        {
+          "n": "16.",
+          "t": "Ausnahme: Bei der Veranlagung zur Einkommensteuer ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre.",
+          "art": "tb"
+        },
+        {
+          "n": "17.",
+          "t": "ist: nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt; 2. soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind: nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002; 3. soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31.",
+          "art": "rf"
+        },
+        {
+          "n": "18.",
+          "t": "wird, b) sonstige Bezüge, die nach dem 31.",
+          "art": "rf"
+        },
+        {
+          "n": "19.",
+          "t": "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1.",
+          "art": "rf"
+        },
+        {
+          "n": "20.",
+          "t": "ist: nach dem ab 1.",
+          "art": "rf"
+        },
+        {
+          "n": "21.",
+          "t": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre.",
+          "art": "rf"
+        },
+        {
+          "n": "22.",
+          "t": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend.",
+          "art": "rf"
+        },
+        {
+          "n": "23.",
+          "t": "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt.",
+          "art": "rf"
+        },
+        {
+          "n": "24.",
+          "t": "ist von einkommensteuerpflichtigen Personen nur zu erheben, wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, 1. in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro, 2. in anderen Fällen 20 350 Euro übersteigt.",
+          "art": "rf"
+        },
+        {
+          "n": "25.",
+          "t": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben.",
+          "art": "rf"
+        },
+        {
+          "n": "26.",
+          "t": "ist der Solidaritätszuschlag nur zu erheben, wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt: 1. in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2 und 2. in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1.",
+          "art": "rf"
+        },
+        {
+          "n": "27.",
+          "t": "ist der Solidaritätszuschlag nur zu ermitteln, wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt.",
+          "art": "rf"
+        }
+      ],
+      "klassifikation": "rule",
+      "status": "automatisch_konsens",
+      "konfidenz": 0.844,
+      "text_hash": "ed2d99c4a352f17e99b82259e25b89052ed4f9a478208dc50eecb52cc77e4828",
+      "pipeline_version": 2,
+      "modell": "openai/gpt-4.1-mini",
+      "konsens_methode": "ki_logik_quellen",
+      "gesetz_quellen_konsens": true,
+      "gesetz_quellen": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata",
+        "bmf-schreiben"
+      ],
+      "quellen_konsens": true,
+      "quellen": [
+        {
+          "id": "amtlicher-text",
+          "typ": "gesetz",
+          "titel": "Solidaritätszuschlaggesetz – amtlicher Normtext",
+          "herausgeber": "Bundesministerium der Justiz / Bundesamt für Justiz; XML-Spiegel: QuantLaw",
+          "url": "https://www.gesetze-im-internet.de/solzg_1995/"
+        },
+        {
+          "id": "bfh",
+          "typ": "rechtsprechung",
+          "titel": "Entscheidungen online",
+          "herausgeber": "Bundesfinanzhof",
+          "url": "https://www.bundesfinanzhof.de/de/entscheidungen/entscheidungen-online"
+        },
+        {
+          "id": "openlegaldata",
+          "typ": "rechtsprechungsdaten",
+          "titel": "Maschinenlesbare Gesetze und Gerichtsentscheidungen",
+          "herausgeber": "Open Legal Data",
+          "url": "https://de.openlegaldata.io/"
+        },
+        {
+          "id": "bmf-schreiben",
+          "typ": "verwaltung",
+          "titel": "BMF-Schreiben und Verwaltungsanweisungen",
+          "herausgeber": "Bundesministerium der Finanzen",
+          "url": "https://www.bundesfinanzministerium.de/Web/DE/Service/Publikationen/BMF_Schreiben/bmf_schreiben.html"
+        }
+      ],
+      "quellen_support": [
+        "amtlicher-text",
+        "openlegaldata"
+      ],
+      "begruendung_kurz": "Regelung zur Bemessungsgrundlage und zeitlichen Anwendung des Solidaritätszuschlags mit Bezug auf verschiedene Steuerarten und Freibeträge.",
+      "aktualisiert": "2026-07-29T11:08:13.810Z"
+    },
+    "4": {
+      "tb": [
+        "Der Solidaritätszuschlag"
+      ],
+      "rf": [
+        "beträgt 5,5 Prozent der Bemessungsgrundlage.",
+        "Er beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze.",
+        "beträgt ungeachtet des Satzes 2 5,5 Prozent."
+      ],
+      "ausnahmen": [
+        "Bruchteile eines Cents bleiben außer Ansatz."
+      ],
+      "hinweis": "Automatisch aus Normtext, KI und Regellogik unter Einbeziehung von 4 Gesetzesreferenzen abgeleitet. 2 Quelle(n) stützen diese Norm unmittelbar. Konfidenz 84 %. Keine Rechtsberatung.",
+      "schema": [
+        {
+          "n": "1.",
+          "t": "Der Solidaritätszuschlag",
+          "art": "tb"
+        },
+        {
+          "n": "2.",
+          "t": "Ausnahme: Bruchteile eines Cents bleiben außer Ansatz.",
+          "art": "tb"
+        },
+        {
+          "n": "3.",
+          "t": "beträgt 5,5 Prozent der Bemessungsgrundlage.",
+          "art": "rf"
+        },
+        {
+          "n": "4.",
+          "t": "Er beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze.",
+          "art": "rf"
+        },
+        {
+          "n": "5.",
+          "t": "beträgt ungeachtet des Satzes 2 5,5 Prozent.",
+          "art": "rf"
+        }
+      ],
+      "klassifikation": "rule",
+      "status": "automatisch_konsens",
+      "konfidenz": 0.844,
+      "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
+      "pipeline_version": 2,
+      "modell": "openai/gpt-4.1-mini",
+      "konsens_methode": "ki_logik_quellen",
+      "gesetz_quellen_konsens": true,
+      "gesetz_quellen": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata",
+        "bmf-schreiben"
+      ],
+      "quellen_konsens": true,
+      "quellen": [
+        {
+          "id": "amtlicher-text",
+          "typ": "gesetz",
+          "titel": "Solidaritätszuschlaggesetz – amtlicher Normtext",
+          "herausgeber": "Bundesministerium der Justiz / Bundesamt für Justiz; XML-Spiegel: QuantLaw",
+          "url": "https://www.gesetze-im-internet.de/solzg_1995/"
+        },
+        {
+          "id": "bfh",
+          "typ": "rechtsprechung",
+          "titel": "Entscheidungen online",
+          "herausgeber": "Bundesfinanzhof",
+          "url": "https://www.bundesfinanzhof.de/de/entscheidungen/entscheidungen-online"
+        },
+        {
+          "id": "openlegaldata",
+          "typ": "rechtsprechungsdaten",
+          "titel": "Maschinenlesbare Gesetze und Gerichtsentscheidungen",
+          "herausgeber": "Open Legal Data",
+          "url": "https://de.openlegaldata.io/"
+        },
+        {
+          "id": "bmf-schreiben",
+          "typ": "verwaltung",
+          "titel": "BMF-Schreiben und Verwaltungsanweisungen",
+          "herausgeber": "Bundesministerium der Finanzen",
+          "url": "https://www.bundesfinanzministerium.de/Web/DE/Service/Publikationen/BMF_Schreiben/bmf_schreiben.html"
+        }
+      ],
+      "quellen_support": [
+        "amtlicher-text",
+        "openlegaldata"
+      ],
+      "begruendung_kurz": "Regelung des Zuschlagsatzes des Solidaritätszuschlags mit Höchstgrenze und Sonderregelungen für bestimmte Steuerarten.",
+      "aktualisiert": "2026-07-29T11:08:13.811Z"
+    },
+    "5": {
+      "tb": [],
+      "rf": [
+        "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt, so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen."
+      ],
+      "ausnahmen": [],
+      "hinweis": "Automatisch als „no_classic_rule“ klassifiziert; keine vollständige klassische Tatbestand-Rechtsfolge-Struktur erkannt. 4 Referenzen auf Gesetzesebene, 1 unmittelbare Normquelle(n), Konfidenz 70 %.",
+      "schema": [
+        {
+          "n": "1.",
+          "t": "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt, so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen.",
+          "art": "rf"
+        }
+      ],
+      "klassifikation": "no_classic_rule",
+      "status": "automatisch_klassifiziert",
+      "konfidenz": 0.702,
+      "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
+      "pipeline_version": 2,
+      "modell": "openai/gpt-4.1-mini",
+      "konsens_methode": "ki_logik_quellen",
+      "gesetz_quellen_konsens": true,
+      "gesetz_quellen": [
+        "amtlicher-text",
+        "bfh",
+        "openlegaldata",
+        "bmf-schreiben"
+      ],
+      "quellen_konsens": true,
+      "quellen": [
+        {
+          "id": "amtlicher-text",
+          "typ": "gesetz",
+          "titel": "Solidaritätszuschlaggesetz – amtlicher Normtext",
+          "herausgeber": "Bundesministerium der Justiz / Bundesamt für Justiz; XML-Spiegel: QuantLaw",
+          "url": "https://www.gesetze-im-internet.de/solzg_1995/"
+        },
+        {
+          "id": "bfh",
+          "typ": "rechtsprechung",
+          "titel": "Entscheidungen online",
+          "herausgeber": "Bundesfinanzhof",
+          "url": "https://www.bundesfinanzhof.de/de/entscheidungen/entscheidungen-online"
+        },
+        {
+          "id": "openlegaldata",
+          "typ": "rechtsprechungsdaten",
+          "titel": "Maschinenlesbare Gesetze und Gerichtsentscheidungen",
+          "herausgeber": "Open Legal Data",
+          "url": "https://de.openlegaldata.io/"
+        },
+        {
+          "id": "bmf-schreiben",
+          "typ": "verwaltung",
+          "titel": "BMF-Schreiben und Verwaltungsanweisungen",
+          "herausgeber": "Bundesministerium der Finanzen",
+          "url": "https://www.bundesfinanzministerium.de/Web/DE/Service/Publikationen/BMF_Schreiben/bmf_schreiben.html"
+        }
+      ],
+      "quellen_support": [
+        "amtlicher-text"
+      ],
+      "begruendung_kurz": "Regelt die Anwendung von Steuerermäßigungen aus Doppelbesteuerungsabkommen auf den Solidaritätszuschlag.",
+      "aktualisiert": "2026-07-29T11:08:42.435Z"
+    }
+  },
+  "unvollstaendig": true,
+  "bearbeitet": 5,
+  "gesamt": 6,
+  "modellaufrufe": 9
+}
