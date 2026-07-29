@@ -1,0 +1,92 @@
+{
+ "abk": "GewStG",
+ "normen": {
+  "2": {
+   "tb": [
+    "jeder stehende Gewerbebetrieb, soweit er im Inland betrieben wird",
+    "ein gewerbliches Unternehmen im Sinne des Einkommensteuergesetzes"
+   ],
+   "rf": [
+    "Der Gewerbesteuer unterliegt"
+   ],
+   "hinweis": "Objektsteuercharakter: besteuert wird der Betrieb, nicht die Person. Kapitalgesellschaften gelten stets und in vollem Umfang als Gewerbebetrieb (§ 2 Abs. 2 Satz 1).",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Gewerbebetrieb",
+     "art": "tb",
+     "sub": [
+      "Kraft Tätigkeit: § 15 Abs. 2 EStG",
+      "Kraft Rechtsform: § 2 Abs. 2",
+      "Kraft wirtschaftlichen Geschäftsbetriebs: § 2 Abs. 3"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Stehender Betrieb",
+     "art": "tb",
+     "sub": [
+      "Abgrenzung zum Reisegewerbe, § 35a"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Betriebsstätte im Inland (§ 12 AO)",
+     "art": "tb"
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: sachliche Gewerbesteuerpflicht",
+     "art": "rf",
+     "sub": [
+      "Gewerbeertrag § 7, Hinzurechnungen § 8, Kürzungen § 9",
+      "Freibetrag § 11, Anrechnung § 35 EStG"
+     ]
+    }
+   ]
+  },
+  "7": {
+   "tb": [
+    "der nach den Vorschriften des Einkommensteuergesetzes oder des Körperschaftsteuergesetzes zu ermittelnde Gewinn aus dem Gewerbebetrieb"
+   ],
+   "rf": [
+    "Gewerbeertrag ist"
+   ],
+   "hinweis": "Ausgangsgröße ist der einkommen- oder körperschaftsteuerliche Gewinn; die gewerbesteuerlichen Korrekturen folgen erst über §§ 8 und 9.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Gewinn aus Gewerbebetrieb nach EStG oder KStG",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Hinzurechnungen (§ 8)",
+     "art": "tb",
+     "sub": [
+      "Entgelte für Schulden, Mieten, Pachten, Lizenzen",
+      "Freibetrag von 200.000 Euro auf die Summe"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Kürzungen (§ 9)",
+     "art": "tb",
+     "sub": [
+      "1,2 Prozent des Einheitswerts des Grundbesitzes",
+      "Erweiterte Kürzung für Grundstücksunternehmen, § 9 Nr. 1 Satz 2",
+      "Schachtelbeteiligungen § 9 Nr. 2a"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Gewerbeertrag",
+     "art": "rf",
+     "sub": [
+      "Verlustabzug § 10a, Freibetrag § 11, Messbetrag und Hebesatz § 16"
+     ]
+    }
+   ]
+  }
+ }
+}
