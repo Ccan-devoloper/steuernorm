@@ -118,14 +118,9 @@ function batches(liste) {
   return ergebnis;
 }
 
-function kiTeileVereinen(originalId, teile, minimum) {
+function kiTeileVereinen(originalId, teile) {
   if (!teile.length) throw new Error(`Keine KI-Teilantwort für Norm ${originalId}`);
-  for (const teil of teile) {
-    const support = eindeutig((teil.ki?.quellen_support || []).map(String));
-    if (teil.ki?.quellen_konsens !== true || support.length < minimum) {
-      throw new Error(`Norm ${originalId}, Teil ${teil.analyseId}: kein bestätigter ${minimum}-Quellen-Konsens`);
-    }
-  }
+  if (teile.some((teil) => !teil.ki)) throw new Error(`Unvollständige KI-Teilantwort für Norm ${originalId}`);
 
   const klassen = teile.map((teil) => teil.ki.klassifikation);
   const normativ = new Set(["rule", "definition", "fiction", "obligation", "prohibition", "permission", "entitlement", "calculation", "procedure", "competence"]);
@@ -149,7 +144,7 @@ function kiTeileVereinen(originalId, teile, minimum) {
     ausnahmen: eindeutig(teile.flatMap((teil) => teil.ki.ausnahmen || [])),
     konfidenz: Number(konfidenz.toFixed(3)),
     quellen_support: eindeutig(teile.flatMap((teil) => teil.ki.quellen_support || []).map(String)),
-    quellen_konsens: true,
+    quellen_konsens: teile.some((teil) => teil.ki.quellen_konsens === true),
     begruendung_kurz: teile
       .map((teil) => teil.ki.begruendung_kurz)
       .filter(Boolean)
@@ -222,9 +217,9 @@ async function main() {
     const alle = gesetz.normen.map((norm) => {
       const textHash = hashText(textDerNorm(norm));
       const vorhanden = alt.normen?.[norm.id];
-      const supportAktuell = Array.isArray(vorhanden?.quellen_support)
-        && vorhanden.quellen_support.length >= minimum
-        && vorhanden.quellen_support.every((id) => erreichbareIds.has(id));
+      const gesetzesquellenAktuell = Array.isArray(vorhanden?.gesetz_quellen)
+        && vorhanden.gesetz_quellen.length >= minimum
+        && vorhanden.gesetz_quellen.every((id) => erreichbareIds.has(id));
       return {
         norm,
         logik: logikAnalyse(norm),
@@ -233,8 +228,8 @@ async function main() {
           !voll
           && vorhanden?.text_hash === textHash
           && vorhanden?.pipeline_version === PIPELINE_VERSION
-          && vorhanden?.quellen_konsens === true
-          && supportAktuell,
+          && vorhanden?.gesetz_quellen_konsens === true
+          && gesetzesquellenAktuell,
       };
     });
 
@@ -270,7 +265,7 @@ async function main() {
 
     for (const eintrag of neu) {
       const teile = [...teilAntworten.values()].filter((teil) => teil.originalId === String(eintrag.norm.id));
-      const ki = ohneKi ? null : kiTeileVereinen(String(eintrag.norm.id), teile, minimum);
+      const ki = ohneKi ? null : kiTeileVereinen(String(eintrag.norm.id), teile);
       ausgabe[eintrag.norm.id] = konsensAnnotation({
         norm: eintrag.norm,
         logik: eintrag.logik,
@@ -299,7 +294,7 @@ async function main() {
       quellenpolitik: {
         minimum,
         erreichbar: erreichbar.length,
-        methode: "ausdrücklicher KI-Support plus deterministische Regellogik",
+        methode: "mindestens vier Referenzen je Gesetz; direkte Normbelege separat",
       },
       normen: geordnet,
     };
@@ -312,7 +307,7 @@ async function main() {
       normen: werte.length,
       mit_regel: mitRegel,
       ohne_klassische_regel: werte.length - mitRegel,
-      quellen_min: Math.min(...werte.map((annotation) => annotation.quellen_support?.length || 0)),
+      quellen_min: Math.min(...werte.map((annotation) => annotation.gesetz_quellen?.length || 0)),
       konfidenz_mittel: werte.reduce((summe, annotation) => summe + Number(annotation.konfidenz || 0), 0) / Math.max(1, werte.length),
     });
   }
