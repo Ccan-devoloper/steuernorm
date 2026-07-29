@@ -1,10 +1,10 @@
 name: Format-3-Dateien übernehmen
 
-# Einmaliger, branchgebundener Übernahmelauf.
+# Einmaliger Lauf nach dem Merge; anschließend wird dieser Workflow entfernt.
 on:
   push:
     branches:
-      - feature/annotations-v3
+      - main
     paths:
       - ".github/workflows/v3-dateien-migrieren.yml"
   workflow_dispatch:
@@ -16,10 +16,10 @@ jobs:
   migrieren:
     runs-on: ubuntu-latest
     steps:
-      - name: Repository auschecken
+      - name: Hauptstand auschecken
         uses: actions/checkout@v5
         with:
-          ref: feature/annotations-v3
+          ref: main
 
       - name: Archivdateien übernehmen und v2 bereinigen
         shell: bash
@@ -74,6 +74,10 @@ jobs:
           git config user.name "steuernorm-v3-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A
-          git commit -m "Format-3-Frontend und Dokumentation übernehmen"
-          git pull --rebase origin feature/annotations-v3
-          git push origin HEAD:feature/annotations-v3
+          if git diff --cached --quiet; then
+            echo "Keine Migrationsänderungen."
+          else
+            git commit -m "Format-3-Frontend und Dokumentation übernehmen"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
