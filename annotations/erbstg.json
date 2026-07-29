@@ -1,0 +1,95 @@
+{
+ "abk": "ErbStG",
+ "normen": {
+  "1": {
+   "tb": [
+    "der Erwerb von Todes wegen",
+    "die Schenkungen unter Lebenden"
+   ],
+   "rf": [
+    "Der Erbschaftsteuer (Schenkungsteuer) unterliegen"
+   ],
+   "hinweis": "§ 1 nennt die vier Steuertatbestände. Konkretisiert werden sie in § 3 (Erwerb von Todes wegen) und § 7 (Schenkung unter Lebenden).",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Steuerbarer Vorgang (§ 1 Abs. 1)",
+     "art": "tb",
+     "sub": [
+      "Erwerb von Todes wegen, § 3",
+      "Schenkung unter Lebenden, § 7",
+      "Zweckzuwendung, Ersatzerbschaftsteuer"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Persönliche Steuerpflicht (§ 2)",
+     "art": "tb",
+     "sub": [
+      "Unbeschränkt bei Inländereigenschaft",
+      "Sonst beschränkt auf Inlandsvermögen, § 121 BewG"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Bereicherung und Bewertung",
+     "art": "tb",
+     "sub": [
+      "§ 10 steuerpflichtiger Erwerb",
+      "Bewertung nach BewG, Verschonung §§ 13a, 13b"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Steuer nach Klasse und Tarif",
+     "art": "rf",
+     "sub": [
+      "Steuerklasse § 15, Freibeträge § 16, Tarif § 19"
+     ]
+    }
+   ]
+  },
+  "7": {
+   "tb": [
+    "jede freigebige Zuwendung unter Lebenden, soweit der Bedachte durch sie auf Kosten des Zuwendenden bereichert wird"
+   ],
+   "rf": [
+    "Als Schenkungen unter Lebenden gelten"
+   ],
+   "hinweis": "Erforderlich sind objektiv eine unentgeltliche Bereicherung und subjektiv der Wille zur Freigebigkeit. Bei gemischten Schenkungen wird nur der unentgeltliche Teil erfasst.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Zuwendung: Vermögensverschiebung",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Bereicherung des Bedachten auf Kosten des Zuwendenden",
+     "art": "tb",
+     "sub": [
+      "Objektive Unentgeltlichkeit",
+      "Bei gemischter Schenkung Aufteilung"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Wille zur Freigebigkeit",
+     "art": "tb",
+     "sub": [
+      "Kenntnis der Unentgeltlichkeit genügt"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: steuerpflichtiger Erwerb",
+     "art": "rf",
+     "sub": [
+      "Entstehung § 9 Abs. 1 Nr. 2 mit Ausführung der Zuwendung",
+      "Zusammenrechnung nach § 14"
+     ]
+    }
+   ]
+  }
+ }
+}
