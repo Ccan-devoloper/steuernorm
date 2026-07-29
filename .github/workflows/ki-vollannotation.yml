@@ -1,6 +1,13 @@
 name: KI-Vollannotation erzeugen
 
 on:
+  pull_request:
+    paths:
+      - "tools/ki-annotieren.mjs"
+      - "tools/lib/**"
+      - "tools/pruefen-v2.mjs"
+      - "config/referenzquellen.json"
+      - ".github/workflows/ki-vollannotation.yml"
   push:
     branches:
       - main
@@ -10,12 +17,15 @@ on:
       - "tools/pruefen-v2.mjs"
       - "config/referenzquellen.json"
       - ".github/workflows/ki-vollannotation.yml"
-  schedule:
-    - cron: "10 3 * * *"
   workflow_dispatch:
     inputs:
+      gesetz:
+        description: "Optionales Gesetzeskürzel, z. B. SolzG; leer bedeutet alle Gesetze"
+        required: false
+        default: ""
+        type: string
       vollstaendig:
-        description: "Alle Normen unabhängig vom Text-Hash neu analysieren"
+        description: "Ausgewählte Normen unabhängig vom Text-Hash neu analysieren"
         required: false
         default: true
         type: boolean
@@ -25,18 +35,24 @@ permissions:
   models: read
 
 concurrency:
-  group: steuernorm-ki-vollannotation
+  group: steuernorm-ki-vollannotation-${{ github.ref }}
   cancel-in-progress: false
 
 env:
   KI_MODELL: openai/gpt-4.1-mini
   MIN_QUELLEN: "4"
   REQUIRE_AI: "1"
+  BATCH_NORMEN: "6"
+  BATCH_ZEICHEN: "26000"
 
 jobs:
-  annotieren:
+  smoke-test:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      models: read
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v5
@@ -46,11 +62,33 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Vollständige oder inkrementelle Analyse ausführen
+      - name: SolzG vollständig mit KI und Logik analysieren
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/ki-annotieren.mjs --nur solzg --voll
+
+      - name: SolzG auf Vollständigkeit und Quellenkonsens prüfen
+        run: node tools/pruefen-v2.mjs --nur solzg
+
+  annotieren:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Vollständige oder gezielte Analyse ausführen
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EVENT_NAME: ${{ github.event_name }}
+          INPUT_GESETZ: ${{ inputs.gesetz }}
           INPUT_VOLL: ${{ inputs.vollstaendig }}
         run: |
           set -euo pipefail
@@ -58,10 +96,22 @@ jobs:
           if [ "$EVENT_NAME" = "push" ] || [ "$INPUT_VOLL" = "true" ]; then
             args+=(--voll)
           fi
+          if [ -n "${INPUT_GESETZ:-}" ]; then
+            args+=(--nur "$INPUT_GESETZ")
+          fi
           node tools/ki-annotieren.mjs "${args[@]}"
 
       - name: Automatische Annotationen prüfen
-        run: node tools/pruefen-v2.mjs | tee pruefbericht.txt
+        shell: bash
+        env:
+          INPUT_GESETZ: ${{ inputs.gesetz }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ -n "${INPUT_GESETZ:-}" ]; then
+            args+=(--nur "$INPUT_GESETZ")
+          fi
+          node tools/pruefen-v2.mjs "${args[@]}" | tee pruefbericht.txt
 
       - name: Ergebnis veröffentlichen
         shell: bash
