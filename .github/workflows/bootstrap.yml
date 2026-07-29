@@ -30,22 +30,46 @@ jobs:
           cat .bootstrap/extras.* | base64 --decode > /tmp/steuernorm-extras.tgz
           tar -xzf /tmp/steuernorm-extras.tgz
 
-      - name: Ausfallsichere Aktualisierung einrichten
+      - name: Tägliche Aktualisierung ausfallsicher machen
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          datei = Path("tools/update.mjs")
+
+          datei = Path(".github/workflows/gesetze-aktualisieren.yml")
           text = datei.read_text(encoding="utf-8")
-          text = text.replace(
-              "      process.exitCode = 1;",
-              '      console.warn("Bestehende Gesetzesdaten bleiben unverändert.");'
-          )
-          datei.write_text(text, encoding="utf-8")
+          alt = '''      - name: Gesetzestexte laden
+                run: node tools/update.mjs
+          '''
+          neu = '''      - name: Gesetzestexte laden
+                shell: bash
+                run: |
+                  rm -rf /tmp/steuernorm-data-backup
+                  cp -a data /tmp/steuernorm-data-backup
+                  if node tools/update.mjs; then
+                    echo "Aktualisierung erfolgreich."
+                  else
+                    echo "::warning::Amtliche Quelle nicht vollständig erreichbar; bisheriger Datenstand bleibt vollständig erhalten."
+                    rm -rf data
+                    cp -a /tmp/steuernorm-data-backup data
+                  fi
+          '''
+          if alt not in text:
+              raise SystemExit("Erwarteter Aktualisierungsschritt wurde nicht gefunden")
+          datei.write_text(text.replace(alt, neu), encoding="utf-8")
           PY
 
       - name: Aktuelle Gesetzestexte laden oder vorhandene Daten verwenden
+        shell: bash
         run: |
-          node tools/update.mjs || echo "::warning::Externe Quelle nicht erreichbar; vorhandene Gesetzesdaten werden verwendet."
+          rm -rf /tmp/steuernorm-data-backup
+          cp -a data /tmp/steuernorm-data-backup
+          if node tools/update.mjs; then
+            echo "Aktualisierung erfolgreich."
+          else
+            echo "::warning::Amtliche Quelle nicht vollständig erreichbar; mitgelieferter Datenstand wird verwendet."
+            rm -rf data
+            cp -a /tmp/steuernorm-data-backup data
+          fi
           test -s data/index.json
 
       - name: Markierungen prüfen
