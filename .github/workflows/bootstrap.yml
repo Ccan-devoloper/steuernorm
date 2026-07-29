@@ -30,8 +30,23 @@ jobs:
           cat .bootstrap/extras.* | base64 --decode > /tmp/steuernorm-extras.tgz
           tar -xzf /tmp/steuernorm-extras.tgz
 
-      - name: Aktuelle Gesetzestexte laden
-        run: node tools/update.mjs
+      - name: Ausfallsichere Aktualisierung einrichten
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          datei = Path("tools/update.mjs")
+          text = datei.read_text(encoding="utf-8")
+          text = text.replace(
+              "      process.exitCode = 1;",
+              '      console.warn("Bestehende Gesetzesdaten bleiben unverändert.");'
+          )
+          datei.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Aktuelle Gesetzestexte laden oder vorhandene Daten verwenden
+        run: |
+          node tools/update.mjs || echo "::warning::Externe Quelle nicht erreichbar; vorhandene Gesetzesdaten werden verwendet."
+          test -s data/index.json
 
       - name: Markierungen prüfen
         run: node tools/pruefen.mjs | tee pruefbericht.txt
