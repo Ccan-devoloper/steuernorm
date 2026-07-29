@@ -112,18 +112,34 @@ async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
 
   let formatStufe = 0;
   let rateVersuche = 0;
+  let netzVersuche = 0;
   for (let versuch = 1; versuch <= 6; versuch++) {
     budgetVerbrauchen(budget);
-    const antwort = await fetch(API, {
-      method: "POST",
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        "X-GitHub-Api-Version": "2026-03-10",
-      },
-      body: JSON.stringify(body),
-    });
+    let antwort;
+    try {
+      antwort = await fetch(API, {
+        method: "POST",
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2026-03-10",
+        },
+        body: JSON.stringify(body),
+      });
+    } catch (fehler) {
+      netzVersuche++;
+      if (rateVersuche > 0) {
+        throw new ModellKontingentErschoepft(`Netzwerkabbruch nach GitHub-Models-429: ${fehler.message}`);
+      }
+      if (netzVersuche < 3) {
+        const warten = 3_000 * netzVersuche;
+        console.warn(`Modellnetzwerkfehler; neuer Versuch in ${warten / 1_000}s`);
+        await new Promise((resolve) => setTimeout(resolve, warten));
+        continue;
+      }
+      throw new ModellKontingentErschoepft(`GitHub Models wiederholt nicht erreichbar: ${fehler.message}`);
+    }
 
     if (antwort.ok) return antwortInhalt(await antwort.json());
 
@@ -153,7 +169,7 @@ async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
     }
     throw new Error(`GitHub Models ${antwort.status}: ${fehlertext.slice(0, 500)}`);
   }
-  throw new Error("GitHub Models nicht erreichbar");
+  throw new ModellKontingentErschoepft("GitHub Models nach mehreren Versuchen nicht erreichbar");
 }
 
 export async function modellAufruf(args) {
