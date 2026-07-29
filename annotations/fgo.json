@@ -1,0 +1,64 @@
+{
+ "abk": "FGO",
+ "normen": {
+  "40": {
+   "tb": [
+    "wenn der Kläger geltend macht",
+    "in seinen Rechten verletzt zu sein"
+   ],
+   "rf": [
+    "Durch Klage kann die Aufhebung"
+   ],
+   "hinweis": "§ 40 regelt Klagearten und Klagebefugnis. Vor der Klage steht regelmäßig das Vorverfahren nach § 44; die Frist ergibt sich aus § 47.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Finanzrechtsweg (§ 33)",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Statthafte Klageart (§ 40 Abs. 1)",
+     "art": "tb",
+     "sub": [
+      "Anfechtungsklage gegen Verwaltungsakte",
+      "Verpflichtungsklage bei Ablehnung oder Unterlassen",
+      "Allgemeine Leistungs- und Feststellungsklage (§ 41)"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Klagebefugnis (§ 40 Abs. 2)",
+     "art": "tb",
+     "sub": [
+      "Möglichkeit einer eigenen Rechtsverletzung"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Erfolglos abgeschlossenes Vorverfahren (§ 44)",
+     "art": "tb",
+     "sub": [
+      "Ausnahme Sprungklage § 45, Untätigkeitsklage § 46"
+     ]
+    },
+    {
+     "n": "V.",
+     "t": "Klagefrist (§ 47) und Form (§ 64)",
+     "art": "tb",
+     "sub": [
+      "Ein Monat nach Bekanntgabe der Einspruchsentscheidung"
+     ]
+    },
+    {
+     "n": "VI.",
+     "t": "Ergebnis: zulässige Klage",
+     "art": "rf",
+     "sub": [
+      "Anschließend Begründetheit: Rechtswidrigkeit und Rechtsverletzung, § 100"
+     ]
+    }
+   ]
+  }
+ }
+}
