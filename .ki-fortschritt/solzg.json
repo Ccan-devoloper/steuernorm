@@ -4,7 +4,7 @@
   "pipeline_version": 2,
   "automatisch": true,
   "modell": "openai/gpt-4.1-mini",
-  "aktualisiert": "2026-07-29T11:08:55.702Z",
+  "aktualisiert": "2026-07-29T11:11:58.647Z",
   "quellenpolitik": {
     "minimum": 4,
     "erreichbar": 4,
@@ -647,5 +647,5 @@
   "unvollstaendig": true,
   "bearbeitet": 5,
   "gesamt": 6,
-  "modellaufrufe": 9
+  "modellaufrufe": 3
 }
