@@ -1,6 +1,6 @@
 name: Format-3-Dateien übernehmen
 
-# Einmaliger Lauf nach dem Merge; auf main erneut ausgelöst und anschließend entfernt.
+# Einmaliger Lauf, durch Merge-Push ausgelöst und anschließend entfernt.
 on:
   push:
     branches:
