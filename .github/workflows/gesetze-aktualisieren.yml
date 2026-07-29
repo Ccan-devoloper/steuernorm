@@ -1,4 +1,4 @@
-name: Gesetzestexte und KI-Annotationen aktualisieren
+name: Gesetzestexte täglich aktualisieren
 
 on:
   schedule:
@@ -7,21 +7,15 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: steuernorm-gesetzesupdate
   cancel-in-progress: false
 
-env:
-  KI_MODELL: openai/gpt-4.1-mini
-  MIN_QUELLEN: "4"
-  REQUIRE_AI: "1"
-
 jobs:
   aktualisieren:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 45
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v5
@@ -31,14 +25,12 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Bisherigen Stand sichern
+      - name: Bisherigen Gesetzesstand sichern
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf /tmp/steuernorm-backup
-          mkdir -p /tmp/steuernorm-backup
-          cp -a data /tmp/steuernorm-backup/data
-          cp -a annotations /tmp/steuernorm-backup/annotations
+          rm -rf /tmp/steuernorm-data-backup
+          cp -a data /tmp/steuernorm-data-backup
 
       - name: Aktuelle XML-Daten laden und konvertieren
         shell: bash
@@ -47,32 +39,34 @@ jobs:
         run: |
           set -euo pipefail
           if ! node tools/update-von-github.mjs; then
-            echo "::error::Die Gesetzesaktualisierung war nicht vollständig. Der bisherige Stand wird wiederhergestellt."
-            rm -rf data annotations
-            cp -a /tmp/steuernorm-backup/data data
-            cp -a /tmp/steuernorm-backup/annotations annotations
+            echo "::error::Die Gesetzesaktualisierung war nicht vollständig. Der bisherige Datenstand wird wiederhergestellt."
+            rm -rf data
+            cp -a /tmp/steuernorm-data-backup data
             exit 1
           fi
 
-      - name: Geänderte Normen mit KI und Logik neu annotieren
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node tools/ki-annotieren.mjs
-
-      - name: Vollständigkeit, Quellen und Textspannen prüfen
-        run: node tools/pruefen-v2.mjs | tee pruefbericht.txt
+      - name: Vollständigen Gesetzesbestand prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s data/index.json
+          anzahl="$(find data -maxdepth 1 -type f -name '*.json' ! -name 'index.json' | wc -l)"
+          test "$anzahl" -eq 14
+          for datei in data/*.json; do
+            node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
+          done
 
       - name: Änderungen veröffentlichen
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf .cache .tmp
+          rm -rf .tmp
           git config user.name "steuernorm-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data annotations reports pruefbericht.txt
+          git add data
           if git diff --cached --quiet; then
-            echo "Keine Änderungen am Gesetzes- oder Annotationsbestand."
+            echo "Keine Änderungen am Gesetzesbestand."
           else
-            git commit -m "Gesetze und KI-Annotationen aktualisieren"
+            git commit -m "Gesetzestexte aktualisieren"
             git push
           fi
