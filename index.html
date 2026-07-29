@@ -10,6 +10,7 @@
     --papier:#FCFCFA; --tinte:#17181A; --gedeckt:#5E615C; --leise:#8E9089;
     --linie:#E4E4DE; --linie-stark:#C9C9C2; --feld:#F3F3EF;
     --tb:#FBEEA8; --tb-kante:#D9B417; --rf:#C6E7CE; --rf-kante:#3D8A55;
+    --ausn:#F3D9D2; --ausn-kante:#B2593F;
     --warn:#8C3A2B;
     --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -42,6 +43,7 @@
   .swatch{width:12px;height:12px;border-radius:2px;border:1px solid var(--linie-stark);flex:none}
   .schalter button[aria-pressed=true] .swatch.tb{background:var(--tb);border-color:var(--tb-kante)}
   .schalter button[aria-pressed=true] .swatch.rf{background:var(--rf);border-color:var(--rf-kante)}
+  .schalter button[aria-pressed=true] .swatch.ausn{background:var(--ausn);border-color:var(--ausn-kante)}
   .burger{display:none;border:0;background:transparent;padding:6px;cursor:pointer;color:var(--gedeckt)}
 
   /* Gesetzesleiste */
@@ -108,6 +110,15 @@
   body[data-tb=an] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
   body[data-rf=an] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
   body[data-tb=an][data-rf=an] mark.tb.rf{background:linear-gradient(180deg,var(--tb) 0 50%,var(--rf) 50% 100%);box-shadow:inset 0 -2px 0 var(--rf-kante)}
+  body[data-ausn=an] mark.ausn{background:var(--ausn);box-shadow:inset 0 -2px 0 var(--ausn-kante)}
+  mark.unsicher{opacity:.55;box-shadow:inset 0 -2px 0 transparent;border-bottom:1px dashed var(--linie-stark)}
+
+  .statusband{max-width:44rem;margin-top:20px;display:flex;align-items:baseline;gap:10px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+  .statusband .plakette{border:1px solid var(--linie-stark);border-radius:2px;padding:2px 7px;letter-spacing:.12em}
+  .statusband .plakette[data-s=konsens]{border-color:var(--rf-kante);color:var(--rf-kante)}
+  .statusband .plakette[data-s=mehrheit]{border-color:var(--tb-kante);color:#8A7209}
+  .statusband .plakette[data-s=uneinheitlich]{border-color:var(--ausn-kante);color:var(--ausn-kante)}
 
   .fussnote{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px;
     font-size:12.5px;color:var(--leise);white-space:pre-wrap;font-family:var(--mono);line-height:1.6}
@@ -135,6 +146,11 @@
     -webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:2px;padding:0 2px}
   body[data-tb=an] ol.leiter .schritt.tb{background:var(--tb)}
   body[data-rf=an] ol.leiter .schritt.rf{background:var(--rf)}
+  body[data-ausn=an] ol.leiter .schritt.ausn{background:var(--ausn)}
+  ol.leiter .junktor{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--leise);margin-left:6px}
+  ol.leiter ul li .pf{font-family:var(--mono);font-size:9.5px;color:var(--leise);flex:none}
+  ol.leiter li.schwach{opacity:.55}
   ol.leiter ul{list-style:none;margin:5px 0 0;padding:0}
   ol.leiter ul li{display:flex;gap:8px;font-size:12.5px;line-height:1.55;color:var(--gedeckt);margin-bottom:3px}
   ol.leiter ul li::before{content:"";flex:none;width:8px;height:1px;background:var(--linie-stark);margin-top:9px}
@@ -168,7 +184,7 @@
   .schliessen button{border:0;background:transparent;cursor:pointer;padding:6px;color:var(--gedeckt)}
 </style>
 </head>
-<body data-tb="an" data-rf="an">
+<body data-tb="an" data-rf="an" data-ausn="an">
 
 <header>
   <div class="kopf">
@@ -180,6 +196,7 @@
     <div class="schalter">
       <button id="btn-tb" aria-pressed="true"><span class="swatch tb"></span>Tatbestand</button>
       <button id="btn-rf" aria-pressed="true"><span class="swatch rf"></span>Rechtsfolge</button>
+      <button id="btn-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausnahme</button>
     </div>
   </div>
   <div class="leiste"><div class="leiste-innen" id="leiste"></div></div>
@@ -306,40 +323,75 @@ function fundstellen(text, phrase){
 function markierungenAnlegen(wurzel, anm){
   const { text, karte, knoten } = textindex(wurzel);
   const klassen = new Map(knoten.map(n => [n, new Uint8Array(n.nodeValue.length)]));
+  const unsicher = new Map(knoten.map(n => [n, new Uint8Array(n.nodeValue.length)]));
   let verwaist = 0;
 
-  for (const [art, bit] of [["tb", 1], ["rf", 2]]){
-    for (const phrase of anm[art] || []){
-      const treffer = fundstellen(text, phrase);
-      if (!treffer.length){
-        verwaist++;
-        continue;
+  const BIT = { tb: 1, rf: 2, ausn: 4 };
+
+  /* Format 3: Jede Spanne trägt eine Position. Damit wird genau eine Fundstelle
+     markiert statt jeder Wiederholung derselben Zeichenkette im Normtext. */
+  const spannen = [];
+  if (Array.isArray(anm.saetze)){
+    for (const satz of anm.saetze){
+      for (const el of satz.elemente || []){
+        spannen.push({ art: el.art, text: el.text, von: el.von, konfidenz: el.konfidenz });
       }
-      for (const [start, ende] of treffer){
-        for (let pos = start; pos < ende; pos++){
-          const ref = karte[pos];
-          if (ref) klassen.get(ref.n)[ref.i] |= bit;
-        }
-      }
+    }
+  } else {
+    /* Rückfall auf das alte Format: ohne Position bleibt nur die Textsuche. */
+    for (const art of ["tb", "rf", "ausn"]){
+      const feld = art === "ausn" ? "ausnahmen" : art;
+      for (const t of anm[feld] || []) spannen.push({ art, text: t, von: null, konfidenz: null });
+    }
+  }
+
+  for (const sp of spannen){
+    const bit = BIT[sp.art];
+    if (!bit || typeof sp.text !== "string" || !sp.text) continue;
+
+    let start = -1;
+    if (Number.isInteger(sp.von) && text.substr(sp.von, sp.text.length) === sp.text){
+      start = sp.von;                                  // Position stimmt auf den Zeichen genau
+    } else {
+      /* Der Text hat sich verschoben — in der Nähe der gespeicherten Position suchen,
+         sonst im ganzen Normtext. Nur die ERSTE Fundstelle wird markiert. */
+      const nahe = Number.isInteger(sp.von) ? Math.max(0, sp.von - 120) : 0;
+      start = text.indexOf(sp.text, nahe);
+      if (start === -1) start = text.indexOf(sp.text);
+    }
+    if (start === -1){ verwaist++; continue; }
+
+    const schwach = typeof sp.konfidenz === "number" && sp.konfidenz < 0.5;
+    for (let pos = start; pos < start + sp.text.length; pos++){
+      const ref = karte[pos];
+      if (!ref) continue;
+      klassen.get(ref.n)[ref.i] |= bit;
+      if (schwach) unsicher.get(ref.n)[ref.i] = 1;
     }
   }
 
   for (const n of knoten){
     const roh = n.nodeValue;
     const bits = klassen.get(n);
+    const uns = unsicher.get(n);
     if (!bits.some(Boolean)) continue;
     const frag = document.createDocumentFragment();
     let start = 0;
     while (start < roh.length){
-      const bit = bits[start];
+      const bit = bits[start], u = uns[start];
       let ende = start + 1;
-      while (ende < roh.length && bits[ende] === bit) ende++;
+      while (ende < roh.length && bits[ende] === bit && uns[ende] === u) ende++;
       const ausschnitt = roh.slice(start, ende);
       if (!bit){
         frag.appendChild(document.createTextNode(ausschnitt));
       } else {
         const mark = document.createElement("mark");
-        mark.className = bit === 3 ? "tb rf" : (bit === 1 ? "tb" : "rf");
+        const teile = [];
+        if (bit & 1) teile.push("tb");
+        if (bit & 2) teile.push("rf");
+        if (bit & 4) teile.push("ausn");
+        if (u) teile.push("unsicher");
+        mark.className = teile.join(" ");
         mark.textContent = ausschnitt;
         frag.appendChild(mark);
       }
@@ -454,13 +506,16 @@ function schemaBauen(anm){
   k.textContent = "Prüfungsschema";
   wrap.appendChild(k);
 
-  if (!anm || !anm.schema){
+  if (!anm || !Array.isArray(anm.schema) || !anm.schema.length){
     const p = document.createElement("p");
     p.className = "leer";
-    p.innerHTML = "Für diese Norm ist noch kein Schema hinterlegt. Schemata liegen in <code>annotations/&lt;gesetz&gt;.json</code> und werden bei der Aktualisierung der Gesetzestexte nicht überschrieben.";
+    p.textContent = anm && anm.typ === "anwendung"
+      ? "Anwendungsvorschrift: regelt allein den zeitlichen Geltungsbereich einer Fassung. Ein Prüfungsschema gibt es dazu nicht."
+      : "Für diese Norm wird kein Schema erzeugt.";
     wrap.appendChild(p);
     return wrap;
   }
+
   const ol = document.createElement("ol");
   ol.className = "leiter";
   for (const s of anm.schema){
@@ -471,15 +526,69 @@ function schemaBauen(anm){
     t.className = "schritt" + (s.art ? " " + s.art : "");
     t.textContent = s.t;
     li.append(rn, t);
-    if (s.sub && s.sub.length){
+
+    if (s.junktor){
+      const j = document.createElement("span");
+      j.className = "junktor";
+      j.textContent = s.junktor === "oder" ? "alternativ" : "kumulativ";
+      li.appendChild(j);
+    }
+
+    if (Array.isArray(s.sub) && s.sub.length){
       const ul = document.createElement("ul");
-      for (const x of s.sub){ const l = document.createElement("li"); l.append(document.createTextNode(x)); ul.appendChild(l); }
+      for (const x of s.sub){
+        const l = document.createElement("li");
+        if (typeof x === "string"){
+          l.appendChild(document.createTextNode(x));
+        } else {
+          if (typeof x.konfidenz === "number" && x.konfidenz < 0.5) l.className = "schwach";
+          const w = document.createElement("span");
+          w.textContent = x.t;
+          l.appendChild(w);
+          if (x.pfad){
+            const pf = document.createElement("span");
+            pf.className = "pf"; pf.textContent = x.pfad;
+            l.appendChild(pf);
+          }
+        }
+        ul.appendChild(l);
+      }
       li.appendChild(ul);
     }
     ol.appendChild(li);
   }
   wrap.appendChild(ol);
   return wrap;
+}
+
+/* Statusband: weist offen aus, wie die Annotation zustande kam. */
+function statusband(anm){
+  if (!anm || !anm.status) return null;
+  const d = document.createElement("div");
+  d.className = "statusband";
+  const p = document.createElement("span");
+  p.className = "plakette";
+  p.dataset.s = anm.status;
+  p.textContent = ({
+    konsens: "Modellkonsens",
+    mehrheit: "Mehrheitlich",
+    uneinheitlich: "Uneinheitlich",
+    syntaktisch: "Nur Syntaxanalyse",
+    ohne_merkmale: "Ohne Markierung",
+  })[anm.status] || anm.status;
+  d.appendChild(p);
+
+  const t = document.createElement("span");
+  if (anm.status === "ohne_merkmale"){
+    t.textContent = "keine Tatbestand-Rechtsfolge-Struktur";
+  } else if (typeof anm.einstimmigkeit === "number"){
+    t.textContent = Math.round(anm.einstimmigkeit * 100) + " % Übereinstimmung über "
+      + anm.laeufe + " unabhängige Läufe · automatisch, nicht redaktionell geprüft";
+  } else {
+    t.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
+  }
+  d.appendChild(t);
+  return d;
 }
 
 /* ------------------------------ Norm ------------------------------ */
@@ -550,6 +659,9 @@ function normZeichnen(){
     f.textContent = norm.fussnote;
     haupt.appendChild(f);
   }
+
+  const sb = statusband(anm);
+  if (sb) haupt.appendChild(sb);
 
   if (anm && anm.hinweis){
     const h = document.createElement("div");
@@ -634,6 +746,8 @@ async function start(){
   schalterSetzen("rf", gemerkt("marker-rf", "an") === "an");
   el("btn-tb").onclick = () => schalterSetzen("tb", document.body.dataset.tb !== "an");
   el("btn-rf").onclick = () => schalterSetzen("rf", document.body.dataset.rf !== "an");
+  schalterSetzen("ausn", gemerkt("marker-ausn", "an") === "an");
+  el("btn-ausn").onclick = () => schalterSetzen("ausn", document.body.dataset.ausn !== "an");
   el("burger").onclick = () => el("register").classList.add("offen");
   el("zu").onclick = () => el("register").classList.remove("offen");
   el("suche").oninput = (e) => { S.filter = e.target.value; registerZeichnen(); };

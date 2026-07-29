@@ -1,12 +1,11 @@
 name: Format-3-Dateien übernehmen
 
-# Einmaliger Lauf, durch Merge-Push ausgelöst und anschließend entfernt.
+# Einmaliger Pull-Request-Lauf; übernimmt das hochgeladene Frontend in den PR-Branch.
 on:
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
       - ".github/workflows/v3-dateien-migrieren.yml"
+      - ".migration/index.*.b64"
   workflow_dispatch:
 
 permissions:
@@ -14,25 +13,37 @@ permissions:
 
 jobs:
   migrieren:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      - name: Hauptstand auschecken
+      - name: Pull-Request-Branch auschecken
         uses: actions/checkout@v5
         with:
-          ref: main
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
-      - name: Archivdateien übernehmen und v2 bereinigen
+      - name: Original-Frontend zusammensetzen und Format 2 bereinigen
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/steuernorm-v3
-          base64 --decode .migration/v3-payload.b64 > /tmp/steuernorm-v3.zip
-          unzip -q /tmp/steuernorm-v3.zip -d /tmp/steuernorm-v3
+          python3 - <<'PY'
+          import base64
+          import gzip
+          import hashlib
+          import pathlib
 
-          cp /tmp/steuernorm-v3/index.html index.html
-          cp /tmp/steuernorm-v3/README-v3.md README-v3.md
-          cp /tmp/steuernorm-v3/README-v3.md README.md
-          cp /tmp/steuernorm-v3/tools/eval.mjs tools/eval.mjs
+          teile = sorted(pathlib.Path('.migration').glob('index.*.b64'))
+          if len(teile) != 4:
+              raise SystemExit(f'Erwartet 4 Frontend-Teile, gefunden: {len(teile)}')
+          kodiert = ''.join(datei.read_text(encoding='utf-8').strip() for datei in teile)
+          html = gzip.decompress(base64.b64decode(kodiert))
+          pruefsumme = hashlib.sha256(html).hexdigest()
+          erwartet = '8176187c04bf53996d715913ba90a36d8ec975a753a629b66bd282f3b2005607'
+          if pruefsumme != erwartet:
+              raise SystemExit(f'Frontend-Prüfsumme falsch: {pruefsumme}')
+          pathlib.Path('index.html').write_bytes(html)
+          print(f'Original-Frontend übernommen: {len(html)} Bytes, SHA-256 {pruefsumme}')
+          PY
 
           cat > package.json <<'JSON'
           {
@@ -67,8 +78,20 @@ jobs:
             reports/ki-lauf-status.json
           rm -rf .migration
 
-      - name: Änderung veröffentlichen
+      - name: Übernommenen Stand prüfen
         shell: bash
+        run: |
+          set -euo pipefail
+          test -s index.html
+          test "$(wc -c < index.html)" -eq 35011
+          grep -q 'btn-ausn' index.html
+          grep -q -- '--ausn' index.html
+          node tools/pruefen.mjs --streng
+
+      - name: Änderung in den Pull-Request-Branch schreiben
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
         run: |
           set -euo pipefail
           git config user.name "steuernorm-v3-bot"
@@ -77,7 +100,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Keine Migrationsänderungen."
           else
-            git commit -m "Format-3-Frontend und Dokumentation übernehmen"
-            git pull --rebase --autostash origin main
-            git push origin HEAD:main
+            git commit -m "Format-3-Frontend vollständig übernehmen"
+            git pull --rebase --autostash origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
           fi
