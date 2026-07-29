@@ -74,7 +74,7 @@ function nutzer(gesetz, batch, quellen) {
         herausgeber: quelle.herausgeber,
         titel: quelle.titel,
         url: quelle.url,
-        ausschnitt: quelle.ausschnitt.slice(0, 3_500),
+        ausschnitt: quelle.ausschnitt.slice(0, 900),
       })),
     normen: batch.map(({ norm, logik }) => ({
       id: String(norm.id),
@@ -100,7 +100,7 @@ export async function modellAufruf({ gesetz, batch, quellen, token, modell }) {
       { role: "user", content: nutzer(gesetz, batch, quellen) },
     ],
     temperature: 0.1,
-    max_tokens: 10_000,
+    max_tokens: 5_000,
     response_format: { type: "json_schema", json_schema: ANTWORT_SCHEMA },
   };
 
