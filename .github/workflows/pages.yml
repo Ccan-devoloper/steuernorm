@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -61,3 +61,30 @@ jobs:
       - name: Website veröffentlichen
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Erfolgreiche Veröffentlichung protokollieren
+        shell: bash
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          cat > reports/pages-status.json <<JSON
+          {
+            "status": "veroeffentlicht",
+            "zeitpunkt": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "url": "$PAGE_URL",
+            "commit": "$(git rev-parse HEAD)",
+            "workflow_lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          }
+          JSON
+          git config user.name "github-pages-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports/pages-status.json
+          if git diff --cached --quiet; then
+            echo "Veröffentlichungsstatus unverändert."
+          else
+            git commit -m "Pages-Veröffentlichung protokollieren"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
