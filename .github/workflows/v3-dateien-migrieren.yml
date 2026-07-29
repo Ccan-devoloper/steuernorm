@@ -1,5 +1,6 @@
 name: Format-3-Dateien übernehmen
 
+# Einmaliger, branchgebundener Übernahmelauf.
 on:
   push:
     branches:
