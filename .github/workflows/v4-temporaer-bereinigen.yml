@@ -1,0 +1,54 @@
+name: Temporäre v4-Übertragung bereinigen
+
+on:
+  pull_request:
+    paths:
+      - ".migration-v4/**"
+      - ".migration-v4b/**"
+      - ".github/workflows/v4-dateien-uebernehmen.yml"
+      - ".github/workflows/v4b-dateien-uebernehmen.yml"
+      - ".github/workflows/v4-temporaer-bereinigen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v4-bereinigung-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bereinigen:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull-Request-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Nur nach erfolgreicher Übernahme bereinigen
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          if [ -d .migration-v4 ] || [ -d .migration-v4b ] || [ ! -f tools/belege.mjs ] || [ ! -f config/handbuecher.json ]; then
+            echo "Übernahme noch nicht abgeschlossen; keine Bereinigung."
+            exit 0
+          fi
+          rm -f \
+            .github/workflows/v4-dateien-uebernehmen.yml \
+            .github/workflows/v4b-dateien-uebernehmen.yml \
+            .github/workflows/v4-temporaer-bereinigen.yml
+          git config user.name "steuernorm-v4-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nichts zu bereinigen."
+          else
+            git commit -m "Temporäre v4-Übertragung bereinigen"
+            git pull --rebase --autostash origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
+          fi
