@@ -1,0 +1,52 @@
+{
+ "abk": "KStG",
+ "normen": {
+  "8": {
+   "tb": [
+    "Auch verdeckte Gewinnausschüttungen"
+   ],
+   "rf": [
+    "mindern das Einkommen nicht"
+   ],
+   "hinweis": "Die verdeckte Gewinnausschüttung ist gesetzlich nicht definiert. Nach ständiger Rechtsprechung: Vermögensminderung oder verhinderte Vermögensmehrung, veranlasst durch das Gesellschaftsverhältnis, Auswirkung auf das Einkommen, kein Zusammenhang mit einer offenen Ausschüttung.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Vermögensminderung oder verhinderte Vermögensmehrung",
+     "art": "tb",
+     "sub": [
+      "Vergleich mit dem Ergebnis ohne die Maßnahme"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Veranlassung durch das Gesellschaftsverhältnis",
+     "art": "tb",
+     "sub": [
+      "Fremdvergleich: ordentlicher und gewissenhafter Geschäftsleiter",
+      "Beim beherrschenden Gesellschafter zusätzlich klare, im Voraus getroffene, zivilrechtlich wirksame Vereinbarung"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Auswirkung auf die Höhe des Einkommens",
+     "art": "tb"
+    },
+    {
+     "n": "IV.",
+     "t": "Kein Zusammenhang mit einer offenen Ausschüttung",
+     "art": "tb"
+    },
+    {
+     "n": "V.",
+     "t": "Ergebnis: außerbilanzielle Hinzurechnung",
+     "art": "rf",
+     "sub": [
+      "Beim Gesellschafter Kapitalertrag nach § 20 Abs. 1 Nr. 1 Satz 2 EStG",
+      "Korrespondenzprinzip § 32a KStG"
+     ]
+    }
+   ]
+  }
+ }
+}
