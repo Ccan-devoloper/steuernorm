@@ -46,18 +46,12 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
   const volltext = textDerNorm(norm);
   const erreichbar = quellen.filter((quelle) => quelle.erreichbar);
   if (erreichbar.length < minQuellen) {
-    throw new Error(`${gesetz.abk}: nur ${erreichbar.length} unabhängige Referenzen erreichbar`);
+    throw new Error(`${gesetz.abk}: nur ${erreichbar.length} unabhängige Gesetzesreferenzen erreichbar`);
   }
 
   const erlaubteIds = new Set(erreichbar.map((quelle) => quelle.id));
-  const support = eindeutig((ki?.quellen_support || []).map(String).filter((id) => erlaubteIds.has(id)));
-  if (ki && support.length < minQuellen) {
-    throw new Error(`${gesetz.abk} ${norm.enbez}: KI nennt nur ${support.length} stützende Referenzen`);
-  }
-  if (ki && ki.quellen_konsens !== true) {
-    throw new Error(`${gesetz.abk} ${norm.enbez}: kein überschneidender Vier-Quellen-Konsens`);
-  }
-
+  const direkterSupport = eindeutig((ki?.quellen_support || []).map(String).filter((id) => erlaubteIds.has(id)));
+  const direkterQuellenkonsens = ki?.quellen_konsens === true;
   const kiKonfidenz = modellKonfidenz(ki);
   const kiTb = eindeutig((ki?.tb || []).map((p) => sauberePhrase(p, volltext)).filter(Boolean));
   const kiRf = eindeutig((ki?.rf || []).map((p) => sauberePhrase(p, volltext)).filter(Boolean));
@@ -66,7 +60,7 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
   const tbUeberschneidung = kiTb.filter((p) => passtZuLogik(p, logik.tb));
   const rfUeberschneidung = kiRf.filter((p) => passtZuLogik(p, logik.rf));
   const ausnahmeUeberschneidung = kiAusnahmen.filter((p) => passtZuLogik(p, logik.ausnahmen));
-  const kiAlleinZulaessig = kiKonfidenz >= 0.9 && support.length >= minQuellen;
+  const kiAlleinZulaessig = kiKonfidenz >= 0.9 && direkterQuellenkonsens && direkterSupport.length > 0;
 
   let tb = eindeutig([
     ...logik.tb.map((p) => sauberePhrase(p, volltext)).filter(Boolean),
@@ -115,20 +109,20 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
     (tbUeberschneidung.length + rfUeberschneidung.length + ausnahmeUeberschneidung.length) /
       Math.max(1, kiTb.length + kiRf.length + kiAusnahmen.length),
   );
-  const quellenFaktor = Math.min(1, support.length / Math.max(minQuellen, 5));
+  const gesetzesquellenFaktor = Math.min(1, erreichbar.length / Math.max(minQuellen, 5));
+  const direkterFaktor = direkterQuellenkonsens ? Math.min(1, direkterSupport.length / 3) : 0;
   const konfidenz = Number(
-    (kiKonfidenz * 0.5 + logik.staerke * 0.25 + ueberschneidung * 0.15 + quellenFaktor * 0.1).toFixed(3),
+    (kiKonfidenz * 0.45 + logik.staerke * 0.3 + ueberschneidung * 0.15 + gesetzesquellenFaktor * 0.05 + direkterFaktor * 0.05).toFixed(3),
   );
   const hatRegel = tb.length > 0 && rf.length > 0;
-  const verwendeteQuellen = erreichbar.filter((quelle) => support.includes(quelle.id));
 
   return {
     tb,
     rf,
     ausnahmen,
     hinweis: hatRegel
-      ? `Automatisch aus Normtext, Regellogik und ${support.length} ausdrücklich stützenden Referenzen abgeleitet. Konfidenz ${(konfidenz * 100).toFixed(0)} %. Keine Rechtsberatung.`
-      : `Automatisch als „${klassifikation}“ klassifiziert; keine vollständige klassische Tatbestand-Rechtsfolge-Struktur erkannt. ${support.length} stützende Referenzen, Konfidenz ${(konfidenz * 100).toFixed(0)} %.`,
+      ? `Automatisch aus Normtext, KI und Regellogik unter Einbeziehung von ${erreichbar.length} Gesetzesreferenzen abgeleitet. ${direkterSupport.length} Quelle(n) stützen diese Norm unmittelbar. Konfidenz ${(konfidenz * 100).toFixed(0)} %. Keine Rechtsberatung.`
+      : `Automatisch als „${klassifikation}“ klassifiziert; keine vollständige klassische Tatbestand-Rechtsfolge-Struktur erkannt. ${erreichbar.length} Referenzen auf Gesetzesebene, ${direkterSupport.length} unmittelbare Normquelle(n), Konfidenz ${(konfidenz * 100).toFixed(0)} %.`,
     schema: schema(tb, rf, ausnahmen),
     klassifikation,
     status: hatRegel ? "automatisch_konsens" : "automatisch_klassifiziert",
@@ -137,15 +131,17 @@ export function konsensAnnotation({ norm, logik, ki, quellen, gesetz, modell, pi
     pipeline_version: pipelineVersion,
     modell: ki ? modell : "nur-regellogik",
     konsens_methode: "ki_logik_quellen",
-    quellen_konsens: ki?.quellen_konsens === true,
-    quellen: verwendeteQuellen.map((quelle) => ({
+    gesetz_quellen_konsens: true,
+    gesetz_quellen: erreichbar.map((quelle) => quelle.id),
+    quellen_konsens: direkterQuellenkonsens,
+    quellen: erreichbar.map((quelle) => ({
       id: quelle.id,
       typ: quelle.typ,
       titel: quelle.titel,
       herausgeber: quelle.herausgeber,
       url: quelle.url,
     })),
-    quellen_support: support,
+    quellen_support: direkterSupport,
     begruendung_kurz:
       typeof ki?.begruendung_kurz === "string"
         ? ki.begruendung_kurz.slice(0, 240)
