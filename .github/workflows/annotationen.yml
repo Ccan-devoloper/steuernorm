@@ -1,0 +1,178 @@
+name: Annotationen erzeugen
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "tools/annotieren.mjs"
+      - "tools/pruefen.mjs"
+      - "tools/eval.mjs"
+      - "tools/lib/**"
+      - ".github/workflows/annotationen.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "tools/annotieren.mjs"
+      - "tools/pruefen.mjs"
+      - "tools/eval.mjs"
+      - "tools/lib/**"
+      - ".github/workflows/annotationen.yml"
+  schedule:
+    - cron: "10 5 * * *"
+  workflow_run:
+    workflows:
+      - "Gesetzestexte täglich aktualisieren"
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      nur:
+        description: "Nur diese Gesetze (kommagetrennt, leer = alle)"
+        required: false
+        default: ""
+      laeufe:
+        description: "Unabhängige Modellläufe je Norm"
+        required: false
+        default: "3"
+      ohne_ki:
+        description: "Nur Syntaxanalyse, keine Modellaufrufe"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: annotationen-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  smoke-test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: SolzG deterministisch im Format 3 erzeugen
+        run: node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
+
+      - name: SolzG streng prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/pruefen.mjs --nur solzg --streng
+
+  annotieren:
+    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Aktuellen Hauptstand auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Annotationen erzeugen
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KI_MODELLE: openai/gpt-4.1-mini,openai/gpt-4o-mini
+          MAX_MODELLAUFRUFE: "600"
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_NUR: ${{ inputs.nur }}
+          INPUT_LAEUFE: ${{ inputs.laeufe }}
+          INPUT_OHNE_KI: ${{ inputs.ohne_ki }}
+        run: |
+          set -euo pipefail
+          args=(--laeufe "${INPUT_LAEUFE:-3}")
+          if [ -n "${INPUT_NUR:-}" ]; then
+            args+=(--nur "$INPUT_NUR")
+          fi
+
+          # Beim Einspielen der neuen Pipeline sofort einen vollständigen,
+          # deterministischen Format-3-Bestand erzeugen. Planmäßige, manuelle
+          # und durch Gesetzesänderungen ausgelöste Läufe heben nur offene oder
+          # geänderte Normen auf Mehrfachmodell-Konsens und Gegenprobe an.
+          if [ "$EVENT_NAME" = "push" ] || [ "${INPUT_OHNE_KI:-false}" = "true" ]; then
+            args+=(--ohne-ki)
+          fi
+
+          node tools/annotieren.mjs "${args[@]}"
+
+      - name: Struktur streng prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/pruefen.mjs --streng | tee pruefbericht-ki.txt
+
+      - name: Qualität messen
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          if [ -d eval/gold ]; then
+            node tools/eval.mjs | tee reports/eval.txt
+          else
+            echo "Kein Goldstandard vorhanden — Messung übersprungen." | tee reports/eval.txt
+          fi
+
+      - name: Änderungen festschreiben
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A annotations reports pruefbericht-ki.txt
+          if [ -d .fortschritt ]; then
+            git add -A .fortschritt
+          fi
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Annotationen aktualisiert ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Zusammenfassung
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Annotationslauf"
+            echo ""
+            if [ -f reports/annotation.json ]; then
+              node -e '
+                const b = require("./reports/annotation.json");
+                console.log(`Verfahren: ${b.modelle.join(", ")} · ${b.laeufe} Läufe · ${b.modellaufrufe} Modellaufrufe`);
+                console.log("");
+                console.log("| Gesetz | Normen | neu | unverändert | markierbar | abgelehnt |");
+                console.log("|---|---:|---:|---:|---:|---:|");
+                for (const g of b.gesetze) console.log(`| ${g.abk} | ${g.normen} | ${g.bearbeitet} | ${g.uebernommen} | ${g.markierbar} | ${g.abgelehnt} |`);
+                if (b.abgebrochen) console.log(`\n> Unterbrochen: ${b.abgebrochen} — Fortsetzung im nächsten Lauf.`);
+              '
+            fi
+            echo ""
+            echo '```'
+            cat reports/eval.txt 2>/dev/null || echo "keine Messung"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
