@@ -1,0 +1,78 @@
+name: Format-3-Dateien übernehmen
+
+on:
+  push:
+    branches:
+      - feature/annotations-v3
+    paths:
+      - ".github/workflows/v3-dateien-migrieren.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrieren:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: feature/annotations-v3
+
+      - name: Archivdateien übernehmen und v2 bereinigen
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/steuernorm-v3
+          base64 --decode .migration/v3-payload.b64 > /tmp/steuernorm-v3.zip
+          unzip -q /tmp/steuernorm-v3.zip -d /tmp/steuernorm-v3
+
+          cp /tmp/steuernorm-v3/index.html index.html
+          cp /tmp/steuernorm-v3/README-v3.md README-v3.md
+          cp /tmp/steuernorm-v3/README-v3.md README.md
+          cp /tmp/steuernorm-v3/tools/eval.mjs tools/eval.mjs
+
+          cat > package.json <<'JSON'
+          {
+            "name": "steuernorm",
+            "version": "3.0.0",
+            "private": true,
+            "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Tatbestand-/Rechtsfolge-Annotation",
+            "type": "module",
+            "scripts": {
+              "start": "python3 -m http.server 8000",
+              "update": "node tools/update.mjs",
+              "annotieren": "node tools/annotieren.mjs",
+              "pruefen": "node tools/pruefen.mjs",
+              "eval": "node tools/eval.mjs"
+            },
+            "license": "MIT"
+          }
+          JSON
+
+          rm -f \
+            tools/ki-annotieren.mjs \
+            tools/annotationen.mjs \
+            tools/pruefen-v2.mjs \
+            tools/pruefen-fortschritt.mjs \
+            tools/naechstes-gesetz.mjs \
+            tools/lib/text.mjs \
+            tools/lib/quellen.mjs \
+            config/referenzquellen.json \
+            docs/ki-annotation.md \
+            reports/annotation-progress.json \
+            reports/annotation-progress.md \
+            reports/ki-lauf-status.json
+          rm -rf .migration
+
+      - name: Änderung veröffentlichen
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-v3-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Format-3-Frontend und Dokumentation übernehmen"
+          git pull --rebase origin feature/annotations-v3
+          git push origin HEAD:feature/annotations-v3
