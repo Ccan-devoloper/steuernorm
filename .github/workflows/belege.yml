@@ -1,0 +1,171 @@
+name: Belege sammeln
+
+on:
+  pull_request:
+    paths:
+      - "config/handbuecher.json"
+      - "tools/belege.mjs"
+      - "tools/lib/handbuch.mjs"
+      - "tools/lib/rechtsprechung.mjs"
+      - ".github/workflows/belege.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "config/handbuecher.json"
+      - "tools/belege.mjs"
+      - "tools/lib/handbuch.mjs"
+      - "tools/lib/rechtsprechung.mjs"
+      - ".github/workflows/belege.yml"
+  schedule:
+    - cron: "40 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      karte:
+        description: "Verzeichnisbäume der Handbücher neu aufbauen"
+        type: boolean
+        required: false
+        default: false
+      nur:
+        description: "Nur diese Gesetze (kommagetrennt, leer = alle)"
+        required: false
+        default: ""
+      max:
+        description: "Höchstzahl der Abrufe je Lauf"
+        required: false
+        default: "400"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: belege-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  konfiguration:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Belegmodule und Handbuchkonfiguration prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check tools/belege.mjs
+          node --check tools/lib/handbuch.mjs
+          node --check tools/lib/rechtsprechung.mjs
+          node - <<'NODE'
+          const fs = require("fs");
+          const c = JSON.parse(fs.readFileSync("config/handbuecher.json", "utf8"));
+          if (!Array.isArray(c.handbuecher) || c.handbuecher.length < 8) {
+            throw new Error("Mindestens acht amtliche Handbuchanbindungen erwartet.");
+          }
+          for (const h of c.handbuecher) {
+            if (!h.gesetz || !h.start || !h.prefix || !h.jahrgang) {
+              throw new Error(`Unvollständiger Handbucheintrag: ${JSON.stringify(h)}`);
+            }
+            if (!h.start.startsWith(h.prefix)) {
+              throw new Error(`${h.gesetz}: Startadresse liegt nicht unter dem Prefix.`);
+            }
+          }
+          console.log(`${c.handbuecher.length} Handbuchanbindungen formal gültig.`);
+          NODE
+
+  belege:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Handbuchkarten aufbauen
+        if: inputs.karte == true || hashFiles('config/handbuch-karte-*.json') == ''
+        env:
+          INPUT_NUR: ${{ inputs.nur }}
+          MIN_KARTEN_TREFFER: "5"
+        run: |
+          set -euo pipefail
+          args=(--karte)
+          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          node tools/belege.mjs "${args[@]}"
+
+      - name: Belege abrufen
+        env:
+          INPUT_NUR: ${{ inputs.nur }}
+          MAX_BELEGABRUFE: ${{ inputs.max || '400' }}
+        run: |
+          set -euo pipefail
+          args=()
+          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          node tools/belege.mjs "${args[@]}"
+
+      - name: Belege prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          dateien=(belege/*.json)
+          if [ "${#dateien[@]}" -eq 0 ]; then
+            echo "Keine Belegdatei erzeugt." >&2
+            exit 1
+          fi
+          for datei in "${dateien[@]}"; do
+            node -e 'const b=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")); if(!b.abk||!b.normen) throw new Error(process.argv[1]+": unvollständig");' "$datei"
+          done
+          node - <<'NODE'
+          const fs = require("fs");
+          const dateien = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
+          for (const name of dateien) {
+            const k = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
+            if (Object.keys(k.paragrafen || {}).length < 5) throw new Error(`${name}: Karte ist leer oder unvollständig`);
+          }
+          console.log(`${dateien.length} Handbuchkarten geprüft.`);
+          NODE
+
+      - name: Änderungen festschreiben
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add belege config/handbuch-karte-*.json reports/belege.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Amtliche Belege aktualisiert ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Zusammenfassung
+        if: always()
+        run: |
+          {
+            echo "## Belegschicht"
+            echo ""
+            if [ -f reports/belege.json ]; then
+              node -e '
+                const b = require("./reports/belege.json");
+                console.log(`${b.abrufe} Abrufe`);
+                console.log("");
+                console.log("| Gesetz | Normen | mit Verwaltungsbeleg | mit Rechtsprechung |");
+                console.log("|---|---:|---:|---:|");
+                for (const g of b.gesetze) console.log(`| ${g.abk} | ${g.normen} | ${g.mitVerwaltung} | ${g.mitRechtsprechung} |`);
+              '
+            else
+              echo "Kein Bericht erzeugt."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

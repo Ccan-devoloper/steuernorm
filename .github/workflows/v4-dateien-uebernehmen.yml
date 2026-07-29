@@ -1,0 +1,113 @@
+name: Umbau v4 vollständig übernehmen
+
+on:
+  pull_request:
+    paths:
+      - ".migration-v4/**"
+      - ".github/workflows/v4-dateien-uebernehmen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v4-uebernahme-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  uebernehmen:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Pull-Request-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Archiv rekonstruieren und vollständig übernehmen
+        id: payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import pathlib
+          import re
+          import tarfile
+
+          teile = sorted(pathlib.Path('.migration-v4').glob('payload.*.b64'))
+          ausgabe = pathlib.Path(__import__('os').environ['GITHUB_OUTPUT'])
+          if not teile:
+              ausgabe.write_text('vorhanden=false\n', encoding='utf-8', append=False) if False else None
+              with ausgabe.open('a', encoding='utf-8') as f:
+                  f.write('vorhanden=false\n')
+              print('Payload bereits übernommen.')
+              raise SystemExit(0)
+          if len(teile) != 5:
+              raise SystemExit(f'Erwartet fünf Payload-Teile, gefunden: {len(teile)}')
+
+          stuecke = []
+          for datei in teile:
+              text = ''.join(datei.read_text(encoding='utf-8').split())
+              ungueltig = re.findall(r'[^A-Za-z0-9+/=]', text)
+              print(f'{datei}: {len(text)} Zeichen, ungültig={len(ungueltig)}')
+              if ungueltig:
+                  raise SystemExit(f'{datei}: ungültige Base64-Zeichen: {ungueltig[:10]}')
+              stuecke.append(text)
+
+          kodiert = ''.join(stuecke)
+          print(f'Gesamtlänge: {len(kodiert)} Zeichen')
+          if len(kodiert) != 101020:
+              raise SystemExit(f'Falsche Base64-Gesamtlänge: {len(kodiert)}, erwartet 101020')
+          try:
+              roh = base64.b64decode(kodiert, validate=True)
+          except Exception as fehler:
+              raise SystemExit(f'Base64 ungültig: {fehler}')
+
+          pruefsumme = hashlib.sha256(roh).hexdigest()
+          erwartet = 'f00ecb5009285c660a060238d35e57f82e4250dbc2953092e553e150e656d116'
+          print(f'Archiv-SHA-256: {pruefsumme}')
+          if pruefsumme != erwartet:
+              raise SystemExit(f'Falsche Archiv-Prüfsumme: {pruefsumme}')
+
+          archiv = pathlib.Path('/tmp/steuernorm-v4.tar.gz')
+          archiv.write_bytes(roh)
+          with tarfile.open(archiv, 'r:gz') as datei:
+              datei.extractall('.')
+          import shutil
+          shutil.rmtree('.migration-v4')
+          pathlib.Path('README-v3.md').unlink(missing_ok=True)
+          with ausgabe.open('a', encoding='utf-8') as f:
+              f.write('vorhanden=true\n')
+          PY
+
+      - name: Übernommenen Stand vollständig prüfen
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json", "utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("package.json", "utf8"))'
+          grep -q 'beleg' index.html
+          grep -q 'Rechtsprechung' index.html
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+          node tools/annotieren.mjs --nur solzg --ohne-ki --trocken --laeufe 1
+
+      - name: Änderungen in den Pull-Request-Branch schreiben
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-v4-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Umbau v4 mit Belegschicht vollständig übernehmen"
+          git pull --rebase --autostash origin "$BRANCH"
+          git push origin "HEAD:$BRANCH"
