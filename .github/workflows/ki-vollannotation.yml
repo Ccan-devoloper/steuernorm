@@ -42,8 +42,9 @@ env:
   KI_MODELL: openai/gpt-4.1-mini
   MIN_QUELLEN: "4"
   REQUIRE_AI: "1"
-  BATCH_NORMEN: "6"
-  BATCH_ZEICHEN: "26000"
+  BATCH_NORMEN: "2"
+  BATCH_ZEICHEN: "9000"
+  TEIL_ZEICHEN: "6500"
 
 jobs:
   smoke-test:
