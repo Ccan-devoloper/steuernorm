@@ -1,0 +1,63 @@
+name: Website veröffentlichen
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "data/**"
+      - "annotations/**"
+      - ".github/workflows/pages.yml"
+  workflow_run:
+    workflows:
+      - "KI-Vollannotation erzeugen"
+      - "Gesetzestexte täglich aktualisieren"
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: steuernorm-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Aktuellen Stand auschecken
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Statische Website zusammenstellen
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp -a data _site/data
+          cp -a annotations _site/annotations
+          touch _site/.nojekyll
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v5
+
+      - name: Website-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Website veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4
