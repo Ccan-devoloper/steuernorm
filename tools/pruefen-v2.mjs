@@ -1,70 +1,31 @@
 #!/usr/bin/env node
 /** Vollständigkeits- und Konsistenzprüfung der automatischen Annotationen. */
-import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { hashText, textDerNorm } from "./lib/text.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
 const register = JSON.parse(await readFile(path.join(WURZEL, "data", "index.json"), "utf8"));
 const minQuellen = Number(process.env.MIN_QUELLEN || 4);
 const args = process.argv.slice(2);
 const nurIndex = args.indexOf("--nur");
+
 function schluessel(wert) {
   return String(wert || "").trim().toLowerCase().replace(/\.json$/i, "").replace(/[^a-z0-9]/g, "");
 }
+
 const nur = nurIndex >= 0
   ? new Set(args[nurIndex + 1]?.split(",").map(schluessel).filter(Boolean))
   : null;
 
 const erlaubteKlassen = new Set([
-  "rule",
-  "definition",
-  "fiction",
-  "obligation",
-  "prohibition",
-  "permission",
-  "entitlement",
-  "calculation",
-  "procedure",
-  "competence",
-  "reference_only",
-  "no_classic_rule",
+  "rule", "definition", "fiction", "obligation", "prohibition", "permission",
+  "entitlement", "calculation", "procedure", "competence", "reference_only", "no_classic_rule",
 ]);
 const normativ = new Set([
-  "rule",
-  "definition",
-  "fiction",
-  "obligation",
-  "prohibition",
-  "permission",
-  "entitlement",
-  "calculation",
-  "procedure",
-  "competence",
+  "rule", "definition", "fiction", "obligation", "prohibition", "permission",
+  "entitlement", "calculation", "procedure", "competence",
 ]);
-
-function text(html = "") {
-  return html
-    .replace(/<br\s*\/?\s*>/gi, " ")
-    .replace(/<\/p>|<\/li>|<\/dd>|<\/dt>|<\/tr>|<\/h\d>/gi, ". ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&sect;/g, "§")
-    .replace(/\s+/g, " ")
-    .replace(/\s+([,.;:!?])/g, "$1")
-    .trim();
-}
-
-function normtext(norm) {
-  return norm.abs.map((absatz) => text(absatz.html)).filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
-}
-
-function hash(inhalt) {
-  return createHash("sha256").update(inhalt).digest("hex");
-}
 
 function kanonischeUrl(url) {
   try {
@@ -76,6 +37,13 @@ function kanonischeUrl(url) {
   } catch {
     return "";
   }
+}
+
+function unbrauchbarePhrase(phrase) {
+  return typeof phrase !== "string"
+    || phrase.length < 3
+    || /[.!?]{2,}/.test(phrase)
+    || /^\d+\s+(?:Satz|Abs(?:atz|\.)|Nummer|Nr\.)\b/i.test(phrase);
 }
 
 let fehler = 0;
@@ -114,8 +82,8 @@ for (const meta of gesetze) {
       continue;
     }
 
-    const volltext = normtext(norm);
-    if (annotation.text_hash !== hash(volltext)) {
+    const volltext = textDerNorm(norm);
+    if (annotation.text_hash !== hashText(volltext)) {
       console.error(`FEHLER ${meta.abk} ${norm.enbez}: Text-Hash veraltet`);
       fehler++;
     }
@@ -169,8 +137,11 @@ for (const meta of gesetze) {
       }
       for (const phrase of annotation[art]) {
         marker++;
-        if (!volltext.includes(phrase)) {
-          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: nicht im Text: ${String(phrase).slice(0, 100)}`);
+        if (unbrauchbarePhrase(phrase)) {
+          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: unbrauchbare Textspanne: ${String(phrase).slice(0, 100)}`);
+          fehler++;
+        } else if (!volltext.includes(phrase)) {
+          console.error(`FEHLER ${meta.abk} ${norm.enbez} [${art}]: nicht im kanonischen Browsertext: ${String(phrase).slice(0, 100)}`);
           fehler++;
         }
       }
