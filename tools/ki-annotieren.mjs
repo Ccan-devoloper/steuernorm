@@ -22,8 +22,14 @@ function wert(flag) {
   const index = args.indexOf(flag);
   return index >= 0 ? args[index + 1] : null;
 }
+function schluessel(wert) {
+  return String(wert || "").trim().toLowerCase().replace(/\.json$/i, "").replace(/[^a-z0-9]/g, "");
+}
 
-const nur = wert("--nur")?.split(",").map((x) => x.trim().toLowerCase()).filter(Boolean) || null;
+const nurRoh = wert("--nur");
+const nur = nurRoh
+  ? new Set(nurRoh.split(",").map(schluessel).filter(Boolean))
+  : null;
 const voll = args.includes("--voll");
 const trocken = args.includes("--trocken");
 const ohneKi = args.includes("--ohne-ki") || !TOKEN;
@@ -91,9 +97,17 @@ async function main() {
   const config = await json(path.join(WURZEL, "config", "referenzquellen.json"));
   if (!register?.gesetze?.length) throw new Error("data/index.json enthält keine Gesetze");
 
-  const gesetze = register.gesetze.filter((gesetz) =>
-    !nur || nur.includes(gesetz.abk.toLowerCase()) || nur.includes(gesetz.slug),
-  );
+  const gesetze = register.gesetze.filter((gesetz) => {
+    if (!nur) return true;
+    const kandidaten = [gesetz.abk, gesetz.slug, gesetz.datei];
+    return kandidaten.some((kandidat) => nur.has(schluessel(kandidat)));
+  });
+  if (!gesetze.length) {
+    const verfuegbar = register.gesetze.map((gesetz) => `${gesetz.abk}/${gesetz.slug}/${gesetz.datei}`).join(", ");
+    throw new Error(`Keine Gesetze für --nur ${nurRoh || "(leer)"} gefunden. Verfügbar: ${verfuegbar}`);
+  }
+  console.log(`Auswahl: ${gesetze.map((gesetz) => gesetz.abk).join(", ")}`);
+
   const bericht = {
     aktualisiert: new Date().toISOString(),
     pipeline_version: PIPELINE_VERSION,
