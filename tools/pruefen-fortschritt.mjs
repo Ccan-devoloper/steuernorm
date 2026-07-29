@@ -59,6 +59,7 @@ function urlKey(url) {
 
 let fehler = 0;
 let geprueft = 0;
+let artefakte = 0;
 let endgueltig = 0;
 let zwischenstaende = 0;
 const zeilen = [];
@@ -71,6 +72,7 @@ for (const meta of register.gesetze) {
   const quelle = finalV2 ? final : stand;
   if (!quelle) continue;
 
+  artefakte++;
   if (finalV2) endgueltig++;
   else zwischenstaende++;
   const ids = Object.keys(quelle.normen || {});
@@ -80,9 +82,19 @@ for (const meta of register.gesetze) {
     console.error(`FEHLER ${meta.abk}: finale Datei enthält ${ids.length}/${gesetz.normen.length} Normen`);
     fehler++;
   }
-  if (!finalV2 && quelle.unvollstaendig !== true) {
-    console.error(`FEHLER ${meta.abk}: Zwischenstand nicht als unvollständig gekennzeichnet`);
-    fehler++;
+  if (!finalV2) {
+    if (quelle.unvollstaendig !== true) {
+      console.error(`FEHLER ${meta.abk}: Zwischenstand nicht als unvollständig gekennzeichnet`);
+      fehler++;
+    }
+    if (Number(quelle.quellenpolitik?.erreichbar || 0) < minimum) {
+      console.error(`FEHLER ${meta.abk}: Startcheckpoint hat weniger als ${minimum} erreichbare Gesetzesreferenzen`);
+      fehler++;
+    }
+    if (Number(quelle.bearbeitet || 0) !== ids.length || Number(quelle.gesamt || 0) !== gesetz.normen.length) {
+      console.error(`FEHLER ${meta.abk}: Fortschrittszähler widersprechen dem Zwischenstand`);
+      fehler++;
+    }
   }
 
   for (const id of ids) {
@@ -144,7 +156,7 @@ for (const meta of register.gesetze) {
   zeilen.push(`${meta.abk} ${ids.length}/${gesetz.normen.length}${finalV2 ? " final" : " in Arbeit"}`);
 }
 
-if (!geprueft) {
+if (!artefakte) {
   console.error("FEHLER: Weder v2-Annotationen noch KI-Zwischenstände vorhanden");
   fehler++;
 }
