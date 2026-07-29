@@ -1,0 +1,227 @@
+{
+ "abk": "AO",
+ "normen": {
+  "8": {
+   "tb": [
+    "wo er eine Wohnung unter Umständen innehat, die darauf schließen lassen, dass er die Wohnung beibehalten und benutzen wird"
+   ],
+   "rf": [
+    "Einen Wohnsitz hat jemand dort"
+   ],
+   "hinweis": "Rein objektiver Begriff: es kommt auf die tatsächlichen Verhältnisse an, nicht auf den Willen oder die melderechtliche Anmeldung. Mehrere Wohnsitze sind möglich.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Wohnung: zum Wohnen geeignete Räume",
+     "art": "tb",
+     "sub": [
+      "Bescheidene Ausstattung genügt, kein Mittelpunkt der Lebensinteressen nötig"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Innehaben: tatsächliche Verfügungsmacht",
+     "art": "tb"
+    },
+    {
+     "n": "III.",
+     "t": "Umstände, die auf Beibehalten und Benutzen schließen lassen",
+     "art": "tb",
+     "sub": [
+      "Regelmäßige Nutzung, nicht nur gelegentliche Besuche"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Wohnsitz im Sinne der Steuergesetze",
+     "art": "rf",
+     "sub": [
+      "Anknüpfung für § 1 Abs. 1 EStG, § 19 AO"
+     ]
+    }
+   ]
+  },
+  "38": {
+   "tb": [
+    "sobald der Tatbestand verwirklicht ist, an den das Gesetz die Leistungspflicht knüpft"
+   ],
+   "rf": [
+    "Die Ansprüche aus dem Steuerschuldverhältnis entstehen"
+   ],
+   "hinweis": "Entstehung (§ 38), Festsetzung (§ 155) und Fälligkeit (§ 220) trennen. Der Steuerbescheid setzt den Anspruch nur fest, er begründet ihn nicht.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Anspruch aus dem Steuerschuldverhältnis (§ 37 Abs. 1)",
+     "art": "tb",
+     "sub": [
+      "Steueranspruch, Haftungsanspruch, Erstattungsanspruch"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Verwirklichung des gesetzlichen Tatbestands",
+     "art": "tb",
+     "sub": [
+      "Einkommensteuer: Ablauf des Veranlagungszeitraums, § 36 Abs. 1 EStG",
+      "Umsatzsteuer: Ablauf des Voranmeldungszeitraums, § 13 UStG"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Ergebnis: Anspruch entsteht kraft Gesetzes",
+     "art": "rf",
+     "sub": [
+      "Unabhängig von der Kenntnis der Finanzbehörde",
+      "Anknüpfungspunkt für § 170 Abs. 1"
+     ]
+    }
+   ]
+  },
+  "42": {
+   "tb": [
+    "wenn eine unangemessene rechtliche Gestaltung gewählt wird",
+    "die beim Steuerpflichtigen oder einem Dritten im Vergleich zu einer angemessenen Gestaltung zu einem gesetzlich nicht vorgesehenen Steuervorteil führt"
+   ],
+   "rf": [
+    "so, wie er bei einer den wirtschaftlichen Vorgängen angemessenen rechtlichen Gestaltung entsteht"
+   ],
+   "hinweis": "§ 42 ist subsidiär: speziellere Missbrauchsvorschriften gehen vor (§ 42 Abs. 1 Satz 2). Die bloße Wahl des steuergünstigeren Weges ist noch kein Missbrauch.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Kein Vorrang einer Spezialvorschrift",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Unangemessene Gestaltung",
+     "art": "tb",
+     "sub": [
+      "Umständlich, kompliziert, gekünstelt",
+      "Ein verständiger Dritter würde sie ohne Steuervorteil nicht wählen"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Gesetzlich nicht vorgesehener Steuervorteil",
+     "art": "tb"
+    },
+    {
+     "n": "IV.",
+     "t": "Keine beachtlichen außersteuerlichen Gründe",
+     "art": "tb",
+     "sub": [
+      "Nachweislast beim Steuerpflichtigen"
+     ]
+    },
+    {
+     "n": "V.",
+     "t": "Ergebnis: Besteuerung nach der angemessenen Gestaltung",
+     "art": "rf"
+    }
+   ]
+  },
+  "169": {
+   "tb": [
+    "soweit eine Steuer hinterzogen",
+    "soweit sie leichtfertig verkürzt worden ist"
+   ],
+   "rf": [
+    "Eine Steuerfestsetzung sowie ihre Aufhebung oder Änderung sind nicht mehr zulässig, wenn die Festsetzungsfrist abgelaufen ist"
+   ],
+   "hinweis": "Immer im Dreischritt prüfen: Beginn (§ 170, regelmäßig mit Anlaufhemmung), Dauer (§ 169 Abs. 2), Ablaufhemmung (§ 171). Nach Fristablauf erlöschen die Ansprüche, § 47.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Fristbeginn (§ 170)",
+     "art": "tb",
+     "sub": [
+      "Grundsatz: Ablauf des Entstehungsjahres",
+      "Anlaufhemmung bis zur Abgabe der Erklärung, längstens drei Jahre"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Fristdauer (§ 169 Abs. 2)",
+     "art": "tb",
+     "sub": [
+      "Regelfall vier Jahre",
+      "Zehn Jahre bei Hinterziehung, fünf bei leichtfertiger Verkürzung"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Ablaufhemmung (§ 171)",
+     "art": "tb",
+     "sub": [
+      "Außenprüfung Abs. 4, Einspruch Abs. 3a, Steuerstrafverfahren Abs. 5"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Festsetzung zulässig oder ausgeschlossen",
+     "art": "rf"
+    }
+   ]
+  },
+  "173": {
+   "tb": [
+    "soweit Tatsachen oder Beweismittel nachträglich bekannt werden, die zu einer höheren Steuer führen",
+    "kein grobes Verschulden daran trifft, dass die Tatsachen oder Beweismittel erst nachträglich bekannt werden"
+   ],
+   "rf": [
+    "Steuerbescheide sind aufzuheben oder zu ändern"
+   ],
+   "hinweis": "Tatsache ist jeder Lebensvorgang, der Merkmal eines Steuertatbestands ist, nicht aber eine Rechtsansicht. Maßgeblich für die Kenntnis ist der Zeitpunkt der abschließenden Zeichnung der Verfügung.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Steuerbescheid oder gleichgestellter Bescheid",
+     "art": "tb"
+    },
+    {
+     "n": "II.",
+     "t": "Tatsache oder Beweismittel",
+     "art": "tb",
+     "sub": [
+      "Keine Rechtsauffassung, keine Schlussfolgerung"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Nachträgliches Bekanntwerden",
+     "art": "tb",
+     "sub": [
+      "Existenz bereits bei Erlass des Bescheids",
+      "Unkenntnis der zuständigen Stelle im Zeitpunkt der Zeichnung"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Steuerliche Auswirkung",
+     "art": "tb",
+     "sub": [
+      "Nr. 1 höhere Steuer",
+      "Nr. 2 niedrigere Steuer und kein grobes Verschulden"
+     ]
+    },
+    {
+     "n": "V.",
+     "t": "Keine Änderungssperre",
+     "art": "tb",
+     "sub": [
+      "Festsetzungsverjährung §§ 169 ff.",
+      "Treu und Glauben bei verletzter Ermittlungspflicht",
+      "§ 173 Abs. 2 nach Außenprüfung"
+     ]
+    },
+    {
+     "n": "VI.",
+     "t": "Ergebnis: gebundene Änderung, kein Ermessen",
+     "art": "rf"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>steuernorm — Textausgabe der Steuergesetze</title>
+<meta name="description" content="Die deutschen Steuergesetze im Volltext, mit umschaltbaren Markierungen für Tatbestandsmerkmale und Rechtsfolgen sowie Prüfungsschemata.">
+<style>
+  :root{
+    --papier:#FCFCFA; --tinte:#17181A; --gedeckt:#5E615C; --leise:#8E9089;
+    --linie:#E4E4DE; --linie-stark:#C9C9C2; --feld:#F3F3EF;
+    --tb:#FBEEA8; --tb-kante:#D9B417; --rf:#C6E7CE; --rf-kante:#3D8A55;
+    --warn:#8C3A2B;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:15px;line-height:1.5}
+  a{color:inherit}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--tinte);outline-offset:2px;border-radius:2px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+  /* ---------- Kopf ---------- */
+  header{position:sticky;top:0;z-index:40;background:rgba(252,252,250,.96);
+    backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--linie)}
+  .kopf{max-width:1500px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .marke{font-family:var(--serif);font-size:19px;letter-spacing:-.01em;line-height:1;white-space:nowrap}
+  .marke small{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--leise);margin-left:8px}
+  .suchfeld{flex:1 1 200px;min-width:140px;border:0;border-bottom:1px solid var(--linie);
+    background:transparent;padding:6px 2px;font-size:13.5px}
+  .suchfeld::placeholder{color:var(--leise)}
+  .suchfeld:focus{outline:0;border-bottom-color:var(--tinte)}
+  .schalter{display:flex;gap:6px}
+  .schalter button{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--linie);
+    background:transparent;color:var(--leise);border-radius:999px;padding:5px 11px;font-size:12px;cursor:pointer;
+    transition:border-color .12s,color .12s}
+  .schalter button:hover{border-color:var(--linie-stark)}
+  .schalter button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte);background:#fff}
+  .swatch{width:12px;height:12px;border-radius:2px;border:1px solid var(--linie-stark);flex:none}
+  .schalter button[aria-pressed=true] .swatch.tb{background:var(--tb);border-color:var(--tb-kante)}
+  .schalter button[aria-pressed=true] .swatch.rf{background:var(--rf);border-color:var(--rf-kante)}
+  .burger{display:none;border:0;background:transparent;padding:6px;cursor:pointer;color:var(--gedeckt)}
+
+  /* Gesetzesleiste */
+  .leiste{border-bottom:1px solid var(--linie);overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .leiste-innen{max-width:1500px;margin:0 auto;padding:0 16px;display:flex;gap:2px}
+  .leiste button{border:0;background:transparent;padding:9px 10px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.09em;text-transform:uppercase;color:var(--leise);cursor:pointer;white-space:nowrap;
+    border-bottom:2px solid transparent;margin-bottom:-1px}
+  .leiste button:hover{color:var(--tinte)}
+  .leiste button[aria-current=true]{color:var(--tinte);border-bottom-color:var(--tinte)}
+
+  /* ---------- Gerüst ---------- */
+  .huelle{max-width:1500px;margin:0 auto;display:flex;align-items:flex-start}
+  nav.register{width:270px;flex:none;border-right:1px solid var(--linie);
+    height:calc(100vh - 92px);position:sticky;top:92px;overflow-y:auto;padding:20px 14px 60px 16px}
+  main{flex:1;min-width:0;padding:34px 32px 90px}
+  aside.schema{width:350px;flex:none;border-left:1px solid var(--linie);
+    height:calc(100vh - 92px);position:sticky;top:92px;overflow-y:auto;padding:34px 24px 80px}
+
+  /* ---------- Register ---------- */
+  .gl-kopf{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--leise);margin:18px 0 6px;line-height:1.4}
+  .gl-kopf:first-child{margin-top:0}
+  .reg-eintrag{display:flex;gap:8px;width:100%;text-align:left;border:0;border-left:1px solid var(--linie);
+    background:transparent;padding:4px 6px 4px 11px;cursor:pointer;color:var(--gedeckt);align-items:baseline}
+  .reg-eintrag:hover{border-left-color:var(--linie-stark);color:var(--tinte)}
+  .reg-eintrag[aria-current=true]{border-left-color:var(--tinte);color:var(--tinte);background:var(--feld)}
+  .reg-eintrag .nr{font-family:var(--serif);font-size:13px;white-space:nowrap}
+  .reg-eintrag .tt{font-size:12px;color:var(--leise);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .reg-eintrag[aria-current=true] .tt{color:var(--gedeckt)}
+  .punkt{width:5px;height:5px;border-radius:50%;background:var(--tb-kante);flex:none;align-self:center;margin-left:auto}
+
+  /* ---------- Normtext ---------- */
+  .norm-kopf{max-width:44rem}
+  .augenbraue{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
+  h1{font-family:var(--serif);font-size:clamp(23px,4.4vw,31px);line-height:1.18;letter-spacing:-.015em;
+    margin:6px 0 0;font-weight:400;display:flex;flex-wrap:wrap;gap:0 14px}
+  h1 .titel{color:var(--gedeckt)}
+  .stand{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
+    font-size:11.5px;color:var(--leise);border-top:1px solid var(--linie);padding-top:12px}
+  .stand .veraltet{color:var(--warn)}
+  .stand a{color:var(--leise)}
+
+  .text{max-width:44rem;margin-top:26px;font-family:var(--serif);font-size:17px;line-height:1.78}
+  .absatz{position:relative;padding-left:44px;margin-bottom:18px}
+  .absatz>.az{position:absolute;left:0;top:5px;font-family:var(--mono);font-size:11px;color:var(--leise)}
+  .text p{margin:0 0 10px}
+  .text dl{margin:8px 0 8px 6px}
+  .text dt{float:left;clear:left;font-family:var(--mono);font-size:12px;color:var(--leise);
+    min-width:34px;padding-top:4px}
+  .text dd{margin:0 0 6px 40px}
+  .text .sn{font-family:var(--mono);font-size:9.5px;color:var(--linie-stark);vertical-align:super;
+    margin-right:2px;-webkit-user-select:none;user-select:none}
+  .text table{border-collapse:collapse;font-family:var(--sans);font-size:13.5px;margin:12px 0;width:100%}
+  .text td{border-top:1px solid var(--linie);padding:6px 10px 6px 0;vertical-align:top;line-height:1.5}
+  .text pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;color:var(--gedeckt);
+    background:var(--feld);padding:10px 12px;border-radius:3px;overflow-x:auto}
+  .text h4{font-family:var(--sans);font-size:13px;letter-spacing:.02em;margin:16px 0 6px;color:var(--gedeckt)}
+  .text a.verweis{text-decoration:none;border-bottom:1px solid var(--linie-stark);white-space:nowrap}
+  .text a.verweis:hover{border-bottom-color:var(--tinte);background:var(--feld)}
+
+  mark{background:transparent;color:inherit;padding:0 1px;border-radius:2px;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  body[data-tb=an] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
+  body[data-rf=an] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
+
+  .fussnote{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px;
+    font-size:12.5px;color:var(--leise);white-space:pre-wrap;font-family:var(--mono);line-height:1.6}
+  .hinweis{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px}
+  .hinweis .kappe{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--leise);display:block;margin-bottom:4px}
+  .hinweis p{margin:0;font-size:14px;line-height:1.65;color:var(--gedeckt)}
+
+  .blaettern{max-width:44rem;display:flex;justify-content:space-between;gap:16px;margin-top:44px;
+    border-top:1px solid var(--linie);padding-top:14px;font-size:13px}
+  .blaettern button{border:0;background:transparent;cursor:pointer;color:var(--gedeckt);padding:4px 0;text-align:left}
+  .blaettern button:hover{color:var(--tinte)}
+  .blaettern button:last-child{text-align:right}
+  .blaettern .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--leise);display:block}
+
+  /* ---------- Schema ---------- */
+  .schema-kappe{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--leise);margin:0 0 18px}
+  ol.leiter{list-style:none;margin:0;padding:0 0 0 20px;border-left:1px solid var(--linie)}
+  ol.leiter>li{position:relative;margin-bottom:16px}
+  ol.leiter .rn{position:absolute;left:-56px;top:1px;width:34px;text-align:right;
+    font-family:var(--mono);font-size:10.5px;color:var(--leise)}
+  ol.leiter .schritt{font-family:var(--serif);font-size:14.5px;line-height:1.4;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:2px;padding:0 2px}
+  body[data-tb=an] ol.leiter .schritt.tb{background:var(--tb)}
+  body[data-rf=an] ol.leiter .schritt.rf{background:var(--rf)}
+  ol.leiter ul{list-style:none;margin:5px 0 0;padding:0}
+  ol.leiter ul li{display:flex;gap:8px;font-size:12.5px;line-height:1.55;color:var(--gedeckt);margin-bottom:3px}
+  ol.leiter ul li::before{content:"";flex:none;width:8px;height:1px;background:var(--linie-stark);margin-top:9px}
+  .leer{font-size:13px;color:var(--leise);line-height:1.6}
+  .leer code{font-family:var(--mono);font-size:11.5px;background:var(--feld);padding:1px 4px;border-radius:2px}
+
+  .fuss{max-width:44rem;margin-top:56px;font-size:11.5px;line-height:1.7;color:var(--leise)}
+  .fuss a{color:var(--leise)}
+
+  .melder{max-width:44rem;border:1px solid var(--warn);border-radius:3px;padding:14px 16px;
+    font-size:13.5px;line-height:1.6;color:var(--warn)}
+  .melder code{font-family:var(--mono);font-size:12px;background:#fff;padding:1px 5px;border-radius:2px}
+
+  /* ---------- Schmale Fenster ---------- */
+  @media (max-width:1180px){
+    aside.schema{display:none}
+    .schema-unten{display:block!important;max-width:44rem;margin-top:44px;
+      border-top:1px solid var(--linie);padding-top:26px}
+    ol.leiter{padding-left:44px}
+    ol.leiter .rn{left:-38px}
+  }
+  @media (max-width:860px){
+    .burger{display:block;margin-left:-6px}
+    nav.register{position:fixed;inset:0;z-index:50;width:auto;height:auto;background:var(--papier);
+      border-right:0;padding:16px;display:none}
+    nav.register.offen{display:block}
+    main{padding:26px 18px 80px}
+    .schliessen{display:flex!important}
+  }
+  .schliessen{display:none;justify-content:flex-end;margin-bottom:10px}
+  .schliessen button{border:0;background:transparent;cursor:pointer;padding:6px;color:var(--gedeckt)}
+</style>
+</head>
+<body data-tb="an" data-rf="an">
+
+<header>
+  <div class="kopf">
+    <button class="burger" id="burger" aria-label="Normenregister öffnen">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg>
+    </button>
+    <span class="marke">steuernorm<small>Textausgabe</small></span>
+    <input class="suchfeld" id="suche" type="search" placeholder="Norm oder Stichwort, z. B. 15 oder Vorsteuer" autocomplete="off">
+    <div class="schalter">
+      <button id="btn-tb" aria-pressed="true"><span class="swatch tb"></span>Tatbestand</button>
+      <button id="btn-rf" aria-pressed="true"><span class="swatch rf"></span>Rechtsfolge</button>
+    </div>
+  </div>
+  <div class="leiste"><div class="leiste-innen" id="leiste"></div></div>
+</header>
+
+<div class="huelle">
+  <nav class="register" id="register" aria-label="Normen">
+    <div class="schliessen"><button id="zu" aria-label="Register schließen">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 3l10 10M13 3L3 13"/></svg>
+    </button></div>
+    <div id="register-liste"></div>
+  </nav>
+
+  <main id="haupt"><p class="leer">Wird geladen …</p></main>
+
+  <aside class="schema" id="schema-rechts"></aside>
+</div>
+
+<script>
+"use strict";
+
+const ABK_MUSTER = /\b(AO|BewG|EStG|KStG|UStG|GewStG|ErbStG|GrStG|FGO|GrEStG|UmwStG|AStG|SolzG|InvStG)\b/;
+
+const S = {                 // Zustand
+  register: null,           // data/index.json
+  gesetz: null,             // aktuell geladenes Gesetz
+  anmerkungen: {},          // abk -> annotations
+  abk: null,
+  normId: null,
+  filter: "",
+};
+const cacheGesetz = new Map();
+const el = (id) => document.getElementById(id);
+
+/* --------------------------- Einstellungen --------------------------- */
+function merken(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
+function gemerkt(k, fallback){ try{ return localStorage.getItem(k) ?? fallback; }catch(e){ return fallback; } }
+
+function schalterSetzen(art, an){
+  document.body.dataset[art] = an ? "an" : "aus";
+  el("btn-" + art).setAttribute("aria-pressed", String(an));
+  merken("marker-" + art, an ? "an" : "aus");
+}
+
+/* ------------------------------ Laden ------------------------------ */
+async function holen(pfad){
+  const r = await fetch(pfad, { cache: "no-cache" });
+  if (!r.ok) throw new Error(pfad + " → " + r.status);
+  return r.json();
+}
+
+async function gesetzLaden(abk){
+  const schluessel = abk.toLowerCase();
+  if (cacheGesetz.has(schluessel)) return cacheGesetz.get(schluessel);
+  const eintrag = S.register.gesetze.find(g => g.abk === abk);
+  const g = await holen("data/" + (eintrag ? eintrag.datei : schluessel + ".json"));
+  cacheGesetz.set(schluessel, g);
+  if (!(abk in S.anmerkungen)){
+    try { S.anmerkungen[abk] = (await holen("annotations/" + schluessel + ".json")).normen; }
+    catch(e){ S.anmerkungen[abk] = {}; }
+  }
+  return g;
+}
+
+/* --------------------------- Markierungen --------------------------- */
+/* Textknoten einsammeln, damit Treffer auch über Elementgrenzen laufen. */
+function knotenliste(wurzel){
+  const gehe = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT, {
+    acceptNode(n){
+      if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      let p = n.parentElement;
+      while (p && p !== wurzel){
+        if (p.tagName === "MARK" || p.classList.contains("sn")) return NodeFilter.FILTER_REJECT;
+        p = p.parentElement;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const knoten = [];
+  let n, pos = 0, text = "";
+  while ((n = gehe.nextNode())){
+    knoten.push({ n, von: pos, bis: pos + n.nodeValue.length });
+    text += n.nodeValue;
+    pos = text.length;
+  }
+  return { knoten, text };
+}
+
+function markieren(wurzel, phrase, klasse){
+  const { knoten, text } = knotenliste(wurzel);
+  const start = text.indexOf(phrase);
+  if (start === -1) return false;
+  const ende = start + phrase.length;
+  // Von hinten arbeiten, damit frühere Offsets gültig bleiben.
+  for (let i = knoten.length - 1; i >= 0; i--){
+    const k = knoten[i];
+    if (k.bis <= start || k.von >= ende) continue;
+    const a = Math.max(0, start - k.von);
+    const b = Math.min(k.n.nodeValue.length, ende - k.von);
+    const knotenText = k.n.nodeValue;
+    const mitte = document.createTextNode(knotenText.slice(a, b));
+    const m = document.createElement("mark");
+    m.className = klasse;
+    m.appendChild(mitte);
+    const frag = document.createDocumentFragment();
+    if (a > 0) frag.appendChild(document.createTextNode(knotenText.slice(0, a)));
+    frag.appendChild(m);
+    if (b < knotenText.length) frag.appendChild(document.createTextNode(knotenText.slice(b)));
+    k.n.parentNode.replaceChild(frag, k.n);
+  }
+  return true;
+}
+
+/* --------------------------- Querverweise --------------------------- */
+/* Verweise wie "§ 15 Abs. 2 EStG" anklickbar machen — das ist die
+   Arbeitsweise, die dejure ausmacht: jede Norm hängt an den anderen. */
+const VERWEIS = /§\s?(\d+[a-z]?)((?:\s?Abs(?:atz|\.)\s?\d+[a-z]?)?(?:\s?(?:Satz|S\.|Nummer|Nr\.)\s?\d+)?)(\s(?:AO|BewG|EStG|KStG|UStG|GewStG|ErbStG|GrStG|FGO|GrEStG|UmwStG|AStG|SolzG|InvStG))?/g;
+
+function verweiseSetzen(wurzel, eigenesAbk){
+  const bekannt = new Set(S.register.gesetze.map(g => g.abk));
+  const gehe = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => n.parentElement.closest("a") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  const ziele = [];
+  let n; while ((n = gehe.nextNode())) if (n.nodeValue.includes("§")) ziele.push(n);
+
+  for (const knoten of ziele){
+    VERWEIS.lastIndex = 0;
+    const roh = knoten.nodeValue;
+    if (!VERWEIS.test(roh)) continue;
+    VERWEIS.lastIndex = 0;
+    const frag = document.createDocumentFragment();
+    let letzte = 0, m;
+    while ((m = VERWEIS.exec(roh))){
+      const abk = (m[3] || "").trim() || eigenesAbk;
+      if (!bekannt.has(abk)) continue;
+      if (m.index > letzte) frag.appendChild(document.createTextNode(roh.slice(letzte, m.index)));
+      const a = document.createElement("a");
+      a.className = "verweis";
+      a.href = "#/" + abk.toLowerCase() + "/" + m[1].toLowerCase();
+      a.textContent = m[0];
+      frag.appendChild(a);
+      letzte = m.index + m[0].length;
+    }
+    if (!letzte) continue;
+    if (letzte < roh.length) frag.appendChild(document.createTextNode(roh.slice(letzte)));
+    knoten.parentNode.replaceChild(frag, knoten);
+  }
+}
+
+/* ------------------------------ Register ------------------------------ */
+function registerZeichnen(){
+  const ziel = el("register-liste");
+  ziel.innerHTML = "";
+  if (!S.gesetz) return;
+  const anm = S.anmerkungen[S.abk] || {};
+  const f = S.filter.trim().toLowerCase();
+  let letzteGl = null, gefunden = 0;
+
+  for (const norm of S.gesetz.normen){
+    if (f && !(norm.enbez + " " + norm.titel).toLowerCase().includes(f)
+          && !norm.enbez.replace(/§\s*/, "").toLowerCase().startsWith(f)) continue;
+    gefunden++;
+    if (norm.gliederung && norm.gliederung !== letzteGl){
+      letzteGl = norm.gliederung;
+      const h = document.createElement("div");
+      h.className = "gl-kopf";
+      h.textContent = norm.gliederung;
+      ziel.appendChild(h);
+    }
+    const b = document.createElement("button");
+    b.className = "reg-eintrag";
+    b.setAttribute("aria-current", String(norm.id === S.normId));
+    b.innerHTML = '<span class="nr"></span><span class="tt"></span>';
+    b.querySelector(".nr").textContent = norm.enbez;
+    b.querySelector(".tt").textContent = norm.titel;
+    if (anm[norm.id]){
+      const p = document.createElement("span");
+      p.className = "punkt";
+      p.title = "Markierungen und Prüfungsschema vorhanden";
+      b.appendChild(p);
+    }
+    b.onclick = () => { location.hash = "#/" + S.abk.toLowerCase() + "/" + norm.id; };
+    ziel.appendChild(b);
+  }
+  if (!gefunden){
+    const p = document.createElement("p");
+    p.className = "leer";
+    p.textContent = "Keine Norm in " + S.abk + " gefunden. Über die Gesetzesleiste lässt sich ein anderes Gesetz wählen.";
+    ziel.appendChild(p);
+  }
+}
+
+function leisteZeichnen(){
+  const ziel = el("leiste");
+  ziel.innerHTML = "";
+  for (const g of S.register.gesetze){
+    const b = document.createElement("button");
+    b.textContent = g.abk;
+    b.title = g.titel + " — " + g.anzahl + " Normen";
+    b.setAttribute("aria-current", String(g.abk === S.abk));
+    b.onclick = () => {
+      const erste = (cacheGesetz.get(g.abk.toLowerCase())?.normen || g.normen)[0];
+      location.hash = "#/" + g.abk.toLowerCase() + "/" + (erste ? erste.id : "1");
+    };
+    ziel.appendChild(b);
+  }
+}
+
+/* ------------------------------ Schema ------------------------------ */
+function schemaBauen(anm){
+  const wrap = document.createElement("div");
+  const k = document.createElement("p");
+  k.className = "schema-kappe";
+  k.textContent = "Prüfungsschema";
+  wrap.appendChild(k);
+
+  if (!anm || !anm.schema){
+    const p = document.createElement("p");
+    p.className = "leer";
+    p.innerHTML = "Für diese Norm ist noch kein Schema hinterlegt. Schemata liegen in <code>annotations/&lt;gesetz&gt;.json</code> und werden bei der Aktualisierung der Gesetzestexte nicht überschrieben.";
+    wrap.appendChild(p);
+    return wrap;
+  }
+  const ol = document.createElement("ol");
+  ol.className = "leiter";
+  for (const s of anm.schema){
+    const li = document.createElement("li");
+    const rn = document.createElement("span");
+    rn.className = "rn"; rn.textContent = s.n || "";
+    const t = document.createElement("span");
+    t.className = "schritt" + (s.art ? " " + s.art : "");
+    t.textContent = s.t;
+    li.append(rn, t);
+    if (s.sub && s.sub.length){
+      const ul = document.createElement("ul");
+      for (const x of s.sub){ const l = document.createElement("li"); l.append(document.createTextNode(x)); ul.appendChild(l); }
+      li.appendChild(ul);
+    }
+    ol.appendChild(li);
+  }
+  wrap.appendChild(ol);
+  return wrap;
+}
+
+/* ------------------------------ Norm ------------------------------ */
+function tageSeit(iso){
+  if (!iso) return null;
+  return Math.round((Date.now() - new Date(iso).getTime()) / 86400000);
+}
+
+function normZeichnen(){
+  const haupt = el("haupt");
+  haupt.innerHTML = "";
+  const g = S.gesetz;
+  const norm = g.normen.find(n => n.id === S.normId) || g.normen[0];
+  S.normId = norm.id;
+  const anm = (S.anmerkungen[S.abk] || {})[norm.id];
+
+  // Kopf
+  const kopf = document.createElement("div");
+  kopf.className = "norm-kopf";
+  const eb = document.createElement("div");
+  eb.className = "augenbraue";
+  eb.textContent = g.titel;
+  const h1 = document.createElement("h1");
+  const sp1 = document.createElement("span"); sp1.textContent = norm.enbez;
+  const sp2 = document.createElement("span"); sp2.className = "titel"; sp2.textContent = norm.titel;
+  h1.append(sp1, document.createTextNode(" "), sp2);
+
+  const stand = document.createElement("div");
+  stand.className = "stand";
+  const alter = tageSeit(g.builddate);
+  const s1 = document.createElement("span");
+  s1.textContent = "Stand der Daten: " + (g.builddate || "unbekannt");
+  if (alter !== null && alter > 90){
+    s1.classList.add("veraltet");
+    s1.textContent += " — " + alter + " Tage alt, bitte aktualisieren";
+  }
+  stand.appendChild(s1);
+  const fassung = (g.stand || []).find(x => x.typ === "Stand");
+  if (fassung){ const s2 = document.createElement("span"); s2.textContent = fassung.text; stand.appendChild(s2); }
+  const quelle = document.createElement("a");
+  quelle.href = g.quelle; quelle.target = "_blank"; quelle.rel = "noopener";
+  quelle.textContent = "amtliche Fassung ↗";
+  stand.appendChild(quelle);
+  kopf.append(eb, h1, stand);
+  haupt.appendChild(kopf);
+
+  // Text
+  const text = document.createElement("div");
+  text.className = "text";
+  for (const a of norm.abs){
+    const d = document.createElement("div");
+    d.className = "absatz";
+    if (a.n){ const az = document.createElement("span"); az.className = "az"; az.textContent = "(" + a.n + ")"; d.appendChild(az); }
+    const inner = document.createElement("div");
+    inner.innerHTML = a.html;
+    d.appendChild(inner);
+    text.appendChild(d);
+  }
+  haupt.appendChild(text);
+
+  // Markierungen anlegen; nicht mehr passende Phrasen melden
+  let verwaist = 0;
+  if (anm){
+    for (const p of anm.tb || []) if (!markieren(text, p, "tb")) verwaist++;
+    for (const p of anm.rf || []) if (!markieren(text, p, "rf")) verwaist++;
+  }
+  verweiseSetzen(text, S.abk);
+
+  if (norm.fussnote){
+    const f = document.createElement("div");
+    f.className = "fussnote";
+    f.textContent = norm.fussnote;
+    haupt.appendChild(f);
+  }
+
+  if (anm && anm.hinweis){
+    const h = document.createElement("div");
+    h.className = "hinweis";
+    const kappe = document.createElement("span"); kappe.className = "kappe"; kappe.textContent = "Hinweis";
+    const p = document.createElement("p"); p.textContent = anm.hinweis;
+    h.append(kappe, p);
+    haupt.appendChild(h);
+  }
+
+  if (verwaist){
+    const w = document.createElement("div");
+    w.className = "hinweis";
+    w.style.borderLeftColor = "var(--warn)";
+    const kappe = document.createElement("span"); kappe.className = "kappe"; kappe.textContent = "Markierung";
+    const p = document.createElement("p");
+    p.textContent = verwaist + " Markierung(en) finden ihre Textstelle nicht mehr. Der Gesetzestext wurde vermutlich geändert; die Annotation gehört nachgezogen.";
+    w.append(kappe, p);
+    haupt.appendChild(w);
+  }
+
+  // Schema unterhalb (schmale Fenster) und rechts (breite)
+  const unten = schemaBauen(anm);
+  unten.className = "schema-unten";
+  unten.style.display = "none";
+  haupt.appendChild(unten);
+  el("schema-rechts").innerHTML = "";
+  el("schema-rechts").appendChild(schemaBauen(anm));
+
+  // Blättern
+  const i = g.normen.indexOf(norm);
+  const nav = document.createElement("div");
+  nav.className = "blaettern";
+  const mach = (ziel, label) => {
+    const b = document.createElement("button");
+    if (!ziel){ b.style.visibility = "hidden"; return b; }
+    b.innerHTML = '<span class="k"></span><span class="w"></span>';
+    b.querySelector(".k").textContent = label;
+    b.querySelector(".w").textContent = ziel.enbez + (ziel.titel ? " " + ziel.titel : "");
+    b.onclick = () => { location.hash = "#/" + S.abk.toLowerCase() + "/" + ziel.id; };
+    return b;
+  };
+  nav.append(mach(g.normen[i - 1], "zurück"), mach(g.normen[i + 1], "weiter"));
+  haupt.appendChild(nav);
+
+  const fuss = document.createElement("p");
+  fuss.className = "fuss";
+  fuss.innerHTML = 'Gesetzestexte aus <a href="https://www.gesetze-im-internet.de/" target="_blank" rel="noopener">Gesetze im Internet</a> (BMJ und Bundesamt für Justiz), amtliche Werke und nach § 5 Abs. 1 UrhG gemeinfrei. Maßgeblich ist allein die im Bundesgesetzblatt verkündete Fassung. Markierungen, Hinweise und Prüfungsschemata sind eine didaktische Zutat dieser Seite und keine Rechtsberatung.';
+  haupt.appendChild(fuss);
+
+  document.title = norm.enbez + " " + S.abk + (norm.titel ? " — " + norm.titel : "") + " · steuernorm";
+  window.scrollTo({ top: 0 });
+}
+
+/* ------------------------------ Router ------------------------------ */
+async function route(){
+  if (!S.register) return;
+  const teile = decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
+  const abk = (teile[0] || gemerkt("letztes-gesetz", "estg")).toLowerCase();
+  const eintrag = S.register.gesetze.find(g => g.abk.toLowerCase() === abk) || S.register.gesetze[0];
+  S.abk = eintrag.abk;
+  merken("letztes-gesetz", S.abk.toLowerCase());
+  try{
+    S.gesetz = await gesetzLaden(S.abk);
+  }catch(err){
+    el("haupt").innerHTML = '<div class="melder"><strong>' + S.abk + ' konnte nicht geladen werden.</strong><br>' + err.message + '</div>';
+    return;
+  }
+  S.normId = teile[1] || S.gesetz.normen[0].id;
+  if (!S.gesetz.normen.some(n => n.id === S.normId)) S.normId = S.gesetz.normen[0].id;
+  leisteZeichnen();
+  registerZeichnen();
+  normZeichnen();
+  el("register").classList.remove("offen");
+  const treffer = el("register").querySelector('[aria-current=true]');
+  if (treffer && treffer.scrollIntoView) treffer.scrollIntoView({ block: "nearest" });
+}
+
+/* ------------------------------ Start ------------------------------ */
+async function start(){
+  schalterSetzen("tb", gemerkt("marker-tb", "an") === "an");
+  schalterSetzen("rf", gemerkt("marker-rf", "an") === "an");
+  el("btn-tb").onclick = () => schalterSetzen("tb", document.body.dataset.tb !== "an");
+  el("btn-rf").onclick = () => schalterSetzen("rf", document.body.dataset.rf !== "an");
+  el("burger").onclick = () => el("register").classList.add("offen");
+  el("zu").onclick = () => el("register").classList.remove("offen");
+  el("suche").oninput = (e) => { S.filter = e.target.value; registerZeichnen(); };
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== el("suche")){ e.preventDefault(); el("suche").focus(); }
+    if (e.key === "Escape") el("register").classList.remove("offen");
+  });
+  window.addEventListener("hashchange", route);
+
+  try{
+    S.register = await holen("data/index.json");
+  }catch(err){
+    el("haupt").innerHTML =
+      '<div class="melder"><strong>Die Gesetzesdaten fehlen oder sind nicht erreichbar.</strong>' +
+      '<p>Ein Browser darf beim Öffnen über <code>file://</code> keine Dateien nachladen. Die Seite über einen Server aufrufen:</p>' +
+      '<p><code>python3 -m http.server 8000</code> im Projektordner, dann <code>http://localhost:8000</code>.</p>' +
+      '<p>Fehlen die Daten noch ganz, erzeugt <code>node tools/update.mjs</code> sie aus Gesetze im Internet.</p>' +
+      '<p style="opacity:.7">' + err.message + '</p></div>';
+    return;
+  }
+  route();
+}
+start();
+</script>
+</body>
+</html>
