@@ -1,10 +1,8 @@
 name: Format-3-Dateien übernehmen
 
-# Einmaliger Lauf, durch Merge-Push ausgelöst und anschließend entfernt.
+# Einmaliger Pull-Request-Lauf; übernimmt das hochgeladene Paket in den PR-Branch.
 on:
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
       - ".github/workflows/v3-dateien-migrieren.yml"
   workflow_dispatch:
@@ -14,20 +12,34 @@ permissions:
 
 jobs:
   migrieren:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      - name: Hauptstand auschecken
+      - name: Pull-Request-Branch auschecken
         uses: actions/checkout@v5
         with:
-          ref: main
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
-      - name: Archivdateien übernehmen und v2 bereinigen
+      - name: Archivdateien übernehmen und Format 2 bereinigen
         shell: bash
         run: |
           set -euo pipefail
+          rm -rf /tmp/steuernorm-v3
           mkdir -p /tmp/steuernorm-v3
-          base64 --decode .migration/v3-payload.b64 > /tmp/steuernorm-v3.zip
-          unzip -q /tmp/steuernorm-v3.zip -d /tmp/steuernorm-v3
+          python3 - <<'PY'
+          import base64
+          import pathlib
+          import zipfile
+
+          wurzel = pathlib.Path('.')
+          roh = (wurzel / '.migration/v3-payload.b64').read_text(encoding='utf-8')
+          archiv = pathlib.Path('/tmp/steuernorm-v3.zip')
+          archiv.write_bytes(base64.b64decode(roh))
+          with zipfile.ZipFile(archiv) as datei:
+              datei.testzip()
+              datei.extractall('/tmp/steuernorm-v3')
+          PY
 
           cp /tmp/steuernorm-v3/index.html index.html
           cp /tmp/steuernorm-v3/README-v3.md README-v3.md
@@ -67,8 +79,19 @@ jobs:
             reports/ki-lauf-status.json
           rm -rf .migration
 
-      - name: Änderung veröffentlichen
+      - name: Übernommenen Stand prüfen
         shell: bash
+        run: |
+          set -euo pipefail
+          test -s index.html
+          grep -q 'btn-ausn' index.html
+          grep -q -- '--ausn' index.html
+          node tools/pruefen.mjs --streng
+
+      - name: Änderung in den Pull-Request-Branch schreiben
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
         run: |
           set -euo pipefail
           git config user.name "steuernorm-v3-bot"
@@ -78,6 +101,6 @@ jobs:
             echo "Keine Migrationsänderungen."
           else
             git commit -m "Format-3-Frontend und Dokumentation übernehmen"
-            git pull --rebase --autostash origin main
-            git push origin HEAD:main
+            git pull --rebase --autostash origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
           fi
