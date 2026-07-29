@@ -1,0 +1,33 @@
+name: KI-Verarbeitungsreihenfolge optimieren
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/verarbeitungsreihenfolge-migrieren.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrieren:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v6
+
+      - name: Reihenfolge und Produktivaufruf anpassen
+        run: node tools/migriere-verarbeitungsreihenfolge.mjs
+
+      - name: Änderung veröffentlichen
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-workflow-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add tools/ki-annotieren.mjs .github/workflows/ki-vollannotation.yml
+          git commit -m "Kleine Gesetze im KI-Vollaufbau priorisieren"
+          git pull --rebase origin main
+          git push
