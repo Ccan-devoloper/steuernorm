@@ -2,7 +2,7 @@
 /** Vollautomatische, quellenbasierte Tatbestand-/Rechtsfolge-Annotation. */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { hashText, logikAnalyse, textDerNorm } from "./lib/text.mjs";
+import { eindeutig, hashText, logikAnalyse, textDerNorm } from "./lib/text.mjs";
 import { ladeQuellen } from "./lib/quellen.mjs";
 import { modellAufruf } from "./lib/model.mjs";
 import { konsensAnnotation } from "./lib/konsens.mjs";
@@ -14,8 +14,9 @@ const REPORTS = path.join(WURZEL, "reports");
 const PIPELINE_VERSION = 2;
 const MODELL = process.env.KI_MODELL || "openai/gpt-4.1-mini";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
-const BATCH_NORMEN = Math.max(1, Number(process.env.BATCH_NORMEN || 6));
-const BATCH_ZEICHEN = Math.max(8_000, Number(process.env.BATCH_ZEICHEN || 26_000));
+const BATCH_NORMEN = Math.max(1, Number(process.env.BATCH_NORMEN || 2));
+const BATCH_ZEICHEN = Math.max(6_000, Number(process.env.BATCH_ZEICHEN || 9_000));
+const TEIL_ZEICHEN = Math.max(4_000, Number(process.env.TEIL_ZEICHEN || 6_500));
 
 const args = process.argv.slice(2);
 function wert(flag) {
@@ -47,12 +48,64 @@ async function json(datei, fallback = null) {
   }
 }
 
+function htmlSicher(text) {
+  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function textTeilen(volltext) {
+  if (volltext.length <= TEIL_ZEICHEN) return [volltext];
+  const teile = [];
+  let rest = volltext;
+  while (rest.length > TEIL_ZEICHEN) {
+    const minimum = Math.floor(TEIL_ZEICHEN * 0.55);
+    const fenster = rest.slice(minimum, TEIL_ZEICHEN + 1);
+    let schnitt = -1;
+    for (const muster of [/[.;!?]\s+(?=[A-ZÄÖÜ§(])/g, /[,;:]\s+/g, /\s+/g]) {
+      const treffer = [...fenster.matchAll(muster)];
+      if (treffer.length) {
+        const letzter = treffer[treffer.length - 1];
+        schnitt = minimum + letzter.index + letzter[0].length;
+        break;
+      }
+    }
+    if (schnitt < minimum) schnitt = TEIL_ZEICHEN;
+    const teil = rest.slice(0, schnitt).trim();
+    if (teil) teile.push(teil);
+    rest = rest.slice(schnitt).trimStart();
+  }
+  if (rest.trim()) teile.push(rest.trim());
+  return teile;
+}
+
+function analyseTeile(eintrag) {
+  const volltext = textDerNorm(eintrag.norm);
+  const texte = textTeilen(volltext);
+  return texte.map((text, index) => {
+    const id = texte.length === 1 ? String(eintrag.norm.id) : `${eintrag.norm.id}::${index + 1}`;
+    const norm = {
+      ...eintrag.norm,
+      id,
+      enbez: texte.length === 1 ? eintrag.norm.enbez : `${eintrag.norm.enbez} – Teil ${index + 1}/${texte.length}`,
+      titel: eintrag.norm.titel,
+      abs: [{ n: null, html: htmlSicher(text) }],
+    };
+    return {
+      analyseId: id,
+      originalId: String(eintrag.norm.id),
+      norm,
+      text,
+      gewicht: Math.max(1, text.length),
+      logik: logikAnalyse(norm),
+    };
+  });
+}
+
 function batches(liste) {
   const ergebnis = [];
   let aktuell = [];
   let zeichen = 0;
   for (const eintrag of liste) {
-    const groesse = textDerNorm(eintrag.norm).length + 1_200;
+    const groesse = eintrag.text.length + 900;
     if (aktuell.length && (aktuell.length >= BATCH_NORMEN || zeichen + groesse > BATCH_ZEICHEN)) {
       ergebnis.push(aktuell);
       aktuell = [];
@@ -63,6 +116,46 @@ function batches(liste) {
   }
   if (aktuell.length) ergebnis.push(aktuell);
   return ergebnis;
+}
+
+function kiTeileVereinen(originalId, teile, minimum) {
+  if (!teile.length) throw new Error(`Keine KI-Teilantwort für Norm ${originalId}`);
+  for (const teil of teile) {
+    const support = eindeutig((teil.ki?.quellen_support || []).map(String));
+    if (teil.ki?.quellen_konsens !== true || support.length < minimum) {
+      throw new Error(`Norm ${originalId}, Teil ${teil.analyseId}: kein bestätigter ${minimum}-Quellen-Konsens`);
+    }
+  }
+
+  const klassen = teile.map((teil) => teil.ki.klassifikation);
+  const normativ = new Set(["rule", "definition", "fiction", "obligation", "prohibition", "permission", "entitlement", "calculation", "procedure", "competence"]);
+  const normativeKlassen = klassen.filter((klasse) => normativ.has(klasse));
+  let klassifikation = "no_classic_rule";
+  if (normativeKlassen.includes("rule")) klassifikation = "rule";
+  else if (normativeKlassen.length) klassifikation = normativeKlassen[0];
+  else if (klassen.includes("reference_only")) klassifikation = "reference_only";
+
+  const gesamtGewicht = teile.reduce((summe, teil) => summe + teil.gewicht, 0);
+  const konfidenz = teile.reduce(
+    (summe, teil) => summe + Math.max(0, Math.min(1, Number(teil.ki.konfidenz || 0))) * teil.gewicht,
+    0,
+  ) / Math.max(1, gesamtGewicht);
+
+  return {
+    id: originalId,
+    klassifikation,
+    tb: eindeutig(teile.flatMap((teil) => teil.ki.tb || [])),
+    rf: eindeutig(teile.flatMap((teil) => teil.ki.rf || [])),
+    ausnahmen: eindeutig(teile.flatMap((teil) => teil.ki.ausnahmen || [])),
+    konfidenz: Number(konfidenz.toFixed(3)),
+    quellen_support: eindeutig(teile.flatMap((teil) => teil.ki.quellen_support || []).map(String)),
+    quellen_konsens: true,
+    begruendung_kurz: teile
+      .map((teil) => teil.ki.begruendung_kurz)
+      .filter(Boolean)
+      .join(" ")
+      .slice(0, 240),
+  };
 }
 
 function markdown(bericht) {
@@ -99,8 +192,7 @@ async function main() {
 
   const gesetze = register.gesetze.filter((gesetz) => {
     if (!nur) return true;
-    const kandidaten = [gesetz.abk, gesetz.slug, gesetz.datei];
-    return kandidaten.some((kandidat) => nur.has(schluessel(kandidat)));
+    return [gesetz.abk, gesetz.slug, gesetz.datei].some((kandidat) => nur.has(schluessel(kandidat)));
   });
   if (!gesetze.length) {
     const verfuegbar = register.gesetze.map((gesetz) => `${gesetz.abk}/${gesetz.slug}/${gesetz.datei}`).join(", ");
@@ -141,6 +233,7 @@ async function main() {
           !voll
           && vorhanden?.text_hash === textHash
           && vorhanden?.pipeline_version === PIPELINE_VERSION
+          && vorhanden?.quellen_konsens === true
           && supportAktuell,
       };
     });
@@ -151,9 +244,11 @@ async function main() {
       ausgabe[eintrag.norm.id] = eintrag.vorhanden;
     }
 
-    const gruppen = batches(neu);
-    console.log(`\n${meta.abk}: ${gesetz.normen.length} Normen, ${neu.length} neu/geändert, ${gruppen.length} Batches`);
+    const analyseEinheiten = neu.flatMap(analyseTeile);
+    const gruppen = batches(analyseEinheiten);
+    console.log(`\n${meta.abk}: ${gesetz.normen.length} Normen, ${neu.length} neu/geändert, ${analyseEinheiten.length} Analyseteile, ${gruppen.length} Batches`);
 
+    const teilAntworten = new Map();
     for (const batch of gruppen) {
       let antwort = null;
       try {
@@ -165,22 +260,27 @@ async function main() {
 
       const map = new Map((antwort?.normen || []).map((eintrag) => [String(eintrag.id), eintrag]));
       if (requireKi) {
-        const fehlend = batch.map((eintrag) => String(eintrag.norm.id)).filter((id) => !map.has(id));
-        if (fehlend.length) throw new Error(`${meta.abk}: Modellantwort fehlt für Norm(en) ${fehlend.join(", ")}`);
+        const fehlend = batch.map((eintrag) => eintrag.analyseId).filter((id) => !map.has(id));
+        if (fehlend.length) throw new Error(`${meta.abk}: Modellantwort fehlt für Teil(e) ${fehlend.join(", ")}`);
       }
-
       for (const eintrag of batch) {
-        ausgabe[eintrag.norm.id] = konsensAnnotation({
-          norm: eintrag.norm,
-          logik: eintrag.logik,
-          ki: map.get(String(eintrag.norm.id)),
-          quellen,
-          gesetz,
-          modell: MODELL,
-          pipelineVersion: PIPELINE_VERSION,
-          minQuellen: minimum,
-        });
+        teilAntworten.set(eintrag.analyseId, { ...eintrag, ki: map.get(eintrag.analyseId) });
       }
+    }
+
+    for (const eintrag of neu) {
+      const teile = [...teilAntworten.values()].filter((teil) => teil.originalId === String(eintrag.norm.id));
+      const ki = ohneKi ? null : kiTeileVereinen(String(eintrag.norm.id), teile, minimum);
+      ausgabe[eintrag.norm.id] = konsensAnnotation({
+        norm: eintrag.norm,
+        logik: eintrag.logik,
+        ki,
+        quellen,
+        gesetz,
+        modell: MODELL,
+        pipelineVersion: PIPELINE_VERSION,
+        minQuellen: minimum,
+      });
     }
 
     const geordnet = {};
@@ -228,7 +328,9 @@ async function main() {
   console.log(`\nFertig: ${bericht.gesamt.mit_regel}/${bericht.gesamt.normen} Normen mit TB/RF.`);
 }
 
-main().catch((fehler) => {
+try {
+  await main();
+} catch (fehler) {
   console.error(`KI-Annotation fehlgeschlagen: ${fehler.stack || fehler.message}`);
   process.exitCode = 1;
-});
+}
