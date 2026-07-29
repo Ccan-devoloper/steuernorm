@@ -1,0 +1,51 @@
+{
+ "abk": "GrEStG",
+ "normen": {
+  "1": {
+   "tb": [
+    "ein Kaufvertrag oder ein anderes Rechtsgeschäft, das den Anspruch auf Übereignung begründet"
+   ],
+   "rf": [
+    "Der Grunderwerbsteuer unterliegen"
+   ],
+   "hinweis": "Besteuert wird das Verpflichtungsgeschäft, nicht die Auflassung. Ergänzungstatbestände erfassen Anteilsübertragungen an grundbesitzenden Gesellschaften.",
+   "schema": [
+    {
+     "n": "I.",
+     "t": "Inländisches Grundstück (§ 2)",
+     "art": "tb",
+     "sub": [
+      "Grundstücke im Sinne des BGB, Erbbaurechte, Gebäude auf fremdem Boden"
+     ]
+    },
+    {
+     "n": "II.",
+     "t": "Erwerbsvorgang (§ 1)",
+     "art": "tb",
+     "sub": [
+      "Abs. 1 Nr. 1: Verpflichtungsgeschäft",
+      "Abs. 2a bis 3a: Anteilsübertragungen an grundbesitzenden Gesellschaften"
+     ]
+    },
+    {
+     "n": "III.",
+     "t": "Keine Ausnahme von der Besteuerung",
+     "art": "tb",
+     "sub": [
+      "§ 3 persönliche Befreiungen, insbesondere Verwandtschaft",
+      "§§ 5, 6 Übergang auf und von Gesamthand"
+     ]
+    },
+    {
+     "n": "IV.",
+     "t": "Ergebnis: Steuer nach Gegenleistung",
+     "art": "rf",
+     "sub": [
+      "Bemessungsgrundlage §§ 8, 9",
+      "Steuersatz landesrechtlich, § 11"
+     ]
+    }
+   ]
+  }
+ }
+}
