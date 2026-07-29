@@ -1,5 +1,6 @@
 name: KI-Vollannotation erzeugen
 
+# Täglich prüfen; Modellaufrufe erfolgen nur für neue, geänderte oder noch offene Normen.
 on:
   pull_request:
     paths:
