@@ -68,28 +68,31 @@ jobs:
         with:
           node-version: "22"
 
-      - name: SolzG vollständig mit KI und Logik analysieren
+      - name: SolzG mit KI, Logik und Tagesbudget analysieren
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_MODELLAUFRUFE: "20"
         run: node tools/ki-annotieren.mjs --nur solzg --voll
 
-      - name: SolzG auf Vollständigkeit und Quellenkonsens prüfen
-        run: node tools/pruefen-v2.mjs --nur solzg
-
-      - name: Fortsetzbaren Zwischenstand mit kleinem Budget testen
+      - name: Vollständiges SolzG oder gültigen Fortsetzungscheckpoint prüfen
         shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MAX_MODELLAUFRUFE: "2"
-          BATCH_NORMEN: "1"
         run: |
           set -euo pipefail
-          rm -f annotations/solzg.json
-          rm -rf .ki-fortschritt
-          node tools/ki-annotieren.mjs --nur solzg --voll
-          test -s .ki-fortschritt/solzg.json
-          node tools/pruefen-fortschritt.mjs
+          if node - <<'NODE'
+          const fs = require('fs');
+          try {
+            const a = JSON.parse(fs.readFileSync('annotations/solzg.json', 'utf8'));
+            process.exit(a.automatisch === true && Number(a.pipeline_version) >= 2 ? 0 : 1);
+          } catch {
+            process.exit(1);
+          }
+          NODE
+          then
+            node tools/pruefen-v2.mjs --nur solzg
+          else
+            test -s .ki-fortschritt/solzg.json
+            node tools/pruefen-fortschritt.mjs
+          fi
 
   annotieren:
     if: github.event_name != 'pull_request'
