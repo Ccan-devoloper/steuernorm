@@ -108,6 +108,28 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Produktivlauf als gestartet protokollieren
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          cat > reports/ki-lauf-status.json <<JSON
+          {
+            "status": "laeuft",
+            "gestartet": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "ereignis": "$GITHUB_EVENT_NAME",
+            "commit": "$GITHUB_SHA",
+            "lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          }
+          JSON
+          git config user.name "steuernorm-ki-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports/ki-lauf-status.json
+          git commit -m "KI-Produktivlauf gestartet"
+          git pull --rebase origin main
+          git push
+
       - name: Automatische Tagesetappe ausführen
         shell: bash
         env:
@@ -137,6 +159,16 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf .cache .tmp
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            cat > reports/ki-lauf-status.json <<JSON
+          {
+            "status": "erfolgreich",
+            "beendet": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "commit": "$GITHUB_SHA",
+            "lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          }
+          JSON
+          fi
           git config user.name "steuernorm-ki-bot"
           git config user.email "bot@users.noreply.github.com"
           git add annotations .ki-fortschritt reports pruefbericht-ki.txt
@@ -147,3 +179,24 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Fehlerstatus veröffentlichen
+        if: failure() && github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          cat > reports/ki-lauf-status.json <<JSON
+          {
+            "status": "fehlgeschlagen",
+            "beendet": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "commit": "$GITHUB_SHA",
+            "lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          }
+          JSON
+          git config user.name "steuernorm-ki-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports/ki-lauf-status.json
+          git commit -m "KI-Produktivlauf fehlgeschlagen" || exit 0
+          git pull --rebase origin main
+          git push
