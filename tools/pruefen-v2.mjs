@@ -9,8 +9,11 @@ const register = JSON.parse(await readFile(path.join(WURZEL, "data", "index.json
 const minQuellen = Number(process.env.MIN_QUELLEN || 4);
 const args = process.argv.slice(2);
 const nurIndex = args.indexOf("--nur");
+function schluessel(wert) {
+  return String(wert || "").trim().toLowerCase().replace(/\.json$/i, "").replace(/[^a-z0-9]/g, "");
+}
 const nur = nurIndex >= 0
-  ? args[nurIndex + 1]?.split(",").map((x) => x.trim().toLowerCase()).filter(Boolean)
+  ? new Set(args[nurIndex + 1]?.split(",").map(schluessel).filter(Boolean))
   : null;
 
 const erlaubteKlassen = new Set([
@@ -82,9 +85,10 @@ let normen = 0;
 let regeln = 0;
 const proGesetz = [];
 
-const gesetze = register.gesetze.filter((meta) =>
-  !nur || nur.includes(meta.abk.toLowerCase()) || nur.includes(meta.slug),
-);
+const gesetze = register.gesetze.filter((meta) => {
+  if (!nur) return true;
+  return [meta.abk, meta.slug, meta.datei].some((kandidat) => nur.has(schluessel(kandidat)));
+});
 if (!gesetze.length) throw new Error("Für --nur wurde kein Gesetz gefunden");
 
 for (const meta of gesetze) {
@@ -120,26 +124,34 @@ for (const meta of gesetze) {
       fehler++;
     }
     if (annotation.konsens_methode !== "ki_logik_quellen" || annotation.modell === "nur-regellogik") {
-      console.error(`FEHLER ${meta.abk} ${norm.enbez}: kein KI-/Logik-/Quellenkonsens`);
+      console.error(`FEHLER ${meta.abk} ${norm.enbez}: kein KI-/Logik-/Quellenverfahren`);
       fehler++;
     }
 
     const quellen = Array.isArray(annotation.quellen) ? annotation.quellen : [];
-    const support = Array.isArray(annotation.quellen_support)
+    const direkteUnterstuetzung = Array.isArray(annotation.quellen_support)
       ? [...new Set(annotation.quellen_support.map(String))]
+      : [];
+    const gesetzesquellen = Array.isArray(annotation.gesetz_quellen)
+      ? [...new Set(annotation.gesetz_quellen.map(String))]
       : [];
     const quellenIds = new Set(quellen.map((quelle) => String(quelle.id)));
     const urls = quellen.map((quelle) => kanonischeUrl(quelle.url)).filter(Boolean);
-    if (support.length < minQuellen) {
-      console.error(`FEHLER ${meta.abk} ${norm.enbez}: nur ${support.length} ausdrücklich stützende Referenzen`);
+
+    if (annotation.gesetz_quellen_konsens !== true || gesetzesquellen.length < minQuellen) {
+      console.error(`FEHLER ${meta.abk} ${norm.enbez}: weniger als ${minQuellen} Referenzen auf Gesetzesebene`);
       fehler++;
     }
     if (new Set(urls).size < minQuellen) {
       console.error(`FEHLER ${meta.abk} ${norm.enbez}: weniger als ${minQuellen} eindeutige Quellen-URLs`);
       fehler++;
     }
-    if (support.some((id) => !quellenIds.has(id))) {
-      console.error(`FEHLER ${meta.abk} ${norm.enbez}: Quellen-Support verweist auf fehlende Quelle`);
+    if (gesetzesquellen.some((id) => !quellenIds.has(id))) {
+      console.error(`FEHLER ${meta.abk} ${norm.enbez}: Gesetzesreferenz verweist auf fehlende Quelle`);
+      fehler++;
+    }
+    if (direkteUnterstuetzung.some((id) => !quellenIds.has(id))) {
+      console.error(`FEHLER ${meta.abk} ${norm.enbez}: direkte Normstütze verweist auf fehlende Quelle`);
       fehler++;
     }
 
