@@ -1,0 +1,137 @@
+name: Umbau v4 redundant rekonstruieren
+
+on:
+  pull_request:
+    paths:
+      - ".migration-v4/**"
+      - ".migration-v4b/**"
+      - ".github/workflows/v4b-dateien-uebernehmen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v4b-uebernahme-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  uebernehmen:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Pull-Request-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Archiv aus redundanten Teilstücken rekonstruieren
+        id: payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import os
+          import pathlib
+          import re
+          import shutil
+          import tarfile
+
+          ausgabe = pathlib.Path(os.environ['GITHUB_OUTPUT'])
+          neu = sorted(pathlib.Path('.migration-v4b').glob('payload.*.b64'))
+          if not neu:
+              with ausgabe.open('a', encoding='utf-8') as f:
+                  f.write('vorhanden=false\n')
+              print('Payload bereits übernommen.')
+              raise SystemExit(0)
+          if len(neu) != 6:
+              raise SystemExit(f'Erwartet sechs sichere Teilstücke, gefunden: {len(neu)}')
+
+          def lesen(datei):
+              text = ''.join(datei.read_text(encoding='utf-8').split())
+              ungueltig = re.findall(r'[^A-Za-z0-9+/=]', text)
+              if ungueltig:
+                  raise SystemExit(f'{datei}: ungültige Base64-Zeichen')
+              return text
+
+          sicher = ''.join(lesen(datei) for datei in neu)
+          if len(sicher) != 90000:
+              raise SystemExit(f'Sichere Teilstücke umfassen {len(sicher)} statt 90000 Zeichen')
+
+          gesamt = 101020
+          zeichen = [None] * gesamt
+          for i, wert in enumerate(sicher):
+              zeichen[i] = wert
+
+          alt = sorted(pathlib.Path('.migration-v4').glob('payload.*.b64'))
+          print('Alte Teilstücklängen:', [len(lesen(d)) for d in alt])
+          # Die erste Übertragung war in fünf gleich große Sollsegmente à 20.204 Zeichen geteilt.
+          for index, datei in enumerate(alt):
+              text = lesen(datei)
+              start = index * 20204
+              for versatz, wert in enumerate(text):
+                  position = start + versatz
+                  if position >= gesamt:
+                      break
+                  vorhanden = zeichen[position]
+                  if vorhanden is not None and vorhanden != wert:
+                      raise SystemExit(f'Widerspruch bei Zeichen {position} aus {datei}')
+                  zeichen[position] = wert
+
+          luecken = [i for i, wert in enumerate(zeichen) if wert is None]
+          if luecken:
+              von = luecken[0]
+              bis = luecken[-1]
+              raise SystemExit(f'Payload weiterhin unvollständig: {len(luecken)} Zeichen fehlen, Bereich {von}–{bis}')
+
+          kodiert = ''.join(zeichen)
+          roh = base64.b64decode(kodiert, validate=True)
+          pruefsumme = hashlib.sha256(roh).hexdigest()
+          erwartet = 'f00ecb5009285c660a060238d35e57f82e4250dbc2953092e553e150e656d116'
+          print(f'Archiv-SHA-256: {pruefsumme}')
+          if pruefsumme != erwartet:
+              raise SystemExit(f'Falsche Archiv-Prüfsumme: {pruefsumme}')
+
+          archiv = pathlib.Path('/tmp/steuernorm-v4.tar.gz')
+          archiv.write_bytes(roh)
+          with tarfile.open(archiv, 'r:gz') as datei:
+              datei.extractall('.')
+
+          shutil.rmtree('.migration-v4b', ignore_errors=True)
+          shutil.rmtree('.migration-v4', ignore_errors=True)
+          pathlib.Path('README-v3.md').unlink(missing_ok=True)
+          with ausgabe.open('a', encoding='utf-8') as f:
+              f.write('vorhanden=true\n')
+          PY
+
+      - name: Übernommenen Stand vollständig prüfen
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json", "utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("package.json", "utf8"))'
+          grep -q 'beleg' index.html
+          grep -q 'Rechtsprechung' index.html
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+          node tools/annotieren.mjs --nur solzg --ohne-ki --trocken --laeufe 1
+
+      - name: Änderungen in den Pull-Request-Branch schreiben
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-v4-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Umbau v4 mit Belegschicht vollständig übernehmen"
+          git pull --rebase --autostash origin "$BRANCH"
+          git push origin "HEAD:$BRANCH"
