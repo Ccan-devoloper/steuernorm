@@ -1,0 +1,79 @@
+name: Umbau v4 vollständig übernehmen
+
+on:
+  pull_request:
+    paths:
+      - ".migration-v4/**"
+      - ".github/workflows/v4-dateien-uebernehmen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v4-uebernahme-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  uebernehmen:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Pull-Request-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Archiv rekonstruieren und vollständig übernehmen
+        id: payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          teile=(.migration-v4/payload.*.b64)
+          if [ "${#teile[@]}" -eq 0 ]; then
+            echo "vorhanden=false" >> "$GITHUB_OUTPUT"
+            echo "Payload bereits übernommen."
+            exit 0
+          fi
+          if [ "${#teile[@]}" -ne 5 ]; then
+            echo "Erwartet fünf Payload-Teile, gefunden: ${#teile[@]}" >&2
+            exit 1
+          fi
+
+          cat "${teile[@]}" | tr -d '\n\r ' | base64 --decode > /tmp/steuernorm-v4.tar.gz
+          echo "f00ecb5009285c660a060238d35e57f82e4250dbc2953092e553e150e656d116  /tmp/steuernorm-v4.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/steuernorm-v4.tar.gz -C .
+          rm -rf .migration-v4
+          rm -f README-v3.md
+          echo "vorhanden=true" >> "$GITHUB_OUTPUT"
+
+      - name: Übernommenen Stand vollständig prüfen
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json", "utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("package.json", "utf8"))'
+          grep -q 'beleg' index.html
+          grep -q 'Rechtsprechung' index.html
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+          node tools/annotieren.mjs --nur solzg --ohne-ki --trocken --laeufe 1
+
+      - name: Änderungen in den Pull-Request-Branch schreiben
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-v4-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Umbau v4 mit Belegschicht vollständig übernehmen"
+          git pull --rebase --autostash origin "$BRANCH"
+          git push origin "HEAD:$BRANCH"
