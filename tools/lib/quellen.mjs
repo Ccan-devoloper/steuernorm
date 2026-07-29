@@ -21,38 +21,43 @@ function stripHtml(html) {
   ).replace(/\s+/g, " ").trim();
 }
 
-async function laden(url, versuch = 1) {
-  const key = kanonischeUrl(url);
-  if (SEITEN_CACHE.has(key)) return SEITEN_CACHE.get(key);
-
-  const arbeit = (async () => {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 20_000);
-    try {
-      const antwort = await fetch(url, {
-        signal: controller.signal,
-        redirect: "follow",
-        headers: {
-          "User-Agent": "steuernorm-ki-annotation/2.0 (+https://github.com/Ccan-devoloper/steuernorm)",
-          Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5",
-        },
-      });
-      if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
-      return await antwort.text();
-    } catch (fehler) {
-      if (versuch < 3) {
-        await new Promise((resolve) => setTimeout(resolve, 800 * versuch));
-        return laden(url, versuch + 1);
-      }
-      throw fehler;
-    } finally {
-      clearTimeout(timer);
-    }
-  })();
-
-  SEITEN_CACHE.set(key, arbeit);
+async function einmalLaden(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20_000);
   try {
-    return await arbeit;
+    const antwort = await fetch(url, {
+      signal: controller.signal,
+      redirect: "follow",
+      headers: {
+        "User-Agent": "steuernorm-ki-annotation/2.0 (+https://github.com/Ccan-devoloper/steuernorm)",
+        Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5",
+      },
+    });
+    if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
+    return await antwort.text();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function mitWiederholungen(url) {
+  let letzterFehler;
+  for (let versuch = 1; versuch <= 3; versuch++) {
+    try {
+      return await einmalLaden(url);
+    } catch (fehler) {
+      letzterFehler = fehler;
+      if (versuch < 3) await new Promise((resolve) => setTimeout(resolve, 800 * versuch));
+    }
+  }
+  throw letzterFehler;
+}
+
+async function laden(url) {
+  const key = kanonischeUrl(url);
+  if (!SEITEN_CACHE.has(key)) SEITEN_CACHE.set(key, mitWiederholungen(key));
+  try {
+    return await SEITEN_CACHE.get(key);
   } catch (fehler) {
     SEITEN_CACHE.delete(key);
     throw fehler;
