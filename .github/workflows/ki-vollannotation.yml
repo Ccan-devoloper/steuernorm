@@ -55,7 +55,7 @@ jobs:
   smoke-test:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     permissions:
       contents: read
       models: read
@@ -76,6 +76,20 @@ jobs:
 
       - name: SolzG auf Vollständigkeit und Quellenkonsens prüfen
         run: node tools/pruefen-v2.mjs --nur solzg
+
+      - name: Fortsetzbaren Zwischenstand mit kleinem Budget testen
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_MODELLAUFRUFE: "2"
+          BATCH_NORMEN: "1"
+        run: |
+          set -euo pipefail
+          rm -f annotations/solzg.json
+          rm -rf .ki-fortschritt
+          node tools/ki-annotieren.mjs --nur solzg --voll
+          test -s .ki-fortschritt/solzg.json
+          node tools/pruefen-fortschritt.mjs
 
   annotieren:
     if: github.event_name != 'pull_request'
