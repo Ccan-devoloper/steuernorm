@@ -1,14 +1,15 @@
 {
   "name": "steuernorm",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
-  "description": "Textausgabe der deutschen Steuergesetze mit Markierungen und Prüfungsschemata",
+  "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Tatbestand-/Rechtsfolge-Annotation",
   "type": "module",
   "scripts": {
+    "start": "python3 -m http.server 8000",
     "update": "node tools/update.mjs",
-    "annotationen": "node tools/annotationen.mjs",
+    "annotieren": "node tools/annotieren.mjs",
     "pruefen": "node tools/pruefen.mjs",
-    "start": "python3 -m http.server 8000"
+    "eval": "node tools/eval.mjs"
   },
   "license": "MIT"
 }

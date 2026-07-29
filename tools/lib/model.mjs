@@ -1,221 +1,239 @@
-import { textDerNorm } from "./text.mjs";
+/**
+ * modell.mjs — Anbindung an GitHub Models mit MEHRFACH-SAMPLING.
+ *
+ * Der entscheidende Unterschied zur bisherigen Fassung: Jede Norm wird k-mal
+ * unabhängig analysiert (unterschiedliche Temperatur, optional unterschiedliche
+ * Modelle). Als gesichert gilt nur, was in mindestens `KONSENS_ANTEIL` der Läufe
+ * gleich herauskommt. Damit tritt die Übereinstimmung mehrerer Läufe an die Stelle
+ * der menschlichen Durchsicht — und die Konfidenz misst etwas Reales statt der
+ * Selbsteinschätzung eines einzelnen Laufs.
+ *
+ * Zusätzlich läuft eine GEGENPROBE: Ein zweiter Aufruf bekommt nur die extrahierten
+ * Spannen ohne die erste Begründung und muss unabhängig entscheiden, ob eine Spanne
+ * Voraussetzung oder Folge ist. Weicht sie ab, wird die Spanne verworfen.
+ */
 
-const API = "https://models.github.ai/inference/chat/completions";
-const REQUEST_TIMEOUT_MS = Math.max(30_000, Number(process.env.MODELL_TIMEOUT_MS || 120_000));
+const ENDPUNKT = "https://models.github.ai/inference/chat/completions";
+const TIMEOUT_MS = 90_000;
 
-export class ModellBudgetErschoepft extends Error {
-  constructor(message = "Modellaufruf-Budget erschöpft") {
-    super(message);
-    this.name = "ModellBudgetErschoepft";
-  }
-}
+export class ModellKontingentErschoepft extends Error {}
+export class ModellBudgetErschoepft extends Error {}
 
-export class ModellKontingentErschoepft extends Error {
-  constructor(message = "GitHub-Models-Kontingent erschöpft") {
-    super(message);
-    this.name = "ModellKontingentErschoepft";
-  }
-}
+/* ─────────────────────────── Systemvorgaben ─────────────────────────── */
 
-const SYSTEM = `Du analysierst deutsches Steuerrecht als strukturierter Informationsextraktor. Du erteilst keine Rechtsberatung.
-Gib ausschließlich valides JSON zurück. Jede Phrase in tb, rf und ausnahmen muss eine wörtliche, zusammenhängende Teilzeichenkette aus dem gelieferten Normtext sein. Tatbestand sind Voraussetzungen, Adressaten, Gegenstände, Handlungen, Zeit-/Ortselemente und negative Voraussetzungen. Rechtsfolge sind Rechtswirkungen, Pflichten, Verbote, Erlaubnisse, Ansprüche, Fiktionen, Definitionsergebnisse, Berechnungs- und Verfahrensfolgen. Erfasse mehrere Regeln, liefere aber deduplizierte Span-Listen. Klassifiziere jede Norm als rule, definition, fiction, obligation, prohibition, permission, entitlement, calculation, procedure, competence, reference_only oder no_classic_rule.
-Quellen dienen zur Plausibilisierung. Nenne in quellen_support nur IDs von Referenzen, deren gelieferter Ausschnitt die Einordnung materiell stützt. Setze quellen_konsens nur dann auf true, wenn mehrere unterschiedliche Referenzen zu einem überschneidenden Ergebnis für die konkrete Norm führen. Der amtliche Normtext darf als eine Referenz zählen. Wenn die Referenzen die konkrete Norm nicht unmittelbar stützen, setze quellen_konsens auf false und nenne nur die tatsächlich stützenden IDs. Bei Unklarheit senke konfidenz. Keine Markdown-Codeblöcke.`;
+const SYSTEM_EXTRAKTION = `Du zerlegst deutsche Steuerrechtsnormen in Tatbestand und Rechtsfolge. Du erteilst keine Rechtsberatung und gibst ausschließlich valides JSON zurück.
 
-const KLASSEN = [
-  "rule", "definition", "fiction", "obligation", "prohibition", "permission",
-  "entitlement", "calculation", "procedure", "competence", "reference_only", "no_classic_rule",
-];
+GRUNDREGEL DER DEUTSCHEN SYNTAX
+Im Hauptsatz steht das finite Verb an zweiter Stelle. Was davor steht (Vorfeld), ist genau ein Satzglied. Prüfe für jeden Rechtssatz zuerst, WAS im Vorfeld steht:
+- Prädikatives Adjektiv oder Partizip ("Abgabepflichtig sind …", "Steuerfrei sind …", "Maßgebend ist …") → das Vorfeld ist die RECHTSFOLGE, das Nachfeld enthält die Voraussetzungen.
+- Konditionales Adverbial ("Bei der Veranlagung …", "Beim Abzug vom Arbeitslohn …", "Im Falle des …") → das Vorfeld ist der TATBESTAND (Anwendungsfall).
+- Bloßes Satzsubjekt, das den Normgegenstand nennt ("Der Solidaritätszuschlag", "Die Steuer") → KEIN Merkmal, gar nicht erfassen.
+- Verberststellung ("Ist die Steuer abgegolten, gilt …") → der vorangestellte Teil ist ein uneingeleiteter Bedingungssatz, also TATBESTAND.
 
-const ANTWORT_SCHEMA = {
-  name: "steuernorm_annotation",
+NORMTYPEN
+Nicht jede Vorschrift hat Tatbestand und Rechtsfolge. Ordne jedem Rechtssatz genau einen Typ zu:
+konditional | tarif | definition | fiktion | verweisung | rechenregel | anwendung | aussage
+- tarif: setzt nur einen Satz oder Betrag fest. Hat KEINEN eigenen Tatbestand. tb bleibt leer.
+- anwendung: zeitlicher Geltungsbereich einer Fassung ("… ist erstmals für den Veranlagungszeitraum 2026 anzuwenden"). Gib WEDER tb NOCH rf zurück, beide Listen leer.
+- rechenregel: Rundung und Ähnliches. Vollständig Rechtsfolge.
+- verweisung: ordnet die Anwendung anderer Vorschriften an.
+
+HARTE ANFORDERUNGEN
+1. Jede Spanne ist eine wörtliche, zusammenhängende Teilzeichenkette GENAU DES Rechtssatzes, dem du sie zuordnest. Nicht aus einem anderen Absatz.
+2. Keine Spanne beginnt mit einem Monatsnamen, einer Konjunktion oder einem Satzzeichen.
+3. Keine Spanne besteht nur aus einer Fundstelle (BGBl., BStBl.) oder einer Datumsangabe.
+4. Keine Spanne umfasst mehr als 45 Wörter. Zerlege stattdessen.
+5. Ausnahmen ("mit Ausnahme", "es sei denn", "abweichend von") gehören in ausnahmen, nicht in tb.
+6. Bei Aufzählungen: gib jede Nummer einzeln zurück und setze junktor auf "und" (kumulativ) oder "oder" (alternativ).
+
+Begründe jede Zuordnung in einem Satz über das Satzglied, nicht über den Inhalt.`;
+
+const SYSTEM_GEGENPROBE = `Du bekommst einen Rechtssatz aus einem deutschen Steuergesetz und einzelne wörtliche Ausschnitte daraus. Entscheide für jeden Ausschnitt UNABHÄNGIG, ob er
+- eine Voraussetzung der Norm beschreibt (tb),
+- eine Rechtswirkung anordnet (rf),
+- eine Ausnahme oder Rückausnahme ist (ausn),
+- oder gar kein normatives Merkmal ist (kein).
+
+Achte besonders auf vorangestellte Rechtsfolgen: In "Abgabepflichtig sind natürliche Personen …" ist "Abgabepflichtig" die Rechtsfolge und "natürliche Personen …" die Voraussetzung.
+
+Antworte ausschließlich mit valider JSON. Keine Begründung, keine Markdown-Blöcke.`;
+
+/* ─────────────────────────── Antwortschemata ─────────────────────────── */
+
+const TYPEN = ["konditional", "tarif", "definition", "fiktion", "verweisung", "rechenregel", "anwendung", "aussage"];
+
+const SCHEMA_EXTRAKTION = {
+  name: "normzerlegung",
   strict: true,
   schema: {
     type: "object",
     additionalProperties: false,
     properties: {
-      normen: {
+      saetze: {
         type: "array",
         items: {
           type: "object",
           additionalProperties: false,
           properties: {
-            id: { type: "string" },
-            klassifikation: { type: "string", enum: KLASSEN },
+            pfad: { type: "string" },
+            typ: { type: "string", enum: TYPEN },
+            vorfeld: { type: "string", enum: ["rechtsfolge", "tatbestand", "normsubjekt", "verberst", "keines"] },
+            junktor: { type: "string", enum: ["und", "oder", "keiner"] },
             tb: { type: "array", items: { type: "string" } },
             rf: { type: "array", items: { type: "string" } },
             ausnahmen: { type: "array", items: { type: "string" } },
-            konfidenz: { type: "number", minimum: 0, maximum: 1 },
-            quellen_support: { type: "array", items: { type: "string" } },
-            quellen_konsens: { type: "boolean" },
-            begruendung_kurz: { type: "string", maxLength: 240 },
+            begruendung: { type: "string", maxLength: 200 },
           },
-          required: [
-            "id", "klassifikation", "tb", "rf", "ausnahmen", "konfidenz",
-            "quellen_support", "quellen_konsens", "begruendung_kurz",
-          ],
+          required: ["pfad", "typ", "vorfeld", "junktor", "tb", "rf", "ausnahmen", "begruendung"],
         },
       },
     },
-    required: ["normen"],
+    required: ["saetze"],
   },
 };
 
-function nutzer(gesetz, batch, quellen) {
-  return JSON.stringify({
-    gesetz: { abk: gesetz.abk, titel: gesetz.titel },
-    referenzen: quellen.filter((q) => q.erreichbar).map((q) => ({
-      id: q.id,
-      typ: q.typ,
-      herausgeber: q.herausgeber,
-      titel: q.titel,
-      url: q.url,
-      ausschnitt: q.ausschnitt.slice(0, 900),
-    })),
-    normen: batch.map(({ norm, logik }) => ({
-      id: String(norm.id),
-      enbez: norm.enbez,
-      titel: norm.titel,
-      text: textDerNorm(norm),
-      logik_vorschlag: logik,
-    })),
-  });
-}
-
-function antwortInhalt(json) {
-  const inhalt = json.choices?.[0]?.message?.content;
-  if (!inhalt) throw new Error("Modellantwort ohne Inhalt");
-  return JSON.parse(inhalt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "").trim());
-}
-
-function budgetVerbrauchen(budget) {
-  if (!budget) return;
-  const maximum = Number(budget.maximum);
-  if (Number.isFinite(maximum) && budget.verbraucht >= maximum) {
-    throw new ModellBudgetErschoepft(`Tagesbudget von ${maximum} Modellaufrufen erreicht`);
-  }
-  budget.verbraucht++;
-}
-
-/** Timeout umfasst Verbindungsaufbau UND das vollständige Lesen des Antwort-Streams. */
-async function fetchMitTimeout(body, token) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(new Error("Modell-Request-Timeout")), REQUEST_TIMEOUT_MS);
-  try {
-    const antwort = await fetch(API, {
-      method: "POST",
-      signal: controller.signal,
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        "X-GitHub-Api-Version": "2026-03-10",
+const SCHEMA_GEGENPROBE = {
+  name: "gegenprobe",
+  strict: true,
+  schema: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      urteile: {
+        type: "array",
+        items: {
+          type: "object",
+          additionalProperties: false,
+          properties: {
+            i: { type: "integer" },
+            art: { type: "string", enum: ["tb", "rf", "ausn", "kein"] },
+          },
+          required: ["i", "art"],
+        },
       },
-      body: JSON.stringify(body),
-    });
-    const antworttext = await antwort.text();
-    return { antwort, antworttext };
-  } finally {
-    clearTimeout(timer);
-  }
-}
+    },
+    required: ["urteile"],
+  },
+};
 
-async function roherAufruf({ gesetz, batch, quellen, token, modell, budget }) {
+/* ─────────────────────────── Aufruf ─────────────────────────── */
+
+async function einAufruf({ system, nutzer, schema, modell, temperatur, token, budget }) {
+  if (budget && budget.verbraucht >= budget.maximum) {
+    throw new ModellBudgetErschoepft(`Budget von ${budget.maximum} Modellaufrufen erschöpft`);
+  }
+  if (budget) budget.verbraucht++;
+
   const body = {
     model: modell,
     messages: [
-      { role: "system", content: SYSTEM },
-      { role: "user", content: nutzer(gesetz, batch, quellen) },
+      { role: "system", content: system },
+      { role: "user", content: nutzer },
     ],
-    temperature: 0.1,
-    max_tokens: 5_000,
-    response_format: { type: "json_schema", json_schema: ANTWORT_SCHEMA },
+    temperature: temperatur,
+    max_tokens: 6_000,
+    response_format: { type: "json_schema", json_schema: schema },
   };
 
-  let formatStufe = 0;
-  let rateVersuche = 0;
-  let netzVersuche = 0;
-  for (let versuch = 1; versuch <= 6; versuch++) {
-    budgetVerbrauchen(budget);
-    let antwort;
-    let antworttext;
+  for (let versuch = 1; versuch <= 5; versuch++) {
+    const abbruch = new AbortController();
+    const uhr = setTimeout(() => abbruch.abort(), TIMEOUT_MS);
+    let antwort, text;
     try {
-      ({ antwort, antworttext } = await fetchMitTimeout(body, token));
+      antwort = await fetch(ENDPUNKT, {
+        method: "POST",
+        signal: abbruch.signal,
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+      text = await antwort.text();
     } catch (fehler) {
-      netzVersuche++;
-      const detail = fehler?.name === "AbortError"
-        ? `Timeout nach ${REQUEST_TIMEOUT_MS / 1000}s`
-        : (fehler?.message || String(fehler));
-      if (rateVersuche > 0) {
-        throw new ModellKontingentErschoepft(`Netzwerkabbruch nach GitHub-Models-429: ${detail}`);
-      }
-      if (netzVersuche < 3) {
-        const warten = 3_000 * netzVersuche;
-        console.warn(`Modellantwort abgebrochen (${detail}); vollständiger neuer Versuch in ${warten / 1_000}s`);
-        await new Promise((resolve) => setTimeout(resolve, warten));
-        continue;
-      }
-      throw new ModellKontingentErschoepft(`GitHub Models wiederholt nicht erreichbar: ${detail}`);
+      clearTimeout(uhr);
+      if (versuch >= 3) throw new ModellKontingentErschoepft(`Netzfehler: ${fehler.message}`);
+      await warte(2_000 * versuch);
+      continue;
     }
+    clearTimeout(uhr);
 
     if (antwort.ok) {
       try {
-        return antwortInhalt(JSON.parse(antworttext));
+        const roh = JSON.parse(text);
+        const inhalt = roh.choices?.[0]?.message?.content ?? "";
+        return JSON.parse(String(inhalt).replace(/^```json\s*|```\s*$/g, "").trim());
       } catch (fehler) {
-        netzVersuche++;
-        if (netzVersuche < 3) {
-          const warten = 3_000 * netzVersuche;
-          console.warn(`Unvollständige oder ungültige Modellantwort (${fehler.message}); neuer Versuch in ${warten / 1_000}s`);
-          await new Promise((resolve) => setTimeout(resolve, warten));
-          continue;
-        }
-        throw new ModellKontingentErschoepft(`GitHub Models lieferte wiederholt keine vollständige JSON-Antwort: ${fehler.message}`);
+        if (versuch >= 3) throw new ModellKontingentErschoepft(`Ungültige Antwort: ${fehler.message}`);
+        await warte(2_000 * versuch);
+        continue;
       }
     }
 
-    const fehlertext = antworttext;
-    if ((antwort.status === 400 || antwort.status === 422) && formatStufe < 2) {
-      formatStufe++;
-      body.response_format = formatStufe === 1 ? { type: "json_object" } : undefined;
-      if (!body.response_format) delete body.response_format;
-      continue;
-    }
     if (antwort.status === 429) {
-      rateVersuche++;
-      const retryAfter = Number(antwort.headers.get("retry-after") || 0);
-      if (retryAfter > 120 || rateVersuche >= 2) {
-        throw new ModellKontingentErschoepft(`GitHub Models 429: ${fehlertext.slice(0, 300)}`);
-      }
-      const warten = Math.max(60_000, retryAfter * 1_000);
-      console.warn(`Modell 429; neuer Versuch in ${Math.round(warten / 1_000)}s`);
-      await new Promise((resolve) => setTimeout(resolve, warten));
+      const warten = Number(antwort.headers.get("retry-after") || 0) * 1_000 || 20_000 * versuch;
+      if (versuch >= 4) throw new ModellKontingentErschoepft("GitHub-Models-Kontingent erschöpft");
+      await warte(warten);
       continue;
     }
-    if (antwort.status >= 500 && versuch < 6) {
-      const warten = Math.min(90_000, 2_000 * 2 ** (versuch - 1));
-      console.warn(`Modell ${antwort.status}; neuer Versuch in ${warten / 1_000}s`);
-      await new Promise((resolve) => setTimeout(resolve, warten));
+    if ((antwort.status === 400 || antwort.status === 422) && body.response_format) {
+      body.response_format = { type: "json_object" };
       continue;
     }
-    throw new Error(`GitHub Models ${antwort.status}: ${fehlertext.slice(0, 500)}`);
+    throw new ModellKontingentErschoepft(`HTTP ${antwort.status}: ${text.slice(0, 200)}`);
   }
-  throw new ModellKontingentErschoepft("GitHub Models nach mehreren Versuchen nicht erreichbar");
+  throw new ModellKontingentErschoepft("Alle Versuche erschöpft");
 }
 
-export async function modellAufruf(args) {
-  const antwort = await roherAufruf(args);
-  const vorhandene = new Map((antwort?.normen || []).map((eintrag) => [String(eintrag.id), eintrag]));
-  const erwartet = args.batch.map((eintrag) => String(eintrag.norm.id));
+const warte = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  for (const eintrag of args.batch) {
-    const id = String(eintrag.norm.id);
-    if (vorhandene.has(id)) continue;
-    console.warn(`Modellantwort fehlt für ${id}; Einzelwiederholung`);
-    await new Promise((resolve) => setTimeout(resolve, 1_500));
-    const einzelAntwort = await roherAufruf({ ...args, batch: [eintrag] });
-    const treffer = (einzelAntwort?.normen || []).find((ausgabe) => String(ausgabe.id) === id);
-    if (!treffer) throw new Error(`Modellantwort fehlt nach Einzelwiederholung für ${id}`);
-    vorhandene.set(id, treffer);
+/* ─────────────────────────── Öffentliche API ─────────────────────────── */
+
+/**
+ * Analysiert eine Norm k-mal unabhängig.
+ * @returns {Array} k Antworten der Form { saetze: [...] }
+ */
+export async function extrahiereMehrfach({ gesetz, norm, einheiten, vorschlag, modelle, laeufe, token, budget }) {
+  const nutzer = JSON.stringify({
+    gesetz: { abk: gesetz.abk, titel: gesetz.titel },
+    norm: { enbez: norm.enbez, titel: norm.titel, gegenstand: gesetz.titel },
+    rechtssaetze: einheiten.map((e) => ({ pfad: e.pfad, text: e.text })),
+    syntaktischer_vorschlag: vorschlag,
+    aufgabe: "Prüfe den syntaktischen Vorschlag und korrigiere ihn, wo er falsch liegt. Übernimm ihn nicht ungeprüft.",
+  });
+
+  const antworten = [];
+  for (let i = 0; i < laeufe; i++) {
+    const modell = modelle[i % modelle.length];
+    const temperatur = i === 0 ? 0 : 0.35;
+    try {
+      antworten.push(await einAufruf({
+        system: SYSTEM_EXTRAKTION, nutzer, schema: SCHEMA_EXTRAKTION,
+        modell, temperatur, token, budget,
+      }));
+    } catch (fehler) {
+      if (fehler instanceof ModellBudgetErschoepft) throw fehler;
+      if (antworten.length === 0) throw fehler;
+      break; // mit weniger Läufen weiterarbeiten, Konfidenz sinkt entsprechend
+    }
   }
+  return antworten;
+}
 
-  return { normen: erwartet.map((id) => vorhandene.get(id)) };
+/**
+ * Gegenprobe: kategorisiert vorgelegte Spannen ohne Kenntnis der ersten Begründung.
+ * @returns {Map<number,string>} Index → art
+ */
+export async function gegenprobe({ satztext, spannen, modell, token, budget }) {
+  if (!spannen.length) return new Map();
+  const nutzer = JSON.stringify({
+    rechtssatz: satztext,
+    ausschnitte: spannen.map((s, i) => ({ i, text: s.text })),
+  });
+  const antwort = await einAufruf({
+    system: SYSTEM_GEGENPROBE, nutzer, schema: SCHEMA_GEGENPROBE,
+    modell, temperatur: 0, token, budget,
+  });
+  return new Map((antwort.urteile || []).map((u) => [u.i, u.art]));
 }

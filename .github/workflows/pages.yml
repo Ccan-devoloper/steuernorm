@@ -11,7 +11,7 @@ on:
       - ".github/workflows/pages.yml"
   workflow_run:
     workflows:
-      - "KI-Vollannotation erzeugen"
+      - "Annotationen erzeugen"
       - "Gesetzestexte täglich aktualisieren"
     types:
       - completed
