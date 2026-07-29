@@ -5,6 +5,7 @@ on:
   pull_request:
     paths:
       - "tools/ki-annotieren.mjs"
+      - "tools/naechstes-gesetz.mjs"
       - "tools/lib/**"
       - "tools/pruefen-v2.mjs"
       - "tools/pruefen-fortschritt.mjs"
@@ -15,6 +16,7 @@ on:
       - main
     paths:
       - "tools/ki-annotieren.mjs"
+      - "tools/naechstes-gesetz.mjs"
       - "tools/lib/**"
       - "tools/pruefen-v2.mjs"
       - "tools/pruefen-fortschritt.mjs"
@@ -25,12 +27,12 @@ on:
   workflow_dispatch:
     inputs:
       gesetz:
-        description: "Optionales Gesetzeskürzel, z. B. SolzG; leer bedeutet alle Gesetze"
+        description: "Optionales Gesetzeskürzel, z. B. SolzG; leer wählt automatisch das nächste offene Gesetz"
         required: false
         default: ""
         type: string
       vollstaendig:
-        description: "Ausgewählte Normen und Zwischenstände neu beginnen"
+        description: "Das ausgewählte Gesetz und seinen Zwischenstand vollständig neu beginnen"
         required: false
         default: false
         type: boolean
@@ -130,24 +132,36 @@ jobs:
           git pull --rebase origin main
           git push
 
+      - name: Nächstes offenes Gesetz auswählen
+        id: ziel
+        shell: bash
+        env:
+          INPUT_GESETZ: ${{ inputs.gesetz }}
+        run: |
+          set -euo pipefail
+          ziel="${INPUT_GESETZ:-}"
+          if [ -z "$ziel" ]; then
+            ziel="$(node tools/naechstes-gesetz.mjs)"
+          fi
+          echo "gesetz=$ziel" >> "$GITHUB_OUTPUT"
+          if [ -n "$ziel" ]; then
+            echo "Diese Etappe verarbeitet: $ziel"
+          else
+            echo "Alle Gesetze besitzen aktuelle vollständige Annotationen."
+          fi
+
       - name: Automatische Tagesetappe ausführen
+        if: steps.ziel.outputs.gesetz != ''
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EVENT_NAME: ${{ github.event_name }}
-          INPUT_GESETZ: ${{ inputs.gesetz }}
+          ZIEL_GESETZ: ${{ steps.ziel.outputs.gesetz }}
           INPUT_VOLL: ${{ inputs.vollstaendig }}
         run: |
           set -euo pipefail
-          args=()
+          args=(--nur "$ZIEL_GESETZ")
           if [ "${INPUT_VOLL:-false}" = "true" ]; then
             args+=(--voll)
-          fi
-          if [ -n "${INPUT_GESETZ:-}" ]; then
-            args+=(--nur "$INPUT_GESETZ")
-          elif [ "$EVENT_NAME" = "push" ]; then
-            # Nach Codeänderungen zuerst ein kleines Gesetz vollständig produktiv absichern.
-            args+=(--nur solzg)
           fi
           node tools/ki-annotieren.mjs "${args[@]}"
 
@@ -167,6 +181,7 @@ jobs:
           {
             "status": "erfolgreich",
             "beendet": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "gesetz": "${{ steps.ziel.outputs.gesetz }}",
             "commit": "$GITHUB_SHA",
             "lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           }
@@ -193,6 +208,7 @@ jobs:
           {
             "status": "fehlgeschlagen",
             "beendet": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "gesetz": "${{ steps.ziel.outputs.gesetz }}",
             "commit": "$GITHUB_SHA",
             "lauf": "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           }
