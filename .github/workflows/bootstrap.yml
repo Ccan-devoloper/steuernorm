@@ -1,0 +1,45 @@
+name: Projekt fertigstellen
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/bootstrap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aufbauen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Weboberfläche wiederherstellen
+        run: |
+          cat .bootstrap/payload.* | base64 --decode > /tmp/steuernorm-core.tgz
+          tar -xzf /tmp/steuernorm-core.tgz
+
+      - name: Aktuelle Gesetzestexte laden
+        run: node tools/update.mjs
+
+      - name: Markierungen prüfen
+        run: node tools/pruefen.mjs | tee pruefbericht.txt
+
+      - name: Fertigen Projektstand veröffentlichen
+        run: |
+          git config user.name "steuernorm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          rm -rf .bootstrap
+          rm -f .github/workflows/bootstrap.yml
+          git add -A
+          git commit -m "Steuernorm-Anwendung einrichten"
+          git push
