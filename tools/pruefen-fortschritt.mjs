@@ -56,20 +56,24 @@ for (const meta of register.gesetze) {
   const final = await json(path.join(WURZEL, "annotations", meta.datei));
   const stand = await json(path.join(WURZEL, ".ki-fortschritt", meta.datei));
   const finalV2 = final?.automatisch === true && Number(final.pipeline_version) >= 2;
-  const quelle = finalV2 ? final : stand;
+  const hatZwischenstand = stand?.unvollstaendig === true;
+  // Ein neuer Zwischenstand gehört zur laufenden Neuanalyse und ist deshalb maßgeblich;
+  // die alte finale Datei bleibt lediglich bis zum atomaren Austausch öffentlich sichtbar.
+  const quelle = hatZwischenstand ? stand : (finalV2 ? final : null);
+  const istFinal = !hatZwischenstand && finalV2;
   if (!quelle) continue;
 
   artefakte++;
-  if (finalV2) endgueltig++;
+  if (istFinal) endgueltig++;
   else zwischenstaende++;
   const ids = Object.keys(quelle.normen || {});
   const normMap = new Map(gesetz.normen.map((norm) => [String(norm.id), norm]));
 
-  if (finalV2 && ids.length !== gesetz.normen.length) {
+  if (istFinal && ids.length !== gesetz.normen.length) {
     console.error(`FEHLER ${meta.abk}: finale Datei enthält ${ids.length}/${gesetz.normen.length} Normen`);
     fehler++;
   }
-  if (!finalV2) {
+  if (!istFinal) {
     if (quelle.unvollstaendig !== true) {
       console.error(`FEHLER ${meta.abk}: Zwischenstand nicht als unvollständig gekennzeichnet`);
       fehler++;
@@ -143,7 +147,7 @@ for (const meta of register.gesetze) {
       fehler++;
     }
   }
-  zeilen.push(`${meta.abk} ${ids.length}/${gesetz.normen.length}${finalV2 ? " final" : " in Arbeit"}`);
+  zeilen.push(`${meta.abk} ${ids.length}/${gesetz.normen.length}${istFinal ? " final" : " in Arbeit"}`);
 }
 
 if (!artefakte) {
