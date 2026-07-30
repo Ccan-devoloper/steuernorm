@@ -63,16 +63,10 @@ jobs:
           node - <<'NODE'
           const fs = require("fs");
           const c = JSON.parse(fs.readFileSync("config/handbuecher.json", "utf8"));
-          if (!Array.isArray(c.handbuecher) || c.handbuecher.length !== 8) {
-            throw new Error(`Acht amtliche Handbuchanbindungen erwartet, gefunden: ${c.handbuecher?.length ?? 0}.`);
-          }
+          if (!Array.isArray(c.handbuecher) || c.handbuecher.length !== 8) throw new Error(`Acht Handbuchanbindungen erwartet, gefunden: ${c.handbuecher?.length ?? 0}.`);
           for (const h of c.handbuecher) {
-            if (!h.gesetz || !h.start || !h.prefix || !h.jahrgang) {
-              throw new Error(`Unvollständiger Handbucheintrag: ${JSON.stringify(h)}`);
-            }
-            if (!h.start.startsWith(h.prefix)) {
-              throw new Error(`${h.gesetz}: Startadresse liegt nicht unter dem Prefix.`);
-            }
+            if (!h.gesetz || !h.start || !h.prefix || !h.jahrgang) throw new Error(`Unvollständiger Handbucheintrag: ${JSON.stringify(h)}`);
+            if (!h.start.startsWith(h.prefix)) throw new Error(`${h.gesetz}: Startadresse liegt nicht unter dem Prefix.`);
           }
           console.log(`${c.handbuecher.length} Handbuchanbindungen formal gültig.`);
           NODE
@@ -86,7 +80,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
@@ -102,9 +95,7 @@ jobs:
           args=(--karte)
           [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           for versuch in 1 2 3; do
-            if node tools/belege.mjs "${args[@]}"; then
-              exit 0
-            fi
+            if node tools/belege.mjs "${args[@]}"; then exit 0; fi
             [ "$versuch" -eq 3 ] && exit 1
             sleep $((versuch * 15))
           done
@@ -118,9 +109,7 @@ jobs:
         run: |
           set -euo pipefail
           max="${INPUT_MAX:-1200}"
-          if [ "$EVENT_NAME" = "push" ]; then
-            max="5000"
-          fi
+          [ "$EVENT_NAME" = "push" ] && max="5000"
           args=(--max "$max")
           [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           echo "Abrufgrenze: $max"
@@ -137,19 +126,15 @@ jobs:
           const register = JSON.parse(fs.readFileSync("data/index.json", "utf8"));
           const normiere = (v) => String(v || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
           const nur = new Set(String(process.env.INPUT_NUR || "").split(",").map(normiere).filter(Boolean));
-          const ausgewaehlt = nur.size
-            ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v))))
-            : register.gesetze;
+          const ausgewaehlt = nur.size ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v)))) : register.gesetze;
           const karten = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
           if (!nur.size && karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}.`);
           for (const name of karten) {
             const karte = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
             if (Object.keys(karte.paragrafen || {}).length < 5) throw new Error(`${name}: Karte ist leer oder unvollständig.`);
           }
-          const fehler = [];
-          let gesamtNormen = 0;
-          let protokolliert = 0;
-          const gesetze = [];
+          const fehler = [], gesetze = [];
+          let gesamtNormen = 0, protokolliert = 0;
           for (const meta of ausgewaehlt) {
             const daten = JSON.parse(fs.readFileSync(`data/${meta.datei}`, "utf8"));
             const pfad = `belege/${meta.datei}`;
@@ -161,12 +146,7 @@ jobs:
             const ohneAbruf = daten.normen.filter((norm) => !belege.normen[String(norm.id)]?.abgerufen);
             const normen = Object.values(belege.normen);
             protokolliert += daten.normen.length - ohneAbruf.length;
-            gesetze.push({
-              abk: daten.abk,
-              normen: daten.normen.length,
-              mitVerwaltung: normen.filter((n) => n.verwaltung?.length).length,
-              mitRechtsprechung: normen.filter((n) => n.rechtsprechung?.length).length,
-            });
+            gesetze.push({ abk: daten.abk, normen: daten.normen.length, mitVerwaltung: normen.filter((n) => n.verwaltung?.length).length, mitRechtsprechung: normen.filter((n) => n.rechtsprechung?.length).length });
             if (fehlende.length) fehler.push(`${meta.abk}: ${fehlende.length} Normeinträge fehlen`);
             if (ohneAbruf.length) fehler.push(`${meta.abk}: ${ohneAbruf.length} Normen ohne Abrufprotokoll`);
           }
@@ -175,20 +155,8 @@ jobs:
           if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
           let bisher = {};
           try { bisher = JSON.parse(fs.readFileSync("reports/belege.json", "utf8")); } catch {}
-          const bericht = {
-            ...bisher,
-            erzeugt: new Date().toISOString(),
-            abrufe: Number(bisher.abrufe || 0),
-            gesetze,
-            gepruefteGesetze: ausgewaehlt.length,
-            gepruefteNormen: gesamtNormen,
-            abrufeProtokolliert: protokolliert,
-          };
-          if (!nur.size) {
-            bericht.vollstaendig = true;
-            bericht.gesetzeGesamt = register.gesetze.length;
-            bericht.normenGesamt = gesamtNormen;
-          }
+          const bericht = { ...bisher, erzeugt: new Date().toISOString(), abrufe: Number(bisher.abrufe || 0), gesetze, gepruefteGesetze: ausgewaehlt.length, gepruefteNormen: gesamtNormen, abrufeProtokolliert: protokolliert };
+          if (!nur.size) Object.assign(bericht, { vollstaendig: true, gesetzeGesamt: register.gesetze.length, normenGesamt: gesamtNormen });
           fs.mkdirSync("reports", { recursive: true });
           fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
           console.log(`${ausgewaehlt.length} Gesetze, ${gesamtNormen} Normen und ${karten.length} Handbuchkarten vollständig geprüft.`);
