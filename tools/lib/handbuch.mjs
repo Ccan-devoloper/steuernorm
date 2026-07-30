@@ -14,7 +14,7 @@
  * Der Erstlauf über rund 1 500 Normen dauert etwa zwanzig Minuten.
  */
 
-const KENNUNG = "steuernorm/3 (+https://github.com/Ccan-devoloper/steuernorm)";
+const KENNUNG = "steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)";
 const PAUSE_MS = 1_000;
 const TIMEOUT_MS = 30_000;
 
@@ -28,12 +28,12 @@ async function hole(url, etag = null) {
   const abbruch = new AbortController();
   const uhr = setTimeout(() => abbruch.abort(), TIMEOUT_MS);
   try {
-    const kopf = { "User-Agent": KENNUNG, Accept: "text/html" };
+    const kopf = { "User-Agent": KENNUNG, Accept: "text/html,application/xhtml+xml" };
     if (etag) kopf["If-None-Match"] = etag;
     const antwort = await fetch(url, { headers: kopf, signal: abbruch.signal, redirect: "follow" });
     if (antwort.status === 304) return { unveraendert: true };
     if (!antwort.ok) return { fehler: `HTTP ${antwort.status}` };
-    return { html: await antwort.text(), etag: antwort.headers.get("etag") };
+    return { html: await antwort.text(), etag: antwort.headers.get("etag"), url: antwort.url || url };
   } catch (fehler) {
     return { fehler: fehler.name === "AbortError" ? "Zeitüberschreitung" : fehler.message };
   } finally {
@@ -43,13 +43,16 @@ async function hole(url, etag = null) {
 
 /* ─────────────────────────── Karte aufbauen ─────────────────────────── */
 
-const LINK = /<a\s[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+// BMF-Seiten verwenden je nach Handbuch doppelte, einfache oder unquotierte href-Werte.
+const LINK = /<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\/a>/gi;
 
 function text(html) {
   return html
     .replace(/<[^>]+>/g, " ")
-    .replace(/&sect;/g, "§").replace(/&nbsp;|&#160;/g, " ")
-    .replace(/&amp;/g, "&").replace(/&auml;/g, "ä").replace(/&ouml;/g, "ö").replace(/&uuml;/g, "ü")
+    .replace(/&sect;|&#167;/gi, "§").replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
+    .replace(/&auml;/gi, "ä").replace(/&ouml;/gi, "ö").replace(/&uuml;/gi, "ü")
+    .replace(/&Auml;/g, "Ä").replace(/&Ouml;/g, "Ö").replace(/&Uuml;/g, "Ü")
     .replace(/\u00ad/g, "")          // weiche Trennzeichen: „An­wen­dungs­be­reich"
     .replace(/\s+/g, " ")
     .trim();
@@ -80,12 +83,23 @@ export function vorschaltParagrafen(beschriftung) {
 }
 
 function basisAus(html, seitenUrl) {
-  const m = /<base\s[^>]*href=["']([^"']+)["']/i.exec(html);
-  try { return m ? new URL(m[1], seitenUrl).toString() : seitenUrl; } catch { return seitenUrl; }
+  const m = /<base\b[^>]*\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i.exec(html);
+  const href = m ? (m[1] || m[2] || m[3]) : null;
+  try { return href ? new URL(href.replace(/&amp;/gi, "&"), seitenUrl).toString() : seitenUrl; } catch { return seitenUrl; }
 }
 
 function absolut(basis, href) {
-  try { return new URL(href, basis).toString(); } catch { return null; }
+  const sauber = String(href || "").replace(/&amp;/gi, "&").trim();
+  if (!sauber || sauber.startsWith("#") || /^(?:javascript|mailto|tel):/i.test(sauber)) return null;
+  try {
+    const basisUrl = new URL(basis);
+    // Manche BMF-Navigationen liefern „ao/2025/..." statt „/ao/2025/...".
+    // Diese Werte sind vom Hostwurzelverzeichnis aus gemeint, nicht relativ zur aktuellen Seite.
+    if (/^(?:ao|esth|usth|ksth|gewsth|erbsth|grsth)\/(?:\d{4}|\d{4}-\d{4})\//i.test(sauber)) {
+      return new URL(`/${sauber}`, basisUrl.origin).toString();
+    }
+    return new URL(sauber, basisUrl).toString();
+  } catch { return null; }
 }
 
 function istInterneHtmlSeite(url, prefix) {
@@ -113,19 +127,20 @@ export async function karteBauen(handbuch, melde = () => {}) {
     if (gesehen.has(url)) continue;
     gesehen.add(url);
 
-    const { html, fehler } = await hole(url);
+    const { html, fehler, url: endUrl } = await hole(url);
     if (fehler) { melde(`  ⚠ ${url}: ${fehler}`); continue; }
     seiten++;
     if (seiten % 20 === 0) melde(`  ${seiten} Verzeichnisseiten, ${Object.keys(karte).length} Paragrafen`);
 
-    const linkBasis = basisAus(html, url);
+    const linkBasis = basisAus(html, endUrl || url);
     LINK.lastIndex = 0;
     let treffer;
     while ((treffer = LINK.exec(html)) !== null) {
-      const ziel = absolut(linkBasis, treffer[1]);
+      const href = treffer[1] || treffer[2] || treffer[3];
+      const ziel = absolut(linkBasis, href);
       if (!istInterneHtmlSeite(ziel, handbuch.prefix)) continue;
       const sauber = ziel.split(/[?#]/)[0];
-      const beschriftung = treffer[2];
+      const beschriftung = treffer[4];
 
       const nr = paragrafAus(beschriftung);
       if (nr) {
