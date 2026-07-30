@@ -13,11 +13,11 @@ on:
       - "tools/lib/**"
       - ".github/workflows/annotationen.yml"
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - "index.html"
       - "belege/**"
+      - "annotations/**"
       - "config/handbuecher.json"
       - "tools/annotieren.mjs"
       - "tools/belege.mjs"
@@ -32,8 +32,7 @@ on:
     workflows:
       - "Gesetzestexte täglich aktualisieren"
       - "Belege sammeln"
-    types:
-      - completed
+    types: [completed]
   workflow_dispatch:
     inputs:
       nur:
@@ -56,84 +55,63 @@ permissions:
 
 concurrency:
   group: annotationen-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   smoke-test:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    permissions:
-      contents: read
+    permissions: { contents: read }
     steps:
-      - name: Repository auschecken
-        uses: actions/checkout@v5
-
-      - name: Node.js einrichten
-        uses: actions/setup-node@v5
-        with:
-          node-version: "22"
-
-      - name: JavaScript und Konfiguration prüfen
-        shell: bash
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+      - name: V4-Pipeline deterministisch prüfen
         run: |
           set -euo pipefail
           find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
-          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json", "utf8"))'
-          node -e 'JSON.parse(require("fs").readFileSync("package.json", "utf8"))'
-
-      - name: SolzG deterministisch mit der v4-Pipeline erzeugen
-        run: node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
-
-      - name: SolzG streng und konsistent prüfen
-        shell: bash
-        run: |
-          set -euo pipefail
+          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json","utf8"))'
+          node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
           node tools/pruefen.mjs --nur solzg --streng
           node tools/konsistenz.mjs --nur solzg
 
+  push-check:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@v5
+        with: { ref: main }
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+      - name: Veröffentlichten Bestand prüfen
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+          if [ -f reports/belege-annotation.json ]; then
+            node -e 'const b=require("./reports/belege-annotation.json");if(!b.vollstaendig||b.handbuecherMitBelegen!==8)throw new Error("Belegeinbettung unvollständig")'
+          fi
+
   annotieren:
-    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    if: >-
+      github.event_name != 'pull_request' &&
+      github.event_name != 'push' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 330
     steps:
-      - name: Aktuellen Hauptstand auschecken
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
-
-      - name: Node.js einrichten
-        uses: actions/setup-node@v5
-        with:
-          node-version: "22"
-
-      - name: KI am SolzG aktivieren und nachweisen
-        if: github.event_name == 'push' && inputs.ohne_ki != true
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          KI_MODELLE: openai/gpt-4.1-mini,openai/gpt-4o-mini
-          MAX_MODELLAUFRUFE: "120"
-          INPUT_LAEUFE: ${{ inputs.laeufe }}
-        run: |
-          set -euo pipefail
-          node tools/annotieren.mjs --nur solzg --laeufe "${INPUT_LAEUFE:-3}" --aufwerten
-          node - <<'NODE'
-          const fs = require("fs");
-          const datei = JSON.parse(fs.readFileSync("annotations/solzg.json", "utf8"));
-          if (!String(datei.verfahren || "").includes("mehrfachlauf") || Number(datei.laeufe || 0) < 1) {
-            throw new Error("SolzG blieb auf der Syntaxstufe; Mehrfachmodelllauf wurde nicht wirksam.");
-          }
-          const normen = Object.values(datei.normen || {});
-          if (!normen.some((n) => String(n.verfahren || "").includes("mehrfachlauf"))) {
-            throw new Error("Keine SolzG-Norm weist den Mehrfachmodelllauf nach.");
-          }
-          console.log(`KI-Aktivierung bestätigt: ${datei.verfahren}, ${datei.laeufe} Läufe.`);
-          NODE
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
 
       - name: Annotationen erzeugen oder aufwerten
-        shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           KI_MODELLE: openai/gpt-4.1-mini,openai/gpt-4o-mini
@@ -144,9 +122,7 @@ jobs:
         run: |
           set -euo pipefail
           args=(--laeufe "${INPUT_LAEUFE:-3}")
-          if [ -n "${INPUT_NUR:-}" ]; then
-            args+=(--nur "$INPUT_NUR")
-          fi
+          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           if [ "${INPUT_OHNE_KI:-false}" = "true" ]; then
             args+=(--ohne-ki)
           else
@@ -154,63 +130,32 @@ jobs:
           fi
           node tools/annotieren.mjs "${args[@]}"
 
-      - name: Struktur streng prüfen
-        shell: bash
+      - name: KI-Wirkung und Struktur nachweisen
         run: |
           set -euo pipefail
+          if [ "${{ inputs.ohne_ki }}" != "true" ]; then
+            node - <<'NODE'
+          const a=require('./annotations/solzg.json');
+          if(!String(a.verfahren||'').includes('mehrfachlauf')||Number(a.laeufe||0)<1)throw new Error('SolzG-Mehrfachlauf fehlt');
+          if(!Object.values(a.normen||{}).some(n=>String(n.verfahren||'').includes('mehrfachlauf')))throw new Error('Keine SolzG-Norm mit Mehrfachlauf');
+          NODE
+          fi
           node tools/pruefen.mjs --streng | tee pruefbericht-ki.txt
           node tools/konsistenz.mjs --schreiben
 
       - name: Qualität messen
         continue-on-error: true
-        shell: bash
         run: |
-          set -euo pipefail
           mkdir -p reports
-          if [ -d eval/gold ]; then
-            node tools/eval.mjs | tee reports/eval.txt
-          else
-            echo "Kein Goldstandard vorhanden — Messung übersprungen." | tee reports/eval.txt
-          fi
+          if [ -d eval/gold ]; then node tools/eval.mjs | tee reports/eval.txt; else echo "Kein Goldstandard vorhanden — Messung übersprungen." | tee reports/eval.txt; fi
 
-      - name: Änderungen festschreiben
-        shell: bash
+      - name: Änderungen konfliktfest festschreiben
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A annotations reports pruefbericht-ki.txt
-          if [ -d .fortschritt ]; then
-            git add -A .fortschritt
-          fi
-          if git diff --cached --quiet; then
-            echo "Keine Änderungen."
-          else
-            git commit -m "Annotationen und Belegkonsens aktualisiert ($(date -u +%Y-%m-%d))"
-            git pull --rebase --autostash origin main
-            git push origin HEAD:main
-          fi
-
-      - name: Zusammenfassung
-        if: always()
-        shell: bash
-        run: |
-          {
-            echo "## Annotationslauf"
-            echo ""
-            if [ -f reports/annotation.json ]; then
-              node -e '
-                const b = require("./reports/annotation.json");
-                console.log(`Verfahren: ${b.modelle.join(", ")} · ${b.laeufe} Läufe · ${b.modellaufrufe} Modellaufrufe`);
-                console.log("");
-                console.log("| Gesetz | Normen | neu | unverändert | markierbar | abgelehnt |");
-                console.log("|---|---:|---:|---:|---:|---:|");
-                for (const g of b.gesetze) console.log(`| ${g.abk} | ${g.normen} | ${g.bearbeitet} | ${g.uebernommen} | ${g.markierbar} | ${g.abgelehnt} |`);
-                if (b.abgebrochen) console.log(`\n> Unterbrochen: ${b.abgebrochen} — Fortsetzung im nächsten Lauf.`);
-              '
-            fi
-            echo ""
-            echo '```'
-            cat reports/eval.txt 2>/dev/null || echo "keine Messung"
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
+          git add -A annotations reports pruefbericht-ki.txt .fortschritt 2>/dev/null || true
+          if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+          git commit -m "Annotationen und Belegkonsens aktualisiert ($(date -u +%Y-%m-%d))"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
