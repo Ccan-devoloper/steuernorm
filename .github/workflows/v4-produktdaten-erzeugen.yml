@@ -38,6 +38,26 @@ jobs:
           node tools/pruefen.mjs --streng
           node tools/konsistenz.mjs
 
+      - name: BMF-Navigation begrenzt diagnostizieren
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const url = 'https://ao.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html';
+          const r = await fetch(url, {headers:{'User-Agent':'steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)','Accept':'text/html,application/xhtml+xml'}, redirect:'follow'});
+          const html = await r.text();
+          console.log(`Status ${r.status}; URL ${r.url}; ${html.length} Zeichen; <a: ${(html.match(/<a\b/gi)||[]).length}`);
+          const base = /<base\b[^>]*>/i.exec(html)?.[0] || 'kein <base>';
+          console.log(`Base: ${base.slice(0,300)}`);
+          const links = [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\/a>/gi)].slice(0,20);
+          console.log(`Erkannte href-Links: ${links.length}`);
+          for (const m of links) {
+            const href = m[1] || m[2] || m[3];
+            const label = m[4].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+            console.log(JSON.stringify({href, label:label.slice(0,100)}));
+          }
+          NODE
+
       - name: Amtliche Handbuchkarten erzeugen
         shell: bash
         env:
