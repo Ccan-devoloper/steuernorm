@@ -142,7 +142,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bf9ba9942f6721a92612e76cd6583b5da68befdfab2c978584b9414d0ee1c71",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.793Z"
+      "aktualisiert": "2026-07-29T12:52:37.793Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.1 Heberecht, Steuerberechtigung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.2 Verwaltung der Grundsteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.3 Örtliche Zuständigkeit für die Festsetzung und Zerlegung des Grundsteuermessbetrags",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.4 Örtliche Zuständigkeit der Finanzämter für die Festsetzung und Erhebung der Grundsteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.5 Bekanntgabe des Grundsteuermessbescheids an den Steuerpflichtigen und Mitteilung des Grundsteuermessbetrags an die hebeberechtigte Gemeinde",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 1.6 Meldewesen und Mitteilungspflichten der Behörden",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "60573820398d48a347f7005bf7e364ced636fd69f3bfbdb28cb7a98a00063d59",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "2": {
       "typ": "aussage",
@@ -329,7 +375,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "37c6379c0d4e6b6d1bfe5af833e583f52122f097b18fec1f95b3aba8a034d647",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.794Z"
+      "aktualisiert": "2026-07-29T12:52:37.794Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1048,7 +1097,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf7476b2978f26c237cc3b6ff6c3f36c37e9c99383f482a4dcbe8445fe661b3",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.795Z"
+      "aktualisiert": "2026-07-29T12:52:37.795Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.1 Steuerbefreiungen für Grundbesitz bestimmter Rechtsträger; allgemeine Voraussetzungen für die Steuerbefreiungen nach § 3 GrStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.2 Juristische Personen des öffentlichen Rechts",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.3 Öffentlicher Dienst oder Gebrauch",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.4 Hoheitliche Tätigkeit",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.5 Bestimmungsgemäßer Gebrauch durch die Allgemeinheit",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 3.6 Grundbesitz des Bundeseisenbahnvermögens",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "fc4ab4e3e942de09303b1a74ecaf338f3e2713e43e006201e4909849016894d2",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1425,7 +1520,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e9c7b2a9bddb1a3b709d0bcfcab09ba1ebca33a4897a1a83b179d21ad81a1a7a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.796Z"
+      "aktualisiert": "2026-07-29T12:52:37.796Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.1 Allgemeine Voraussetzungen für die sonstigen Steuerbefreiungen nach § 4 GrStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.2 Dem Gottesdienst gewidmeter Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.3 Bestattungsplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.4 Dem öffentlichen Verkehr dienender Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.5 Verkehrsflughäfen und Verkehrslandeplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 4.6 Fließende Gewässer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "9c6a095b3a4de82c2699ddfae3fac928fbf30c60130c239eb52ebf0a7226283d",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "5": {
       "typ": "gemischt",
@@ -1728,7 +1869,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6cbb4367adf752036679227aa5934b7afffc3c216e8f307ad56864a819866af7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.797Z"
+      "aktualisiert": "2026-07-29T12:52:37.797Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.1 Zu Wohnzwecken genutzter Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.2 Gemeinschaftsunterkünfte der Bundeswehr und andere",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.3 Wohnräume in Heimen und Ausbildungsstätten",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.4 Wohnraum, der unmittelbar steuerbegünstigten Zwecken dient",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.5 Bereitschaftsräume",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 5.6 Steuerpflicht für Wohnungen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "3629fafa9d5c2ae7dbd68473782bf8cf5bada6cc2db9f186a40fb0becec99df9",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "6": {
       "typ": "gemischt",
@@ -1835,7 +2022,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "264157584796d9e3617c61b5bfc56512893d31be536ad46156323d323a115b6f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.797Z"
+      "aktualisiert": "2026-07-29T12:52:37.797Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "7": {
       "typ": "konditional",
@@ -1925,7 +2115,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdcd579bbb462e1dc74e74078d00ab202662f020268bb0c37a75d9e306a059ea",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.797Z"
+      "aktualisiert": "2026-07-29T12:52:37.797Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "8": {
       "typ": "konditional",
@@ -2063,7 +2256,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa9fbc6f2f77539a0cb05f1ad49b2bb1066cc876e6f379607a0d535ac4d06f82",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.797Z"
+      "aktualisiert": "2026-07-29T12:52:37.797Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "9": {
       "typ": "aussage",
@@ -2152,7 +2348,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "caf0e52999418e76d7dec6e8947a30ebeaaf28e4e39db52e054e5ee23cd94773",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.797Z"
+      "aktualisiert": "2026-07-29T12:52:37.797Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "10": {
       "typ": "gemischt",
@@ -2291,7 +2490,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16a76da4021ee34c3646a011ff16b6503cae2fb6e477ad133f6eeddb01eb532c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.798Z"
+      "aktualisiert": "2026-07-29T12:52:37.798Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "11": {
       "typ": "gemischt",
@@ -2427,7 +2629,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b4da73c3f07132a591bd520c7fe9766d3c368965343036b5e20443a5699b36a0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.798Z"
+      "aktualisiert": "2026-07-29T12:52:37.798Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "12": {
       "typ": "aussage",
@@ -2488,7 +2693,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae83092d9e669f83a9557af0ffb3606f1aa239cdaeada08bb00e1c608579bdd1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.798Z"
+      "aktualisiert": "2026-07-29T12:52:37.798Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "13": {
       "typ": "gemischt",
@@ -2607,7 +2815,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fce85cded2154ad807e1d74d97ecc57372013c4a132184f72f45f9704592658a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.798Z"
+      "aktualisiert": "2026-07-29T12:52:37.798Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "14": {
       "typ": "tarif",
@@ -2696,7 +2907,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b558c2ddabfa10afb5370acac3448475de42b3f9e1193ed5609ff0c517d5db2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.798Z"
+      "aktualisiert": "2026-07-29T12:52:37.798Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "15": {
       "typ": "gemischt",
@@ -3428,7 +3642,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ee5866c36a2de6b129d7d54b198bd9da45abe3e919a0eab680d1663d0dc16567",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.799Z"
+      "aktualisiert": "2026-07-29T12:52:37.799Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.1 Steuermesszahl für Grundstücke; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.2 Ermäßigung für geförderten Wohnraum (§ 15 Absatz 2 und 3 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.3 Ermäßigung für Wohnungsbaugesellschaften, Genossenschaften oder Vereine (§ 15 Absatz 4 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.4 Ermäßigung für Baudenkmäler (§ 15 Absatz 5 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.5 Teilweise Erfüllung eines Ermäßigungstatbestandes",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 15.6 Zeitweise Erfüllung eines Ermäßigungstatbestandes",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "2afaed0bb2331ec63c547835fbdf2c61e0d80744f4b7bc6ff1ffa032b9cd970c",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "16": {
       "typ": "gemischt",
@@ -3711,7 +3971,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4251053215e47cd9ab4c45a2687344be9d603dea5a67ade028dba7189f30af8f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.800Z"
+      "aktualisiert": "2026-07-29T12:52:37.800Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "17": {
       "typ": "gemischt",
@@ -4131,7 +4394,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6a6584441ea7ed057a3aadc93fbc4f36593d2273927667d96650087b6b1769c8",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.801Z"
+      "aktualisiert": "2026-07-29T12:52:37.801Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "18": {
       "typ": "gemischt",
@@ -4445,7 +4711,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e53441336dc7d71fd10d96c626cd9e1a110504748657b722d318f14ab015bbc1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.801Z"
+      "aktualisiert": "2026-07-29T12:52:37.801Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "19": {
       "typ": "gemischt",
@@ -4740,7 +5009,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf5a48afdc0ea8253c9d03d95b00c268938a894943b9bb14075fc130c7e09e69",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.801Z"
+      "aktualisiert": "2026-07-29T12:52:37.801Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "20": {
       "typ": "gemischt",
@@ -5008,7 +5280,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9684318000b78577cb8170673df1ba182678a68572ea41178c2537335218bf9b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.802Z"
+      "aktualisiert": "2026-07-29T12:52:37.802Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "21": {
       "typ": "gemischt",
@@ -5147,7 +5422,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "594182bacc9c66f39b00abf575994fe357f2b56bc20c12d398fd5bd4eb4c2149",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.802Z"
+      "aktualisiert": "2026-07-29T12:52:37.802Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "22": {
       "typ": "aussage",
@@ -5420,7 +5698,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9c16d77dec30838a13d83447e40db66f953be0e0ec6a36f34791c3b189686ab",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.803Z"
+      "aktualisiert": "2026-07-29T12:52:37.803Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "23": {
       "typ": "gemischt",
@@ -5519,7 +5800,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79172c45be3a65d36bbf30d7ed1e174fa31e19a0b6590e4c302831ba1fadf123",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.804Z"
+      "aktualisiert": "2026-07-29T12:52:37.804Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "24": {
       "typ": "gemischt",
@@ -5667,7 +5951,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "51066c3f20699499aaa67b46d2b5cea88be66d6fff6a2254a63537ffb1d5a25f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.805Z"
+      "aktualisiert": "2026-07-29T12:52:37.805Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "25": {
       "typ": "gemischt",
@@ -6351,7 +6638,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c887609139a05e170d87e1a33e3faa61bd37e0bf97fec14f711d20cb8dcd998",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.806Z"
+      "aktualisiert": "2026-07-29T12:52:37.806Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "26": {
       "typ": "aussage",
@@ -6440,7 +6730,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a80903e2e57d1b8b7ef3bc5d4cf3411a59f5df6d6b38906544e9521955caa842",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.809Z"
+      "aktualisiert": "2026-07-29T12:52:37.809Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "27": {
       "typ": "gemischt",
@@ -6666,7 +6959,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "897f0904b6d893b4c6fe51a47a7f44fe77eac7c82e4e0ff336f541a06228b32c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.809Z"
+      "aktualisiert": "2026-07-29T12:52:37.809Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "28": {
       "typ": "gemischt",
@@ -6970,7 +7266,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a69fbd6d3d8bacdc28a6b903036e5ce078ab530759ae021b29e54a9b1ef1359",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.810Z"
+      "aktualisiert": "2026-07-29T12:52:37.810Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "29": {
       "typ": "aussage",
@@ -7030,7 +7329,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2a150f54ecd134be88554e94f7b97de8e84949f3edaf46383a5ce41e2d574ddd",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.810Z"
+      "aktualisiert": "2026-07-29T12:52:37.810Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "30": {
       "typ": "gemischt",
@@ -7226,7 +7528,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f65ef67bbaaf69800803af67180f401ebae71c33e2a226582c9c6f865da06597",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.810Z"
+      "aktualisiert": "2026-07-29T12:52:37.810Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "31": {
       "typ": "konditional",
@@ -7315,7 +7620,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c7eee80c34b15b7377e7b80282888d97bf542b200b8406064ea389d40037da6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.810Z"
+      "aktualisiert": "2026-07-29T12:52:37.810Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "32": {
       "typ": "gemischt",
@@ -7548,7 +7856,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "60da591d3e4e2a025f76728efd9f58c479b7a7adb23fa413220ef4c5ac3977c6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.811Z"
+      "aktualisiert": "2026-07-29T12:52:37.811Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.1 Erlass für Grundbesitz, dessen Erhaltung im öffentlichen Interesse liegt",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.2 Erlass für öffentliche Grünanlagen, Spiel- und Sportplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.3 Erlass für Grundbesitz, in dessen Gebäuden Gegenstände von wissenschaftlicher, künstlerischer oder geschichtlicher Bedeutung untergebracht sind",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 32.3",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "77602a62ad76486453d4c99c35102ab7941ea8fd0f56dcf68eff2149d4af6971",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "33": {
       "typ": "gemischt",
@@ -7841,7 +8195,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a3359e18fd567cb4534945a5ad05cc32430fcb60cede87110323f24e622837fc",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.811Z"
+      "aktualisiert": "2026-07-29T12:52:37.811Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "34": {
       "typ": "gemischt",
@@ -8322,7 +8679,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c46b652bd20f5cf969b1f54ead4c919436432865a9c4d4ac8ee3dfcdb5ca8d3",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.812Z"
+      "aktualisiert": "2026-07-29T12:52:37.812Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.1 Erlass wegen wesentlicher Ertragsminderung bei bebauten Grundstücken; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.2 Vertretenmüssen der Rohertragsminderung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.3 Berechnung der zu erlassenden Grundsteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.1 — 1 1 Der Erlass der Grundsteuer wegen wesentlicher Rohertragsminderung bei bebauten Grundstücken setzt voraus, dass",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEGrStG 2025 (2022/2025)",
+          "fundstelle": "A 34.3",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-34/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "b2151aba3956a7a537b9723675f0d349681bf9c2fa8774890225a9c11d7e285d",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "35": {
       "typ": "gemischt",
@@ -8577,7 +8980,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b3174e49e56707c47dfca6873090d51cb4e819ca5999b2d9d81ef0c1a2e900fa",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.812Z"
+      "aktualisiert": "2026-07-29T12:52:37.812Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "36": {
       "typ": "gemischt",
@@ -8901,7 +9307,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "099113b0fceabc36aaafdfa704f5e42ef9c46d215647a487e128595ba313a98a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.813Z"
+      "aktualisiert": "2026-07-29T12:52:37.813Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "37": {
       "typ": "gemischt",
@@ -9029,7 +9438,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6010fb8f794ad90a4535deb883206507ba17b36c72bcf9f730ac78487d875721",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.813Z"
+      "aktualisiert": "2026-07-29T12:52:37.813Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "38": {
       "typ": "aussage",
@@ -9089,7 +9501,12 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "65388219925d862aa54454120d49ec0413c06e22da7d72a1790c607d61674a95",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:37.813Z"
+      "aktualisiert": "2026-07-29T12:52:37.813Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     }
-  }
+  },
+  "belegstand": "2026-07-30T11:46:13.355Z",
+  "belege_eingebettet": true
 }

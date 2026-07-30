@@ -1,0 +1,109 @@
+{
+  "erzeugt": "2026-07-30T11:53:01.409Z",
+  "gesetze": 14,
+  "normen": 1537,
+  "handbuecherMitBelegen": 8,
+  "normenMitBelegen": 441,
+  "fundstellen": 1005,
+  "vollstaendig": true,
+  "bilanz": [
+    {
+      "abk": "AO",
+      "normen": 503,
+      "normenMitBelegen": 178,
+      "fundstellen": 209,
+      "handbuch": true
+    },
+    {
+      "abk": "BewG",
+      "normen": 204,
+      "normenMitBelegen": 19,
+      "fundstellen": 104,
+      "handbuch": true
+    },
+    {
+      "abk": "EStG",
+      "normen": 247,
+      "normenMitBelegen": 116,
+      "fundstellen": 261,
+      "handbuch": true
+    },
+    {
+      "abk": "KStG",
+      "normen": 48,
+      "normenMitBelegen": 39,
+      "fundstellen": 86,
+      "handbuch": true
+    },
+    {
+      "abk": "UStG",
+      "normen": 93,
+      "normenMitBelegen": 24,
+      "fundstellen": 112,
+      "handbuch": true
+    },
+    {
+      "abk": "GewStG",
+      "normen": 41,
+      "normenMitBelegen": 23,
+      "fundstellen": 79,
+      "handbuch": true
+    },
+    {
+      "abk": "ErbStG",
+      "normen": 47,
+      "normenMitBelegen": 35,
+      "fundstellen": 112,
+      "handbuch": true
+    },
+    {
+      "abk": "GrStG",
+      "normen": 38,
+      "normenMitBelegen": 7,
+      "fundstellen": 42,
+      "handbuch": true
+    },
+    {
+      "abk": "FGO",
+      "normen": 173,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    },
+    {
+      "abk": "GrEStG",
+      "normen": 28,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    },
+    {
+      "abk": "UmwStG",
+      "normen": 28,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    },
+    {
+      "abk": "AStG",
+      "normen": 23,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    },
+    {
+      "abk": "SolzG",
+      "normen": 6,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    },
+    {
+      "abk": "InvStG",
+      "normen": 58,
+      "normenMitBelegen": 0,
+      "fundstellen": 0,
+      "handbuch": false
+    }
+  ]
+}

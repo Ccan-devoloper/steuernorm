@@ -549,7 +549,9 @@
       "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:20:43.935Z"
+      "aktualisiert": "2026-07-30T09:20:43.935Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "2": {
       "typ": "gemischt",
@@ -717,7 +719,9 @@
       "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 25 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedadfc31d59f0fd0989ac390758b6081daf85482b46b061e4e6ef1a94d281ba",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:21:27.667Z"
+      "aktualisiert": "2026-07-30T09:21:27.667Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1924,7 +1928,9 @@
       "hinweis": "Aus 2 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 93 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "12161727c2ccb1e5213cdd02e6b2033958cba2092a019be75410e30bbbda4e4b",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:29:20.958Z"
+      "aktualisiert": "2026-07-30T09:29:20.958Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2189,7 +2195,9 @@
       "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 38 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:30:10.449Z"
+      "aktualisiert": "2026-07-30T09:30:10.449Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "5": {
       "typ": "konditional",
@@ -2254,7 +2262,9 @@
       "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:30:23.121Z"
+      "aktualisiert": "2026-07-30T09:30:23.121Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "6": {
       "typ": "anwendung",
@@ -2607,7 +2617,11 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "a8fe08f695a58fccada782cdf000e1ed2556620c2bcab652ef9e71960ed0ae53",
       "format": 3,
-      "aktualisiert": "2026-07-30T09:35:32.531Z"
+      "aktualisiert": "2026-07-30T09:35:32.531Z",
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     }
-  }
+  },
+  "belegstand": "2026-07-30T11:03:19.451Z",
+  "belege_eingebettet": true
 }

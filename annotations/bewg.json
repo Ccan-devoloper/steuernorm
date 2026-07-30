@@ -177,7 +177,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "855a965c344f3ea938965878615cb4c2429fbdcee405c7aa9688a472cf1a3254",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.556Z"
+      "aktualisiert": "2026-07-29T12:52:36.556Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.1 Heberecht, Steuerberechtigung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.2 Verwaltung der Grundsteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.3 Örtliche Zuständigkeit für die Festsetzung und Zerlegung des Grundsteuermessbetrags",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.4 Örtliche Zuständigkeit der Finanzämter für die Festsetzung und Erhebung der Grundsteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.5 Bekanntgabe des Grundsteuermessbescheids an den Steuerpflichtigen und Mitteilung des Grundsteuermessbetrags an die hebeberechtigte Gemeinde",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 1.6 Meldewesen und Mitteilungspflichten der Behörden",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-1/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "f5fbded8affa95dd7442d5422fe2292a164209787c2afa636cd625e7804f34d0",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "2": {
       "typ": "gemischt",
@@ -452,7 +498,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4aedbdf58d58ccd5b4af4b7ef9db613f47bbbdb3deb8fc6627cd1e9141443821",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.557Z"
+      "aktualisiert": "2026-07-29T12:52:36.557Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "3": {
       "typ": "konditional",
@@ -598,7 +647,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f2297c5870ff0865f391cc592e97180b46efcfe2afeab7810ac473ff06d066e5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.557Z"
+      "aktualisiert": "2026-07-29T12:52:36.557Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.1 Steuerbefreiungen für Grundbesitz bestimmter Rechtsträger; allgemeine Voraussetzungen für die Steuerbefreiungen nach § 3 GrStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.2 Juristische Personen des öffentlichen Rechts",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.3 Öffentlicher Dienst oder Gebrauch",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.4 Hoheitliche Tätigkeit",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.5 Bestimmungsgemäßer Gebrauch durch die Allgemeinheit",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 3.6 Grundbesitz des Bundeseisenbahnvermögens",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-3/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "081bbf0d79d0a41143d4bf6ac39726668fb2883d991bfea0e59dcc4b8592d282",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "4": {
       "typ": "konditional",
@@ -707,7 +802,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30bffe92e87fc108c30fe7952076aeee43bfcc978b0b38271438474ae3b45e6e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.557Z"
+      "aktualisiert": "2026-07-29T12:52:36.557Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.1 Allgemeine Voraussetzungen für die sonstigen Steuerbefreiungen nach § 4 GrStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.2 Dem Gottesdienst gewidmeter Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.3 Bestattungsplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.4 Dem öffentlichen Verkehr dienender Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.5 Verkehrsflughäfen und Verkehrslandeplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 4.6 Fließende Gewässer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-4/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "91378cf9545ca140f4c0d8dad69bba53c37e1e92daaa5f37e1c5d550cc6be632",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "5": {
       "typ": "gemischt",
@@ -906,7 +1047,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "aad9a739a46a3d972d6e52381a1d7ae31e46d8522406ef96013ffe3e3bc6fb5c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.557Z"
+      "aktualisiert": "2026-07-29T12:52:36.557Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.1 Zu Wohnzwecken genutzter Grundbesitz",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.2 Gemeinschaftsunterkünfte der Bundeswehr und andere",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.3 Wohnräume in Heimen und Ausbildungsstätten",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.4 Wohnraum, der unmittelbar steuerbegünstigten Zwecken dient",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.5 Bereitschaftsräume",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 5.6 Steuerpflicht für Wohnungen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-I-Steuerpflicht/Paragraf-5/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "f6eb07ef2ae19f6ff54b34ccb5f8629970e9d2ed113776763cac5c7b7044ffcd",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "6": {
       "typ": "gemischt",
@@ -1045,7 +1232,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d48b34dcd8019a5bd3c9c6a5921f57976baca26b85fddfe9dcd82ab84d60297d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.558Z"
+      "aktualisiert": "2026-07-29T12:52:36.558Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "7": {
       "typ": "konditional",
@@ -1211,7 +1401,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c63e566fa2a3d248375670c45b4b0eab6a3f1dd1b1bccb0cd3f109864a5035d0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.558Z"
+      "aktualisiert": "2026-07-29T12:52:36.558Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "8": {
       "typ": "konditional",
@@ -1272,7 +1465,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7b93594f1eaafa2213653ce1380947aecbdd2f854af322d250c21765c10e0ee5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.558Z"
+      "aktualisiert": "2026-07-29T12:52:36.558Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "9": {
       "typ": "gemischt",
@@ -1607,7 +1803,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e6b4b4df770dfe782dac394e885dbe011400a4ef8797a48b56301024866b70e6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.558Z"
+      "aktualisiert": "2026-07-29T12:52:36.558Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "10": {
       "typ": "gemischt",
@@ -1795,7 +1994,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a1537a6ff13140e9f66e185d85bb10e8d18b5061043c3125c8adc80538d20041",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.559Z"
+      "aktualisiert": "2026-07-29T12:52:36.559Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "11": {
       "typ": "gemischt",
@@ -2246,7 +2448,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b0313f8fb44faac4b9e2f0e56a4ba54e853f8942816d9050c0485601f8f8f6a4",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.560Z"
+      "aktualisiert": "2026-07-29T12:52:36.560Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "12": {
       "typ": "gemischt",
@@ -2681,7 +2886,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "968188bb76556be84505536314ee80dd9fca47278b83aafa95f2a9ff4e113800",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.560Z"
+      "aktualisiert": "2026-07-29T12:52:36.560Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "13": {
       "typ": "gemischt",
@@ -2916,7 +3124,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "aa343c64fabc966407e99637ee537b9cc5a8c95adcdbc4f951e65a4f994d81ac",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.561Z"
+      "aktualisiert": "2026-07-29T12:52:36.561Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "14": {
       "typ": "gemischt",
@@ -3566,7 +3777,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a6dd79c66c9d07c70b2ae5597cb88b6edc9e2a229ecdc3a713106dd7b775abbc",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.562Z"
+      "aktualisiert": "2026-07-29T12:52:36.562Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "15": {
       "typ": "gemischt",
@@ -3714,7 +3928,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1db8c7c1324b043496713535de6a957b7d4252fa92569e1115a8aef4d7d94e35",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.562Z"
+      "aktualisiert": "2026-07-29T12:52:36.562Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.1 Steuermesszahl für Grundstücke; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.2 Ermäßigung für geförderten Wohnraum (§ 15 Absatz 2 und 3 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.3 Ermäßigung für Wohnungsbaugesellschaften, Genossenschaften oder Vereine (§ 15 Absatz 4 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.4 Ermäßigung für Baudenkmäler (§ 15 Absatz 5 GrStG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.5 Teilweise Erfüllung eines Ermäßigungstatbestandes",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 15.6 Zeitweise Erfüllung eines Ermäßigungstatbestandes",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-II-Bemessung-der-Grundsteuer/Paragraf-15/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "3cb61e6614fb1f15b56c748b0a3e6eb94eb40c8f88b98acc892ca5fea738b9ac",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "16": {
       "typ": "konditional",
@@ -3823,7 +4083,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6dc0c466c777ea641ae7eb3911e9603483fe92aa0174cc789b0781c799849d40",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "17": {
       "typ": "gemischt",
@@ -3962,7 +4225,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "394987e03424e4b998d50e69f3d65c26d4acc5dd59d6ce922f2ab8529ed63097",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "18": {
       "typ": "aussage",
@@ -4110,7 +4376,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5284feb0db940cc0f6ceed9ef45d6ca9ebdb767504e9f0ad942c7e938367d9a1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "19": {
       "typ": "gemischt",
@@ -4129,7 +4398,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "20": {
       "typ": "konditional",
@@ -4246,7 +4518,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "80b90c6f02bc1e5c8259c6b497452be8b37895bbddd116e7004aa2ee3d07fd90",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "30": {
       "typ": "rechenregel",
@@ -4335,7 +4610,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "135e36d7934a44475954676a9bc64178c3739017469657c759584b132dc7c721",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "31": {
       "typ": "gemischt",
@@ -4572,7 +4850,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "90d07d6acaa35bf2d9274883be0b7a0ab745ee5aa07eaa63dd4213549c9c207d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.564Z"
+      "aktualisiert": "2026-07-29T12:52:36.564Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "32": {
       "typ": "gemischt",
@@ -4591,7 +4872,53 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.564Z"
+      "aktualisiert": "2026-07-29T12:52:36.564Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.1 Erlass für Grundbesitz, dessen Erhaltung im öffentlichen Interesse liegt",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.2 Erlass für öffentliche Grünanlagen, Spiel- und Sportplätze",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.3 Erlass für Grundbesitz, in dessen Gebäuden Gegenstände von wissenschaftlicher, künstlerischer oder geschichtlicher Bedeutung untergebracht sind",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 32.3",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/Abschnitt-IV-Erlass-der-Grundsteuer/Paragraf-32/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "0188dfdd3cd61a7f020432a0d4eafd83a18c912d1b7d5031d18a43a1328b5c3c",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "49": {
       "typ": "gemischt",
@@ -4610,7 +4937,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "62": {
       "typ": "gemischt",
@@ -4629,7 +4959,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "70": {
       "typ": "gemischt",
@@ -4854,7 +5187,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bbdd4eb161246cf9fda9ecc058fa267fc957864aeb160ddf014723955551162c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "71": {
       "typ": "gemischt",
@@ -4873,7 +5209,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "95": {
       "typ": "gemischt",
@@ -5118,7 +5457,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "993090eb5f76e5b31c3d97b173683efcd3bad5faf88b4248dcfa7cedaadf0ced",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.568Z"
+      "aktualisiert": "2026-07-29T12:52:36.568Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "96": {
       "typ": "konditional",
@@ -5227,7 +5569,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6b4c76a3031f74e4118192a84328daabdba9d62619310e8ed40ba97d43a36ee9",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.568Z"
+      "aktualisiert": "2026-07-29T12:52:36.568Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "97": {
       "typ": "gemischt",
@@ -5995,7 +6340,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "76c03a742366f7fa47ebbea9a0737bf350cd54c258b85b75c6a1f7d95447abea",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.570Z"
+      "aktualisiert": "2026-07-29T12:52:36.570Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "98": {
       "typ": "gemischt",
@@ -6014,7 +6362,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.571Z"
+      "aktualisiert": "2026-07-29T12:52:36.571Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "99": {
       "typ": "gemischt",
@@ -6261,7 +6612,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5ad3e7898b1a73698091e8b26d0a802fdf420a66030533d20a4204b3a6a3c20f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.571Z"
+      "aktualisiert": "2026-07-29T12:52:36.571Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "103": {
       "typ": "gemischt",
@@ -6478,7 +6832,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e34956e8d8b50927e55f5fc536b48f3dd2b7415f54aa3fabe0e2d19ff37bd31c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.572Z"
+      "aktualisiert": "2026-07-29T12:52:36.572Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "104": {
       "typ": "gemischt",
@@ -6497,7 +6854,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.572Z"
+      "aktualisiert": "2026-07-29T12:52:36.572Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "109": {
       "typ": "gemischt",
@@ -6734,7 +7094,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ccb6e1e58ac4c6a7a03770ef8324dcaa57e015917855b9bf8479a340ce4140f5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.575Z"
+      "aktualisiert": "2026-07-29T12:52:36.575Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "121": {
       "typ": "gemischt",
@@ -7210,7 +7573,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "370ae587bb7b94b0e9d803123ddb520c4688fdc8b01aa3c926121ff7c8506c58",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "122": {
       "typ": "gemischt",
@@ -7229,7 +7595,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "123": {
       "typ": "aussage",
@@ -7289,7 +7658,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78cdf6e6a4b47076c5259784be080ce4cd924533a8c7afa89d6f5280212ce03a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "124": {
       "typ": "gemischt",
@@ -7308,7 +7680,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "137": {
       "typ": "gemischt",
@@ -7327,7 +7702,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "145": {
       "typ": "gemischt",
@@ -7346,7 +7724,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "151": {
       "typ": "gemischt",
@@ -7986,7 +8367,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9ae9d79246d562c959d7ba691b71173746bb65aca1b9db3fe30fad77023d8898",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.577Z"
+      "aktualisiert": "2026-07-29T12:52:36.577Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "152": {
       "typ": "konditional",
@@ -8211,7 +8595,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d0b21e8ae745faded2b7af8d61eb8880362d9297df2c970cd2bf9b79bea8d0b5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.578Z"
+      "aktualisiert": "2026-07-29T12:52:36.578Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "153": {
       "typ": "gemischt",
@@ -8766,7 +9153,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "126dc0b890d11f5faac64e0a1f802ab9aaf558463e98f4f3795c56dbe7e18b1c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.579Z"
+      "aktualisiert": "2026-07-29T12:52:36.579Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "154": {
       "typ": "gemischt",
@@ -9139,7 +9529,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5d341236adcb0629d669ccc1d50fd3416ca288861d1753d01be36d8b5f11de1e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.580Z"
+      "aktualisiert": "2026-07-29T12:52:36.580Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "155": {
       "typ": "konditional",
@@ -9277,7 +9670,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "618ec59c5b6faf880feb852aad464c7beb60b9cd9f065629a72e27c57d85b9b6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.580Z"
+      "aktualisiert": "2026-07-29T12:52:36.580Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "156": {
       "typ": "aussage",
@@ -9337,7 +9733,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7defec99656d6db5858d71991698cb8c6099b58d4d8f67eaa85a9bad5f3066d0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.580Z"
+      "aktualisiert": "2026-07-29T12:52:36.580Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "157": {
       "typ": "gemischt",
@@ -9661,7 +10060,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30e84a4cb12df5ef9b4cd1eb0061982a1bf8e724b90e981c1a72ea6e9a192ea6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.581Z"
+      "aktualisiert": "2026-07-29T12:52:36.581Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "158": {
       "typ": "gemischt",
@@ -10557,7 +10959,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "133a9a73d4bcbf15c156edcdda747f2d27c166ce389c8399da3d1908335d83e3",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.582Z"
+      "aktualisiert": "2026-07-29T12:52:36.582Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "159": {
       "typ": "gemischt",
@@ -10822,7 +11227,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "154cfa5b1f9aba12d7d9cf3b44c94603f4205b6d3b7e0f34a2f69659ec89e54f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.587Z"
+      "aktualisiert": "2026-07-29T12:52:36.587Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "160": {
       "typ": "gemischt",
@@ -11717,7 +12125,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e1f0edb09114946c879706dfc66a9b2b8d5ffbe94a26a9f4a2baf3d27392dcf5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.588Z"
+      "aktualisiert": "2026-07-29T12:52:36.588Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "161": {
       "typ": "konditional",
@@ -11855,7 +12266,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dfa4647863485cfaa9bbe441255a4c2d593124eabc0a3699739b67f950bed2a7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.589Z"
+      "aktualisiert": "2026-07-29T12:52:36.589Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "162": {
       "typ": "gemischt",
@@ -12204,7 +12618,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6b348b16bd7e1d62d9b8df5465fe1b4142fe8cb8c77987bfee1ab2fd7ee8c6d7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.589Z"
+      "aktualisiert": "2026-07-29T12:52:36.589Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "163": {
       "typ": "gemischt",
@@ -13816,7 +14233,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bbdf48ce46d822abbcdb2964d95a0763446e87ec6e5fa5398e96081b9e11d6ac",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.592Z"
+      "aktualisiert": "2026-07-29T12:52:36.592Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "164": {
       "typ": "gemischt",
@@ -14284,7 +14704,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fd38f7ab44a3d586a26844f8e4f827169c145b4f2b397b6ace50e539f0305e8e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.593Z"
+      "aktualisiert": "2026-07-29T12:52:36.593Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "165": {
       "typ": "gemischt",
@@ -14452,7 +14875,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c2edf874d63e343892c23db39221c038af1c841b67dfb73324322870dbd85e5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.593Z"
+      "aktualisiert": "2026-07-29T12:52:36.593Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "166": {
       "typ": "gemischt",
@@ -14738,7 +15164,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e55475cfccc62d710351d4cae532ed610dfaa5b2336ed2cd0022678c8e6e801e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.594Z"
+      "aktualisiert": "2026-07-29T12:52:36.594Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "167": {
       "typ": "gemischt",
@@ -14985,7 +15414,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff8f244d0171b7fa8db8bfc0e8c4e388799eec12f459096937a9e18de5778206",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.594Z"
+      "aktualisiert": "2026-07-29T12:52:36.594Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "168": {
       "typ": "gemischt",
@@ -15584,7 +16016,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db9e04dfb8aae1e029f84130fc61c14530824816808f04f0518b07eadd5c6c02",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.595Z"
+      "aktualisiert": "2026-07-29T12:52:36.595Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "169": {
       "typ": "gemischt",
@@ -16275,7 +16710,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0506adabd7e3bc20c49030c06e65245496526cc8cadee935b2a3c0cbfc00de02",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.596Z"
+      "aktualisiert": "2026-07-29T12:52:36.596Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "170": {
       "typ": "konditional",
@@ -16364,7 +16802,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "11a92f7c26bb960ae33cd9aa4e5ad8e3a6ea963861b88e185ed3af33aeb887c2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.596Z"
+      "aktualisiert": "2026-07-29T12:52:36.596Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "171": {
       "typ": "konditional",
@@ -16522,7 +16963,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "75d6a4464cba64bc24be57492f3e037443e18db5a8f5585f08abd8a00e10cc98",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.596Z"
+      "aktualisiert": "2026-07-29T12:52:36.596Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "172": {
       "typ": "konditional",
@@ -16611,7 +17055,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "13f12fe7e30514642ef91b5d535f8c7407e2aa6776f150584bb05807cbb7c3a2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.597Z"
+      "aktualisiert": "2026-07-29T12:52:36.597Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "173": {
       "typ": "gemischt",
@@ -16750,7 +17197,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a52b0af11757d02292b8990fc215e69a3115e3ec818186849fdce84c3ef0b5e6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.597Z"
+      "aktualisiert": "2026-07-29T12:52:36.597Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "174": {
       "typ": "gemischt",
@@ -16976,7 +17426,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "881c6f53a5f3d363fa19b23af5eed5a0ccacc383c1738c8c4a31d5126cd9d210",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.597Z"
+      "aktualisiert": "2026-07-29T12:52:36.597Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "175": {
       "typ": "aussage",
@@ -17266,7 +17719,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78677c15ab676ce7bf4628195c95749e493dc60c171e0b1afb10beeec9bdc61e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.598Z"
+      "aktualisiert": "2026-07-29T12:52:36.598Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "176": {
       "typ": "gemischt",
@@ -17567,7 +18023,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e314fd1a8c2bf697536db918f07c855aeeeaa5d8772da88648cec2091d619cfd",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.599Z"
+      "aktualisiert": "2026-07-29T12:52:36.599Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "177": {
       "typ": "gemischt",
@@ -18000,7 +18459,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "258857db75f2134e770828f8c374734195a903c516f77c37c9c565a2bdee5825",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.600Z"
+      "aktualisiert": "2026-07-29T12:52:36.600Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "178": {
       "typ": "gemischt",
@@ -18266,7 +18728,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e5d73dd90b3b04d3ab942b1416db7ff0769808e22db0d0550d9a5c3635ce58f2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.600Z"
+      "aktualisiert": "2026-07-29T12:52:36.600Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "179": {
       "typ": "gemischt",
@@ -18443,7 +18908,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4f5dc065f1f7fb9ca000b1de6a69bf7946701230c8f07314b83d78c20114b0e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.601Z"
+      "aktualisiert": "2026-07-29T12:52:36.601Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "180": {
       "typ": "gemischt",
@@ -18611,7 +19079,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dfd1840ab48aac83b64cfea768d4f7f5631c08b834079a08f173283e7a3639b1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.601Z"
+      "aktualisiert": "2026-07-29T12:52:36.601Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "181": {
       "typ": "gemischt",
@@ -19383,7 +19854,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "44f48dd2672d458732e3cb0c7cf999dfe48dbecb04900025a4560f6860308b66",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.605Z"
+      "aktualisiert": "2026-07-29T12:52:36.605Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "182": {
       "typ": "gemischt",
@@ -19880,7 +20354,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5d0735104688c5f2ac4dff4ba944bf596cbd9f59b41cc9d40289196923a7ce26",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.605Z"
+      "aktualisiert": "2026-07-29T12:52:36.605Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "183": {
       "typ": "gemischt",
@@ -20196,7 +20673,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fd1f7817e3547f774406327a0a59993fcaf9efb6a6547b986ed14f711c052b91",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.606Z"
+      "aktualisiert": "2026-07-29T12:52:36.606Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "184": {
       "typ": "gemischt",
@@ -20442,7 +20922,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f20dd44baea5cf09b184b34d94c29a2d1ccc5fc2a869ed390c62f10eb4329e84",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.613Z"
+      "aktualisiert": "2026-07-29T12:52:36.613Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "185": {
       "typ": "gemischt",
@@ -20900,7 +21383,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "115238adea5773fe35c236a78d0fb6184328fc1205b48ba3c7d46e0654754016",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.614Z"
+      "aktualisiert": "2026-07-29T12:52:36.614Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "186": {
       "typ": "gemischt",
@@ -21253,7 +21739,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c5cbdf2a581cef569e7156b6193a443aef09f4eacf19748a386718b332302ef",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.615Z"
+      "aktualisiert": "2026-07-29T12:52:36.615Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "187": {
       "typ": "gemischt",
@@ -21548,7 +22037,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b57f5f334d011fad30cbf30a05230c1e48d7d5bb7dbfbcf383e34bb89b60199",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.615Z"
+      "aktualisiert": "2026-07-29T12:52:36.615Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "188": {
       "typ": "gemischt",
@@ -21813,7 +22305,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2e22050654919818bbed56a46885c8362a212b3ea26176daae5bf24d2726c303",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.616Z"
+      "aktualisiert": "2026-07-29T12:52:36.616Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "189": {
       "typ": "gemischt",
@@ -22088,7 +22583,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9da9e1486cbde0c5ac237288acf89b33ca91036bd76a47f270558fc0cd779076",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.617Z"
+      "aktualisiert": "2026-07-29T12:52:36.617Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "190": {
       "typ": "gemischt",
@@ -22909,7 +23407,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "76b23b4135efdb6506e14d4a510f4224d65de003d5bb489b9f733de7156dc227",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.618Z"
+      "aktualisiert": "2026-07-29T12:52:36.618Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "191": {
       "typ": "gemischt",
@@ -23048,7 +23549,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eb2d454408f9ee10f53c91a828e0c56343277cf7fd014a5a415589e63879982d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.619Z"
+      "aktualisiert": "2026-07-29T12:52:36.619Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "192": {
       "typ": "konditional",
@@ -23166,7 +23670,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7c1418142d12092ee6a66b8abf76c1f87e4f4ce0d3953389f557c31a172634e1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.619Z"
+      "aktualisiert": "2026-07-29T12:52:36.619Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "193": {
       "typ": "gemischt",
@@ -24209,7 +24716,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "915eaf5cc5e8d2915b0e23bdd22aeaf458ef28d65146173e32cfe2c4e019c36d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.622Z"
+      "aktualisiert": "2026-07-29T12:52:36.622Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "194": {
       "typ": "gemischt",
@@ -25041,7 +25551,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5eca9bdcc7570c5fd3e2fb9882cf8ea43930621de05db9ce5f114868e6b1bc6e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.623Z"
+      "aktualisiert": "2026-07-29T12:52:36.623Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "195": {
       "typ": "gemischt",
@@ -26234,7 +26747,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7a9be91b911ca0928e678c1985d7a8fab29b09aac0adc94ec31cca1851b1c5b0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.626Z"
+      "aktualisiert": "2026-07-29T12:52:36.626Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "196": {
       "typ": "gemischt",
@@ -26402,7 +26918,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c240d3eac394d86691cead985bdfc5162318cf332081cfd84b496c1c0e4c7242",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.626Z"
+      "aktualisiert": "2026-07-29T12:52:36.626Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "197": {
       "typ": "aussage",
@@ -26462,7 +26981,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "075fa651f0961a0a973ced606955e862313f68353089439e33c46c59617eab7f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.627Z"
+      "aktualisiert": "2026-07-29T12:52:36.627Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "198": {
       "typ": "gemischt",
@@ -26679,7 +27201,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fcb7c9c6de3762a7f711857f1c80e26d0bc8a385ea6c322085a43ff24b4598bc",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.628Z"
+      "aktualisiert": "2026-07-29T12:52:36.628Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "199": {
       "typ": "konditional",
@@ -26768,7 +27293,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a37f3e2d41e1c9086d837e4621bd49e937c08514abbbce63f232ec41bdc0a95e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.628Z"
+      "aktualisiert": "2026-07-29T12:52:36.628Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "200": {
       "typ": "gemischt",
@@ -27013,7 +27541,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30dadf0585fabe3bc06cd51929327f41dd69e6a194b7c3e05c28b3d279e8a330",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.629Z"
+      "aktualisiert": "2026-07-29T12:52:36.629Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "201": {
       "typ": "gemischt",
@@ -27415,7 +27946,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bb4b35f0babfc66e48aca546a8945ae12e720f724eba8f4d70beb3bc8b48440c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.630Z"
+      "aktualisiert": "2026-07-29T12:52:36.630Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "202": {
       "typ": "gemischt",
@@ -28352,7 +28886,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d70c05bcc0e62bf965745fb24e0f1806c6781b3c560bb37b595454edb04c1568",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.632Z"
+      "aktualisiert": "2026-07-29T12:52:36.632Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "203": {
       "typ": "gemischt",
@@ -28421,7 +28958,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d7a62c632a6ac4d4aea98ea69b04b88bd3de6e619d073dc25ff2611a2fec1c3a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.632Z"
+      "aktualisiert": "2026-07-29T12:52:36.632Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "218": {
       "typ": "gemischt",
@@ -28675,7 +29215,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "31de5574a4859e64c35acfe2370783a1e4176ef1ef045713a8fe344fd3637ea6",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.633Z"
+      "aktualisiert": "2026-07-29T12:52:36.633Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "219": {
       "typ": "gemischt",
@@ -28881,7 +29424,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9115235add62b05bde8bb1379ccde6678f9475560cc39dcfec0349c623f3b8f7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.633Z"
+      "aktualisiert": "2026-07-29T12:52:36.633Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "220": {
       "typ": "gemischt",
@@ -29316,7 +29862,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "787af8d9f8d67ff0b95ed5db50ccafeb3304bd7e0e6e5580af49bf833e1a2443",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.634Z"
+      "aktualisiert": "2026-07-29T12:52:36.634Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.1 Ermittlung der Grundsteuerwerte",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.2 Ansatz des niedrigeren gemeinen Werts: Allgemeines, Voraussetzungen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.3 Nachweis des niedrigeren gemeinen Werts durch Verkehrswertgutachten",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.4 Nachweis des niedrigeren gemeinen Werts mittels zeitnahen Kaufpreises",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.5 Aussetzung der Vollziehung (§ 361 AO ) von Bescheiden über die Feststellung des Grundsteuerwerts",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 220.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-220/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "32e59a1f0e0ef9707ae4ed9766b2cca3900be834fffc71da856ef895fa39d5ad",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "221": {
       "typ": "aussage",
@@ -29405,7 +29997,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "703a0a88f81822ac47e9887c67a5487fca62f2836034ae5e9873dfe2562fd90d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.634Z"
+      "aktualisiert": "2026-07-29T12:52:36.634Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "222": {
       "typ": "gemischt",
@@ -29816,7 +30411,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d4a5141391ebc9d4d726a8f76434bdf9b090861e9b82107578283aecbc79d711",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.635Z"
+      "aktualisiert": "2026-07-29T12:52:36.635Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "223": {
       "typ": "gemischt",
@@ -30066,7 +30664,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c792a2dd25dd1ae92ce4b9394497d815047b63b3366edffac26ac139da78075",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.656Z"
+      "aktualisiert": "2026-07-29T12:52:36.656Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "224": {
       "typ": "gemischt",
@@ -30238,7 +30839,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c6fa0157837db9297d4164ac5961ad797a3a4d6b8719f41ebf8165b5235bf49e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.657Z"
+      "aktualisiert": "2026-07-29T12:52:36.657Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "225": {
       "typ": "gemischt",
@@ -30377,7 +30981,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dd64a55d6e241244a88bce1d3b4203ec0a061eb0ccc557e386fc5a5ddf276588",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.657Z"
+      "aktualisiert": "2026-07-29T12:52:36.657Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "226": {
       "typ": "gemischt",
@@ -30546,7 +31153,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a747f6da211d67f243bf20daed05f6275dae294fe6c366cad1c4670c1dd6372e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.657Z"
+      "aktualisiert": "2026-07-29T12:52:36.657Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "227": {
       "typ": "konditional",
@@ -30635,7 +31245,39 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "73da908f9b4b12ebc004a2de9954acbd33facfed0130e4ebdd226710a8dbcc7b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.657Z"
+      "aktualisiert": "2026-07-29T12:52:36.657Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 227.1 Wertverhältnisse bei Fortschreibungen und Nachfeststellungen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-227/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 227.2 Änderung der tatsächlichen Verhältnisse innerhalb eines Jahres vor oder nach dem nächsten Hauptfeststellungszeitpunkt",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-227/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 227.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-227/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 227.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/A-Allgemeines/Paragraf-227/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "8423fb145e1eb1be65a67bad79ba55122c3d812d2b14370251ed7431618c204f",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "228": {
       "typ": "gemischt",
@@ -31149,7 +31791,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1d9bf9bd7cdc33c139822ede9b104e5e6feba310c03dee912c3549fde4881c89",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.659Z"
+      "aktualisiert": "2026-07-29T12:52:36.659Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "229": {
       "typ": "gemischt",
@@ -31809,7 +32454,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f1511da72fa283ab8b406c2e0c9712b5a4841e647b0916cf5553eac821e32f8a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.661Z"
+      "aktualisiert": "2026-07-29T12:52:36.661Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "230": {
       "typ": "rechenregel",
@@ -31869,7 +32517,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "778c5c47193500a999d9bc5ab3275a2e66aa1a82adf5f314dc914a590ce00057",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.661Z"
+      "aktualisiert": "2026-07-29T12:52:36.661Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "231": {
       "typ": "gemischt",
@@ -32037,7 +32688,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c8b3ba3071760f2a49caae69151f5df9a2a0a173580a4cb4e556ac1c864048f5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.661Z"
+      "aktualisiert": "2026-07-29T12:52:36.661Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "232": {
       "typ": "gemischt",
@@ -32641,7 +33295,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6824b4ad0ae1207750f9e9b1a7c57758bae90f5323c26d6929e3055fd0e546e1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.662Z"
+      "aktualisiert": "2026-07-29T12:52:36.662Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.1 Begriff des land- und forstwirtschaftlichen Vermögens",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.2 Umfang der wirtschaftlichen Einheit des Betriebs der Land- und Forstwirtschaft",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.3 Abgrenzung des land- und forstwirtschaftlichen Vermögens vom Grundvermögen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 232.3",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-232/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "fd8459d90861d32010db8aa0036e8df8564be7cf439e8919fea6a586998a1a53",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "233": {
       "typ": "gemischt",
@@ -32886,7 +33586,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "13deb8415e7845a014d103a3f46f546e813dcb7a441823c69ee286d2343117e5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.663Z"
+      "aktualisiert": "2026-07-29T12:52:36.663Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "234": {
       "typ": "gemischt",
@@ -33646,7 +34349,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6b1444794b6ebac4cf853590613421407bd372aaf36f6e95a6590e500bd5e92e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.664Z"
+      "aktualisiert": "2026-07-29T12:52:36.664Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "235": {
       "typ": "konditional",
@@ -33784,7 +34490,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "52ec1c4829e191df78a75c876a108b94a3f4b18a1aced87669d51bb55462d24d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.664Z"
+      "aktualisiert": "2026-07-29T12:52:36.664Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "236": {
       "typ": "gemischt",
@@ -34116,7 +34825,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c41437e818c721258e5cf39f1ddbab685253e0b78ec8a97edd0dc91352a6dca0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.665Z"
+      "aktualisiert": "2026-07-29T12:52:36.665Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "237": {
       "typ": "gemischt",
@@ -35063,7 +35775,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7a629d6279c85ee6288e810a09882eb6ea60c2e8767bac99fa1b6ddda19d847c",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.666Z"
+      "aktualisiert": "2026-07-29T12:52:36.666Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.1 Bewertung des Betriebs",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.2 Landwirtschaftliche Nutzung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.3 Forstwirtschaftliche Nutzung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.4 Weinbauliche Nutzung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.5 Gärtnerische Nutzung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 237.6 Nutzungsteil Gemüseanbau",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/B-Land-und-forstwirtschaftliches-Vermoegen/I-Allgemeines/Paragraf-237/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "23e7149fd8055961ce52c247811ace99f68a5431a39c930815cfa1f62cfc0f80",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "238": {
       "typ": "gemischt",
@@ -35534,7 +36292,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6fba894b8eca10547e6c90e49a46cd5f76b91fe019d74216041d3131fe3da655",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.667Z"
+      "aktualisiert": "2026-07-29T12:52:36.667Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "239": {
       "typ": "gemischt",
@@ -35701,7 +36462,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b8d5c7a06bc97015f1aaa8554b11855fd35f40bd1536f2d273ca61530944676",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.667Z"
+      "aktualisiert": "2026-07-29T12:52:36.667Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "240": {
       "typ": "gemischt",
@@ -35985,7 +36749,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "486571f7f5af5f086d177c060c7132fe4d3ad07dbe7750a5c61a568862ce90a7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.667Z"
+      "aktualisiert": "2026-07-29T12:52:36.667Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "241": {
       "typ": "gemischt",
@@ -36696,7 +37463,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "38e2ec3e3df2611f71bd6343a38ec0956d93a8390c9ed88e99b50c0a425746d2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.668Z"
+      "aktualisiert": "2026-07-29T12:52:36.668Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "242": {
       "typ": "aussage",
@@ -36994,7 +37764,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "550a1bde4785a619fed45ad48ee71a1c7f79d45eb9a476506fc610dc06362d75",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.669Z"
+      "aktualisiert": "2026-07-29T12:52:36.669Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "243": {
       "typ": "gemischt",
@@ -37315,7 +38088,39 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e3a175832aadc3ab0bb77b6fcf2c3177a46703cca80cb3554229be1140deab7e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.670Z"
+      "aktualisiert": "2026-07-29T12:52:36.670Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 243.1 Begriff des Grundvermögens",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-243/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 243.2 Abgrenzung der Betriebsvorrichtungen von den Betriebsgrundstücken der öffentlichen Verkehrsunternehmen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-243/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 238.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-243/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 238.2 — 1 Betriebsvorrichtungen und damit nicht für Zwecke der Grundsteuer zu berücksichtigen sind insbesondere folgende Bauwerke und Anlagen:",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-243/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "1bba2965b38647429490b4c0ead58b405d22a8c959eeb608f53eb09d30103da8",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "244": {
       "typ": "gemischt",
@@ -37636,7 +38441,39 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "35bc3a03049f87dbf98151f75d7eef07af9dc1b05193cbd0360c0d1c0edb29d5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.670Z"
+      "aktualisiert": "2026-07-29T12:52:36.670Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 244.1 Grundstück",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-244/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 244.2 Bestimmung der wirtschaftlichen Einheit bei Betriebsgrundstücken der öffentlichen Verkehrsunternehmen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-244/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 244.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-244/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 244.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/I-Allgemeines/Paragraf-244/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "9a02ed1570ae689c75bf9e4382b757d15ff5daa5a1a758b01dd79feb6dffe8dd",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "245": {
       "typ": "aussage",
@@ -37725,7 +38562,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a7186c31ef76a47c05dd44f323ab9dab3a9b30e356a42fcefc9cfe13d4eacc0b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.671Z"
+      "aktualisiert": "2026-07-29T12:52:36.671Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "246": {
       "typ": "gemischt",
@@ -38040,7 +38880,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b2c7991a00ec1441925c0be45bdbe0561611f2e02a4a89604a5c021df6ef7639",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.671Z"
+      "aktualisiert": "2026-07-29T12:52:36.671Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "247": {
       "typ": "gemischt",
@@ -38291,7 +39134,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6ec5566ec7699b27fa7a79f715516cb495fdf2b472de801dd373ed2b6c90b0a9",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.672Z"
+      "aktualisiert": "2026-07-29T12:52:36.672Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.1 Bewertung der unbebauten Grundstücke; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.2 Ansatz der Bodenrichtwerte",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.3 Ansatz des Bodenwerts nach § 247 Absatz 3 BewG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 247.3",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/II-Unbebaute-Grundstuecke/Paragraf-247/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "b757812c95f92953ec02a6ca5fc1a85bdf75706e697455906739d62d319eb654",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "248": {
       "typ": "gemischt",
@@ -38410,7 +39299,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "622e252d9bd479a5aa6865227868cc883b36bc5624f4f2c7bccdfd2a77033057",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.686Z"
+      "aktualisiert": "2026-07-29T12:52:36.686Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "249": {
       "typ": "gemischt",
@@ -39338,7 +40230,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f4930c6a6976c6fab9ca67ba7e73e25760e37d463d339d6ed988943349ed3411",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.687Z"
+      "aktualisiert": "2026-07-29T12:52:36.687Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.1 Grundstücksarten; Abgrenzung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.2 Grundstücksart Einfamilienhäuser",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.3 Grundstücksart Zweifamilienhäuser",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.4 Grundstücksart Mietwohngrundstück",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.5 Grundstücksart Wohnungseigentum",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 249.6 Grundstücksart Teileigentum",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-249/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "a0f298530b82492f59eb0d5d2c487267c52079b2c425c70c3e0560e52dcec046",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "250": {
       "typ": "aussage",
@@ -39757,7 +40695,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8b0aeba30b824dceb269859ee6c7a7743dcfebb81d06bf266c924948aeec370",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.687Z"
+      "aktualisiert": "2026-07-29T12:52:36.687Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "251": {
       "typ": "gemischt",
@@ -39876,7 +40817,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71c8ce8f2d4a2f2430abb43a2e2f8b7ff79db6b75a437a5fb2bc6b9255f11c38",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.688Z"
+      "aktualisiert": "2026-07-29T12:52:36.688Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "252": {
       "typ": "gemischt",
@@ -39974,7 +40918,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a5579e0e8097b5c6311a6f22f0372e171939f782575eb1a3b35ddde519a77cc5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.688Z"
+      "aktualisiert": "2026-07-29T12:52:36.688Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "253": {
       "typ": "gemischt",
@@ -40316,7 +41263,39 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3020735215099d56ecd11f54a71bffd95b9782c3da2f2421d1336eeeb671096a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.688Z"
+      "aktualisiert": "2026-07-29T12:52:36.688Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 253.1 Ermittlung des kapitalisierten Reinertrags; Restnutzungsdauer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-253/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 253.2 Grundstück mit mehreren Gebäuden oder Gebäudeteilen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-253/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 253.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-253/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 253.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-253/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "25cd5c1b5a0ae65a7a0937703ea3d82e06da4104c7bf3078377bffde32c688aa",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "254": {
       "typ": "aussage",
@@ -40405,7 +41384,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b792f0332641ac40ee5660bd154e71f2476a825057540d04c8ebbc146029f19",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.688Z"
+      "aktualisiert": "2026-07-29T12:52:36.688Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "255": {
       "typ": "aussage",
@@ -40543,7 +41525,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c498a076c0ab3fdb71fb0e7914142d623f004ad0021c1564b623ca53718d1805",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.689Z"
+      "aktualisiert": "2026-07-29T12:52:36.689Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "256": {
       "typ": "gemischt",
@@ -40873,7 +41858,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5772fe4ea89666c370ee6d3e965ec423b1481df945e924e401d3be3cbafe6592",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.689Z"
+      "aktualisiert": "2026-07-29T12:52:36.689Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "257": {
       "typ": "gemischt",
@@ -41106,7 +42094,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "435cf90aab311d57b09665ab4d6f45736b0957b79731c1e1f9a0912c54c017e3",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.690Z"
+      "aktualisiert": "2026-07-29T12:52:36.690Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.1 Ermittlung des abgezinsten Bodenwerts; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.2 Berücksichtigung abweichender Grundstücksgrößen bei Ein- und Zweifamilienhäusern",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.3 Mehrere Bodenrichtwertzonen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.4 Selbständig nutzbare Teilfläche",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 257.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-257/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "0fe0a9306eaf247e02fcc2c9eca07402c129083612414f563ba6c27eaaf57a3c",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "258": {
       "typ": "gemischt",
@@ -41352,7 +42386,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d741ea936d2694cde2fe8282bc0d51cf8dec78954db801e8ecead72856db3dc2",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.690Z"
+      "aktualisiert": "2026-07-29T12:52:36.690Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "259": {
       "typ": "gemischt",
@@ -41781,7 +42818,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7af82021b955763d2497d962dcef15ff6e565b2f0299acc1bb4382b8c7120981",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.690Z"
+      "aktualisiert": "2026-07-29T12:52:36.690Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.1 Ermittlung des Gebäudesachwerts; Normalherstellungskosten (NHK)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.2 Gebäudeart",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.3 Baupreisindex",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.4 Brutto-Grundfläche (BGF)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.5 Alterswertminderung",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 259.6 Grundstück mit mehreren Gebäuden oder Gebäudeteilen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/III-Bebaute-Grundstuecke/Paragraf-259/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "81fceb81f4abca0b65496611a049eeb23e4da3f46698dff4785fb09ca40c3681",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "260": {
       "typ": "konditional",
@@ -41870,7 +42953,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ef5533cd82e03748b1fbc4db07ff8b4c2d7dc4dbfa58e4413066be21bcf900dc",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.691Z"
+      "aktualisiert": "2026-07-29T12:52:36.691Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "261": {
       "typ": "gemischt",
@@ -42078,7 +43164,53 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "97b008395792449597c8d36d543b21cbc8d4de0b6d0ef4cdaf63dd3afe6703ad",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.691Z"
+      "aktualisiert": "2026-07-29T12:52:36.691Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.1 Erbbaurecht; Begriff des Erbbaurechts",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.2 Bewertung in Erbbaurechtsfällen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.3 Wohnungserbbaurecht und Teilerbbaurecht",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.4 Mitwirkungspflichten des Erbbauverpflichteten",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 261.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Zweiter-Teil-Siebenter-Abschnitt/C-Grundvermoegen/IV-Sonderfaelle/Paragraf-261/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "ad730fd1b9980c37232c898c8c60e7aaaf4824cdb5bbfe62c99a0c78b66da0b3",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "262": {
       "typ": "gemischt",
@@ -42217,7 +43349,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "83dd8c53f02418af655b1eb3a4b056cbb033c1ac8b2f22ecd3db20bc7d6c2375",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.691Z"
+      "aktualisiert": "2026-07-29T12:52:36.691Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "263": {
       "typ": "gemischt",
@@ -42348,7 +43483,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2813e6e4c703d46bb62eff779b3e0e518ad37767e6bdcdcc2821b2cee8bfdda5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.691Z"
+      "aktualisiert": "2026-07-29T12:52:36.691Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "264": {
       "typ": "aussage",
@@ -42408,7 +43546,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7ffadfea524766ca717758b6fc0fa99ae624658851dedd382085e7989c7618c5",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.692Z"
+      "aktualisiert": "2026-07-29T12:52:36.692Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "265": {
       "typ": "anwendung",
@@ -42558,7 +43699,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "11684222205373215485112f8d07ab9a7ae0dfd53a62e00b67b9e3eaf933afda",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.692Z"
+      "aktualisiert": "2026-07-29T12:52:36.692Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "266": {
       "typ": "gemischt",
@@ -43000,7 +44144,39 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "959bb733ab3030f68e67469c14065c2c52a2ba2375decd2a8a733cf0bb3505c7",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.693Z"
+      "aktualisiert": "2026-07-29T12:52:36.693Z",
+      "belege": [
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 266.1 Erstmalige Anwendung des Siebenten Abschnitts des Zweiten Teils; Allgemeines",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Dritter-Teil/Paragraf-266/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 266.2 Übergangsregelungen (§ 266 Absatz 3 BewG)",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Dritter-Teil/Paragraf-266/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 266.1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Dritter-Teil/Paragraf-266/inhalt.html",
+          "ebene": "norm"
+        },
+        {
+          "art": "verwaltung",
+          "quelle": "AEBewGrSt 2025 (2022/2025)",
+          "fundstelle": "A 266.2",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/Dritter-Teil/Paragraf-266/inhalt.html",
+          "ebene": "norm"
+        }
+      ],
+      "beleg_hash": "d91855e041ea7252b4db4ca54f7cce8a6e4d1f1b877351a33c2bf8c4e706303f",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "3a": {
       "typ": "gemischt",
@@ -43019,7 +44195,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.557Z"
+      "aktualisiert": "2026-07-29T12:52:36.557Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-21-bis-29": {
       "typ": "gemischt",
@@ -43038,7 +44217,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.563Z"
+      "aktualisiert": "2026-07-29T12:52:36.563Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-33-bis-48a": {
       "typ": "gemischt",
@@ -43057,7 +44239,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-50-bis-52": {
       "typ": "gemischt",
@@ -43076,7 +44261,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-53-bis-55": {
       "typ": "gemischt",
@@ -43095,7 +44283,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-56-bis-58": {
       "typ": "gemischt",
@@ -43114,7 +44305,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-59-bis-61": {
       "typ": "gemischt",
@@ -43133,7 +44327,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-63-bis-67": {
       "typ": "gemischt",
@@ -43152,7 +44349,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-68-und-69": {
       "typ": "gemischt",
@@ -43171,7 +44371,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.566Z"
+      "aktualisiert": "2026-07-29T12:52:36.566Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-72-und-73": {
       "typ": "gemischt",
@@ -43190,7 +44393,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-74-bis-77": {
       "typ": "gemischt",
@@ -43209,7 +44415,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-78-bis-82": {
       "typ": "gemischt",
@@ -43228,7 +44437,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-83-bis-90": {
       "typ": "gemischt",
@@ -43247,7 +44459,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-91-bis-94": {
       "typ": "gemischt",
@@ -43266,7 +44481,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.567Z"
+      "aktualisiert": "2026-07-29T12:52:36.567Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "98a": {
       "typ": "gemischt",
@@ -43285,7 +44503,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.571Z"
+      "aktualisiert": "2026-07-29T12:52:36.571Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-100-bis-102": {
       "typ": "gemischt",
@@ -43304,7 +44525,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.571Z"
+      "aktualisiert": "2026-07-29T12:52:36.571Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-105-bis-108": {
       "typ": "gemischt",
@@ -43323,7 +44547,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.574Z"
+      "aktualisiert": "2026-07-29T12:52:36.574Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "109a": {
       "typ": "gemischt",
@@ -43342,7 +44569,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.575Z"
+      "aktualisiert": "2026-07-29T12:52:36.575Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-110-bis-120": {
       "typ": "gemischt",
@@ -43361,7 +44591,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.575Z"
+      "aktualisiert": "2026-07-29T12:52:36.575Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "121a": {
       "typ": "gemischt",
@@ -43380,7 +44613,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-125-bis-128": {
       "typ": "gemischt",
@@ -43399,7 +44635,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-129-bis-133": {
       "typ": "gemischt",
@@ -43418,7 +44657,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-134-bis-136": {
       "typ": "gemischt",
@@ -43437,7 +44679,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-138-und-139": {
       "typ": "gemischt",
@@ -43456,7 +44701,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-140-bis-144": {
       "typ": "gemischt",
@@ -43475,7 +44723,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-§§-146-bis-150": {
       "typ": "gemischt",
@@ -43494,7 +44745,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.576Z"
+      "aktualisiert": "2026-07-29T12:52:36.576Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-1-bis-8": {
       "typ": "gemischt",
@@ -43513,7 +44767,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.693Z"
+      "aktualisiert": "2026-07-29T12:52:36.693Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-9": {
       "typ": "gemischt",
@@ -43532,7 +44789,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.693Z"
+      "aktualisiert": "2026-07-29T12:52:36.693Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-9a": {
       "typ": "gemischt",
@@ -43630,7 +44890,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79fe25a76adedd8bb4b702a36f95b02366300f03bd1c873bc9acc39a40ff0609",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.694Z"
+      "aktualisiert": "2026-07-29T12:52:36.694Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "(xxxx)-anlagen-10-bis-13": {
       "typ": "gemischt",
@@ -43649,7 +44912,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.694Z"
+      "aktualisiert": "2026-07-29T12:52:36.694Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-14": {
       "typ": "aussage",
@@ -43679,7 +44945,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "989afbb4d8aa67c70ce0a2a5d51efdbf27e07621f9b007119e011996493ba47e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.699Z"
+      "aktualisiert": "2026-07-29T12:52:36.699Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-15": {
       "typ": "aussage",
@@ -44067,7 +45336,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a482eae43f4d6aebcc65f305c98f5ace69115d3f3269ec30bd67713ff25b3e9f",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.700Z"
+      "aktualisiert": "2026-07-29T12:52:36.700Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-15a": {
       "typ": "aussage",
@@ -44614,7 +45886,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7e32ec7d9c5d7f6d0b37123bc29bfed1d25a303d9401520d55aaa3a41b73ce6d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.709Z"
+      "aktualisiert": "2026-07-29T12:52:36.709Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-16": {
       "typ": "aussage",
@@ -44644,7 +45919,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "dc6ca8ad3a4ee5b9e977b363a3b4e5e364de7113fa8cbf749da2e59c9300f5d1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.710Z"
+      "aktualisiert": "2026-07-29T12:52:36.710Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-17": {
       "typ": "aussage",
@@ -44674,7 +45952,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "5f5e88ac4432d961004d816b9ef90ba43f3fbacea98bdb2859ff727bff21da19",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.710Z"
+      "aktualisiert": "2026-07-29T12:52:36.710Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-18": {
       "typ": "aussage",
@@ -44704,7 +45985,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "900eb35cc24b4822ddaba62360bccf8ca14d5f88e478fa42e4f8421973f73ce1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.710Z"
+      "aktualisiert": "2026-07-29T12:52:36.710Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-19": {
       "typ": "aussage",
@@ -44734,7 +46018,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "6079783f6ecccfd0f4050fcbae17be3cd83da84002aa9a328e455b072d152b33",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.711Z"
+      "aktualisiert": "2026-07-29T12:52:36.711Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-20": {
       "typ": "aussage",
@@ -44832,7 +46119,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5fd91c44bcd96541ecc6a8adaa30617b75845a6d16ba5aad5eb968eeca4415cc",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.711Z"
+      "aktualisiert": "2026-07-29T12:52:36.711Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-21": {
       "typ": "aussage",
@@ -44892,7 +46182,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "978784023b21acf0e55a0939def6cc5212dcd8e2698ef9b87503beef0ded7d48",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.713Z"
+      "aktualisiert": "2026-07-29T12:52:36.713Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-22": {
       "typ": "aussage",
@@ -44989,7 +46282,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b6cdec8c9bafa00b1be64f4e568eb3877ab64822e0a34bace5c814d5ad9fff23",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.714Z"
+      "aktualisiert": "2026-07-29T12:52:36.714Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-23": {
       "typ": "gemischt",
@@ -45386,7 +46682,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "556505e85adbb49367fa7c31ec1fa8b993cddeb42e528cd562eba916db5a8130",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.714Z"
+      "aktualisiert": "2026-07-29T12:52:36.714Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-24": {
       "typ": "gemischt",
@@ -46152,7 +47451,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ce73dc6c33ad441498691a656a20265e4a2b4551d602fa6204b1f2eb094deb38",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.728Z"
+      "aktualisiert": "2026-07-29T12:52:36.728Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-25": {
       "typ": "gemischt",
@@ -46447,7 +47749,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "65c500b55fceace7e7e6347e786d1025b6f9f77c0fbe7cde39b041f08e4542af",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.729Z"
+      "aktualisiert": "2026-07-29T12:52:36.729Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-26": {
       "typ": "aussage",
@@ -46507,7 +47812,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "37d5146c28041fd7ddd88e6f842cbf12673c7b0e35696d2a2596c8f085b54857",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.731Z"
+      "aktualisiert": "2026-07-29T12:52:36.731Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-27": {
       "typ": "aussage",
@@ -46537,7 +47845,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "d3b2a7c886403933dfba0b3f5616346ce8e6589280d81c270f2d9be1e8c050d0",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.731Z"
+      "aktualisiert": "2026-07-29T12:52:36.731Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-28": {
       "typ": "aussage",
@@ -46567,7 +47878,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "8b3a43ad388ae122492f2dd991c58d4c974fb4a301405c4570dc4ae469c2eaae",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.732Z"
+      "aktualisiert": "2026-07-29T12:52:36.732Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-29": {
       "typ": "aussage",
@@ -46628,7 +47942,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2467b08bca210150b592fabe6110a32a7dc6a17243f4ef16b9177241ad11954e",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.732Z"
+      "aktualisiert": "2026-07-29T12:52:36.732Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-30": {
       "typ": "aussage",
@@ -46658,7 +47975,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "66f0c7a8b028f3244c658560bab82e05711c8766b362bdf779c12e185909d267",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.732Z"
+      "aktualisiert": "2026-07-29T12:52:36.732Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-31": {
       "typ": "aussage",
@@ -46718,7 +48038,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ba4a677f235327e951e6e3dd39138e4d7756e8be352696f0178bb28254d322d1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.733Z"
+      "aktualisiert": "2026-07-29T12:52:36.733Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-32": {
       "typ": "aussage",
@@ -46748,7 +48071,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "1a02023a4ae59d5414615199cacf909e477f256a9a24fc27ec1d68852f5f355d",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.733Z"
+      "aktualisiert": "2026-07-29T12:52:36.733Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-33": {
       "typ": "aussage",
@@ -46809,7 +48135,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dc5d929c31b2aca2c3b6370443fafdd86ad5f78b479d465776201f02d20c8264",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.733Z"
+      "aktualisiert": "2026-07-29T12:52:36.733Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-34": {
       "typ": "aussage",
@@ -46839,7 +48168,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e0cf550d540ff52b2a37ef2259bfdde95f5843bdea1b51f8ae2e19b0480f283b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.734Z"
+      "aktualisiert": "2026-07-29T12:52:36.734Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-35": {
       "typ": "aussage",
@@ -46937,7 +48269,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "81a51232c17d182365d40e498325bb38e278dea25faf82cd05f6249876af2428",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.734Z"
+      "aktualisiert": "2026-07-29T12:52:36.734Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-36": {
       "typ": "aussage",
@@ -46967,7 +48302,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "2c9a422f4e1cca211f8ab2fdc3fc25b246c0f4edc7af577836b0880a051b2997",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.734Z"
+      "aktualisiert": "2026-07-29T12:52:36.734Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-37": {
       "typ": "aussage",
@@ -47123,7 +48461,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6f9b5ab107dc54bcbc3b409430e3de7360ac6447ca8505f829d264d2befde3a1",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.738Z"
+      "aktualisiert": "2026-07-29T12:52:36.738Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-38": {
       "typ": "aussage",
@@ -47241,7 +48582,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30fdf5feecad1a622be985251f0ae198a939e19f0d2f7bab9b043317f266ad8b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.739Z"
+      "aktualisiert": "2026-07-29T12:52:36.739Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-39": {
       "typ": "aussage",
@@ -47339,7 +48683,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae7e651055462a2b6b19a8a0323d2f69f8eee5073d4e1c0c04d6151e5ea37b35",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.740Z"
+      "aktualisiert": "2026-07-29T12:52:36.740Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-40": {
       "typ": "tarif",
@@ -47369,7 +48716,10 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "61e9a6542e8ad4b56ccae935f4ea19be18a6ecbab62b86aff278589302e24381",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.750Z"
+      "aktualisiert": "2026-07-29T12:52:36.750Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-41": {
       "typ": "aussage",
@@ -47525,7 +48875,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6e49f0aa689400c3fe03fa2a8b0d6a50d34fdaa312c02c7699a8ab1ff8e44f8b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.753Z"
+      "aktualisiert": "2026-07-29T12:52:36.753Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-42": {
       "typ": "gemischt",
@@ -47965,7 +49318,10 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3426803b74791190d20fa8e92583b8715b73a4e03752cbc6826869524d4a83b8",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.754Z"
+      "aktualisiert": "2026-07-29T12:52:36.754Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     },
     "anlage-43": {
       "typ": "aussage",
@@ -47995,7 +49351,12 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "f487ba7f3e62109e61e54e4a6a2c4f23e7b21e9526bdf71a72b0daacb4df8731",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:36.755Z"
+      "aktualisiert": "2026-07-29T12:52:36.755Z",
+      "belege": [],
+      "beleg_hash": "4dac8c1868f2eaf669836828bdbf3d594734fd1c6e39cd311f5e0987473f3bb6",
+      "belege_aktualisiert": "2026-07-30T11:53:01.409Z"
     }
-  }
+  },
+  "belegstand": "2026-07-30T11:45:24.844Z",
+  "belege_eingebettet": true
 }
