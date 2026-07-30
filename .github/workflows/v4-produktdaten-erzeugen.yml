@@ -10,8 +10,8 @@ permissions:
   models: read
 
 concurrency:
-  group: v4-produktdaten-${{ github.ref }}
-  cancel-in-progress: false
+  group: v4-produktdaten-${{ github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   erzeugen:
