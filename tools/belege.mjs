@@ -3,15 +3,15 @@
  * belege.mjs — sammelt amtliche Belegstellen je Paragraf.
  *
  * Diese Schicht ist REIN EXTRAKTIV: Sie behauptet nichts, sie zitiert nur. Damit ist
- * sie für sich genommen bereits ein Produktmerkmal (das Fundstellenmodell, das
- * dejure.org wertvoll macht) und zugleich die Grundlage für die Quellenanbindung
- * des Modelllaufs.
+ * sie für sich genommen bereits ein Produktmerkmal und zugleich die Grundlage für
+ * die Quellenanbindung des Modelllaufs.
  *
- *   node tools/belege.mjs --karte              Verzeichnisbäume der Handbücher aufbauen
- *   node tools/belege.mjs                      Belege für alle Gesetze holen
+ *   node tools/belege.mjs --karte
+ *   node tools/belege.mjs
  *   node tools/belege.mjs --nur ao,estg
  *   node tools/belege.mjs --ohne-rechtsprechung
- *   node tools/belege.mjs --max 200            Abrufe je Lauf begrenzen
+ *   node tools/belege.mjs --verwaltung-erzwingen
+ *   node tools/belege.mjs --max 200
  *
  * Ergebnis: belege/<gesetz>.json und config/handbuch-karte-<abk>.json
  */
@@ -33,6 +33,9 @@ const wert = (f, v = null) => { const i = args.indexOf(f); return i >= 0 ? (args
 
 const nurKarte = hat("--karte");
 const ohneRechtsprechung = hat("--ohne-rechtsprechung");
+const erzwingeVerwaltung = hat("--verwaltung-erzwingen")
+  || process.env.BELEGE_VERWALTUNG_ERZWINGEN === "1"
+  || process.env.EVENT_NAME === "push";
 const MAX_ABRUFE = Number(wert("--max", process.env.MAX_BELEGABRUFE || 400));
 const MIN_KARTEN_TREFFER = Number(process.env.MIN_KARTEN_TREFFER || 5);
 
@@ -90,8 +93,7 @@ for (const meta of register.gesetze) {
     const nr = String(norm.id);
     const alt = vorhanden?.normen?.[nr];
 
-    // Frisch genug? Verwaltungsbelege ändern sich selten; 30 Tage sind reichlich.
-    if (alt && frisch(alt.abgerufen, 30) && abrufe >= MAX_ABRUFE) {
+    if (alt && frisch(alt.abgerufen, 30) && !erzwingeVerwaltung && abrufe >= MAX_ABRUFE) {
       normen[nr] = alt; uebernommen++;
       if (alt.verwaltung?.length) mitVerwaltung++;
       if (alt.rechtsprechung?.length) mitRechtsprechung++;
@@ -105,15 +107,17 @@ for (const meta of register.gesetze) {
       abgerufen: alt?.abgerufen ?? null,
     };
 
-    // a) Verwaltungsanweisung
-    if (karte && abrufe < MAX_ABRUFE && !frisch(alt?.abgerufen, 30)) {
+    // a) Verwaltungsanweisung. Nach Parser- oder Quellenänderungen kann dieser Teil
+    // unabhängig von der Rechtsprechung erzwungen neu geladen werden.
+    const verwaltungFrisch = frisch(alt?.abgerufen, 30) && !erzwingeVerwaltung;
+    if (karte && abrufe < MAX_ABRUFE && !verwaltungFrisch) {
       const ziel = karte.paragrafen[nr] || karte.vorschaltnormen[nr] || null;
       if (ziel) {
         abrufe++;
         const gelesen = await abschnittLesen({
           eintrag: ziel,
           quelle: `${hb.abk} (${karte.jahrgang ?? konfig.jahrgang})`,
-          etag: alt?.etag ?? null,
+          etag: erzwingeVerwaltung ? null : (alt?.etag ?? null),
         });
         if (gelesen && !gelesen.unveraendert) {
           eintrag.verwaltung = gelesen.abschnitte.map((a) => ({
@@ -128,7 +132,7 @@ for (const meta of register.gesetze) {
       }
     }
 
-    // b) Rechtsprechung
+    // b) Rechtsprechung bleibt von einem erzwungenen Verwaltungsabruf unberührt.
     if (!ohneRechtsprechung && abrufe < MAX_ABRUFE && !frisch(alt?.abgerufen, 30)) {
       abrufe++;
       const treffer = await entscheidungenZu({ gesetz: gesetz.abk, paragraf: nr, grenze: 5 });
@@ -149,7 +153,6 @@ for (const meta of register.gesetze) {
     }
   }
 
-  // Nicht erreichte Normen unverändert übernehmen
   for (const norm of gesetz.normen) {
     const nr = String(norm.id);
     if (!normen[nr] && vorhanden?.normen?.[nr]) { normen[nr] = vorhanden.normen[nr]; uebernommen++; }
@@ -176,11 +179,9 @@ for (const meta of register.gesetze) {
 
 await writeFile(
   path.join(WURZEL, "reports", "belege.json"),
-  `${JSON.stringify({ erzeugt: new Date().toISOString(), abrufe, gesetze: bilanz }, null, 2)}\n`,
+  `${JSON.stringify({ erzeugt: new Date().toISOString(), abrufe, verwaltungErzwungen: erzwingeVerwaltung, gesetze: bilanz }, null, 2)}\n`,
 );
 console.log(`\n${abrufe} Abrufe insgesamt.`);
-
-/* ─────────────────────────── Hilfen ─────────────────────────── */
 
 function heute() { return new Date().toISOString().slice(0, 10); }
 
