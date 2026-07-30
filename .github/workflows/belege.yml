@@ -10,39 +10,23 @@ on:
     - cron: "40 3 * * 1"
   workflow_dispatch:
     inputs:
-      karte:
-        description: "Verzeichnisbäume der Handbücher neu aufbauen"
-        type: boolean
-        required: false
-        default: false
-      nur:
-        description: "Nur diese Gesetze (kommagetrennt, leer = alle)"
-        required: false
-        default: ""
-      max:
-        description: "Höchstzahl der Abrufe je Lauf"
-        required: false
-        default: "1200"
+      karte: { description: "Handbuchkarten neu aufbauen", type: boolean, required: false, default: false }
+      nur: { description: "Gesetze, kommagetrennt", required: false, default: "" }
+      max: { description: "Höchstzahl der Abrufe", required: false, default: "1200" }
 
-permissions:
-  contents: write
-
-concurrency:
-  group: belege-${{ github.ref }}
-  cancel-in-progress: false
+permissions: { contents: write }
+concurrency: { group: "belege-${{ github.ref }}", cancel-in-progress: false }
 
 jobs:
   konfiguration:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    permissions: { contents: read }
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
-      - name: Konfiguration prüfen
-        run: |
+      - run: |
           set -euo pipefail
           find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
           node -e 'const c=require("./config/handbuecher.json"); if(c.handbuecher.length!==8) throw new Error("Acht Handbuchanbindungen erwartet")'
@@ -58,82 +42,52 @@ jobs:
         with: { node-version: "22" }
       - name: Handbuchkarten aufbauen
         if: inputs.karte == true || hashFiles('config/handbuch-karte-*.json') == ''
-        env:
-          INPUT_NUR: ${{ inputs.nur }}
-          MIN_KARTEN_TREFFER: "5"
+        env: { INPUT_NUR: "${{ inputs.nur }}", MIN_KARTEN_TREFFER: "5" }
         run: |
           set -euo pipefail
-          args=(--karte)
-          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          args=(--karte); [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           for versuch in 1 2 3; do
             if node tools/belege.mjs "${args[@]}"; then exit 0; fi
-            [ "$versuch" -eq 3 ] && exit 1
-            sleep $((versuch * 15))
+            [ "$versuch" -eq 3 ] && exit 1; sleep $((versuch * 15))
           done
       - name: Vollständigen Belegbestand aufbauen
-        env:
-          INPUT_NUR: ${{ inputs.nur }}
-          INPUT_MAX: ${{ inputs.max }}
-          EVENT_NAME: ${{ github.event_name }}
+        env: { INPUT_NUR: "${{ inputs.nur }}", INPUT_MAX: "${{ inputs.max }}", EVENT_NAME: "${{ github.event_name }}" }
         run: |
           set -euo pipefail
-          max="${INPUT_MAX:-1200}"
-          [ "$EVENT_NAME" = "push" ] && max="5000"
-          args=(--max "$max")
-          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          max="${INPUT_MAX:-1200}"; [ "$EVENT_NAME" = "push" ] && max="5000"
+          args=(--max "$max"); [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           node tools/belege.mjs "${args[@]}"
       - name: Vollständigkeit prüfen
-        env:
-          INPUT_NUR: ${{ inputs.nur }}
+        env: { INPUT_NUR: "${{ inputs.nur }}" }
         run: |
           set -euo pipefail
           node - <<'NODE'
-          const fs = require("fs");
-          const register = require("./data/index.json");
-          const normiere = (v) => String(v || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
-          const nur = new Set(String(process.env.INPUT_NUR || "").split(",").map(normiere).filter(Boolean));
-          const auswahl = nur.size ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v)))) : register.gesetze;
-          const karten = fs.readdirSync("config").filter((n) => /^handbuch-karte-.*\.json$/.test(n));
-          if (!nur.size && karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}`);
-          for (const name of karten) if (Object.keys(require(`./config/${name}`).paragrafen || {}).length < 5) throw new Error(`${name} ist unvollständig`);
-          const fehler = [], gesetze = [];
-          let normenGesamt = 0, protokolliert = 0;
-          for (const meta of auswahl) {
-            const daten = require(`./data/${meta.datei}`), pfad = `belege/${meta.datei}`;
-            if (!fs.existsSync(pfad)) { fehler.push(`${meta.abk}: Datei fehlt`); continue; }
-            const belege = require(`./${pfad}`);
-            const fehlende = daten.normen.filter((n) => !belege.normen?.[String(n.id)]);
-            const ohneAbruf = daten.normen.filter((n) => !belege.normen?.[String(n.id)]?.abgerufen);
-            if (fehlende.length) fehler.push(`${meta.abk}: ${fehlende.length} Normen fehlen`);
-            if (ohneAbruf.length) fehler.push(`${meta.abk}: ${ohneAbruf.length} Abrufprotokolle fehlen`);
-            const normen = Object.values(belege.normen || {});
-            normenGesamt += daten.normen.length;
-            protokolliert += daten.normen.length - ohneAbruf.length;
-            gesetze.push({ abk: daten.abk, normen: daten.normen.length, mitVerwaltung: normen.filter((n) => n.verwaltung?.length).length, mitRechtsprechung: normen.filter((n) => n.rechtsprechung?.length).length });
+          const fs=require("fs"), register=require("./data/index.json");
+          const norm=v=>String(v||"").toLowerCase().replace(/\.json$/,"").replace(/[^a-z0-9]/g,"");
+          const nur=new Set(String(process.env.INPUT_NUR||"").split(",").map(norm).filter(Boolean));
+          const auswahl=nur.size?register.gesetze.filter(m=>[m.abk,m.slug,m.datei].some(v=>nur.has(norm(v)))):register.gesetze;
+          const karten=fs.readdirSync("config").filter(n=>/^handbuch-karte-.*\.json$/.test(n));
+          if(!nur.size&&karten.length!==8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}`);
+          for(const n of karten) if(Object.keys(require(`./config/${n}`).paragrafen||{}).length<5) throw new Error(`${n} ist unvollständig`);
+          const fehler=[],gesetze=[]; let normenGesamt=0,protokolliert=0;
+          for(const meta of auswahl){
+            const daten=require(`./data/${meta.datei}`),pfad=`belege/${meta.datei}`;
+            if(!fs.existsSync(pfad)){fehler.push(`${meta.abk}: Datei fehlt`);continue;}
+            const belege=require(`./${pfad}`),fehlende=daten.normen.filter(n=>!belege.normen?.[String(n.id)]),ohne=daten.normen.filter(n=>!belege.normen?.[String(n.id)]?.abgerufen),normen=Object.values(belege.normen||{});
+            if(fehlende.length)fehler.push(`${meta.abk}: ${fehlende.length} Normen fehlen`); if(ohne.length)fehler.push(`${meta.abk}: ${ohne.length} Abrufprotokolle fehlen`);
+            normenGesamt+=daten.normen.length;protokolliert+=daten.normen.length-ohne.length;
+            gesetze.push({abk:daten.abk,normen:daten.normen.length,mitVerwaltung:normen.filter(n=>n.verwaltung?.length).length,mitRechtsprechung:normen.filter(n=>n.rechtsprechung?.length).length});
           }
-          if (!auswahl.length) fehler.push("Gesetzesauswahl ist leer");
-          if (!nur.size && register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
-          if (fehler.length) throw new Error(`Unvollständiger Belegbestand:\n- ${fehler.join("\n- ")}`);
-          let alt = {};
-          try { alt = require("./reports/belege.json"); } catch {}
-          const bericht = { ...alt, erzeugt: new Date().toISOString(), abrufe: Number(alt.abrufe || 0), gesetze, gepruefteGesetze: auswahl.length, gepruefteNormen: normenGesamt, abrufeProtokolliert: protokolliert };
-          if (!nur.size) Object.assign(bericht, { vollstaendig: true, gesetzeGesamt: 14, normenGesamt });
-          fs.mkdirSync("reports", { recursive: true });
-          fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
-          console.log(`${auswahl.length} Gesetze und ${normenGesamt} Normen vollständig geprüft.`);
+          if(!auswahl.length)fehler.push("Gesetzesauswahl ist leer"); if(!nur.size&&register.gesetze.length!==14)fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
+          if(fehler.length)throw new Error(`Unvollständiger Belegbestand:\n- ${fehler.join("\n- ")}`);
+          let alt={};try{alt=require("./reports/belege.json")}catch{}
+          const bericht={...alt,erzeugt:new Date().toISOString(),abrufe:Number(alt.abrufe||0),gesetze,gepruefteGesetze:auswahl.length,gepruefteNormen:normenGesamt,abrufeProtokolliert:protokolliert};
+          if(!nur.size)Object.assign(bericht,{vollstaendig:true,gesetzeGesamt:14,normenGesamt});
+          fs.mkdirSync("reports",{recursive:true});fs.writeFileSync("reports/belege.json",`${JSON.stringify(bericht,null,2)}\n`);
           NODE
       - name: Änderungen festschreiben
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A belege config/handbuch-karte-*.json reports/belege.json 2>/dev/null || true
-          if git diff --cached --quiet; then echo "Keine Änderungen."; else
-            git commit -m "Amtliche Belege vollständig aktualisiert ($(date -u +%Y-%m-%d))"
-            git pull --rebase --autostash origin main
-            git push origin HEAD:main
-          fi
-      - name: Zusammenfassung
-        if: always()
-        run: |
-          if [ -f reports/belege.json ]; then node -e 'const b=require("./reports/belege.json"); console.log(`## Belegschicht\n\n${b.abrufeProtokolliert ?? "?"} protokollierte Normen · vollständig=${Boolean(b.vollstaendig)}`)' >> "$GITHUB_STEP_SUMMARY"; fi
+          if git diff --cached --quiet; then echo "Keine Änderungen."; else git commit -m "Amtliche Belege vollständig aktualisiert ($(date -u +%Y-%m-%d))"; git pull --rebase --autostash origin main; git push origin HEAD:main; fi
