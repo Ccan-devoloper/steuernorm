@@ -46,15 +46,21 @@ jobs:
           const url = 'https://ao.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html';
           const r = await fetch(url, {headers:{'User-Agent':'steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)','Accept':'text/html,application/xhtml+xml'}, redirect:'follow'});
           const html = await r.text();
-          console.log(`Status ${r.status}; URL ${r.url}; ${html.length} Zeichen; <a: ${(html.match(/<a\b/gi)||[]).length}`);
-          const base = /<base\b[^>]*>/i.exec(html)?.[0] || 'kein <base>';
-          console.log(`Base: ${base.slice(0,300)}`);
-          const links = [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\/a>/gi)].slice(0,20);
-          console.log(`Erkannte href-Links: ${links.length}`);
-          for (const m of links) {
-            const href = m[1] || m[2] || m[3];
-            const label = m[4].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
-            console.log(JSON.stringify({href, label:label.slice(0,100)}));
+          const zaehle = re => (html.match(re) || []).length;
+          console.log(JSON.stringify({status:r.status,url:r.url,zeichen:html.length,contentType:r.headers.get('content-type'),
+            a:zaehle(/<a\b/gi),area:zaehle(/<area\b/gi),href:zaehle(/href\s*=/gi),dataHref:zaehle(/data-href\s*=/gi),
+            form:zaehle(/<form\b/gi),action:zaehle(/action\s*=/gi),script:zaehle(/<script\b/gi),escapedA:zaehle(/&lt;a\b/gi),
+            sectionPath:zaehle(/Erster-Teil/gi),paragraph:zaehle(/§|&sect;|&#167;/gi)}));
+          console.log(`ANFANG: ${JSON.stringify(html.slice(0,800))}`);
+          for (const suchwort of ['href','Erster-Teil','Abgabenordnung/Erster','data-href','window.location','location.href']) {
+            let von = 0, nr = 0;
+            while (nr < 5) {
+              const i = html.toLowerCase().indexOf(suchwort.toLowerCase(), von);
+              if (i < 0) break;
+              console.log(`KONTEXT ${suchwort} ${nr+1}: ${JSON.stringify(html.slice(Math.max(0,i-160), i+360))}`);
+              von = i + suchwort.length;
+              nr++;
+            }
           }
           NODE
 
