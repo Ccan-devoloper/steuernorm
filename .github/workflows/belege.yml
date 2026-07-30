@@ -153,6 +153,7 @@ jobs:
           const fehler = [];
           let gesamtNormen = 0;
           let protokolliert = 0;
+          const gesetze = [];
           for (const meta of ausgewaehlt) {
             const daten = JSON.parse(fs.readFileSync(`data/${meta.datei}`, "utf8"));
             const pfad = `belege/${meta.datei}`;
@@ -168,7 +169,14 @@ jobs:
             gesamtNormen += daten.normen.length;
             const fehlende = daten.normen.filter((norm) => !belege.normen[String(norm.id)]);
             const ohneAbruf = daten.normen.filter((norm) => !belege.normen[String(norm.id)]?.abgerufen);
+            const normen = Object.values(belege.normen);
             protokolliert += daten.normen.length - ohneAbruf.length;
+            gesetze.push({
+              abk: daten.abk,
+              normen: daten.normen.length,
+              mitVerwaltung: normen.filter((n) => n.verwaltung?.length).length,
+              mitRechtsprechung: normen.filter((n) => n.rechtsprechung?.length).length,
+            });
             if (fehlende.length) fehler.push(`${meta.abk}: ${fehlende.length} Normeinträge fehlen`);
             if (ohneAbruf.length) fehler.push(`${meta.abk}: ${ohneAbruf.length} Normen ohne Abrufprotokoll`);
           }
@@ -176,12 +184,17 @@ jobs:
           if (!ausgewaehlt.length) fehler.push("Die Gesetzesauswahl ist leer");
           if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
 
-          const bericht = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
-          if (!nur.size) bericht.vollstaendig = true;
-          bericht.gepruefteGesetze = ausgewaehlt.length;
-          bericht.gepruefteNormen = gesamtNormen;
-          bericht.abrufeProtokolliert = protokolliert;
+          const bisher = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
+          const bericht = {
+            ...bisher,
+            erzeugt: new Date().toISOString(),
+            gesetze,
+            gepruefteGesetze: ausgewaehlt.length,
+            gepruefteNormen: gesamtNormen,
+            abrufeProtokolliert: protokolliert,
+          };
           if (!nur.size) {
+            bericht.vollstaendig = true;
             bericht.gesetzeGesamt = register.gesetze.length;
             bericht.normenGesamt = gesamtNormen;
           }
