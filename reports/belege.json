@@ -1,12 +1,96 @@
 {
-  "erzeugt": "2026-07-30T08:32:50.241Z",
-  "abrufe": 80,
+  "erzeugt": "2026-07-30T10:32:00.606Z",
+  "abrufe": 2424,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "mitVerwaltung": 39,
+      "mitVerwaltung": 154,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "BewG",
+      "normen": 204,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "EStG",
+      "normen": 247,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "KStG",
+      "normen": 48,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "UStG",
+      "normen": 93,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "GewStG",
+      "normen": 41,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "ErbStG",
+      "normen": 47,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "GrStG",
+      "normen": 38,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "FGO",
+      "normen": 173,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "GrEStG",
+      "normen": 28,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "UmwStG",
+      "normen": 28,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "AStG",
+      "normen": 23,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "SolzG",
+      "normen": 6,
+      "mitVerwaltung": 0,
+      "mitRechtsprechung": 0
+    },
+    {
+      "abk": "InvStG",
+      "normen": 58,
+      "mitVerwaltung": 0,
       "mitRechtsprechung": 0
     }
-  ]
+  ],
+  "gepruefteGesetze": 14,
+  "gepruefteNormen": 1537,
+  "abrufeProtokolliert": 1537,
+  "vollstaendig": true,
+  "gesetzeGesamt": 14,
+  "normenGesamt": 1537
 }
