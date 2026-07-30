@@ -53,22 +53,49 @@ jobs:
               raise SystemExit(f'Erwartet {len(erwartete_laengen)} Teile, gefunden: {len(teile)}')
 
           stuecke = []
-          for datei, erwartet in zip(teile, erwartete_laengen):
+          fehlerteil = None
+          for index, (datei, erwartet) in enumerate(zip(teile, erwartete_laengen)):
               text = ''.join(datei.read_text(encoding='utf-8').split())
               print(f'{datei}: {len(text)} Zeichen')
-              if len(text) != erwartet:
+              if len(text) == erwartet:
+                  stuecke.append(text)
+              elif len(text) == erwartet + 1 and fehlerteil is None:
+                  fehlerteil = index
+                  stuecke.append(text)
+              else:
                   raise SystemExit(f'{datei}: {len(text)} statt {erwartet} Zeichen')
-              stuecke.append(text)
+
+          ziel_hash = 'dd467febab8280b8eae4d23c75083c4b1330c24042802bbbc2286c4f34c3b394'
+
+          def pruefe(kodiert):
+              try:
+                  roh = base64.b64decode(kodiert, validate=True)
+              except Exception:
+                  return None
+              return roh if hashlib.sha256(roh).hexdigest() == ziel_hash else None
 
           kodiert = ''.join(stuecke)
-          if len(kodiert) != 100412:
+          roh = None
+          if len(kodiert) == 100412:
+              roh = pruefe(kodiert)
+          elif len(kodiert) == 100413 and fehlerteil is not None:
+              prefix = ''.join(stuecke[:fehlerteil])
+              teil = stuecke[fehlerteil]
+              suffix = ''.join(stuecke[fehlerteil + 1:])
+              print(f'Ein zusätzliches Zeichen in {teile[fehlerteil]} wird prüfsummengestützt lokalisiert.')
+              for position in range(len(teil)):
+                  kandidat = prefix + teil[:position] + teil[position + 1:] + suffix
+                  roh = pruefe(kandidat)
+                  if roh is not None:
+                      print(f'Zusätzliches Zeichen an Position {position} eindeutig entfernt.')
+                      kodiert = kandidat
+                      break
+          else:
               raise SystemExit(f'Falsche Gesamtlänge: {len(kodiert)}')
-          roh = base64.b64decode(kodiert, validate=True)
-          pruefsumme = hashlib.sha256(roh).hexdigest()
-          erwartet = 'dd467febab8280b8eae4d23c75083c4b1330c24042802bbbc2286c4f34c3b394'
-          print(f'Archiv-SHA-256: {pruefsumme}')
-          if pruefsumme != erwartet:
-              raise SystemExit('Archiv-Prüfsumme stimmt nicht.')
+
+          if roh is None:
+              raise SystemExit('Keine Variante erreicht die erwartete Archiv-Prüfsumme.')
+          print(f'Archiv-SHA-256: {hashlib.sha256(roh).hexdigest()}')
 
           archiv = pathlib.Path('/tmp/steuernorm-v4-final.tar.gz')
           archiv.write_bytes(roh)
