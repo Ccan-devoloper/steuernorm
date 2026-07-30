@@ -5,33 +5,33 @@
     {
       "gesetz": "AO",
       "abk": "AEAO",
-      "name": "Anwendungserlass zur Abgabenordnung",
+      "name": "Amtliches AO-Handbuch mit Anwendungserlass",
       "jahrgang": "2025",
-      "start": "https://ao.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html",
-      "prefix": "https://ao.bundesfinanzministerium.de/ao/2025/"
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/Meta/Inhaltsverzeichnis/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/"
     },
     {
       "gesetz": "EStG",
       "abk": "EStR/EStH",
       "name": "Amtliches Einkommensteuer-Handbuch",
       "jahrgang": "2025",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/A-Einkommensteuergesetz/inhalt.html",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/Meta/Inhaltsverzeichnis/inhalt.html",
       "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/"
     },
     {
       "gesetz": "UStG",
       "abk": "UStAE",
       "name": "Amtliche Umsatzsteuer-Handausgabe",
-      "jahrgang": "2025",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2025/inhalt.html",
-      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2025/"
+      "jahrgang": "2024",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2024/Meta/Inhaltsverzeichnis/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2024/"
     },
     {
       "gesetz": "KStG",
       "abk": "KStR/KStH",
       "name": "Amtliches Körperschaftsteuer-Handbuch",
       "jahrgang": "2022",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/ksth/2022/inhalt.html",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/ksth/2022/Meta/Inhaltsuebersicht/inhalt.html",
       "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/ksth/2022/"
     },
     {
@@ -39,23 +39,23 @@
       "abk": "GewStR/GewStH",
       "name": "Amtliches Gewerbesteuer-Handbuch",
       "jahrgang": "2024",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/inhalt.html",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/Meta/Inhaltsuebersicht/inhalt.html",
       "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/"
     },
     {
       "gesetz": "ErbStG",
       "abk": "ErbStR/ErbStH",
-      "name": "Amtliches Erbschaftsteuer-Handbuch",
-      "jahrgang": "2024",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2024/inhalt.html",
-      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2024/"
+      "name": "Amtliches Erbschaftsteuer-Handbuch 2020 mit Richtlinien und Hinweisen 2019",
+      "jahrgang": "2020",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2020/Meta/Inhaltsverzeichnis/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2020/"
     },
     {
       "gesetz": "BewG",
       "abk": "AEBewGrSt 2025",
       "name": "Amtliches Handbuch Bewertung/Grundsteuer 2022/2025",
       "jahrgang": "2022/2025",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/inhalt.html",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/Meta/Inhaltsuebersicht/inhalt.html",
       "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/"
     },
     {
@@ -63,7 +63,7 @@
       "abk": "AEGrStG 2025",
       "name": "Amtliches Handbuch Bewertung/Grundsteuer 2022/2025",
       "jahrgang": "2022/2025",
-      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/inhalt.html",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/Meta/Inhaltsuebersicht/inhalt.html",
       "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/"
     }
   ],

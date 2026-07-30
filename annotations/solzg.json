@@ -3,12 +3,13 @@
   "titel": "Solidaritätszuschlaggesetz",
   "format": 3,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "openai/gpt-4.1-mini",
+    "openai/gpt-4o-mini"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-07-29T13:14:08.003Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-07-30T09:35:32.531Z",
   "quelle": "https://www.gesetze-im-internet.de/solzg_1995/",
   "stand": [
     {
@@ -41,12 +42,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 46,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Zur Einkommensteuer und zur Körperschaftsteuer' steht im Vorfeld, es bildet den Tatbestand, das finite Verb im Hauptsatz ist die Rechtsfolge."
             },
             {
               "art": "rf",
@@ -54,12 +56,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 47,
               "laenge": 58,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Zur Einkommensteuer und zur Körperschaftsteuer' steht im Vorfeld, es bildet den Tatbestand, das finite Verb im Hauptsatz ist die Rechtsfolge."
             }
           ]
         },
@@ -76,12 +79,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 107,
               "laenge": 58,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Festsetzung und Erhebung des Solidaritätszuschlags' steht im Vorfeld, es bildet den Tatbestand. Die Ausnahme wird als Ausnahmeregelung erfasst. Das finite Verb im K"
             },
             {
               "art": "rf",
@@ -89,12 +93,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 166,
               "laenge": 159,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.433,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Festsetzung und Erhebung des Solidaritätszuschlags' steht im Vorfeld, somit ist es Tatbestand. Die Ausnahme wird als Ausnahmen erfasst. Das finite Verb 'sind' im Ha"
             },
             {
               "art": "ausn",
@@ -102,12 +107,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 216,
               "laenge": 109,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Festsetzung und Erhebung des Solidaritätszuschlags' steht im Vorfeld, es bildet den Tatbestand. Die Ausnahme wird als Ausnahmeregelung erfasst. Das finite Verb im K"
             }
           ]
         },
@@ -124,12 +130,13 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 405,
               "laenge": 159,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz steht in Verberststellung mit dem uneingeleiteten Bedingungssatz 'Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben' als Tatbestand. Der folgende Hauptsatz ist die "
             }
           ]
         },
@@ -146,12 +153,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 830,
               "laenge": 51,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz steht in Verberststellung mit dem uneingeleiteten Bedingungssatz 'Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten o"
             }
           ]
         },
@@ -164,15 +172,30 @@
           "elemente": [
             {
               "art": "rf",
+              "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten",
+              "pfad": "Abs. 4 Satz 1",
+              "von": 932,
+              "laenge": 117,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld 'Die Vorauszahlungen auf den Solidaritätszuschlag' ist Normgegenstand, kein Tatbestandsmerkmal. Die Ausnahme wird als Ausnahmeregelung erfasst. Die Rechtsfolge ist der Hauptsatz."
+            },
+            {
+              "art": "rf",
               "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
               "pfad": "Abs. 4 Satz 1",
               "von": 932,
               "laenge": 179,
-              "konfidenz": 0.54,
+              "konfidenz": 0.405,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
+              "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             },
             {
@@ -181,12 +204,13 @@
               "pfad": "Abs. 4 Satz 1",
               "von": 1051,
               "laenge": 60,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das Vorfeld 'Die Vorauszahlungen auf den Solidaritätszuschlag' ist Normgegenstand, kein Tatbestandsmerkmal. Die Ausnahme wird als Ausnahmeregelung erfasst. Die Rechtsfolge ist der Hauptsatz."
             }
           ]
         },
@@ -203,12 +227,13 @@
               "pfad": "Abs. 4 Satz 2",
               "von": 1113,
               "laenge": 99,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionalsatz mit „solange\""
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist' steht im Vorfeld, es bildet den Tatbestand. Das finite Verb im Haupts"
             },
             {
               "art": "rf",
@@ -216,12 +241,13 @@
               "pfad": "Abs. 4 Satz 2",
               "von": 1214,
               "laenge": 135,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist' steht im Vorfeld, es bildet den Tatbestand. Das finite Verb im Haupts"
             }
           ]
         },
@@ -233,17 +259,18 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+              "art": "rf",
+              "text": "ist insoweit nicht anzuwenden",
               "pfad": "Abs. 4 Satz 3",
-              "von": 1351,
-              "laenge": 38,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "von": 1390,
+              "laenge": 29,
+              "konfidenz": 0.367,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial '§ 240 Abs. 1 Satz 3 der Abgabenordnung' steht im Vorfeld, es bildet den Tatbestand. Die Rechtsfolge ist der Hauptsatz."
             },
             {
               "art": "rf",
@@ -251,12 +278,27 @@
               "pfad": "Abs. 4 Satz 3",
               "von": 1390,
               "laenge": 86,
-              "konfidenz": 0.54,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.39,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, was auf einen Anwendungsfall hinweist."
+            },
+            {
+              "art": "rf",
+              "text": "§ 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+              "pfad": "Abs. 4 Satz 3",
+              "von": 1421,
+              "laenge": 55,
+              "konfidenz": 0.567,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial '§ 240 Abs. 1 Satz 3 der Abgabenordnung' steht im Vorfeld, es bildet den Tatbestand. Die Rechtsfolge ist der Hauptsatz."
             }
           ]
         },
@@ -273,12 +315,13 @@
               "pfad": "Abs. 5 Satz 1",
               "von": 1478,
               "laenge": 53,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Mit einem Rechtsbehelf gegen den Solidaritätszuschlag' steht im Vorfeld, es bildet den Tatbestand. Die Rechtsfolge ist der Hauptsatz."
             },
             {
               "art": "rf",
@@ -286,12 +329,13 @@
               "pfad": "Abs. 5 Satz 1",
               "von": 1532,
               "laenge": 99,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.617,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, was auf einen Anwendungsfall hinweist."
             }
           ]
         },
@@ -308,12 +352,13 @@
               "pfad": "Abs. 5 Satz 2",
               "von": 1672,
               "laenge": 49,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz steht in Verberststellung mit dem uneingeleiteten Bedingungssatz 'Wird die Bemessungsgrundlage geändert' als Tatbestand. Der folgende Hauptsatz ist die Rechtsfolge."
             }
           ]
         }
@@ -329,31 +374,29 @@
               "n": "1.",
               "t": "Zur Einkommensteuer und zur Körperschaftsteuer",
               "pfad": "Abs. 1 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "Auf die Festsetzung und Erhebung des Solidaritätszuschlags",
               "pfad": "Abs. 2 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
               "pfad": "Abs. 4 Satz 2",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "4.",
-              "t": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
-              "pfad": "Abs. 4 Satz 3",
-              "konfidenz": 0.6
-            },
-            {
-              "n": "5.",
               "t": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
               "pfad": "Abs. 5 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             }
           ]
         },
@@ -366,13 +409,15 @@
               "n": "1.",
               "t": "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
               "pfad": "Abs. 2 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
               "pfad": "Abs. 4 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             }
           ]
         },
@@ -385,55 +430,85 @@
               "n": "1.",
               "t": "wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben",
               "pfad": "Abs. 1 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
               "pfad": "Abs. 2 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.433,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
               "pfad": "Abs. 2 Satz 2",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "4.",
               "t": "gilt dies für den Solidaritätszuschlag entsprechend",
               "pfad": "Abs. 3 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "5.",
-              "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
+              "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten",
               "pfad": "Abs. 4 Satz 1",
-              "konfidenz": 0.54
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "6.",
-              "t": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
-              "pfad": "Abs. 4 Satz 2",
-              "konfidenz": 0.6
+              "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
+              "pfad": "Abs. 4 Satz 1",
+              "konfidenz": 0.405,
+              "beleg": null
             },
             {
               "n": "7.",
-              "t": "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
-              "pfad": "Abs. 4 Satz 3",
-              "konfidenz": 0.54
+              "t": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
+              "pfad": "Abs. 4 Satz 2",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "8.",
-              "t": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
-              "pfad": "Abs. 5 Satz 1",
-              "konfidenz": 0.6
+              "t": "ist insoweit nicht anzuwenden",
+              "pfad": "Abs. 4 Satz 3",
+              "konfidenz": 0.367,
+              "beleg": null
             },
             {
               "n": "9.",
+              "t": "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+              "pfad": "Abs. 4 Satz 3",
+              "konfidenz": 0.39,
+              "beleg": null
+            },
+            {
+              "n": "10.",
+              "t": "§ 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+              "pfad": "Abs. 4 Satz 3",
+              "konfidenz": 0.567,
+              "beleg": null
+            },
+            {
+              "n": "11.",
+              "t": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
+              "pfad": "Abs. 5 Satz 1",
+              "konfidenz": 0.617,
+              "beleg": null
+            },
+            {
+              "n": "12.",
               "t": "ändert sich der Solidaritätszuschlag entsprechend",
               "pfad": "Abs. 5 Satz 2",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             }
           ]
         }
@@ -442,7 +517,6 @@
         "Zur Einkommensteuer und zur Körperschaftsteuer",
         "Auf die Festsetzung und Erhebung des Solidaritätszuschlags",
         "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
-        "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
         "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag"
       ],
       "rf": [
@@ -450,9 +524,12 @@
         "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
         "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
         "gilt dies für den Solidaritätszuschlag entsprechend",
+        "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten",
         "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
         "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
+        "ist insoweit nicht anzuwenden",
         "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+        "§ 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
         "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
         "ändert sich der Solidaritätszuschlag entsprechend"
       ],
@@ -460,16 +537,19 @@
         "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
         "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden"
       ],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.592,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "konfidenz": 0.763,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 0.667,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.008Z"
+      "aktualisiert": "2026-07-30T09:20:43.935Z"
     },
     "2": {
       "typ": "gemischt",
@@ -487,16 +567,17 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Abgabepflichtig",
+              "text": "Abgabepflichtig sind",
               "pfad": "Satz 1",
               "von": 0,
-              "laenge": 15,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 20,
+              "konfidenz": 0.6,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das prädikative Adjektiv 'Abgabepflichtig', daher ist es die Rechtsfolge, der Nachfeldsatz enthält die Tatbestandsmerkmale."
             }
           ]
         },
@@ -513,11 +594,12 @@
               "pfad": "Nr. 1",
               "von": 24,
               "laenge": 91,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
+              "beleg": null,
               "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
           ]
@@ -535,11 +617,12 @@
               "pfad": "Nr. 2",
               "von": 120,
               "laenge": 99,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
+              "beleg": null,
               "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
           ]
@@ -557,11 +640,12 @@
               "pfad": "Nr. 3",
               "von": 224,
               "laenge": 144,
-              "konfidenz": 0.54,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.57,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
+              "beleg": null,
               "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
           ]
@@ -578,19 +662,22 @@
               "n": "1.",
               "t": "natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind",
               "pfad": "Nr. 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.633,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind",
               "pfad": "Nr. 2",
-              "konfidenz": 0.6
+              "konfidenz": 0.633,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig sind",
               "pfad": "Nr. 3",
-              "konfidenz": 0.54
+              "konfidenz": 0.57,
+              "beleg": null
             }
           ]
         },
@@ -601,9 +688,10 @@
           "sub": [
             {
               "n": "1.",
-              "t": "Abgabepflichtig",
+              "t": "Abgabepflichtig sind",
               "pfad": "Satz 1",
-              "konfidenz": 0.45
+              "konfidenz": 0.6,
+              "beleg": null
             }
           ]
         }
@@ -614,19 +702,22 @@
         "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig sind"
       ],
       "rf": [
-        "Abgabepflichtig"
+        "Abgabepflichtig sind"
       ],
       "ausnahmen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.547,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "konfidenz": 0.609,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 0.25,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 25 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedadfc31d59f0fd0989ac390758b6081daf85482b46b061e4e6ef1a94d281ba",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.008Z"
+      "aktualisiert": "2026-07-30T09:21:27.667Z"
     },
     "3": {
       "typ": "gemischt",
@@ -645,17 +736,32 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5",
+              "pfad": "Abs. 1 Satz 1",
+              "von": 0,
+              "laenge": 71,
+              "konfidenz": 0.475,
+              "stimmen": 1,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das finite Verb 'bemisst sich' steht an zweiter Stelle, das Vorfeld enthält das prädikative Partizip 'bemisst sich', somit ist das Vorfeld Rechtsfolge und der Satz ist ein Tarif mit Ausnahme."
+            },
+            {
               "art": "ausn",
               "text": "vorbehaltlich der Absätze 2 bis 5",
               "pfad": "Abs. 1 Satz 1",
               "von": 38,
               "laenge": 33,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das finite Verb 'bemisst sich' steht an zweiter Stelle, das Vorfeld enthält das prädikative Partizip 'bemisst sich', somit ist das Vorfeld Rechtsfolge und der Satz ist ein Tarif mit Ausnahme."
             }
           ]
         },
@@ -672,12 +778,13 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 76,
               "laenge": 83,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Bedingungsteil vor dem Doppelpunkt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die 2"
             },
             {
               "art": "rf",
@@ -685,12 +792,13 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 161,
               "laenge": 230,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Anordnungsteil nach dem Doppelpunkt"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die 2"
             }
           ]
         },
@@ -707,12 +815,13 @@
               "pfad": "Abs. 1 Nr. 2",
               "von": 396,
               "laenge": 82,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Bedingungsteil vor dem Doppelpunkt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die 2"
             },
             {
               "art": "rf",
@@ -720,12 +829,13 @@
               "pfad": "Abs. 1 Nr. 2",
               "von": 480,
               "laenge": 73,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Anordnungsteil nach dem Doppelpunkt"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die 2"
             }
           ]
         },
@@ -742,12 +852,13 @@
               "pfad": "Abs. 1 Nr. 3",
               "von": 558,
               "laenge": 32,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Bedingungsteil vor dem Doppelpunkt"
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit Lohnsteuer zu erheben ist' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die Rechtsfolge. Die Aufzählung a) und b) sind Tatbestan"
             },
             {
               "art": "rf",
@@ -755,12 +866,13 @@
               "pfad": "Abs. 1 Nr. 3",
               "von": 592,
               "laenge": 160,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Anordnungsteil nach dem Doppelpunkt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit Lohnsteuer zu erheben ist' steht im Vorfeld, somit ist es Tatbestand, der nach Doppelpunkt folgende Teil ist die Rechtsfolge. Die Aufzählung a) und b) sind Tatbestan"
             }
           ]
         },
@@ -777,12 +889,13 @@
               "pfad": "Abs. 1 Buchst. b",
               "von": 757,
               "laenge": 57,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Kein finites Verb im Satz, daher keine Zerlegung möglich, Satz ist Aussage."
             }
           ]
         },
@@ -799,12 +912,97 @@
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
               "von": 816,
               "laenge": 54,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
+              "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "tb",
+              "text": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 819,
+              "laenge": 55,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
+            },
+            {
+              "art": "rf",
+              "text": "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 876,
+              "laenge": 84,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
+            },
+            {
+              "art": "tb",
+              "text": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 965,
+              "laenge": 117,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
+            },
+            {
+              "art": "rf",
+              "text": "nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1084,
+              "laenge": 116,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
+            },
+            {
+              "art": "tb",
+              "text": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1205,
+              "laenge": 116,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
+            },
+            {
+              "art": "rf",
+              "text": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1323,
+              "laenge": 59,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die weiteren Nummern 5 und 6 im "
             }
           ]
         },
@@ -816,30 +1014,18 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Bei der Veranlagung zur Einkommensteuer",
-              "pfad": "Abs. 2 Satz 1",
-              "von": 1384,
-              "laenge": 39,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
               "art": "rf",
               "text": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
               "pfad": "Abs. 2 Satz 1",
               "von": 1424,
               "laenge": 287,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Bei der Veranlagung zur Einkommensteuer' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge."
             }
           ]
         },
@@ -856,12 +1042,13 @@
               "pfad": "Abs. 2a Satz 1",
               "von": 1713,
               "laenge": 60,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit einem uneingeleiteten Bedingungssatz mit 'wenn', somit ist der Bedingungssatz Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die Ausnahme steht am Satzanfang."
             },
             {
               "art": "rf",
@@ -869,12 +1056,13 @@
               "pfad": "Abs. 2a Satz 1",
               "von": 1774,
               "laenge": 186,
-              "konfidenz": 0.54,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.72,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit einem uneingeleiteten Bedingungssatz mit 'wenn', somit ist der Bedingungssatz Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die Ausnahme steht am Satzanfang."
             }
           ]
         },
@@ -891,12 +1079,13 @@
               "pfad": "Abs. 2a Satz 2",
               "von": 2651,
               "laenge": 101,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist"
             },
             {
               "art": "rf",
@@ -904,12 +1093,13 @@
               "pfad": "Abs. 2a Satz 2",
               "von": 2753,
               "laenge": 82,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist"
             }
           ]
         },
@@ -926,12 +1116,13 @@
               "pfad": "Abs. 2a Satz 3",
               "von": 2837,
               "laenge": 51,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Bei Anwendung des § 39f des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge."
             },
             {
               "art": "rf",
@@ -939,12 +1130,13 @@
               "pfad": "Abs. 2a Satz 3",
               "von": 2889,
               "laenge": 223,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Bei Anwendung des § 39f des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge."
             }
           ]
         },
@@ -961,12 +1153,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 3139,
               "laenge": 58,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Das Vorfeld ist Normgegenstand, wird nicht erfasst."
             },
             {
               "art": "tb",
@@ -974,12 +1167,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 3199,
               "laenge": 146,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Das Vorfeld ist Normgegenstand, wird nicht erfasst."
             }
           ]
         },
@@ -989,21 +1183,7 @@
           "bis": 3429,
           "typ": "aussage",
           "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro",
-              "pfad": "Abs. 3 Nr. 1",
-              "von": 3350,
-              "laenge": 78,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Abs. 3 Nr. 2",
@@ -1011,27 +1191,13 @@
           "bis": 3462,
           "typ": "aussage",
           "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "in anderen Fällen 20 350 Euro",
-              "pfad": "Abs. 3 Nr. 2",
-              "von": 3433,
-              "laenge": 29,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Abs. 3 Satz 1 (Teil 2)",
           "von": 3463,
           "bis": 3474,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": []
         },
@@ -1048,12 +1214,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 3475,
               "laenge": 77,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die Ausnah"
             },
             {
               "art": "rf",
@@ -1061,12 +1228,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 3553,
               "laenge": 63,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die Ausnah"
             },
             {
               "art": "ausn",
@@ -1074,12 +1242,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 3582,
               "laenge": 34,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.525,
+              "stimmen": 1,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge. Die Ausnah"
             }
           ]
         },
@@ -1096,12 +1265,13 @@
               "pfad": "Abs. 4 Satz 1",
               "von": 3618,
               "laenge": 36,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug vom laufenden Arbeitslohn' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             },
             {
               "art": "rf",
@@ -1109,12 +1279,13 @@
               "pfad": "Abs. 4 Satz 1",
               "von": 3655,
               "laenge": 43,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug vom laufenden Arbeitslohn' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             },
             {
               "art": "tb",
@@ -1122,12 +1293,13 @@
               "pfad": "Abs. 4 Satz 1",
               "von": 3700,
               "laenge": 63,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug vom laufenden Arbeitslohn' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             }
           ]
         },
@@ -1160,12 +1332,13 @@
               "pfad": "Abs. 4 Satz 1 (Teil 2)",
               "von": 4018,
               "laenge": 32,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Kein finites Verb im Satz, daher keine Zerlegung möglich, Satz ist Aussage."
             }
           ]
         },
@@ -1198,12 +1371,13 @@
               "pfad": "Abs. 4 Satz 1 (Teil 3)",
               "von": 4308,
               "laenge": 28,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Kein finites Verb im Satz, daher keine Zerlegung möglich, Satz ist Aussage."
             }
           ]
         },
@@ -1236,12 +1410,13 @@
               "pfad": "Abs. 4a Satz 1",
               "von": 4596,
               "laenge": 36,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug von einem sonstigen Bezug' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             },
             {
               "art": "rf",
@@ -1249,12 +1424,13 @@
               "pfad": "Abs. 4a Satz 1",
               "von": 4633,
               "laenge": 43,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug von einem sonstigen Bezug' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             },
             {
               "art": "tb",
@@ -1262,12 +1438,13 @@
               "pfad": "Abs. 4a Satz 1",
               "von": 4678,
               "laenge": 294,
-              "konfidenz": 0.42,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.7,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Satz beginnt mit 'wenn', somit ist der Bedingungssatz Tatbestand, das konditionale Adverbial 'Beim Abzug von einem sonstigen Bezug' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite"
             }
           ]
         },
@@ -1292,12 +1469,13 @@
               "pfad": "Abs. 4a Nr. 2",
               "von": 5063,
               "laenge": 64,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Kein finites Verb im Satz, daher keine Zerlegung möglich, Satz ist Aussage."
             }
           ]
         },
@@ -1314,12 +1492,13 @@
               "pfad": "Abs. 4a Satz 1 (Teil 2)",
               "von": 5129,
               "laenge": 78,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge."
             },
             {
               "art": "rf",
@@ -1327,12 +1506,13 @@
               "pfad": "Abs. 4a Satz 1 (Teil 2)",
               "von": 5208,
               "laenge": 16,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.75,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes' steht im Vorfeld, somit Tatbestand, der Hauptsatz mit finite Verb ist Rechtsfolge."
             }
           ]
         },
@@ -1340,34 +1520,36 @@
           "pfad": "Abs. 5 Satz 1",
           "von": 5226,
           "bis": 5501,
-          "typ": "tarif",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
-            {
-              "art": "tb",
-              "text": "Beim Lohnsteuer-Jahresausgleich",
-              "pfad": "Abs. 5 Satz 1",
-              "von": 5226,
-              "laenge": 31,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
-            },
             {
               "art": "rf",
               "text": "ist der Solidaritätszuschlag nur zu ermitteln",
               "pfad": "Abs. 5 Satz 1",
               "von": 5258,
               "laenge": 45,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 2,
+              "laeufe": 2,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Hauptsatzprädikat"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3"
+            },
+            {
+              "art": "tb",
+              "text": "wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt",
+              "pfad": "Abs. 5 Satz 1",
+              "von": 5305,
+              "laenge": 195,
+              "konfidenz": 0.7,
+              "stimmen": 2,
+              "laeufe": 2,
+              "syntax": true,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das konditionale Adverbial 'wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3"
             }
           ]
         }
@@ -1383,127 +1565,148 @@
               "n": "1.",
               "t": "soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist",
               "pfad": "Abs. 1 Nr. 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind",
               "pfad": "Abs. 1 Nr. 2",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "soweit Lohnsteuer zu erheben ist",
               "pfad": "Abs. 1 Nr. 3",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "4.",
               "t": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
               "pfad": "Abs. 1 Buchst. b",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "5.",
               "t": "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen",
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "konfidenz": 0.6
+              "konfidenz": 0.45,
+              "beleg": null
             },
             {
               "n": "6.",
-              "t": "Bei der Veranlagung zur Einkommensteuer",
-              "pfad": "Abs. 2 Satz 1",
-              "konfidenz": 0.6
+              "t": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "7.",
-              "t": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
-              "pfad": "Abs. 2a Satz 2",
-              "konfidenz": 0.6
+              "t": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "8.",
-              "t": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
-              "pfad": "Abs. 2a Satz 3",
-              "konfidenz": 0.6
+              "t": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "9.",
-              "t": "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
-              "pfad": "Abs. 3 Satz 1",
-              "konfidenz": 0.6
+              "t": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
+              "pfad": "Abs. 2a Satz 2",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "10.",
-              "t": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro",
-              "pfad": "Abs. 3 Nr. 1",
-              "konfidenz": 0.6
+              "t": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
+              "pfad": "Abs. 2a Satz 3",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "11.",
-              "t": "in anderen Fällen 20 350 Euro",
-              "pfad": "Abs. 3 Nr. 2",
-              "konfidenz": 0.6
+              "t": "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
+              "pfad": "Abs. 3 Satz 1",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "12.",
               "t": "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
               "pfad": "Abs. 3 Satz 2",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "13.",
               "t": "Beim Abzug vom laufenden Arbeitslohn",
               "pfad": "Abs. 4 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "14.",
               "t": "wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum",
               "pfad": "Abs. 4 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "15.",
               "t": "2. bei wöchentlicher Lohnzahlung",
               "pfad": "Abs. 4 Satz 1 (Teil 2)",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "16.",
               "t": "3. bei täglicher Lohnzahlung",
               "pfad": "Abs. 4 Satz 1 (Teil 3)",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "17.",
               "t": "Beim Abzug von einem sonstigen Bezug",
               "pfad": "Abs. 4a Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "18.",
               "t": "wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt",
               "pfad": "Abs. 4a Satz 1",
-              "konfidenz": 0.42
+              "konfidenz": 0.7,
+              "beleg": null
             },
             {
               "n": "19.",
               "t": "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1",
               "pfad": "Abs. 4a Nr. 2",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "20.",
               "t": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes",
               "pfad": "Abs. 4a Satz 1 (Teil 2)",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "21.",
-              "t": "Beim Lohnsteuer-Jahresausgleich",
+              "t": "wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt",
               "pfad": "Abs. 5 Satz 1",
-              "konfidenz": 0.45
+              "konfidenz": 0.7,
+              "beleg": null
             }
           ]
         },
@@ -1516,19 +1719,22 @@
               "n": "1.",
               "t": "vorbehaltlich der Absätze 2 bis 5",
               "pfad": "Abs. 1 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
               "pfad": "Abs. 2a Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "ungeachtet des Satzes 1 zu erheben",
               "pfad": "Abs. 3 Satz 2",
-              "konfidenz": 0.6
+              "konfidenz": 0.525,
+              "beleg": null
             }
           ]
         },
@@ -1539,81 +1745,122 @@
           "sub": [
             {
               "n": "1.",
-              "t": "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
-              "pfad": "Abs. 1 Nr. 1",
-              "konfidenz": 0.6
+              "t": "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5",
+              "pfad": "Abs. 1 Satz 1",
+              "konfidenz": 0.475,
+              "beleg": null
             },
             {
               "n": "2.",
-              "t": "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
-              "pfad": "Abs. 1 Nr. 2",
-              "konfidenz": 0.6
+              "t": "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
+              "pfad": "Abs. 1 Nr. 1",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "3.",
-              "t": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
-              "pfad": "Abs. 1 Nr. 3",
-              "konfidenz": 0.6
+              "t": "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
+              "pfad": "Abs. 1 Nr. 2",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "4.",
-              "t": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
-              "pfad": "Abs. 2 Satz 1",
-              "konfidenz": 0.48
+              "t": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
+              "pfad": "Abs. 1 Nr. 3",
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "5.",
-              "t": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
-              "pfad": "Abs. 2a Satz 1",
-              "konfidenz": 0.54
+              "t": "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "6.",
-              "t": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend",
-              "pfad": "Abs. 2a Satz 2",
-              "konfidenz": 0.6
+              "t": "nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "7.",
-              "t": "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt",
-              "pfad": "Abs. 2a Satz 3",
-              "konfidenz": 0.48
+              "t": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
             },
             {
               "n": "8.",
-              "t": "ist von einkommensteuerpflichtigen Personen nur zu erheben",
-              "pfad": "Abs. 3 Satz 1",
-              "konfidenz": 0.6
+              "t": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
+              "pfad": "Abs. 2 Satz 1",
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "9.",
-              "t": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben",
-              "pfad": "Abs. 3 Satz 2",
-              "konfidenz": 0.6
+              "t": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
+              "pfad": "Abs. 2a Satz 1",
+              "konfidenz": 0.72,
+              "beleg": null
             },
             {
               "n": "10.",
-              "t": "ist der Solidaritätszuschlag nur zu erheben",
-              "pfad": "Abs. 4 Satz 1",
-              "konfidenz": 0.6
+              "t": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend",
+              "pfad": "Abs. 2a Satz 2",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "11.",
-              "t": "ist der Solidaritätszuschlag nur zu erheben",
-              "pfad": "Abs. 4a Satz 1",
-              "konfidenz": 0.6
+              "t": "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt",
+              "pfad": "Abs. 2a Satz 3",
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "12.",
-              "t": "finden Anwendung",
-              "pfad": "Abs. 4a Satz 1 (Teil 2)",
-              "konfidenz": 0.45
+              "t": "ist von einkommensteuerpflichtigen Personen nur zu erheben",
+              "pfad": "Abs. 3 Satz 1",
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "13.",
+              "t": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben",
+              "pfad": "Abs. 3 Satz 2",
+              "konfidenz": 1,
+              "beleg": null
+            },
+            {
+              "n": "14.",
+              "t": "ist der Solidaritätszuschlag nur zu erheben",
+              "pfad": "Abs. 4 Satz 1",
+              "konfidenz": 1,
+              "beleg": null
+            },
+            {
+              "n": "15.",
+              "t": "ist der Solidaritätszuschlag nur zu erheben",
+              "pfad": "Abs. 4a Satz 1",
+              "konfidenz": 1,
+              "beleg": null
+            },
+            {
+              "n": "16.",
+              "t": "finden Anwendung",
+              "pfad": "Abs. 4a Satz 1 (Teil 2)",
+              "konfidenz": 0.75,
+              "beleg": null
+            },
+            {
+              "n": "17.",
               "t": "ist der Solidaritätszuschlag nur zu ermitteln",
               "pfad": "Abs. 5 Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             }
           ]
         }
@@ -1624,12 +1871,12 @@
         "soweit Lohnsteuer zu erheben ist",
         "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
         "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen",
-        "Bei der Veranlagung zur Einkommensteuer",
+        "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+        "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes",
+        "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
         "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
         "Bei Anwendung des § 39f des Einkommensteuergesetzes",
         "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
-        "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro",
-        "in anderen Fällen 20 350 Euro",
         "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
         "Beim Abzug vom laufenden Arbeitslohn",
         "wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum",
@@ -1639,12 +1886,16 @@
         "wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt",
         "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1",
         "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes",
-        "Beim Lohnsteuer-Jahresausgleich"
+        "wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt"
       ],
       "rf": [
+        "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5",
         "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
         "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
         "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
+        "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+        "nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+        "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
         "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
         "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
         "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend",
@@ -1661,22 +1912,26 @@
         "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
         "ungeachtet des Satzes 1 zu erheben"
       ],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.579,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "konfidenz": 0.874,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 0.927,
+      "laeufe": 2,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 2 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 93 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "12161727c2ccb1e5213cdd02e6b2033958cba2092a019be75410e30bbbda4e4b",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.010Z"
+      "aktualisiert": "2026-07-30T09:29:20.958Z"
     },
     "4": {
       "typ": "gemischt",
       "typen": [
         "tarif",
-        "rechenregel"
+        "rechenregel",
+        "konditional"
       ],
       "saetze": [
         {
@@ -1692,12 +1947,13 @@
               "pfad": "Satz 1",
               "von": 25,
               "laenge": 43,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das finite Verb 'beträgt' steht an zweiter Stelle, das Vorfeld ist das Satzsubjekt 'Der Solidaritätszuschlag', somit kein Tatbestand, sondern ein Tarif."
             }
           ]
         },
@@ -1714,12 +1970,13 @@
               "pfad": "Satz 2",
               "von": 73,
               "laenge": 249,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das finite Verb 'beträgt' steht an zweiter Stelle, das Vorfeld ist das Satzsubjekt 'Er', somit kein Tatbestand, sondern ein Tarif."
             }
           ]
         },
@@ -1736,12 +1993,27 @@
               "pfad": "Satz 3",
               "von": 347,
               "laenge": 20,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Rechenregel — vollständig Rechtsfolge"
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Im Vorfeld steht das prädikative Adjektiv 'Bruchteile', daher ist dies die Rechtsfolge."
+            },
+            {
+              "art": "rf",
+              "text": "außer Ansatz",
+              "pfad": "Satz 3",
+              "von": 355,
+              "laenge": 12,
+              "konfidenz": 0.288,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das finite Verb 'bleiben' steht an zweiter Stelle, das Vorfeld ist das Satzsubjekt 'Bruchteile eines Cents', somit keine Tatbestandsmerkmale, sondern eine Rechenregel als Rechtsfolge."
             }
           ]
         },
@@ -1749,21 +2021,64 @@
           "pfad": "Satz 4",
           "von": 369,
           "bis": 587,
-          "typ": "tarif",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
+              "art": "tb",
+              "text": "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes",
+              "pfad": "Satz 4",
+              "von": 369,
+              "laenge": 173,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": true,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das finite Verb 'beträgt' steht an zweiter Stelle, das Vorfeld ist das konditionale Adverbial 'Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes..."
+            },
+            {
+              "art": "rf",
+              "text": "beträgt ungeachtet des Satzes 2 5,5 Prozent",
+              "pfad": "Satz 4",
+              "von": 543,
+              "laenge": 43,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": true,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Im Vorfeld steht das Satzsubjekt 'Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuerg"
+            },
+            {
               "art": "ausn",
-              "text": "ungeachtet des Satzes 2 5,5 Prozent",
+              "text": "ungeachtet des Satzes 2",
               "pfad": "Satz 4",
               "von": 551,
-              "laenge": 35,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "grund": "Ausnahmesignal im Satz"
+              "laenge": 23,
+              "konfidenz": 0.567,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "ausn",
+              "beleg": null,
+              "grund": "Das finite Verb 'beträgt' steht an zweiter Stelle, das Vorfeld ist das konditionale Adverbial 'Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes..."
+            },
+            {
+              "art": "rf",
+              "text": "5,5 Prozent",
+              "pfad": "Satz 4",
+              "von": 575,
+              "laenge": 11,
+              "konfidenz": 0.288,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das finite Verb 'beträgt' steht an zweiter Stelle, das Vorfeld ist das konditionale Adverbial 'Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes..."
             }
           ]
         }
@@ -1771,19 +2086,35 @@
       "schema": [
         {
           "n": "I.",
-          "art": "ausn",
-          "t": "Ausnahmen und Rückausnahmen",
+          "art": "tb",
+          "t": "Voraussetzung",
+          "junktor": null,
           "sub": [
             {
               "n": "1.",
-              "t": "ungeachtet des Satzes 2 5,5 Prozent",
+              "t": "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes",
               "pfad": "Satz 4",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             }
           ]
         },
         {
           "n": "II.",
+          "art": "ausn",
+          "t": "Ausnahmen und Rückausnahmen",
+          "sub": [
+            {
+              "n": "1.",
+              "t": "ungeachtet des Satzes 2",
+              "pfad": "Satz 4",
+              "konfidenz": 0.567,
+              "beleg": null
+            }
+          ]
+        },
+        {
+          "n": "III.",
           "art": "rf",
           "t": "Rechtsfolge",
           "sub": [
@@ -1791,42 +2122,74 @@
               "n": "1.",
               "t": "beträgt 5,5 Prozent der Bemessungsgrundlage",
               "pfad": "Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 1,
+              "beleg": null
             },
             {
               "n": "2.",
               "t": "beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze",
               "pfad": "Satz 2",
-              "konfidenz": 0.48
+              "konfidenz": 0.8,
+              "beleg": null
             },
             {
               "n": "3.",
               "t": "bleiben außer Ansatz",
               "pfad": "Satz 3",
-              "konfidenz": 0.6
+              "konfidenz": 0.817,
+              "beleg": null
+            },
+            {
+              "n": "4.",
+              "t": "außer Ansatz",
+              "pfad": "Satz 3",
+              "konfidenz": 0.288,
+              "beleg": null
+            },
+            {
+              "n": "5.",
+              "t": "beträgt ungeachtet des Satzes 2 5,5 Prozent",
+              "pfad": "Satz 4",
+              "konfidenz": 0.633,
+              "beleg": null
+            },
+            {
+              "n": "6.",
+              "t": "5,5 Prozent",
+              "pfad": "Satz 4",
+              "konfidenz": 0.288,
+              "beleg": null
             }
           ]
         }
       ],
-      "tb": [],
+      "tb": [
+        "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes"
+      ],
       "rf": [
         "beträgt 5,5 Prozent der Bemessungsgrundlage",
         "beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze",
-        "bleiben außer Ansatz"
+        "bleiben außer Ansatz",
+        "außer Ansatz",
+        "beträgt ungeachtet des Satzes 2 5,5 Prozent",
+        "5,5 Prozent"
       ],
       "ausnahmen": [
-        "ungeachtet des Satzes 2 5,5 Prozent"
+        "ungeachtet des Satzes 2"
       ],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.57,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "konfidenz": 0.674,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 0.375,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 38 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.010Z"
+      "aktualisiert": "2026-07-30T09:30:10.449Z"
     },
     "5": {
       "typ": "konditional",
@@ -1847,12 +2210,13 @@
               "pfad": "Satz 1",
               "von": 146,
               "laenge": 71,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist der uneingeleitete Bedingungssatz \"Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt\", er"
             }
           ]
         }
@@ -1867,7 +2231,8 @@
               "n": "1.",
               "t": "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
               "pfad": "Satz 1",
-              "konfidenz": 0.6
+              "konfidenz": 0.8,
+              "beleg": null
             }
           ]
         }
@@ -1877,16 +2242,19 @@
         "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen"
       ],
       "ausnahmen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "konfidenz": 0.8,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 1,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.010Z"
+      "aktualisiert": "2026-07-30T09:30:23.121Z"
     },
     "6": {
       "typ": "anwendung",
@@ -2230,13 +2598,16 @@
       "status": "ohne_merkmale",
       "markierbar": false,
       "konfidenz": 0,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
       "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "a8fe08f695a58fccada782cdf000e1ed2556620c2bcab652ef9e71960ed0ae53",
       "format": 3,
-      "aktualisiert": "2026-07-29T12:52:38.011Z"
+      "aktualisiert": "2026-07-30T09:35:32.531Z"
     }
   }
 }

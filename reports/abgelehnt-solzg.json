@@ -1,1 +1,247 @@
-[]
+[
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind die Vorschriften des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsp",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind die Vorschriften des Einkommensteuergesetzes entsprechend anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen,",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder be",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen,",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 3",
+    "art": "tb",
+    "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "kann weder die Bemessungsgrundlage angegriffen werden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "kann weder die Höhe des zu versteuernden Einkommens angegriffen werden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "Wird die Bemessungsgrundlage geändert",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sin",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflic",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körpe",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "art": "rf",
+    "text": "ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998;",
+    "grund": "zu grob (71 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Bei der Veranlagung zur Einkommensteuer",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2a Satz 1",
+    "art": "tb",
+    "text": "wenn der nach § 39b Absatz 2 Satz 5 des Einkommensteuergesetzes zu versteuernde Jahresbetr",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "tb",
+    "text": "in anderen Fällen 20 350 Euro",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 1",
+    "art": "tb",
+    "text": "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. b",
+    "art": "tb",
+    "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. a",
+    "art": "tb",
+    "text": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Numm",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. b (Teil 2)",
+    "art": "tb",
+    "text": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. a (Teil 2)",
+    "art": "tb",
+    "text": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer ",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. b (Teil 3)",
+    "art": "tb",
+    "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. b (Teil 3)",
+    "art": "rf",
+    "text": "ist der Solidaritätszuschlag nur zu erheben",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Buchst. b (Teil 3)",
+    "art": "rf",
+    "text": "beträgt",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4a Nr. 1",
+    "art": "tb",
+    "text": "in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2 und",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "Beim Lohnsteuer-Jahresausgleich",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Satz 4",
+    "art": "rf",
+    "text": "beträgt 5,5 Prozent",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses G",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich d",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 12 Satz 2",
+    "art": "tb",
+    "text": "Abweichend von Satz 1",
+    "grund": "Normtyp „anwendung\" wird nicht markiert"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 12 Satz 2",
+    "art": "ausn",
+    "text": "soweit sich dies zu Gunsten des Steuerpflichtigen auswirkt",
+    "grund": "Normtyp „anwendung\" wird nicht markiert"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 14 Satz 2",
+    "art": "tb",
+    "text": "Bei der Lohnsteuerberechnung auf laufenden Arbeitslohn, der für einen nach dem 30. Novembe",
+    "grund": "Normtyp „anwendung\" wird nicht markiert"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 25 Satz 2",
+    "art": "tb",
+    "text": "Bei der Lohnsteuerberechnung auf laufenden Arbeitslohn, der für einen nach dem 30. Novembe",
+    "grund": "Normtyp „anwendung\" wird nicht markiert"
+  }
+]
