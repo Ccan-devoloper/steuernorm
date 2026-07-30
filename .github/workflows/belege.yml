@@ -2,20 +2,10 @@ name: Belege sammeln
 
 on:
   pull_request:
-    paths:
-      - "config/handbuecher.json"
-      - "tools/belege.mjs"
-      - "tools/lib/handbuch.mjs"
-      - "tools/lib/rechtsprechung.mjs"
-      - ".github/workflows/belege.yml"
+    paths: ["config/handbuecher.json", "tools/belege.mjs", "tools/lib/handbuch.mjs", "tools/lib/rechtsprechung.mjs", ".github/workflows/belege.yml"]
   push:
     branches: [main]
-    paths:
-      - "config/handbuecher.json"
-      - "tools/belege.mjs"
-      - "tools/lib/handbuch.mjs"
-      - "tools/lib/rechtsprechung.mjs"
-      - ".github/workflows/belege.yml"
+    paths: ["config/handbuecher.json", "tools/belege.mjs", "tools/lib/handbuch.mjs", "tools/lib/rechtsprechung.mjs", ".github/workflows/belege.yml"]
   schedule:
     - cron: "40 3 * * 1"
   workflow_dispatch:
@@ -50,10 +40,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
-        with:
-          node-version: "22"
+        with: { node-version: "22" }
       - name: Konfiguration prüfen
-        shell: bash
         run: |
           set -euo pipefail
           find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
@@ -65,18 +53,14 @@ jobs:
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v5
-        with:
-          ref: main
-          fetch-depth: 0
+        with: { ref: main, fetch-depth: 0 }
       - uses: actions/setup-node@v5
-        with:
-          node-version: "22"
+        with: { node-version: "22" }
       - name: Handbuchkarten aufbauen
         if: inputs.karte == true || hashFiles('config/handbuch-karte-*.json') == ''
         env:
           INPUT_NUR: ${{ inputs.nur }}
           MIN_KARTEN_TREFFER: "5"
-        shell: bash
         run: |
           set -euo pipefail
           args=(--karte)
@@ -91,7 +75,6 @@ jobs:
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_MAX: ${{ inputs.max }}
           EVENT_NAME: ${{ github.event_name }}
-        shell: bash
         run: |
           set -euo pipefail
           max="${INPUT_MAX:-1200}"
@@ -102,7 +85,6 @@ jobs:
       - name: Vollständigkeit prüfen
         env:
           INPUT_NUR: ${{ inputs.nur }}
-        shell: bash
         run: |
           set -euo pipefail
           node - <<'NODE'
@@ -113,15 +95,11 @@ jobs:
           const auswahl = nur.size ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v)))) : register.gesetze;
           const karten = fs.readdirSync("config").filter((n) => /^handbuch-karte-.*\.json$/.test(n));
           if (!nur.size && karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}`);
-          for (const name of karten) {
-            const karte = require(`./config/${name}`);
-            if (Object.keys(karte.paragrafen || {}).length < 5) throw new Error(`${name} ist unvollständig`);
-          }
+          for (const name of karten) if (Object.keys(require(`./config/${name}`).paragrafen || {}).length < 5) throw new Error(`${name} ist unvollständig`);
           const fehler = [], gesetze = [];
           let normenGesamt = 0, protokolliert = 0;
           for (const meta of auswahl) {
-            const daten = require(`./data/${meta.datei}`);
-            const pfad = `belege/${meta.datei}`;
+            const daten = require(`./data/${meta.datei}`), pfad = `belege/${meta.datei}`;
             if (!fs.existsSync(pfad)) { fehler.push(`${meta.abk}: Datei fehlt`); continue; }
             const belege = require(`./${pfad}`);
             const fehlende = daten.normen.filter((n) => !belege.normen?.[String(n.id)]);
@@ -145,23 +123,17 @@ jobs:
           console.log(`${auswahl.length} Gesetze und ${normenGesamt} Normen vollständig geprüft.`);
           NODE
       - name: Änderungen festschreiben
-        shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A belege config/handbuch-karte-*.json reports/belege.json 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "Keine Änderungen."
-          else
+          if git diff --cached --quiet; then echo "Keine Änderungen."; else
             git commit -m "Amtliche Belege vollständig aktualisiert ($(date -u +%Y-%m-%d))"
             git pull --rebase --autostash origin main
             git push origin HEAD:main
           fi
       - name: Zusammenfassung
         if: always()
-        shell: bash
         run: |
-          if [ -f reports/belege.json ]; then
-            node -e 'const b=require("./reports/belege.json"); console.log(`## Belegschicht\n\n${b.abrufeProtokolliert ?? "?"} protokollierte Normen · vollständig=${Boolean(b.vollstaendig)}`)' >> "$GITHUB_STEP_SUMMARY"
-          fi
+          if [ -f reports/belege.json ]; then node -e 'const b=require("./reports/belege.json"); console.log(`## Belegschicht\n\n${b.abrufeProtokolliert ?? "?"} protokollierte Normen · vollständig=${Boolean(b.vollstaendig)}`)' >> "$GITHUB_STEP_SUMMARY"; fi
