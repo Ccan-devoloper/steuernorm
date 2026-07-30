@@ -1,16 +1,9 @@
 /**
- * handbuch.mjs — Zugriff auf die Amtlichen Handbücher des BMF.
+ * Zugriff auf die amtlichen Steuerhandbücher des BMF.
  *
- * Die Handbücher (AEAO, EStR/EStH, UStAE, KStR/KStH, GewStR, ErbStR, GrStR) sind
- * amtliche Werke und nach § 5 Abs. 1 UrhG gemeinfrei. Sie sind paragrafenweise
- * gegliedert und damit die beste frei verfügbare Auslegungsquelle für das deutsche
- * Steuerrecht.
- *
- * Zwei Schritte:
- *   1. karteBauen()     — den Verzeichnisbaum ablaufen und § → URL festhalten
- *   2. abschnittLesen() — die Einzelseite holen und den Verwaltungstext herausziehen
- *
- * Abrufhygiene: ein Abruf je Sekunde, sprechender User-Agent, If-None-Match.
+ * Die Extraktion berücksichtigt sowohl direkt beschriftete Verwaltungsüberschriften
+ * (AEAO zu § ..., Abschnitt 1.1, R 1, H 1) als auch BMF-Seiten, auf denen der
+ * Gliederungsmarker getrennt vor generischen Überschriften wie „Richtlinie“ steht.
  */
 
 const KENNUNG = "steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)";
@@ -53,7 +46,6 @@ async function hole(url, etag = null) {
       if (antwort.ok) {
         return { html: await antwort.text(), etag: antwort.headers.get("etag"), url: antwort.url || url };
       }
-
       letzterFehler = `HTTP ${antwort.status}`;
       if (!WIEDERHOLBAR.has(antwort.status)) return { fehler: letzterFehler };
       wiederholungNach = retryNachMillis(antwort, versuch);
@@ -69,20 +61,40 @@ async function hole(url, etag = null) {
   return { fehler: `${letzterFehler} nach ${MAX_VERSUCHE} Versuchen` };
 }
 
-/* ─────────────────────────── Karte aufbauen ─────────────────────────── */
-
 const LINK = /<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\/a>/gi;
 
-function text(html) {
-  return html
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&sect;|&#167;/gi, "§").replace(/&nbsp;|&#160;/gi, " ")
-    .replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
+function dekodiere(html) {
+  return String(html || "")
+    .replace(/&sect;|&#167;/gi, "§")
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
     .replace(/&auml;/gi, "ä").replace(/&ouml;/gi, "ö").replace(/&uuml;/gi, "ü")
     .replace(/&Auml;/g, "Ä").replace(/&Ouml;/g, "Ö").replace(/&Uuml;/g, "Ü")
-    .replace(/\u00ad/g, "")
+    .replace(/&#x([0-9a-f]+);/gi, (_, wert) => String.fromCodePoint(Number.parseInt(wert, 16)))
+    .replace(/&#(\d+);/g, (_, wert) => String.fromCodePoint(Number(wert)))
+    .replace(/\u00ad/g, "");
+}
+
+function text(html) {
+  return dekodiere(String(html || "").replace(/<[^>]+>/g, " "))
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function zeilenText(html) {
+  return dekodiere(
+    String(html || "")
+      .replace(/<(?:br|hr)\b[^>]*>/gi, "\n")
+      .replace(/<\/(?:p|div|li|h[1-6]|section|article|tr|td|th)>/gi, "\n")
+      .replace(/<[^>]+>/g, " "),
+  )
+    .replace(/\r/g, "")
+    .split("\n")
+    .map((zeile) => zeile.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n");
 }
 
 export function paragrafAus(beschriftung) {
@@ -185,7 +197,6 @@ export async function karteBauen(handbuch, melde = () => {}) {
       if (!istInterneHtmlSeite(ziel, erlaubtePrefixe)) continue;
       const sauber = ziel.split(/[?#]/)[0];
       const beschriftung = treffer[4];
-
       const nr = paragrafAus(beschriftung);
       if (nr) {
         if (!karte[nr]) karte[nr] = { url: sauber, titel: text(beschriftung) };
@@ -194,13 +205,8 @@ export async function karteBauen(handbuch, melde = () => {}) {
       for (const v of vorschaltParagrafen(beschriftung)) {
         if (!vorschalt[v]) vorschalt[v] = { url: sauber, titel: text(beschriftung) };
       }
-      if (!metaSeite && !gesehen.has(sauber) && !warteschlange.includes(sauber)) {
-        warteschlange.push(sauber);
-      }
+      if (!metaSeite && !gesehen.has(sauber) && !warteschlange.includes(sauber)) warteschlange.push(sauber);
     }
-
-    // Ein amtliches Meta-Inhaltsverzeichnis enthält die vollständige §-Karte auf
-    // einer Seite. Sobald es verwendbar ist, sind langsamere Fallback-Crawls unnötig.
     if (metaSeite && Object.keys(karte).length >= 5) warteschlange.length = 0;
   }
 
@@ -216,26 +222,63 @@ export async function karteBauen(handbuch, melde = () => {}) {
   };
 }
 
-const ABSCHNITT_MARKE = /^(AEAO\s+zu\s+§|AEAO\s+vor|R\s?\d|H\s?\d|Abschnitt\s?\d|UStAE\s?\d|A\s?\d+\.\d)/i;
+const ABSCHNITT_MARKE = /^(?:AEAO\s+(?:zu\s+§|vor\b)|R(?:\s+[A-Z])?\s*\d|H(?:\s+[A-Z])?\s*\d|Abschnitt\s*\d|UStAE\s*\d|A(?:\s+[A-Z])?\s*\d+\.\d|\d+\.\d+\.)/i;
+const MARKER_ZEILE = /^(AEAO\s+(?:zu\s+§|vor\b).{0,120}|R(?:\s+[A-Z])?\s*\d+(?:[a-z]|\.\d+)*\.?|H(?:\s+[A-Z])?\s*\d+(?:[a-z]|\.\d+)*\.?|Abschnitt\s+\d+(?:\.\d+)*\.?|UStAE\s+\d+(?:\.\d+)*\.?|A(?:\s+[A-Z])?\s*\d+(?:\.\d+)+\.?)(?:\s*[-–—:]?\s*(Richtlinie|Hinweise?|Anwendungserlass|Anwendungshinweise?))?$/i;
+const GENERISCHE_UEBERSCHRIFT = /^(?:Richtlinie|Hinweise?|Anwendungserlass|Anwendungshinweise?|Verwaltungsanweisung)$/i;
+const HEADING = /<h([2-5])\b[^>]*>([\s\S]*?)<\/h\1>/gi;
+
+function direktBeschrifteteBloecke(roh) {
+  const ueberschriften = [];
+  HEADING.lastIndex = 0;
+  let treffer;
+  while ((treffer = HEADING.exec(roh)) !== null) {
+    ueberschriften.push({ start: treffer.index, ende: HEADING.lastIndex, titel: text(treffer[2]) });
+  }
+
+  const marken = ueberschriften.filter((eintrag) => ABSCHNITT_MARKE.test(eintrag.titel));
+  return marken.flatMap((marke, index) => {
+    const ende = marken[index + 1]?.start ?? roh.length;
+    const koerper = text(roh.slice(marke.ende, ende));
+    return koerper.length >= 40 ? [{ titel: marke.titel, text: koerper }] : [];
+  });
+}
+
+function getrenntBeschrifteteBloecke(roh) {
+  const zeilen = zeilenText(roh).split("\n").filter(Boolean);
+  const marken = [];
+  for (const [index, zeile] of zeilen.entries()) {
+    const treffer = MARKER_ZEILE.exec(zeile);
+    if (treffer) marken.push({ index, titel: treffer[1], zusatz: treffer[2] || null });
+  }
+
+  const bloecke = [];
+  for (const [position, marke] of marken.entries()) {
+    const ende = marken[position + 1]?.index ?? zeilen.length;
+    const inhalt = zeilen.slice(marke.index + 1, ende);
+    const ueberschriften = [];
+    if (marke.zusatz) ueberschriften.push(marke.zusatz);
+    while (inhalt.length && GENERISCHE_UEBERSCHRIFT.test(inhalt[0])) ueberschriften.push(inhalt.shift());
+    if (inhalt.length && inhalt[0].length <= 140 && !/[.!?]$/.test(inhalt[0])) ueberschriften.push(inhalt.shift());
+    const koerper = inhalt.join(" ").trim();
+    if (koerper.length < 40) continue;
+    bloecke.push({ titel: [marke.titel, ...ueberschriften.slice(0, 2)].join(" — "), text: koerper });
+  }
+  return bloecke;
+}
 
 export function abschnitteAus(html) {
-  const roh = html
+  const roh = String(html || "")
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
     .replace(/<nav[\s\S]*?<\/nav>/gi, "");
 
-  const bloecke = [];
-  const teile = roh.split(/<h[2-5][^>]*>/i);
-  for (const teil of teile.slice(1)) {
-    const ende = teil.search(/<\/h[2-5]>/i);
-    if (ende === -1) continue;
-    const titel = text(teil.slice(0, ende));
-    if (!ABSCHNITT_MARKE.test(titel)) continue;
-    const koerper = text(teil.slice(ende));
-    if (koerper.length < 40) continue;
-    bloecke.push({ titel, text: koerper });
+  const eindeutig = new Map();
+  for (const block of [...direktBeschrifteteBloecke(roh), ...getrenntBeschrifteteBloecke(roh)]) {
+    const schluessel = block.titel.toLowerCase().replace(/\s+/g, " ").trim();
+    const vorhanden = eindeutig.get(schluessel);
+    if (!vorhanden || block.text.length > vorhanden.text.length) eindeutig.set(schluessel, block);
   }
-  return bloecke;
+  return [...eindeutig.values()];
 }
 
 export async function abschnittLesen({ eintrag, quelle, etag = null, maxZeichen = 2_400 }) {
