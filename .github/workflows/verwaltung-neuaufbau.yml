@@ -9,14 +9,14 @@ permissions: { contents: write }
 
 concurrency:
   group: verwaltung-neuaufbau
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   gesetz:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 1
+      max-parallel: 2
       matrix:
         gesetz: [ao, estg, ustg, kstg, gewstg, erbstg, bewg, grstg]
     steps:
@@ -26,6 +26,21 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
+      - name: Teiljob protokollieren
+        env:
+          GESETZ: ${{ matrix.gesetz }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          node -e 'const fs=require("fs");fs.writeFileSync(`reports/verwaltung-status-${process.env.GESETZ}.json`,JSON.stringify({gesetz:process.env.GESETZ,status:"gestartet",zeitpunkt:new Date().toISOString(),lauf:process.env.RUN_URL},null,2)+"\n")'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "reports/verwaltung-status-${GESETZ}.json"
+          git commit -m "Verwaltungsneuaufbau ${GESETZ^^} starten"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
       - name: Verwaltungsbelege neu abrufen
         env:
           GESETZ: ${{ matrix.gesetz }}
@@ -60,16 +75,13 @@ jobs:
         run: |
           set -euo pipefail
           git checkout -- reports/belege.json
+          node -e 'const fs=require("fs");const p=`reports/verwaltung-status-${process.env.GESETZ}.json`;const s=JSON.parse(fs.readFileSync(p,"utf8"));s.status="vollstaendig";s.zeitpunkt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(s,null,2)+"\n")'
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "belege/${GESETZ}.json"
-          if git diff --cached --quiet; then
-            echo "${GESETZ}: keine Änderung"
-          else
-            git commit -m "Verwaltungsbelege ${GESETZ^^} neu aufbauen"
-            git pull --rebase --autostash origin main
-            git push origin HEAD:main
-          fi
+          git add "belege/${GESETZ}.json" "reports/verwaltung-status-${GESETZ}.json"
+          git commit -m "Verwaltungsbelege ${GESETZ^^} neu aufbauen"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
 
   abschluss:
     needs: gesetz
@@ -90,24 +102,15 @@ jobs:
           const register = require('./data/index.json');
           const config = require('./config/handbuecher.json');
           const slug = (s) => String(s || '').toLowerCase().replace(/\.json$/, '').replace(/[^a-z0-9]/g, '');
-          const fehler = [];
-          const gesetze = [];
-          let normenGesamt = 0;
-          let abrufeProtokolliert = 0;
-
+          const fehler = [], gesetze = [];
+          let normenGesamt = 0, abrufeProtokolliert = 0;
           const karten = fs.readdirSync('config').filter((n) => /^handbuch-karte-.*\.json$/.test(n));
           if (karten.length !== 8) fehler.push(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}`);
-          for (const name of karten) {
-            const karte = require(`./config/${name}`);
-            if (Object.keys(karte.paragrafen || {}).length < 5) fehler.push(`${name}: Karte unvollständig`);
-          }
-
+          for (const name of karten) if (Object.keys(require(`./config/${name}`).paragrafen || {}).length < 5) fehler.push(`${name}: Karte unvollständig`);
           for (const meta of register.gesetze) {
-            const daten = require(`./data/${meta.datei}`);
-            const pfad = `belege/${meta.datei}`;
+            const daten = require(`./data/${meta.datei}`), pfad = `belege/${meta.datei}`;
             if (!fs.existsSync(pfad)) { fehler.push(`${meta.abk}: Belegdatei fehlt`); continue; }
-            const belege = require(`./${pfad}`);
-            const normen = Object.values(belege.normen || {});
+            const belege = require(`./${pfad}`), normen = Object.values(belege.normen || {});
             const fehlende = daten.normen.filter((n) => !belege.normen?.[String(n.id)]);
             const ohneAbruf = daten.normen.filter((n) => !belege.normen?.[String(n.id)]?.abgerufen);
             const mitVerwaltung = normen.filter((n) => n.verwaltung?.length).length;
@@ -118,39 +121,25 @@ jobs:
             abrufeProtokolliert += daten.normen.length - ohneAbruf.length;
             gesetze.push({ abk: daten.abk, normen: daten.normen.length, mitVerwaltung, mitRechtsprechung });
           }
-
           for (const handbuch of config.handbuecher) {
             const meta = register.gesetze.find((m) => slug(m.abk) === slug(handbuch.gesetz));
             const bilanz = gesetze.find((g) => g.abk === handbuch.gesetz);
             if (!meta || !bilanz) fehler.push(`${handbuch.gesetz}: Handbuch nicht dem Gesetzesregister zugeordnet`);
             else if (bilanz.mitVerwaltung < 1) fehler.push(`${handbuch.gesetz}: kein Verwaltungsbeleg extrahiert`);
           }
-
           if (register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
           if (normenGesamt !== 1537) fehler.push(`1537 Normen erwartet, gefunden: ${normenGesamt}`);
           if (fehler.length) throw new Error(`Gesamtbestand nicht vollständig:\n- ${fehler.join('\n- ')}`);
-
-          const bericht = {
-            erzeugt: new Date().toISOString(),
-            gesetze,
-            gepruefteGesetze: register.gesetze.length,
-            gepruefteNormen: normenGesamt,
-            abrufeProtokolliert,
-            vollstaendig: true,
-            verwaltungVollstaendig: true,
-            gesetzeGesamt: register.gesetze.length,
-            normenGesamt,
-          };
-          fs.mkdirSync('reports', { recursive: true });
+          const bericht = { erzeugt: new Date().toISOString(), gesetze, gepruefteGesetze: 14, gepruefteNormen: normenGesamt, abrufeProtokolliert, vollstaendig: true, verwaltungVollstaendig: true, gesetzeGesamt: 14, normenGesamt };
           fs.writeFileSync('reports/belege.json', `${JSON.stringify(bericht, null, 2)}\n`);
-          fs.writeFileSync('reports/belege-status.json', `${JSON.stringify({ status: 'vollstaendig', zeitpunkt: new Date().toISOString(), gesetze: register.gesetze.length, normen: normenGesamt, handbuecher: config.handbuecher.length }, null, 2)}\n`);
-          console.log(`${register.gesetze.length} Gesetze, ${normenGesamt} Normen und ${config.handbuecher.length} Handbücher vollständig geprüft.`);
+          fs.writeFileSync('reports/belege-status.json', `${JSON.stringify({ status: 'vollstaendig', zeitpunkt: new Date().toISOString(), gesetze: 14, normen: normenGesamt, handbuecher: 8 }, null, 2)}\n`);
+          console.log(`14 Gesetze, ${normenGesamt} Normen und acht Handbücher vollständig geprüft.`);
           NODE
       - name: Temporäre Diagnose entfernen und Abschluss festschreiben
         shell: bash
         run: |
           set -euo pipefail
-          rm -f .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml reports/handbuch-diagnose.json
+          rm -f .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml reports/handbuch-diagnose.json reports/verwaltung-status-*.json
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A reports .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml
