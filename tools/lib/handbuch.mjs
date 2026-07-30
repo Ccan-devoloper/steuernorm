@@ -15,7 +15,7 @@
 
 const KENNUNG = "steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)";
 const PAUSE_MS = 1_000;
-const TIMEOUT_MS = 30_000;
+const TIMEOUT_MS = 120_000;
 
 let letzterAbruf = 0;
 
@@ -42,7 +42,6 @@ async function hole(url, etag = null) {
 
 /* ─────────────────────────── Karte aufbauen ─────────────────────────── */
 
-// BMF-Seiten verwenden je nach Handbuch doppelte, einfache oder unquotierte href-Werte.
 const LINK = /<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\/a>/gi;
 
 function text(html) {
@@ -57,7 +56,6 @@ function text(html) {
     .trim();
 }
 
-/** „§ 8 Wohnsitz" → „8"; „§ 32a Absatz 5" → „32a"; „AEAO vor §§ 8, 9" → null */
 export function paragrafAus(beschriftung) {
   const t = text(beschriftung);
   if (/^AEAO\s+vor/i.test(t) || /^§§/.test(t)) return null;
@@ -65,7 +63,6 @@ export function paragrafAus(beschriftung) {
   return m ? m[1] : null;
 }
 
-/** „AEAO vor §§ 169 bis 171" → ["169","170","171"]; „vor §§ 8, 9" → ["8","9"] */
 export function vorschaltParagrafen(beschriftung) {
   const t = text(beschriftung);
   if (!/vor\s+§§?/i.test(t)) return [];
@@ -105,11 +102,6 @@ function istInterneHtmlSeite(url, prefix) {
   return /\.html$/i.test(pfad) || /\/inhalt\/?$/i.test(pfad);
 }
 
-/**
- * Läuft den Verzeichnisbaum eines Handbuchs ab und liefert die Karte § → URL.
- * Vollständige Meta-Inhaltsverzeichnisse werden bewusst nur einmal gelesen; sie
- * enthalten bereits sämtliche Paragraphseiten und verhindern unnötige Vollcrawls.
- */
 export async function karteBauen(handbuch, melde = () => {}) {
   const gesehen = new Set();
   const warteschlange = [handbuch.start];
@@ -164,8 +156,6 @@ export async function karteBauen(handbuch, melde = () => {}) {
     vorschaltnormen: vorschalt,
   };
 }
-
-/* ─────────────────────────── Einzelseite lesen ─────────────────────────── */
 
 const ABSCHNITT_MARKE = /^(AEAO\s+zu\s+§|AEAO\s+vor|R\s?\d|H\s?\d|Abschnitt\s?\d|UStAE\s?\d|A\s?\d+\.\d)/i;
 
