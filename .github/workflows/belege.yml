@@ -9,8 +9,7 @@ on:
       - "tools/lib/rechtsprechung.mjs"
       - ".github/workflows/belege.yml"
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - "config/handbuecher.json"
       - "tools/belege.mjs"
@@ -83,7 +82,6 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
-
       - name: Handbuchkarten aufbauen
         if: inputs.karte == true || hashFiles('config/handbuch-karte-*.json') == ''
         env:
@@ -99,7 +97,6 @@ jobs:
             [ "$versuch" -eq 3 ] && exit 1
             sleep $((versuch * 15))
           done
-
       - name: Belegbestand vollständig aufbauen
         env:
           INPUT_NUR: ${{ inputs.nur }}
@@ -114,7 +111,6 @@ jobs:
           [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
           echo "Abrufgrenze: $max"
           node tools/belege.mjs "${args[@]}"
-
       - name: Belegbestand vollständig prüfen
         env:
           INPUT_NUR: ${{ inputs.nur }}
@@ -161,7 +157,6 @@ jobs:
           fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
           console.log(`${ausgewaehlt.length} Gesetze, ${gesamtNormen} Normen und ${karten.length} Handbuchkarten vollständig geprüft.`);
           NODE
-
       - name: Änderungen festschreiben
         shell: bash
         run: |
@@ -176,7 +171,6 @@ jobs:
             git pull --rebase --autostash origin main
             git push origin HEAD:main
           fi
-
       - name: Zusammenfassung
         if: always()
         shell: bash
