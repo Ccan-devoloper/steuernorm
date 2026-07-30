@@ -1,11 +1,12 @@
 {
-  "erzeugt": "2026-07-30T10:41:42.566Z",
-  "abrufe": 0,
+  "erzeugt": "2026-07-30T11:03:19.546Z",
+  "abrufe": 1053,
+  "verwaltungErzwungen": true,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "mitVerwaltung": 154,
+      "mitVerwaltung": 178,
       "mitRechtsprechung": 0
     },
     {
