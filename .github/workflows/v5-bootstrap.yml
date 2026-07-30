@@ -1,0 +1,66 @@
+name: V5-Bestand vorbereiten
+
+on:
+  push:
+    branches: ["agent/v5-bootstrap"]
+    paths:
+      - ".github/workflows/v5-bootstrap.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  vorbereiten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: agent/v5-bootstrap
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+
+      - name: Gelieferten Code übernehmen
+        run: |
+          set -euo pipefail
+          cat .v5-bootstrap/part-* | base64 -d > /tmp/v5-code.tar.gz
+          echo "df24dddad085ebd7b519f04aa74e81e8ebb2c16b9cc567d47852a0bada969372  /tmp/v5-code.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/v5-code.tar.gz
+          mkdir -p belege
+
+      - name: Bestand vollständig neu erzeugen
+        run: |
+          set -euo pipefail
+          rm -f annotations/*.json
+          node tools/annotieren.mjs --ohne-ki
+
+      - name: Bestand verifizieren
+        run: |
+          set -euo pipefail
+          node tools/pruefen.mjs | tee /tmp/pruefen.txt
+          grep -F "1537 Normen · 23570 Spannen · 1414 markierbar" /tmp/pruefen.txt
+          grep -F "0 Fehler, 0 Warnungen." /tmp/pruefen.txt
+          node tools/konsistenz.mjs --min 5 | tee /tmp/konsistenz.txt
+          grep -F "12 verdächtige Markierungen" /tmp/konsistenz.txt
+          node - <<'NODE'
+          const a=require('./annotations/astg.json');
+          const s=require('./annotations/solzg.json');
+          if(a.normen["15"].schema.length!==11) throw new Error("Stichprobe a");
+          const e1=a.normen["15"].saetze.flatMap(x=>x.elemente||[]).find(e=>e.pfad==="Abs. 1 Satz 1"&&e.art==="rf"&&Array.isArray(e.teile)&&e.teile.length===2&&String(e.anzeige||"").endsWith("zugerechnet"));
+          if(!e1) throw new Error("Stichprobe b");
+          const sol=s.normen["2"].saetze.flatMap(x=>x.elemente||[]);
+          if(!sol.some(e=>e.art==="rf"&&e.text==="Abgabepflichtig")||sol.some(e=>e.art==="tb"&&e.text==="Abgabepflichtig")) throw new Error("Stichprobe c");
+          if(!a.normen["15"].saetze.flatMap(x=>x.elemente||[]).some(e=>e.pfad.startsWith("Abs. 2")&&e.art==="def")) throw new Error("Stichprobe d");
+          NODE
+
+      - name: Geprüften Bestand festschreiben
+        run: |
+          set -euo pipefail
+          rm -rf .v5-bootstrap
+          rm -f .github/workflows/v5-bootstrap.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "V5-Bestand geprüft erzeugt"
+          git push origin HEAD:agent/v5-bootstrap
