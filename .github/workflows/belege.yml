@@ -177,7 +177,7 @@ jobs:
           if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
 
           const bericht = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
-          bericht.vollstaendig = !nur.size;
+          if (!nur.size) bericht.vollstaendig = true;
           bericht.gepruefteGesetze = ausgewaehlt.length;
           bericht.gepruefteNormen = gesamtNormen;
           bericht.abrufeProtokolliert = protokolliert;
