@@ -1,7 +1,5 @@
 {
-  "erzeugt": "2026-07-30T11:03:19.546Z",
-  "abrufe": 1053,
-  "verwaltungErzwungen": true,
+  "erzeugt": "2026-07-30T11:48:30.132Z",
   "gesetze": [
     {
       "abk": "AO",
@@ -12,43 +10,43 @@
     {
       "abk": "BewG",
       "normen": 204,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 19,
       "mitRechtsprechung": 0
     },
     {
       "abk": "EStG",
       "normen": 247,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 116,
       "mitRechtsprechung": 0
     },
     {
       "abk": "KStG",
       "normen": 48,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 39,
       "mitRechtsprechung": 0
     },
     {
       "abk": "UStG",
       "normen": 93,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 24,
       "mitRechtsprechung": 0
     },
     {
       "abk": "GewStG",
       "normen": 41,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 23,
       "mitRechtsprechung": 0
     },
     {
       "abk": "ErbStG",
       "normen": 47,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 35,
       "mitRechtsprechung": 0
     },
     {
       "abk": "GrStG",
       "normen": 38,
-      "mitVerwaltung": 0,
+      "mitVerwaltung": 7,
       "mitRechtsprechung": 0
     },
     {
@@ -92,6 +90,8 @@
   "gepruefteNormen": 1537,
   "abrufeProtokolliert": 1537,
   "vollstaendig": true,
+  "verwaltungVollstaendig": true,
   "gesetzeGesamt": 14,
-  "normenGesamt": 1537
+  "normenGesamt": 1537,
+  "handbuecherGesamt": 8
 }
