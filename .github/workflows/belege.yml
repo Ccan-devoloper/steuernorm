@@ -33,7 +33,7 @@ on:
       max:
         description: "Höchstzahl der Abrufe je Lauf"
         required: false
-        default: "400"
+        default: "1200"
 
 permissions:
   contents: write
@@ -63,8 +63,8 @@ jobs:
           node - <<'NODE'
           const fs = require("fs");
           const c = JSON.parse(fs.readFileSync("config/handbuecher.json", "utf8"));
-          if (!Array.isArray(c.handbuecher) || c.handbuecher.length < 8) {
-            throw new Error("Mindestens acht amtliche Handbuchanbindungen erwartet.");
+          if (!Array.isArray(c.handbuecher) || c.handbuecher.length !== 8) {
+            throw new Error(`Acht amtliche Handbuchanbindungen erwartet, gefunden: ${c.handbuecher?.length ?? 0}.`);
           }
           for (const h of c.handbuecher) {
             if (!h.gesetz || !h.start || !h.prefix || !h.jahrgang) {
@@ -80,7 +80,7 @@ jobs:
   belege:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v5
         with:
@@ -96,62 +96,103 @@ jobs:
         env:
           INPUT_NUR: ${{ inputs.nur }}
           MIN_KARTEN_TREFFER: "5"
+        shell: bash
         run: |
           set -euo pipefail
           args=(--karte)
           [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
-          node tools/belege.mjs "${args[@]}"
+          for versuch in 1 2 3; do
+            if node tools/belege.mjs "${args[@]}"; then
+              exit 0
+            fi
+            [ "$versuch" -eq 3 ] && exit 1
+            sleep $((versuch * 15))
+          done
 
-      - name: Belege abrufen
+      - name: Belegbestand vollständig aufbauen
         env:
           INPUT_NUR: ${{ inputs.nur }}
-          MAX_BELEGABRUFE: ${{ inputs.max || '400' }}
-        run: |
-          set -euo pipefail
-          args=()
-          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
-          node tools/belege.mjs "${args[@]}"
-
-      - name: Belege prüfen
+          INPUT_MAX: ${{ inputs.max }}
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
-          dateien=(belege/*.json)
-          if [ "${#dateien[@]}" -eq 0 ]; then
-            echo "Keine Belegdatei erzeugt." >&2
-            exit 1
+          max="${INPUT_MAX:-1200}"
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            max="5000"
           fi
-          for datei in "${dateien[@]}"; do
-            node -e 'const b=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")); if(!b.abk||!b.normen) throw new Error(process.argv[1]+": unvollständig");' "$datei"
-          done
+          args=(--max "$max")
+          [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          echo "Abrufgrenze: $max"
+          node tools/belege.mjs "${args[@]}"
+
+      - name: Belegbestand vollständig prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
           node - <<'NODE'
           const fs = require("fs");
-          const dateien = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
-          for (const name of dateien) {
-            const k = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
-            if (Object.keys(k.paragrafen || {}).length < 5) throw new Error(`${name}: Karte ist leer oder unvollständig`);
+          const register = JSON.parse(fs.readFileSync("data/index.json", "utf8"));
+          const karten = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
+          if (karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}.`);
+          for (const name of karten) {
+            const karte = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
+            if (Object.keys(karte.paragrafen || {}).length < 5) {
+              throw new Error(`${name}: Karte ist leer oder unvollständig.`);
+            }
           }
-          console.log(`${dateien.length} Handbuchkarten geprüft.`);
+
+          const fehler = [];
+          let gesamtNormen = 0;
+          let protokolliert = 0;
+          for (const meta of register.gesetze) {
+            const daten = JSON.parse(fs.readFileSync(`data/${meta.datei}`, "utf8"));
+            const pfad = `belege/${meta.datei}`;
+            if (!fs.existsSync(pfad)) {
+              fehler.push(`${meta.abk}: Belegdatei fehlt`);
+              continue;
+            }
+            const belege = JSON.parse(fs.readFileSync(pfad, "utf8"));
+            if (belege.abk !== daten.abk || !belege.normen) {
+              fehler.push(`${meta.abk}: Belegdatei formal unvollständig`);
+              continue;
+            }
+            gesamtNormen += daten.normen.length;
+            const fehlende = daten.normen.filter((norm) => !belege.normen[String(norm.id)]);
+            const ohneAbruf = daten.normen.filter((norm) => !belege.normen[String(norm.id)]?.abgerufen);
+            protokolliert += daten.normen.length - ohneAbruf.length;
+            if (fehlende.length) fehler.push(`${meta.abk}: ${fehlende.length} Normeinträge fehlen`);
+            if (ohneAbruf.length) fehler.push(`${meta.abk}: ${ohneAbruf.length} Normen ohne Abrufprotokoll`);
+          }
+          if (register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
+          if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
+
+          const bericht = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
+          bericht.vollstaendig = true;
+          bericht.gesetzeGesamt = register.gesetze.length;
+          bericht.normenGesamt = gesamtNormen;
+          bericht.abrufeProtokolliert = protokolliert;
+          fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
+          console.log(`${register.gesetze.length} Gesetze, ${gesamtNormen} Normen und acht Handbuchkarten vollständig geprüft.`);
           NODE
 
       - name: Änderungen festschreiben
         shell: bash
         run: |
           set -euo pipefail
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add belege config/handbuch-karte-*.json reports/belege.json 2>/dev/null || true
+          git add -A belege config/handbuch-karte-*.json reports/belege.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Keine Änderungen."
           else
-            git commit -m "Amtliche Belege aktualisiert ($(date -u +%Y-%m-%d))"
+            git commit -m "Amtliche Belege vollständig aktualisiert ($(date -u +%Y-%m-%d))"
             git pull --rebase --autostash origin main
             git push origin HEAD:main
           fi
 
       - name: Zusammenfassung
         if: always()
+        shell: bash
         run: |
           {
             echo "## Belegschicht"
@@ -159,7 +200,7 @@ jobs:
             if [ -f reports/belege.json ]; then
               node -e '
                 const b = require("./reports/belege.json");
-                console.log(`${b.abrufe} Abrufe`);
+                console.log(`${b.abrufe} neue Abrufe · ${b.abrufeProtokolliert ?? "?"} protokollierte Normen · vollständig=${Boolean(b.vollstaendig)}`);
                 console.log("");
                 console.log("| Gesetz | Normen | mit Verwaltungsbeleg | mit Rechtsprechung |");
                 console.log("|---|---:|---:|---:|");
