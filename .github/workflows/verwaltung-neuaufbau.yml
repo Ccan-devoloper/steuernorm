@@ -1,4 +1,4 @@
-name: Verwaltungsbelege getrennt neu aufbauen
+name: Verbleibende Verwaltungsbelege abschließen
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        gesetz: [ao, estg, ustg, kstg, gewstg, erbstg, bewg, grstg]
+        gesetz: [estg, bewg, grstg]
     steps:
       - uses: actions/checkout@v5
         with:
@@ -26,62 +26,58 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
-      - name: Teiljob protokollieren
+
+      - name: Verwaltungsseiten gedrosselt parallel abrufen
         env:
           GESETZ: ${{ matrix.gesetz }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        shell: bash
+          VERWALTUNG_PARALLEL: "6"
+          VERWALTUNG_PAUSE_MS: "1000"
         run: |
           set -euo pipefail
-          mkdir -p reports
-          node -e 'const fs=require("fs");fs.writeFileSync(`reports/verwaltung-status-${process.env.GESETZ}.json`,JSON.stringify({gesetz:process.env.GESETZ,status:"gestartet",zeitpunkt:new Date().toISOString(),lauf:process.env.RUN_URL},null,2)+"\n")'
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "reports/verwaltung-status-${GESETZ}.json"
-          git commit -m "Verwaltungsneuaufbau ${GESETZ^^} starten"
-          git pull --rebase --autostash origin main
-          git push origin HEAD:main
-      - name: Verwaltungsbelege neu abrufen
+          node tools/verwaltung-parallel.mjs "$GESETZ"
+
+      - name: Gesetzesbestand streng prüfen
         env:
           GESETZ: ${{ matrix.gesetz }}
-        shell: bash
         run: |
           set -euo pipefail
-          erfolgreich=false
-          for versuch in 1 2 3; do
-            echo "${GESETZ}: Versuch ${versuch}/3"
-            node tools/belege.mjs --nur "$GESETZ" --verwaltung-erzwingen --ohne-rechtsprechung --max 1200
-            if node - "$GESETZ" <<'NODE'
+          node - <<'NODE'
           const fs = require('fs');
-          const gesetz = process.argv[2];
-          const datei = JSON.parse(fs.readFileSync(`belege/${gesetz}.json`, 'utf8'));
-          const normen = Object.values(datei.normen || {});
+          const gesetz = process.env.GESETZ;
+          const daten = require(`./data/${gesetz}.json`);
+          const belege = require(`./belege/${gesetz}.json`);
+          const normen = Object.values(belege.normen || {});
+          const fehlende = daten.normen.filter((n) => !belege.normen?.[String(n.id)]);
+          const ohneAbruf = daten.normen.filter((n) => !belege.normen?.[String(n.id)]?.abgerufen);
           const mitVerwaltung = normen.filter((n) => Array.isArray(n.verwaltung) && n.verwaltung.length).length;
-          const mitAbruf = normen.filter((n) => n.abgerufen).length;
-          console.log(`${gesetz}: ${mitVerwaltung} Normen mit Verwaltungsbeleg, ${mitAbruf}/${normen.length} mit Abrufprotokoll.`);
-          if (!normen.length || mitAbruf !== normen.length || mitVerwaltung < 1) process.exit(1);
+          if (fehlende.length || ohneAbruf.length || mitVerwaltung < 1) {
+            throw new Error(`${gesetz}: fehlend=${fehlende.length}, ohneAbruf=${ohneAbruf.length}, mitVerwaltung=${mitVerwaltung}`);
+          }
+          console.log(`${gesetz}: ${mitVerwaltung}/${normen.length} Normen mit Verwaltungsbeleg.`);
           NODE
-            then
-              erfolgreich=true
-              break
-            fi
-            sleep $((versuch * 30))
-          done
-          [ "$erfolgreich" = true ] || { echo "${GESETZ}: keine verwertbaren Verwaltungsbelege extrahiert" >&2; exit 1; }
-      - name: Gesetzesbestand festschreiben
+
+      - name: Gesetzesbestand konfliktfest festschreiben
         env:
           GESETZ: ${{ matrix.gesetz }}
-        shell: bash
         run: |
           set -euo pipefail
-          git checkout -- reports/belege.json
-          node -e 'const fs=require("fs");const p=`reports/verwaltung-status-${process.env.GESETZ}.json`;const s=JSON.parse(fs.readFileSync(p,"utf8"));s.status="vollstaendig";s.zeitpunkt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(s,null,2)+"\n")'
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "belege/${GESETZ}.json" "reports/verwaltung-status-${GESETZ}.json"
-          git commit -m "Verwaltungsbelege ${GESETZ^^} neu aufbauen"
-          git pull --rebase --autostash origin main
-          git push origin HEAD:main
+          git add "belege/${GESETZ}.json"
+          if git diff --cached --quiet; then
+            echo "${GESETZ}: keine Änderung"
+            exit 0
+          fi
+          git commit -m "Verwaltungsbelege ${GESETZ^^} vollständig neu aufbauen"
+          for versuch in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((versuch * 5))
+          done
+          echo "${GESETZ}: Push nach fünf Versuchen fehlgeschlagen" >&2
+          exit 1
 
   abschluss:
     needs: gesetz
@@ -93,10 +89,11 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
+
       - name: Gesamtbestand fachlich und strukturell prüfen
-        shell: bash
         run: |
           set -euo pipefail
+          git pull --ff-only origin main
           node - <<'NODE'
           const fs = require('fs');
           const register = require('./data/index.json');
@@ -104,11 +101,16 @@ jobs:
           const slug = (s) => String(s || '').toLowerCase().replace(/\.json$/, '').replace(/[^a-z0-9]/g, '');
           const fehler = [], gesetze = [];
           let normenGesamt = 0, abrufeProtokolliert = 0;
+
           const karten = fs.readdirSync('config').filter((n) => /^handbuch-karte-.*\.json$/.test(n));
           if (karten.length !== 8) fehler.push(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}`);
-          for (const name of karten) if (Object.keys(require(`./config/${name}`).paragrafen || {}).length < 5) fehler.push(`${name}: Karte unvollständig`);
+          for (const name of karten) {
+            if (Object.keys(require(`./config/${name}`).paragrafen || {}).length < 5) fehler.push(`${name}: Karte unvollständig`);
+          }
+
           for (const meta of register.gesetze) {
-            const daten = require(`./data/${meta.datei}`), pfad = `belege/${meta.datei}`;
+            const daten = require(`./data/${meta.datei}`);
+            const pfad = `belege/${meta.datei}`;
             if (!fs.existsSync(pfad)) { fehler.push(`${meta.abk}: Belegdatei fehlt`); continue; }
             const belege = require(`./${pfad}`), normen = Object.values(belege.normen || {});
             const fehlende = daten.normen.filter((n) => !belege.normen?.[String(n.id)]);
@@ -121,25 +123,41 @@ jobs:
             abrufeProtokolliert += daten.normen.length - ohneAbruf.length;
             gesetze.push({ abk: daten.abk, normen: daten.normen.length, mitVerwaltung, mitRechtsprechung });
           }
+
           for (const handbuch of config.handbuecher) {
             const meta = register.gesetze.find((m) => slug(m.abk) === slug(handbuch.gesetz));
             const bilanz = gesetze.find((g) => g.abk === handbuch.gesetz);
             if (!meta || !bilanz) fehler.push(`${handbuch.gesetz}: Handbuch nicht dem Gesetzesregister zugeordnet`);
             else if (bilanz.mitVerwaltung < 1) fehler.push(`${handbuch.gesetz}: kein Verwaltungsbeleg extrahiert`);
           }
+
           if (register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
           if (normenGesamt !== 1537) fehler.push(`1537 Normen erwartet, gefunden: ${normenGesamt}`);
+          if (abrufeProtokolliert !== normenGesamt) fehler.push(`${normenGesamt - abrufeProtokolliert} Abrufprotokolle fehlen insgesamt`);
           if (fehler.length) throw new Error(`Gesamtbestand nicht vollständig:\n- ${fehler.join('\n- ')}`);
-          const bericht = { erzeugt: new Date().toISOString(), gesetze, gepruefteGesetze: 14, gepruefteNormen: normenGesamt, abrufeProtokolliert, vollstaendig: true, verwaltungVollstaendig: true, gesetzeGesamt: 14, normenGesamt };
+
+          const bericht = {
+            erzeugt: new Date().toISOString(),
+            gesetze,
+            gepruefteGesetze: 14,
+            gepruefteNormen: normenGesamt,
+            abrufeProtokolliert,
+            vollstaendig: true,
+            verwaltungVollstaendig: true,
+            gesetzeGesamt: 14,
+            normenGesamt,
+            handbuecherGesamt: 8,
+          };
           fs.writeFileSync('reports/belege.json', `${JSON.stringify(bericht, null, 2)}\n`);
           fs.writeFileSync('reports/belege-status.json', `${JSON.stringify({ status: 'vollstaendig', zeitpunkt: new Date().toISOString(), gesetze: 14, normen: normenGesamt, handbuecher: 8 }, null, 2)}\n`);
           console.log(`14 Gesetze, ${normenGesamt} Normen und acht Handbücher vollständig geprüft.`);
           NODE
+
       - name: Temporäre Diagnose entfernen und Abschluss festschreiben
-        shell: bash
         run: |
           set -euo pipefail
-          rm -f .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml reports/handbuch-diagnose.json reports/verwaltung-status-*.json
+          rm -f .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml
+          rm -f reports/handbuch-diagnose.json reports/verwaltung-status-*.json
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A reports .github/workflows/verwaltung-neuaufbau.yml .github/workflows/handbuch-diagnose.yml
