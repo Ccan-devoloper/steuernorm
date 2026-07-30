@@ -127,14 +127,21 @@ jobs:
           node tools/belege.mjs "${args[@]}"
 
       - name: Belegbestand vollständig prüfen
+        env:
+          INPUT_NUR: ${{ inputs.nur }}
         shell: bash
         run: |
           set -euo pipefail
           node - <<'NODE'
           const fs = require("fs");
           const register = JSON.parse(fs.readFileSync("data/index.json", "utf8"));
+          const nur = new Set(String(process.env.INPUT_NUR || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean));
+          const ausgewaehlt = nur.size
+            ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(String(v).toLowerCase().replace(/\.json$/, ""))))
+            : register.gesetze;
+
           const karten = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
-          if (karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}.`);
+          if (!nur.size && karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}.`);
           for (const name of karten) {
             const karte = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
             if (Object.keys(karte.paragrafen || {}).length < 5) {
@@ -145,7 +152,7 @@ jobs:
           const fehler = [];
           let gesamtNormen = 0;
           let protokolliert = 0;
-          for (const meta of register.gesetze) {
+          for (const meta of ausgewaehlt) {
             const daten = JSON.parse(fs.readFileSync(`data/${meta.datei}`, "utf8"));
             const pfad = `belege/${meta.datei}`;
             if (!fs.existsSync(pfad)) {
@@ -164,16 +171,17 @@ jobs:
             if (fehlende.length) fehler.push(`${meta.abk}: ${fehlende.length} Normeinträge fehlen`);
             if (ohneAbruf.length) fehler.push(`${meta.abk}: ${ohneAbruf.length} Normen ohne Abrufprotokoll`);
           }
-          if (register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
+          if (!nur.size && register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
+          if (!ausgewaehlt.length) fehler.push("Die Gesetzesauswahl ist leer");
           if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
 
           const bericht = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
-          bericht.vollstaendig = true;
-          bericht.gesetzeGesamt = register.gesetze.length;
+          bericht.vollstaendig = !nur.size;
+          bericht.gesetzeGesamt = ausgewaehlt.length;
           bericht.normenGesamt = gesamtNormen;
           bericht.abrufeProtokolliert = protokolliert;
           fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
-          console.log(`${register.gesetze.length} Gesetze, ${gesamtNormen} Normen und acht Handbuchkarten vollständig geprüft.`);
+          console.log(`${ausgewaehlt.length} Gesetze, ${gesamtNormen} Normen und ${karten.length} Handbuchkarten vollständig geprüft.`);
           NODE
 
       - name: Änderungen festschreiben
