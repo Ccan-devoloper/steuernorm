@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - ".github/workflows/v4-produktdaten-erzeugen.yml"
+      - "config/handbuecher.json"
+      - "tools/lib/handbuch.mjs"
 
 permissions:
   contents: write
@@ -38,29 +40,19 @@ jobs:
           node tools/pruefen.mjs --streng
           node tools/konsistenz.mjs
 
-      - name: BMF-Navigation begrenzt diagnostizieren
+      - name: Amtlichen Sammelhost prüfen
         shell: bash
         run: |
           set -euo pipefail
           node - <<'NODE'
-          const url = 'https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html';
+          const url = 'https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/Meta/Inhaltsverzeichnis/inhalt.html';
           const r = await fetch(url, {headers:{'User-Agent':'steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)','Accept':'text/html,application/xhtml+xml'}, redirect:'follow'});
           const html = await r.text();
-          const zaehle = re => (html.match(re) || []).length;
-          console.log(JSON.stringify({status:r.status,url:r.url,zeichen:html.length,contentType:r.headers.get('content-type'),
-            a:zaehle(/<a\b/gi),area:zaehle(/<area\b/gi),href:zaehle(/href\s*=/gi),dataHref:zaehle(/data-href\s*=/gi),
-            form:zaehle(/<form\b/gi),action:zaehle(/action\s*=/gi),script:zaehle(/<script\b/gi),escapedA:zaehle(/&lt;a\b/gi),
-            sectionPath:zaehle(/Erster-Teil/gi),paragraph:zaehle(/§|&sect;|&#167;/gi)}));
-          console.log(`ANFANG: ${JSON.stringify(html.slice(0,800))}`);
-          for (const suchwort of ['href','Erster-Teil','Abgabenordnung/Erster','data-href','window.location','location.href']) {
-            let von = 0, nr = 0;
-            while (nr < 5) {
-              const i = html.toLowerCase().indexOf(suchwort.toLowerCase(), von);
-              if (i < 0) break;
-              console.log(`KONTEXT ${suchwort} ${nr+1}: ${JSON.stringify(html.slice(Math.max(0,i-160), i+360))}`);
-              von = i + suchwort.length;
-              nr++;
-            }
+          const links = (html.match(/<a\b/gi) || []).length;
+          const paragrafen = (html.match(/§|&sect;|&#167;/gi) || []).length;
+          console.log(`Status ${r.status}; ${html.length} Zeichen; ${links} Links; ${paragrafen} Paragraphenzeichen.`);
+          if (!r.ok || links < 5 || paragrafen < 5 || /Radware Bot Manager/i.test(html)) {
+            throw new Error('Der amtliche Sammelhost liefert kein verwendbares Inhaltsverzeichnis.');
           }
           NODE
 
