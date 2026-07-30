@@ -1,0 +1,120 @@
+name: Release v4 finalisieren
+
+on:
+  pull_request:
+    paths:
+      - ".release-v4b/**"
+      - ".github/workflows/release-v4-finalisieren.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-v4-final-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  finalisieren:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Release-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Archiv verifizieren und Produktivdateien übernehmen
+        id: payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import os
+          import pathlib
+          import shutil
+          import tarfile
+
+          wurzel = pathlib.Path('.')
+          teile = sorted((wurzel / '.release-v4b').glob('payload.*.b64'))
+          ausgabe = pathlib.Path(os.environ['GITHUB_OUTPUT'])
+          if not teile:
+              with ausgabe.open('a', encoding='utf-8') as f:
+                  f.write('vorhanden=false\n')
+              print('Produktivdateien wurden bereits übernommen.')
+              raise SystemExit(0)
+
+          erwartete_laengen = [10000, 10000, 20000, 20000, 20000, 20000, 412]
+          if len(teile) != len(erwartete_laengen):
+              raise SystemExit(f'Erwartet {len(erwartete_laengen)} Teile, gefunden: {len(teile)}')
+
+          stuecke = []
+          for datei, erwartet in zip(teile, erwartete_laengen):
+              text = ''.join(datei.read_text(encoding='utf-8').split())
+              print(f'{datei}: {len(text)} Zeichen')
+              if len(text) != erwartet:
+                  raise SystemExit(f'{datei}: {len(text)} statt {erwartet} Zeichen')
+              stuecke.append(text)
+
+          kodiert = ''.join(stuecke)
+          if len(kodiert) != 100412:
+              raise SystemExit(f'Falsche Gesamtlänge: {len(kodiert)}')
+          roh = base64.b64decode(kodiert, validate=True)
+          pruefsumme = hashlib.sha256(roh).hexdigest()
+          erwartet = 'dd467febab8280b8eae4d23c75083c4b1330c24042802bbbc2286c4f34c3b394'
+          print(f'Archiv-SHA-256: {pruefsumme}')
+          if pruefsumme != erwartet:
+              raise SystemExit('Archiv-Prüfsumme stimmt nicht.')
+
+          archiv = pathlib.Path('/tmp/steuernorm-v4-final.tar.gz')
+          archiv.write_bytes(roh)
+          with tarfile.open(archiv, 'r:gz') as tar:
+              for mitglied in tar.getmembers():
+                  ziel = (wurzel / mitglied.name).resolve()
+                  if wurzel.resolve() not in ziel.parents and ziel != wurzel.resolve():
+                      raise SystemExit(f'Unsicherer Archivpfad: {mitglied.name}')
+              tar.extractall(wurzel)
+
+          shutil.rmtree('.release-v4b', ignore_errors=True)
+          shutil.rmtree('.release-v4', ignore_errors=True)
+          pathlib.Path('release-v4-marker.txt').unlink(missing_ok=True)
+          pathlib.Path('README-v3.md').unlink(missing_ok=True)
+          with ausgabe.open('a', encoding='utf-8') as f:
+              f.write('vorhanden=true\n')
+          PY
+
+      - name: Übernommenen v4-Stand vollständig prüfen
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json", "utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("package.json", "utf8"))'
+          test -f tools/belege.mjs
+          test -f tools/lib/belegprobe.mjs
+          test -f tools/lib/handbuch.mjs
+          test -f tools/lib/rechtsprechung.mjs
+          grep -qi 'beleg' index.html
+          grep -qi 'rechtsprechung' index.html
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+          node tools/annotieren.mjs --nur solzg --ohne-ki --trocken --laeufe 1
+
+      - name: Produktivdateien in den Release-Branch schreiben
+        if: steps.payload.outputs.vorhanden == 'true'
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-release-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Umbau v4 vollständig und geprüft übernehmen"
+          git pull --rebase --autostash origin "$BRANCH"
+          git push origin "HEAD:$BRANCH"
