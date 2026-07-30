@@ -1,0 +1,66 @@
+name: Belege in Annotationen übernehmen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "belege/**"
+      - "tools/belege-einbetten.mjs"
+      - ".github/workflows/belege-einbetten.yml"
+  workflow_dispatch:
+
+permissions: { contents: write }
+
+concurrency:
+  group: belege-einbetten
+  cancel-in-progress: true
+
+jobs:
+  einbetten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+
+      - name: Amtliche Fundstellen einbetten
+        run: |
+          set -euo pipefail
+          node --check tools/belege-einbetten.mjs
+          node tools/belege-einbetten.mjs
+
+      - name: Annotationen streng prüfen
+        run: |
+          set -euo pipefail
+          node tools/pruefen.mjs --streng | tee pruefbericht-ki.txt
+          node tools/konsistenz.mjs --schreiben
+          node - <<'NODE'
+          const b = require('./reports/belege-annotation.json');
+          if (!b.vollstaendig || b.gesetze !== 14 || b.normen !== 1537 || b.handbuecherMitBelegen !== 8) {
+            throw new Error(`Einbettung unvollständig: ${JSON.stringify(b)}`);
+          }
+          if (b.normenMitBelegen < 1 || b.fundstellen < 1) throw new Error('Keine Fundstellen eingebettet.');
+          console.log(`${b.normenMitBelegen} Normen, ${b.fundstellen} Fundstellen, acht Handbücher.`);
+          NODE
+
+      - name: Eingebettete Belege festschreiben
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A annotations reports pruefbericht-ki.txt
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+            exit 0
+          fi
+          git commit -m "Amtliche Belege in Annotationen einbetten"
+          for versuch in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((versuch * 5))
+          done
+          exit 1
