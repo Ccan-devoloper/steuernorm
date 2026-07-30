@@ -8,37 +8,203 @@
     "jahrgang": "2024"
   },
   "hinweis": "Auszüge aus Amtliches Gewerbesteuer-Handbuch. Amtliches Werk, nach § 5 Abs. 1 UrhG gemeinfrei. Unverändert wiedergegeben; maßgeblich ist die amtliche Fassung.",
-  "aktualisiert": "2026-07-30T11:01:57.477Z",
+  "aktualisiert": "2026-07-30T11:35:00.129Z",
   "normen": {
     "1": {
       "enbez": "§ 1",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 1.1 — Richtlinie — Steuerberechtigung",
+          "text": "aufklappen Zuklappen 1 Die Berechtigung zur Erhebung der Gewerbesteuer steht nach dem Gewerbesteuergesetz den Gemeinden zu. 2 Die Gemeinden sind verpflichtet eine Gewerbesteuer zu erheben und hierbei an die Vorschriften des Gewerbesteuergesetzes gebunden. 3 Durch die Abführung einer Umlage aus dem Gewerbesteueraufkommen an den Bund und das jeweils berechtigte Land auf Grund des § 6 des Gemeindefinanzreformgesetzes wird der Charakter als Gemeindesteuer nicht berührt.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 4.1 — Grundsatz der Betriebsstättengemeinde",
+          "text": "§ 4 Abs. 1 GewStG bei gemeindefreien Gebieten (einschließlich Anteil am Festlandsockel und an der ausschließlichen Wirtschaftszone) § 4 Abs. 2 GewStG bei Reisegewerbebetrieben § 35a Abs. 3 GewStG , § 35 GewStDV bei Gewerbebetrieben auf Schiffen und bei Binnen- und Küstenschifffahrtsbetrieben § 15 GewStDV Mindesthebesatz § 16 Abs. 4 S. 2 GewStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 1.2 — Richtlinie — Verwaltung der Gewerbesteuer",
+          "text": "R 1.2 (1) Richtlinie aufklappen Zuklappen Übertragung eines Teils der Verwaltung auf die Gemeinden 1 1 Ist die Festsetzung und Erhebung der Gewerbesteuer auf die Gemeinden übertragen, sind für die Ermittlung der Besteuerungsgrundlagen und für die Festsetzung und ggf. die Zerlegung der Steuermessbeträge die Finanzämter zuständig ( §§ 22 und 184 bis 190 AO ). 2 Die Festsetzung und Erhebung der Gewerbesteuer einschließlich Stundung, Niederschlagung und Erlass obliegen den hebeberechtigten Gemeinden. H 1.2 (1) Hinweise aufklappen Zuklappen Grundsatz der Verwaltungszuständigkeit Die Verwaltung der Gewerbesteuer steht grundsätzlich den Landesfinanzbehörden zu ( Artikel 108 Abs. 2 Satz 1 GG ). Sie kann von einem Land ganz oder zum Teil auf die Gemeinden übertragen werden ( Artikel 108 Abs. 4 Satz 2 GG ). Übertragung der Verwaltung R 1.6 Abs. 1 und BVerfG vom 08.11.1983 – BStBl II 1984 S. 249 Zur Übertragungsmöglichkeit der Verwaltung der Gewerbesteuer auf die Gemeinden ( BVerwG vom 29.09.1982 – BStBl II 1984 S. 236 ). R 1.2 (2) Richtlinie aufklappen Zuklappen Ausschließliche Verwaltung durch die Finanzämter 2 Ist die Festsetzung und Erhebung der Gewerbesteuer nicht auf die Gemeinden übertragen worden, sind die Finanzämter auch für diese Aufgaben zuständig. H 1.2 (2) Hinweise aufklappen Zuklappen Umfang der Zuständigkeit Zur Zuständigkeit bei Stundung, Erlass und Niederschlagung der Gewerbesteuer ( R 1.6 Abs. 2 ). R 1.2 (3) Richtlinie aufklappen Zuklappen Teilnahmerecht der Gemeinden bei einer Außenprüfung 3 1 Die Gemeinden sind gemäß § 21 FVG berechtigt, hinsichtlich der Gewerbesteuer durch einen Gemeindebediensteten an einer Außenprüfung bei einem Steuerpflichtigen teilzunehmen, wenn dieser in der Gemeinde eine Betriebsstätte unterhält und die Außenprüfung im Gemeindebezirk erfolgt. 2 § 21 Abs. 3 FVG berechtigt die Gemeinden nicht selbst zum Erlass einer Teilnahmeanordnung gegenüber dem Steuerpflichtigen. H 1.2 (3) Hinweise aufklappen Zuklappen Auskunfts- und Teilnahmerechte der Gemeinden Ist die Festsetzung und Erhebung der Gewerbesteuer auf die Gemeinden übertragen, hat die hebeberechtigte Gemeinde nach § 21 Abs. 3 Satz 1 FVG das Recht, sich über die für die Gewerbesteuer erheblichen Vorgänge bei dem örtlich zuständigen Finanzamt zu unterrichten. Dieses Recht erstreckt sich auf Akteneinsicht sowie auf mündliche und schriftliche Auskunft. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 1.3 — Richtlinie — Örtliche Zuständigkeit für die Festsetzung und Zerlegung des Steuermessbetrags",
+          "text": "R 1.3 (1) Richtlinie aufklappen Zuklappen Geschäftsleitung innerhalb des Geltungsbereichs des Gesetzes, Reisegewerbebetriebe 1 1 Für die Festsetzung und ggf. auch für die Zerlegung des Steuermessbetrags ist nach § 22 Abs. 1 AO das Betriebsfinanzamt zuständig. 2 Das ist nach § 18 Abs. 1 Nr. 2 AO das Finanzamt, in dessen Bezirk sich die Geschäftsleitung – bei reinen Reisegewerbebetrieben der Mittelpunkt der gewerblichen Tätigkeit – befindet. 3 Wird die Geschäftsleitung verlegt, geht die Zuständigkeit auf das Finanzamt über, in dessen Bezirk die Geschäftsleitung verlegt worden ist. 4 Wegen der Bearbeitung anhängiger Einsprüche in Fällen eines Zuständigkeitswechsels wird auf § 367 Abs. 1 i. V. m. § 26 AO hingewiesen. 5 Die Festsetzung und ggf. auch die Zerlegung des Steuermessbetrags erstreckt sich auf alle im Geltungsbereich des Gesetzes gelegenen Betriebsstätten ( R 2.9 ). R. 1.3 (2) Richtlinie aufklappen Zuklappen Geschäftsleitung außerhalb des Geltungsbereichs des Gesetzes 2 1 Befindet sich die Geschäftsleitung eines Unternehmens nicht im Geltungsbereich des Gesetzes, ist für die Festsetzung und ggf. auch für die Zerlegung des Steuermessbetrags das Finanzamt zuständig, in dessen Bezirk eine Betriebsstätte, bei mehreren Betriebsstätten die wirtschaftlich bedeutendste Betriebsstätte unterhalten wird ( § 22 Abs. 1 AO i. V. m. § 18 Abs. 1 Nr. 2 AO ). 2 Bei Verlegung der wirtschaftlich bedeutendsten Betriebsstätte gilt Absatz 1 Satz 3 und 4 entsprechend. R 1.3 (3) Richtlinie aufklappen Zuklappen Vom Wohnsitz abweichender Ort der Geschäftsleitung 3 1 Die Ermittlung des gewerblichen Gewinns sowie die Festsetzung und ggf. auch die Zerlegung des Steuermessbetrags sind grundsätzlich bei einem Finanzamt vereinigt. 2 Das gilt auch für den Fall, dass ein Einzelunternehmer seinen Wohnsitz und die Geschäftsleitung seines Betriebs in den Bezirken verschiedener Finanzämter und verschiedener Gemeinden hat. 3 In diesem Fall sind nach § 180 Abs. 1 Nr. 2 Buchstabe b AO die Einkünfte aus Gewerbebetrieb durch das Betriebsfinanzamt gesondert festzustellen.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 1.4 — Richtlinie — Gewerbesteuermessbescheid",
+          "text": "R 1.4 (1) Richtlinie aufklappen Zuklappen Fertigung von Gewerbesteuermessbescheiden 1 1 Die Finanzämter können sich bei der Fertigung der Gewerbesteuermessbescheide der Hilfe der Gemeinden bedienen. 2 Werden den Gemeinden auf Grund gesetzlicher Vorschriften die Daten der Gewerbesteuermessbescheide ganz oder teilweise auf maschinell verwertbaren Datenträgern oder durch Datenfernübertragung übermittelt, können die hebeberechtigten Gemeinden auch die Messbescheide fertigen. R 1.4 (2) Richtlinie aufklappen Zuklappen Bekanntgabe und Mitteilung an die Gemeinden 2 1 Wegen der Bekanntgabe der Bescheide an die Steuerpflichtigen und der Mitteilung an die Gemeinden ( §§ 122, 184 und 188 AO ). 2 Die Finanzämter können sich bei der Übersendung der Gewerbesteuermessbescheide der Hilfe der Gemeinden bedienen. 3 In diesen Fällen beginnt die Einspruchsfrist ( § 355 AO ) mit der Bekanntgabe der Bescheide durch die Gemeinde. 4 Im Hinblick auf die Wahrung der Festsetzungsfrist ( § 169 AO ) ist zu beachten, dass die Gemeinden die fristgerechte Absendung sicherzustellen haben.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 1.4 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines Der Gewerbesteuermessbescheid ist Steuerbescheid im Sinne der AO ( § 184 Abs. 1 Satz 3 i. V. m. 155 Abs. 1 AO ). Die Vorschriften der AO , insbesondere zu Form und Inhalt, Bestimmtheit sowie Bekanntgabe und Bestandskraft von Steuerbescheiden, sind somit zu beachten.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-1/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "2": {
       "enbez": "§ 2",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.1 — Richtlinie — Gewerbebetrieb",
+          "text": "R 2.1 (1) Richtlinie aufklappen Zuklappen Begriff des Gewerbebetriebs 1 1 Unter Gewerbebetrieb ist ein gewerbliches Unternehmen im Sinne des Einkommensteuergesetzes zu verstehen ( § 2 Abs. 1 GewStG ). 2 Für die Begriffsbestimmung des Gewerbebetriebs gilt somit § 15 Abs. 2 EStG . 3 Die Annahme eines Gewerbebetriebs setzt neben der persönlichen Selbständigkeit des Unternehmens auch die sachliche Selbständigkeit des Betriebs voraus. 4 Sachlich selbständig ist ein Unternehmen, wenn es für sich eine wirtschaftliche Einheit bildet, also nicht ein unselbständiger Teil eines anderen Unternehmens oder eines Gesamtunternehmens ist. H 2.1 (1) Hinweise aufklappen Zuklappen Begriffsmerkmale Ein Gewerbebetrieb liegt vor, wenn folgende Begriffsmerkmale gegeben sind: Selbständigkeit ( R 15.1 EStR und H 15.1 EStH ) sachliche Selbständigkeit des Betriebs Nachhaltigkeit der Betätigung ( H 15.2 EStH ) Gewinnerzielungsabsicht ( H 15.3 EStH , H 15.8 (5) EStH ) Beteiligung am allgemeinen wirtschaftlichen Verkehr ( H 15.4 EStH ) i. S. einer werbenden Tätigkeit Diese Voraussetzungen müssen sämtlich erfüllt sein, um die Gewerbesteuerpflicht zu begründen. Weiterhin darf es sich nicht um Land- und Forstwirtschaft ( R 13.2 und 15.5 EStR , H 13.2 und 15.5 EStH ), um selbständige Arbeit ( H 15.6 EStH ) oder um Vermögensverwaltung ( R 2.2, R 15.7 EStR und H 15.7 EStH ) handeln. Sachliche Selbständigkeit des Betriebs Organschaft",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.3",
+          "text": "Zur Frage ob ein einheitlicher Gewerbebetrieb oder mehrere selbständige Gewerbebetriebe vorliegen ( R 2.4 ). Stehender Gewerbebetrieb § 1 GewStDV Zu Beginn und Ende der Steuerpflicht R 2.5 bzw. R 2.6 R 2.1 (2) Richtlinie aufklappen Zuklappen Personengesellschaften 2 Offene Handelsgesellschaften, Kommanditgesellschaften oder andere Personengesellschaften, die eine Tätigkeit im Sinne des § 15 Abs. 1 Satz 1 Nr. 1 EStG ausüben und deren Gesellschafter als Mitunternehmer anzusehen sind, sind Gewerbebetriebe nach § 2 Abs. 1 GewStG . H 2.1 (2) Hinweise aufklappen Zuklappen Allgemeines Sowohl eine gewerblich tätige als auch eine gewerblich geprägte Personengesellschaft kann nur einen einzigen Gewerbebetrieb haben, der ihre gesamte Tätigkeit umfasst Umfassender Gewerbebetrieb einer Personengesellschaft . Personengesellschaften, an denen nur ein Gesellschafter mitunternehmerschaftlich beteiligt ist (hier: sog. Treuhandmodell), unterliegen nicht der Gewerbesteuer ( BFH vom 03.02.2010 – BStBl II S. 751 ). Gewerbesteuerbefreiung Übt eine Personengesellschaft neben einer freiberuflichen auch eine gewerbliche Tätigkeit aus, so ist die Tätigkeit auch dann infolge der „Abfärberegelung“ des § 15 Abs. 3 Nr. 1 EStG insgesamt als gewerblich anzusehen, wenn die gewerbliche Tätigkeit von der Gewerbesteuer befreit ist. Die Gewerbesteuerbefreiung erstreckt sich in solchen Fällen jedoch auch auf die Tätigkeit, die ohne die „Abfärbung“ freiberuflich wäre ( BFH vom 30.08.2001 – BStBl II 2002 S. 152 ). Mitunternehmerschaft H 15.8 (1) EStH Treuhandmodell Allgemeines Umfassender Gewerbebetrieb einer Personengesellschaft Personengesellschaften gelten auch dann in vollem Umfang als Gewerbebetrieb, wenn sie nur teilweise eine Tätigkeit im Sinne des § 15 Abs. 1 Satz 1 Nr. 1 EStG ausüben ( Abfärberegelung ) § 15 Abs. 3 Nr. 1 EStG , R 15.8 Abs. 5 EStR und H 15.8 (5) EStH . Die Tätigkeit einer gewerblich geprägten Personengesellschaft gemäß § 15 Abs. 3 Nr. 2 EStG gilt als Gewerbebetrieb ( Geprägeregelung ). Demnach gilt auch die vermögensverwaltende Tätigkeit einer gewerblich geprägten Personengesellschaft als Gewerbebetrieb § 15 Abs. 3 Nr. 2 EStG , R 15.8 Abs. 6 EStR und H 15.8 (6) EStH . Zur Frage der „Abfärbung“ gem. § 15 Abs. 3 Nr. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.4 — Hebeberechtigung",
+          "text": "§ 35a Abs. 3 GewStG R 2.1 (4) Richtlinie aufklappen Zuklappen Gewerbebetrieb kraft Rechtsform 4 1 Nach § 2 Abs. 2 GewStG gilt die Tätigkeit der Kapitalgesellschaften (insbesondere Europäische Gesellschaften, Aktiengesellschaften, Kommanditgesellschaften auf Aktien, Gesellschaften mit beschränkter Haftung), der Genossenschaften einschließlich Europäischer Genossenschaften und der Versicherungs- und Pensionsfondsvereine auf Gegenseitigkeit stets und in vollem Umfang als Gewerbebetrieb. 2 Bei Unternehmen mit Sitz ( § 11 AO ) und Geschäftsleitung ( § 10 AO ) im Ausland bestimmt sich die Rechtsfähigkeit im Inland ausschließlich nach dem Recht des jeweiligen ausländischen Staates. 3 Befindet sich die Geschäftsleitung im Inland, erlangt das ausländische Unternehmen die Rechtsfähigkeit im Inland erst mit Eintragung in das jeweilige deutsche Register. 4 Abweichend hiervon sind die nach dem Recht eines anderen EU -Staates gegründeten Gesellschaften mit Geschäftsleitung im Inland ( sog. doppelt ansässige Gesellschaften ) auch ohne Eintragung in ein deutsches Register im Inland voll rechtsfähig. 5 Ist das Unternehmen im Inland nicht rechtsfähig, ist ein Gewerbebetrieb unter den Voraussetzungen des § 2 Abs. 1 Satz 2 GewStG oder § 2 Abs. 3 GewStG gegeben. H 2.1 (4) Hinweise aufklappen Zuklappen Allgemeines Bei den in § 2 Abs. 2 GewStG genannten Unternehmen ist die Gewerbesteuerpflicht nur an die Rechtsform geknüpft mit der Folge, dass nicht nur eine gewerbliche Tätigkeit, sondern jegliche Tätigkeit überhaupt die Gewerbesteuerpflicht auslöst ( RFH vom 13.12.1938 – RStBl 1939 S. 543 und BFH vom 13.12.1960 – BStBl III 1961 S. 66, vom 13.11.1962 – BStBl III 1963 S. 69, vom 20.10.1976 – BStBl II 1977 S. 10, vom 08.06.1977 – BStBl II S. 668 und vom 22.08.1990 – BStBl II 1991 S. 250 ). Gewerbesteuerpflicht ausländischer Kapitalgesellschaften Die Vorschrift in § 2 Abs. 2 GewStG gilt auch für ausländische Unternehmen, die im Inland eine Betriebsstätte unterhalten, in ihrer Rechtsform einem inländischen Unternehmen der in § 2 Abs. 2 GewStG bezeichneten Art entsprechen und im Inland rechtsfähig sind ( RFH vom 04.04.1939 – RStBl S. 854 und BFH vom 28.03.1979 – BStBl II S. 447 und vom 28.07.1982 – BStBl II 1983 S. 77 ). Gewerbesteuerpflicht kraft Rechtsform doppelt ansässige Gesellschaften in EU -Staaten R 2.1 Abs. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.9 — R 2.1 (5)",
+          "text": "Richtlinie aufklappen Zuklappen Gewerbebetrieb kraft wirtschaftlichen Geschäftsbetriebs 5 1 Die juristischen Personen des privaten Rechts, die nicht bereits in § 2 Abs. 2 Satz 1 GewStG aufgeführt sind, und die nichtrechtsfähigen Vereine unterliegen der Gewerbesteuer, soweit sie einen wirtschaftlichen Geschäftsbetrieb unterhalten. 2 Durch § 2 Abs. 3 GewStG wird die Gewerbesteuerpflicht erweitert und auf wirtschaftliche Geschäftsbetriebe ausgedehnt, die keinen Gewerbebetrieb im Sinne des § 2 Abs. 1 GewStG bilden. 3 Soweit keine Einschränkung besteht, umfasst der Begriff des wirtschaftlichen Geschäftsbetriebs ohne Unterscheidung den Gewerbebetrieb, den land- und forstwirtschaftlichen Betrieb und den sonstigen wirtschaftlichen Geschäftsbetrieb. 4 Durch § 2 Abs. 3 und § 3 Nr. 6 GewStG wird die Land- und Forstwirtschaft im Rahmen eines wirtschaftlichen Geschäftsbetriebs ausdrücklich von der Gewerbesteuerpflicht ausgenommen. 5 Bewirtschaftet z. B. eine rechtsfähige Stiftung landwirtschaftlichen Grundbesitz oder Forstbesitz, ist dieser Betrieb nicht gewerbesteuerpflichtig. 6 Im Gegensatz zum Begriff des Gewerbebetriebs gehören weder die Gewinnerzielungsabsicht noch die Teilnahme am allgemeinen wirtschaftlichen Verkehr zu den Voraussetzungen des wirtschaftlichen Geschäftsbetriebs. 7 Betätigungen, wie z. B. der Betrieb einer Kantine, eines Kasinos, einer Druckerei, eines Kreditinstituts, eines Versicherungsunternehmens, die Herausgabe einer Zeitschrift oder die Erhebung von Eintrittsgeld bei Veranstaltung einer Festlichkeit, gehen über den Rahmen einer Vermögensverwaltung hinaus und gelten demgemäß stets als Gewerbebetrieb im Sinne des § 2 Abs. 3 GewStG , wenn sie nicht bereits einen Gewerbebetrieb im Sinne des § 2 Abs. 1 GewStG bilden. 8 Dagegen geht die Betätigung von Unterstützungskassen, die den Leistungsempfängern keinen Rechtsanspruch gewähren, im Regelfall nicht über den Rahmen einer Vermögensverwaltung hinaus. 1 Durch Art. 22 des Kreditzweitmarktförderungsgesetzes wurde in § 2 Absatz 3 GewStG der Begriff des nicht rechtsfähigen Vereins in Verein ohne Rechtspersönlichkeit geändert. H 2.1 (5) Hinweise aufklappen Zuklappen Begriff des wirtschaftlichen Geschäftsbetriebs § 14 AO Beschränkung der Gewerbesteuerpflicht auf den wirtschaftlichen Geschäftsbetrieb Im Gegensatz zu den Gewerbebetrieben kraft Rechtsform ( R 2.1 Abs. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "AEAO zu § 64 Abs. 3 AO , Nr. 18. bis 27 . — R 2.1 (6)",
+          "text": "Richtlinie aufklappen Zuklappen Betriebe der öffentlichen Hand 6 1 Betriebe der öffentlichen Hand sind gewerbesteuerpflichtig, wenn sie die Voraussetzungen eines Betriebs gewerblicher Art ( § 4 KStG und R 6 KStR ) und eines Gewerbebetriebs ( § 15 Abs. 2 EStG ) erfüllen. 2 Mit Kantinen, die nur für die Angehörigen eines Betriebs eingerichtet und zugänglich sind, wird mangels einer Beteiligung am allgemeinen wirtschaftlichen Verkehr kein Gewerbebetrieb unterhalten. 3 Sind nach Maßgabe des § 4 Abs. 6 Satz 1 KStG mehrere Betriebe zusammengefasst worden, kommt es für die Annahme eines Gewerbebetriebs darauf an, dass das zusammengefasste Unternehmen insgesamt mit Gewinnerzielungsabsicht betrieben wird. H 2.1 (6) Hinweise aufklappen Zuklappen Anwendungsfragen zu den Regelungen im Jahressteuergesetz 2009 zur Besteuerung von Betrieben gewerblicher Art und Eigengesellschaften von juristischen Personen des öffentlichen Rechts BMF vom 12.11.2009 – BStBl I S. 1303 ( Rdnr. 95 ff. ) Beteiligung am allgemeinen wirtschaftlichen Verkehr H 2.1 (1) Betriebe der öffentlichen Hand, die überwiegend der Ausübung der öffentlichen Gewalt dienen ( Hoheitsbetriebe ), gehören mit Ausnahme der Versorgungsbetriebe mangels einer Beteiligung am allgemeinen wirtschaftlichen Verkehr nicht zu den Gewerbebetrieben ( § 2 Abs. 2 GewStDV und H 2.1 (1) ). Gewinnerzielungsabsicht Ob Gewinnerzielungsabsicht ( H 15.3 EStH ) vorliegt, muss bei ständig mit Verlusten arbeitenden Eigenbetrieben von juristischen Personen des öffentlichen Rechts im Einzelfall unter Abwägung aller Umstände geprüft werden ( BFH vom 28.10.1970 – BStBl II 1971 S. 247, vom 15.12.1976 – BStBl II 1977 S. 250 und vom 22.08.1984 – BStBl II 1985 S. 61 ). Steuerbefreiung von Krankenhäusern, Altenheimen, Altenwohnheimen und Pflegeheimen",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.2 — Richtlinie — Betriebsverpachtung",
+          "text": "aufklappen Zuklappen 1 Die Verpachtung eines Gewerbebetriebs im Ganzen oder eines Teilbetriebs ist grundsätzlich nicht als Gewerbebetrieb anzusehen und unterliegt daher regelmäßig nicht der Gewerbesteuer. 2 Die Pachteinnahmen gehören zwar, solange der Verpächter nicht die Betriebsaufgabe erklärt, einkommensteuerlich zu den Einkünften aus Gewerbebetrieb, sie unterliegen jedoch nicht mehr der Gewerbesteuer. 3 Deshalb muss für das Wirtschaftsjahr, in dem die Verpachtung beginnt, der auf die Zeit bis zum Pachtbeginn entfallende Gewinn für die Gewerbesteuer besonders ermittelt werden. 4 Für diese Gewinnermittlung gelten die allgemeinen Grundsätze. 5 Aus Vereinfachungsgründen ist es jedoch nicht zu beanstanden, wenn der Gewinn des Wirtschaftsjahrs, in dem die Verpachtung beginnt, durch Schätzung auf die Zeiträume vor und nach Pachtbeginn aufgeteilt wird. 6 Dabei kann z. B. der Gewinn des Wirtschaftsjahrs im Verhältnis des in der Zeit bis zum Pachtbeginn erzielten Bruttogewinns (Warenrohgewinn) zur Pachteinnahme aufgeteilt werden. 7 Entsprechendes gilt für die Hinzurechnungen und Kürzungen. 8 Ist der Gewinn vor der Verpachtung nach § 4 Abs. 3 EStG ermittelt worden, ist für die Ermittlung des Gewerbeertrags bis zum Pachtbeginn für diesen Zeitpunkt der Übergang zum Vermögensvergleich zu unterstellen.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "3": {
       "enbez": "§ 3",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 3.0 — Richtlinie — Steuerbefreiungen nach anderen Gesetzen und Verordnungen",
+          "text": "aufklappen Zuklappen Sehen andere Gesetze oder Verordnungen die Befreiung von der Gewerbesteuer vor, sind diese auch ohne eine entsprechende Regelung im Gewerbesteuergesetz anzuwenden.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 3.0 — Hinweise — aufklappen",
+          "text": "Zuklappen Steuerbefreiungen außerhalb des Gewerbesteuergesetzes Von der Gewerbesteuer sind auf Grund anderer Gesetze und Verordnungen u. a. befreit: Kleinere Versicherungsvereine auf Gegenseitigkeit nach § 12a GewStDV vom 15.10.2002 ( BGBl. I S. 4180), zuletzt geändert durch Artikel 10 des Jahressteuergesetzes 2024 vom 2.12.2024 ( BGBl. I Nr. 387). Einnehmer staatlicher Lotterien nach § 13 GewStDV vom 15.10.2002 ( BGBl. I S. 4180), zuletzt geändert durch Artikel 10 des Jahressteuergesetzes 2024 vom 2.12.2024 ( BGBl. I Nr. 387). Investmentfonds und Spezial-Investmentfonds nach § 15 und § 29 des Investmentsteuergesetzes vom 19.7.2016 ( BGBl. I S. 1730 ( Nr. 36)), zuletzt geändert durch Artikel 11 des Jahressteuergesetzes 2024 vom 02.12.2024 ( BGBl. I Nr. 387). Ausgleichkassen und gemeinsame Einrichtungen der Tarifvertragsparteien nach § 12 Abs. 3 des Vorruhestandsgesetzes vom 13.04.1984 ( BGBl. I S. 601, BStBl I S. 332), zuletzt geändert durch Art. 2 des Gesetzes vom 22.12.2005 ( BGBl. I S. 3686). § 3 G 1410 1 Von der Gewerbesteuer sind befreit G 1411 das Bundeseisenbahnvermögen, die staatlichen Lotterieunternehmen, die zugelassenen öffentlichen Spielbanken mit ihren der Spielbankabgabe unterliegenden Tätigkeiten und der Erdölbevorratungsverband nach § 2 Absatz 1 des Erdölbevorratungsgesetzes vom 16. Januar 2012 ( BGBl. I S. 74) in der jeweils geltenden Fassung;",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 3.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Betrieb einer Bar in Spielbanken Weder der Betrieb einer Bar noch die Einnahmen aus der Verpachtung von Flächen zum Betrieb einer Bar in den Räumen einer Spielbank sind mit der Spielbankabgabe abgegolten und unterliegen somit der Gewerbesteuer ( BFH vom 30.10.2014 – BStBl II 2015 S. 565 ). Lotterieunternehmen Die Befreiungsvorschrift des § 3 Nr. 1 GewStG ist auf Lotterieunternehmen, die in der Rechtsform einer Kapitalgesellschaft betrieben werden, auch dann nicht anwendbar, wenn sich die Anteile in der Hand des Staates befinden ( BFH vom 14.03.1961 – BStBl III S. 212 und vom 13.11.1963 – BStBl III 1964 S. 190 ). Demgegenüber ist § 3 Nr. 1 GewStG auf ein Lotterieunternehmen, das als rechtsfähige Anstalt des öffentlichen Rechts der Staatsaufsicht unterliegt, anzuwenden ( BFH vom 24.10.1984 – BStBl II 1985 S. 223 ). Privater (nicht staatlicher) Lotterieveranstalter Der private Veranstalter einer nicht genehmigten Lotterie kann weder die Gewerbesteuerfreiheit nach § 3 Nr. 1 GewStG in Anspruch nehmen noch ist er Einnehmer einer staatlichen Lotterie i. S. des § 13 GewStDV . Gegen die hieraus folgende Doppelbelastung mit Lotterie- und Gewerbesteuer bestehen keine verfassungsrechtlichen Bedenken ( BFH vom 02.12.2010 – BStBl II 2011 S. 368 ). Staatliche Lotterie Zum Begriff der staatlichen Lotterie ( BFH vom 14.03.1961 – BStBl III S. 212, vom 13.11.1963 – BStBl III 1964 S. 190 und vom 24.10.1984 – BStBl II 1985 S. 223 ). Zur Behandlung der Einnehmer einer staatlichen Lotterie § 13 GewStDV Die Befreiungsvorschrift des § 13 GewStDV ist auf Einnehmer von Lotterieunternehmen, die in der Rechtsform einer Kapitalgesellschaft betrieben werden, auch dann nicht anwendbar, wenn sich die Anteile in der Hand des Staates befinden ( BFH vom 14.03.1961 – BStBl III S. 212 und vom 13.11.1963 – BStBl III 1964 S. 190 ). Zur steuerbefreiten Tätigkeit des Einnehmers eines staatlichen Lotterieunternehmens kann es auch gehören, dass der Lotterieeinnehmer so genannte Lagerlose vorrätig hält und hierdurch selbst an den einzelnen Losziehungen der Lotterie teilnimmt ( BFH -Urteil vom 25.03.1976 – BStBl II S. 576 ). Der Bezirksstellenleiter einer staatlichen Lotterie, der keine Lotteriegeschäfte mit Kunden abschließt, ist kein von der Gewerbesteuer befreiter Lotterieeinnehmer i. S. d. § 13 GewStDV ( BFH vom 10.08.1972 – BStBl II S. 801 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 3.6 — Hinweise — aufklappen",
+          "text": "Zuklappen Gemeinnützige, mildtätige und kirchliche Körperschaften",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "AEAO zu §§ 51 bis 68 AO (abgedruckt im AO -Handbuch) — Gemeinnützige kommunale Eigengesellschaft (Rettungsdienst)",
+          "text": "Die Eigengesellschaft einer juristischen Person des öffentlichen Rechts kann nach § 5 Abs. 1 Nr. 9 KStG 2002 und § 3 Nr. 6 Satz 1 GewStG 2002 steuerbegünstigt sein. Das gilt auch, soweit sie in die Erfüllung hoheitlicher Pflichtaufgaben der Trägerkörperschaft eingebunden ist ( BFH vom 27.11.2013 – BStBl II 2016 S. 68 ). Rückwirkende Aberkennung der Gemeinnützigkeit Ist die tatsächliche Geschäftsführung einer gemeinnützigen GmbH nicht während des gesamten Besteuerungszeitraums auf die ausschließliche und unmittelbare Erfüllung der steuerbegünstigten Zwecke gerichtet, führt dies grundsätzlich nur zu einer Versagung der Steuerbefreiung für diesen Besteuerungszeitraum. Schüttet eine gemeinnützige GmbH jedoch die aus der gemeinnützigen Tätigkeit erzielten Gewinne überwiegend verdeckt an ihre steuerpflichtigen Gesellschafter aus, liegt ein schwer wiegender Verstoß gegen § 55 Abs. 1 Nr. 1 bis 3 AO vor, der in Anwendung des § 61 Abs. 3 AO auch zum rückwirkenden Verlust der Gewerbesteuerbefreiung nach § 3 Nr. 6 GewStG führt ( BFH vom 12.10.2010 – BStBl II 2012 S. 226 ). Wirtschaftliche Geschäftsbetriebe Unterhält ein in § 3 Nr. 6 Satz 1 GewStG genanntes Unternehmen einen oder mehrere wirtschaftliche Geschäftsbetriebe, die keine Zweckbetriebe sind und übersteigen die Einnahmen insgesamt, einschließlich der Umsatzsteuer, im Jahr 45.000 Euro, tritt insoweit partielle Gewerbesteuerpflicht ein. § 64 AO R 2.1 Abs. 5, H 2.1 (5) § 3 G 1412 Hochsee- und Küstenfischerei, wenn sie mit weniger als sieben im Jahresdurchschnitt beschäftigten Arbeitnehmern oder mit Schiffen betrieben wird, die eine eigene Triebkraft von weniger als 100 Pferdekräften haben;",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 3.7 — Richtlinie — Hochsee- und Küstenfischerei",
+          "text": "aufklappen Zuklappen Küstenfischerei im Sinne dieser Vorschrift ist auch die Fischerei auf dem Unterlauf der Weser und der Elbe und die Hafffischerei.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-3/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "4": {
       "enbez": "§ 4",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 4.1 — Richtlinie — Hebeberechtigung",
+          "text": "R 4.1 (1) Richtlinie aufklappen Zuklappen Allgemeines 1 1 Die Hebeberechtigung ist das Recht einer Gemeinde, den Gewerbesteueranspruch unmittelbar dem Steuerpflichtigen gegenüber geltend zu machen, wenn ihr die Festsetzung und Erhebung der Gewerbesteuer durch ein Landesgesetz übertragen ist. 2 Hebeberechtigte Gemeinde für den stehenden Gewerbebetrieb ist diejenige Gemeinde, in der der Gewerbebetrieb seine Betriebsstätte hat. 3 Befinden sich Betriebsstätten desselben Gewerbebetriebs in mehreren Gemeinden oder erstreckt sich eine Betriebsstätte über mehrere Gemeinden, so ist jede dieser Gemeinden nach dem Teil des Steuermessbetrags hebeberechtigt, der auf sie entfällt. 4 Dieser Teil wird im Wege der Zerlegung des Steuermessbetrags ( §§ 28 bis 34 GewStG ) ermittelt. R 4.1 (2) Richtlinie aufklappen Zuklappen Bindungswirkung 2 1 Für den Erlass des Gewerbesteuerbescheids ist der zugrunde liegende Gewerbesteuermessbescheid bindend ( § 184 Abs. 1 Satz 2 i. V. m. § 182 Abs. 1 AO ). 2 Nach § 184 Abs. 3 AO teilen deshalb die Finanzämter den Inhalt des Gewerbesteuermessbescheids den Gemeinden mit, denen die Steuerfestsetzung obliegt.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-4/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.9 — Reisegewerbebetrieb",
+          "text": "§ 35a Abs. 3 GewStG Verletzung der Vorschriften über die örtliche Zuständigkeit Die Aufhebung eines Gewerbesteuermessbescheides kann regelmäßig nicht allein deswegen beansprucht werden, weil er von einem örtlich unzuständigen Finanzamt erlassen worden ist ( BFH vom 19.11.2003 – BStBl II 2004 S. 751 ). Verwaltung der Gewerbesteuer",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-4/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 1.2 — Blättern-Navigation",
+          "text": "§ 3 § 4 § 5 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-4/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "5": {
       "enbez": "§ 5",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 5.1 — Richtlinie — Steuerschuldnerschaft",
+          "text": "R 5.1 (1) Richtlinie aufklappen Zuklappen Allgemeines 1 1 § 5 GewStG regelt die persönliche Steuerpflicht. 2 Wird ein Einzelunternehmen durch Aufnahme eines oder mehrerer Gesellschafter in eine Personengesellschaft umgewandelt oder scheiden aus einer Personengesellschaft alle Gesellschafter bis auf einen aus und findet dieser Rechtsformwechsel während des Kalenderjahrs statt, endet oder beginnt die Steuerschuldnerschaft und damit die persönliche Steuerpflicht des Einzelunternehmers und der Personengesellschaft im Zeitpunkt des Rechtsformwechsels. 3 Der Wechsel des Steuerschuldners ist bereits im Rahmen der Festsetzung des Steuermessbetrags ( § 14 GewStG ) zu berücksichtigen. H 5.1 (1) Hinweise aufklappen Zuklappen Formwechsel Geht das Vermögen einer zweigliedrigen Personengesellschaft beim Ausscheiden eines der beiden Gesellschafter auf den verbleibenden Gesellschafter über, so sind für das Jahr des Formwechsels zwei Gewerbesteuermessbescheide, jeweils für die Zeit vor und nach dem Wechsel zu erlassen ( BFH vom 13.10.2005 – BStBl II 2006 S. 404 ). Die Aufteilung der Steuerschuld auf zwei Steuerschuldner führt jedoch nicht dazu, dass der Gewerbesteuermessbetrag für jeden Steuerschuldner nur unter Berücksichtigung des von diesem erzielten Gewerbeertrags zu ermitteln ist. Vielmehr ist, ausgehend von dem Fortbestand der sachlichen Steuerpflicht bei einem während des Erhebungszeitraums erfolgten Rechtsformwechsel, der Gewerbesteuermessbetrag ungeachtet der verschiedenen Steuerschuldnerschaften einheitlich zu ermitteln, im prozentualen Verhältnis der von den beiden Steuerschuldnern erzielten Gewerbeerträge zu verteilen und sodann entsprechend festzusetzen ( BFH vom 25.04.2018 – BStBl II S. 484 ). Unternehmerwechsel Zur sachlichen Steuerpflicht",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-5/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 11.1 — Verdecktes Gesellschaftsverhältnis",
+          "text": "Bei einem verdeckten Gesellschaftsverhältnis zwischen einer Personenhandelsgesellschaft und einer natürlichen Person ist der Gewerbesteuer- oder Gewerbesteuermessbescheid unter der Geltung des § 5 Abs. 1 GewStG 1977 nicht an die Innengesellschaft, sondern an die Personenhandelsgesellschaft als Steuerschuldnerin zu adressieren ( BFH vom 16.12.1997 – BStBl II 1998 S. 480 – Abgrenzung zum BFH vom 07.04.1987 – BStBl II S. 768 ). R 5.1 (2) Richtlinie aufklappen Zuklappen Atypisch stille Gesellschaft 2 1 Bei einer atypischen stillen Gesellschaft ist Steuerschuldner der Gewerbesteuer nach § 5 Abs. 1 Satz 1 GewStG der Inhaber des Handelsgeschäfts. 2 Der Gewerbesteuermessbescheid und der Gewerbesteuerbescheid für die atypische stille Gesellschaft richten sich demzufolge an den Inhaber des Handelsgeschäfts und sind diesem als Steuerschuldner bekannt zu geben. 3 Sind die dem Inhaber des Handelsgeschäftes und den einzelnen atypisch stillen Gesellschaften zuzuordnenden Tätigkeiten als ein einziger Gewerbebetrieb zu beurteilen, sind an den Inhaber des Handelsgeschäftes nur ein Gewerbesteuermessbescheid und ein Gewerbesteuerbescheid zu richten. 4 Handelt es sich bei den Tätigkeiten dagegen um jeweils getrennte Gewerbebetriebe, ist an den Inhaber des Handelsgeschäftes für jeden getrennt zu beurteilenden Gewerbebetrieb ein gesonderter Gewerbesteuermessbescheid und ein Gewerbesteuerbescheid zu richten. 5 Absatz 1 gilt nicht im Fall der atypischen stillen Gesellschaft, weil hier durch Beginn und Beendigung des Gesellschaftsverhältnisses ein Wechsel in der Person des Steuerschuldners nicht stattfindet. H 5.1 (2) Hinweise aufklappen Zuklappen Mehrheit von Betrieben R 2.4 Abs. 5 Steuerschuldnerschaft Als Steuerschuldner kommen weder die atypische stille Gesellschaft selbst noch die an ihr beteiligten Personen in ihrer gesellschaftsrechtlichen Verbundenheit noch der stille Gesellschafter in Betracht ( BFH vom 12.11.1985 – BStBl II 1986 S. 311 ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-5/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 5.2 — Richtlinie — Europäische wirtschaftliche Interessenvereinigung (EWIV)",
+          "text": "aufklappen Zuklappen 1 Nach Art. 40 der Verordnung ( EWG ) Nr. 2137/85 des Rates vom 25.7.1985 über die Schaffung einer Europäischen wirtschaftlichen Interessenvereinigung ( EWIV ) – ABl. EG Nr. L 199 S. 1 – darf der Gewerbeertrag als Ergebnis der Tätigkeit der EWIV nur bei ihren Mitgliedern besteuert werden. 2 Gegen die Gesamtschuldner kann nach § 155 Abs. 3 AO ein zusammengefasster Gewerbesteuermessbescheid ergehen, in dem die Mitglieder der EWIV als Schuldner der Gewerbesteuer aufzuführen sind. 3 Die Bekanntgabe richtet sich nach § 122 AO . 4 Der Gewerbesteuerbescheid ist ebenfalls nur gegen die Mitglieder zu erlassen. 5 Welcher Gesamtschuldner in Anspruch genommen wird, ist in das Ermessen der Gemeinde gestellt ( § 44 AO ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-5/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 5.3 — Richtlinie — Haftung",
+          "text": "aufklappen Zuklappen 1 Für die Haftung gelten die Vorschriften des bürgerlichen Rechts und der Abgabenordnung. 2 Es ist Sache der Gemeinde, den Anspruch aus der Haftung geltend zu machen, wenn ihr die Festsetzung und Erhebung der Gewerbesteuer durch ein Landesgesetz übertragen ist. 3 Wird die Gewerbesteuer vom Finanzamt festgesetzt und erhoben, obliegt ihm auch die Geltendmachung eines Haftungsanspruchs.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-5/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 5.3 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines Wer kraft Gesetzes haftet, kann durch Haftungsbescheid in Anspruch genommen werden. Der Bescheid ist schriftlich zu erteilen ( § 191 AO ) und zu begründen. Gegen Haftungsbescheide der Gemeinde sind der Widerspruch und der Verwaltungsrechtsweg gegeben ( §§ 68 bis 73 und § 40 Verwaltungsgerichtsordnung ). Wegen der Heranziehung bei vertraglicher Haftung ( § 192 AO ). Gegen Haftungsbescheide des Finanzamts sind der Einspruch und der Finanzrechtsweg gegeben ( § 347 Abs. 1 Nr. 1 AO , § 33 FGO ). Haftung Es kommen insbesondere die folgenden Haftungstatbestände in Betracht: § 69 AO (Haftung der Vertreter), § 71 AO (Haftung des Steuerhinterziehers und des Steuerhehlers), § 73 AO (Haftung bei Organschaft), § 74 AO (Haftung des Eigentümers von Gegenständen), § 75 AO (Haftung des Betriebsübernehmers), § 25 Abs. 1 HGB (Haftung des Erwerbers eines Handelsgeschäfts), § 128 HGB (Haftung des Gesellschafters einer OHG ), § 161 und 171 HGB (Haftung des Komplementärs und der Kommanditisten einer KG ), § 427 BGB (Haftung des Gesellschafters einer GbR ) Blättern-Navigation § 4 § 5 § 6 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-5/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "6": {
       "enbez": "§ 6",
@@ -48,21 +214,135 @@
     },
     "7": {
       "enbez": "§ 7",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 7.1 — Richtlinie — Gewerbeertrag",
+          "text": "R 7.1 (1) Richtlinie aufklappen Zuklappen Allgemeines zur Ermittlung des Gewerbeertrags 1 1 Erträge, die dadurch anfallen, dass zu Lasten des Gewinns gebildete Rückstellungen aufgelöst oder entrichtete Beträge erstattet werden, bilden einen Bestandteil des der Ermittlung des Gewerbeertrags nach § 7 GewStG zugrunde zu legenden Gewinns aus Gewerbebetrieb. 2 Zur Vermeidung einer doppelten Besteuerung ist daher bei der Ermittlung des Gewerbeertrags der Gewinn um jene Erträge zu mindern, welche bereits mit Bildung der Rückstellung oder bei ihrer Entrichtung nach § 8 GewStG dem Gewinn aus Gewerbebetrieb hinzugerechnet worden sind. 3 Der Umfang der Minderung richtet sich dabei nach der Höhe der tatsächlichen Hinzurechnung. 4 Sind Hinzurechnungen nach § 8 Nr. 1 Buchstaben a bis f GewStG erfolgt, sind zur Ermittlung der Minderung die als Bestandteil des Gewinns anzusehenden Erträge im Sinne des Satzes 1 im Erhebungszeitraum der ursprünglichen Hinzurechnung, von den bei der Ermittlung der Hinzurechnung berücksichtigten Beträgen abzuziehen. 5 Die Differenz zwischen dem sich hiernach rechnerisch ergebenden Hinzurechnungsbetrag und dem seinerzeit tatsächlich hinzugerechneten Betrag ist der maßgebende Minderungsbetrag. 6 Liegt der rechnerische Hinzurechnungsbetrag unter dem Freibetrag, ist der ursprünglich tatsächliche Hinzurechnungsbetrag als Minderungsbetrag zu berücksichtigen. H 7.1 (1) aufklappen Zuklappen Ausländische Betriebsstättenergebnisse Nach § 2 Abs. 1 GewStG unterliegt der Gewerbesteuer jeder stehende Gewerbebetrieb, soweit er im Inland betrieben (soweit für ihn im Inland eine Betriebsstätte unterhalten) wird. Soweit bei der Einkommensteuer (Körperschaftsteuer) Gewinne (Verluste) aus Betriebsstätten im Ausland erfasst sind, sind sie infolgedessen bei der Gewerbesteuer auszuscheiden (positive oder negative Kürzung gemäß § 9 Nr. 3 GewStG , H 9.4 ). Bewertungswahlrechte Bilanzsteuerrechtliche Bewertungswahlrechte dürfen für die einkommen- und gewerbesteuerliche Gewinnermittlung nur einheitlich ausgeübt werden ( BFH vom 25.04.1985 – BStBl II 1986 S. 350, vom 28.06.1989 – BStBl II 1990 S. 76, vom 09.08.1989 – BStBl II 1990 S. 195 und vom 21.01.1992 – BStBl II S. 958 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 8.6 — 1 (600.000 € ./. Erstattung in 02: 200.000 € ./. Freibetrag 200.000 € = 200.000 € x ¼)",
+          "text": "R 7.1 (2) Richtlinie aufklappen Zuklappen Rechtsbehelfe 2 Der Steuerpflichtige kann im Gewerbesteuermessbetragsverfahren Einwendungen gegen die Ermittlung des Gewinns aus Gewerbebetrieb unabhängig von dem Gang der Veranlagung bei der Einkommensteuer oder Körperschaftsteuer vorbringen. H 7.1 (2) Hinweise aufklappen Zuklappen Allgemeines Zur Änderung des Gewerbesteuermessbescheids nach § 35b GewStG",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 35b.1 — R 7.1 (3)",
+          "text": "Richtlinie aufklappen Zuklappen Gewinn bei natürlichen Personen und bei Personengesellschaften 3 1 Bei der Ermittlung des Gewinns sind für Zwecke der Gewerbesteuer insbesondere die folgenden Vorschriften nicht anzuwenden: 16 Abs. 1 Satz 1 Nr. 1 Satz 1, Nr. 2, Nr. 3 und Abs. 3 Satz 1 EStG (Veräußerung oder Aufgabe des Betriebs), und zwar auch in Fällen der Veräußerung eines Teilbetriebs oder des Anteils eines Gesellschafters; 17 EStG (Veräußerung von Beteiligungen im Privatvermögen); 24 EStG (Entschädigungen usw. ); 15 Abs. 4 EStG ; 15a EStG (Verluste bei beschränkter Haftung); 15b EStG (Verluste aus Steuerstundungsmodellen). 2 Für die Ermittlung des Gewerbeertrags sind Betriebseinnahmen und Betriebsausgaben auszuscheiden, welche nicht mit der Unterhaltung eines laufenden Gewerbetriebs zusammenhängen. 3 Gewinne (Verluste) aus der Veräußerung der Beteiligung an einer Mitunternehmerschaft gehören auch dann nicht zum Gewerbeertrag, wenn die Beteiligung zum Betriebsvermögen gehört. 4 Der von einer Mitunternehmerschaft erzielte Gewinn aus der Veräußerung oder Aufgabe eines Betriebs oder Teilbetriebs, eines Mitunternehmeranteils oder des Komplementäranteils an einer KGaA ist jedoch nur insoweit gewerbesteuerfrei, als er auf eine natürliche Person als unmittelbar beteiligten Mitunternehmer entfällt. 5 Die Veräußerung eines Mitunternehmeranteils an einer Mitunternehmerschaft, zu deren Betriebsvermögen die Beteiligung an einer Mitunternehmerschaft gehört ( sog. doppelstöckige Personengesellschaft), ist als einheitlicher Veräußerungsvorgang zu behandeln. 6 Gewinne (Verluste) aus der Veräußerung eines Teils eines Mitunternehmeranteils sind nach § 16 Abs. 1 Satz 2 EStG laufende Gewinne und somit gewerbesteuerpflichtig. 7 Durch den Wechsel der Gewinnermittlungsart bedingte Hinzu- und Abrechnungen unterliegen ebenfalls als laufender Gewinn der Gewerbesteuer. 8 Die Verteilung nach R 4.6 Abs. 1 Satz 4 und 5 EStR gilt auch für die Gewerbesteuer, es sei denn, die Änderung der Gewinnermittlungsart steht in einem zeitlichen Zusammenhang mit einem Unternehmerwechsel im Sinne der R 2.7. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.4 — Sondererbfolge",
+          "text": "Bei einer Sonderrechtsnachfolge in den Mitunternehmeranteil (qualifizierte Nachfolgeklausel) handelt es sich um eine Sondererbfolge; deshalb unterliegt der beim Erblasser entstehende Gewinn aus der Entnahme des Sonderbetriebsvermögens nicht der GewSt ( BFH vom 15.03.2000 – BStBl II S. 316 ). Veräußerungs- und Aufgabegewinne Gewinne aus der Veräußerung oder Aufgabe eines Gewerbebetriebs oder eines Teilbetriebs im Sinne von § 16 Abs. 1 Satz 1 Nr. 1 Halbsatz 1 und Abs. 3 EStG gehören vorbehaltlich der Anwendung des § 7 Satz 2 GewStG bei einer Personengesellschaft nicht zum Gewerbeertrag ( BFH vom 11.03.1982 – BStBl II S. 707 ). Veräußerungs- oder Aufgabegewinne unterliegen als laufender Gewinn der Gewerbesteuer, soweit auf der Seite des Veräußerers und auf der Seite des Erwerbers dieselben Personen Unternehmer oder Mitunternehmer sind ( § 16 Abs. 2 Satz 3, Abs. 3 Satz 2 EStG und BFH vom 15.06.2004 - BStBl II S. 754 ). Zur Frage der Einbeziehung des Gewinns aus der Veräußerung eines Mitunternehmeranteils im Sinne des § 7 Satz 2 Nr. 2 GewStG in die erweiterte Kürzung gemäß § 9 Nr. 1 Satz 2 GewStG H 9.2 (1) Eine GmbH & Co. KG , die ihren Geschäftsbereich veräußert und lediglich eine wesentliche Betriebsgrundlage zurückbehält, die sie fortan vermietet, bleibt gewerbesteuerpflichtig; der Veräußerungsgewinn ist in den Gewerbeertrag einzubeziehen ( BFH vom 17.03.2010 – BStBl II S. 977 ). Der Gewinn aus der Veräußerung eines zum Anlagevermögen zählenden Flugzeugs gehört zum gewerbesteuerbaren (laufenden) Gewinn, wenn die Veräußerung Bestandteil eines einheitlichen Geschäftskonzepts der unternehmerischen Tätigkeit ist ( BFH vom 20.09.2012 – BStBl II 2013 S. 498 ). Zu einheitlichem Geschäftskonzept H 2.6 (1) Ob ein Gewerbebetrieb eingestellt und ( ggf. ) ein neuer Gewerbebetrieb in Gang gesetzt wird, bestimmt sich danach, ob der „bisherige“ und der „neue“ Betrieb bei wirtschaftlicher Betrachtung und nach der Verkehrsauffassung identisch sind. Dies richtet sich nach den gleichen Kriterien, die für die Bestimmung der Unternehmensidentität im Rahmen des § 10a GewStG entwickelt wurden. Dabei steht die Überführung wesentlicher Betriebsgrundlagen, insbesondere von Wirtschaftsgütern mit erheblichen stillen Reserven, der Einstellung des „bisherigen“ Betriebs nicht entgegen ( BFH vom 10.02.2022 – BStBl II 2023 S. 756 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2.3 — Dividendeneinnahmen einer Organgesellschaft",
+          "text": "§ 7a GewStG Teilwertabschreibungen bei Organschaft Besteht gewerbesteuerrechtlich ein Organschaftsverhältnis, ist der beim Organträger zusammenzufassende Gewerbeertrag des Organkreises um Teilwertabschreibungen des Organträgers auf Beteiligungen an Organgesellschaften zu erhöhen, soweit die Teilwertabschreibungen betragsmäßig den erlittenen Verlusten der Organgesellschaft entsprechen ( BFH vom 06.11.1985 – BStBl II 1986 S. 73 ). Teilwertabschreibungen aufgrund einer Gewinnabführung mindern ebenso wie aufgrund einer Gewinnausschüttung den Gewerbeertrag im Organkreis nicht ( BFH vom 19.11.2003 – BStBl II 2004 S. 751 ). Teilwertabschreibungen mindern den Gewerbeertrag des Organkreises, wenn sie sich auf Ausschüttungen der Organgesellschaft bzgl. Gewinne aus vororganschaftlicher Zeit beziehen ( BFH vom 30.01.2002 – BStBl II 2003 S. 354 ). Übernahmegewinn bei Umwandlung in Organschaftsfällen Besteht eine gewerbesteuerrechtliche Organschaft und wird die Organgesellschaft in eine Personengesellschaft umgewandelt, unterliegt ein Umwandlungsgewinn, der beim herrschenden Unternehmen entsteht, insoweit nicht der Gewerbesteuer, als er aus aufgespeicherten Gewinnen der Organgesellschaft herrührt, die auf Grund der Organschaft bereits durch Zurechnung zum Gewerbeertrag des herrschenden Unternehmens versteuert wurden ( BFH vom 26.01.1972 – BStBl II S. 358 ). Entsteht bei der Umwandlung eines Organs auf den Organträger dadurch ein Übernahmegewinn, dass der Buchwert des Vermögens des Organs infolge der Nichtausschüttung von nachorganschaftlichen Gewinnen den Buchwert des Anteils des Organträgers an dem Organ übersteigt, unterliegt dieser Gewinn bei dem Organträger nicht der Gewerbesteuer ( BFH vom 17.02.1972 – BStBl II S. 582 ). Zur Berücksichtigung von Gewerbeverlusten innerhalb des Organkreises",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 3.20 — R 7.1 (6)",
+          "text": "Richtlinie aufklappen Zuklappen Ermittlung des Gewerbeertrags bei Genossenschaften - unbesetzt - H 7.1 (6) Hinweise aufklappen Zuklappen Allgemeines Wegen der Besonderheiten bei der Ermittlung des Gewinns § 22 KStG und R 22 KStR Wegen der steuerlichen Behandlung von landwirtschaftlichen Nutzungs- und Verwertungsgenossenschaften, bei denen nur bestimmte Nichtmitgliedergeschäfte besteuert werden",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-7/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "8": {
       "enbez": "§ 8",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 8.1 — Richtlinie — Hinzurechnung von Finanzierungsanteilen",
+          "text": "R 8.1 (1) Richtlinie aufklappen Zuklappen Entgelte für Schulden 1 1 Entgelte für Schulden sind die Gegenleistung für die eigentliche Nutzung von Fremdkapital und die vorzeitige Zurverfügungstellung von Kapital. 2 Hierbei ist für die Frage, ob hinzuzurechnende Entgelte vorliegen, nicht die Bezeichnung, sondern der wirtschaftliche Gehalt der Leistung entscheidend. 3 Zu den Entgelten für Schulden gehören sowohl Zinsen zu einem festen oder variablen Zinssatz als auch Vergütungen für partiarische Darlehen, Genussrechte und Gewinnobligationen. 4 Das Gleiche gilt für Leistungen, die zwar nicht als Zinsen bezeichnet werden, aber wie diese Entgeltscharakter haben, wie zum Beispiel das Damnum, das bei der Ausgabe von Hypotheken und anderen Darlehen vereinbart wird, sowie das Disagio, das bei der Ausgabe von Schuldverschreibungen einer Kapitalgesellschaft gewährt wird. 5 Bei Bankkrediten sind die laufenden Sondervergütungen ( z. B. Provisionen, Garantieentgelte), die neben den Zinsen vereinbart sind, in der Regel den Entgelten für Schulden zuzurechnen. 6 Soweit die von den Banken angesetzten Provisionen mit nicht in Anspruch genommenen Krediten zusammenhängen, fallen sie nicht unter die Vorschrift des § 8 Nr. 1 Buchstabe a GewStG . 7 Bereitstellungs- und Zusageprovisionen stellen keine Gegenleistung für die eigentliche Nutzung von Fremdkapital dar und unterliegen somit nicht der Hinzurechnung nach § 8 Nr. 1 Buchstabe a GewStG . 8 Die Umsatzprovision fällt insoweit nicht unter die hinzuzurechnenden Entgelte, als sie das Entgelt für Leistungen der Bank bildet, die nicht in der Überlassung des Kapitals bestehen, sondern darüber hinausgehende weitere Leistungen darstellen. 9 Auch die mit Schulden zusammenhängenden Geldbeschaffungskosten, laufenden Verwaltungskosten, Depotgebühren, Währungsverluste, Bereitstellungszinsen usw. sind keine hinzurechnungspflichtigen Entgelte. 10 Die Deckungsrückstellung (Deckungsrücklage) der Lebensversicherungsunternehmen ist keine Schuld im Sinne des Gewerbesteuergesetzes. H 8.1 (1) Hinweise aufklappen Zuklappen Allgemeines Auf die Dauer des Schuldverhältnisses kommt es nicht an. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 8.1 — Richtlinie — aufklappen",
+          "text": "Zuklappen Miet- und Pachtzinsen für bewegliche und unbewegliche Wirtschaftsgüter 4 1 Unter Miet- und Pachtzinsen sind nicht nur Barleistungen, sondern alle Entgelte zu verstehen, die der Mieter oder der Pächter für den Gebrauch oder die Nutzung des Gegenstandes an den Vermieter oder den Verpächter zu zahlen hat. 2 Für die Abgrenzung der Wirtschaftsgüter im Sinne des § 8 Nr. 1 Buchstabe d und e GewStG ist von dem Begriff des Wirtschaftsguts im Sinne des § 4 EStG auszugehen. H 8.1 (4) Hinweise aufklappen Zuklappen Antizipiertes Besitzkonstitut Ein Mietvertrag und kein Lizenzvertrag liegt vor, wenn jemand mit Genehmigung und unter Ausnutzung von Lizenzen eines anderen Gegenstände selbst herstellt und nutzt, die mit der Herstellung nach dem Willen der Vertragspartner in das Eigentum des anderen Vertragsteils übergehen ( BFH vom 02.11.1965 – BStBl III 1966 S. 70 ). Bare-boat-Charterverträge Bare-boat-Charterverträge fallen unter § 8 Nr. 1 Buchst. d GewStG ( BFH vom 27.11.1975 – BStBl II 1976 S. 220 ). Begriff der Leasingrate Der Begriff der „Leasingraten“ in § 8 Nr. 1 Buchst. d GewStG ist - ebenso wie bei Miet- und Pachtzinsen - wirtschaftlich zu verstehen. Wartungskosten, die vertraglich auf den Leasingnehmer abgewälzt werden, sind Teil der „Leasingrate“ und nach § 8 Nr. 1 Buchst. d GewStG gewerbesteuerrechtlich hinzuzurechnen ( BFH vom 20.10.2022 – BStBl II 2023 S. 879 und Rdnr. 29 Gleich lautende Erlasse der obersten Finanzbehörden der Länder vom 02.07.2012 - BStBl I S. 654 ). Begriff des Miet- oder Pachtvertrags Bei der Beurteilung, ob ein Miet- oder Pachtvertrag vorliegt, kommt es darauf an, ob die Verträge ihrem wesentlichen rechtlichen Gehalt nach Miet- oder Pachtverträge im Sinne des bürgerlichen Rechts sind ( BFH vom 31.07.1985 – BStBl II 1986 S. 304 und vom 23.03.2023 – BStBl II S. 923 ). Es ist unerheblich, ob die Mietverträge nur für kurze Zeit abgeschlossen werden, die Miet- oder Pachtzinsen angemessen sind oder der Abschluss des Miet- oder Pachtvertrages wirtschaftlich sinnvoll ist ( BFH vom 30.03.1994 – BStBl II S. 810 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 8.2 — Richtlinie — Vergütungen an persönlich haftende Gesellschafter einer Kommanditgesellschaft auf Aktien",
+          "text": "aufklappen Zuklappen 1 Nach § 8 Nr. 4 GewStG werden Vergütungen (Tantiemen), die für die Geschäftsführung eines persönlich haftenden Gesellschafters einer Kommanditgesellschaft auf Aktien gewährt werden, dem Gewinn aus Gewerbebetrieb wieder hinzugerechnet. 2 Die Hinzurechnung nach § 8 Nr. 4 GewStG ist auch dann vorzunehmen, wenn Komplementär eine GmbH ist. 3 Zuweisungen an eine Pensionsrückstellung gehören ebenfalls zu den Vergütungen im Sinne der Vorschrift. 4 Die Hinzurechnung umfasst nicht die nach § 15 Abs. 1 Satz 1 Nr. 3 EStG im Gewinn des persönlich haftenden Gesellschafters enthaltenen Vergütungen für die Hingabe von Darlehen oder die Überlassung von Wirtschaftsgütern; diese Beträge sind aber nach § 8 Nr. 1 GewStG hinzuzurechnen, soweit die Voraussetzungen dafür erfüllt sind.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 8.2 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines Die Hinzurechnung setzt nicht voraus, dass die persönlich haftenden Gesellschafter einer Kommanditgesellschaft auf Aktien Mitunternehmer sind ( BFH vom 08.02.1984 – BStBl II S. 381 ). Vergütungen im Sinne dieser Vorschrift sind alle Arten von Vergütungen, die die persönlich haftenden Gesellschafter als Gegenleistung für ihre gegenwärtige oder frühere Geschäftsführertätigkeit erhalten. Dazu gehören auch feste Vergütungen, Ruhegehälter und ähnliche Bezüge ( BFH vom 04.05.1965 – BStBl III S. 418 und vom 31.10.1990 – BStBl II 1991 S. 253 ). Die Auflösung einer gewerbesteuerpflichtig gebildeten Pensionsrückstellung erhöht nicht den Gewinn ( BFH vom 27.03.1961 – BStBl III S. 280 ). Aufwendungen, die einem persönlich haftenden Gesellschafter durch die Übertragung der Geschäftsführungsaufgaben auf andere Personen entstehen, mindern die Hinzurechnung nach § 8 Nr. 4 GewStG nicht ( BFH vom 31.10.1990 – BStBl II 1991 S. 253 ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 8.3 — Hinweise — aufklappen",
+          "text": "Zuklappen Hinzurechnung von Gewinnanteilen aus Auslandsbeteiligungen im Erhebungszeitraum 2001 Gleich lautende Erlasse der obersten Finanzbehörden der Länder vom 30.03.2015 – BStBl I S. 260 zu den Folgen aus dem BFH -Urteil vom 06.03.2013 – BStBl II 2015 S. 349 . Hinzurechnung bei abkommensrechtlicher Freistellung ( DBA ) Gewinnanteile aus Anteilen an einer ausländischen Kapitalgesellschaft, die nach § 8b Abs. 1 KStG 2002 bei der Ermittlung des Einkommens außer Ansatz bleiben, zugleich aber auch nach Maßgabe eines sog. abkommensrechtlichen Schachtelprivilegs ( DBA ) von der Bemessungsgrundlage ausgenommen werden, sind nicht nach § 8 Nr. 5 GewStG 2002 dem Gewinn aus Gewerbebetrieb hinzuzurechnen ( BFH vom 23. Juni 2010 – BStBl II 2011 S. 129 ). Steuerfreie Erträge aus Investmentanteilen Erträge aus Investmentanteilen, die nach § 2 Abs. 2 Satz 1 InvStG a.F. i.V.m. § 8b Abs. 1 KStG 2002 bei der Ermittlung des Gewerbeertrages außer Ansatz geblieben sind, unterfallen der Hinzurechnung gemäß § 8 Nr. 5 GewStG ( BFH vom 14.12.2011 – BStBl II 2013 S. 486 ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 8.4 — Richtlinie — Anteile am Verlust einer Personengesellschaft",
+          "text": "aufklappen Zuklappen 1 Maßgebend für die Hinzurechnung nach § 8 Nr. 8 GewStG ist der sich aus § 15 Abs. 1 Satz 1 Nr. 2 EStG ergebende Verlustanteil. 2 Sie ist daher auch vorzunehmen, wenn das Beteiligungsunternehmen (Personengesellschaft) – wie etwa in der Vorbereitungs‑ oder Abwicklungsphase – noch nicht oder nicht mehr gewerbesteuerpflichtig ist.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-8/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "9": {
       "enbez": "§ 9",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 9.1 — Richtlinie — Kürzung für den zum Betriebsvermögen gehörenden Grundbesitz",
+          "text": "2 Für Erhebungszeiträume ab 2025 ist nach § 9 Nummer 1 S. 1 GewStG auf die im Erhebungszeitraum als Betriebsausgabe erfasste Grundsteuer für den zum Betriebsvermögen des Unternehmers gehörenden Grundbesitz abzustellen. R 9.1 (1) Richtlinie aufklappen Zuklappen Allgemeines 1 1 Nach § 9 Nr. 1 S. 1 GewStG ist die Summe des Gewinns und der Hinzurechnungen um 1,2 v.H. des Einheitswerts des nicht von der Grundsteuer befreiten Grundbesitzes zu kürzen, der zum Betriebsvermögen des Unternehmens gehört. 2 Die Einschränkung des § 9 Nr. 1 Satz 1 GewStG auf Grundbesitz, der nicht von der Grundsteuer befreit ist, beschränkt sich ausschließlich auf Befreiungstatbestände des Grundsteuergesetzes. 3 Wird die Grundsteuer aus anderen Gründen ( z. B. Billigkeitsmaßnahmen, Erlass, Verjährung) tatsächlich nicht erhoben, steht dies der Anwendung der Kürzungsnorm auf den betreffenden Grundbesitz nicht entgegen. 4 Wird ein eigenbetrieblich genutzter Grundstücksteil nach § 8 EStDV nicht als Betriebsvermögen behandelt, ist die Kürzung nach § 9 Nr. 1 Satz 1 GewStG trotzdem vorzunehmen, weil sonst der Zweck der Vorschrift, die Doppelbesteuerung des Grundbesitzes durch die Grundsteuer und die Gewerbesteuer zu vermeiden, nicht erreicht werden würde. 5 Die Kürzung bemisst sich stets nach dem Einheitswert des Grundbesitzes, auch wenn im Betriebsvermögen im Anschluss an die DM -Bilanz ein höherer Grundstückswert enthalten ist. 6 Zum Grundbesitz im Sinne des § 9 Nr. 1 Satz 1 GewStG gehören auch Gebäude oder Gebäudeteile auf fremdem Grund und Boden, wenn der Unternehmer nach einkommensteuerrechtlichen Grundsätzen als wirtschaftlicher Eigentümer des Gebäudes oder des Gebäudeteils anzusehen ist. 7 Ist nur ein Teil eines Grundstücks einkommensteuerlich zum Betriebsvermögen des Unternehmers zu rechnen, ist für die Berechnung der Kürzung nach § 9 Nr. 1 Satz 1 GewStG von dem Teil des Einheitswerts auszugehen, der auf den dem gewerblichen Betrieb dienenden Teil des Grundstücks entfällt ( § 20 Abs. 2 GewStDV ). 8 Dieser Teil des Einheitswerts ist grundsätzlich nach dem Verhältnis der Jahresrohmiete ( § 79 BewG ) zu ermitteln. 9 Ein anderer Aufteilungsmaßstab, insbesondere das Verhältnis der Nutzfläche oder des Rauminhalts, ist anzuwenden, wenn dieses Ergebnis den tatsächlichen Verhältnissen des einzelnen Falls besser entspricht. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 9.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Grundbesitz als Betriebsvermögen § 20 GewStDV R 4.2 Abs. 7 EStR Erbbaurecht Gehört zum Grundbesitz im Sinne des § 9 Nr. 1 Satz 1 GewStG ein Erbbaurecht, ist der Kürzung nur der im Betriebsvermögen enthaltene Wert des Erbbaurechts und der aufstehenden Gebäude, nicht auch der Wert des Erbbaugrundstücks, zugrunde zu legen ( RFH vom 12.01.1943 – RStBl S. 283 und BFH vom 17.01.1968 – BStBl II S. 353 ). Gebäude(-teile) auf fremdem Grund und Boden Zur Zurechnung des wirtschaftlichen Eigentums ( H 4.7 (Eigenaufwand für ein fremdes Wirtschaftsgut EStH ) und § 39 Abs. 2 Nr. 1 AO ). Verpachtung eines landwirtschaftlichen Grundstücks Bei einem im Betriebsvermögen enthaltenen landwirtschaftlichen Grundstück, das verpachtet ist und dessen Einheitswert Betriebsmittel des Pächters mit umfasst, ist der Kürzungsbetrag vom vollen (Gesamt‑) Einheitswert zu berechnen ( BFH vom 27.03.1968 – BStBl II S. 479 ). Versicherungsunternehmen Die Kürzung nach § 9 Nr. 1 Satz 1 GewStG ist auch bei Grundbesitz, der zum Deckungsstock eines Versicherungsunternehmens gehört, anzuwenden ( BFH vom 19.01.1972 – BStBl II S. 390 und vom 26.10.1995 – BStBl II 1996 S. 76 ). Zur Aufteilung des Ersatzwirtschaftswertes BFH vom 12.10.2023 – BStBl II 2024 S. 128",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 9.2 — Richtlinie — Kürzung bei Grundstücksunternehmen",
+          "text": "R 9.2 (1) Richtlinie aufklappen Zuklappen Allgemeines 1 1 Die Kürzung nach § 9 Nr. 1 Satz 2 und 3 GewStG (erweiterte Kürzung) kann von allen Unternehmensformen (Einzelunternehmen, Personengesellschaften, Kapitalgesellschaften und anderen Körperschaften) in Anspruch genommen werden. 2 Grundstücksunternehmen, die die in § 9 Nr. 1 Satz 2 bis 4 GewStG genannten Voraussetzungen nicht erfüllen, können die Kürzung nach § 9 Nr. 1 Satz 1 GewStG in Anspruch nehmen. 3 Die Voraussetzungen für die erweiterte Kürzung bei Grundstücksunternehmen müssen während des gesamten Erhebungszeitraums oder während des gesamten abgekürzten Erhebungszeitraums (§ 14 Satz 3 GewStG ) vorliegen. 4 Für die Anwendung der Kürzung nach § 9 Nr. 1 Satz 2 und 3 GewStG kommt es hinsichtlich der Beurteilung der Frage, ob Grundbesitz zum Betriebsvermögen des Unternehmens gehört, nicht auf den Stand an einem bestimmten Stichtag an. H 9.2 (1) Hinweise aufklappen Zuklappen Einnahmen aus der Lieferung von Strom aus erneuerbaren Energien und dem Betrieb von Ladestationen Anhang 2 Gleich lautende Erlasse der obersten Finanzbehörden der Länder vom 17.06.2022 – BStBl I 2022 S. 958 zu Anwendungsfragen zur erweiterten Kürzung des Gewerbeertrags nach § 9 Nr. 1 Satz 3 und 4 des Gewerbesteuergesetzes in der Fassung des Fondsstandortgesetzes vom 3. Juni 2021, BGBl. I S. 1498. Einnahmen aus unmittelbaren Vertragsbeziehungen mit Mietern Rdnr. 22 ff. Gleich lautende Erlasse der obersten Finanzbehörden der Länder vom 17.06.2022 – BStBl I 2022 S. 958 Veräußerung des Grundbesitzes Der während des Erhebungszeitraums vorgenommene Verkauf des einzigen und letzten Grundstücks einer bis zu diesem Zeitpunkt als Grundstücksverwaltungsgesellschaft tätigen GmbH schließt die erweiterte Kürzung des Gewerbeertrags nach § 9 Nr. 1 Satz 2 GewStG für den Erhebungszeitraum aus ( BFH vom 20.01.1982 – BStBl II S. 478 und vom 17.10.2024 – BStBl II 2025 S. 158 ). Einem grundstücksverwaltenden Unternehmen ist die erweiterte Kürzung des Gewerbeertrages gemäß § 9 Nr. 1 Satz 2 GewStG unbeschadet des darin bestimmten Ausschließlichkeitsgebots jedoch zu gewähren, wenn das Unternehmen sein einziges Grundstück zum 31. Dezember, 23.59 Uhr, des Erhebungszeitraumes veräußert ( BFH vom 11.08.2004 – BStBl II S. 1080 ). Veräußerung eines Mitunternehmeranteils Der Gewinn aus der Veräußerung eines Mitunternehmeranteils i. S. des § 7 Satz 2 Nr. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 9.3 — Richtlinie — Kürzung um Gewinne aus Anteilen an bestimmten Körperschaften",
+          "text": "aufklappen Zuklappen 1 Die Kürzung nach § 9 Nr. 2a GewStG kommt für unmittelbare und mittelbare Beteiligungen an einer nicht steuerbefreiten inländischen Kapitalgesellschaft im Sinne des § 2 Abs. 2 GewStG , einer Kredit- oder Versicherungsanstalt des öffentlichen Rechts, einer Erwerbs- und Wirtschaftsgenossenschaft oder an einer Unternehmensbeteiligungsgesellschaft im Sinne des § 3 Nr. 23 GewStG in Betracht. 2 Weitere Voraussetzung für die Kürzung nach § 9 Nr. 2a GewStG ist, dass die Beteiligung zu Beginn des Erhebungszeitraums mindestens 15 Prozent des Grund- oder Stammkapitals beträgt. 3 Ist ein Grund- oder Stammkapital nicht vorhanden, tritt an seine Stelle das Vermögen; bei Erwerbs- und Wirtschaftsgenossenschaften ist die Beteiligung an der Summe der Geschäftsguthaben maßgebend. 4 Für die Ermittlung der erforderlichen Beteiligungshöhe einer Personengesellschaft sind die im Gesamthands- und Sonderbetriebsvermögen gehaltenen Anteile zusammenzurechnen. 5 Beginnt die Steuerpflicht des beteiligten Unternehmens im Laufe eines Kalenderjahrs, kommt es für den ersten Erhebungszeitraum auf die Höhe der Beteiligung zu Beginn der Steuerpflicht (Beginn des abgekürzten Erhebungszeitraums) an. 6 Ist die ausschüttende Körperschaft teilweise von der Gewerbesteuer befreit und übt sie teilweise eine gewerbesteuerpflichtige Tätigkeit aus, z. B. in den Fällen des § 3 Nr. 5, 8, 9, 12, 13, 15, 17 und 20 GewStG , ist die Kürzung nach dem Verhältnis der steuerpflichtigen Gewinnanteile zum Gesamtgewinn der Körperschaft vorzunehmen. 7 Erforderlichenfalls kann der begünstigte Teil der Gewinnausschüttung im Schätzungswege ermittelt werden. 8 Der bei der Ermittlung des Gewerbeertrags anzusetzende Gewinn aus einer Wertaufholung nach § 6 Abs. 1 Nr. 2 Satz 3 EStG unterliegt auch dann nicht der Kürzung nach § 9 Nr. 2a GewStG , wenn sich die vorangegangene ausschüttungsbedingte Teilwertabschreibung aufgrund der Regelung in § 8 Nr. 10 GewStG gewerbesteuerlich nicht ausgewirkt hat.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 9.3 — Hinweise — aufklappen",
+          "text": "Zuklappen Ausschüttungen, für die Beträge des steuerlichen Einlagekontos als verwendet gelten gehören nicht zu den Gewinnen aus Anteilen i. S. d. § 9 Nr. 2a GewStG ( BFH vom 15.09.2004 – BStBl II 2005 S. 297 ). Besitzzeitanrechnungen nach dem UmwStG Die zeitraumbezogene Besitzzeitanrechnung nach § 4 Abs. 2 Satz 3 UmwStG (bei einem sog. qualifizierten Anteilstausch ist unter der Voraussetzung des Ansatzes des eingebrachten Betriebsvermögens mit einem unter dem gemeinen Wert liegenden Wert durch die übernehmende Gesellschaft der Zeitraum der Zugehörigkeit eines Wirtschaftsguts zum Betriebsvermögen der übertragenden Körperschaft dem übernehmenden Rechtsträger anzurechnen, wenn die Dauer der Zugehörigkeit des Wirtschaftsguts zum Betriebsvermögen für die Besteuerung bedeutsam ist) entfaltet für das zeitpunktbezogene Tatbestandsmerkmal des § 9 Nr. 2a GewStG keine Wirkung ( BFH vom 16.04.2014 – BStBl II 2015 S. 303 ). Dividendeneinnahmen einer Organgesellschaft § 7a GewStG Doppelt ansässige Kapitalgesellschaften Zu den inländischen Kapitalgesellschaften i. S. des § 9 Nr. 2a GewStG gehören auch Kapitalgesellschaften, die ihren statutarischen Sitz im Ausland und ihren Ort der Geschäftsleitung im Inland haben ( BFH vom 28.06.2022 – BStBl II 2024 S. 650 ). Mittelbare Beteiligung Die Kürzung nach § 9 Nr. 2a GewStG kommt auch bei mittelbarer Beteiligung in dem gesetzlich bestimmten Umfang in Betracht ( BFH vom 17.05.2000 – BStBl II 2001 S. 685 ). Liquidation der Kapitalgesellschaft Gewinne aus Anteilen i. S. d. § 9 Nr. 2a GewStG sind sowohl die während der Liquidation der Kapitalgesellschaft erzielten Gewinne als auch die Liquidationsrate, mit der das nach Abschluss der Liquidation verbliebene Reinvermögen an die Anteilseigner ausgekehrt wird, soweit nicht Beträge aus dem steuerlichen Einlagekonto i. S. d. § 27 KStG als verwendet gelten. Soweit im Rahmen der Gewinnermittlung die Anteile an der Untergesellschaft infolge des Untergangs des Wirtschaftsguts „Beteiligung“ aus der Bilanz eines Anteilseigners auszubuchen sind, mindert dies nicht den Kürzungsbetrag i. S. d. § 9 Nr. 2a GewStG ( BFH vom 02.04.1997 – BStBl II 1998 S. 25 und vom 08.05.2003 – BStBl II 2004 S. 460 ). Veräußerungsgewinne Der Gewinn aus der Veräußerung einer Beteiligung an einer Kapitalgesellschaft ist kein von der Kapitalgesellschaft ausgeschütteter Gewinn i. S. von § 9 Nr. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 9.4 — Hinweise — aufklappen",
+          "text": "Zuklappen Aufteilung des Gewerbeertrags Der Teil des Gewerbeertrags, der auf die ausländische Betriebsstätte entfällt, ist grundsätzlich nach der sog. direkten Methode zu ermitteln. Wird der Betriebsstättengewinn nicht gesondert ermittelt, muss eine Aufteilung im Wege der Schätzung erfolgen. Die Zerlegungsvorschrift des § 29 GewStG kann ggf. sinngemäß angewendet werden, sofern die im In- und Ausland ausgeübten Tätigkeiten gleichwertig sind ( BFH vom 28.03.1985 – BStBl II S. 405) . Begriff der Betriebsstätte Der in § 9 Nr. 3 GewStG verwendete Begriff der Betriebsstätte bestimmt sich nicht nach der Definition des jeweils einschlägigen DBA , sondern nach innerstaatlichem Recht ( BFH vom 20.07.2016 – BStBl II 2017 S. 230 ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-9/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "10": {
       "enbez": "§ 10",
@@ -72,27 +352,83 @@
     },
     "11": {
       "enbez": "§ 11",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 11.1 — Richtlinie — Freibetrag bei natürlichen Personen und Personengesellschaften",
+          "text": "aufklappen Zuklappen 1 Der Freibetrag im Sinne des § 11 Absatz 1 Satz 3 Nr. 1 GewStG ist für Gewerbebetriebe natürlicher Personen und Personengesellschaften betriebsbezogen zu gewähren. 2 Der Freibetrag ist auch dann in voller Höhe zu gewähren, wenn die Betriebseröffnung oder Betriebsschließung im Laufe des Kalenderjahres erfolgt. 3 Wechselt lediglich die Steuerschuldnerschaft zwischen Einzelunternehmen und Personengesellschaften oder umgekehrt, ist der für den Erhebungszeitraum ermittelte einheitliche Steuermessbetrag den Steuerschuldnern anteilig zuzurechnen und getrennt festzusetzen. 4 Diese zeitliche Abgrenzung und zeitraumbezogene Erfassung des Besteuerungsguts bedeutet, dass jedem der Steuerschuldner nur der Teil des Steuermessbetrags zugerechnet werden darf, der auf die Dauer seiner persönlichen Steuerpflicht entfällt. 5 Dieses Ergebnis wird dadurch erreicht, dass für jeden der Steuerschuldner eine Steuermessbetragsfestsetzung auf Grund des von ihm erzielten Gewerbeertrags durchgeführt wird und dabei der Freibetrag nach § 11 Abs. 1 Satz 3 Nr. 1 GewStG in Höhe von 24 500 Euro auf jeden von ihnen entsprechend der Dauer seiner persönlichen Steuerpflicht aufgeteilt wird. 6 Aus Vereinfachungsgründen kann bei jedem der Steuerschuldner für jeden angefangenen Monat der Steuerpflicht ein Freibetrag von 2 042 Euro berücksichtigt werden. 7 Die Steuermesszahl nach § 11 Abs. 2 GewStG wird nach Abzug des anteiligen Freibetrages auf den verbleibenden Gewerbeertrag des jeweiligen Steuerschuldners angewendet. 1 R 11.1 Satz 5 und 6 GewStR 2009 und dessen Anordnung einer zeitanteiligen Aufteilung des Freibetrages für die Dauer der jeweiligen Steuerschuldnerschaft sind mit der im Bundessteuerblatt veröffentlichten Entscheidung des BFH vom 25.04.2018 – BStBl II S. 484 überholt.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-11/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 11.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Atypisch stille Gesellschaft Der Freibetrag im Sinne des § 11 Abs. 1 Satz 3 Nr. 1 GewStG ist auch Kapitalgesellschaften zu gewähren, an deren gewerblichen Unternehmen natürliche Personen als atypisch stille Gesellschafter beteiligt sind ( BFH vom 10.11.1993 – BStBl II 1994 S. 27 ). In diesen Fällen ist er grundsätzlich auch dann nur einmal zu gewähren, wenn an dem gewerblichen Unternehmen mehrere natürliche Personen aufgrund mehrerer Gesellschaftsverträge als atypisch stille Gesellschafter beteiligt sind ( BFH vom 08.02.1995 – BStBl II S. 764 ). Sind jedoch die der atypisch stillen Gesellschaft und die dem Inhaber des Handelsgeschäftes allein zuzuordnenden gewerblichen Tätigkeiten als jeweils getrennte Gewerbebetriebe zu beurteilen, ist der Freibetrag für jeden Gewerbebetrieb zu gewähren ( BFH vom 06.12.1995 - BStBl II 1998 S. 685 ) und R 2.4 Abs. 5, nur eine andere Kapitalgesellschaft als atypischer stiller Gesellschafter beteiligt ist ( BFH vom 30.08.2007 – BStBl II 2008 S. 200 ). Nimmt eine GmbH unterjährig eine natürliche Person als atypisch stillen Gesellschafter auf, so ist der Freibetrag im Sinne des § 11 Abs. 1 Satz 3 Nr. 1 GewStG in dem an die GmbH als Geschäftsherrn zu adressierenden, die GmbH & atypisch Still betreffenden Gewerbesteuermessbescheid zu berücksichtigen. Der GmbH selbst steht der Freibetrag nicht zu; der aufgrund des von ihr vor der Aufnahme des stillen Gesellschafters erzielten Gewinns ermittelte Gewerbeertrag ist daher nicht zu kürzen ( BFH vom 15.7.2020 – BStBl II 2021 S. 869 ). Wechsel des Steuerschuldners BFH vom 17.02.1989 – BStBl II S. 664 BFH vom 26.08.1993 – BStBl II 1995 S. 791 R 5.1 Abs. 1",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-11/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 11.2 — Richtlinie — Steuermesszahlen bei Hausgewerbetreibenden und bei ihnen gleichgestellten Personen",
+          "text": "aufklappen Zuklappen 1 Die auf 56 Prozent ermäßigte Steuermesszahl (= 1,96 Prozent) gilt nach § 11 Abs. 3 GewStG bei Hausgewerbetreibenden und ihnen nach § 1 Abs. 2 Buchstaben b bis d des Heimarbeitsgesetzes gleichgestellten Personen, bei den nach Buchstabe c gleichgestellten Personen aber nur unter der Voraussetzung, dass ihre Entgelte ( § 10 Abs. 1 UStG ) aus der Tätigkeit unmittelbar für den Absatzmarkt im Erhebungszeitraum 25 000 Euro nicht übersteigen. 2 § 11 Abs. 3 Satz 1 GewStG knüpft unmittelbar an das Heimarbeitsgesetz an. 3 Ob jemand die Steuerermäßigung des § 11 Abs. 3 Satz 1 GewStG beanspruchen kann, richtet sich demzufolge allein danach, ob er Hausgewerbetreibender im Sinne des § 2 Abs. 2 Heimarbeitsgesetz oder einem solchen Unternehmer nach § 1 Abs. 2 Buchstabe b bis d des Heimarbeitsgesetzes gleichgestellt ist. 4 Den Hausgewerbetreibenden gleichgestellte Personen sind nach § 1 Abs. 2 Buchstabe b bis d des Heimarbeitsgesetzes: \"b) Hausgewerbetreibende, die mit mehr als 2 fremden Hilfskräften ( § 2 Abs. 6 ) oder Heimarbeitern ( § 2 Abs. 1 ) arbeiten; c) andere im Lohnauftrag arbeitende Gewerbetreibende, die infolge ihrer wirtschaftlichen Abhängigkeit eine ähnliche Stellung wie Hausgewerbetreibende einnehmen; d) Zwischenmeister ( § 2 Abs. 3 )“; Zwischenmeister ist nach § 2 Abs. 3 des Heimarbeitsgesetzes „wer, ohne Arbeitnehmer zu sein, die ihm von Gewerbetreibenden übertragene Arbeit an Heimarbeiter oder Hausgewerbetreibende weitergibt“. 5 Personen, die auf Grund des § 1 Abs. 2 Buchstabe b bis d des Heimarbeitsgesetzes wegen ihrer Schutzbedürftigkeit den Hausgewerbetreibenden gleichgestellt sind, sind die für Hausgewerbetreibende vorgesehenen gewerbesteuerrechtlichen Vergünstigungen ohne weitere Prüfung zu gewähren. 6 Die Finanzämter sind daher nicht befugt, im Einzelfall die Schutzbedürftigkeit noch besonders nachzuprüfen. 7 Nach § 2 Abs. 2 des Heimarbeitsgesetzes wird die Eigenschaft als Hausgewerbetreibender nicht dadurch beeinträchtigt, dass der Hausgewerbetreibende vorübergehend unmittelbar für den Absatzmarkt arbeitet. 8 Vorübergehend in diesem Sinne ist eine Tätigkeit, die nur gelegentlich oder – wenn auch ständig – nebenbei ausgeübt wird und deshalb für die Gesamtleistung unwesentlich ist. 9 Einen Anhalt für die Feststellung einer vorübergehenden Tätigkeit bilden die Stückzahlen der hergestellten Erzeugnisse. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-11/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 11.2 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines R 15.1 Abs. 2 EStR H 15.1 EStH Fremde Hilfskraft Als „fremde Hilfskraft“ bezeichnet § 2 Abs. 6 Heimarbeitsgesetz denjenigen, der als Arbeitnehmer eines Hausgewerbetreibenden oder nach § 1 Abs. 2 Buchstabe b und c Gleichgestellten in deren Arbeitsstätte beschäftigt ist. Fremde Hilfskräfte des Hausgewerbetreibenden sind alle aufgrund von Arbeitsverträgen – auch aushilfsweise – bei ihm beschäftigten Arbeitnehmer einschließlich solcher, die nahe Angehörige i. S. von § 2 Abs. 5 Buchstabe a bis c Heimarbeitsgesetz sind und mit ihm in häuslicher Gemeinschaft leben ( BFH vom 26.02.2002 – BStBl II 2003 S. 31 ). Hausgewerbetreibende gleichgestellte Personen Wegen der Gleichstellung nach § 1 Abs. 2 Buchstabe b bis d des Heimarbeitsgesetzes ( BFH vom 04.10.1962 – BStBl III 1963 S. 66 und vom 04.12.1962 – BStBl III 1963 S. 144 ). Sind Personen in einer Doppelfunktion tätig, können sie nach § 1 Abs. 2 Buchstabe b und d gleichgestellt sein. Ein Gewerbetreibender, der nur Teilarbeiten in Heimarbeit verrichten lässt, ist kein Zwischenmeister ( BFH vom 08.07.1971 – BStBl II 1972 S. 385 ). Ein Gewerbetreibender ist nicht Hausgewerbetreibender, wenn er fortgesetzt mit mehr als zwei fremden Hilfskräften oder Heimarbeitern arbeitet; dies gilt auch, wenn die zeitliche Arbeitsleistung dieser Personen insgesamt möglicherweise nicht über die zeitliche Arbeitsleistung zweier vollzeitbeschäftigter Arbeitnehmer hinausgeht ( BFH vom 26.06.1987 – BStBl II S. 719 ). Ein Hausgewerbetreibender verliert diese Eigenschaft nicht, wenn er gelegentlich aus besonderem Anlass mehr als zwei fremde Hilfskräfte beschäftigt, auf Dauer aber das Gewerbe mit nur zwei fremden Hilfskräften betrieben werden kann ( BFH vom 08.03.1984 – BStBl II S. 534 ). Personenzusammenschlüsse Als Hausgewerbetreibende und ihnen gleichgestellte Personen sind auch Zusammenschlüsse dieser Personen zu behandeln ( BFH vom 08.03.1960 – BStBl III S. 160 und vom 08.07.1971 – BStBl II 1972 S. 385 ). Vorübergehende Tätigkeit Die unmittelbare Arbeit für den Absatzmarkt darf in der Regel 10 % nicht wesentlich übersteigen ( BFH vom 04.10.1962 ‑ BStBl III 1963 S. 66 ). Blättern-Navigation § 10a § 11 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-11/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "14": {
       "enbez": "§ 14",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 14.1 — Richtlinie — Festsetzung des Steuermessbetrags",
+          "text": "aufklappen Zuklappen 1 Erhebungszeitraum ist das Kalenderjahr oder die Dauer der Steuerpflicht im Kalenderjahr, wenn die Steuerpflicht nicht während des ganzen Kalenderjahrs besteht. 2 Der Steuermessbetrag wird jeweils für den Erhebungszeitraum nach dessen Ablauf festgesetzt. 3 Der Steuermessbetrag ist erforderlichenfalls auf volle Euro nach unten abzurunden. 4 Fällt die Steuerpflicht im Laufe des Kalenderjahrs weg, braucht mit der Festsetzung des Steuermessbetrags nicht bis zum Ablauf des Kalenderjahrs gewartet zu werden. 5 In diesem Fall kann der Steuermessbetrag sofort nach Wegfall der Steuerpflicht festgesetzt werden.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/IV-Steuermessbetrag/Paragraf-14/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 14.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Gewerbliche Einkünfte - Keine Bindung an den Einkommensteuerbescheid Sind im Einkommensteuerbescheid Einkünfte des Steuerpflichtigen nicht als solche aus Gewerbebetrieb, sondern aus anderen Einkunftsarten, z. B. aus selbständiger Arbeit, behandelt, ist in dem Einkommensteuerbescheid hinsichtlich der Gewerbesteuer weder ein Freistellungsbescheid noch eine rechtsverbindliche Zusage der Gewerbesteuerfreiheit zu erblicken. Die nachträgliche Heranziehung des Steuerpflichtigen zur Gewerbesteuer ist daher ohne die Einschränkung des § 173 AO zulässig. Es ist darin auch grundsätzlich kein Verstoß gegen Treu und Glauben zu erblicken ( BFH vom 27.04.1961 - BStBl III S. 281 ). Wegen der Verwirkung des Anspruchs auf Erlass eines Gewerbesteuermess- oder Gewerbesteuerbescheids ( BFH vom 05.03.1970 – BStBl II S. 793 und vom 14.03.1991 – BStBl II S. 769 ). Festsetzung des Gewerbesteuermessbetrags gegenüber einer Personengesellschaft Die Festsetzung des Gewerbesteuermessbetrags gegenüber einer Personengesellschaft kann unter keinem denkbaren Gesichtspunkt zu einer verfassungswidrigen Überbesteuerung im Sinne des sog. Halbteilungsgrundsatzes führen ( BFH vom 15.03.2005 - BStBl II S. 647 ). Blättern-Navigation § 14 § 14a Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/IV-Steuermessbetrag/Paragraf-14/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "15": {
       "enbez": "§ 15",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 15.1 — Richtlinie — Pauschfestsetzung",
+          "text": "aufklappen Zuklappen 1 Die Festsetzung der Einkommensteuer (Körperschaftsteuer) in einem Pauschbetrag kommt in Betracht nach § 34c Abs. 5 EStG bei unbeschränkt Steuerpflichtigen mit ausländischen Einkünften, nach § 50 Abs. 7 EStG bei beschränkt Steuerpflichtigen, nach der Verordnung zur Vereinfachung des Verfahrens bei Steuernachforderungen vom 28.7.1941 ( RGBl . I S. 489), soweit diese Verordnung nicht durch Landesrecht aufgehoben worden ist. 2 Wird die Einkommensteuer (Körperschaftsteuer) in einem Pauschbetrag festgesetzt, so kann im Einvernehmen mit der dafür nach § 15 GewStG zuständigen Behörde auch der Steuermessbetrag in einem Pauschbetrag festgesetzt werden. 3 Ist Gewerbesteuer für mehrere Jahre nachzuholen, müssen für die einzelnen Jahre getrennte Gewerbesteuermessbeträge (Pauschbeträge) festgesetzt werden. Blättern-Navigation § 14b § 15 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/IV-Steuermessbetrag/Paragraf-15/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "16": {
       "enbez": "§ 16",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 16.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Mindesthebesatz Es bestehen keine ernstlichen Zweifel daran, dass der Gesetzgeber berechtigt ist, im Laufe des Erhebungszeitraumes bis zum Entstehen des Steueranspruchs die gesetzlichen Grundlagen zu verändern. Der Gesetzgeber konnte deshalb rückwirkend für das Kalenderjahr 2003 den Zerlegungsmaßstab des § 28 GewStG 2002 zu Lasten solcher Gemeinden verändern, deren Hebesatz 200 % unterschreitet ( BFH vom 18.08.2004 – BStBl II 2005 S. 143 ). Blättern-Navigation § 16 § 17 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/V-Entstehung-Festsetzung-und-Erhebung-der-Steuer/Paragraf-16/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "17": {
       "enbez": "§ 17",
@@ -108,9 +444,35 @@
     },
     "19": {
       "enbez": "§ 19",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 19.1 — Richtlinie — Vorauszahlungen",
+          "text": "aufklappen Zuklappen 1 Die Bemessung der Vorauszahlungen entspricht dem Vorauszahlungssystem bei der Einkommensteuer und Körperschaftsteuer. 2 Wie bei der Körperschaftsteuer sind bei einem vom Kalenderjahr abweichenden Wirtschaftsjahr die Gewerbesteuer-Vorauszahlungen bereits während des Wirtschaftsjahrs zu entrichten, das im Erhebungszeitraum endet. 3 Durch die Entrichtung der Vorauszahlungen bei einem vom Kalenderjahr abweichenden Wirtschaftsjahr in dem jeweiligen Wirtschaftsjahr wird vermieden, dass bei Neugründungen mit vom Kalenderjahr abweichendem Wirtschaftsjahr oder bei der Umstellung auf ein vom Kalenderjahr abweichendes Wirtschaftsjahr eine Steuerpause eintritt. 4 Auf die Jahressteuerschuld für den Erhebungszeitraum sind die im abweichenden Wirtschaftsjahr, das im maßgebenden Erhebungszeitraum endet, festgesetzten und entrichteten Vorauszahlungen anzurechnen. 5 § 19 Abs. 1 Satz 2 GewStG gilt nicht für Gewerbebetriebe, die bereits vor dem 1.1.1986 ein vom Kalenderjahr abweichendes Wirtschaftsjahr hatten, es sei denn, sie sind nach dem 31.12.1985 infolge Wegfalls eines Befreiungsgrunds in die Steuerpflicht eingetreten oder sie haben nach diesem Zeitpunkt das Wirtschaftsjahr auf einen anderen vom 31.12. abweichenden Abschlusszeitpunkt umgestellt. 6 Jede Vorauszahlung beträgt grundsätzlich ein Viertel der Steuer, die sich bei der letzten Veranlagung ergeben hat ( § 19 Abs. 2 GewStG ). 7 Sie ist auf den nächsten vollen Betrag in Euro nach unten abzurunden und wird nur festgesetzt, wenn sie mindestens 50 Euro beträgt ( § 19 Abs. 5 GewStG ). 8 Letzte Veranlagung ist von allen bisher durchgeführten Veranlagungen diejenige, die sich auf den Erhebungszeitraum bezieht, der dem Vorauszahlungsjahr zeitlich am nächsten liegt.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/V-Entstehung-Festsetzung-und-Erhebung-der-Steuer/Paragraf-19/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 19.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Abweichendes Wirtschaftsjahr Beispiel: Die voraussichtliche Gewerbesteuer im EZ 02, in dem das Wirtschaftsjahr 01.07.2001 bis 30.06.2002 endet, beträgt 120.000 €. Die Vorauszahlungen sind zu entrichten am 15.08.2001, 15.11.2001, 15.02.2002 und 15.05.2002. Die mit je 30.000 € im abweichenden Wirtschaftsjahr 01.07.2001 bis 30.06.2002 geleisteten Vorauszahlungen sind auf die endgültige Steuerschuld des EZ 02 anzurechnen. Höhe der zu entrichtenden Vorauszahlungen BVerwG vom 22.5.1987 – BStBl II S. 698",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/V-Entstehung-Festsetzung-und-Erhebung-der-Steuer/Paragraf-19/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 19.2 — Richtlinie — Anpassung und erstmalige Festsetzung der Vorauszahlungen",
+          "text": "aufklappen Zuklappen 1 1 Die Vorauszahlungen können der Steuer angepasst werden, die sich für den laufenden oder vorausgegangenen Erhebungszeitraum voraussichtlich ergeben wird. 2 Die Anpassung obliegt der Gemeinde, wenn ihr die Festsetzung und Erhebung der Gewerbesteuer übertragen ist ( R 1.2 ). 3 § 19 Abs. 3 GewStG stellt die Entscheidung der Frage, ob bei der Anpassung festgesetzter Gewerbesteuer-Vorauszahlungen die im Zeitpunkt der Anpassung bereits fällig gewesenen und entrichteten Vorauszahlungen auf jeweils ein Viertel der voraussichtlichen Jahressteuer herabgesetzt werden, in das Ermessen der Gemeinde. 4 Aber auch das Finanzamt kann bei Kenntnis veränderter Verhältnisse hinsichtlich des Gewerbeertrags für den laufenden oder vorangegangenen Erhebungszeitraum die Anpassung der Vorauszahlungen veranlassen. 5 Das gilt insbesondere für die Fälle, in denen das Finanzamt Einkommensteuer- und Körperschaft-steuervorauszahlungen anpasst. 6 Es setzt in diesem Fall für Zwecke der Gewerbesteuer-Vorauszahlungen den voraussichtlichen Steuermessbetrag fest, an den die Gemeinden bei der Anpassung der Vorauszahlungen gebunden sind ( § 19 Abs. 3 GewStG ). 7 Dieser Festsetzung bedarf es nur, wenn sich danach der Steuermessbetrag entweder um mehr als ein Fünftel, mindestens aber um 10 Euro oder um mehr als 500 Euro ändert. 8 Werden nach Ablauf des letzten Vorauszahlungszeitpunkts für den Erhebungszeitraum die Gewerbesteuer-Vorauszahlungen angepasst, ist bei einer Erhöhung der Vorauszahlungen der nachgeforderte Betrag innerhalb eines Monats nach Bekanntgabe des Vorauszahlungsbescheids zu entrichten. 2 1 In den Fällen der Anpassung der Vorauszahlungen nach § 19 Abs. 3 Satz 3 GewStG findet eine Zerlegung nur dann statt, wenn an den Vorauszahlungen nicht dieselben Gemeinden beteiligt sind, die nach dem unmittelbar vorangegangenen Zerlegungsbescheid beteiligt waren ( § 29 Abs. 2 GewStDV ). 2 In den anderen Anpassungsfällen braucht ein Zerlegungsbescheid nicht erteilt zu werden (Ermessen des Finanzamtes). 3 Die hebeberechtigten Gemeinden können an dem Steuermessbetrag in demselben Verhältnis beteiligt werden, nach dem die Zerlegungsanteile in dem unmittelbar vorangegangenen Zerlegungsbescheid festgesetzt sind. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/V-Entstehung-Festsetzung-und-Erhebung-der-Steuer/Paragraf-19/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 19.2 — Hinweise — aufklappen",
+          "text": "Zuklappen Anpassung der Vorauszahlungen Die Entscheidung über die nachträgliche Anpassung von festgesetzten Vorauszahlungen auf die Gewerbesteuer steht grundsätzlich im Ermessen der Gemeinde ( BVerwG vom 22.5.1987 – BStBl II S. 698 ). Zerlegung Ein Zerlegungsbescheid für Zwecke der Gewerbesteuer-Vorauszahlungen steht gemäß § 164 Abs. 1 Satz 2 i. V. m. § 184 Abs. 1 Satz 3, § 185 AO kraft Gesetzes unter dem Vorbehalt der Nachprüfung ( BFH vom 18.8.2004 – BStBl 2005 II S. 143 ). Blättern-Navigation § 18 § 19 § 20 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/V-Entstehung-Festsetzung-und-Erhebung-der-Steuer/Paragraf-19/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "20": {
       "enbez": "§ 20",
@@ -126,27 +488,83 @@
     },
     "28": {
       "enbez": "§ 28",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 28.1 — Richtlinie — Zerlegung des Steuermessbetrags",
+          "text": "aufklappen Zuklappen 1 1 Der Steuermessbetrag ist auf alle Gemeinden zu zerlegen, in denen im Erhebungszeitraum Betriebsstätten unterhalten worden sind. 2 Im Fall der Verpachtung oder Stilllegung eines Teilbetriebs unterhält der Unternehmer im Allgemeinen keine Betriebsstätte in der Gemeinde, in der sich die Anlagen befinden. 3 Die Belegenheitsgemeinde hat deshalb keinen Anspruch auf einen Zerlegungsanteil. 4 Vorübergehend ruhende Betriebsstätten, auch mehrfach in einem Erhebungszeitraum ruhende Betriebsstätten ( z. B. bei Saisonbetrieben), sind in die Zerlegung einzubeziehen. 5 Für Zwecke der Zerlegung gelten Bauausführungen oder Montagen nur dann als Betriebsstätte, wenn die Voraussetzungen des § 12 Nr. 8 AO ( R 2.9 Abs. 2 ) in den Grenzen der einzelnen Gemeinde erfüllt sind. 6 Dies gilt nicht, wenn dadurch auf keine Gemeinde ein Zerlegungsanteil oder der Steuermessbetrag entfallen würde. 2 1 Für die Zerlegung gelten die Vorschriften der §§ 185 bis 189 AO . 2 Danach sind Zerlegungsbescheide für die Gewerbesteuer gemäß § 173 Abs. 1 i. V. m. § 185, § 184 Abs. 1 Satz 3 AO änderbar. 3 Ist der Gewerbesteuermessbescheid nach Vornahme der Zerlegung geändert worden, ist der Zerlegungsbescheid ebenfalls zu ändern ( § 185, § 184 Abs. 1 Satz 3, § 175 Abs. 1 Satz 1 Nr. 1 AO ). 4 Die Zerlegung wird ferner nach § 189 AO geändert oder nachgeholt, wenn der Anspruch einer Gemeinde auf einen Anteil am Steuermessbetrag nicht berücksichtigt und auch nicht zurückgewiesen worden ist. 5 Eine Änderung des ursprünglichen Gewerbesteuermessbescheids, z. B. nach § 172 Abs. 1 Nr. 2, § 173, § 175 AO oder § 35b GewStG , setzt demnach für die Gemeinde eine neue Frist im Sinne des § 189 Satz 3 AO in Lauf. 3 Betriebsstätten, die außerhalb des Geltungsbereichs des Gesetzes belegen sind, werden bei der Ermittlung des Gewerbeertrags nicht berücksichtigt und scheiden deshalb auch für die Zerlegung des Steuermessbetrags aus. 4 Gegen einen Zerlegungsbescheid des Finanzamts und gegen einen Bescheid, durch den ein Antrag auf Zerlegung abgelehnt wird, können der Steuerpflichtige und die beteiligten Gemeinden Einspruch einlegen ( § 347 Abs. 1 AO ).",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-28/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 28.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Auslieferungslager Auslieferungslager, in denen der Unternehmer keine Arbeitnehmer beschäftigt, begründen in der Regel keinen Anspruch der Gemeinde auf einen Zerlegungsanteil. Dies rechtfertigt bei der Zerlegung des Gewerbesteuermessbetrags in der Regel auch nicht die Anwendung des § 33 GewStG . Eine offenbare Unbilligkeit ist nur dann gegeben, wenn der Gemeinde durch die Betriebsstätte wesentliche Lasten erwachsen ( BFH vom 12.07.1960 – BStBl III S. 386 ). Auswirkungen der Änderung eines Gewerbesteuermessbescheids auf einen bereits bestandskräftigen Zerlegungsbescheid, wenn die beteiligten Gemeinden um den Zerlegungsmaßstab streiten Soweit der Gewerbesteuermessbescheid geändert wird, ist auch der Zerlegungsbescheid als Folgebescheid gemäß § 175 Abs. 1 Satz 1 Nr. 1 i. V. m. §§ 185, 184 Abs. 1 Satz 3 AO zu ändern. Im Rahmen des aus dem Gewerbesteuermessbescheid zu übernehmenden Erhöhungsbetrages kann eine zerlegungsberechtigte Gemeinde gegen den Zerlegungs-Änderungsbescheid alle Einwendungen erheben, die sich aus den materiell-rechtlichen Zerlegungsvorschriften ergeben. Insbesondere umfasst die Bestandskraft des ursprünglichen Zerlegungsbescheids nicht den in diesem Bescheid angewandten Zerlegungsmaßstab ( BFH vom 20.04.1999 – BStBl II S. 542 ). Änderung der Zerlegung § 189 AO trifft allein für den Fall der Nichtberücksichtigung von Gemeinden bei der Zerlegung eine abschließende Regelung ( BFH vom 24.03.1992 – BStBl II S. 869 ). Die in § 189 Satz 3 AO bezeichnete Frist gilt auch für den Fall der erstmaligen Zerlegung ( BFH vom 07.03.1957 – BStBl III S. 178 ). Maßgebend für den Beginn der Frist ist der Zeitpunkt, an dem der letzte endgültige Gewerbesteuermessbescheid unanfechtbar geworden ist ( BFH vom 13.01.1959 – BStBl III S. 106 ). Bauausführungen oder Montagen Für eine Zerlegung des einheitlichen Gewerbesteuermessbetrages nach § 28 GewStG sind Bauausführungen nur dann als Betriebstätte anzusehen, wenn sie im Gebiet der einzelnen Gemeinde länger als sechs Monate dauern (§ 12 Satz 2 Nr. 8 AO ). Witterungsbedingte oder bautechnisch bedingte Unterbrechungen von kürzerer Dauer berühren den Fortgang der Sechsmonatsfrist nicht ( BFH vom 08.02.1979 – BStBl II S. 479 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-28/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "29": {
       "enbez": "§ 29",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 29.1 — Richtlinie — Zerlegungsmaßstab",
+          "text": "aufklappen Zuklappen 1 Arbeitslöhne im Sinne des § 29 Abs. 1 GewStG sind nur die Arbeitslöhne, die das steuerpflichtige Unternehmen an die eigenen Arbeitnehmer, d. h. an solche zahlt, die in einem Arbeitsverhältnis zu ihm stehen. 2 Vergütungen, die an andere Unternehmer für die Gestellung von fremden Arbeitskräften gezahlt werden, scheiden daher aus.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-29/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 29.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Arbeitnehmer im Sinne des § 29 Abs. 1 GewStG Der Begriff der Arbeitslöhne für die Zerlegung des Gewerbesteuermessbetrages bestimmt sich nach wirtschaftlichen Gesichtspunkten ( BFH vom 12.02.2004 – BStBl II S. 602 ). § 1 LStDV Zerlegung bei Batteriegroßspeicheranlagen (Energiespeicheranlagen) Gleich lautende Erlasse der obersten Finanzbehörden der Länder vom 13.11.2023 – BStBl I S. 1986 Für EZ ab 2025 § 29 Abs. 1 Nummer 3 GewStG Blättern-Navigation § 28 § 29 § 30 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-29/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "30": {
       "enbez": "§ 30",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 30.1 — Richtlinie — Zerlegung bei mehrgemeindlichen Betriebsstätten",
+          "text": "aufklappen Zuklappen 1 Eine einheitliche mehrgemeindliche Betriebstätte liegt vor, wenn zwischen den einzelnen Teilen der Betriebsstätte ein derartiger räumlicher, organisatorischer, technischer und wirtschaftlicher Zusammenhang besteht, dass die Betriebsstätte als einheitliches Ganzes anzusehen ist. 2 Basisstationen von Mobilfunkunternehmen, bestehend aus einer Antennenanlage, der Energieversorgung, Funkschrank und Klimagerät, begründen keine Betriebsstätte im Sinne von § 28 Abs. 1 Satz 1 GewStG i.V.m. § 12 AO , so dass auch eine Zerlegung nach § 30 AO ausscheidet.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-30/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 30.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines Zum Begriff der mehrgemeindlichen Betriebsstätte BFH vom 28.10.1964 – BStBl III 1965 S. 113, vom 25.09.1968 – BStBl II S. 827, vom 20.02.1974 – BStBl II S. 427, vom 10.07.1974 – BStBl II 1975 S. 42 und vom 12.10.1977 – BStBl II 1978 S. 160 . Unter bestimmten Voraussetzungen kann der räumliche Zusammenhang gegenüber einer besonders engen wirtschaftlichen, technischen und organisatorischen Verbindung in den Hintergrund treten, so etwa für Unternehmen der Elektrizitätsversorgung ( BFH vom 12.10.1977 – BStBl II 1978 S. 160, vom 16.11.1965 – BStBl II 1966 S. 40 und vom 18.10.1967 – BStBl II 1968 S. 40 ) und der Mineralölwirtschaft ( BFH vom 20.02.1974 – BStBl II S. 427 und vom 10.07.1974 – BStBl II 1975 S. 42 ). Einrichtungen zur Messung von Lärmemissionen stellen eine Betriebsstätte eines Verkehrsflughafens dar. Es liegt aber wegen eines fehlenden räumlichen Zusammenhangs keine mehrgemeindliche Betriebsstätte vor, wenn eine Verbindung mit den Lärmmessstationen (Datenübertragung) nur über allgemeine Kommunikationsleitungen besteht ( BFH vom 16.12.2009 – BStBl II 2010 S. 492 ). Die Möglichkeit, dass die Anwendung des Zerlegungsmaßstabes nach § 29 GewStG zu einem unbilligen Ergebnis führen könnte, ist für sich nicht geeignet, die Voraussetzungen für eine mehrgemeindliche Betriebstätte zu begründen ( BFH vom 12.10.1977 – BStBl II 1978 S. 160 ). Eine mehrgemeindliche Betriebstätte ist bei Kapitalgesellschaften auch dann gegeben, wenn sich in einer Gemeinde lediglich Grundstücke der Betriebstätte befinden, die zurzeit betrieblich nicht unmittelbar genutzt werden ( BFH vom 18.04.1951 – BStBl III S. 124 ). Bei einer mehrgemeindlichen Betriebstätte nach § 30 GewStG sind Bauausführungen nur dann als Betriebstätte anzusehen, wenn sie im Gebiet der einzelnen Gemeinde länger als sechs Monate dauern ( § 12 Satz 2 Nr. 8 AO ). Witterungsbedingte oder bautechnisch bedingte Unterbrechungen von kürzerer Dauer berühren den Fortgang der Sechsmonatsfrist nicht ( BFH vom 08.02.1979 – BStBl II S. 479 ). Elektrizitätsunternehmen Ein Elektrizitätsunternehmen, dessen einzelne Elektrizitätswerke in verschiedenen Gemeinden liegen, bildet eine mehrgemeindliche Betriebsstätte ( BFH vom 16.11.1965 – BStBl III 1966 S. 40 und vom 18.10.1967 – BStBl II 1968 S. 40 ), wenn die Elektrizitätswerke durch Kabelleitungen untereinander verbunden sind. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-30/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "31": {
       "enbez": "§ 31",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 31.1 — Richtlinie — Begriff der Arbeitslöhne für die Zerlegung",
+          "text": "aufklappen Zuklappen 1 1 Zu den anderen Rechtsvorschriften im Sinne des § 31 Abs. 1 GewStG gehören auch die in Verwaltungsanordnungen (Lohnsteuer‑Richtlinien) und in Doppelbesteuerungsabkommen enthaltenen Befreiungen von der Lohnsteuer. 2 Arbeitslöhne im Sinne der Zerlegungsvorschriften sind deshalb grundsätzlich die lohnsteuerpflichtigen Vergütungen im Sinne des § 19 Abs. 1 Nr. 1 EStG . 3 § 31 GewStG enthält Ausnahmen von diesem Grundsatz. 4 So gehören z. B. die nach § 3b EStG lohnsteuerfreien Zuschläge für Sonntags-, Feiertags- oder Nachtarbeit ebenso wie die Zuschläge für Mehrarbeit stets zum Arbeitslohn ( § 31 Abs. 1 Satz 2 GewStG ). 2 1 Sonstige Vergütungen im Sinne des § 31 Abs. 4 Satz 2 GewStG sind vor allem Arbeitslöhne. 2 Vergütungen an Personen, die zu ihrer Berufsausbildung beschäftigt sind, sind zwar lohnsteuerpflichtig, gehören jedoch nicht zu den Arbeitslöhnen ( § 31 Abs. 2 GewStG ). 3 Zu diesem Personenkreis gehören neben den Auszubildenden u. a. auch Praktikanten sowie Junggrade der Seeschifffahrt und Neubergleute. 4 Zu den Arbeitslöhnen gehören auch nicht die Leistungen, die von Unternehmen der Bauwirtschaft an die Zusatzversorgungskasse des Baugewerbes (Einzugsstelle) in einem Vomhundertsatz der Bruttolohnsumme zu erbringen sind, soweit sie sich aus Beiträgen zusammensetzen für das Urlaubsgeld, für den Lohnausgleich zwischen Weihnachten und Neujahr. 5 Die Beiträge für die Zusatzversorgung gehören zu den Arbeitslöhnen. 6 Die an die Arbeitnehmer des Baugewerbes geleisteten Lohnausgleichszahlungen und Urlaubsgeldzahlungen sind gezahlte Arbeitslöhne des Arbeitgebers, der die Auszahlung vornimmt. 3 1 Vermögenswirksame Leistungen nach dem Fünften Vermögensbildungsgesetz (5. VermBG ) sind steuerpflichtige Einnahmen im Sinne des Einkommensteuergesetzes ( § 2 Abs. 6 des 5. VermBG und § 19 Abs. 1 Nr. 1 EStG ) und gehören somit zu den Arbeitslöhnen. 2 Die Vorschrift des § 31 Abs. 2 GewStG bleibt unberührt. 3 Nicht zu den steuerpflichtigen Einnahmen und somit nicht zu den Arbeitslöhnen gehören die Arbeitnehmer-Sparzulagen ( § 13 Abs. 3 des 5. VermBG ). 4 Bei der Berücksichtigung von Arbeitgeberleistungen und Ausgleichsansprüchen bei Altersteilzeitbeschäftigten ist im Rahmen der Gewerbesteuerzerlegung zu beachten, dass Aufstockungszahlungen des Arbeitgebers im Sinne des § 3 Abs. 1 Nr. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-31/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 31.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Zerlegung des fiktiven Unternehmerlohns Die Zerlegung des fiktiven Unternehmerlohns setzt voraus, dass der Unternehmer in mehr als einer Betriebsstätte geschäftsleitend tätig geworden ist ( BFH vom 16.09.1964 – BStBl III 1965 S. 69 ). 1 Durch Artikel 9 des Jahressteuergesetzes 2024 ( JStG 2024) wurden in § 31 Abs. 3 die Wörter „des § 3 Nr. 5, 6, 8, 9, 12, 13, 15, 17, 21, 26, 27, 28 und 29“ durch die Wörter „einer Befreiung von der Gewerbesteuer“ ersetzt; erstmals anzuwenden ab EZ 2025 (§ 36 Abs. 5c GewStG ) Blättern-Navigation § 30 § 31 § 32 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-31/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "32": {
       "enbez": "§ 32",
@@ -156,15 +574,37 @@
     },
     "33": {
       "enbez": "§ 33",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 33.1 — Richtlinie — Zerlegung in besonderen Fällen",
+          "text": "aufklappen Zuklappen 1 1 § 33 GewStG ist eng auszulegen und nur in Ausnahmefällen anzuwenden. 2 Die Voraussetzungen des § 33 GewStG sind nicht schon dann gegeben, wenn bei Anwendung des Zerlegungsmaßstabs des § 29 GewStG eine Gemeinde unberücksichtigt bleibt. 3 Ein offenbar unbilliges Ergebnis im Sinn des § 33 GewStG ist nur dann gegeben, wenn der Gemeinde durch die Betriebsstätte wesentliche Lasten erwachsen. 4 Als wesentliche Lasten sind regelmäßig die sogenannten Arbeitnehmerfolgekosten anzusehen, d. h. die Aufwendungen einer Gemeinde für den Bau von Straßen, Schulen, Krankenhäusern, Altersheimen u. a. m. für die dort wohnenden Arbeitnehmer der Betriebsstätte. 5 Entgehende Einnahmen der Gemeinde, die durch die eingeschränkte Möglichkeit der gemeindlichen Weiterentwicklung ( z. B. aufgrund des Ausweises von Siedlungsbeschränkungs- oder Bauschutzbereichen) entstehen, können demgegenüber nicht mit effektiven Belastungen der gemeindlichen Haushalte gleichgesetzt werden. 6 „Weiche“ Belastungen (Umweltbelastung, Lärm, Schadstoffausstoß, Werteverluste an Grundstücken) stellen keine berücksichtigungsfähigen Lasten dar, da sie nicht quantifizierbar sind. 7 Lasten anderer Art, die durch das Vorhandensein einer Betriebsstätte der Gemeinde entstehen, führen nur dann zu einer Unbilligkeit im Sinne des § 33 Abs. 1 GewStG , wenn sie einerseits ins Gewicht fallen und andererseits atypisch sind. 8 Eine solche Unbilligkeit liegt nur dann vor, wenn aufgrund der atypischen Umstände des Einzelfalles die sich aus dem groben Maßstab des § 29 GewStG allgemein ergebende Unbilligkeit offensichtlich übertroffen wird. 9 Ein offenbar unbilliges Ergebnis liegt zum Beispiel vor, wenn bei gewerblicher Vermietung von Ferienwohnungen der Eigentümer seinen Wohnsitz nicht in der Belegenheitsgemeinde hat und dort auch nicht oder nur teilweise tätig ist. 10 Hier würde die Belegenheitsgemeinde, der allein durch die gewerblich vermieteten Ferienwohnungen Lasten entstehen, auf Grund der Verteilung des sogenannten Unternehmerlohns im Sinne des § 31 Abs. 5 GewStG , wie sie in R 31.1 Abs. 5 vorgesehen ist, keine oder nur einen Teil der Gewerbesteuer erhalten. 11 Bei der Zerlegung ist daher in diesen Fällen § 33 Abs. 1 GewStG mit der Maßgabe anzuwenden, dass als Zerlegungsmaßstab die Betriebseinnahmen zugrunde gelegt werden. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-33/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 33.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Anspruch auf Beteiligung an der Zerlegung §§ 4, 28 GewStG geben den Gemeinden, in deren Bereich sich Betriebstätten befinden, keinen unbedingten Anspruch auf Beteiligung an dem Gewerbesteuermessbetrag. Die Anwendung der im § 29 GewStG vorgesehenen Zerlegungsmaßstäbe führt nicht schon dann zu einem im Sinne des § 33 GewStG offenbar unbilligen Ergebnis, wenn dabei eine Gemeinde unberücksichtigt bleibt ( BFH vom 13.05.1958 – BStBl III S. 379 ). Auslieferungslager Beschäftigt ein Unternehmer in seinem Auslieferungslager keine Arbeitnehmer, rechtfertigt dies bei der Zerlegung des Steuermessbetrags in der Regel nicht die Anwendung des § 33 GewStG ( BFH vom 12.07.1960 – BStBl III S. 386 ). Auswirkungen der Änderung eines Gewerbesteuermessbescheids auf einen bereits bestandskräftigen Zerlegungsbescheid Die Bestandskraft des Zerlegungs-Erstbescheids erstreckt sich nicht auf den in diesem Bescheid angewendeten Zerlegungsmaßstab; sie umfasst den in diesem Bescheid festgestellten Zerlegungsanteil nur nach seinem Betrag. Hinsichtlich des Erhöhungsbetrags können auch bei einer Änderung des Gewerbesteuermessbetrags nach § 175 Abs. 1 Nr. 1 AO alle materiell-rechtlichen Fehler des Bescheids zugunsten wie zuungunsten der Gemeinden berichtigt werden ( BFH vom 20.04.1999 – BStBl II S. 542, Fortführung des Senatsurteils vom 24.03.1992 - BStBl II S. 869 ). Offenbare Unbilligkeit Eine offenbare Unbilligkeit ist nur gegeben, wenn der Gemeinde durch die Betriebsstätte wesentliche Lasten erwachsen ( BFH vom 12.07.1960 – BStBl III S. 386 und vom 05.10.1965 – BStBl III S. 668 ). Eine Zerlegung kann i. S. d. § 33 Abs. 1 GewStG dann unbillig sein, wenn eine Gemeinde, in der sich eine Betriebsstätte befindet, in erheblichem Umfang die sog. Folgekosten für die Arbeitnehmer der Betriebsstätte zu tragen hat, ohne dass dies im Zerlegungsmaßstab zugunsten der Gemeinde Berücksichtigung findet ( BFH vom 26.08.1987 – BStBl II 1988 S. 201 ). Zu Lasten anderer Art BFH vom 26.08.1987 – BStBl II 1988 S. 201 Nicht jede offenbare Unbilligkeit, die sich aus dem Zerlegungsmaßstab gemäß § 29 GewStG ergibt, rechtfertigt eine Zerlegung nach einem abweichenden Maßstab. Die Unbilligkeit muss vielmehr erhebliches Gewicht haben und eindeutig und augenfällig sein. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-33/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "34": {
       "enbez": "§ 34",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 34.1 — Richtlinie — Negativer Zerlegungsanteil bei Änderung oder Berichtigung des Zerlegungsbescheids",
+          "text": "aufklappen Zuklappen § 34 Abs. 3 GewStG ist nicht anzuwenden, wenn sich für die Gemeinde der Geschäftsleitung ein negativer Zerlegungsanteil ergeben würde. Blättern-Navigation § 33 § 34 § 35 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VI-Zerlegung/Paragraf-34/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "35": {
       "enbez": "§ 35",
@@ -186,9 +626,23 @@
     },
     "2a": {
       "enbez": "§ 2a",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 2a — Richtlinie — Arbeitsgemeinschaften",
+          "text": "aufklappen Zuklappen 1 Die Vorschrift des § 2a GewStG gilt nur für Arbeitsgemeinschaften, die auf Grund eines Werkvertrags oder Werklieferungsvertrags tätig werden. 2 Dagegen unterliegen Gemeinschaften, die einen gemeinsamen Ein- oder Verkauf betreiben, sofern dieser sich nicht auf die Erfüllung des Werk- oder Werklieferungsvertrags beschränkt, selbständig der Gewerbesteuer.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 2a — Hinweise — aufklappen",
+          "text": "Zuklappen Auslegung des Gesellschaftsvertrags Ob eine Arbeitsgemeinschaft den alleinigen Zweck hat, sich auf die Erfüllung eines einzigen Werk- oder Werklieferungsvertrags zu beschränken, ist durch Auslegung des Gesellschaftsvertrags zu ermitteln ( BFH vom 02.12.1992 – BStBl II 1993 S. 577 ). Blättern-Navigation § 2 § 2a § 3 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/I-Allgemeines/Paragraf-2a/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "7a": {
       "enbez": "§ 7a",
@@ -210,9 +664,47 @@
     },
     "10a": {
       "enbez": "§ 10a",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 10a.1 — Richtlinie — Gewerbeverlust",
+          "text": "R 10a.1 (1) Richtlinie aufklappen Zuklappen Ermittlung 1 1 Für die Ermittlung des Gewerbeverlustes ist im Entstehungsjahr von dem Gewinn (Verlust) aus Gewerbebetrieb auszugehen, der nach den Vorschriften des Einkommensteuerrechts oder des Körperschaftsteuerrechts zu ermitteln ist. 2 Danach mindern steuerfreie Einnahmen den nach § 10a GewStG abziehbaren Verlust nicht. 3 Ebenso dürfen nicht zum steuerpflichtigen Gewerbeertrag gehörende Veräußerungsgewinne den Gewerbeverlust nicht mindern. 4 Der nach den einkommensteuerrechtlichen (körperschaftsteuerrechtlichen) Vorschriften ermittelte Gewinn oder Verlust aus Gewerbebetrieb ist um die in §§ 8 und 9 GewStG bezeichneten Beträge zu erhöhen bzw. zu vermindern. 5 Dadurch kann sich ein Gewerbeverlust ergeben, obwohl einkommensteuerrechtlich oder körperschaftsteuerrechtlich ein Gewinn aus Gewerbebetrieb vorliegt. R 10a.1 (2) Richtlinie aufklappen Zuklappen Gesonderte Feststellung 2 1 Die Höhe des vortragsfähigen Gewerbeverlustes ist gesondert festzustellen. 2 Bei der gesonderten Feststellung des vortragsfähigen Gewerbeverlustes ist u. a. auch der Verlustverbrauch durch das Ausscheiden von Gesellschaftern einer Personengesellschaft zu berücksichtigen. 3 Entsprechendes gilt bei einem Wegfall des vortragsfähigen Gewerbeverlustes nach § 10a Satz 10 GewStG i. V. m. § 8c KStG . R 10a.1 (3) Richtlinie aufklappen Zuklappen Verlustabzug 3 1 Ein Gewerbeverlust ist von Amts wegen erstmals in dem auf das Entstehungsjahr unmittelbar folgenden Erhebungszeitraum nach Maßgabe des § 10a GewStG zu berücksichtigen. 2 Der Gewerbeverlust ist vom maßgebenden Gewerbeertrag, also nach Berücksichtigung der Hinzurechnungen nach § 8 GewStG und der Kürzungen nach § 9 GewStG und vor dem Ansatz des Freibetrags nach § 11 Abs. 1 Satz 3 GewStG abzuziehen. 3 Bei Einzelunternehmen und Personengesellschaften ist Voraussetzung für den Verlustabzug nach § 10a GewStG sowohl die Unternehmensidentität ( R 10a.2 ) als auch die Unternehmeridentität ( R 10a.3 ). 4 Bei Körperschaften und Mitunternehmerschaften, an denen Körperschaften beteiligt sind, gelten unter den Voraussetzungen des § 10a Satz 10 GewStG die Regelungen des § 8c KStG (Verlustabzug bei Körperschaften) für die Gewerbesteuer entsprechend. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 10a.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Allgemeines Die sog. Mindestbesteuerung verstößt in ihrer Grundkonzeption einer zeitlichen Streckung des Verlustvortrags nicht gegen Verfassungsrecht ( BFH vom 22.08.2012 – BStBl II 2013 S. 512 ). Die Beschränkung der Verrechnung von vortragsfähigen Gewerbeverlusten durch Einführung einer jährlichen Höchstgrenze mit Wirkung ab 2004 (§ 10a Satz 1 und 2 GewStG ) ist verfassungsgemäß. Das gilt auch, soweit es wegen der Begrenzung zu einem endgültig nicht mehr verrechenbaren Verlust kommt, bspw. wenn es bei einer Objektgesellschaft konzeptgemäß erst in späteren Jahren zu Gewinnen kommt ( BFH vom 20.09.2012 – BStBl II 2013 S. 498 ). Die sog. Mindestgewinnbesteuerung ist nicht unbillig, wenn der Messbetrag auf vom Steuerpflichtigen veranlassten Forderungsverzicht beruht ( BFH vom 20.09.2012 – BStBl II 2013 S. 505 ). Zur Verfassungsmäßigkeit der sog. Mindestbesteuerung bei Definitiveffekten wird eine Entscheidung des BVerfG eingeholt ( BFH vom 26.02.2014 – BStBl II S. 1016 ). Feststellungsfrist für Feststellung des vortragsfähigen Gewerbeverlustes Die Feststellungsfrist für die Feststellung des vortragsfähigen Gewerbeverlusts nach § 10a Satz 6 GewStG 2002 endet nicht vor der Festsetzungsfrist für den Erhebungszeitraum, auf dessen Schluss der vortragsfähige Gewerbeverlust festzustellen ist (§ 35b Abs. 2 Satz 4 Halbsatz 1 GewStG 2002 n. F. ). Eine Feststellung nach dem Ablauf der Feststellungsfrist ist rechtswidrig. Abweichendes gilt (unter Anwendung von § 181 Abs. 5 AO ), wenn die zuständige Finanzbehörde die Feststellung pflichtwidrig unterlassen hat (§ 35b Abs. 2 Satz 4 Halbsatz 2 GewStG 2002 n. F. ). Diese Voraussetzung ist nur dann erfüllt, wenn eine Verlustfeststellung bisher gänzlich fehlt; die Änderung einer bereits fristgerecht ergangenen Feststellung fällt nicht darunter ( BFH vom 11.02.2015 – BStBl II 2016 S. 353 ). Gesellschafterwechsel bei einer Personengesellschaft Tritt bei einer Personengesellschaft innerhalb des Erhebungszeitraumes ein partieller Gesellschafterwechsel ein, der nicht zur Beendigung der sachlichen Steuerpflicht der Gesellschaft führt, so ist ein nach dem Gesellschafterwechsel entstandener Verlust kein gesondert vortragsfähiger Fehlbetrag im Sinne des § 10a GewStG , sondern Teil des für den gesamten Erhebungszeitraum zu ermittelnden Gewerbeertrags ( BFH vom 26.06.1996 – BStBl II 1997 S. 179 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 10a.2 — Richtlinie — Unternehmensidentität",
+          "text": "aufklappen Zuklappen 1 Unternehmensidentität bedeutet, dass der im Anrechnungsjahr bestehende Gewerbebetrieb identisch ist mit dem Gewerbebetrieb, der im Jahr der Entstehung des Verlustes bestanden hat. 2 Dabei ist unter Gewerbebetrieb die ausgeübte gewerbliche Betätigung zu verstehen. 3 Ob diese die gleiche geblieben ist, ist nach dem Gesamtbild zu beurteilen, das sich aus ihren wesentlichen Merkmalen ergibt, wie insbesondere der Art der Betätigung, dem Kunden- und Lieferantenkreis, der Arbeitnehmerschaft, der Geschäftsleitung, den Betriebsstätten sowie dem Umfang und der Zusammensetzung des Aktivvermögens. 4 Unter Berücksichtigung dieser Merkmale muss ein wirtschaftlicher, organisatorischer und finanzieller Zusammenhang zwischen den Betätigungen bestehen. 5 Betriebsbedingte – auch strukturelle – Anpassungen der gewerblichen Betätigung an veränderte wirtschaftliche Verhältnisse stehen der Annahme einer identischen Tätigkeit jedoch nicht entgegen.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 10a.2 — Hinweise — aufklappen",
+          "text": "Zuklappen Abgrenzungsmerkmale BFH vom 12.01.1983 - BStBl II S. 425, vom 19.12.1984 - BStBl II 1985 S. 403, vom 14.09.1993 - BStBl II 1994 S. 764 und vom 27.01.1994 - BStBl II S. 477 Betriebsaufspaltung Bei der Rückumwandlung einer aus einer Betriebsaufspaltung hervorgegangenen Betriebs- GmbH auf die Besitz-Personengesellschaft, bleibt ein bei der Personengesellschaft entstandener Gewerbeverlust abzugsfähig ( BFH vom 28.05.1968 – BStBl II S. 688 ). Bringen die Gesellschafter einer GbR , die Verpachtungsgesellschaft im Rahmen einer Betriebsaufspaltung ist, ihre Anteile an der GbR in eine KG ein, die in den Pachtvertrag eintritt, kann die Unternehmensidentität auch dann gegeben sein, wenn die KG bereits Besitzgesellschaft im Rahmen einer weiteren Betriebsaufspaltung ist ( BFH vom 27.01.1994 – BStBl II S. 477 ). Eine Besitzpersonengesellschaft übt im Rahmen einer bestehenden Betriebsaufspaltung eine originär gewerbliche Tätigkeit im Sinne des § 15 Abs. 1 Satz 1 Nr. 1, Abs. 2 EStG aus. Die Unternehmensidentität besteht so lange fort, als sie mit der nämlichen Betriebskapitalgesellschaft sachlich und personell verflochten bleibt ( BFH vom 30.10.2019 – BStBl II 2020 S. 147 ). Betriebsunterbrechung Die Unternehmensidentität entfällt, wenn zwischen Verlustentstehung und Anrechnung zwar eine den einkommensteuerlichen Fortbestand des Betriebs unberührt lassende Betriebsunterbrechung (ruhender Gewerbebetrieb) gegeben ist, gewerbesteuerlich die werbende Tätigkeit hiermit aber nicht nur vorübergehend unterbrochen ist bzw. eine andersartige werbende Tätigkeit aufgenommen wird ( BFH vom 30.10.2019 – BStBl II 2020 S. 147 ). Einbringungsbedingter Übergang des Gewerbeverlustes Bringt eine Kapitalgesellschaft ihren gesamten Betrieb nach § 24 UmwStG in eine GmbH & Co. KG ein und beschränkt sich ihre Tätigkeit fortan auf die Verwaltung der Mitunternehmerstellung an der aufnehmenden Gesellschaft sowie das Halten der Beteiligung an der Komplementär- GmbH , steht § 2 Abs. 2 Satz 1 GewStG ( GewStG ) der Annahme von Unternehmensidentität im Sinne des § 10a GewStG auf der Ebene der übernehmenden Personengesellschaft nicht entgegen ( BFH vom 01.02.2024 – BStBl II 2025 S. 51 ). Gewerblich geprägte Personengesellschaft Auch bei einer gewerblich geprägten Personengesellschaft (§ 15 Abs. 3 Nr. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 10a.3 — Richtlinie — Unternehmeridentität",
+          "text": "R 10a.3 (1) Richtlinie aufklappen Zuklappen Allgemeines 1 1 Unternehmeridentität bedeutet, da ss der Gewerbetreibende, der den Verlustabzug in Anspruch nehmen will, den Gewerbeverlust zuvor in eigener Person erlitten haben mu ss . 2 Ein Unternehmerwechsel bewirkt somit, da ss der Abzug des im übergegangenen Unternehmen entstandenen Verlustes entfällt, auch wenn das Unternehmen als solches von dem neuen Inhaber unverändert fortgeführt wird. 3 Der erwerbende Unternehmer kann den vom übertragenden Unternehmer erzielten Gewerbeverlust auch dann nicht nach § 10a GewStG abziehen, wenn er den erworbenen Betrieb mit einem bereits bestehenden Betrieb vereinigt. H 10a.3 (1) Hinweise aufklappen Zuklappen Unternehmerwechsel Ein den Verlustabzug nach § 10a GewStG ausschließender Unternehmerwechsel liegt unabhängig davon vor, ob dieser auf entgeltlicher oder unentgeltlicher Übertragung, auf Gesamtrechtsnachfolge ( z. B. Erbfolge) oder auf Einzelrechtsnachfolge ( z. B. vorweggenommene Erbfolge) beruht ( BFH vom 03.05.1993 – BStBl II S. 616 und vom 07.12.1993 – BStBl II 1994 S. 331 ). R 10a.3 (2) Richtlinie aufklappen Zuklappen Einzelunternehmen - unbesetzt - H 10a.3 (2) Hinweise aufklappen Zuklappen Einzelunternehmen Wird ein Einzelunternehmen nach Eintritt einer oder mehrerer Personen als Personengesellschaft fortgeführt, kann der in dem Einzelunternehmen entstandene Fehlbetrag auch weiterhin insgesamt, jedoch nur von dem Betrag abgezogen werden, der von dem gesamten Gewerbeertrag der Personengesellschaft entsprechend dem sich aus dem Gesellschaftsvertrag ergebenden Gewinnverteilungsschlüssel auf den früheren Einzelunternehmer entfällt. Entsprechendes gilt, wenn ein Einzelunternehmen gemäß § 24 UmwStG in eine Personengesellschaft eingebracht wird. Der Abzug eines in einem Einzelunternehmen entstandenen Gewerbeverlustes entfällt jedoch insgesamt, wenn das Unternehmen auf eine Kapitalgesellschaft oder auf eine Personengesellschaft, an der der bisherige Einzelunternehmer nicht beteiligt ist, übertragen wird ( BFH vom 03.05.1993 – BStBl II S. 616 ). R 10a.3 (3) Richtlinie aufklappen Zuklappen Mitunternehmerschaften 3 1 Bei Personengesellschaften und anderen Mitunternehmerschaften sind Träger des Rechts auf den Verlustabzug die einzelnen Mitunternehmer. […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 10a.4 — Richtlinie — Organschaft",
+          "text": "aufklappen Zuklappen 1 Gehen im Zuge einer Anwachsung Verluste einer Personengesellschaft auf eine Organgesellschaft über, können diese Verluste in Zeiträumen vor als auch nach dem Abschluss des Gewinnabführungsvertrages zwischen Organgesellschaft und Organträger entstanden sein. 2 Verluste, die vor Abschluss des Gewinnabführungsvertrages bei der Personengesellschaft entstanden sind, stellen vororganschaftliche Verluste dar, welche während des Bestehens der Organschaft nicht mit dem maßgebenden Gewerbeertrag der Organgesellschaft zu verrechnen sind ( § 10a Satz 3 GewStG ). 3 Die nach Abschluss des Gewinnabführungsvertrages auf Ebene der Personengesellschaft entstandenen und der Organgesellschaft angewachsenen Verluste stellen Verluste dar, die während der Organschaft auf Ebene der Organgesellschaft entstanden sind. 4 Die Voraussetzungen des § 10a Satz 3 GewStG sind insoweit nicht erfüllt. 5 Daraus folgt, dass Verluste im Sinne des Satzes 3 auf Ebene der Organgesellschaft nach Maßgabe des § 10a Satz 1 und 2 GewStG jeweils höchstens bis auf Null mit positiven Gewerbeerträgen der Organgesellschaft ausgeglichen werden können.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/II-Bemessung-der-Gewerbesteuer/Paragraf-10a/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "(xxxx)-§§-12-und-13": {
       "enbez": "(XXXX) §§ 12 und 13",
@@ -240,15 +732,43 @@
     },
     "35a": {
       "enbez": "§ 35a",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 35a.1 — Richtlinie — Reisegewerbebetriebe",
+          "text": "aufklappen Zuklappen 1 Einen Reisegewerbebetrieb unterhält, wer als Inhaber nach den Vorschriften der Gewerbeordnung ( GewO ) und den Ausführungsbestimmungen dazu entweder einer Reisegewerbekarte bedarf oder von der Reisegewerbekarte lediglich deshalb befreit ist, weil er einen Blindenwaren-Vertriebsausweis ( § 55a Abs. 1 Nr. 4 GewO ) besitzt. 2 Gemäß § 55 Abs. 2 GewO bedarf derjenige einer Reisegewerbekarte, der ein Reisegewerbe betreiben will. 3 Ein Reisegewerbe betreibt, wer gewerbsmäßig ohne vorhergehende Bestellung außerhalb seiner gewerblichen Niederlassung oder ohne eine solche zu haben, selbständig oder unselbständig in eigener Person Waren feilbietet oder Bestellungen aufsucht (vertreibt) oder ankauft, Leistungen anbietet oder Bestellungen auf Leistungen aufsucht oder selbständig unterhaltende Tätigkeiten als Schausteller oder nach Schaustellerart ausübt ( § 55 Abs. 1 GewO ). 4 Demgemäß gelten zum Beispiel Angestellte, die für ihren Arbeitgeber im Umherziehen Waren feilbieten und dazu eine Reisegewerbekarte brauchen, nicht als Reisegewerbetreibende im Sinne des Gewerbesteuergesetzes. 5 Liegt ein gewerbliches Unternehmen im Sinne des Gewerbesteuergesetzes vor, ist auf Grund der Vorschriften der Gewerbeordnung, insbesondere auf Grund des § 55 GewO zu prüfen, ob der Inhaber zur Ausübung des Unternehmens einer Reisegewerbekarte bedarf. 6 Es kann dabei grundsätzlich darauf abgestellt werden, ob der Steuerpflichtige für den Erhebungszeitraum oder einen Teil des Erhebungszeitraums eine Reisegewerbekarte erworben hat oder ob er einen Blindenwaren-Vertriebsausweis besitzt. 7 Abgesehen von der gesetzlichen Ausnahme des § 55a Abs. 1 Nr. 4 GewO liegt daher kein Reisegewerbebetrieb vor, soweit die Gewerbeordnung eine Reisegewerbekarte nicht vorschreibt. 8 Nach § 55a Abs. 1 Nr. 3 GewO bedarf derjenige, der ein Reisegewerbe im Sinne von § 55 Abs. 1 Nr. 1 und 2 GewO in der Gemeinde seines Wohnsitzes oder seiner gewerblichen Niederlassung ausübt, keiner Reisegewerbekarte, sofern die Gemeinde nicht mehr als 10 000 Einwohner zählt.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VII-Gewerbesteuer-der-Reisegewerbebetriebe/Paragraf-35a/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 35a.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Zur Unterscheidung zwischen Reisegewerbebetrieb und stehendem Gewerbe R 2.1 Abs. 3 Servicebereich Seite teilen Seite teilen Die aktuelle Seite in Ihren Sozialen Netzwerken teilen. Facebook X/Twitter Xing Seite drucken \"> Nach oben © Bundesministerium der Finanzen Metanavigation Im&shy;pres&shy;s&shy;um Da&shy;ten&shy;schutz Be&shy;nut&shy;zer&shy;hin&shy;wei&shy;se Er&shy;klä&shy;rung zur Bar&shy;rie&shy;re&shy;frei&shy;heit Schließen GlossarHilfe ... Schließen Schliessen Tabelle",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VII-Gewerbesteuer-der-Reisegewerbebetriebe/Paragraf-35a/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "35b": {
       "enbez": "§ 35b",
-      "verwaltung": [],
+      "verwaltung": [
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "R 35b.1 — Richtlinie — Aufhebung oder Änderung des Gewerbesteuermessbescheids von Amts wegen",
+          "text": "aufklappen Zuklappen 1 1 Die Vorschrift des § 35b GewStG enthält eine selbständige Rechtsgrundlage für die Aufhebung oder Änderung von Gewerbesteuermessbescheiden und Verlustfeststellungsbescheiden. 2 Ihre Anwendung setzt nicht voraus, dass sich die Änderungsbefugnis aus anderen Vorschriften, z. B. aus § 173 Abs. 1 oder § 164 Abs. 2 AO , ergibt. 3 Sind jedoch zugleich die Voraussetzungen des § 164 Abs. 2 AO gegeben, geht diese Änderungsvorschrift dem § 35b GewStG vor. 4 Die Vorschrift des § 35b GewStG kommt hiernach zur Anwendung, wenn der Einkommensteuerbescheid, der Körperschaftsteuerbescheid oder der Feststellungsbescheid aufgehoben oder geändert wird, die Aufhebung oder Änderung des bezeichneten Bescheids die Höhe des Gewinns aus Gewerbebetrieb berührt und diese Aufhebung oder Änderung die Höhe des Gewerbeertrags beeinflusst. 5 Eine Aufhebung oder Änderung des Einkommensteuerbescheids, des Körperschaftsteuerbescheids oder des Feststellungsbescheids ist eine unerlässliche Voraussetzung für die Anwendung des § 35b Abs. 1 GewStG . 6 Dabei ist es einerlei, aus welchen Gründen der Bescheid aufgehoben oder geändert wird (Rechtsbehelfsentscheidung, Berichtigung nach § 129 AO , Aufhebung oder Änderung nach § 164 Abs. 2, §§ 172 und 173 AO ). 2 1 Sind die in Absatz 1 Satz 4 bezeichneten drei Voraussetzungen erfüllt, wird die Änderung des Gewinns aus Gewerbebetrieb in dem neuen Gewerbesteuermessbescheid oder Verlustfeststellungsbescheid von Amts wegen insoweit berücksichtigt, als sie die Höhe des Gewerbeertrags beeinflusst (&gt;§ 35b Abs. 1 Satz 2 GewStG ). 2 Der bestandskräftige Verlustfeststellungsbescheid kann nur nach § 35b Abs. 2 Satz 2 und 3 GewStG geändert werden, wenn der Gewerbesteuermessbescheid für denselben Erhebungszeitraum nach den Änderungsvorschriften der Abgabenordnung oder nach § 35b Abs. 1 GewStG zumindest dem Grunde nach geändert werden könnte. 3 Nach § 35b Abs. 2 Satz 2 GewStG ist nicht nur ein geänderter Gewinn, sondern sind auch geänderte Hinzurechnungs- und Kürzungsbeträge zu berücksichtigen. 4 Gegen Bescheide, durch die ein Antrag auf Aufhebung oder Änderung des Gewerbesteuermessbescheids oder des Verlustfeststellungsbescheides nach § 35b GewStG abgelehnt wird, ist der Einspruch nach § 347 Abs. 1 Nr. 1 AO gegeben.",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VIII-Aenderung-des-Gewerbesteuermessbescheids-von-Amts-wegen/Paragraf-35b/inhalt.html"
+        },
+        {
+          "quelle": "GewStR/GewStH (2024)",
+          "fundstelle": "H 35b.1 — Hinweise — aufklappen",
+          "text": "Zuklappen Änderung des Bescheides über den verbleibenden Verlustvortrag nach § 35b Abs. 2 Satz 2 GewStG Sind der Körperschaftsteuerbescheid und der Gewerbesteuermessbescheid des Verlustentstehungsjahres bestandskräftig und berücksichtigen diese einen geringeren Verlust als vom Steuerpflichtigen begehrt, ist die Änderung eines Bescheides über den verbleibenden Verlustvortrag und des vortragsfähigen Gewerbeverlusts nach § 10d Abs. 4 Satz 4 EStG i.V.m. § 8 Abs. 1 Satz 1 KStG und § 35b Abs. 2 Satz 2 GewStG nur zulässig, soweit eine Korrektur der Steuerbescheide nach den Vorschriften der AO hinsichtlich der bei der Ermittlung des Gesamtbetrags der Einkünfte nicht ausgeglichenen negativen Einkünfte (noch) möglich ist und diese der Steuerfestsetzung tatsächlich zugrunde gelegt worden sind ( BFH vom 16.05.2018 – BStBl II S. 752 ). Allgemeines Die Änderung gemäß § 35b Abs. 1 GewStG setzt eine Änderung der Höhe des Gewinns aus Gewerbebetrieb voraus ( BFH vom 10.03.1999 – BStBl II S. 475 ). Der Gewerbesteuermessbescheid ist auch dann von Amts wegen zu ändern, wenn ein bisher als laufender Gewinn bezeichneter Teil des Gewinns in einem geänderten Bescheid als Veräußerungsgewinn behandelt wird, es sei denn, dass es sich um eine Kapitalgesellschaft handelt, bei der der Veräußerungsgewinn zum Gewerbeertrag gehört ( BFH vom 30.06.1964 – BStBl III S. 581 ). Ändert das Finanzamt den Einkommensteuerbescheid in der Weise, dass ein bisher als Veräußerungsgewinn behandelter Gewinn aus Gewerbebetrieb nunmehr als laufender Gewinn beurteilt wird, so darf der Gewerbesteuermessbescheid nach § 35b GewStG geändert werden ( BFH vom 16.12.2004 – BStBl II 2005 S. 184 ). Der Gewerbesteuermessbescheid ist nach § 35b Abs. 1 Satz 1 GewStG auch dann aufzuheben oder zu ändern, wenn die vorausgegangene Aufhebung oder Änderung des Einkommensteuerbescheids darauf beruht, dass die Tätigkeit des Steuerpflichtigen nicht mehr wie bisher als gewerbliche qualifiziert, sondern einer anderen Einkunftsart zugeordnet wird ( BFH vom 23.06.2004 – BStBl II S. 901 ). Keine Änderung nach § 35b GewStG Wird ein Gewerbesteuermessbescheid selbständig angefochten, darf das Finanzamt diesen Bescheid nicht nach § 35b Abs. 1 GewStG aufheben oder ändern ( BFH vom 09.09.1965 – BStBl III S. 667 ). […]",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/A-Gewerbesteuergesetz/VIII-Aenderung-des-Gewerbesteuermessbescheids-von-Amts-wegen/Paragraf-35b/inhalt.html"
+        }
+      ],
       "rechtsprechung": [],
-      "abgerufen": "2026-07-30"
+      "abgerufen": "2026-07-30",
+      "etag": null
     },
     "35c": {
       "enbez": "§ 35c",
