@@ -11,7 +11,6 @@
  *   2. abschnittLesen() — die Einzelseite holen und den Verwaltungstext herausziehen
  *
  * Abrufhygiene: ein Abruf je Sekunde, sprechender User-Agent, If-Modified-Since.
- * Der Erstlauf über rund 1 500 Normen dauert etwa zwanzig Minuten.
  */
 
 const KENNUNG = "steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)";
@@ -53,7 +52,7 @@ function text(html) {
     .replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
     .replace(/&auml;/gi, "ä").replace(/&ouml;/gi, "ö").replace(/&uuml;/gi, "ü")
     .replace(/&Auml;/g, "Ä").replace(/&Ouml;/g, "Ö").replace(/&Uuml;/g, "Ü")
-    .replace(/\u00ad/g, "")          // weiche Trennzeichen: „An­wen­dungs­be­reich"
+    .replace(/\u00ad/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -93,8 +92,6 @@ function absolut(basis, href) {
   if (!sauber || sauber.startsWith("#") || /^(?:javascript|mailto|tel):/i.test(sauber)) return null;
   try {
     const basisUrl = new URL(basis);
-    // Manche BMF-Navigationen liefern „ao/2025/..." statt „/ao/2025/...".
-    // Diese Werte sind vom Hostwurzelverzeichnis aus gemeint, nicht relativ zur aktuellen Seite.
     if (/^(?:ao|esth|usth|ksth|gewsth|erbsth|grsth)\/(?:\d{4}|\d{4}-\d{4})\//i.test(sauber)) {
       return new URL(`/${sauber}`, basisUrl.origin).toString();
     }
@@ -110,15 +107,15 @@ function istInterneHtmlSeite(url, prefix) {
 
 /**
  * Läuft den Verzeichnisbaum eines Handbuchs ab und liefert die Karte § → URL.
- *
- * @param {object} handbuch  { abk, start, prefix, name }
- * @param {(nachricht:string)=>void} melde
+ * Vollständige Meta-Inhaltsverzeichnisse werden bewusst nur einmal gelesen; sie
+ * enthalten bereits sämtliche Paragraphseiten und verhindern unnötige Vollcrawls.
  */
 export async function karteBauen(handbuch, melde = () => {}) {
   const gesehen = new Set();
   const warteschlange = [handbuch.start];
-  const karte = {};        // "8" → { url, titel }
-  const vorschalt = {};    // "169" → { url, titel }  (AEAO vor §§ …)
+  const karte = {};
+  const vorschalt = {};
+  const nurInhaltsverzeichnis = /\/Meta\/Inhalts(?:verzeichnis|uebersicht)\/inhalt\.html$/i.test(handbuch.start);
   let seiten = 0;
 
   while (warteschlange.length) {
@@ -150,8 +147,9 @@ export async function karteBauen(handbuch, melde = () => {}) {
       for (const v of vorschaltParagrafen(beschriftung)) {
         if (!vorschalt[v]) vorschalt[v] = { url: sauber, titel: text(beschriftung) };
       }
-      // Gliederungsseite: weiterverfolgen
-      if (!gesehen.has(sauber) && !warteschlange.includes(sauber)) warteschlange.push(sauber);
+      if (!nurInhaltsverzeichnis && !gesehen.has(sauber) && !warteschlange.includes(sauber)) {
+        warteschlange.push(sauber);
+      }
     }
   }
 
@@ -169,13 +167,6 @@ export async function karteBauen(handbuch, melde = () => {}) {
 
 /* ─────────────────────────── Einzelseite lesen ─────────────────────────── */
 
-/**
- * Zieht aus einer Handbuchseite den VERWALTUNGSTEIL heraus — also AEAO, Richtlinie
- * oder Hinweis, nicht den Gesetzestext (den haben wir bereits amtlich in data/).
- *
- * Die Handbuchseiten zeichnen Abschnitte über Überschriften aus, deren Text mit
- * „AEAO zu § …", „R 4.1", „H 4.1", „Abschnitt 4.1." beginnt.
- */
 const ABSCHNITT_MARKE = /^(AEAO\s+zu\s+§|AEAO\s+vor|R\s?\d|H\s?\d|Abschnitt\s?\d|UStAE\s?\d|A\s?\d+\.\d)/i;
 
 export function abschnitteAus(html) {
@@ -185,7 +176,6 @@ export function abschnitteAus(html) {
     .replace(/<nav[\s\S]*?<\/nav>/gi, "");
 
   const bloecke = [];
-  // Überschriften h2–h5 trennen die Abschnitte.
   const teile = roh.split(/<h[2-5][^>]*>/i);
   for (const teil of teile.slice(1)) {
     const ende = teil.search(/<\/h[2-5]>/i);
@@ -199,10 +189,6 @@ export function abschnitteAus(html) {
   return bloecke;
 }
 
-/**
- * Holt die Handbuchseite zu einem Paragrafen und liefert die Verwaltungsabschnitte.
- * @returns {Promise<{quelle:string,url:string,abschnitte:Array}|null>}
- */
 export async function abschnittLesen({ eintrag, quelle, etag = null, maxZeichen = 2_400 }) {
   if (!eintrag?.url) return null;
   const { html, fehler, unveraendert, etag: neuerEtag } = await hole(eintrag.url, etag);
@@ -218,7 +204,6 @@ export async function abschnittLesen({ eintrag, quelle, etag = null, maxZeichen 
   return { quelle, url: eintrag.url, titel: eintrag.titel, abschnitte, etag: neuerEtag ?? null };
 }
 
-/** Kürzt auf Satzgrenze, damit keine halben Sätze in den Beleg geraten. */
 function kuerzen(t, max) {
   if (t.length <= max) return t;
   const schnitt = t.slice(0, max);
