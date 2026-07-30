@@ -1,0 +1,203 @@
+{
+  "erzeugt": "2026-07-30T09:35:33.821Z",
+  "schwellen": {
+    "min": 4,
+    "quote": 0.8
+  },
+  "wendungen": 7041,
+  "verdaechtig": 15,
+  "funde": [
+    {
+      "wendung": "gilt entsprechend",
+      "schluessel": "gilt entsprechend",
+      "verteilung": {
+        "tb": 6,
+        "rf": 135,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "AO",
+          "norm": "292",
+          "pfad": "Abs. 2 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "AO",
+          "norm": "318",
+          "pfad": "Abs. 4 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "10",
+          "pfad": "Abs. 1 Satz 2 (Teil 2)",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "4e",
+          "pfad": "Abs. 3 Satz 4",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "ErbStG",
+          "norm": "28a",
+          "pfad": "Abs. 1 Satz 3",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "UmwStG",
+          "norm": "6",
+          "pfad": "Abs. 2 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "Lebensjahr vollendet",
+      "schluessel": "lebensjahr vollendet",
+      "verteilung": {
+        "tb": 4,
+        "rf": 18,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "EStG",
+          "norm": "6a",
+          "pfad": "Abs. 2 Nr. 1 Halbs. 2",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "6a",
+          "pfad": "Abs. 2 Buchst. b Halbs. 2",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "6a",
+          "pfad": "Abs. 2 Buchst. c Halbs. 2",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "6a",
+          "pfad": "Abs. 2 Buchst. d Halbs. 2",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "gilt sinngemäß",
+      "schluessel": "gilt sinngemäß",
+      "verteilung": {
+        "tb": 2,
+        "rf": 18,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "AO",
+          "norm": "22",
+          "pfad": "Abs. 3 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "UStG",
+          "norm": "6b",
+          "pfad": "Abs. 6 Satz 3",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "In den Fällen des Absatzes 8",
+      "schluessel": "in den fällen des absatzes #",
+      "verteilung": {
+        "tb": 9,
+        "rf": 1,
+        "ausn": 0
+      },
+      "mehrheit": "tb",
+      "ausreisser": [
+        {
+          "gesetz": "UStG",
+          "norm": "25a",
+          "pfad": "Abs. 7 Buchst. c",
+          "art": "rf",
+          "konfidenz": 0.6,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "In den Fällen des Satzes 1 Nummer 3",
+      "schluessel": "in den fällen des satzes # nummer #",
+      "verteilung": {
+        "tb": 7,
+        "rf": 1,
+        "ausn": 0
+      },
+      "mehrheit": "tb",
+      "ausreisser": [
+        {
+          "gesetz": "EStG",
+          "norm": "41c",
+          "pfad": "Abs. 1 Satz 1 (Teil 2)",
+          "art": "rf",
+          "konfidenz": 0.6,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "sind nicht anzuwenden",
+      "schluessel": "sind nicht anzuwenden",
+      "verteilung": {
+        "tb": 0,
+        "rf": 10,
+        "ausn": 1
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "KStG",
+          "norm": "8b",
+          "pfad": "Abs. 10 Satz 3",
+          "art": "ausn",
+          "konfidenz": 0.6,
+          "status": "syntaktisch"
+        }
+      ]
+    }
+  ]
+}
