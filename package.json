@@ -1,6 +1,6 @@
 {
   "name": "steuernorm",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Tatbestand-/Rechtsfolge-Annotation",
   "type": "module",
@@ -9,7 +9,11 @@
     "update": "node tools/update.mjs",
     "annotieren": "node tools/annotieren.mjs",
     "pruefen": "node tools/pruefen.mjs",
-    "eval": "node tools/eval.mjs"
+    "eval": "node tools/eval.mjs",
+    "belege": "node tools/belege.mjs",
+    "belege:karte": "node tools/belege.mjs --karte",
+    "aufwerten": "node tools/annotieren.mjs --aufwerten",
+    "konsistenz": "node tools/konsistenz.mjs --schreiben"
   },
   "license": "MIT"
 }

@@ -23,15 +23,17 @@ import { einheiten as zerlegeNorm } from "./lib/gliederung.mjs";
 import { zerlege as syntaxZerlege, NICHT_MARKIEREN } from "./lib/syntax.mjs";
 import { baueSchema, fuehreZusammen, normText } from "./lib/konsens.mjs";
 import {
-  extrahiereMehrfach, gegenprobe,
+  einAufruf, extrahiereMehrfach, gegenprobe,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
+import { belegProbe, probeAnwenden } from "./lib/belegprobe.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
 const DATEN = path.join(WURZEL, "data");
 const ZIEL = path.join(WURZEL, "annotations");
 const ZWISCHEN = path.join(WURZEL, ".fortschritt");
 const BERICHTE = path.join(WURZEL, "reports");
+const BELEGE = path.join(WURZEL, "belege");
 const FORMAT = 3;
 
 const args = process.argv.slice(2);
@@ -40,11 +42,23 @@ const hat = (f) => args.includes(f);
 
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const MODELLE = (process.env.KI_MODELLE || "openai/gpt-4.1-mini,openai/gpt-4o-mini").split(",").map((s) => s.trim()).filter(Boolean);
+const aufwerten = hat("--aufwerten");
 const ohneKi = hat("--ohne-ki") || !TOKEN;
+
+if (!TOKEN && !hat("--ohne-ki")) {
+  console.error("");
+  console.error("  ⚠  GITHUB_TOKEN fehlt — es läuft NUR die Syntaxanalyse.");
+  console.error("     Im Workflow benötigt: permissions.models: read und");
+  console.error("     env.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}");
+  console.error("     Lokal: export GITHUB_TOKEN=<Token mit models:read>");
+  console.error("");
+}
 const ohneGegenprobe = hat("--ohne-gegenprobe");
+const ohneBelegprobe = hat("--ohne-belegprobe");
 const trocken = hat("--trocken");
 const LAEUFE = Math.max(1, Number(flagWert("--laeufe", process.env.KI_LAEUFE || 3)));
 const budget = { maximum: Number(process.env.MAX_MODELLAUFRUFE || 400), verbraucht: 0 };
+let belegLiegtVor = false;
 
 const nurRoh = flagWert("--nur");
 const kurz = (s) => String(s || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
@@ -63,9 +77,11 @@ await mkdir(BERICHTE, { recursive: true });
 
 const bericht = { erzeugt: new Date().toISOString(), format: FORMAT, modelle: ohneKi ? ["nur-syntax"] : MODELLE, laeufe: ohneKi ? 0 : LAEUFE, gesetze: [] };
 let abbruch = null;
+const belegBilanz = { gestuetzt: 0, entfernt: 0, strittig: 0 };
 
 for (const meta of gesetze) {
   const gesetz = JSON.parse(await readFile(path.join(DATEN, meta.datei), "utf8"));
+  const belegdatei = await lies(path.join(BELEGE, meta.datei));
   const zielDatei = path.join(ZIEL, meta.datei);
   const zwischenDatei = path.join(ZWISCHEN, meta.datei);
   const alt = await lies(zielDatei);
@@ -97,6 +113,8 @@ for (const meta of gesetze) {
 
     const syntax = einheiten.map((e) => syntaxZerlege(e.text, { normtitel: norm.titel }));
     const kontext = { volltext, gegenstand: gegenstandAus(gesetz) };
+    const normBelege = belegdatei?.normen?.[norm.id] ?? null;
+    if (normBelege?.verwaltung?.length || normBelege?.rechtsprechung?.length) belegLiegtVor = true;
 
     let laeufe = [];
     let gegenproben = new Map();
@@ -105,6 +123,7 @@ for (const meta of gesetze) {
         laeufe = await extrahiereMehrfach({
           gesetz, norm, einheiten,
           vorschlag: syntax.map((s, i) => ({ pfad: einheiten[i].pfad, typ: s.typ, elemente: s.elemente })),
+          belege: normBelege,
           modelle: MODELLE, laeufe: LAEUFE, token: TOKEN, budget,
         });
         if (!ohneGegenprobe) {
@@ -120,7 +139,29 @@ for (const meta of gesetze) {
       }
     }
 
-    const erg = fuehreZusammen({ einheiten, syntax, laeufe, gegenproben, kontext });
+    const erg = fuehreZusammen({ einheiten, syntax, laeufe, gegenproben, belege: normBelege, kontext });
+
+    // Belegprobe: trägt die genannte Fundstelle die Zuordnung tatsächlich?
+    // Der bisherige Validator schließt nur ERFUNDENE Fundstellen aus, nicht
+    // falsch zugeordnete. Ein getrennter Aufruf sieht nur Belegtext und Behauptung.
+    if (!ohneKi && !ohneBelegprobe && !abbruch && normBelege && erg.belegquote) {
+      try {
+        for (const satz of erg.saetze) {
+          if (!satz.elemente.some((e) => e.beleg)) continue;
+          const urteile = await belegProbe({
+            spannen: satz.elemente, belege: normBelege,
+            aufrufen: einAufruf, modell: MODELLE[0], token: TOKEN, budget,
+          });
+          const b = probeAnwenden(satz.elemente, urteile);
+          belegBilanz.gestuetzt += b.gestuetzt;
+          belegBilanz.entfernt += b.entfernt;
+          belegBilanz.strittig += b.strittig;
+        }
+        neuBewerten(erg);
+      } catch (fehler) {
+        if (fehler instanceof ModellBudgetErschoepft) { abbruch = fehler.message; }
+      }
+    }
     alleAbgelehnt.push(...erg.abgelehnt.map((a) => ({ norm: norm.enbez, ...a })));
 
     normen[norm.id] = bauAnnotation({ norm, erg, th, ohneKi });
@@ -159,14 +200,26 @@ for (const meta of gesetze) {
 }
 
 bericht.modellaufrufe = budget.verbraucht;
+bericht.belegprobe = belegBilanz;
 bericht.abgebrochen = abbruch;
 if (!trocken) await schreibe(path.join(BERICHTE, "annotation.json"), bericht);
 console.log(`\nModellaufrufe: ${budget.verbraucht}${abbruch ? ` — abgebrochen: ${abbruch}` : ""}`);
+if (belegBilanz.gestuetzt || belegBilanz.entfernt || belegBilanz.strittig) {
+  console.log(`Belegprobe: ${belegBilanz.gestuetzt} gestützt, ${belegBilanz.entfernt} nicht tragfähig entfernt, ${belegBilanz.strittig} strittig.`);
+}
 
 /* ─────────────────────────── Bausteine ─────────────────────────── */
 
 function wiederverwendbar({ datei, annotation, th }) {
   if (!annotation || annotation.text_hash !== th || Number(datei?.format) !== FORMAT) return false;
+
+  // --aufwerten: alles neu rechnen, was noch rein syntaktisch ist oder keinen Beleg trägt.
+  if (aufwerten && !ohneKi) {
+    const v = String(annotation.verfahren || "");
+    if (!v.includes("mehrfachlauf")) return false;
+    if (annotation.status === "uneinheitlich") return false;
+    if (belegLiegtVor && !Number(annotation.belegquote || 0)) return false;
+  }
 
   // Ein rein syntaktischer Baseline-Lauf darf vorhandene höherwertige KI-Ergebnisse
   // niemals zurückstufen. Im KI-Modus werden Syntax-Baselines dagegen gezielt
@@ -196,6 +249,9 @@ function bauAnnotation({ norm, erg, th, ohneKi }) {
     status: erg.status,
     markierbar: erg.markierbar,
     konfidenz: erg.konfidenz,
+    belegquote: erg.belegquote ?? 0,
+    belege: belegzusammenfassung(erg),
+    strittig: Boolean(erg.strittig),
     einstimmigkeit: erg.einstimmigkeit ?? null,
     laeufe: erg.laeufe,
     verfahren: ohneKi ? "syntaxanalyse" : "syntaxanalyse+mehrfachlauf+gegenprobe",
@@ -204,6 +260,32 @@ function bauAnnotation({ norm, erg, th, ohneKi }) {
     format: FORMAT,
     aktualisiert: new Date().toISOString(),
   };
+}
+
+/** Nach der Belegprobe müssen Konfidenz, Belegquote und Status neu bestimmt werden. */
+function neuBewerten(erg) {
+  const alle = erg.saetze.flatMap((s) => s.elemente);
+  if (!alle.length) return;
+  const belegt = alle.filter((e) => e.beleg).length;
+  erg.belegquote = Number((belegt / alle.length).toFixed(3));
+  erg.konfidenz = Number((alle.reduce((a, e) => a + e.konfidenz, 0) / alle.length).toFixed(3));
+  if (alle.some((e) => e.strittig)) erg.strittig = true;
+  if (erg.status === "belegt" && !(erg.belegquote >= 0.4 && erg.konfidenz >= 0.7)) {
+    erg.status = erg.konfidenz >= 0.5 ? "mehrheit" : "uneinheitlich";
+    erg.markierbar = erg.status !== "uneinheitlich";
+  }
+}
+
+function belegzusammenfassung(erg) {
+  const gesehen = new Map();
+  for (const satz of erg.saetze) {
+    for (const el of satz.elemente) {
+      if (!el.beleg) continue;
+      const schluessel = `${el.beleg.art}\u0000${el.beleg.fundstelle}`;
+      if (!gesehen.has(schluessel)) gesehen.set(schluessel, el.beleg);
+    }
+  }
+  return [...gesehen.values()];
 }
 
 function hinweistext(erg, ohneKi) {
@@ -216,7 +298,10 @@ function hinweistext(erg, ohneKi) {
   const warnung = erg.status === "uneinheitlich"
     ? " Die Läufe widersprechen einander; die Markierung ist als unsicher gekennzeichnet."
     : "";
-  return `${basis}${warnung} Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.`;
+  const beleg = erg.belegquote
+    ? ` ${Math.round(erg.belegquote * 100)} % der Merkmale sind durch eine amtliche Fundstelle gestützt.`
+    : "";
+  return `${basis}${warnung}${beleg} Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.`;
 }
 
 function datei(gesetz, normen, unvollstaendig) {

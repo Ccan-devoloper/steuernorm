@@ -1,0 +1,78 @@
+{
+  "hinweis": "Amtliche Handbücher des BMF. Amtliche Werke, nach § 5 Abs. 1 UrhG gemeinfrei. Auszüge werden unverändert und stets mit Fundstelle angezeigt.",
+  "jahrgang": "2025",
+  "handbuecher": [
+    {
+      "gesetz": "AO",
+      "abk": "AEAO",
+      "name": "Anwendungserlass zur Abgabenordnung",
+      "jahrgang": "2025",
+      "start": "https://ao.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html",
+      "prefix": "https://ao.bundesfinanzministerium.de/ao/2025/"
+    },
+    {
+      "gesetz": "EStG",
+      "abk": "EStR/EStH",
+      "name": "Amtliches Einkommensteuer-Handbuch",
+      "jahrgang": "2025",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/A-Einkommensteuergesetz/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/"
+    },
+    {
+      "gesetz": "UStG",
+      "abk": "UStAE",
+      "name": "Amtliche Umsatzsteuer-Handausgabe",
+      "jahrgang": "2025",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2025/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/usth/2025/"
+    },
+    {
+      "gesetz": "KStG",
+      "abk": "KStR/KStH",
+      "name": "Amtliches Körperschaftsteuer-Handbuch",
+      "jahrgang": "2022",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/ksth/2022/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/ksth/2022/"
+    },
+    {
+      "gesetz": "GewStG",
+      "abk": "GewStR/GewStH",
+      "name": "Amtliches Gewerbesteuer-Handbuch",
+      "jahrgang": "2024",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/gewsth/2024/"
+    },
+    {
+      "gesetz": "ErbStG",
+      "abk": "ErbStR/ErbStH",
+      "name": "Amtliches Erbschaftsteuer-Handbuch",
+      "jahrgang": "2024",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2024/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/erbsth/2024/"
+    },
+    {
+      "gesetz": "BewG",
+      "abk": "AEBewGrSt 2025",
+      "name": "Amtliches Handbuch Bewertung/Grundsteuer 2022/2025",
+      "jahrgang": "2022/2025",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/BewG/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/"
+    },
+    {
+      "gesetz": "GrStG",
+      "abk": "AEGrStG 2025",
+      "name": "Amtliches Handbuch Bewertung/Grundsteuer 2022/2025",
+      "jahrgang": "2022/2025",
+      "start": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/A-BewG-GrStG-AE/GrStG-AE/inhalt.html",
+      "prefix": "https://amtliche-handbuecher.bundesfinanzministerium.de/grsth/2022-2025/"
+    }
+  ],
+  "ohne_handbuch": {
+    "SolzG": "Kein eigener Anwendungserlass. Belege über Rechtsprechung und Materialien.",
+    "AStG": "Grundsätze zur Anwendung des AStG liegen als BMF-Schreiben vor, nicht als Handbuch.",
+    "UmwStG": "Der Umwandlungssteuererlass liegt als BMF-Schreiben vor.",
+    "InvStG": "Der Investmentsteuer-Anwendungserlass liegt als BMF-Schreiben vor.",
+    "FGO": "Keine Verwaltungsanweisung.",
+    "GrEStG": "Vor allem koordinierte Ländererlasse."
+  }
+}

@@ -50,7 +50,7 @@ function gleich(a, b) {
  * @param {Map}   arg.gegenproben   pfad → Map(index → art)
  * @param {object} arg.kontext      { volltext, gegenstand }
  */
-export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Map(), kontext }) {
+export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Map(), belege = null, kontext }) {
   const saetze = [];
   const abgelehnt = [];
   const anzahlLaeufe = laeufe.length;
@@ -83,9 +83,14 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
       if (grund) ziel.gruende.push(grund);
     };
 
+    const belegVorschlaege = new Map();   // normalisierter Spannentext → Fundstelle
     for (const [k, lauf] of laeufe.entries()) {
       const satz = (lauf.saetze || []).find((s) => s.pfad === einheit.pfad);
       if (!satz) continue;
+      for (const b of satz.belege || []) {
+        const fund = pruefeBeleg(b, belege);
+        if (fund) belegVorschlaege.set(normText(b.text).toLowerCase(), fund);
+      }
       for (const art of ARTEN) {
         const feld = art === "ausn" ? "ausnahmen" : art;
         for (const text of satz[feld] || []) stimmeAbgeben(art, text, `modell#${k}`, satz.begruendung);
@@ -129,8 +134,14 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
       const gegen = s.gegenprobe === null ? 0.5 : (s.bestaetigt ? 1 : 0);
       // Ohne Modelllauf gibt es nichts zu vergleichen: dann zählt allein die
       // syntaktische Begründung, und das wird im Status offen ausgewiesen.
-      const konfidenz = (nurSyntax ? 0.6 * syntaxStuetze : (0.55 * anteil + 0.25 * syntaxStuetze + 0.20 * gegen))
-        * guete(s, ctx);
+      const beleg = belegVorschlaege.get(normText(s.text).toLowerCase()) ?? null;
+      // Ein amtlicher Beleg hebt die Konfidenz, ersetzt aber keine Übereinstimmung.
+      const belegBonus = beleg ? 0.12 : 0;
+      const konfidenz = Math.min(
+        1,
+        (nurSyntax ? 0.6 * syntaxStuetze : (0.55 * anteil + 0.25 * syntaxStuetze + 0.20 * gegen)) * guete(s, ctx)
+          + belegBonus,
+      );
       return {
         art: s.art,
         text: s.text,
@@ -142,6 +153,7 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
         laeufe: anzahlLaeufe,
         syntax: Boolean(syntaxStuetze),
         gegenprobe: s.gegenprobe,
+        beleg,
         grund: s.gruende[0] || null,
       };
     });
@@ -197,17 +209,49 @@ function bilanz(saetze, anzahlLaeufe, nurSyntax) {
   const einstimmig = anzahlLaeufe
     ? alle.filter((e) => e.stimmen === anzahlLaeufe).length / alle.length
     : null;
+  const belegt = alle.filter((e) => e.beleg).length;
+  const belegquote = belegt / alle.length;
   const status = nurSyntax ? "syntaktisch"
-    : mittel >= 0.75 && einstimmig >= 0.7 ? "konsens"
-      : mittel >= 0.5 ? "mehrheit"
-        : "uneinheitlich";
+    : belegquote >= 0.4 && mittel >= 0.7 ? "belegt"
+      : mittel >= 0.75 && einstimmig >= 0.7 ? "konsens"
+        : mittel >= 0.5 ? "mehrheit"
+          : "uneinheitlich";
   return {
     konfidenz: Number(mittel.toFixed(3)),
     einstimmigkeit: einstimmig === null ? null : Number(einstimmig.toFixed(3)),
     status,
+    belegquote: Number(belegquote.toFixed(3)),
     markierbar: status !== "uneinheitlich",
     laeufe: anzahlLaeufe,
   };
+}
+
+/**
+ * Prüft eine vom Modell genannte Fundstelle gegen die tatsächlich vorgelegten Belege.
+ * Das ist die Antwort auf den zweiten Fehlertyp der Stanford-Untersuchung: Aussagen,
+ * die inhaltlich stimmen mögen, aber mit einer Quelle belegt werden, die das nicht
+ * hergibt. Was nicht wörtlich vorlag, wird verworfen.
+ */
+function pruefeBeleg(vorschlag, belege) {
+  if (!belege || !vorschlag?.fundstelle) return null;
+  const gesucht = normText(vorschlag.fundstelle).toLowerCase();
+  if (gesucht.length < 4) return null;
+
+  for (const b of belege.verwaltung || []) {
+    const fund = normText(b.fundstelle).toLowerCase();
+    if (fund === gesucht || fund.includes(gesucht) || gesucht.includes(fund)) {
+      return { art: "verwaltung", quelle: b.quelle, fundstelle: b.fundstelle, url: b.url };
+    }
+  }
+  for (const e of belege.rechtsprechung || []) {
+    const kennung = normText([e.gericht, e.az, e.datum].filter(Boolean).join(" ")).toLowerCase();
+    if (!kennung) continue;
+    if (kennung.includes(gesucht) || gesucht.includes(kennung)
+      || (e.az && gesucht.includes(normText(e.az).toLowerCase()))) {
+      return { art: "rechtsprechung", quelle: e.quelle, fundstelle: [e.gericht, e.az].filter(Boolean).join(" "), url: e.url };
+    }
+  }
+  return null;   // erfundene Fundstelle
 }
 
 /* ─────────────────────────── Prüfungsschema ─────────────────────────── */
@@ -224,7 +268,7 @@ export function baueSchema(saetze) {
   for (const satz of saetze) {
     if (satz.typ === "anwendung") continue;
     for (const el of satz.elemente) {
-      const eintrag = { t: el.text, pfad: el.pfad, konfidenz: el.konfidenz };
+      const eintrag = { t: el.text, pfad: el.pfad, konfidenz: el.konfidenz, beleg: el.beleg ?? null };
       if (el.art === "tb") tb.push({ ...eintrag, junktor: satz.junktor });
       else if (el.art === "ausn") ausn.push(eintrag);
       else rf.push(eintrag);
@@ -241,19 +285,19 @@ export function baueSchema(saetze) {
       n: roemisch[n++], art: "tb",
       t: tb.length === 1 ? "Voraussetzung" : (jk === "oder" ? "Voraussetzungen (eine genügt)" : "Voraussetzungen (kumulativ)"),
       junktor: jk,
-      sub: tb.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz })),
+      sub: tb.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
     });
   }
   if (ausn.length) {
     schema.push({
       n: roemisch[n++], art: "ausn", t: "Ausnahmen und Rückausnahmen",
-      sub: ausn.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz })),
+      sub: ausn.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
     });
   }
   if (rf.length) {
     schema.push({
       n: roemisch[n++], art: "rf", t: "Rechtsfolge",
-      sub: rf.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz })),
+      sub: rf.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
     });
   }
   return schema;
