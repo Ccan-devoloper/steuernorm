@@ -7,10 +7,12 @@
 <meta name="description" content="Die deutschen Steuergesetze im Volltext, mit umschaltbaren Markierungen für Tatbestandsmerkmale und Rechtsfolgen sowie Prüfungsschemata.">
 <style>
   :root{
+    --basis:17px; --spalte:34rem;
     --papier:#FCFCFA; --tinte:#17181A; --gedeckt:#5E615C; --leise:#8E9089;
     --linie:#E4E4DE; --linie-stark:#C9C9C2; --feld:#F3F3EF;
     --tb:#FBEEA8; --tb-kante:#D9B417; --rf:#C6E7CE; --rf-kante:#3D8A55;
     --ausn:#F3D9D2; --ausn-kante:#B2593F;
+    --beleg:#1F5F8B;
     --warn:#8C3A2B;
     --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -18,6 +20,25 @@
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
+  /* Dunkelmodus: Markierungsfarben neu gewählt, nicht abgedunkelt — gelbe
+     Flächen auf dunklem Grund blenden. Normtext bleibt über 7:1 Kontrast. */
+  @media (prefers-color-scheme:dark){
+    :root:not([data-thema=hell]){
+      --papier:#15161A; --tinte:#E9E7E2; --gedeckt:#ABAEA7; --leise:#787B72;
+      --linie:#282A2F; --linie-stark:#3E4147; --feld:#1D1F24;
+      --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
+      --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
+    }
+  }
+  :root[data-thema=dunkel]{
+    --papier:#15161A; --tinte:#E9E7E2; --gedeckt:#ABAEA7; --leise:#787B72;
+    --linie:#282A2F; --linie-stark:#3E4147; --feld:#1D1F24;
+    --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
+    --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
+  }
+  :root[data-groesse=klein]{ --basis:15.5px; --spalte:32rem }
+  :root[data-groesse=gross]{ --basis:19px;   --spalte:36rem }
+
   body{margin:0;background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:15px;line-height:1.5}
   a{color:inherit}
   button{font:inherit;color:inherit}
@@ -27,7 +48,7 @@
   /* ---------- Kopf ---------- */
   header{position:sticky;top:0;z-index:40;background:rgba(252,252,250,.96);
     backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--linie)}
-  .kopf{max-width:1500px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .kopf{max-width:1600px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .marke{font-family:var(--serif);font-size:19px;letter-spacing:-.01em;line-height:1;white-space:nowrap}
   .marke small{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--leise);margin-left:8px}
   .suchfeld{flex:1 1 200px;min-width:140px;border:0;border-bottom:1px solid var(--linie);
@@ -41,6 +62,7 @@
   .schalter button:hover{border-color:var(--linie-stark)}
   .schalter button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte);background:#fff}
   .swatch{width:12px;height:12px;border-radius:2px;border:1px solid var(--linie-stark);flex:none}
+  .schalter button.stumm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;min-width:34px;justify-content:center}
   .schalter button[aria-pressed=true] .swatch.tb{background:var(--tb);border-color:var(--tb-kante)}
   .schalter button[aria-pressed=true] .swatch.rf{background:var(--rf);border-color:var(--rf-kante)}
   .schalter button[aria-pressed=true] .swatch.ausn{background:var(--ausn);border-color:var(--ausn-kante)}
@@ -48,7 +70,7 @@
 
   /* Gesetzesleiste */
   .leiste{border-bottom:1px solid var(--linie);overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .leiste-innen{max-width:1500px;margin:0 auto;padding:0 16px;display:flex;gap:2px}
+  .leiste-innen{max-width:1600px;margin:0 auto;padding:0 16px;display:flex;gap:2px}
   .leiste button{border:0;background:transparent;padding:9px 10px;font-family:var(--mono);font-size:11px;
     letter-spacing:.09em;text-transform:uppercase;color:var(--leise);cursor:pointer;white-space:nowrap;
     border-bottom:2px solid transparent;margin-bottom:-1px}
@@ -56,7 +78,7 @@
   .leiste button[aria-current=true]{color:var(--tinte);border-bottom-color:var(--tinte)}
 
   /* ---------- Gerüst ---------- */
-  .huelle{max-width:1500px;margin:0 auto;display:flex;align-items:flex-start}
+  .huelle{max-width:1600px;margin:0 auto;display:flex;align-items:flex-start}
   nav.register{width:270px;flex:none;border-right:1px solid var(--linie);
     height:calc(100vh - 92px);position:sticky;top:92px;overflow-y:auto;padding:20px 14px 60px 16px}
   main{flex:1;min-width:0;padding:34px 32px 90px}
@@ -77,7 +99,7 @@
   .punkt{width:5px;height:5px;border-radius:50%;background:var(--tb-kante);flex:none;align-self:center;margin-left:auto}
 
   /* ---------- Normtext ---------- */
-  .norm-kopf{max-width:44rem}
+  .norm-kopf{max-width:var(--spalte)}
   .augenbraue{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
   h1{font-family:var(--serif);font-size:clamp(23px,4.4vw,31px);line-height:1.18;letter-spacing:-.015em;
     margin:6px 0 0;font-weight:400;display:flex;flex-wrap:wrap;gap:0 14px}
@@ -87,7 +109,7 @@
   .stand .veraltet{color:var(--warn)}
   .stand a{color:var(--leise)}
 
-  .text{max-width:44rem;margin-top:26px;font-family:var(--serif);font-size:17px;line-height:1.78}
+  .text{max-width:var(--spalte);margin-top:22px;font-family:var(--serif);font-size:var(--basis);line-height:1.72}
   .absatz{position:relative;padding-left:44px;margin-bottom:18px}
   .absatz>.az{position:absolute;left:0;top:5px;font-family:var(--mono);font-size:11px;color:var(--leise)}
   .text p{margin:0 0 10px}
@@ -105,29 +127,56 @@
   .text a.verweis{text-decoration:none;border-bottom:1px solid var(--linie-stark);white-space:nowrap}
   .text a.verweis:hover{border-bottom-color:var(--tinte);background:var(--feld)}
 
+  /* Markierung. Voreinstellung „dezent": Kante statt Fläche, damit der Normtext
+     Papier bleibt. „voll" schaltet die Flächen zu, „aus" blendet alles ab. */
   mark{background:transparent;color:inherit;padding:0 1px;border-radius:2px;
-    -webkit-box-decoration-break:clone;box-decoration-break:clone}
-  body[data-tb=an] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
-  body[data-rf=an] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
-  body[data-tb=an][data-rf=an] mark.tb.rf{background:linear-gradient(180deg,var(--tb) 0 50%,var(--rf) 50% 100%);box-shadow:inset 0 -2px 0 var(--rf-kante)}
-  body[data-ausn=an] mark.ausn{background:var(--ausn);box-shadow:inset 0 -2px 0 var(--ausn-kante)}
-  mark.unsicher{opacity:.55;box-shadow:inset 0 -2px 0 transparent;border-bottom:1px dashed var(--linie-stark)}
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;
+    transition:opacity .12s,background-color .12s}
 
-  .statusband{max-width:44rem;margin-top:20px;display:flex;align-items:baseline;gap:10px;
-    font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
-  .statusband .plakette{border:1px solid var(--linie-stark);border-radius:2px;padding:2px 7px;letter-spacing:.12em}
-  .statusband .plakette[data-s=konsens]{border-color:var(--rf-kante);color:var(--rf-kante)}
-  .statusband .plakette[data-s=mehrheit]{border-color:var(--tb-kante);color:#8A7209}
-  .statusband .plakette[data-s=uneinheitlich]{border-color:var(--ausn-kante);color:var(--ausn-kante)}
+  body[data-intensitaet=dezent] mark.tb{box-shadow:inset 0 -2px 0 var(--tb-kante)}
+  body[data-intensitaet=dezent] mark.rf{box-shadow:inset 0 -2px 0 var(--rf-kante)}
+  body[data-intensitaet=dezent] mark.ausn{border-bottom:2px dotted var(--ausn-kante)}
 
-  .fussnote{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px;
+  body[data-intensitaet=voll] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
+  body[data-intensitaet=voll] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
+  body[data-intensitaet=voll] mark.ausn{background:var(--ausn);box-shadow:inset 0 -2px 0 var(--ausn-kante)}
+  body[data-intensitaet=voll] mark.tb.rf{background:linear-gradient(180deg,var(--tb) 0 50%,var(--rf) 50% 100%)}
+
+  body[data-tb=aus] mark.tb:not(.rf):not(.ausn),
+  body[data-rf=aus] mark.rf:not(.tb):not(.ausn),
+  body[data-ausn=aus] mark.ausn:not(.tb):not(.rf){box-shadow:none;border-bottom:0;background:transparent}
+
+  mark.unsicher{box-shadow:none!important;border-bottom:1px dashed var(--linie-stark)}
+  mark[data-beleg]{cursor:help}
+  mark[data-beleg]::after{content:"※";font-size:.62em;vertical-align:super;color:var(--beleg);margin-left:1px}
+
+  /* Kopplung Schema ↔ Text: Beim Überfahren eines Schemaschritts tritt die
+     zugehörige Textstelle hervor, alles andere tritt zurück. */
+  body.fokus mark{opacity:.28}
+  body.fokus mark.hell{opacity:1;background:var(--tb);box-shadow:inset 0 -2px 0 var(--tinte)}
+  body.fokus mark.hell.rf{background:var(--rf)}
+  body.fokus mark.hell.ausn{background:var(--ausn)}
+  mark.springziel{animation:aufblitzen 1.4s ease-out}
+  @keyframes aufblitzen{0%,40%{background:var(--tb-kante);color:var(--papier)}100%{}}
+
+  /* Absatzleiste am linken Rand der Lesespalte */
+  .leseraum{display:flex;gap:18px;align-items:flex-start}
+  .absatzleiste{flex:none;width:52px;position:sticky;top:104px;padding-top:24px;
+    display:flex;flex-direction:column;gap:3px}
+  .absatzleiste button{border:0;background:transparent;cursor:pointer;padding:2px 4px;text-align:right;
+    font-family:var(--mono);font-size:10px;color:var(--leise);border-right:2px solid var(--linie);
+    transition:color .12s,border-color .12s}
+  .absatzleiste button:hover{color:var(--tinte);border-right-color:var(--linie-stark)}
+  .absatzleiste button[aria-current=true]{color:var(--tinte);border-right-color:var(--tinte)}
+
+  .fussnote{max-width:var(--spalte);margin-top:26px;border-left:2px solid var(--linie);padding-left:14px;
     font-size:12.5px;color:var(--leise);white-space:pre-wrap;font-family:var(--mono);line-height:1.6}
-  .hinweis{max-width:44rem;margin-top:26px;border-left:2px solid var(--linie);padding-left:14px}
+  .hinweis{max-width:var(--spalte);margin-top:26px;border-left:2px solid var(--linie);padding-left:14px}
   .hinweis .kappe{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
     color:var(--leise);display:block;margin-bottom:4px}
   .hinweis p{margin:0;font-size:14px;line-height:1.65;color:var(--gedeckt)}
 
-  .blaettern{max-width:44rem;display:flex;justify-content:space-between;gap:16px;margin-top:44px;
+  .blaettern{max-width:var(--spalte);display:flex;justify-content:space-between;gap:16px;margin-top:44px;
     border-top:1px solid var(--linie);padding-top:14px;font-size:13px}
   .blaettern button{border:0;background:transparent;cursor:pointer;color:var(--gedeckt);padding:4px 0;text-align:left}
   .blaettern button:hover{color:var(--tinte)}
@@ -157,20 +206,64 @@
   .leer{font-size:13px;color:var(--leise);line-height:1.6}
   .leer code{font-family:var(--mono);font-size:11.5px;background:var(--feld);padding:1px 4px;border-radius:2px}
 
-  .fuss{max-width:44rem;margin-top:56px;font-size:11.5px;line-height:1.7;color:var(--leise)}
+  .reg-eintrag .kontext{display:block;grid-column:1/-1;font-size:11.5px;line-height:1.5;color:var(--leise);
+    margin-top:3px;font-family:var(--serif)}
+  .reg-eintrag .kontext b{color:var(--tinte);font-weight:600}
+  .reg-eintrag.markiert{background:var(--feld)}
+  .reg-eintrag.wechsel .nr{color:var(--beleg)}
+
+  .belege{max-width:var(--spalte);margin-top:34px;border-top:1px solid var(--linie);padding-top:16px}
+  .belege ul{list-style:none;margin:0 0 10px;padding:0}
+  .belege li{display:flex;gap:10px;align-items:baseline;font-size:13px;line-height:1.6;margin-bottom:5px}
+  .belege .art{flex:none;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--leise);width:104px}
+  .belege a{color:var(--beleg)}
+
+  ol.leiter li.koppelbar{cursor:pointer;border-radius:2px;margin-left:-4px;padding-left:4px}
+  ol.leiter li.koppelbar:hover,ol.leiter li.koppelbar:focus-visible{background:var(--feld);outline:0}
+  ol.leiter .belegzeichen{color:var(--beleg);text-decoration:none;font-size:11px;flex:none}
+  ol.leiter ul li .w{flex:1 1 auto}
+
+  /* Gesetzeswahl auf schmalen Fenstern: 14 Einträge sind eine Liste, kein Scrollband. */
+  .gesetzwahl{display:none;padding:8px 16px;border-bottom:1px solid var(--linie)}
+  .gesetzwahl select{width:100%;font:inherit;font-size:13.5px;color:var(--tinte);background:var(--feld);
+    border:1px solid var(--linie);border-radius:3px;padding:7px 9px}
+
+  /* Markierungsschalter bleiben beim Lesen erreichbar. */
+  .fussleiste{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:6px;justify-content:center;
+    padding:8px 12px calc(8px + env(safe-area-inset-bottom));
+    background:rgba(252,252,250,.96);backdrop-filter:saturate(180%) blur(8px);border-top:1px solid var(--linie)}
+  :root[data-thema=dunkel] .fussleiste{background:rgba(21,22,26,.96)}
+  @media (prefers-color-scheme:dark){:root:not([data-thema=hell]) .fussleiste{background:rgba(21,22,26,.96)}}
+
+  .fuss{max-width:var(--spalte);margin-top:56px;font-size:11.5px;line-height:1.7;color:var(--leise)}
   .fuss a{color:var(--leise)}
 
-  .melder{max-width:44rem;border:1px solid var(--warn);border-radius:3px;padding:14px 16px;
+  .melder{max-width:var(--spalte);border:1px solid var(--warn);border-radius:3px;padding:14px 16px;
     font-size:13.5px;line-height:1.6;color:var(--warn)}
   .melder code{font-family:var(--mono);font-size:12px;background:#fff;padding:1px 5px;border-radius:2px}
 
   /* ---------- Schmale Fenster ---------- */
   @media (max-width:1180px){
     aside.schema{display:none}
-    .schema-unten{display:block!important;max-width:44rem;margin-top:44px;
+    .schema-unten{display:block!important;max-width:var(--spalte);margin-top:44px;
       border-top:1px solid var(--linie);padding-top:26px}
     ol.leiter{padding-left:44px}
     ol.leiter .rn{left:-38px}
+  }
+  @media (max-width:1180px){
+    .leseraum{gap:10px}
+    .absatzleiste{width:40px}
+  }
+  @media (max-width:860px){
+    .leiste{display:none}
+    .gesetzwahl{display:block}
+    .leseraum{display:block}
+    .absatzleiste{position:static;flex-direction:row;flex-wrap:wrap;width:auto;padding:0 0 12px;gap:6px}
+    .absatzleiste button{border-right:0;border-bottom:2px solid var(--linie);padding:3px 7px}
+    .schema-unten{order:-1;margin-top:0;border-top:0;border-bottom:1px solid var(--linie);padding-bottom:22px}
+    main{padding-bottom:76px}
+    .fussleiste{display:flex}
   }
   @media (max-width:860px){
     .burger{display:block;margin-left:-6px}
@@ -197,9 +290,13 @@
       <button id="btn-tb" aria-pressed="true"><span class="swatch tb"></span>Tatbestand</button>
       <button id="btn-rf" aria-pressed="true"><span class="swatch rf"></span>Rechtsfolge</button>
       <button id="btn-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausnahme</button>
+      <button id="btn-intensitaet" class="stumm" title="Stärke der Markierung">dezent</button>
+      <button id="btn-groesse" class="stumm" title="Schriftgröße">A</button>
+      <button id="btn-thema" class="stumm" title="Hell oder dunkel">◐</button>
     </div>
   </div>
   <div class="leiste"><div class="leiste-innen" id="leiste"></div></div>
+  <div class="gesetzwahl"><select id="gesetzwahl" aria-label="Gesetz wählen"></select></div>
 </header>
 
 <div class="huelle">
@@ -213,6 +310,13 @@
   <main id="haupt"><p class="leer">Wird geladen …</p></main>
 
   <aside class="schema" id="schema-rechts"></aside>
+</div>
+
+<div class="fussleiste schalter" role="group" aria-label="Markierungen">
+  <button id="fb-tb" aria-pressed="true"><span class="swatch tb"></span>TB</button>
+  <button id="fb-rf" aria-pressed="true"><span class="swatch rf"></span>RF</button>
+  <button id="fb-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausn.</button>
+  <button id="fb-intensitaet" class="stumm">dezent</button>
 </div>
 
 <script>
@@ -236,6 +340,8 @@ function merken(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
 function gemerkt(k, fallback){ try{ return localStorage.getItem(k) ?? fallback; }catch(e){ return fallback; } }
 
 function schalterSetzen(art, an){
+  const spiegel = el("fb-" + art);
+  if (spiegel) spiegel.setAttribute("aria-pressed", String(an));
   document.body.dataset[art] = an ? "an" : "aus";
   el("btn-" + art).setAttribute("aria-pressed", String(an));
   merken("marker-" + art, an ? "an" : "aus");
@@ -324,6 +430,7 @@ function markierungenAnlegen(wurzel, anm){
   const { text, karte, knoten } = textindex(wurzel);
   const klassen = new Map(knoten.map(n => [n, new Uint8Array(n.nodeValue.length)]));
   const unsicher = new Map(knoten.map(n => [n, new Uint8Array(n.nodeValue.length)]));
+  const zeiger = new Map(knoten.map(n => [n, new Int16Array(n.nodeValue.length).fill(-1)]));
   let verwaist = 0;
 
   const BIT = { tb: 1, rf: 2, ausn: 4 };
@@ -334,18 +441,19 @@ function markierungenAnlegen(wurzel, anm){
   if (Array.isArray(anm.saetze)){
     for (const satz of anm.saetze){
       for (const el of satz.elemente || []){
-        spannen.push({ art: el.art, text: el.text, von: el.von, konfidenz: el.konfidenz });
+        spannen.push({ art: el.art, text: el.text, von: el.von,
+          konfidenz: el.konfidenz, pfad: el.pfad || satz.pfad, beleg: el.beleg || null });
       }
     }
   } else {
     /* Rückfall auf das alte Format: ohne Position bleibt nur die Textsuche. */
     for (const art of ["tb", "rf", "ausn"]){
       const feld = art === "ausn" ? "ausnahmen" : art;
-      for (const t of anm[feld] || []) spannen.push({ art, text: t, von: null, konfidenz: null });
+      for (const t of anm[feld] || []) spannen.push({ art, text: t, von: null, konfidenz: null, pfad: null, beleg: null });
     }
   }
 
-  for (const sp of spannen){
+  for (const [nr, sp] of spannen.entries()){
     const bit = BIT[sp.art];
     if (!bit || typeof sp.text !== "string" || !sp.text) continue;
 
@@ -366,6 +474,7 @@ function markierungenAnlegen(wurzel, anm){
       const ref = karte[pos];
       if (!ref) continue;
       klassen.get(ref.n)[ref.i] |= bit;
+      zeiger.get(ref.n)[ref.i] = nr;
       if (schwach) unsicher.get(ref.n)[ref.i] = 1;
     }
   }
@@ -374,13 +483,14 @@ function markierungenAnlegen(wurzel, anm){
     const roh = n.nodeValue;
     const bits = klassen.get(n);
     const uns = unsicher.get(n);
+    const zg = zeiger.get(n);
     if (!bits.some(Boolean)) continue;
     const frag = document.createDocumentFragment();
     let start = 0;
     while (start < roh.length){
-      const bit = bits[start], u = uns[start];
+      const bit = bits[start], u = uns[start], z = zg[start];
       let ende = start + 1;
-      while (ende < roh.length && bits[ende] === bit && uns[ende] === u) ende++;
+      while (ende < roh.length && bits[ende] === bit && uns[ende] === u && zg[ende] === z) ende++;
       const ausschnitt = roh.slice(start, ende);
       if (!bit){
         frag.appendChild(document.createTextNode(ausschnitt));
@@ -392,6 +502,14 @@ function markierungenAnlegen(wurzel, anm){
         if (bit & 4) teile.push("ausn");
         if (u) teile.push("unsicher");
         mark.className = teile.join(" ");
+        const sp = spannen[z];
+        if (sp){
+          if (sp.pfad) mark.dataset.pfad = sp.pfad;
+          if (sp.beleg){
+            mark.dataset.beleg = sp.beleg.fundstelle || sp.beleg.quelle || "";
+            mark.title = [sp.beleg.quelle, sp.beleg.fundstelle].filter(Boolean).join(" · ");
+          }
+        }
         mark.textContent = ausschnitt;
         frag.appendChild(mark);
       }
@@ -440,17 +558,46 @@ function verweiseSetzen(wurzel, eigenesAbk){
 }
 
 /* ------------------------------ Register ------------------------------ */
+/* „15 estg", „§ 15 EStG", „estg 15" und „Wohnsitz" sollen alle funktionieren.
+   Ein kurzer Parser fängt den überwiegenden Teil der Eingaben ab. */
+function sucheDeuten(roh){
+  const t = String(roh || "").trim();
+  if (!t) return { frei: "" };
+  const kuerzel = new Set(S.register.gesetze.map(g => g.abk.toLowerCase()));
+  const woerter = t.toLowerCase().replace(/§/g, " ").split(/\s+/).filter(Boolean);
+  const gesetz = woerter.find(w => kuerzel.has(w)) || null;
+  const nummer = woerter.find(w => /^\d{1,4}[a-z]?$/.test(w)) || null;
+  const rest = woerter.filter(w => w !== gesetz && w !== nummer).join(" ");
+  return { gesetz, nummer, frei: rest || (gesetz || nummer ? "" : t.toLowerCase()) };
+}
+
 function registerZeichnen(){
   const ziel = el("register-liste");
   ziel.innerHTML = "";
   if (!S.gesetz) return;
   const anm = S.anmerkungen[S.abk] || {};
-  const f = S.filter.trim().toLowerCase();
+  const abfrage = sucheDeuten(S.filter);
+
+  // Anderes Gesetz genannt: dorthin wechseln, sobald eine Nummer dabei ist.
+  if (abfrage.gesetz && abfrage.gesetz !== S.abk.toLowerCase() && abfrage.nummer){
+    const hinweis = document.createElement("button");
+    hinweis.className = "reg-eintrag wechsel";
+    hinweis.innerHTML = '<span class="nr"></span><span class="tt"></span>';
+    hinweis.querySelector(".nr").textContent = "→ §" + abfrage.nummer;
+    hinweis.querySelector(".tt").textContent = "in " + abfrage.gesetz.toUpperCase() + " öffnen";
+    hinweis.onclick = () => { location.hash = "#/" + abfrage.gesetz + "/" + abfrage.nummer; };
+    ziel.appendChild(hinweis);
+  }
+
+  const f = abfrage.frei;
+  const nr = abfrage.nummer;
   let letzteGl = null, gefunden = 0;
 
   for (const norm of S.gesetz.normen){
+    const bezeichner = norm.enbez.replace(/§\s*/, "").toLowerCase();
+    if (nr && !bezeichner.startsWith(nr)) continue;
     if (f && !(norm.enbez + " " + norm.titel).toLowerCase().includes(f)
-          && !norm.enbez.replace(/§\s*/, "").toLowerCase().startsWith(f)) continue;
+          && !volltextTrifft(norm, f)) continue;
     gefunden++;
     if (norm.gliederung && norm.gliederung !== letzteGl){
       letzteGl = norm.gliederung;
@@ -465,6 +612,15 @@ function registerZeichnen(){
     b.innerHTML = '<span class="nr"></span><span class="tt"></span>';
     b.querySelector(".nr").textContent = norm.enbez;
     b.querySelector(".tt").textContent = norm.titel;
+    if (f && !(norm.enbez + " " + norm.titel).toLowerCase().includes(f)){
+      const kontext = fundstelleKontext(norm, f);
+      if (kontext){
+        const k = document.createElement("span");
+        k.className = "kontext";
+        k.innerHTML = kontext;
+        b.appendChild(k);
+      }
+    }
     if (anm[norm.id]){
       const p = document.createElement("span");
       p.className = "punkt";
@@ -482,7 +638,47 @@ function registerZeichnen(){
   }
 }
 
+function normVolltext(norm){
+  if (norm.__vt) return norm.__vt;
+  const roh = (norm.abs || []).map(a => a.html || "").join(" ")
+    .replace(/<[^>]+>/g, " ").replace(/&sect;/g, "§").replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ");
+  Object.defineProperty(norm, "__vt", { value: roh, enumerable: false });
+  return roh;
+}
+
+function volltextTrifft(norm, f){
+  return f.length >= 3 && normVolltext(norm).toLowerCase().includes(f);
+}
+
+/* Zwei Zeilen um den Treffer, Suchwort hervorgehoben. Ohne das ist eine
+   Trefferliste aus Paragrafennummern wertlos. */
+function fundstelleKontext(norm, f){
+  const t = normVolltext(norm);
+  const i = t.toLowerCase().indexOf(f);
+  if (i === -1) return null;
+  const von = Math.max(0, i - 42);
+  const bis = Math.min(t.length, i + f.length + 62);
+  const roh = (von ? "… " : "") + t.slice(von, bis).trim() + (bis < t.length ? " …" : "");
+  const stelle = roh.toLowerCase().indexOf(f);
+  const esc = x => x.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  if (stelle === -1) return esc(roh);
+  return esc(roh.slice(0, stelle)) + "<b>" + esc(roh.slice(stelle, stelle + f.length)) + "</b>" + esc(roh.slice(stelle + f.length));
+}
+
 function leisteZeichnen(){
+  const wahl = el("gesetzwahl");
+  if (wahl){
+    wahl.innerHTML = "";
+    for (const g of S.register.gesetze){
+      const o = document.createElement("option");
+      o.value = g.abk.toLowerCase();
+      o.textContent = g.abk + " — " + (g.titel || g.abk);
+      o.selected = g.abk === S.abk;
+      wahl.appendChild(o);
+    }
+    wahl.onchange = () => { location.hash = "#/" + wahl.value; };
+  }
   const ziel = el("leiste");
   ziel.innerHTML = "";
   for (const g of S.register.gesetze){
@@ -518,37 +714,48 @@ function schemaBauen(anm){
 
   const ol = document.createElement("ol");
   ol.className = "leiter";
-  for (const s of anm.schema){
+  for (const stufe of anm.schema){
     const li = document.createElement("li");
     const rn = document.createElement("span");
-    rn.className = "rn"; rn.textContent = s.n || "";
+    rn.className = "rn"; rn.textContent = stufe.n || "";
     const t = document.createElement("span");
-    t.className = "schritt" + (s.art ? " " + s.art : "");
-    t.textContent = s.t;
+    t.className = "schritt" + (stufe.art ? " " + stufe.art : "");
+    t.textContent = stufe.t;
     li.append(rn, t);
 
-    if (s.junktor){
+    if (stufe.junktor){
       const j = document.createElement("span");
       j.className = "junktor";
-      j.textContent = s.junktor === "oder" ? "alternativ" : "kumulativ";
+      j.textContent = stufe.junktor === "oder" ? "alternativ" : "kumulativ";
       li.appendChild(j);
     }
 
-    if (Array.isArray(s.sub) && s.sub.length){
+    if (Array.isArray(stufe.sub) && stufe.sub.length){
       const ul = document.createElement("ul");
-      for (const x of s.sub){
+      for (const x of stufe.sub){
         const l = document.createElement("li");
         if (typeof x === "string"){
           l.appendChild(document.createTextNode(x));
         } else {
-          if (typeof x.konfidenz === "number" && x.konfidenz < 0.5) l.className = "schwach";
+          if (typeof x.konfidenz === "number" && x.konfidenz < 0.5) l.classList.add("schwach");
           const w = document.createElement("span");
+          w.className = "w";
           w.textContent = x.t;
           l.appendChild(w);
+
+          if (x.beleg){
+            const b = document.createElement("a");
+            b.className = "belegzeichen";
+            b.textContent = "※";
+            b.title = [x.beleg.quelle, x.beleg.fundstelle].filter(Boolean).join(" · ");
+            if (x.beleg.url){ b.href = x.beleg.url; b.target = "_blank"; b.rel = "noopener"; }
+            l.appendChild(b);
+          }
           if (x.pfad){
             const pf = document.createElement("span");
             pf.className = "pf"; pf.textContent = x.pfad;
             l.appendChild(pf);
+            koppeln(l, x.pfad, x.t);
           }
         }
         ul.appendChild(l);
@@ -561,6 +768,127 @@ function schemaBauen(anm){
   return wrap;
 }
 
+/* Kopplung Schema ↔ Text. Die Adressen liegen seit Format 3 in den Daten;
+   hier werden sie erstmals genutzt. */
+function koppeln(knoten, pfad, text){
+  knoten.classList.add("koppelbar");
+  knoten.tabIndex = 0;
+  const an  = () => fokussieren(pfad, text);
+  const aus = () => fokussieren(null);
+  knoten.addEventListener("mouseenter", an);
+  knoten.addEventListener("mouseleave", aus);
+  knoten.addEventListener("focus", an);
+  knoten.addEventListener("blur", aus);
+  knoten.addEventListener("click", () => springeZu(pfad, text));
+  knoten.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); springeZu(pfad, text); } });
+}
+
+function passendeMarken(pfad, text){
+  const alle = [...document.querySelectorAll('#haupt mark[data-pfad]')].filter(m => m.dataset.pfad === pfad);
+  if (!text) return alle;
+  const anfang = text.slice(0, 24);
+  const genau = alle.filter(m => text.includes(m.textContent.trim()) || m.textContent.includes(anfang));
+  return genau.length ? genau : alle;
+}
+
+function fokussieren(pfad, text){
+  document.body.classList.toggle("fokus", Boolean(pfad));
+  const hell = new Set(pfad ? passendeMarken(pfad, text) : []);
+  for (const m of document.querySelectorAll("#haupt mark")) m.classList.toggle("hell", hell.has(m));
+}
+
+function springeZu(pfad, text){
+  const ziel = passendeMarken(pfad, text)[0];
+  if (!ziel) return;
+  ziel.scrollIntoView({ block: "center", behavior: "smooth" });
+  ziel.classList.remove("springziel");
+  void ziel.offsetWidth;
+  ziel.classList.add("springziel");
+  const anker = pfadZuAnker(pfad);
+  if (anker) history.replaceState(null, "", "#/" + S.abk.toLowerCase() + "/" + S.normId + "/" + anker);
+}
+
+function pfadZuAnker(pfad){
+  return String(pfad || "").toLowerCase()
+    .replace(/§/g, "").replace(/\./g, "").replace(/[()]/g, "")
+    .trim().replace(/\s+/g, "-") || null;
+}
+
+/* Absatzleiste: Navigation innerhalb langer Normen. */
+function absatzleisteBauen(anm, textWurzel){
+  const leiste = document.createElement("div");
+  leiste.className = "absatzleiste";
+  if (!anm || !Array.isArray(anm.saetze)) return leiste;
+
+  const gesehen = new Map();
+  for (const satz of anm.saetze){
+    const m = /^Abs\. (\d+[a-z]?)/.exec(satz.pfad || "");
+    const marke = m ? "(" + m[1] + ")" : "Satz";
+    if (!gesehen.has(marke)) gesehen.set(marke, satz.pfad);
+  }
+  if (gesehen.size < 2) return leiste;
+
+  const absaetze = [...textWurzel.querySelectorAll(".absatz")];
+  let i = 0;
+  for (const [marke, pfad] of gesehen){
+    const b = document.createElement("button");
+    b.textContent = marke;
+    b.dataset.pfad = pfad;
+    const ziel = absaetze[i++] || null;
+    b.onclick = () => (ziel || passendeMarken(pfad)[0])?.scrollIntoView({ block: "start", behavior: "smooth" });
+    b.onmouseenter = () => fokussieren(pfad);
+    b.onmouseleave = () => fokussieren(null);
+    leiste.appendChild(b);
+  }
+
+  // Mitlaufende Hervorhebung beim Scrollen
+  if (absaetze.length && "IntersectionObserver" in window){
+    const knoepfe = [...leiste.children];
+    const wache = new IntersectionObserver(eintraege => {
+      for (const e of eintraege){
+        if (!e.isIntersecting) continue;
+        const idx = absaetze.indexOf(e.target);
+        knoepfe.forEach((b, j) => b.setAttribute("aria-current", String(j === idx)));
+      }
+    }, { rootMargin: "-25% 0px -60% 0px" });
+    absaetze.forEach(a => wache.observe(a));
+  }
+  return leiste;
+}
+
+/* Belege: rein extraktiv, nichts wird behauptet. */
+function belegeBauen(anm){
+  if (!anm || !Array.isArray(anm.belege) || !anm.belege.length) return null;
+  const d = document.createElement("section");
+  d.className = "belege";
+  const k = document.createElement("p");
+  k.className = "schema-kappe";
+  k.textContent = "Belege";
+  d.appendChild(k);
+
+  const ul = document.createElement("ul");
+  for (const b of anm.belege){
+    const li = document.createElement("li");
+    const art = document.createElement("span");
+    art.className = "art";
+    art.textContent = b.art === "rechtsprechung" ? "Rechtsprechung" : "Verwaltung";
+    li.appendChild(art);
+
+    const bez = document.createElement(b.url ? "a" : "span");
+    bez.textContent = [b.quelle, b.fundstelle].filter(Boolean).join(" · ");
+    if (b.url){ bez.href = b.url; bez.target = "_blank"; bez.rel = "noopener"; }
+    li.appendChild(bez);
+    ul.appendChild(li);
+  }
+  d.appendChild(ul);
+
+  const p = document.createElement("p");
+  p.className = "leer";
+  p.textContent = "Amtliche Fundstellen, unverändert zitiert. Sie stützen die Zuordnung, ersetzen aber keine eigene Prüfung.";
+  d.appendChild(p);
+  return d;
+}
+
 /* Statusband: weist offen aus, wie die Annotation zustande kam. */
 function statusband(anm){
   if (!anm || !anm.status) return null;
@@ -570,6 +898,7 @@ function statusband(anm){
   p.className = "plakette";
   p.dataset.s = anm.status;
   p.textContent = ({
+    belegt: "Amtlich gestützt",
     konsens: "Modellkonsens",
     mehrheit: "Mehrheitlich",
     uneinheitlich: "Uneinheitlich",
@@ -579,19 +908,21 @@ function statusband(anm){
   d.appendChild(p);
 
   const t = document.createElement("span");
+  const teile = [];
   if (anm.status === "ohne_merkmale"){
-    t.textContent = "keine Tatbestand-Rechtsfolge-Struktur";
-  } else if (typeof anm.einstimmigkeit === "number"){
-    t.textContent = Math.round(anm.einstimmigkeit * 100) + " % Übereinstimmung über "
-      + anm.laeufe + " unabhängige Läufe · automatisch, nicht redaktionell geprüft";
+    teile.push("keine Tatbestand-Rechtsfolge-Struktur");
   } else {
-    t.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
+    if (typeof anm.einstimmigkeit === "number"){
+      teile.push(Math.round(anm.einstimmigkeit * 100) + " % Übereinstimmung über " + anm.laeufe + " Läufe");
+    }
+    if (anm.belegquote) teile.push(Math.round(anm.belegquote * 100) + " % amtlich belegt");
+    teile.push("automatisch erzeugt, nicht redaktionell geprüft");
   }
+  t.textContent = teile.join(" · ");
   d.appendChild(t);
   return d;
 }
 
-/* ------------------------------ Norm ------------------------------ */
 function tageSeit(iso){
   if (!iso) return null;
   return Math.round((Date.now() - new Date(iso).getTime()) / 86400000);
@@ -635,6 +966,10 @@ function normZeichnen(){
   kopf.append(eb, h1, stand);
   haupt.appendChild(kopf);
 
+  // Statusband direkt unter den Normkopf — es qualifiziert alles, was folgt.
+  const sb = statusband(anm);
+  if (sb) haupt.appendChild(sb);
+
   // Text
   const text = document.createElement("div");
   text.className = "text";
@@ -647,11 +982,14 @@ function normZeichnen(){
     d.appendChild(inner);
     text.appendChild(d);
   }
-  haupt.appendChild(text);
-
   // Alle Markierungen in einem Durchgang gegen denselben kanonischen Text wie im Backend anlegen.
   const verwaist = anm ? markierungenAnlegen(text, anm) : 0;
   verweiseSetzen(text, S.abk);
+
+  const leseraum = document.createElement("div");
+  leseraum.className = "leseraum";
+  leseraum.append(absatzleisteBauen(anm, text), text);
+  haupt.appendChild(leseraum);
 
   if (norm.fussnote){
     const f = document.createElement("div");
@@ -659,9 +997,6 @@ function normZeichnen(){
     f.textContent = norm.fussnote;
     haupt.appendChild(f);
   }
-
-  const sb = statusband(anm);
-  if (sb) haupt.appendChild(sb);
 
   if (anm && anm.hinweis){
     const h = document.createElement("div");
@@ -682,6 +1017,9 @@ function normZeichnen(){
     w.append(kappe, p);
     haupt.appendChild(w);
   }
+
+  const bel = belegeBauen(anm);
+  if (bel) haupt.appendChild(bel);
 
   // Schema unterhalb (schmale Fenster) und rechts (breite)
   const unten = schemaBauen(anm);
@@ -736,6 +1074,19 @@ async function route(){
   registerZeichnen();
   normZeichnen();
   el("register").classList.remove("offen");
+
+  // Dritter Pfadteil ist ein Anker auf einen Rechtssatz: #/solzg/3/abs-3-satz-1
+  const anker = teile[2] || null;
+  if (anker){
+    requestAnimationFrame(() => {
+      const ziel = [...document.querySelectorAll("#haupt mark[data-pfad]")]
+        .find(m => pfadZuAnker(m.dataset.pfad) === anker);
+      if (ziel){
+        ziel.scrollIntoView({ block: "center" });
+        ziel.classList.add("springziel");
+      }
+    });
+  }
   const treffer = el("register").querySelector('[aria-current=true]');
   if (treffer && treffer.scrollIntoView) treffer.scrollIntoView({ block: "nearest" });
 }
@@ -748,11 +1099,73 @@ async function start(){
   el("btn-rf").onclick = () => schalterSetzen("rf", document.body.dataset.rf !== "an");
   schalterSetzen("ausn", gemerkt("marker-ausn", "an") === "an");
   el("btn-ausn").onclick = () => schalterSetzen("ausn", document.body.dataset.ausn !== "an");
+
+  // Stärke der Markierung: aus · dezent · voll
+  const STUFEN = ["aus", "dezent", "voll"];
+  function intensitaetSetzen(wert){
+    const w = STUFEN.includes(wert) ? wert : "dezent";
+    document.body.dataset.intensitaet = w;
+    el("btn-intensitaet").textContent = w;
+    if (el("fb-intensitaet")) el("fb-intensitaet").textContent = w;
+    el("btn-intensitaet").setAttribute("aria-label", "Stärke der Markierung: " + w);
+    merken("marker-intensitaet", w);
+  }
+  intensitaetSetzen(gemerkt("marker-intensitaet", "dezent"));
+  el("btn-intensitaet").onclick = () =>
+    intensitaetSetzen(STUFEN[(STUFEN.indexOf(document.body.dataset.intensitaet) + 1) % STUFEN.length]);
+
+  // Schriftgröße
+  const GROESSEN = ["klein", "normal", "gross"];
+  function groesseSetzen(wert){
+    const w = GROESSEN.includes(wert) ? wert : "normal";
+    if (w === "normal") delete document.documentElement.dataset.groesse;
+    else document.documentElement.dataset.groesse = w;
+    el("btn-groesse").textContent = { klein: "a", normal: "A", gross: "A+" }[w];
+    el("btn-groesse").setAttribute("aria-label", "Schriftgröße: " + w);
+    merken("schriftgroesse", w);
+  }
+  groesseSetzen(gemerkt("schriftgroesse", "normal"));
+  el("btn-groesse").onclick = () =>
+    groesseSetzen(GROESSEN[(GROESSEN.indexOf(gemerkt("schriftgroesse", "normal")) + 1) % GROESSEN.length]);
+
+  // Hell / dunkel / Systemvorgabe
+  const THEMEN = ["system", "hell", "dunkel"];
+  function themaSetzen(wert){
+    const w = THEMEN.includes(wert) ? wert : "system";
+    if (w === "system") delete document.documentElement.dataset.thema;
+    else document.documentElement.dataset.thema = w;
+    el("btn-thema").textContent = { system: "◐", hell: "☀", dunkel: "☾" }[w];
+    el("btn-thema").setAttribute("aria-label", "Darstellung: " + w);
+    merken("thema", w);
+  }
+  themaSetzen(gemerkt("thema", "system"));
+  el("btn-thema").onclick = () =>
+    themaSetzen(THEMEN[(THEMEN.indexOf(gemerkt("thema", "system")) + 1) % THEMEN.length]);
+
+  // Fußleiste auf schmalen Fenstern spiegelt die Kopfschalter.
+  for (const art of ["tb", "rf", "ausn"]){
+    const b = el("fb-" + art);
+    if (b) b.onclick = () => schalterSetzen(art, document.body.dataset[art] !== "an");
+  }
+  if (el("fb-intensitaet")){
+    el("fb-intensitaet").onclick = () =>
+      intensitaetSetzen(STUFEN[(STUFEN.indexOf(document.body.dataset.intensitaet) + 1) % STUFEN.length]);
+  }
   el("burger").onclick = () => el("register").classList.add("offen");
   el("zu").onclick = () => el("register").classList.remove("offen");
-  el("suche").oninput = (e) => { S.filter = e.target.value; registerZeichnen(); };
+  el("suche").oninput = (e) => { S.filter = e.target.value; S.markiert = null; registerZeichnen(); };
   document.addEventListener("keydown", (e) => {
     if (e.key === "/" && document.activeElement !== el("suche")){ e.preventDefault(); el("suche").focus(); }
+    if (document.activeElement === el("suche") && ["ArrowDown", "ArrowUp", "Enter"].includes(e.key)){
+      const treffer = [...el("register-liste").querySelectorAll(".reg-eintrag")];
+      if (!treffer.length) return;
+      if (e.key === "Enter"){ e.preventDefault(); treffer[S.markiert ?? 0]?.click(); return; }
+      e.preventDefault();
+      const jetzt = S.markiert ?? -1;
+      S.markiert = Math.max(0, Math.min(treffer.length - 1, jetzt + (e.key === "ArrowDown" ? 1 : -1)));
+      treffer.forEach((b, i) => b.classList.toggle("markiert", i === S.markiert));
+      treffer[S.markiert].scrollIntoView({ block: "nearest" });
+    }
     if (e.key === "Escape") el("register").classList.remove("offen");
   });
   window.addEventListener("hashchange", route);
