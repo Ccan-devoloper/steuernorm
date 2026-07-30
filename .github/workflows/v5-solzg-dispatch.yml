@@ -1,0 +1,110 @@
+name: V5-SolzG-Modelltest auslösen
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/v5-solzg-dispatch.yml"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  dispatch-und-protokoll:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Annotationen erzeugen für SolzG starten
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          start="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          printf '%s' "$start" > /tmp/start
+          payload='{"ref":"main","inputs":{"nur":"solzg","laeufe":"1","ohne_ki":false}}'
+          code="$(curl -sS -o /tmp/dispatch-response -w '%{http_code}' \
+            -X POST \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/annotationen.yml/dispatches" \
+            -d "$payload")"
+          cat /tmp/dispatch-response || true
+          echo "Workflow-Dispatch: HTTP $code"
+          test "$code" = "204"
+
+      - name: SolzG-Lauf finden und Modellzugang protokollieren
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          start="$(cat /tmp/start)"
+          run_id=""
+          for _ in $(seq 1 60); do
+            curl -sS \
+              -H 'Accept: application/vnd.github+json' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/annotationen.yml/runs?event=workflow_dispatch&branch=main&per_page=20" \
+              > /tmp/runs.json
+            run_id="$(python3 - "$start" <<'PY'
+          import json, sys
+          start = sys.argv[1]
+          data = json.load(open('/tmp/runs.json'))
+          for run in data.get('workflow_runs', []):
+              if run.get('created_at', '') >= start:
+                  print(run['id'])
+                  break
+          PY
+            )"
+            [ -n "$run_id" ] && break
+            sleep 5
+          done
+          test -n "$run_id"
+          echo "SolzG-Lauf: https://github.com/$GITHUB_REPOSITORY/actions/runs/$run_id"
+
+          conclusion=""
+          for _ in $(seq 1 150); do
+            curl -sS \
+              -H 'Accept: application/vnd.github+json' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/runs/$run_id" \
+              > /tmp/run.json
+            status="$(python3 -c 'import json; print(json.load(open("/tmp/run.json"))["status"])')"
+            conclusion="$(python3 -c 'import json; print(json.load(open("/tmp/run.json")).get("conclusion") or "")')"
+            echo "Ziel-Lauf: $status ${conclusion:-}"
+            [ "$status" = "completed" ] && break
+            sleep 8
+          done
+
+          curl -sS \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/runs/$run_id/jobs?per_page=100" \
+            > /tmp/jobs.json
+          job_id="$(python3 <<'PY'
+          import json
+          data = json.load(open('/tmp/jobs.json'))
+          for job in data.get('jobs', []):
+              if job.get('name') == 'annotieren':
+                  print(job['id'])
+                  break
+          PY
+          )"
+          test -n "$job_id"
+          curl -sSL \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/jobs/$job_id/logs" \
+            > /tmp/annotieren.log
+
+          echo "----- Modellzugang prüfen -----"
+          grep -E 'Gemini-API antwortet mit HTTP|GEMINI_API_KEY ist nicht gesetzt|Kein Modellzugang' /tmp/annotieren.log || echo 'Keine Modellzugangs-Meldung im Log gefunden.'
+          echo "----- Abschluss -----"
+          echo "SolzG-Lauf: https://github.com/$GITHUB_REPOSITORY/actions/runs/$run_id"
+          echo "Ergebnis: ${conclusion:-unbekannt}"
