@@ -18,7 +18,7 @@ import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { einheiten, volltextDerNorm } from "./lib/gliederung.mjs";
-import { NICHT_MARKIEREN } from "./lib/syntax.mjs";
+import { NICHT_MARKIEREN, verberst } from "./lib/syntax.mjs";
 import { pruefeSpanne } from "./lib/validatoren.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
@@ -81,6 +81,30 @@ for (const meta of gesetze) {
 
       for (const el of satz.elemente || []) {
         spannen++;
+        // Mehrteilige Spannen: jedes Stück einzeln prüfen.
+        const stuecke = Array.isArray(el.teile) && el.teile.length
+          ? el.teile
+          : [{ text: el.text, von: el.von, laenge: el.text.length }];
+        let stueckFehler = false;
+        for (const st of stuecke) {
+          if (volltext.substr(st.von, st.text.length) !== st.text) {
+            console.error(`FEHLER ${meta.abk} ${norm.enbez} ${satz.pfad}: Teilstück nicht an seiner Position — „${st.text.slice(0, 40)}"`);
+            fehler++; stueckFehler = true;
+          } else if (!einheit.text.includes(st.text)) {
+            console.error(`FEHLER ${meta.abk} ${norm.enbez} ${satz.pfad}: Teilstück außerhalb seines Rechtssatzes`);
+            fehler++; stueckFehler = true;
+          }
+        }
+        if (stueckFehler) continue;
+        if (Array.isArray(el.teile) && el.teile.length) {
+          const grund = pruefeSpanne({ art: el.art, text: el.teile[0].text }, {
+            volltext, satztext: einheit.text, typ: satz.typ,
+            verberst: verberst(einheit.text),
+            gegenstand: String(gesetz.titel || "").replace(/gesetz.*$/i, "").toLowerCase(),
+          });
+          if (grund) { warnungen++; gruende.set(grund, (gruende.get(grund) || 0) + 1); }
+          continue;
+        }
         if (volltext.substr(el.von, el.text.length) !== el.text) {
           console.error(`FEHLER ${meta.abk} ${norm.enbez} ${satz.pfad}: Position stimmt nicht — „${el.text.slice(0, 40)}"`);
           fehler++;
@@ -93,6 +117,7 @@ for (const meta of gesetze) {
         }
         const grund = pruefeSpanne(el, {
           volltext, satztext: einheit.text, typ: satz.typ,
+          verberst: verberst(einheit.text),
           gegenstand: String(gesetz.titel || "").replace(/gesetz.*$/i, "").toLowerCase(),
         });
         if (grund) {

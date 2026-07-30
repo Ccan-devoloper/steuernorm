@@ -42,7 +42,11 @@ export function pruefeSpanne(span, ctx) {
   if (SATZZEICHEN_START.test(t)) return "Fragment: beginnt mit Satzzeichen";
   if (/\b\d{1,2}\.\s*$/.test(t)) return "Fragment: endet auf abgeschnittener Ordinalzahl";
   if (ABGESCHNITTEN.test(t)) return "Fragment: endet auf Artikel oder Präposition";
-  if (span.art === "tb" && KONJUNKTION_START.test(t)) return "Fragment: beginnt mit Konjunktion oder finitem Verb";
+  // Uneingeleitete Bedingungssätze beginnen zulässig mit dem finiten Verb
+  // („Ist eine ausländische Familienstiftung …, so …"). Nur echte Fragmente ablehnen.
+  if (span.art === "tb" && KONJUNKTION_START.test(t) && !ctx.verberst) {
+    return "Fragment: beginnt mit Konjunktion oder finitem Verb";
+  }
 
   if (FUNDSTELLE.test(t) && t.split(/\s+/).length < 12) return "Fundstelle statt Merkmal";
   if (istZeitangabe(t)) return "reine Zeitangabe";
@@ -50,16 +54,21 @@ export function pruefeSpanne(span, ctx) {
   if (NUR_VERWEIS.test(t)) return "reiner Paragrafenverweis ohne Merkmalsgehalt";
 
   // Ganzer Absatz als ein Merkmal
+  // Rechtsfolgen dürfen länger sein: Anordnungen mit Verweisungsketten sind
+  // im Steuerrecht regelmäßig lang, ohne dadurch unbrauchbar zu werden.
   const woerter = t.split(/\s+/).length;
-  if (woerter > 45) return `zu grob (${woerter} Wörter)`;
+  const grenze = span.art === "rf" ? 75 : 45;
+  if (woerter > grenze) return `zu grob (${woerter} Wörter)`;
   // Nur für Tatbestandsmerkmale: Eine Rechtsfolge DARF der ganze Rest des
   // Satzes sein — bei Definitionen und Verweisungen ist das der Regelfall.
   if (span.art === "tb" && t.length > 0.85 * ctx.satztext.length && woerter > 20) {
     return "deckt praktisch den ganzen Rechtssatz ab";
   }
 
-  // Bloßes Normsubjekt
+  // Bloßes Normsubjekt — für Definiendum ausdrücklich erlaubt, dort IST der
+  // Begriff das Element („Familienstiftungen sind Stiftungen, bei denen …").
   if (span.art === "tb" && istNormsubjekt(t, ctx.gegenstand)) return "bloßes Normsubjekt";
+  if (span.art === "def" && t.split(/\s+/).length > 8) return "Definiendum zu lang";
 
   // Tarifnormen haben keinen eigenen Tatbestand.
   if (ctx.typ === "tarif" && span.art === "tb" && !/^(bei|beim|in den Fällen|für|soweit|auf)/i.test(t)) {
@@ -68,6 +77,7 @@ export function pruefeSpanne(span, ctx) {
 
   // Rechenregeln sind vollständig Rechtsfolge.
   if (ctx.typ === "rechenregel" && span.art !== "rf") return "Rechenregel ist vollständig Rechtsfolge";
+  if (span.art === "def" && ctx.typ !== "definition") return "Definiendum nur in Definitionen";
 
   return null;
 }

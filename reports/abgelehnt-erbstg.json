@@ -1,1 +1,982 @@
-[]
+[
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "die Zweckzuwendungen",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Buchst. c",
+    "art": "tb",
+    "text": "unabhängig von der Fünfjahresfrist nach Buchstabe b deutsche Staatsangehörige, die aa) im ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "sowie zu ihrem Haushalt gehörende Angehörige, die die deutsche Staatsangehörigkeit besitze",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 4",
+    "art": "tb",
+    "text": "Wird nur ein Teil einer solchen Beteiligung durch Schenkung zugewendet",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "der Erwerb durch Erbanfall (§ 1922 des Bürgerlichen Gesetzbuchs), durch Vermächtnis (§§ 21",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "was jemand dadurch erlangt, daß bei Genehmigung einer Zuwendung des Erblassers Leistungen ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Nr. 4",
+    "art": "tb",
+    "text": "was als Abfindung für einen Verzicht auf den entstandenen Pflichtteilsanspruch oder für di",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Nr. 5",
+    "art": "tb",
+    "text": "was als Abfindung für ein aufschiebend bedingtes, betagtes oder befristetes Vermächtnis, d",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Nr. 7",
+    "art": "tb",
+    "text": "was der Vertragserbe oder der Schlusserbe eines gemeinschaftlichen Testaments oder der Ver",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "was jemand dadurch erlangt, daß bei Genehmigung einer Schenkung Leistungen an andere Perso",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 1 Nr. 9",
+    "art": "tb",
+    "text": "was bei Auflösung, Aufhebung, Zulegung oder Zusammenlegung von Stiftungen oder bei Auflösu",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 8 Satz 2",
+    "art": "tb",
+    "text": "auch Zuwendungen zwischen Kapitalgesellschaften, soweit sie in der Absicht getätigt werden",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 8 Satz 3",
+    "art": "rf",
+    "text": "gelten außer für Kapitalgesellschaften auch für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "Zuwendungen von Todes wegen oder freigebige Zuwendungen unter Lebenden, die mit der Auflag",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "bei Erwerben von Todes wegen mit dem Tode des Erblassers, jedoch a) für den Erwerb des unt",
+    "grund": "zu grob (48 Wörter)"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Buchst. c",
+    "art": "tb",
+    "text": "im Fall des § 3 Abs. 2 Nr. 1 Satz 1 mit dem Zeitpunkt der Anerkennung der Stiftung als rec",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Buchst. d",
+    "art": "tb",
+    "text": "in den Fällen des § 3 Abs. 2 Nr. 2 mit dem Zeitpunkt der Vollziehung der Auflage oder der ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Buchst. f",
+    "art": "tb",
+    "text": "in den Fällen des § 3 Absatz 2 Nummer 4 mit dem Zeitpunkt des Verzichts, der Ausschlagung,",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "2. bei Schenkungen unter Lebenden mit dem Zeitpunkt der Ausführung der Zuwendung; 3. bei Z",
+    "grund": "zu grob (56 Wörter)"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 5 Nr. 1",
+    "art": "tb",
+    "text": "soweit sie nicht mit einem zum Erwerb gehörenden Gewerbebetrieb, Anteil an einem Gewerbebe",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 5 Nr. 3",
+    "art": "tb",
+    "text": "die Kosten der Bestattung des Erblassers, die Kosten für ein angemessenes Grabdenkmal, die",
+    "grund": "zu grob (48 Wörter)"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 6 Satz 1",
+    "art": "tb",
+    "text": "sind Schulden und Lasten",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 6 Satz 4",
+    "art": "tb",
+    "text": "sich nach dem Verhältnis des Werts des der Besteuerung nach diesem Gesetz unterliegenden V",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 6a Satz 5",
+    "art": "tb",
+    "text": "sich nach dem Verhältnis des Werts des Vermögensgegenstands nach Abzug der mit diesem Verm",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Buchst. a",
+    "art": "tb",
+    "text": "wenn die Erhaltung dieser Gegenstände wegen ihrer Bedeutung für Kunst, Geschichte oder Wis",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 bb)",
+    "art": "tb",
+    "text": "die Gegenstände sich seit mindestens 20 Jahren im Besitz der Familie befinden oder in ein ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 4",
+    "art": "tb",
+    "text": "wenn ein Ehegatte nachträglichen Herstellungs- oder Erhaltungsaufwand für ein Familienheim",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 9",
+    "art": "tb",
+    "text": "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 2 (Teil 3)",
+    "art": "tb",
+    "text": "Vermögensgegenstände, die Eltern oder Voreltern ihren Abkömmlingen durch Schenkung oder Üb",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 7 (Teil 2)",
+    "art": "tb",
+    "text": "Anfälle an den Bund, ein Land oder eine inländische Gemeinde (Gemeindeverband) sowie solch",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Buchst. b (Teil 5)",
+    "art": "tb",
+    "text": "an inländische Körperschaften, Personenvereinigungen und Vermögensmassen, die nach der Sat",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Buchst. c (Teil 3)",
+    "art": "tb",
+    "text": "an ausländische Religionsgesellschaften, Körperschaften, Personenvereinigungen und Vermöge",
+    "grund": "zu grob (60 Wörter)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 bb) (Teil 2)",
+    "art": "tb",
+    "text": "Amtshilfe bei der Beitreibung gemäß einem dem Artikel 27 des OECD-Musterabkommens 2017 zur",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 1 (Teil 6)",
+    "art": "tb",
+    "text": "Das Bundesministerium der Finanzen veröffentlicht im Bundessteuerblatt Teil I eine Liste d",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 2 (Teil 5)",
+    "art": "tb",
+    "text": "Leistungen von Religionsgemeinschaften, juristischen Personen des öffentlichen Rechts, Kör",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "wenn der Erwerb begünstigten Vermögens im Sinne des § 13b Absatz 2 zuzüglich der Erwerbe i",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Begünstigtes Vermögen im Sinne des § 13b Absatz 2",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "soweit der Wert dieses Vermögens insgesamt 150 000 Euro nicht übersteigt (Abzugsbetrag)",
+    "grund": "Rechenregel ist vollständig Rechtsfolge"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Der nach Anwendung des Absatzes 1 verbleibende Teil des begünstigten Vermögens",
+    "grund": "Rechenregel ist vollständig Rechtsfolge"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Voraussetzung für die Gewährung des Verschonungsabschlags nach Absatz 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "die Ausgangslohnsumme 0 Euro",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "tb",
+    "text": "der Betrieb unter Einbeziehung der in den Sätzen 11 bis 13 genannten Beteiligungen und Ges",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "An die Stelle der Mindestlohnsumme von 400 Prozent",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Nr. 1 (Teil 3)",
+    "art": "tb",
+    "text": "die sich im Mutterschutz im Sinne des Mutterschutzgesetzes in der Fassung der Bekanntmachu",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Nr. 3",
+    "art": "tb",
+    "text": "die Krankengeld im Sinne des § 44 des Fünften Buches Sozialgesetzbuch – Gesetzliche Kranke",
+    "grund": "zu grob (47 Wörter)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Nr. 4",
+    "art": "tb",
+    "text": "die Elterngeld im Sinne des Bundeselterngeld- und Elternzeitgesetzes in der Fassung der Be",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Satz 2 (Teil 3)",
+    "art": "tb",
+    "text": "alle Geld- oder Sachleistungen für die von den Beschäftigten erbrachte Arbeit, unabhängig ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Satz 6",
+    "art": "tb",
+    "text": "wenn die unmittelbare oder mittelbare Beteiligung mehr als 25 Prozent beträgt",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 3 Satz 6",
+    "art": "tb",
+    "text": "gilt für Anteile an Kapitalgesellschaften entsprechend",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "tb",
+    "text": "Bei Anteilen an Kapitalgesellschaften, die nach § 11 Absatz 1 des Bewertungsgesetzes zu be",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 4 Satz 3",
+    "art": "tb",
+    "text": "Die Entscheidung über die Bedeutung trifft das Finanzamt, das für die Festsetzung der Erbs",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "wenn ein Erbe im Rahmen der Teilung des Nachlasses begünstigtes Vermögen im Sinne des § 13",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Nr. 1",
+    "art": "tb",
+    "text": "einen Gewerbebetrieb oder einen Teilbetrieb, eine Beteiligung an einer Gesellschaft im Sin",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Nr. 1 Halbs. 2",
+    "art": "rf",
+    "text": "die der Veräußerer durch eine Sacheinlage (§ 20 Absatz 1 des Umwandlungssteuergesetzes vom",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Nr. 2",
+    "art": "tb",
+    "text": "das land- und forstwirtschaftliche Vermögen im Sinne des § 168 Absatz 1 Nummer 1 des Bewer",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Nr. 2 Halbs. 2",
+    "art": "tb",
+    "text": "wenn das land- und forstwirtschaftliche Vermögen einem Betrieb der Land- und Forstwirtscha",
+    "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Nr. 3",
+    "art": "tb",
+    "text": "als Inhaber eines Gewerbebetriebs, als Gesellschafter einer Gesellschaft im Sinne des § 97",
+    "grund": "zu grob (69 Wörter)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 6 Satz 3",
+    "art": "tb",
+    "text": "auszugehen, wenn der Veräußerungserlös innerhalb von sechs Monaten in entsprechendes Vermö",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Satz 1",
+    "art": "tb",
+    "text": "wenn der Gesellschaftsvertrag oder die Satzung Bestimmungen enthält, die",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Nr. 1",
+    "art": "tb",
+    "text": "die Entnahme oder Ausschüttung auf höchstens 37,5 Prozent des um die auf den Gewinnanteil ",
+    "grund": "zu grob (47 Wörter)"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Nr. 2",
+    "art": "tb",
+    "text": "die Verfügung über die Beteiligung an der Personengesellschaft oder den Anteil an der Kapi",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Nr. 3",
+    "art": "tb",
+    "text": "für den Fall des Ausscheidens aus der Gesellschaft eine Abfindung vorsehen, die unter dem ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "und die Bestimmungen den tatsächlichen Verhältnissen entsprechen",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Satz 3",
+    "art": "tb",
+    "text": "Die Höhe des Abschlags entspricht der im Gesellschaftsvertrag oder in der Satzung vorgeseh",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 9 Satz 5",
+    "art": "tb",
+    "text": "Die Steuerbefreiung entfällt mit Wirkung für die Vergangenheit, wenn die Voraussetzungen d",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Nr. 1",
+    "art": "tb",
+    "text": "In Absatz 1 Satz 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Nr. 3",
+    "art": "tb",
+    "text": "in Absatz 3 Satz 1 und 4",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Nr. 4",
+    "art": "tb",
+    "text": "in Absatz 3 Satz 4 Nummer 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Nr. 5",
+    "art": "tb",
+    "text": "in Absatz 3 Satz 4 Nummer 2",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "Voraussetzung für die Gewährung der Steuerbefreiung nach Satz 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
+    "pfad": "Abs. 10 Satz 2",
+    "art": "tb",
+    "text": "Der Anteil des Verwaltungsvermögens am gemeinen Wert des Betriebs bestimmt sich nach dem V",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "der inländische Wirtschaftsteil des land- und forstwirtschaftlichen Vermögens (§ 168 Absat",
+    "grund": "zu grob (60 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "inländisches Betriebsvermögen (§§ 95 bis 97 Absatz 1 Satz 1 des Bewertungsgesetzes) beim E",
+    "grund": "zu grob (72 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "wenn die Kapitalgesellschaft im Zeitpunkt der Entstehung der Steuer (§ 9) Sitz oder Geschä",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "ist begünstigt",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "wenn das Verwaltungsvermögen nach Absatz 4 vor der Anwendung des Absatzes 3 Satz 1, soweit",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Nr. 1 Halbs. 2",
+    "art": "tb",
+    "text": "wenn a) der Erblasser oder Schenker sowohl im überlassenden Betrieb als auch im nutzenden ",
+    "grund": "zu grob (61 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "soweit sie vor ihrer Verpachtung die Voraussetzungen als begünstigtes Vermögen nach Absatz",
+    "grund": "zu grob (64 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 1 (Teil 2)",
+    "art": "rf",
+    "text": "gilt nicht für verpachtete Betriebe",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "tb",
+    "text": "wenn die unmittelbare Beteiligung am Nennkapital dieser Gesellschaften 25 Prozent oder wen",
+    "grund": "zu grob (67 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "tb",
+    "text": "Anteile an Kapitalgesellschaften, wenn die unmittelbare Beteiligung am Nennkapital dieser ",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 5",
+    "art": "tb",
+    "text": "wenn sie nicht dem Hauptzweck des Gewerbebetriebs eines Kreditinstitutes oder eines Finanz",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 5",
+    "art": "tb",
+    "text": "Wertpapiere sowie vergleichbare Forderungen, wenn sie nicht dem Hauptzweck des Gewerbebetr",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 7",
+    "art": "tb",
+    "text": "wenn die genannten Wirtschaftsgüter dem Hauptzweck des Gewerbebetriebs eines Kreditinstitu",
+    "grund": "zu grob (55 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 8",
+    "art": "tb",
+    "text": "Voraussetzung für die Anwendung des Prozentsatzes von 15 Prozent des Satzes 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 4 Satz 9",
+    "art": "tb",
+    "text": "wenn die Tätigkeit durch Gesellschaften im Sinne des § 13 Absatz 7, des § 15 Absatz 1 Satz",
+    "grund": "zu grob (100 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "Beim Erwerb von Todes wegen entfällt die Zurechnung von Vermögensgegenständen zum Verwaltu",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "dass die Investition auf Grund eines im Zeitpunkt der Entstehung der Steuer (§ 9) vorgefas",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 6 Satz 2",
+    "art": "tb",
+    "text": "Die anteiligen Schulden nach Satz 1 bestimmen sich nach dem Verhältnis des gemeinen Werts ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 9 Satz 1",
+    "art": "tb",
+    "text": "Gehören zum begünstigungsfähigen Vermögen im Sinne des Absatzes 1 Nummer 2 und 3 unmittelb",
+    "grund": "zu grob (48 Wörter)"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 9 Satz 2",
+    "art": "tb",
+    "text": "Die unmittelbar oder mittelbar gehaltenen Finanzmittel, die Vermögensgegenstände des Verwa",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 9 Satz 3",
+    "art": "tb",
+    "text": "Soweit sich in der Verbundvermögensaufstellung Forderungen und Verbindlichkeiten zwischen ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 10 Satz 3",
+    "art": "tb",
+    "text": "Die Entscheidung, ob die Werte von Bedeutung sind, trifft das für die Festsetzung der Erbs",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 10 Satz 4",
+    "art": "tb",
+    "text": "Bei Anteilen an Kapitalgesellschaften, die nach § 11 Absatz 1 des Bewertungsgesetzes zu be",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13c",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Überschreitet der Erwerb von begünstigtem Vermögen im Sinne des § 13b Absatz 2 die Grenze ",
+    "grund": "zu grob (72 Wörter)"
+  },
+  {
+    "norm": "§ 13c",
+    "pfad": "Abs. 2 Satz 4",
+    "art": "tb",
+    "text": "Die bis dahin für frühere Erwerbe gewährte Steuerbefreiung entfällt insoweit mit Wirkung f",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13d",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Grundstücke im Sinne des Absatzes 3",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 14",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Die durch jeden weiteren Erwerb veranlaßte Steuer",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 2 (Teil 2)",
+    "art": "tb",
+    "text": "die Geschwister",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 4 (Teil 2)",
+    "art": "tb",
+    "text": "die Stiefeltern",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 5",
+    "art": "tb",
+    "text": "die Schwiegerkinder",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 6",
+    "art": "tb",
+    "text": "die Schwiegereltern",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "der Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne d",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Dieser Teilbetrag entspricht dem Verhältnis der Summe der Werte des in demselben Zeitpunkt",
+    "grund": "zu grob (53 Wörter)"
+  },
+  {
+    "norm": "§ 19",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Ist im Falle des § 2 Absatz 1 Nummer 1 ein Teil des Vermögens der inländischen Besteuerung",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 19a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Der auf das Vermögen im Sinne des Absatzes 2 entfallende Anteil an der tariflichen Erbscha",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 19a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "bemisst sich nach dem Verhältnis des Werts dieses Vermögens nach Anwendung des § 13a oder ",
+    "grund": "zu grob (78 Wörter)"
+  },
+  {
+    "norm": "§ 20",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "der Erwerber, bei einer Schenkung auch der Schenker, bei einer Zweckzuwendung der mit der ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 20",
+    "pfad": "Abs. 6 Satz 1",
+    "art": "tb",
+    "text": "Versicherungsunternehmen, die vor Entrichtung oder Sicherstellung der Steuer die von ihnen",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 21",
+    "pfad": "Abs. 1 Satz 4",
+    "art": "tb",
+    "text": "ist nur anrechenbar",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 24",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "Die Summe der Jahresbeträge umfaßt die Tilgung und die Verzinsung der Steuer; dabei",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 26",
+    "pfad": "Buchst. a",
+    "art": "tb",
+    "text": "wenn seit der Entstehung der anrechenbaren Steuer nicht mehr als zwei Jahre",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 26",
+    "pfad": "Buchst. b",
+    "art": "tb",
+    "text": "wenn seit der Entstehung der anrechenbaren Steuer mehr als zwei Jahre, aber nicht mehr als",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 27",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "Prozent wenn zwischen den beiden Zeitpunkten der Entstehung der Steuer",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 27",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "liegen 50 nicht mehr als 1 Jahr 45 mehr als 1 Jahr, aber nicht mehr als 2 Jahre 40 mehr al",
+    "grund": "zu grob (84 Wörter)"
+  },
+  {
+    "norm": "§ 28",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "entsprechend dem OECD-Standard für Transparenz und effektiven Informationsaustausch auf Er",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "tb",
+    "text": "Amtshilfe bei der Beitreibung gemäß einem dem Artikel 27 des OECD-Musterabkommens 2017 zur",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Zu dem verfügbaren Vermögen",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "gehören 50 Prozent der Summe der gemeinen Werte des",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "mit der Erbschaft oder Schenkung zugleich übergegangenen Vermögens, das nicht zum begünsti",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 2 Nr. 2",
+    "art": "tb",
+    "text": "dem Erwerber im Zeitpunkt der Entstehung der Steuer (§ 9) gehörenden Vermögens, das nicht ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 4 Nr. 1",
+    "art": "tb",
+    "text": "die Summe der maßgebenden jährlichen Lohnsummen des Betriebs, bei Beteiligungen an einer P",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "der Erwerber innerhalb von sieben Jahren (Behaltensfrist) gegen die Behaltensbedingungen e",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 4 Nr. 3",
+    "art": "tb",
+    "text": "der Erwerber innerhalb von zehn Jahren nach dem Zeitpunkt der Entstehung der Steuer (§ 9) ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 28a",
+    "pfad": "Abs. 4 Nr. 3 Halbs. 3",
+    "art": "tb",
+    "text": "Das verfügbare Vermögen nach Absatz 2",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 29",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "soweit in den Fällen des § 5 Abs. 2 unentgeltliche Zuwendungen auf die Ausgleichsforderung",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 29",
+    "pfad": "Abs. 1 Nr. 4 Halbs. 2",
+    "art": "tb",
+    "text": "wenn die Stiftung Leistungen im Sinne des § 58 Nummer 6 der Abgabenordnung an den Erwerber",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 30",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "wenn der Erwerb auf einer von einem deutschen Gericht, einem deutschen Notar oder einem de",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 30",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "oder Auslandsvermögen gehört",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 33",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "haben, bevor sie Versicherungssummen oder Leibrenten einem anderen als dem Versicherungsne",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Nr. 2",
+    "art": "tb",
+    "text": "die Gerichte und die Notare: die Erteilung von Erbscheinen, Europäischen Nachlasszeugnisse",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "die Gerichte, die Notare und die deutschen Konsuln: die eröffneten Verfügungen von Todes w",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 35",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Die örtliche Zuständigkeit bestimmt sich nach den Verhältnissen des Erwerbers, bei Zweckzu",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 35",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "wenn eine Erbengemeinschaft aus zwei Erben besteht und der eine Miterbe bei der Auseinande",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 36",
+    "pfad": "Abs. 1 Buchst. b",
+    "art": "tb",
+    "text": "die Feststellung und die Bewertung des Erwerbs von Todes wegen, der Schenkungen unter Lebe",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 36",
+    "pfad": "Abs. 1 Buchst. e",
+    "art": "tb",
+    "text": "die Anzeige-, Mitteilungs- und Übersendungspflichten der Gerichte, Behörden, Beamten und N",
+    "grund": "zu grob (66 Wörter)"
+  },
+  {
+    "norm": "§ 37",
+    "pfad": "Abs. 7 Satz 1",
+    "art": "tb",
+    "text": "§ 2 Absatz 1 Nummer 1 und 3 und Absatz 3, § 7 Absatz 8, § 15 Absatz 4, § 16 Absatz 1 und 2",
+    "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 37",
+    "pfad": "Abs. 7 Satz 2",
+    "art": "tb",
+    "text": "§ 2 Absatz 1 Nummer 1 und 3 und Absatz 3, § 16 Absatz 1 und 2, § 19 Absatz 2, § 21 Absatz ",
+    "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 37",
+    "pfad": "Abs. 12 Satz 1",
+    "art": "rf",
+    "text": "finden auf Erwerbe Anwendung, für die die Steuer nach dem 30. Juni 2016 entsteht. § 13a Ab",
+    "grund": "zu grob (92 Wörter)"
+  },
+  {
+    "norm": "§ 37a",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "wenn die Versteuerung nach § 34 des Erbschaftsteuergesetzes (ErbStG) der Deutschen Demokra",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  }
+]

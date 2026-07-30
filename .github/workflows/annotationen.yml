@@ -51,7 +51,10 @@ on:
 
 permissions:
   contents: write
-  models: read
+  # "models: read" ist entfallen: GitHub Models wurde am 30.07.2026 vollständig
+  # abgeschaltet. Der Modellzugang läuft jetzt über die KOSTENLOSE Gemini-Freistufe
+  # (Google AI Studio) und das Secret GEMINI_API_KEY, siehe unten.
+
 
 concurrency:
   group: annotationen-${{ github.ref }}
@@ -111,11 +114,31 @@ jobs:
       - uses: actions/setup-node@v5
         with: { node-version: "22" }
 
+      - name: Modellzugang prüfen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GEMINI_API_KEY:-}" ]; then
+            echo "::warning::GEMINI_API_KEY ist nicht gesetzt — der Lauf bleibt rein syntaktisch (--ohne-ki)."
+            echo "GEMINI_API_KEY nicht gesetzt. Kostenlosen Schlüssel holen: aistudio.google.com/app/apikey" >> "$GITHUB_STEP_SUMMARY"
+          else
+            code="$(curl -s -o /dev/null -w '%{http_code}' \
+              -H "Authorization: Bearer $GEMINI_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d '{"model":"gemini-2.5-flash","max_tokens":4,"messages":[{"role":"user","content":"ping"}]}' \
+              https://generativelanguage.googleapis.com/v1beta/openai/chat/completions || echo 000)"
+            echo "Gemini-API antwortet mit HTTP $code" | tee -a "$GITHUB_STEP_SUMMARY"
+            if [ "$code" != "200" ]; then
+              echo "::warning::Kein Modellzugang (HTTP $code). Schlüssel auf aistudio.google.com/app/apikey prüfen."
+            fi
+          fi
+
       - name: Annotationen erzeugen oder aufwerten
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          KI_MODELLE: openai/gpt-4.1-mini,openai/gpt-4o-mini
-          MAX_MODELLAUFRUFE: "600"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          KI_MODELLE: gemini-2.5-flash,gemini-2.0-flash
+          MAX_MODELLAUFRUFE: "180"
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_LAEUFE: ${{ inputs.laeufe }}
           INPUT_OHNE_KI: ${{ inputs.ohne_ki }}

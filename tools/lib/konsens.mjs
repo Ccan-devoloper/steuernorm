@@ -12,9 +12,9 @@
  */
 
 import { guete, pruefeSpanne } from "./validatoren.mjs";
-import { junktor } from "./syntax.mjs";
+import { junktor, verberst } from "./syntax.mjs";
 
-const ARTEN = ["tb", "rf", "ausn"];
+const ARTEN = ["tb", "rf", "ausn", "def"];
 
 /* ─────────────────────────── Normalisierung ─────────────────────────── */
 
@@ -64,19 +64,21 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
       satztext: einheit.text,
       typ,
       gegenstand: kontext.gegenstand,
+      verberst: syn?.vorfeldrolle === "v1-bedingung" || verberst(einheit.text),
     };
 
     // 1. Kandidaten sammeln: Modell (je Lauf) + Syntaxanalyse als ein weiterer Stimmgeber
     const stimmen = new Map(); // schluessel → { art, text, quellen:Set, gruende:[] }
-    const stimmeAbgeben = (art, text, quelle, grund) => {
+    const stimmeAbgeben = (art, text, quelle, grund, teile = null, anzeige = null) => {
       const t = normText(text);
       if (!t) return;
       let ziel = null;
       for (const [, v] of stimmen) if (v.art === art && gleich(v.text, t)) { ziel = v; break; }
       if (!ziel) {
-        ziel = { art, text: t, quellen: new Set(), gruende: [] };
+        ziel = { art, text: t, teile: teile ?? null, anzeige: anzeige ?? null, quellen: new Set(), gruende: [] };
         stimmen.set(schluessel(art, t), ziel);
       }
+      if (teile && !ziel.teile) { ziel.teile = teile; ziel.anzeige = anzeige; }
       // längere, vollständigere Fassung bevorzugen
       if (t.length > ziel.text.length && t.length <= ziel.text.length * 1.6) ziel.text = t;
       ziel.quellen.add(quelle);
@@ -96,12 +98,20 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
         for (const text of satz[feld] || []) stimmeAbgeben(art, text, `modell#${k}`, satz.begruendung);
       }
     }
-    for (const el of syn.elemente || []) stimmeAbgeben(el.art, el.text, "syntax", el.grund);
+    for (const el of syn.elemente || []) {
+      stimmeAbgeben(el.art, el.text, "syntax", el.grund, el.teile ?? null, el.anzeige ?? null);
+    }
 
     // 2. Veto der Validatoren
     const geprueft = [];
     for (const s of stimmen.values()) {
-      const grund = pruefeSpanne(s, ctx);
+      // Mehrteilige Elemente: jedes Stück muss für sich bestehen.
+      const stuecke = s.teile ?? [s.text];
+      let grund = null;
+      for (const stueck of stuecke) {
+        grund = pruefeSpanne({ art: s.art, text: stueck, grund: s.gruende[0] }, ctx);
+        if (grund) break;
+      }
       if (grund) { abgelehnt.push({ pfad: einheit.pfad, art: s.art, text: s.text.slice(0, 90), grund }); continue; }
       geprueft.push(s);
     }
@@ -142,11 +152,24 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
         (nurSyntax ? 0.6 * syntaxStuetze : (0.55 * anteil + 0.25 * syntaxStuetze + 0.20 * gegen)) * guete(s, ctx)
           + belegBonus,
       );
+      const basis = einheit.von ?? 0;
+      const stuecke = s.teile ?? [s.text];
+      const teileMitOrt = [];
+      let suchAb = 0;
+      for (const stueck of stuecke) {
+        const i = einheit.text.indexOf(stueck, suchAb);
+        const treffer = i === -1 ? einheit.text.indexOf(stueck) : i;
+        if (treffer === -1) continue;
+        teileMitOrt.push({ text: stueck, von: basis + treffer, laenge: stueck.length });
+        suchAb = treffer + stueck.length;
+      }
       return {
         art: s.art,
         text: s.text,
+        anzeige: s.anzeige ?? null,
+        teile: teileMitOrt.length > 1 ? teileMitOrt : null,
         pfad: einheit.pfad,
-        von: (einheit.von ?? 0) + Math.max(0, einheit.text.indexOf(s.text)),
+        von: teileMitOrt[0]?.von ?? basis + Math.max(0, einheit.text.indexOf(s.text)),
         laenge: s.text.length,
         konfidenz: Number(konfidenz.toFixed(3)),
         stimmen: modellStimmen(s),
@@ -261,44 +284,92 @@ function pruefeBeleg(vorschlag, belege) {
  * Reihenfolge: Anwendungsbereich → Voraussetzungen → Ausnahmen → Rechtsfolge.
  */
 export function baueSchema(saetze) {
-  const tb = [];
-  const ausn = [];
-  const rf = [];
+  // Ein Prüfungsschema, das alle Absätze in einen Topf wirft, ist unbrauchbar:
+  // § 15 AStG hätte dann 20 „kumulative Voraussetzungen" quer über neun Absätze,
+  // die einander gar nicht bedingen. Deshalb wird JE ABSATZ ein eigener Block
+  // gebaut; die Absätze stehen nebeneinander, nicht untereinander.
+  const bloecke = new Map();
 
   for (const satz of saetze) {
     if (satz.typ === "anwendung") continue;
+    if (!satz.elemente.length) continue;
+    const absatz = absatzAus(satz.pfad);
+    if (!bloecke.has(absatz)) {
+      bloecke.set(absatz, { absatz, typen: new Map(), tb: [], rf: [], ausn: [], def: [], junktor: null });
+    }
+    const b = bloecke.get(absatz);
+    b.typen.set(satz.typ, (b.typen.get(satz.typ) || 0) + 1);
+    if (satz.junktor && !b.junktor) b.junktor = satz.junktor;
+
     for (const el of satz.elemente) {
-      const eintrag = { t: el.text, pfad: el.pfad, konfidenz: el.konfidenz, beleg: el.beleg ?? null };
-      if (el.art === "tb") tb.push({ ...eintrag, junktor: satz.junktor });
-      else if (el.art === "ausn") ausn.push(eintrag);
-      else rf.push(eintrag);
+      const eintrag = {
+        t: el.anzeige || el.text,
+        pfad: el.pfad,
+        konfidenz: el.konfidenz,
+        beleg: el.beleg ?? null,
+        mehrteilig: Boolean(el.teile),
+      };
+      if (b[el.art]) b[el.art].push(eintrag);
     }
   }
 
   const schema = [];
-  let n = 0;
-  const roemisch = ["I.", "II.", "III.", "IV.", "V.", "VI.", "VII.", "VIII."];
+  for (const b of bloecke.values()) {
+    const typ = [...b.typen.entries()].sort((x, y) => y[1] - x[1])[0]?.[0] ?? "aussage";
+    const schritte = [];
+    const roemisch = ["I.", "II.", "III.", "IV.", "V."];
+    let i = 0;
 
-  if (tb.length) {
-    const jk = tb.find((x) => x.junktor)?.junktor || (tb.length > 1 ? "und" : null);
-    schema.push({
-      n: roemisch[n++], art: "tb",
-      t: tb.length === 1 ? "Voraussetzung" : (jk === "oder" ? "Voraussetzungen (eine genügt)" : "Voraussetzungen (kumulativ)"),
-      junktor: jk,
-      sub: tb.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
-    });
+    if (b.def.length) {
+      schritte.push({
+        n: roemisch[i++], art: "def", t: "Begriffsbestimmung",
+        sub: b.def.map((x, k) => ({ n: `${k + 1}.`, ...x })),
+      });
+    }
+    if (b.tb.length) {
+      const jk = b.junktor || (b.tb.length > 1 ? "und" : null);
+      schritte.push({
+        n: roemisch[i++], art: "tb",
+        t: b.def.length ? "Merkmale des Begriffs"
+          : b.tb.length === 1 ? "Voraussetzung"
+            : jk === "oder" ? "Voraussetzungen (eine genügt)" : "Voraussetzungen (kumulativ)",
+        junktor: b.def.length ? null : jk,
+        sub: b.tb.map((x, k) => ({ n: `${k + 1}.`, ...x })),
+      });
+    }
+    if (b.ausn.length) {
+      schritte.push({
+        n: roemisch[i++], art: "ausn", t: "Ausnahmen und Rückausnahmen",
+        sub: b.ausn.map((x, k) => ({ n: `${k + 1}.`, ...x })),
+      });
+    }
+    if (b.rf.length) {
+      schritte.push({
+        n: roemisch[i++], art: "rf", t: "Rechtsfolge",
+        sub: b.rf.map((x, k) => ({ n: `${k + 1}.`, ...x })),
+      });
+    }
+    if (!schritte.length) continue;
+
+    schema.push({ absatz: b.absatz, typ, rolle: ROLLE[typ] ?? null, schritte });
   }
-  if (ausn.length) {
-    schema.push({
-      n: roemisch[n++], art: "ausn", t: "Ausnahmen und Rückausnahmen",
-      sub: ausn.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
-    });
-  }
-  if (rf.length) {
-    schema.push({
-      n: roemisch[n++], art: "rf", t: "Rechtsfolge",
-      sub: rf.map((x, i) => ({ n: `${i + 1}.`, t: x.t, pfad: x.pfad, konfidenz: x.konfidenz, beleg: x.beleg })),
-    });
-  }
+
   return schema;
+}
+
+/** Kurze Charakterisierung, was der Absatz überhaupt tut. */
+const ROLLE = {
+  konditional: "Voraussetzungen und Rechtsfolge",
+  definition: "Begriffsbestimmung",
+  gleichstellung: "Gleichstellung",
+  fiktion: "Fiktion",
+  tarif: "Bemessung und Satz",
+  verweisung: "Verweisung",
+  rechenregel: "Rechenregel",
+  aussage: "Anordnung",
+};
+
+function absatzAus(pfad) {
+  const m = /^Abs\. (\d+[a-z]?)/.exec(String(pfad || ""));
+  return m ? `Abs. ${m[1]}` : "";
 }

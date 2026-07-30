@@ -12,6 +12,7 @@
     --linie:#E4E4DE; --linie-stark:#C9C9C2; --feld:#F3F3EF;
     --tb:#FBEEA8; --tb-kante:#D9B417; --rf:#C6E7CE; --rf-kante:#3D8A55;
     --ausn:#F3D9D2; --ausn-kante:#B2593F;
+    --def:#DCE3F0; --def-kante:#4A6FA5;
     --beleg:#1F5F8B;
     --warn:#8C3A2B;
     --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
@@ -28,6 +29,7 @@
       --linie:#282A2F; --linie-stark:#3E4147; --feld:#1D1F24;
       --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
       --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
+      --def:#232C3D; --def-kante:#7B9BC9;
     }
   }
   :root[data-thema=dunkel]{
@@ -35,6 +37,7 @@
     --linie:#282A2F; --linie-stark:#3E4147; --feld:#1D1F24;
     --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
     --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
+    --def:#232C3D; --def-kante:#7B9BC9;
   }
   :root[data-groesse=klein]{ --basis:15.5px; --spalte:32rem }
   :root[data-groesse=gross]{ --basis:19px;   --spalte:36rem }
@@ -66,6 +69,7 @@
   .schalter button[aria-pressed=true] .swatch.tb{background:var(--tb);border-color:var(--tb-kante)}
   .schalter button[aria-pressed=true] .swatch.rf{background:var(--rf);border-color:var(--rf-kante)}
   .schalter button[aria-pressed=true] .swatch.ausn{background:var(--ausn);border-color:var(--ausn-kante)}
+  .schalter button[aria-pressed=true] .swatch.def{background:var(--def);border-color:var(--def-kante)}
   .burger{display:none;border:0;background:transparent;padding:6px;cursor:pointer;color:var(--gedeckt)}
 
   /* Gesetzesleiste */
@@ -109,7 +113,18 @@
   .stand .veraltet{color:var(--warn)}
   .stand a{color:var(--leise)}
 
-  .text{max-width:var(--spalte);margin-top:22px;font-family:var(--serif);font-size:var(--basis);line-height:1.72}
+  .text{max-width:var(--spalte);margin-top:22px;font-family:var(--serif);font-size:var(--basis);
+    line-height:1.72;text-wrap:pretty;
+    -webkit-hyphens:auto;hyphens:auto;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;
+    hyphenate-limit-chars:6 3 3}
+
+  /* Blocksatz. Im Deutschen nur mit Silbentrennung vertretbar — ohne sie entstehen
+     durch die langen Komposita Wortlöcher, die den Lesefluss zerstören. Deshalb
+     hyphens:auto und lang="de" am Textknoten, und unterhalb von 34rem Spaltenbreite
+     schaltet der Blocksatz automatisch ab: für Blocksatz zu schmale Spalten sind
+     schlechter lesbar als jeder Flattersatz. */
+  body[data-satz=block] .text{text-align:justify;text-align-last:start}
+  @media (max-width:620px){ body[data-satz=block] .text{text-align:left} }
   .absatz{position:relative;padding-left:44px;margin-bottom:18px}
   .absatz>.az{position:absolute;left:0;top:5px;font-family:var(--mono);font-size:11px;color:var(--leise)}
   .text p{margin:0 0 10px}
@@ -136,15 +151,24 @@
   body[data-intensitaet=dezent] mark.tb{box-shadow:inset 0 -2px 0 var(--tb-kante)}
   body[data-intensitaet=dezent] mark.rf{box-shadow:inset 0 -2px 0 var(--rf-kante)}
   body[data-intensitaet=dezent] mark.ausn{border-bottom:2px dotted var(--ausn-kante)}
+  body[data-intensitaet=dezent] mark.def{box-shadow:inset 0 -2px 0 var(--def-kante)}
 
   body[data-intensitaet=voll] mark.tb{background:var(--tb);box-shadow:inset 0 -2px 0 var(--tb-kante)}
   body[data-intensitaet=voll] mark.rf{background:var(--rf);box-shadow:inset 0 -2px 0 var(--rf-kante)}
   body[data-intensitaet=voll] mark.ausn{background:var(--ausn);box-shadow:inset 0 -2px 0 var(--ausn-kante)}
+  body[data-intensitaet=voll] mark.def{background:var(--def);box-shadow:inset 0 -2px 0 var(--def-kante)}
   body[data-intensitaet=voll] mark.tb.rf{background:linear-gradient(180deg,var(--tb) 0 50%,var(--rf) 50% 100%)}
 
   body[data-tb=aus] mark.tb:not(.rf):not(.ausn),
   body[data-rf=aus] mark.rf:not(.tb):not(.ausn),
-  body[data-ausn=aus] mark.ausn:not(.tb):not(.rf){box-shadow:none;border-bottom:0;background:transparent}
+  body[data-ausn=aus] mark.ausn:not(.tb):not(.rf),
+  body[data-def=aus] mark.def:not(.tb):not(.rf){box-shadow:none;border-bottom:0;background:transparent}
+
+  /* Mehrteilige Spannen („werden … zugerechnet"): die Stücke gehören zusammen und
+     werden beim Überfahren gemeinsam hervorgehoben. Ein kleines Zeichen weist auf
+     die Fortsetzung hin. */
+  mark[data-teil]:not([data-teil="1"])::before{content:"…\2009";color:var(--leise);font-size:.8em}
+  body.fokus mark.hell[data-gruppe]{background:var(--tb)}
 
   mark.unsicher{box-shadow:none!important;border-bottom:1px dashed var(--linie-stark)}
   mark[data-beleg]{cursor:help}
@@ -219,6 +243,13 @@
     color:var(--leise);width:104px}
   .belege a{color:var(--beleg)}
 
+  .sblock + .sblock{margin-top:20px;padding-top:16px;border-top:1px solid var(--linie)}
+  .sblock-kopf{margin:0 0 8px;display:flex;gap:9px;align-items:baseline}
+  .sblock-kopf .sabs{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tinte)}
+  .sblock-kopf .srolle{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--leise)}
+  ol.leiter .schritt.def{background:var(--def)}
+  ol.leiter .mehrteilig{color:var(--leise);font-size:11px;flex:none;cursor:help}
   ol.leiter li.koppelbar{cursor:pointer;border-radius:2px;margin-left:-4px;padding-left:4px}
   ol.leiter li.koppelbar:hover,ol.leiter li.koppelbar:focus-visible{background:var(--feld);outline:0}
   ol.leiter .belegzeichen{color:var(--beleg);text-decoration:none;font-size:11px;flex:none}
@@ -277,7 +308,7 @@
   .schliessen button{border:0;background:transparent;cursor:pointer;padding:6px;color:var(--gedeckt)}
 </style>
 </head>
-<body data-tb="an" data-rf="an" data-ausn="an">
+<body data-tb="an" data-rf="an" data-ausn="an" data-def="an" data-satz="flatter">
 
 <header>
   <div class="kopf">
@@ -290,7 +321,9 @@
       <button id="btn-tb" aria-pressed="true"><span class="swatch tb"></span>Tatbestand</button>
       <button id="btn-rf" aria-pressed="true"><span class="swatch rf"></span>Rechtsfolge</button>
       <button id="btn-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausnahme</button>
+      <button id="btn-def" aria-pressed="true"><span class="swatch def"></span>Begriff</button>
       <button id="btn-intensitaet" class="stumm" title="Stärke der Markierung">dezent</button>
+      <button id="btn-satz" class="stumm" title="Flattersatz oder Blocksatz">Flattersatz</button>
       <button id="btn-groesse" class="stumm" title="Schriftgröße">A</button>
       <button id="btn-thema" class="stumm" title="Hell oder dunkel">◐</button>
     </div>
@@ -316,6 +349,7 @@
   <button id="fb-tb" aria-pressed="true"><span class="swatch tb"></span>TB</button>
   <button id="fb-rf" aria-pressed="true"><span class="swatch rf"></span>RF</button>
   <button id="fb-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausn.</button>
+  <button id="fb-def" aria-pressed="true"><span class="swatch def"></span>Begr.</button>
   <button id="fb-intensitaet" class="stumm">dezent</button>
 </div>
 
@@ -433,7 +467,7 @@ function markierungenAnlegen(wurzel, anm){
   const zeiger = new Map(knoten.map(n => [n, new Int16Array(n.nodeValue.length).fill(-1)]));
   let verwaist = 0;
 
-  const BIT = { tb: 1, rf: 2, ausn: 4 };
+  const BIT = { tb: 1, rf: 2, ausn: 4, def: 8 };
 
   /* Format 3: Jede Spanne trägt eine Position. Damit wird genau eine Fundstelle
      markiert statt jeder Wiederholung derselben Zeichenkette im Normtext. */
@@ -441,15 +475,25 @@ function markierungenAnlegen(wurzel, anm){
   if (Array.isArray(anm.saetze)){
     for (const satz of anm.saetze){
       for (const el of satz.elemente || []){
-        spannen.push({ art: el.art, text: el.text, von: el.von,
-          konfidenz: el.konfidenz, pfad: el.pfad || satz.pfad, beleg: el.beleg || null });
+        // Mehrteilige Spannen: „werden … zugerechnet" liegt an zwei Stellen im
+        // Text und gehört trotzdem zu EINEM Merkmal.
+        const stuecke = Array.isArray(el.teile) && el.teile.length
+          ? el.teile
+          : [{ text: el.text, von: el.von }];
+        const gruppe = spannen.length;
+        stuecke.forEach((st, k) => spannen.push({
+          art: el.art, text: st.text, von: st.von,
+          konfidenz: el.konfidenz, pfad: el.pfad || satz.pfad, beleg: el.beleg || null,
+          gruppe, teil: k + 1, teile: stuecke.length,
+          anzeige: el.anzeige || el.text,
+        }));
       }
     }
   } else {
     /* Rückfall auf das alte Format: ohne Position bleibt nur die Textsuche. */
-    for (const art of ["tb", "rf", "ausn"]){
-      const feld = art === "ausn" ? "ausnahmen" : art;
-      for (const t of anm[feld] || []) spannen.push({ art, text: t, von: null, konfidenz: null, pfad: null, beleg: null });
+    for (const art of ["tb", "rf", "ausn", "def"]){
+      const feld = art === "ausn" ? "ausnahmen" : art === "def" ? "definitionen" : art;
+      for (const t of anm[feld] || []) spannen.push({ art, text: t, von: null, konfidenz: null, pfad: null, beleg: null, gruppe: null, teil: 1, teile: 1 });
     }
   }
 
@@ -500,11 +544,17 @@ function markierungenAnlegen(wurzel, anm){
         if (bit & 1) teile.push("tb");
         if (bit & 2) teile.push("rf");
         if (bit & 4) teile.push("ausn");
+        if (bit & 8) teile.push("def");
         if (u) teile.push("unsicher");
         mark.className = teile.join(" ");
         const sp = spannen[z];
         if (sp){
           if (sp.pfad) mark.dataset.pfad = sp.pfad;
+          if (sp.teile > 1){
+            mark.dataset.gruppe = String(sp.gruppe);
+            mark.dataset.teil = String(sp.teil);
+            mark.title = sp.anzeige;
+          }
           if (sp.beleg){
             mark.dataset.beleg = sp.beleg.fundstelle || sp.beleg.quelle || "";
             mark.title = [sp.beleg.quelle, sp.beleg.fundstelle].filter(Boolean).join(" · ");
@@ -702,7 +752,8 @@ function schemaBauen(anm){
   k.textContent = "Prüfungsschema";
   wrap.appendChild(k);
 
-  if (!anm || !Array.isArray(anm.schema) || !anm.schema.length){
+  const schema = Array.isArray(anm && anm.schema) ? anm.schema : [];
+  if (!schema.length){
     const p = document.createElement("p");
     p.className = "leer";
     p.textContent = anm && anm.typ === "anwendung"
@@ -712,41 +763,69 @@ function schemaBauen(anm){
     return wrap;
   }
 
-  const ol = document.createElement("ol");
-  ol.className = "leiter";
-  for (const stufe of anm.schema){
-    const li = document.createElement("li");
-    const rn = document.createElement("span");
-    rn.className = "rn"; rn.textContent = stufe.n || "";
-    const t = document.createElement("span");
-    t.className = "schritt" + (stufe.art ? " " + stufe.art : "");
-    t.textContent = stufe.t;
-    li.append(rn, t);
+  /* Format 4: je Absatz ein eigener Block. Ein Schema, das alle Absätze in einen
+     Topf wirft, ist bei Normen wie § 15 AStG unbrauchbar — dort bedingen die neun
+     Absätze einander nicht, sie stehen nebeneinander. */
+  const bloecke = schema[0] && schema[0].schritte ? schema : [{ absatz: "", schritte: schema }];
 
-    if (stufe.junktor){
-      const j = document.createElement("span");
-      j.className = "junktor";
-      j.textContent = stufe.junktor === "oder" ? "alternativ" : "kumulativ";
-      li.appendChild(j);
+  for (const block of bloecke){
+    const abschnitt = document.createElement("section");
+    abschnitt.className = "sblock";
+
+    if (block.absatz || block.rolle){
+      const kopf = document.createElement("p");
+      kopf.className = "sblock-kopf";
+      if (block.absatz){
+        const a = document.createElement("span");
+        a.className = "sabs"; a.textContent = block.absatz;
+        kopf.appendChild(a);
+      }
+      if (block.rolle){
+        const r = document.createElement("span");
+        r.className = "srolle"; r.textContent = block.rolle;
+        kopf.appendChild(r);
+      }
+      abschnitt.appendChild(kopf);
     }
 
-    if (Array.isArray(stufe.sub) && stufe.sub.length){
-      const ul = document.createElement("ul");
-      for (const x of stufe.sub){
-        const l = document.createElement("li");
-        if (typeof x === "string"){
-          l.appendChild(document.createTextNode(x));
-        } else {
+    const ol = document.createElement("ol");
+    ol.className = "leiter";
+    for (const stufe of block.schritte || []){
+      const li = document.createElement("li");
+      const rn = document.createElement("span");
+      rn.className = "rn"; rn.textContent = stufe.n || "";
+      const t = document.createElement("span");
+      t.className = "schritt" + (stufe.art ? " " + stufe.art : "");
+      t.textContent = stufe.t;
+      li.append(rn, t);
+
+      if (stufe.junktor){
+        const j = document.createElement("span");
+        j.className = "junktor";
+        j.textContent = stufe.junktor === "oder" ? "alternativ" : "kumulativ";
+        li.appendChild(j);
+      }
+
+      if (Array.isArray(stufe.sub) && stufe.sub.length){
+        const ul = document.createElement("ul");
+        for (const x of stufe.sub){
+          const l = document.createElement("li");
+          if (typeof x === "string"){ l.appendChild(document.createTextNode(x)); ul.appendChild(l); continue; }
           if (typeof x.konfidenz === "number" && x.konfidenz < 0.5) l.classList.add("schwach");
           const w = document.createElement("span");
           w.className = "w";
           w.textContent = x.t;
           l.appendChild(w);
-
+          if (x.mehrteilig){
+            const m = document.createElement("span");
+            m.className = "mehrteilig";
+            m.textContent = "⧉";
+            m.title = "Satzklammer: die Wendung steht an zwei Stellen im Normtext";
+            l.appendChild(m);
+          }
           if (x.beleg){
             const b = document.createElement("a");
-            b.className = "belegzeichen";
-            b.textContent = "※";
+            b.className = "belegzeichen"; b.textContent = "※";
             b.title = [x.beleg.quelle, x.beleg.fundstelle].filter(Boolean).join(" · ");
             if (x.beleg.url){ b.href = x.beleg.url; b.target = "_blank"; b.rel = "noopener"; }
             l.appendChild(b);
@@ -757,14 +836,15 @@ function schemaBauen(anm){
             l.appendChild(pf);
             koppeln(l, x.pfad, x.t);
           }
+          ul.appendChild(l);
         }
-        ul.appendChild(l);
+        li.appendChild(ul);
       }
-      li.appendChild(ul);
+      ol.appendChild(li);
     }
-    ol.appendChild(li);
+    abschnitt.appendChild(ol);
+    wrap.appendChild(abschnitt);
   }
-  wrap.appendChild(ol);
   return wrap;
 }
 
@@ -786,9 +866,18 @@ function koppeln(knoten, pfad, text){
 function passendeMarken(pfad, text){
   const alle = [...document.querySelectorAll('#haupt mark[data-pfad]')].filter(m => m.dataset.pfad === pfad);
   if (!text) return alle;
-  const anfang = text.slice(0, 24);
-  const genau = alle.filter(m => text.includes(m.textContent.trim()) || m.textContent.includes(anfang));
-  return genau.length ? genau : alle;
+  const stuecke = String(text).split(" … ").map(x => x.trim()).filter(Boolean);
+  const genau = alle.filter(m => {
+    const t = m.textContent.replace(/^…\s*/, "").trim();
+    return stuecke.some(st => st.includes(t) || t.includes(st.slice(0, 24)));
+  });
+  if (!genau.length) return alle;
+  // Gehört ein Treffer zu einer mehrteiligen Spanne, alle Teile mitnehmen.
+  const gruppen = new Set(genau.map(m => m.dataset.gruppe).filter(Boolean));
+  if (!gruppen.size) return genau;
+  const erweitert = new Set(genau);
+  for (const m of alle) if (gruppen.has(m.dataset.gruppe)) erweitert.add(m);
+  return [...erweitert];
 }
 
 function fokussieren(pfad, text){
@@ -973,6 +1062,7 @@ function normZeichnen(){
   // Text
   const text = document.createElement("div");
   text.className = "text";
+  text.lang = "de";   // Voraussetzung für hyphens:auto — ohne das trennt kein Browser
   for (const a of norm.abs){
     const d = document.createElement("div");
     d.className = "absatz";
@@ -1100,6 +1190,23 @@ async function start(){
   schalterSetzen("ausn", gemerkt("marker-ausn", "an") === "an");
   el("btn-ausn").onclick = () => schalterSetzen("ausn", document.body.dataset.ausn !== "an");
 
+  schalterSetzen("def", gemerkt("marker-def", "an") === "an");
+  el("btn-def").onclick = () => schalterSetzen("def", document.body.dataset.def !== "an");
+
+  // Satzart. Voreinstellung Flattersatz: Er ist über alle Fensterbreiten hinweg
+  // am zuverlässigsten lesbar. Blocksatz wirkt bei Gesetzestexten ruhiger und
+  // amtlicher, verlangt im Deutschen aber zwingend Silbentrennung — die ist im
+  // CSS aktiviert und der Textknoten trägt lang="de".
+  function satzSetzen(wert){
+    const w = wert === "block" ? "block" : "flatter";
+    document.body.dataset.satz = w;
+    el("btn-satz").textContent = w === "block" ? "Blocksatz" : "Flattersatz";
+    el("btn-satz").setAttribute("aria-label", "Satzart: " + (w === "block" ? "Blocksatz" : "Flattersatz"));
+    merken("satzart", w);
+  }
+  satzSetzen(gemerkt("satzart", "flatter"));
+  el("btn-satz").onclick = () => satzSetzen(document.body.dataset.satz === "block" ? "flatter" : "block");
+
   // Stärke der Markierung: aus · dezent · voll
   const STUFEN = ["aus", "dezent", "voll"];
   function intensitaetSetzen(wert){
@@ -1143,7 +1250,7 @@ async function start(){
     themaSetzen(THEMEN[(THEMEN.indexOf(gemerkt("thema", "system")) + 1) % THEMEN.length]);
 
   // Fußleiste auf schmalen Fenstern spiegelt die Kopfschalter.
-  for (const art of ["tb", "rf", "ausn"]){
+  for (const art of ["tb", "rf", "ausn", "def"]){
     const b = el("fb-" + art);
     if (b) b.onclick = () => schalterSetzen(art, document.body.dataset[art] !== "an");
   }

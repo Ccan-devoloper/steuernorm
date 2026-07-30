@@ -25,6 +25,7 @@ const FINIT = [
   "findet", "finden", "ergibt", "ergeben", "tritt", "treten", "steht", "stehen",
   "bedarf", "bedürfen", "erfolgt", "erfolgen", "endet", "enden", "beginnt", "beginnen",
   "richtet", "richten", "zählt", "zählen", "gehört", "gehören", "umfasst", "umfassen",
+  "steht", "stehen", "stand", "standen", "greift", "greifen", "liegt", "liegen",
   "übersteigt", "übersteigen", "erhöht", "vermindert", "ermäßigt", "ändert", "ändern",
 ];
 const FINIT_RE = new RegExp(`\\b(${FINIT.join("|")})\\b`, "gi");
@@ -61,7 +62,13 @@ const FIKTION = /\b(gilt als|gelten als|wird .{0,40} behandelt|werden .{0,40} be
 
 /** Definition. */
 const DEFINITION = /\b(im Sinne (dieses Gesetzes|des|dieser Vorschrift)|ist|sind)\b.{0,80}\b(wenn|die|der|das)\b/i;
-const DEFINITION_STARK = /\b(im Sinne dieses Gesetzes|bezeichnet den|bezeichnet die|Begriff)\b/i;
+const DEFINITION_STARK = /\b(im Sinne dieses Gesetzes|im Sinne dieser Vorschrift|bezeichnet den|bezeichnet die|Begriff)\b/i;
+
+/** „Familienstiftungen sind Stiftungen, bei denen …" — Legaldefinition. */
+const DEFINITION_MUSTER = /^([A-ZÄÖÜ][\wäöüß-]*(?:\s+(?:und|oder)\s+[A-ZÄÖÜ]?[\wäöüß-]+)?)\s+(ist|sind)\s+(.{12,})/;
+
+/** „Den Stiftungen stehen sonstige Zweckvermögen … gleich." — Gleichstellung. */
+const GLEICHSTELLUNG = /\b(steh(?:t|en)\b[\s\S]{5,120}\bgleich|gleichgestellt|gleich\s*\.?\s*$)/i;
 
 /** Rechenregel / Rundung. */
 const RECHENREGEL = /\b(bleiben außer Ansatz|bleibt außer Ansatz|ist abzurunden|ist aufzurunden|auf volle|Bruchteile|abgerundet|aufgerundet|kaufmännisch gerundet)\b/i;
@@ -72,6 +79,62 @@ const TARIF = /\b(beträgt|bemisst sich|Steuersatz|Zuschlagsatz|Prozent|vom Hund
 /** Normgegenstand-Muster: bloßes Subjekt, das kein Tatbestandsmerkmal ist. */
 const PRONOMEN = /^(er|sie|es|dieser|diese|dieses|derselbe|dasselbe|jener|dies|das|dazu|hierzu|darunter|hierunter|dabei|hierbei|davon|hiervon|darin|hierin|dafür|hierfür|dem|denen|deren|dessen|entsprechendes|gleiches|das Gleiche|Satz 1|Sätze 1)$/i;
 const BLOSSES_SUBJEKT = /^(der|die|das|dieser|diese|dieses|ein|eine)\s+[A-ZÄÖÜ][\wäöüß-]*(\s+(auf|für|nach|über|zur|zum|des|der)\s+[\wäöüß§.\s-]{0,40})?$/i;
+
+/* ─────────────────────── Satzklammer (Verbklammer) ─────────────────────── */
+
+/**
+ * Der deutsche Hauptsatz bildet eine Klammer: Das finite Verb steht an zweiter
+ * Stelle, der nicht-finite Teil ganz am Ende.
+ *
+ *   „Vermögen und Einkünfte … WERDEN dem Stifter … entsprechend ihrem Anteil ZUGERECHNET."
+ *
+ * Wer nur am finiten Verb schneidet, verliert die eigentliche Rechtsfolge. Deshalb
+ * wird der Klammerschluss eigens gesucht; die Rechtsfolge besteht dann aus ZWEI
+ * Textstücken, die zusammengehören.
+ */
+
+/** Partizip II und Infinitivkonstruktionen, die einen Klammerschluss bilden. */
+const KLAMMERSCHLUSS = new RegExp(
+  "(?:^|\\s)("
+  + "zu\\s+[a-zäöüß]+en"                                  // „zu erheben", „zu entrichten"
+  + "|[a-zäöüß]*zu[a-zäöüß]+en"                            // „anzuwenden", „abzuziehen"
+  + "|ge[a-zäöüß]{2,}(?:t|en)"                              // „gezahlt", „gegeben"
+  + "|(?:an|ab|auf|aus|bei|ein|nach|vor|zu|über|unter|um|mit|fort|hinzu|gleich)"
+  + "ge[a-zäöüß]{2,}(?:t|en)"                               // „zugerechnet", „angerechnet"
+  + "|(?:be|er|ent|ver|zer|emp|miss)[a-zäöüß]{2,}(?:t|en)"  // „erhoben", „vermindert"
+  + "|gleich|gleichgestellt|unberührt|maßgebend|anzusetzen|außer\\s+Ansatz"
+  + ")\\s*$",
+  "i",
+);
+
+/** Finite Hilfs- und Modalverben, die eine Klammer eröffnen können. */
+const KLAMMER_AUF = /\b(wird|werden|wurde|wurden|ist|sind|war|waren|hat|haben|hatte|hatten|kann|können|darf|dürfen|muss|müssen|soll|sollen|bleibt|bleiben|steht|stehen|gilt|gelten)\b/i;
+
+/**
+ * Findet den Klammerschluss eines Rechtssatzes.
+ * @returns {{von:number, text:string}|null}
+ */
+export function klammerschluss(satz, abVerb = 0) {
+  const rumpf = satz.replace(/[.;]\s*$/, "");
+  if (!KLAMMER_AUF.test(rumpf.slice(abVerb, abVerb + 40))) return null;
+
+  // Nebensätze und Klammerzusätze ausblenden: Der Klammerschluss gehört zum
+  // HAUPTSATZ und steht am Ende von dessen Material, nicht am Satzende.
+  const maske = maskiere(rumpf);
+  let ende = maske.length;
+  while (ende > 0 && (maske[ende - 1] === "\u0000" || /[\s,;]/.test(maske[ende - 1]))) ende--;
+  if (ende <= abVerb + 3) return null;
+
+  const hauptsatz = rumpf.slice(0, ende);
+  const treffer = KLAMMERSCHLUSS.exec(hauptsatz);
+  if (!treffer) return null;
+
+  const von = treffer.index + (treffer[0].length - treffer[1].length);
+  if (von <= abVerb + 3) return null;
+  const text = rumpf.slice(von, ende).trim();
+  if (!text || text.split(/\s+/).length > 4) return null;
+  return { von, bis: ende, text };
+}
 
 /* ─────────────────────────── Hilfen ─────────────────────────── */
 
@@ -111,6 +174,18 @@ export function finitesVerb(satz) {
   return null;
 }
 
+/** Wie finitesVerb, aber auf einem bereits maskierten Text. */
+export function finitesVerbAusserhalb(maskiert) {
+  const maske = maskiere(maskiert);
+  FINIT_RE.lastIndex = 0;
+  let treffer;
+  while ((treffer = FINIT_RE.exec(maske)) !== null) {
+    if (maske[treffer.index] === "\u0000" || maskiert[treffer.index] === "\u0000") continue;
+    return { index: treffer.index, form: treffer[0] };
+  }
+  return null;
+}
+
 /** Beginnt der Satz mit dem finiten Verb? („Ist die Steuer … abgegolten, gilt …") */
 export function verberst(satz) {
   const erstes = satz.trim().split(/\s+/)[0] || "";
@@ -129,10 +204,12 @@ export function normtyp(satz, kontext = {}) {
   if (ANWENDUNGS_TITEL.test(kontext.normtitel || "")) return "anwendung";
   if (ANWENDUNGSVORSCHRIFT.test(satz)) return "anwendung";
   if (RECHENREGEL.test(satz)) return "rechenregel";
+  if (GLEICHSTELLUNG.test(satz)) return "gleichstellung";
   if (FIKTION.test(satz)) return "fiktion";
   if (TARIF.test(satz) && /\d/.test(satz)) return "tarif";
   if (VERWEISUNG.test(satz) && !/\bwenn\b|\bsoweit\b/i.test(satz)) return "verweisung";
   if (DEFINITION_STARK.test(satz)) return "definition";
+  if (DEFINITION_MUSTER.test(satz) && !SUBJUNKTION.test(satz.slice(0, 24))) return "definition";
   if (verberst(satz) || SUBJUNKTION.test(satz)) return "konditional";
   const v = finitesVerb(satz);
   if (v) {
@@ -160,8 +237,27 @@ export const NICHT_MARKIEREN = new Set(["anwendung"]);
 export function zerlege(satz, kontext = {}) {
   const typ = normtyp(satz, kontext);
   const elemente = [];
+  /**
+   * Element aus mehreren, im Text auseinanderliegenden Stücken.
+   * Jedes Stück ist für sich wörtlich; nur die Anzeige wird zusammengefügt.
+   * Nötig für die Satzklammer („werden … zugerechnet") und für Rechtsfolgen,
+   * die von einem eingeschobenen Bedingungssatz unterbrochen werden.
+   */
+  const merkTeile = (art, stuecke, grund) => {
+    const teile = stuecke.map(saubere).filter(gehaltvoll);
+    if (!teile.length) return;
+    if (teile.length === 1) { merk(art, teile[0], grund); return; }
+    if (elemente.some((e) => e.art === art && e.text === teile[0])) return;
+    elemente.push({
+      art, text: teile[0], teile,
+      anzeige: teile.join(" … "),
+      grund: `${grund} (mehrteilig)`,
+    });
+  };
+  const merkKlammer = (art, erstes, zweites, grund) => merkTeile(art, [erstes, zweites], grund);
+
   const merk = (art, text, grund) => {
-    const t = String(text || "").trim().replace(/^[,;:]\s*/, "").replace(/[.,;:]$/, "");
+    const t = saubere(text);
     if (!gehaltvoll(t)) return;
     if (elemente.some((e) => e.text === t)) return;
     elemente.push({ art, text: t, grund });
@@ -185,6 +281,33 @@ export function zerlege(satz, kontext = {}) {
     }
   }
 
+  // Legaldefinition: „Familienstiftungen sind Stiftungen, bei denen …"
+  // Der definierte Begriff ist weder Tatbestand noch Rechtsfolge, sondern
+  // eine eigene Kategorie. Die Merkmale dahinter sind Tatbestandsmerkmale.
+  if (typ === "definition") {
+    const m = DEFINITION_MUSTER.exec(satz);
+    if (m) {
+      merk("def", m[1], "Definiendum vor dem Kopulaverb");
+      merk("tb", m[3], "Definiens — Merkmale des Begriffs");
+      return { typ, vorfeldrolle: "definiendum", elemente };
+    }
+  }
+
+  // Gleichstellung: „Den Stiftungen stehen sonstige Zweckvermögen … gleich."
+  if (typ === "gleichstellung") {
+    const v0 = finitesVerb(satz);
+    if (v0) {
+      const k0 = klammerschluss(satz, v0.index);
+      merk("tb", satz.slice(v0.index + v0.form.length, k0 ? k0.von : satz.length),
+        "Gleichgestellter Gegenstand");
+      const rf = k0
+        ? { text: satz.slice(0, v0.index + v0.form.length), zweit: k0.text }
+        : { text: satz.slice(0, v0.index + v0.form.length), zweit: null };
+      merkKlammer("rf", rf.text, rf.zweit, "Gleichstellungsanordnung");
+      return { typ, vorfeldrolle: "gleichstellung", elemente };
+    }
+  }
+
   // Tarif- und Rechenregelsätze ohne Bedingungsteil sind vollständig Rechtsfolge.
   if ((typ === "tarif" || typ === "rechenregel") && !SUBJUNKTION.test(satz) && !verberst(satz)) {
     const v0 = finitesVerb(satz);
@@ -203,20 +326,40 @@ export function zerlege(satz, kontext = {}) {
   }
 
   // Eingeleiteter Konditionalsatz: „…, wenn/soweit …"
+  // Alles wird am ORIGINALSATZ gerechnet, damit jedes Teilstück wörtlich bleibt
+  // und die Positionsanker später stimmen.
   const kond = konditionalSpanne(satz);
   if (kond) {
     merk("tb", kond.text, `Konditionalsatz mit „${kond.einleitung}"`);
-    const rest = (satz.slice(0, kond.von) + " " + satz.slice(kond.bis)).replace(/\s+/g, " ").trim();
-    const v = finitesVerb(rest);
-    if (v) {
-      const vf = rest.slice(0, v.index).trim();
-      const nf = rest.slice(v.index).trim();
+
+    // Finites Verb des Hauptsatzes, Bedingungssatz ausgeblendet
+    const ohne = satz.slice(0, kond.von) + "\u0000".repeat(kond.bis - kond.von) + satz.slice(kond.bis);
+    const vh = finitesVerbAusserhalb(ohne);
+    if (vh) {
+      const vorfeldRoh = satz.slice(0, vh.index);
+      const vf = saubere(vorfeldRoh.replace(/\u0000+/g, " "));
       const rolle = vorfeldrolle(vf);
-      if (rolle === "rf") { merk("rf", vf, "Prädikativ im Vorfeld"); merk("tb", nf, "Nachfeld nach prädikativem Vorfeld"); }
-      else if (rolle === "tb") { merk("tb", vf, "Konditionales Adverbial im Vorfeld"); merk("rf", nf, "Hauptsatzprädikat"); }
-      else merk("rf", nf, "Hauptsatzprädikat (Vorfeld ist Normgegenstand)");
-    } else if (rest.length > 3) {
-      merk("rf", rest, "Hauptsatz nach vorangestelltem Bedingungssatz");
+      const kl = klammerschluss(ohne, vh.index);
+      const ende = kl ? kl.bis : satz.length;
+
+      // Stücke der Rechtsfolge: vom finiten Verb bis zum Ende, ohne den Bedingungssatz
+      const stuecke = [];
+      let pos = vh.index;
+      if (kond.von > pos && kond.von < ende) {
+        stuecke.push(satz.slice(pos, kond.von));
+        pos = kond.bis;
+      }
+      if (pos < ende) stuecke.push(satz.slice(pos, ende));
+
+      if (rolle === "rf") {
+        merk("rf", vf, "Prädikativ im Vorfeld");
+        merkTeile("tb", stuecke, "Nachfeld trägt die Voraussetzungen");
+      } else if (rolle === "tb") {
+        if (vf) merk("tb", vf, "Konditionales Adverbial im Vorfeld");
+        merkTeile("rf", stuecke, "Hauptsatzprädikat");
+      } else {
+        merkTeile("rf", stuecke, "Hauptsatzprädikat (Vorfeld ist Normgegenstand)");
+      }
     }
     return { typ, vorfeldrolle: "konditionalsatz", elemente };
   }
@@ -232,6 +375,10 @@ export function zerlege(satz, kontext = {}) {
   const nachfeld = satz.slice(v.index).trim();
   const rolle = vorfeldrolle(vorfeld);
 
+  // Satzklammer: „werden … zugerechnet". Ohne diesen Schritt geht die
+  // eigentliche Rechtsfolge am Satzende verloren.
+  const klammer = klammerschluss(satz, v.index);
+
   if (rolle === "rf") {
     merk("rf", vorfeld, "Prädikativ im Vorfeld → Rechtsfolge vorangestellt");
     // Das Nachfeld enthält den Rest des Hauptsatzes UND die Voraussetzungen.
@@ -245,10 +392,12 @@ export function zerlege(satz, kontext = {}) {
     }
   } else if (rolle === "tb") {
     merk("tb", vorfeld, "Konditionales Adverbial im Vorfeld → Anwendungsfall");
-    merk("rf", nachfeld, "Hauptsatzprädikat → Rechtsfolge");
+    if (klammer) merkKlammer("rf", satz.slice(v.index, klammer.von), klammer.text, "Hauptsatzprädikat");
+    else merk("rf", nachfeld, "Hauptsatzprädikat → Rechtsfolge");
   } else {
     // Vorfeld ist bloßer Normgegenstand: kein Merkmal, nur die Rechtsfolge bleibt.
-    merk("rf", nachfeld, "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal");
+    if (klammer) merkKlammer("rf", satz.slice(v.index, klammer.von), klammer.text, "Hauptsatzprädikat");
+    else merk("rf", nachfeld, "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal");
   }
 
   return { typ, vorfeldrolle: rolle, elemente };
@@ -301,12 +450,32 @@ function konditionalSpanne(satz) {
     bis = hauptKomma(satz);
     if (bis <= 8) bis = satz.length;
   } else {
-    bis = satz.indexOf(";", von);
-    if (bis === -1) bis = satz.length;
+    // Eingeschobener Bedingungssatz: Er endet an dem Komma, das auf sein
+    // eigenes finites Verb folgt (Verbletztstellung im Nebensatz).
+    bis = nebensatzEnde(satz, von);
+    if (bis === -1) {
+      bis = satz.indexOf(";", von);
+      if (bis === -1) bis = satz.length;
+    }
   }
   const text = satz.slice(von, bis).replace(/[.;]$/, "").trim();
   if (text.length < 8) return null;
   return { von, bis, text, einleitung: m[2].toLowerCase() };
+}
+
+/**
+ * Ende eines eingeschobenen Nebensatzes: das Komma nach seinem finiten Verb.
+ * „…, wenn er unbeschränkt steuerpflichtig IST, sonst …" → nach „ist".
+ */
+function nebensatzEnde(satz, von) {
+  const rest = satz.slice(von);
+  const kommas = [...rest.matchAll(/,/g)].map((m) => m.index);
+  for (const k of kommas) {
+    const davor = rest.slice(Math.max(0, k - 40), k).trim().split(/\s+/);
+    const letztes = (davor[davor.length - 1] || "").toLowerCase().replace(/[^a-zäöüß]/g, "");
+    if (FINIT.includes(letztes) && k > 8) return von + k;
+  }
+  return -1;
 }
 
 /** Erstes Komma außerhalb von Klammern und Nebensätzen. */
@@ -314,6 +483,19 @@ function hauptKomma(satz) {
   const maske = maskiere(satz);
   for (let i = 0; i < maske.length; i++) if (maske[i] === ",") return i;
   return -1;
+}
+
+function saubere(text) {
+  return String(text || "")
+    .replace(/\s+/g, " ")
+    .replace(/,\s*,+/g, ",")
+    .replace(/\s+([,;.])/g, "$1")
+    .trim()
+    .replace(/^[,;:]\s*/, "")
+    .replace(/[.,;:]$/, "")
+    // hängende Konjunktion am Ende („… anzuwenden, wenn")
+    .replace(/[,;]?\s+(wenn|soweit|sofern|falls|und|oder|sowie|dass)$/i, "")
+    .trim();
 }
 
 /** Enthält der Text überhaupt bedeutungstragendes Material? */

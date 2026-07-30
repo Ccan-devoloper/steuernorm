@@ -1,5 +1,23 @@
 /**
- * modell.mjs — Anbindung an GitHub Models mit MEHRFACH-SAMPLING.
+ * modell.mjs — Anbindung an die Gemini-API (Google AI Studio) mit MEHRFACH-SAMPLING.
+ *
+ * GitHub Models wurde am 30.07.2026 vollständig abgeschaltet. Statt eines
+ * kostenpflichtigen Ersatzes (OpenAI direkt) nutzt dieses Modul den DAUERHAFT
+ * KOSTENLOSEN Zugang von Google AI Studio: kein Zahlungsmittel nötig, keine
+ * Kartenprüfung, kein Ablaufdatum. Google veröffentlicht dafür einen zu OpenAI
+ * kompatiblen Endpunkt (https://generativelanguage.googleapis.com/v1beta/openai),
+ * der dasselbe Nachrichten- und Antwortformat spricht wie GitHub Models zuvor —
+ * geändert haben sich nur Endpunkt, Modellnamen und die Art des Schlüssels.
+ *
+ * WICHTIGE EINSCHRÄNKUNG DER KOSTENLOSEN STUFE, die diesen Umbau von der
+ * OpenAI-Fassung unterscheidet: Die Freistufe begrenzt nicht nur, wie schnell
+ * angefragt werden darf (RPM), sondern auch, wie oft INSGESAMT PRO TAG (RPD).
+ * Dieses Modul hält deshalb selbst eine Mindestpause zwischen zwei Anfragen ein
+ * (siehe `MINDESTABSTAND_MS`) und behandelt eine wiederholte 429-Antwort als
+ * Tagesgrenze, nicht als kurze Störung — der Lauf bricht dann kontrolliert ab
+ * und der geplante Tageslauf setzt am nächsten Tag fort (siehe annotieren.mjs).
+ * Außerdem kann Google Prompts der Freistufe zur Modellverbesserung verwenden;
+ * bei öffentlichem Gesetzestext ist das unproblematisch, aber erwähnenswert.
  *
  * Der entscheidende Unterschied zur bisherigen Fassung: Jede Norm wird k-mal
  * unabhängig analysiert (unterschiedliche Temperatur, optional unterschiedliche
@@ -13,11 +31,31 @@
  * Voraussetzung oder Folge ist. Weicht sie ab, wird die Spanne verworfen.
  */
 
-const ENDPUNKT = "https://models.github.ai/inference/chat/completions";
+const ENDPUNKT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
 const TIMEOUT_MS = 90_000;
+
+/**
+ * Mindestabstand zwischen zwei Anfragen. Gemini begrenzt die Freistufe je nach
+ * Modell auf ungefähr 10–15 Anfragen pro Minute; die genaue Zahl schwankt und
+ * wird von Google ohne Vorankündigung angepasst. 6500 ms (≈ 9,2 Anfragen/min)
+ * ist bewusst vorsichtig gewählt — lieber langsamer als ständig 429-Fehler.
+ * Überschreibbar über die Umgebungsvariable KI_MINDESTABSTAND_MS.
+ */
+const MINDESTABSTAND_MS = Number(globalThis.process?.env?.KI_MINDESTABSTAND_MS) || 6_500;
+let LETZTE_ANFRAGE = 0;
+
+async function pausiere() {
+  const warten = MINDESTABSTAND_MS - (Date.now() - LETZTE_ANFRAGE);
+  if (warten > 0) await new Promise((r) => setTimeout(r, warten));
+  LETZTE_ANFRAGE = Date.now();
+}
 
 export class ModellKontingentErschoepft extends Error {}
 export class ModellBudgetErschoepft extends Error {}
+/** Tageskontingent der Freistufe erreicht. Erbt bewusst von ModellBudgetErschoepft,
+ *  damit jede Stelle, die auf einen kontrollierten Gesamtabbruch reagiert, das
+ *  automatisch mit erfasst — auch ohne dort eigens geändert zu werden. */
+export class ModellTageslimitErschoepft extends ModellBudgetErschoepft {}
 
 /* ─────────────────────────── Systemvorgaben ─────────────────────────── */
 
@@ -150,7 +188,10 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
     response_format: { type: "json_schema", json_schema: schema },
   };
 
+  let folge429 = 0;   // aufeinanderfolgende 429-Antworten TROTZ Wartezeit
+
   for (let versuch = 1; versuch <= 5; versuch++) {
+    await pausiere();   // Mindestabstand zur letzten Anfrage einhalten (RPM-Grenze)
     const abbruch = new AbortController();
     const uhr = setTimeout(() => abbruch.abort(), TIMEOUT_MS);
     let antwort, text;
@@ -187,8 +228,17 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
     }
 
     if (antwort.status === 429) {
-      const warten = Number(antwort.headers.get("retry-after") || 0) * 1_000 || 20_000 * versuch;
-      if (versuch >= 4) throw new ModellKontingentErschoepft("GitHub-Models-Kontingent erschöpft");
+      folge429++;
+      // Zwei 429-Antworten TROTZ eingehaltener Mindestpause sind kein kurzer
+      // Ausreißer mehr, sondern deuten auf das Tageskontingent der Freistufe hin.
+      // Weiterversuchen brächte nichts — es bräuchte Stunden, keine Sekunden.
+      if (folge429 >= 2) {
+        throw new ModellTageslimitErschoepft(
+          `Gemini-Freistufe: Tages- oder Minutenkontingent erreicht (HTTP 429). ${text.slice(0, 150)}`,
+        );
+      }
+      const warten = Number(antwort.headers.get("retry-after") || 0) * 1_000 || 15_000 * versuch;
+      if (versuch >= 4) throw new ModellTageslimitErschoepft("Gemini-Freistufe: Kontingent wiederholt erschöpft (HTTP 429)");
       await warte(warten);
       continue;
     }

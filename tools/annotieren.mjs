@@ -10,8 +10,10 @@
  *   node tools/annotieren.mjs --trocken            nichts schreiben
  *
  * Umgebung:
- *   GITHUB_TOKEN     Zugang zu GitHub Models
- *   KI_MODELLE       kommagetrennt, Voreinstellung: openai/gpt-4.1-mini,openai/gpt-4o-mini
+ *   GEMINI_API_KEY   Zugang zur kostenlosen Gemini-Freistufe (aistudio.google.com/app/apikey)
+ *                    GitHub Models wurde am 30.07.2026 abgeschaltet.
+ *   KI_MODELLE       kommagetrennt, Voreinstellung: gemini-2.5-flash,gemini-2.0-flash
+ *   KI_MINDESTABSTAND_MS  Wartezeit zwischen zwei Modellaufrufen, Voreinstellung 6500
  *   MAX_MODELLAUFRUFE Tagesbudget, Voreinstellung 400
  */
 
@@ -26,6 +28,8 @@ import {
   einAufruf, extrahiereMehrfach, gegenprobe,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
+// ModellTageslimitErschoepft wird nicht eigens importiert — sie erbt von
+// ModellBudgetErschoepft und wird daher überall automatisch mit erfasst.
 import { belegProbe, probeAnwenden } from "./lib/belegprobe.mjs";
 
 const WURZEL = path.resolve(import.meta.dirname, "..");
@@ -40,24 +44,37 @@ const args = process.argv.slice(2);
 const flagWert = (f, v = null) => { const i = args.indexOf(f); return i >= 0 ? (args[i + 1] ?? v) : v; };
 const hat = (f) => args.includes(f);
 
-const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
-const MODELLE = (process.env.KI_MODELLE || "openai/gpt-4.1-mini,openai/gpt-4o-mini").split(",").map((s) => s.trim()).filter(Boolean);
+// GitHub Models wurde am 30.07.2026 abgeschaltet. Der Schlüssel kommt jetzt von der
+// KOSTENLOSEN Gemini-Freistufe (Google AI Studio). GEMINI_API_KEY ist der maßgebliche
+// Name; GOOGLE_API_KEY wird als gängiger Alias akzeptiert.
+const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
+// Zwei unterschiedliche Gemini-Modelle für die Mehrfachläufe — dieselbe Überlegung
+// wie zuvor bei zwei OpenAI-Modellen: getrennte Modelle irren seltener übereinstimmend
+// als zwei Temperaturen desselben Modells. Beide liegen auf der kostenlosen Freistufe.
+const MODELLE = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash").split(",").map((s) => s.trim()).filter(Boolean);
 const aufwerten = hat("--aufwerten");
 const ohneKi = hat("--ohne-ki") || !TOKEN;
 
 if (!TOKEN && !hat("--ohne-ki")) {
   console.error("");
-  console.error("  ⚠  GITHUB_TOKEN fehlt — es läuft NUR die Syntaxanalyse.");
-  console.error("     Im Workflow benötigt: permissions.models: read und");
-  console.error("     env.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}");
-  console.error("     Lokal: export GITHUB_TOKEN=<Token mit models:read>");
+  console.error("  ⚠  GEMINI_API_KEY fehlt — es läuft NUR die Syntaxanalyse.");
+  console.error("     Kostenlosen Schlüssel holen: aistudio.google.com/app/apikey");
+  console.error("     (kein Zahlungsmittel nötig). Im Workflow benötigt:");
+  console.error("     env.GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}");
+  console.error("     Secret anlegen unter: Repository → Settings → Secrets and variables");
+  console.error("     → Actions → New repository secret → Name GEMINI_API_KEY.");
+  console.error("     Lokal: export GEMINI_API_KEY=...");
   console.error("");
 }
 const ohneGegenprobe = hat("--ohne-gegenprobe");
 const ohneBelegprobe = hat("--ohne-belegprobe");
 const trocken = hat("--trocken");
 const LAEUFE = Math.max(1, Number(flagWert("--laeufe", process.env.KI_LAEUFE || 3)));
-const budget = { maximum: Number(process.env.MAX_MODELLAUFRUFE || 400), verbraucht: 0 };
+// Deutlich niedriger als beim kostenpflichtigen Zugang: Berichte zur täglichen
+// Obergrenze der Gemini-Freistufe schwanken zwischen rund 250 und 1500 Anfragen und
+// werden von Google ohne Vorankündigung angepasst. 180 bleibt sicher darunter, auch
+// im ungünstigsten gemeldeten Fall — der Rest folgt automatisch am nächsten Tag.
+const budget = { maximum: Number(process.env.MAX_MODELLAUFRUFE || 180), verbraucht: 0 };
 let belegLiegtVor = false;
 
 const nurRoh = flagWert("--nur");
@@ -160,6 +177,9 @@ for (const meta of gesetze) {
         neuBewerten(erg);
       } catch (fehler) {
         if (fehler instanceof ModellBudgetErschoepft) { abbruch = fehler.message; }
+        // ModellKontingentErschoepft (z. B. eine einzelne fehlgeschlagene Gegenprobe)
+        // bleibt bewusst ohne Abbruch — nur die eigentliche Extraktion oben löst
+        // bei diesem Fehlertyp einen vollständigen Stopp aus.
       }
     }
     alleAbgelehnt.push(...erg.abgelehnt.map((a) => ({ norm: norm.enbez, ...a })));
@@ -246,6 +266,7 @@ function bauAnnotation({ norm, erg, th, ohneKi }) {
     tb: alleElemente.filter((e) => e.art === "tb").map((e) => e.text),
     rf: alleElemente.filter((e) => e.art === "rf").map((e) => e.text),
     ausnahmen: alleElemente.filter((e) => e.art === "ausn").map((e) => e.text),
+    definitionen: alleElemente.filter((e) => e.art === "def").map((e) => e.text),
     status: erg.status,
     markierbar: erg.markierbar,
     konfidenz: erg.konfidenz,
