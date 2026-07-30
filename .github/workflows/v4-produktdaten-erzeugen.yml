@@ -104,13 +104,15 @@ jobs:
           set -euo pipefail
           node tools/belege.mjs --nur solzg --max 30
 
-      - name: Amtliche Belege und Rechtsprechung abrufen
+      - name: Initiale Verwaltungsbelege abrufen
         shell: bash
         env:
-          MAX_BELEGABRUFE: "400"
+          MAX_BELEGABRUFE: "80"
         run: |
           set -euo pipefail
-          node tools/belege.mjs --max 400
+          # Der große, unterbrechbare Bestand wird nach dem Merge durch belege.yml
+          # fortgesetzt. Im PR genügt ein echter, reproduzierbarer Initialbestand.
+          node tools/belege.mjs --ohne-rechtsprechung --max 80
 
       - name: Belegbestand prüfen
         shell: bash
@@ -132,7 +134,7 @@ jobs:
           const solzgNormen = Object.values(solzg.normen || {});
           if (solzgNormen.length < 6) throw new Error(`SolzG-Belegsnapshot enthält nur ${solzgNormen.length} Normen.`);
           if (solzgNormen.filter(n => n.abgerufen).length < 6) throw new Error('SolzG-Belegabrufe wurden nicht vollständig protokolliert.');
-          console.log(`${karten.length} Karten, ${dateien.length} Belegdateien, ${bericht.abrufe} Abrufe; SolzG vollständig abgerufen.`);
+          console.log(`${karten.length} Karten, ${dateien.length} Belegdateien, ${bericht.abrufe} Verwaltungsabrufe; SolzG vollständig abgerufen.`);
           NODE
 
       - name: SolzG mit Mehrfachmodell, Gegenprobe und Belegprobe aufwerten
