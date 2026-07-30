@@ -43,7 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           node - <<'NODE'
-          const url = 'https://ao.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html';
+          const url = 'https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/Abgabenordnung/inhalt.html';
           const r = await fetch(url, {headers:{'User-Agent':'steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)','Accept':'text/html,application/xhtml+xml'}, redirect:'follow'});
           const html = await r.text();
           const zaehle = re => (html.match(re) || []).length;
