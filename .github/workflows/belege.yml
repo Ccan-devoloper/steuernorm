@@ -113,11 +113,12 @@ jobs:
         env:
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_MAX: ${{ inputs.max }}
+          EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
           set -euo pipefail
           max="${INPUT_MAX:-1200}"
-          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+          if [ "$EVENT_NAME" = "push" ]; then
             max="5000"
           fi
           args=(--max "$max")
