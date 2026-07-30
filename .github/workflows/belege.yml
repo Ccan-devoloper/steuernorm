@@ -140,16 +140,12 @@ jobs:
           const ausgewaehlt = nur.size
             ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v))))
             : register.gesetze;
-
           const karten = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
           if (!nur.size && karten.length !== 8) throw new Error(`Acht Handbuchkarten erwartet, gefunden: ${karten.length}.`);
           for (const name of karten) {
             const karte = JSON.parse(fs.readFileSync(`config/${name}`, "utf8"));
-            if (Object.keys(karte.paragrafen || {}).length < 5) {
-              throw new Error(`${name}: Karte ist leer oder unvollständig.`);
-            }
+            if (Object.keys(karte.paragrafen || {}).length < 5) throw new Error(`${name}: Karte ist leer oder unvollständig.`);
           }
-
           const fehler = [];
           let gesamtNormen = 0;
           let protokolliert = 0;
@@ -157,15 +153,9 @@ jobs:
           for (const meta of ausgewaehlt) {
             const daten = JSON.parse(fs.readFileSync(`data/${meta.datei}`, "utf8"));
             const pfad = `belege/${meta.datei}`;
-            if (!fs.existsSync(pfad)) {
-              fehler.push(`${meta.abk}: Belegdatei fehlt`);
-              continue;
-            }
+            if (!fs.existsSync(pfad)) { fehler.push(`${meta.abk}: Belegdatei fehlt`); continue; }
             const belege = JSON.parse(fs.readFileSync(pfad, "utf8"));
-            if (belege.abk !== daten.abk || !belege.normen) {
-              fehler.push(`${meta.abk}: Belegdatei formal unvollständig`);
-              continue;
-            }
+            if (belege.abk !== daten.abk || !belege.normen) { fehler.push(`${meta.abk}: Belegdatei formal unvollständig`); continue; }
             gesamtNormen += daten.normen.length;
             const fehlende = daten.normen.filter((norm) => !belege.normen[String(norm.id)]);
             const ohneAbruf = daten.normen.filter((norm) => !belege.normen[String(norm.id)]?.abgerufen);
@@ -183,7 +173,6 @@ jobs:
           if (!nur.size && register.gesetze.length !== 14) fehler.push(`14 Gesetze erwartet, gefunden: ${register.gesetze.length}`);
           if (!ausgewaehlt.length) fehler.push("Die Gesetzesauswahl ist leer");
           if (fehler.length) throw new Error(`Belegbestand nicht vollständig:\n- ${fehler.join("\n- ")}`);
-
           let bisher = {};
           try { bisher = JSON.parse(fs.readFileSync("reports/belege.json", "utf8")); } catch {}
           const bericht = {
