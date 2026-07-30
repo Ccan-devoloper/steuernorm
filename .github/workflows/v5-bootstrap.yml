@@ -1,4 +1,5 @@
 name: V5-Bestand erzeugen
+# Wiederholung nach Austausch des fehlerhaften Transportblocks.
 
 on:
   pull_request:
@@ -26,7 +27,7 @@ jobs:
       - name: Gelieferten Code bytegenau übernehmen
         run: |
           set -euo pipefail
-          cat .v5-bootstrap/part-* | base64 --decode > /tmp/v5-code.tar.gz
+          cat .v5-bootstrap/part-000 .v5-bootstrap/part-001 .v5-bootstrap/part-01 .v5-bootstrap/part-02 .v5-bootstrap/part-03 .v5-bootstrap/part-04 .v5-bootstrap/part-05 .v5-bootstrap/part-06 | base64 --decode > /tmp/v5-code.tar.gz
           echo "df24dddad085ebd7b519f04aa74e81e8ebb2c16b9cc567d47852a0bada969372  /tmp/v5-code.tar.gz" | sha256sum --check -
           tar -xzf /tmp/v5-code.tar.gz -C .
 
