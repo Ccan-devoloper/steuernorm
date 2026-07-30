@@ -7,37 +7,66 @@
  * Steuerrecht.
  *
  * Zwei Schritte:
- *   1. karteBauen()  — einmalig den Verzeichnisbaum ablaufen und § → URL festhalten
+ *   1. karteBauen()     — den Verzeichnisbaum ablaufen und § → URL festhalten
  *   2. abschnittLesen() — die Einzelseite holen und den Verwaltungstext herausziehen
  *
- * Abrufhygiene: ein Abruf je Sekunde, sprechender User-Agent, If-Modified-Since.
+ * Abrufhygiene: ein Abruf je Sekunde, sprechender User-Agent, If-None-Match.
  */
 
 const KENNUNG = "steuernorm/4 (+https://github.com/Ccan-devoloper/steuernorm)";
 const PAUSE_MS = 1_000;
-const TIMEOUT_MS = 120_000;
+const TIMEOUT_MS = 60_000;
+const MAX_VERSUCHE = 4;
+const WIEDERHOLBAR = new Set([408, 425, 429, 500, 502, 503, 504]);
 
 let letzterAbruf = 0;
 
-async function hole(url, etag = null) {
-  const wartezeit = PAUSE_MS - (Date.now() - letzterAbruf);
-  if (wartezeit > 0) await new Promise((r) => setTimeout(r, wartezeit));
-  letzterAbruf = Date.now();
+const warten = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  const abbruch = new AbortController();
-  const uhr = setTimeout(() => abbruch.abort(), TIMEOUT_MS);
-  try {
-    const kopf = { "User-Agent": KENNUNG, Accept: "text/html,application/xhtml+xml" };
-    if (etag) kopf["If-None-Match"] = etag;
-    const antwort = await fetch(url, { headers: kopf, signal: abbruch.signal, redirect: "follow" });
-    if (antwort.status === 304) return { unveraendert: true };
-    if (!antwort.ok) return { fehler: `HTTP ${antwort.status}` };
-    return { html: await antwort.text(), etag: antwort.headers.get("etag"), url: antwort.url || url };
-  } catch (fehler) {
-    return { fehler: fehler.name === "AbortError" ? "Zeitüberschreitung" : fehler.message };
-  } finally {
-    clearTimeout(uhr);
+function retryNachMillis(antwort, versuch) {
+  const roh = antwort?.headers?.get?.("retry-after");
+  if (roh && /^\d+$/.test(roh)) return Math.min(Number(roh) * 1_000, 60_000);
+  if (roh) {
+    const zeit = Date.parse(roh) - Date.now();
+    if (Number.isFinite(zeit) && zeit > 0) return Math.min(zeit, 60_000);
   }
+  return Math.min(2_000 * (2 ** (versuch - 1)), 20_000);
+}
+
+async function hole(url, etag = null) {
+  let letzterFehler = "unbekannter Abruffehler";
+
+  for (let versuch = 1; versuch <= MAX_VERSUCHE; versuch++) {
+    const wartezeit = PAUSE_MS - (Date.now() - letzterAbruf);
+    if (wartezeit > 0) await warten(wartezeit);
+    letzterAbruf = Date.now();
+
+    const abbruch = new AbortController();
+    const uhr = setTimeout(() => abbruch.abort(), TIMEOUT_MS);
+    let wiederholungNach = Math.min(2_000 * (2 ** (versuch - 1)), 20_000);
+
+    try {
+      const kopf = { "User-Agent": KENNUNG, Accept: "text/html,application/xhtml+xml" };
+      if (etag) kopf["If-None-Match"] = etag;
+      const antwort = await fetch(url, { headers: kopf, signal: abbruch.signal, redirect: "follow" });
+      if (antwort.status === 304) return { unveraendert: true };
+      if (antwort.ok) {
+        return { html: await antwort.text(), etag: antwort.headers.get("etag"), url: antwort.url || url };
+      }
+
+      letzterFehler = `HTTP ${antwort.status}`;
+      if (!WIEDERHOLBAR.has(antwort.status)) return { fehler: letzterFehler };
+      wiederholungNach = retryNachMillis(antwort, versuch);
+    } catch (fehler) {
+      letzterFehler = fehler.name === "AbortError" ? "Zeitüberschreitung" : fehler.message;
+    } finally {
+      clearTimeout(uhr);
+    }
+
+    if (versuch < MAX_VERSUCHE) await warten(wiederholungNach);
+  }
+
+  return { fehler: `${letzterFehler} nach ${MAX_VERSUCHE} Versuchen` };
 }
 
 /* ─────────────────────────── Karte aufbauen ─────────────────────────── */
@@ -96,19 +125,42 @@ function absolut(basis, href) {
   } catch { return null; }
 }
 
-function istInterneHtmlSeite(url, prefix) {
-  if (!url || !url.startsWith(prefix)) return false;
+function internePrefixe(handbuch) {
+  const prefixe = [handbuch.prefix];
+  if (handbuch.prefix.includes("//ao.bundesfinanzministerium.de/")) {
+    prefixe.push(handbuch.prefix.replace("//ao.bundesfinanzministerium.de/", "//amtliche-handbuecher.bundesfinanzministerium.de/"));
+  }
+  return [...new Set(prefixe)];
+}
+
+function startpunkte(handbuch) {
+  const kandidaten = [];
+  for (const prefix of internePrefixe(handbuch)) {
+    kandidaten.push(`${prefix}Meta/Inhaltsverzeichnis/inhalt.html`);
+    kandidaten.push(`${prefix}Meta/Inhaltsuebersicht/inhalt.html`);
+  }
+  kandidaten.push(handbuch.start);
+  return [...new Set(kandidaten)];
+}
+
+function istInterneHtmlSeite(url, prefixe) {
+  if (!url || !prefixe.some((prefix) => url.startsWith(prefix))) return false;
   const pfad = new URL(url).pathname;
   return /\.html$/i.test(pfad) || /\/inhalt\/?$/i.test(pfad);
 }
 
+function istInhaltsverzeichnis(url) {
+  return /\/Meta\/Inhalts(?:verzeichnis|uebersicht)\/inhalt\.html$/i.test(url || "");
+}
+
 export async function karteBauen(handbuch, melde = () => {}) {
   const gesehen = new Set();
-  const warteschlange = [handbuch.start];
+  const warteschlange = startpunkte(handbuch);
+  const erlaubtePrefixe = internePrefixe(handbuch);
   const karte = {};
   const vorschalt = {};
-  const nurInhaltsverzeichnis = /\/Meta\/Inhalts(?:verzeichnis|uebersicht)\/inhalt\.html$/i.test(handbuch.start);
   let seiten = 0;
+  let verwendeterStart = handbuch.start;
 
   while (warteschlange.length) {
     if (gesehen.size > 5000) throw new Error(`${handbuch.abk}: mehr als 5000 interne Seiten; Prefix prüfen.`);
@@ -118,16 +170,19 @@ export async function karteBauen(handbuch, melde = () => {}) {
 
     const { html, fehler, url: endUrl } = await hole(url);
     if (fehler) { melde(`  ⚠ ${url}: ${fehler}`); continue; }
+    const aktuelleUrl = endUrl || url;
+    verwendeterStart = aktuelleUrl;
     seiten++;
     if (seiten % 20 === 0) melde(`  ${seiten} Verzeichnisseiten, ${Object.keys(karte).length} Paragrafen`);
 
-    const linkBasis = basisAus(html, endUrl || url);
+    const metaSeite = istInhaltsverzeichnis(aktuelleUrl) || istInhaltsverzeichnis(url);
+    const linkBasis = basisAus(html, aktuelleUrl);
     LINK.lastIndex = 0;
     let treffer;
     while ((treffer = LINK.exec(html)) !== null) {
       const href = treffer[1] || treffer[2] || treffer[3];
       const ziel = absolut(linkBasis, href);
-      if (!istInterneHtmlSeite(ziel, handbuch.prefix)) continue;
+      if (!istInterneHtmlSeite(ziel, erlaubtePrefixe)) continue;
       const sauber = ziel.split(/[?#]/)[0];
       const beschriftung = treffer[4];
 
@@ -139,17 +194,21 @@ export async function karteBauen(handbuch, melde = () => {}) {
       for (const v of vorschaltParagrafen(beschriftung)) {
         if (!vorschalt[v]) vorschalt[v] = { url: sauber, titel: text(beschriftung) };
       }
-      if (!nurInhaltsverzeichnis && !gesehen.has(sauber) && !warteschlange.includes(sauber)) {
+      if (!metaSeite && !gesehen.has(sauber) && !warteschlange.includes(sauber)) {
         warteschlange.push(sauber);
       }
     }
+
+    // Ein amtliches Meta-Inhaltsverzeichnis enthält die vollständige §-Karte auf
+    // einer Seite. Sobald es verwendbar ist, sind langsamere Fallback-Crawls unnötig.
+    if (metaSeite && Object.keys(karte).length >= 5) warteschlange.length = 0;
   }
 
   return {
     abk: handbuch.abk,
     name: handbuch.name,
     jahrgang: handbuch.jahrgang ?? null,
-    start: handbuch.start,
+    start: verwendeterStart,
     abgerufen: new Date().toISOString().slice(0, 10),
     seiten,
     paragrafen: karte,
