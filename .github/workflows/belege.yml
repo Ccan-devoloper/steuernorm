@@ -135,9 +135,10 @@ jobs:
           node - <<'NODE'
           const fs = require("fs");
           const register = JSON.parse(fs.readFileSync("data/index.json", "utf8"));
-          const nur = new Set(String(process.env.INPUT_NUR || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean));
+          const normiere = (v) => String(v || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
+          const nur = new Set(String(process.env.INPUT_NUR || "").split(",").map(normiere).filter(Boolean));
           const ausgewaehlt = nur.size
-            ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(String(v).toLowerCase().replace(/\.json$/, ""))))
+            ? register.gesetze.filter((m) => [m.abk, m.slug, m.datei].some((v) => nur.has(normiere(v))))
             : register.gesetze;
 
           const karten = fs.readdirSync("config").filter((n) => n.startsWith("handbuch-karte-") && n.endsWith(".json"));
