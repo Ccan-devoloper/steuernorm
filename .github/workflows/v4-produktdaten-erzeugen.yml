@@ -1,0 +1,120 @@
+name: V4-Produktdaten erzeugen
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/v4-produktdaten-erzeugen.yml"
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: v4-produktdaten-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  erzeugen:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Produktdaten-Branch auschecken
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: V4-Code vorab prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs
+
+      - name: Amtliche Handbuchkarten erzeugen
+        shell: bash
+        env:
+          MIN_KARTEN_TREFFER: "5"
+        run: |
+          set -euo pipefail
+          node tools/belege.mjs --karte
+
+      - name: Amtliche Belege und Rechtsprechung abrufen
+        shell: bash
+        env:
+          MAX_BELEGABRUFE: "400"
+        run: |
+          set -euo pipefail
+          node tools/belege.mjs --max 400
+
+      - name: Belegbestand prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const bericht = JSON.parse(fs.readFileSync('reports/belege.json', 'utf8'));
+          const dateien = fs.readdirSync('belege').filter(n => n.endsWith('.json'));
+          const karten = fs.readdirSync('config').filter(n => n.startsWith('handbuch-karte-') && n.endsWith('.json'));
+          if (karten.length < 8) throw new Error(`Nur ${karten.length} Handbuchkarten erzeugt.`);
+          if (!dateien.length) throw new Error('Keine Belegdateien erzeugt.');
+          if (!Number.isFinite(bericht.abrufe) || bericht.abrufe < 1) throw new Error('Kein echter Belegabruf nachgewiesen.');
+          for (const name of karten) {
+            const karte = JSON.parse(fs.readFileSync(`config/${name}`, 'utf8'));
+            if (Object.keys(karte.paragrafen || {}).length < 5) throw new Error(`${name}: zu wenige Paragrafen.`);
+          }
+          console.log(`${karten.length} Karten, ${dateien.length} Belegdateien, ${bericht.abrufe} Abrufe.`);
+          NODE
+
+      - name: SolzG mit Mehrfachmodell, Gegenprobe und Belegprobe aufwerten
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KI_MODELLE: openai/gpt-4.1-mini,openai/gpt-4o-mini
+          KI_LAEUFE: "3"
+          MAX_MODELLAUFRUFE: "160"
+        run: |
+          set -euo pipefail
+          node tools/annotieren.mjs --nur solzg --laeufe 3 --aufwerten
+
+      - name: Produktive KI- und Belegwirkung nachweisen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const a = JSON.parse(fs.readFileSync('annotations/solzg.json', 'utf8'));
+          if (!String(a.verfahren || '').includes('mehrfachlauf')) throw new Error(`SolzG-Verfahren: ${a.verfahren}`);
+          if (!String(a.verfahren || '').includes('gegenprobe')) throw new Error('Gegenprobe fehlt.');
+          if (Number(a.laeufe || 0) < 1) throw new Error('Kein Modelllauf nachgewiesen.');
+          const normen = Object.values(a.normen || {});
+          if (!normen.some(n => String(n.verfahren || '').includes('mehrfachlauf'))) throw new Error('Keine Norm mit Mehrfachlauf.');
+          if (!normen.some(n => n.beleg_hash)) throw new Error('Kein Beleg-Hash in SolzG-Normen.');
+          console.log(`${a.verfahren}; ${a.laeufe} Läufe; ${normen.length} Normen.`);
+          NODE
+          node tools/pruefen.mjs --streng
+          node tools/konsistenz.mjs --schreiben
+
+      - name: Erzeugte Produktdaten festschreiben
+        shell: bash
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "steuernorm-produktdaten-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A belege annotations config/handbuch-karte-*.json reports pruefbericht-ki.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'Keine Produktdatenänderungen.'
+          else
+            git commit -m "V4-Belege und KI-Konsens produktiv erzeugen"
+            git pull --rebase --autostash origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
+          fi
