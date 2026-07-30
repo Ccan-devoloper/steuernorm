@@ -178,9 +178,13 @@ jobs:
 
           const bericht = JSON.parse(fs.readFileSync("reports/belege.json", "utf8"));
           bericht.vollstaendig = !nur.size;
-          bericht.gesetzeGesamt = ausgewaehlt.length;
-          bericht.normenGesamt = gesamtNormen;
+          bericht.gepruefteGesetze = ausgewaehlt.length;
+          bericht.gepruefteNormen = gesamtNormen;
           bericht.abrufeProtokolliert = protokolliert;
+          if (!nur.size) {
+            bericht.gesetzeGesamt = register.gesetze.length;
+            bericht.normenGesamt = gesamtNormen;
+          }
           fs.writeFileSync("reports/belege.json", `${JSON.stringify(bericht, null, 2)}\n`);
           console.log(`${ausgewaehlt.length} Gesetze, ${gesamtNormen} Normen und ${karten.length} Handbuchkarten vollständig geprüft.`);
           NODE
