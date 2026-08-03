@@ -1,5 +1,7 @@
 {
-  "erzeugt": "2026-07-30T11:48:30.132Z",
+  "erzeugt": "2026-08-03T06:46:41.118Z",
+  "abrufe": 0,
+  "verwaltungErzwungen": false,
   "gesetze": [
     {
       "abk": "AO",
@@ -90,8 +92,6 @@
   "gepruefteNormen": 1537,
   "abrufeProtokolliert": 1537,
   "vollstaendig": true,
-  "verwaltungVollstaendig": true,
   "gesetzeGesamt": 14,
-  "normenGesamt": 1537,
-  "handbuecherGesamt": 8
+  "normenGesamt": 1537
 }
