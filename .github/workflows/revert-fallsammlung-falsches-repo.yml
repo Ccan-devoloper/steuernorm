@@ -1,0 +1,51 @@
+name: Irrtümliche Fallsammlung zurücknehmen
+
+on:
+  push:
+    branches:
+      - agent/revert-fallsammlung-falsches-repo
+    paths:
+      - '.github/workflows/revert-fallsammlung-falsches-repo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  zuruecknehmen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: agent/revert-fallsammlung-falsches-repo
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Falsche Integration entfernen
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show 595fabc795e4a6d4c6d000e4f9da678caa8be6c6:index.html > index.html
+          rm -rf faelle
+          rm -f faelle.html tools/faelle-einbauen.mjs tools/pruefen-faelle.mjs
+          test ! -e faelle
+          test ! -e faelle.html
+          test ! -e tools/faelle-einbauen.mjs
+          test ! -e tools/pruefen-faelle.mjs
+          ! grep -Fq 'href="faelle.html"' index.html
+          git diff --check
+      - name: Bestehenden Normbestand prüfen
+        run: node tools/pruefen.mjs
+      - name: Rücknahme festschreiben
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen festzuschreiben."
+            exit 0
+          fi
+          git commit -m "Irrtümliche Fallsammlung aus steuernorm entfernen"
+          git push origin HEAD:agent/revert-fallsammlung-falsches-repo
