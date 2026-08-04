@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "modul-21",
+  "nummer": 21,
+  "slug": "21-beteiligungen-an-kapitalgesellschaften-kapitalerhoehung",
+  "titel": "Beteiligungen an Kapitalgesellschaften / Kapitalerhöhung",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      34,
+      35
+    ],
+    "loesung_seiten": [
+      86,
+      89
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m21-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "Der Einzelunternehmer A hält eine Beteiligung von 20% an der B-GmbH zutreffend im Betriebsvermögen.\nIn einer am 10.04.2025 abgehaltenen Gesellschafterversammlung der GmbH haben die Gesellschafter\nbeschlossen, eine Gewinnausschüttung vorzunehmen.\nAuf A entfiel ein Ausschüttungsbetrag von 10.000 €. Nach Abzug der Kapitalertragsteuer in Höhe von 25 %\n= 2.500 € und des Solidaritätszuschlags von 5,5% auf die Kapitalertragsteuer =137,50 €\nhat die GmbH am 10.06.2025 auf das betriebliche Bankkonto von A 7.362,50 € überwiesen.\nVon der GmbH wurde eine ordnungsgemäße Steuerbescheinigung für die einbehaltenen Steuerabzugsbeträge\nerteilt. Im Zusammenhang mit dieser Beteiligung sind A 100,- € Aufwendungen entstanden. Bisher sind keine\nBuchungen erfolgt.\n\nWie ist dieser Vorgang im Wirtschaftsjahr 2025 zu behandeln?\n\nAbwandlung:\nWie ist dieser Vorgang bei einer Kapitalgesellschaft zu behandeln, die zu 20 % an der B-GmbH beteiligt ist.",
+      "loesung": "Mit der Fassung des Gewinnverwendungsbeschlusses ist der Dividendenanspruch, also eine Forderung mit\nAblauf des 01.04.2025 entstanden. Der Ansatz erfolgt gemäß § 246 Abs. 1 Satz 1 HGB, § 5 Abs. 1 Satz 1 HS\n1 EStG, § 247 Abs. 2 HGB Umkehrschluss als Vermögensgegenstand bzw Wirtschaftsgut des\nUmlaufvermögens.\nDie Bewertung erfolgt gem. § 253 Abs. 1 Satz 1 HGB, §§ 5 Abs. 1 Satz 1 HS 1, 6 Abs. 1 Nr. 2 Satz 1 EStG\nmit dem Nennbetrag. Kapitalertragsteuer und der Solidaritätszuschlag stellen Privatentnahmen dar. Es ergibt\nsich eine Betriebseinnahme von 10.000 EUR.\nDie Einnahme ist in Höhe von 40 % steuerfrei gem. § 3 Nr. 40 d und § 3 Nr. 40 Satz 2 EStG. In dieser Höhe\nkommt es zu einem außerbilanziellen Abzug.\nDie Aufwendungen, die im Zusammenhang mit der Beteiligung stehen, sind gem. § 4 Abs. 4 EStG als\nBetriebsausgaben zu erfassen. Außerbilanziell erfolgt gem. § 3c Abs. 2 EStG eine Hinzurechnung in Höhe von\n40 %, also 40 €.\nBuchungen:\nBank        7.362,50 €        an   Dividendenerträge           10.000 €\nPrivatentnahme (KapESt und Solz.)      2.637,50 €\n\nAufwand           100 €        an               Bank               100 €\n\naußerbilanzielle Hinzurechnungen/Abrechnungen:\ngem. § 3 Nr. 40 d ) EStG      ./. 4.000 €\ngem. § 3c Abs. 2 EStG           + 40 €\n\nAbwandlung:\nMit der Fassung des Gewinnverwendungsbeschlusses ist der Dividendenanspruch mit Ablauf des 01.04.2025\nentstanden. Der Ansatz erfolgt gem. § 246 Abs. 1 Satz 1 HGB, § 5 Abs. 1 Satz 1 HS 1 EStG, § 247 Abs. 2\nHGB Umkehrschluss als Vermögensgegenstand bzw Wirtschaftsgut des Umlaufvermögens. Die Bewertung\nerfolgt gemäß § 253 Abs. 1 Satz 1 HGB, §§ 5 Abs. 1 Satz 1 HS 1, 6 Abs. 1 Nr. 2 Satz 1 EStG mit dem\nNennbetrag. Die Kapitalertragsteuer und der Solidaritätszuschlag stellen nicht abziehbare Betriebsausgaben\ngemäß § 10 Nr. 2 KStG dar. Es ergibt sich eine Betriebseinnahme von 10.000 EUR.\nDie Einnahme ist in Höhe von 100 % steuerfrei gem. § 8 b Abs. 1 KStG, da die GmbH an der B- GmbH zu\n20 % beteiligt ist. Gem. § 8 b Abs. 4 Satz 1 KStG sind Dividendenbezüge bei der Ermittlung des Einkommens\nnur dann voll zu berücksichtigen, wenn die Beteiligung zu Beginn des Kalenderjahres unmittelbar weniger als\n10 Prozent des Grund- oder Stammkapitals betragen hat. In dieser Höhe kommt es zu einem außerbilanziellen\nAbzug.\nDie Aufwendungen, die im Zusammenhang mit der Beteiligung stehen, sind gem. § 4 Abs. 4 EStG als\nBetriebsausgaben zu erfassen. Außerbilanziell erfolgt gem. § 8 b Abs. 5 Satz 2 KStG keine Korrektur gemäß\n§ 3c Abs. 2 EStG. Es kommt zu einer außerbilanziellen Hinzurechnung gem. § 8 b Abs. 5 Satz 1 KStG in Höhe\nvon 5 %, also 500 €.\n\n#Buchungen:\nBank          7.362,50 €          an   Dividendenerträge          10.000 €\nSteueraufwand (KapESt und Solz.)        2.637,50 €\n\nAufwand             100 €         an               Bank              100 €\n\naußerbilanzielle Hinzurechnungen/Abrechnungen:\ngem. § 8 b Abs. 1 KStG        ./. 10.000 €\ngem. § 8 b Abs. 5 KStG            + 500 €",
+      "quelle": {
+        "fall_seite": 34,
+        "loesung_seite": 86,
+        "fall_bezeichnung": "Fall 1",
+        "loesung_bezeichnung": "Lösung 1"
+      }
+    },
+    {
+      "id": "m21-f02",
+      "nummer": 2,
+      "titel": "Fall 2",
+      "sachverhalt": "Der Aktionär besitzt 300 Aktien der Glück-AG im Wert von 300.000 €. Diese führt eine Kapitalerhöhung aus\nGesellschaftsmitteln durch. Durch die Erhöhung des Grundkapitals der Glück-AG im Verhältnis 3:1 bekommt\nA 100 Berichtigungsaktien.\n\nWie wirkt sich die Kapitalerhöhung auf die Anschaffungskosten der einzelnen Aktie aus?",
+      "loesung": "Die Anschaffungskosten der gesamten Anteile betragen nach wie vor 300.000 €. Diese verteilen sich jedoch\nnun auf 400 Aktien. Die Anschaffungskosten der einzelnen Aktie betragen nun: 300.000 € /400 Stück =\n750 €/Stück.",
+      "quelle": {
+        "fall_seite": 34,
+        "loesung_seite": 87,
+        "fall_bezeichnung": "Fall 2",
+        "loesung_bezeichnung": "Lösung 2"
+      }
+    },
+    {
+      "id": "m21-f03",
+      "nummer": 3,
+      "titel": "Fall 3",
+      "sachverhalt": "Im Jahr 2015 hat G aus betrieblichen Mitteln seines Einzelunternehmens 200 Aktien der Hopfen & Malz-AG\nim Nennwert von 4.000 € für 6.000 € einschließlich Nebenkosten erworben und bisher mit den\nAnschaffungskosten als Wertpapiere des Anlagevermögens bilanziert. Aufgrund eines Beschlusses der\nHauptversammlung vom 15.01.2025 wurde das Grundkapital der Hopfen & Malz-AG aus Gesellschaftsmitteln\nim Verhältnis 5:1 erhöht gem. §§ 207 Abs. 1, 211, 212 AktG, so dass für 5 alte Aktien eine Gratisaktie\nausgegeben wurde. G hat die aus der Kapitalerhöhung erhaltenen Gratisaktien noch im November 2025\nveräußert. Der Brutto Veräußerungserlös (nach Abzug der Veräußerungskosten und nach Hinzurechnung der\nKapitalertragsteuer) beträgt 2.400 €.",
+      "loesung": "Handels und Steuerbilanz:\nDie Aktien an der Hopfen & Malz-AG gehören zum gewillkürten Betriebsvermögen des\nEinzelunternehmens des G gem. H 4.2 Abs. 1 „Wertpapiere\" EStH. Durch die Einbuchung im Jahr 2015 wurde\nder erforderliche Widmungsakt vollzogen, H 4.2 Abs. 1 EStH. Diese sind zutreffend gemäß § 246 Abs. 1\nSatz 1 HGB, § 5 Abs. 1 Satz 1 HS 1 EStG als nichtabnutzbare Vermögensgegenstände/ Wirtschaftsgüter des\nAnlagevermögens § 247 Abs. 2 HGB aktiviert worden. Die Bewertung erfolgt gemäß § 253 Abs. 1 Satz 1\nHGB, §§ 5 Abs. 1 Satz 1 HS 1, 5 Abs. 6, 6 Abs. 1 Nr. 2 Satz 1 EStG mit den Anschaffungskosten gem. § 255\nAbs. 1 HGB. Fraglich ist ob hier nachträgliche Anschaffungskosten vorliegen. Der Erhalt von Gratisaktien aus\nder Kapitalerhöhung aus Gesellschaftsmitteln führt nach § 220 Satz 2 AktG handelsrechtlich zu keinem\nbilanziellen Zugang. Die bisherigen Anschaffungskosten von 6.000 € verteilen sich nach § 220 Satz 1 AktG\nauf die vor der Erhöhung des Grundkapitals erworbenen Aktien (200 Stück) und die auf sie entfallenen neuen\nAktien (40 Stück) nach dem Verhältnis der Anteile am Grundkapital. Der Buchwert für alle Aktien verändert\nsich durch die Kapitalerhöhung insgesamt nicht, damit liegen auch keine nachträglichen Anschaffungskosten\nvor. Es ändert sich jedoch der Buchwert der einzelnen Aktie (Buchwertabspaltung).\nSteuerlich gehört der Wert der im Zuge der Kapitalerhöhung aus Gesellschaftsmitteln erhaltenen Gratisaktien\nder X-AG gemäß § 1 KapErhStG nicht zu den Einkünften im Sinne des § 2 Abs. 1 EStG. Gemäß § 3\nKapErhStG verteilen sich die bisherigen Anschaffungskosten auch steuerlich nach dem Verhältnis der Anteile\nam Nennkapital auf die Altaktien und die Gratisaktien. Es kommt insoweit zu keiner Abweichung von der\nHandelsbilanz.\n\nDie ursprünglichen Anschaffungskosten für die Altaktien in Höhe von 6.000 € entfallen nach der\nKapitalerhöhung im Verhältnis 5:1 nun auf die 200 Altaktien und die 40 Gratisaktien. Die neuen Buchwerte\npro Aktie nach Buchwertabspaltung ermitteln sich wie folgt:\n6.000 € / 240 Aktien = 25 €/Aktie.\nAuf die 40 Gratisaktien entfallen daher:\n40 x 25 € = 1.000 €\nDurch die Veräußerung der Gratisaktien im November 2025 realisiert G folgenden Gewinn:\n\nVeräußerungserlös                                    2.400 €\nBuchwert der Gratisaktien:                       ./. 1.000 €\nVeräußerungsgewinn                               = 1.400 €\n\nDie von der Bank einbehaltenen Veräußerungskosten beeinflussen den Gewinn nicht, weil sich Aufwand\n(Veräußerungsnebenkosten) und Mehrerlös insoweit ausgleichend gegenüberstehen (abgekürzter\nZahlungsweg).\nHandelsbilanz:\nDie Bildung eines Sonderpostens mit Rücklageanteil gem. § 6 b Abs. 10 EStG ist in der Handelsbilanz nicht\nmöglich. Es ist ein Ertrag in Höhe von 1.400 € auszuweisen.\nSteuerbilanz:\nGem. § 5 Abs. 1 Satz 1 HS 2 EStG können Wahlrechte, die nur steuerrechtlich bestehen unabhängig vom\nhandelsrechtlichen Wertansatz ausgeübt werden. Um steuerrechtlich einen möglichst niedrigen Gewinn\nauszuweisen, ist eine Rücklage gem. § 6 b Abs. 10 Satz 5 EStG in der Steuerbilanz zu bilden.\nNach § 6 b Abs. 10 Satz 1 EStG können Einzelunternehmen und Personengesellschaften, soweit an diesen\nkeine    Körperschaften, Personenvereinigungen oder Vermögensmassen beteiligt sind, Gewinne aus der\nVeräußerung von Anteilen an einer Kapitalgesellschaft bis zu einem Höchstbetrag von 500.000 € im\nWirtschaftsjahr der Veräußerung in eine § 6 b-Rücklage einstellen bzw. auf die Anschaffungskosten\nbestimmter begünstigter Wirtschaftsgüter übertragen.\nDie Voraussetzungen gem. § 6 b Abs. 10 Satz 4 i.V.m. Abs. 4 Satz 1 Nr. 1, 2, 3, 5 EStG liegen vor.\nInsbesondere ist die 6-Jahresfrist erfüllt. Hinsichtlich der 6-Jahresfrist des § 6 b EStG werden die Gratisaktien\nso behandelt, als ob sie bereits 2015 erworben worden wären (R 6 b. 3 Abs. 6 Satz 1 EStR). Gem. § 6 b Abs. 10\nSatz 5 EStG beinhaltet der Sonderposten mit Rücklageanteil gem. § 6 b Abs. 10 Satz 5 EStG auch den nach\n§ 3 Nr. 40 lit a EStG steuerfreien Teil des Veräußerungsgewinns. G kann damit im Wirtschaftsjahr 2025 eine\nRücklage nach § 6 b Abs. 10 EStG i.H.v. 1.400 € bilden.",
+      "quelle": {
+        "fall_seite": 34,
+        "loesung_seite": 87,
+        "fall_bezeichnung": "Fall 3",
+        "loesung_bezeichnung": "Lösung 3"
+      }
+    },
+    {
+      "id": "m21-f04",
+      "nummer": 4,
+      "titel": "Fall 4",
+      "sachverhalt": "A besitzt 300 Aktien der Glück-AG im Wert von 300.000 € in seinem Einzelunternehmen\n(Anschaffungskosten 01.01.2015: 1.000 € /Stück). Diese führt eine Kapitalerhöhung gegen Einlagen durch.\nDie AG erhöht ihr Grundkapital im Verhältnis 10:1. A erhält 300 Bezugsrechte.\nDer Bezugspreis der Jungen Aktien beträgt 600 €. Der Börsenkurs der Altaktien betrug am Tag der\nKapitalerhöhung 1.100 €/Stück. Der Börsenkurs des Bezugsrechts beträgt 100 €. Alle Bezugsrechte werden\nvon A zum Preis von 110 € pro Stück verkauft.\n\nBestimmen Sie den Veräußerungserlös und den neuen Restbuchwert der Altaktien.\n\nAbwandlung:\nA macht von seinem Bezugsrecht in vollem Umfang Gebrauch. Bestimmen sie die Anschaffungskosten der\njungen Anteile und den neuen Restbuchwert der Altaktien.",
+      "loesung": "Durch den Beschluss zur Kapitalerhöhung gegen Einlagen entsteht in jeder Altaktie das Bezugsrecht als\neigener Vermögensgegenstand. Aufgrund der Kapitalerhöhung im Verhältnis 10 zu 1 werden 10\nBezugsrechte benötigt, um eine junge Aktie zu erwerben. Der eigenständige Vermögensgegenstand\nBezugsrecht wird bei Verkauf des Bezugsrechts bzw. bei Anschaffung einer jungen Aktie von der Altaktie\nabgespalten (Buchwertabspaltung).\n\nDer Buchwert des Bezugsrechts wird wie folgt berechnet:\nBuchwert Bezugsrecht                       =      Buchwert Altaktie\nKurswert Bezugsrecht                              Kurswert Altaktie vor Kapitalerhöhung\n\nDaraus ergibt sich für die Berechnung des Buchwerts eines Bezugsrechts folgende Formel:\nBuchwert Altaktie x Kurswert Bezugsrecht/Kurswert Altaktie vor Kapitalerhöhung\nalso: 1.000 € x 100 €/ 1.100 € = 91 €\nBuchwert aller Bezugsrechte:\n91 € x 300 =27.300 €\n\nVeräußerungspreis:\n300 Stück x 110 € /Stück= 33.000 €\nBerechung des Veräußerungserlöses:\nVeräußerungspreis                            33.000 €\n./.   Buchwert des Bezugsrechts                    27.300 €\n=     Veräußerungserlös                             5.700 €\n\nBei den Altaktien kommt es zu einer Buchwertabspaltung in Höhe des Buchwertes des Bezugsrechts:\nBuchwert der Altaktien                            300.000 €\nBuchwert der Bezugsrechte                      ./. 27.300 €\nneuer Restbuchwert der Altaktien                  272.700 €\n\nDieser Gewinn zählt nach § 20 Abs. 2 Nr. 1, Abs. 8 i.V.m. § 15 Abs. 1 Satz 1 Nr. 1 EStG zu den Einkünften\naus Gewerbebetrieb. Dieser ist gem. § 3 Nr. 40 Satz 1 a) EStG zu 40 % steuerfrei; Das Teileinkünfteverfahren\ngilt ebenfalls für Bezugsrechte, da diese von Anteilen an Kapitalgesellschaften abgespalten wurden.\n\nIn der Handelsbilanz ist eine Rücklagenbildung ausgeschlossen.\n\nIn der Steuerbilanz kann der Gewinn aus der Veräußerung der Bezugsrechte gem. § 6b Abs. 10 Satz 5 EStG\nin eine steuerfreie Rücklage eingestellt werden. Es handelt sich um ein Wahlrecht, welches unabhängig vom\nWertansatz in der Handelsbilanz ausgeübt werden kann gem. § 5 Abs. 1 Satz 1 Hs. 2 EStG.\n\nDie Voraussetzungen des § 6 b Abs. 10 EStG liegen vor. Es handelt sich nicht um eine Kapitalgesellschaft,\nder Gewinn liegt unter 500.000 € und die Aktien waren mehr als 6 Jahre inländisches Anlagevermögen gem.\n§ 6b Abs. 10 Satz 4 i.V.m. Abs. 4 Satz 1 Nr. 2 EStG. Der Besitzzeit der Bezugsrechte kann die Besitzzeit der\nalten Anteilsrechte hinzugerechnet werden, von denen sie abgespalten sind (R 6b.3 Abs. 6 Satz 2 EStR). Da\nein möglichst niedriger steuerlicher Gewinn gewünscht ist, ist die Rücklage zu bilden.\n\nb) Anschaffungskosten beim Erwerb der jungen Anteile:\nKaufpreis der Anteile: 30 x 600 € =                18.000 €\nzuzüglich Buchwert der Bezugsrechte:               27.300 €\nAnschaffungskosten der jungen Aktien               45.300 €\n\nBei den Altaktien kommt es zu einer Buchwertabspaltung in Höhe des Buchwertes des Bezugsrechts:\nBuchwert der Altaktien                            300.000 €\nBuchwert der Bezugsrechte                      ./. 27.300 €\nneuer Restbuchwert der Altaktien                  272.700 €",
+      "quelle": {
+        "fall_seite": 34,
+        "loesung_seite": 88,
+        "fall_bezeichnung": "Fall 4",
+        "loesung_bezeichnung": "Lösung 4"
+      }
+    }
+  ]
+}

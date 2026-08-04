@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "modul-14",
+  "nummer": 14,
+  "slug": "14-verbindlichkeiten",
+  "titel": "Verbindlichkeiten",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      24,
+      24
+    ],
+    "loesung_seiten": [
+      55,
+      55
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m14-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "Der Gesellschafter A hat der A-GmbH. an welcher er mit 30 % beteiligt ist ein Darlehen zu fremdüblichen\nKonditionen in Höhe von 30.000 € gegeben. Infolge von Liquiditätsschwierigkeiten bei der A-GmbH wurde\nzwischen A und der A- GmbH am 01.07.2025 mit Wirkung ab Juli 2025 vereinbart, dass die\nDarlehensforderung von A hinter die Forderungen aller übrigen Gläubiger zurücktritt und nur aus den\nGewinnen künftiger Wirtschaftsjahre zu zahlen ist (Rangrücktritt).\n\nWie ist die Verbindlichkeit in der Handels- und Steuerbilanz zu behandeln?",
+      "loesung": "Handelsbilanz\nDie Verbindlichkeit ist in der Handelsbilanz gem. § 246 Abs. 1 Satz 1 und 3 HGB anzusetzen und gemäß §\n253 Abs. 1 Satz 2 Alt. 1 HGB mit dem Erfüllungsbetrag in Höhe von 30.000 € zu bewerten.\nDie Vereinbarung eines Rangrücktritts hat keinen Einfluss auf die handelsrechtliche Bilanzierung der\nVerbindlichkeit. Im Gegensatz zu einem Forderungsverzicht mindert sich oder erlischt die Verbindlichkeit\nnicht. Diese wird weiterhin geschuldet und stellt eine wirtschaftliche Belastung dar; lediglich die Rangfolge\nder Tilgung ändert sich.\n\nSteuerbilanz\nIn der Steuerbilanz ist die Verbindlichkeit grunsätzlich gem. § 5 Abs. 1 Satz 1 HS 1 EStG ebenfalls anzusetzen.\nHier wird der Grundsatz der Maßgeblichkeit aber durch den Ansatzvorbehalt gem. § 5 Abs. 2a EStG\ndurchbrochen. Nach § 5 Abs. 2a EStG sind Verbindlichkeiten nicht zu bilanzieren, wenn sie nur aus künftigen\nEinnahmen oder Gewinnen zu erfüllen sind. Hier fehlt eine Bezugnahme auf die Möglichkeit einer Tilgung\nauch aus sonstigem freien Vermögen, daher ist der Ansatz einer Verbindlichkeiten gem. § 5 Abs. 2a EStG\nausgeschlossen (BMF-Schreiben vom 08.09.2006, Beck´sche Steuererlasse zu 1, § 5/11).",
+      "quelle": {
+        "fall_seite": 24,
+        "loesung_seite": 55,
+        "fall_bezeichnung": "Fall",
+        "loesung_bezeichnung": "Lösung"
+      }
+    }
+  ]
+}

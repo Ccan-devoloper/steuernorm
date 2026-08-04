@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fallsammlung · steuernorm</title>
+<meta name="description" content="Fälle und Lösungen zur Bilanzierung nach Handels- und Steuerrecht, geordnet nach Themenmodulen.">
+<style>
+  :root{
+    --papier:#FCFCFA;--tinte:#17181A;--gedeckt:#5E615C;--leise:#8E9089;
+    --linie:#E4E4DE;--linie-stark:#C9C9C2;--feld:#F3F3EF;--akzent:#1F5F8B;
+    --loesung:#EDF4EE;--loesung-kante:#6C9A77;--warn:#8C3A2B;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:15px;line-height:1.55}
+  a{color:inherit}
+  button,input,select{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--tinte);outline-offset:2px;border-radius:2px}
+  header{position:sticky;top:0;z-index:30;background:rgba(252,252,250,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--linie)}
+  .kopf{max-width:1560px;margin:auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .marke{font-family:var(--serif);font-size:19px;text-decoration:none;white-space:nowrap}
+  .marke small{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--leise);margin-left:8px}
+  .zurueck{border:1px solid var(--linie);border-radius:999px;text-decoration:none;padding:5px 11px;font-size:12px;color:var(--gedeckt)}
+  .zurueck:hover{border-color:var(--linie-stark);color:var(--tinte)}
+  .suche{flex:1 1 260px;min-width:160px;border:0;border-bottom:1px solid var(--linie);background:transparent;padding:7px 2px;font-size:13.5px}
+  .suche:focus{outline:0;border-bottom-color:var(--tinte)}
+  .modulleiste{border-top:1px solid var(--linie);overflow-x:auto}
+  .modulleiste-innen{max-width:1560px;margin:auto;padding:0 16px;display:flex}
+  .modulknopf{border:0;border-bottom:2px solid transparent;background:transparent;padding:9px 9px 8px;font-family:var(--mono);font-size:11px;color:var(--leise);cursor:pointer;white-space:nowrap}
+  .modulknopf:hover{color:var(--tinte)}
+  .modulknopf[aria-current=true]{color:var(--tinte);border-bottom-color:var(--tinte)}
+  .modulwahl{display:none;padding:8px 16px;border-top:1px solid var(--linie)}
+  .modulwahl select{width:100%;padding:7px 9px;border:1px solid var(--linie);background:var(--feld)}
+  .geruest{max-width:1560px;margin:auto;display:grid;grid-template-columns:285px minmax(0,1fr) 310px;align-items:start}
+  nav{height:calc(100vh - 92px);position:sticky;top:92px;overflow-y:auto;border-right:1px solid var(--linie);padding:24px 14px 60px 16px}
+  main{min-width:0;padding:36px 42px 90px}
+  aside{height:calc(100vh - 92px);position:sticky;top:92px;overflow-y:auto;border-left:1px solid var(--linie);padding:36px 24px 70px}
+  .nav-kappe,.kappe{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--leise);margin:0 0 10px}
+  .modultitel-nav{font-family:var(--serif);font-size:18px;line-height:1.25;font-weight:400;margin:0 0 18px}
+  .fall-link{display:block;width:100%;text-align:left;border:0;border-left:1px solid var(--linie);background:transparent;padding:7px 8px 7px 12px;cursor:pointer;color:var(--gedeckt)}
+  .fall-link:hover{color:var(--tinte);border-left-color:var(--linie-stark)}
+  .fall-link[aria-current=true]{color:var(--tinte);border-left-color:var(--tinte);background:var(--feld)}
+  .fall-link small{display:block;color:var(--leise);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .leer{color:var(--leise);font-size:13px;line-height:1.6}
+  .fallkopf,.inhalt{max-width:48rem}
+  .augenbraue{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
+  h1{font-family:var(--serif);font-size:clamp(27px,4vw,38px);font-weight:400;line-height:1.15;margin:7px 0 10px}
+  h1 span{color:var(--gedeckt)}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 16px;border-top:1px solid var(--linie);padding-top:11px;color:var(--leise);font-size:11.5px}
+  .abschnitt{margin-top:34px}
+  .abschnitt h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 14px}
+  .falltext{font-family:var(--serif);font-size:17px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;hyphens:auto}
+  details.loesung{margin-top:42px;border:1px solid var(--loesung-kante);border-radius:5px;background:var(--loesung)}
+  details.loesung summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none}
+  details.loesung summary::-webkit-details-marker{display:none}
+  details.loesung summary::after{content:"Lösung öffnen";float:right;font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--gedeckt)}
+  details.loesung[open] summary::after{content:"Lösung schließen"}
+  .loesung-inhalt{border-top:1px solid var(--loesung-kante);padding:20px 22px 26px}
+  .hinweis{max-width:48rem;margin-top:38px;border-left:2px solid var(--linie-stark);padding:2px 0 2px 14px;color:var(--gedeckt);font-size:12.5px}
+  .blaettern{max-width:48rem;margin-top:44px;border-top:1px solid var(--linie);padding-top:16px;display:flex;justify-content:space-between;gap:16px}
+  .blaettern button{border:0;background:transparent;cursor:pointer;padding:0;text-align:left;color:var(--gedeckt);max-width:48%}
+  .blaettern button:last-child{text-align:right;margin-left:auto}
+  .blaettern .richtung{display:block;font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--leise)}
+  .aside-titel{font-family:var(--serif);font-size:18px;line-height:1.35;font-weight:400;margin:0 0 14px}
+  .fakten{margin:0}
+  .fakten dt{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--leise);margin-top:12px}
+  .fakten dd{margin:2px 0 0;color:var(--gedeckt);font-size:13px}
+  .rechtshinweis{margin-top:26px;padding-top:18px;border-top:1px solid var(--linie);color:var(--leise);font-size:11.5px;line-height:1.65}
+  .melder{max-width:48rem;border:1px solid var(--warn);padding:14px 16px;color:var(--warn)}
+  @media(max-width:1100px){
+    .geruest{grid-template-columns:250px minmax(0,1fr)}
+    aside{display:none}
+  }
+  @media(max-width:760px){
+    .modulleiste{display:none}.modulwahl{display:block}
+    .geruest{display:block}
+    nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--linie);padding:16px}
+    .fallregister{display:flex;overflow-x:auto;gap:4px;padding-bottom:3px}
+    .fall-link{min-width:112px;border-left:0;border-bottom:2px solid var(--linie);padding:6px 8px}
+    .fall-link[aria-current=true]{border-bottom-color:var(--tinte)}
+    .modultitel-nav{margin-bottom:10px}
+    main{padding:26px 18px 70px}
+    .falltext{font-size:16px}
+    .zurueck{order:3}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="kopf">
+    <a class="marke" href="index.html">steuernorm<small>Fallsammlung</small></a>
+    <a class="zurueck" href="index.html">Gesetzestexte</a>
+    <input id="suche" class="suche" type="search" placeholder="Im ausgewählten Modul suchen" autocomplete="off">
+  </div>
+  <div class="modulleiste"><div id="modulleiste" class="modulleiste-innen"></div></div>
+  <div class="modulwahl"><select id="modulwahl" aria-label="Modul wählen"></select></div>
+</header>
+<div class="geruest">
+  <nav aria-label="Fälle im Modul">
+    <p class="nav-kappe">Ausgewähltes Modul</p>
+    <h2 id="modultitel-nav" class="modultitel-nav"></h2>
+    <div id="fallregister" class="fallregister"></div>
+  </nav>
+  <main id="haupt"><p class="leer">Fallsammlung wird geladen …</p></main>
+  <aside id="aside"></aside>
+</div>
+<script>
+"use strict";
+const S={index:null,modul:null,modulId:null,fallId:null,filter:""};
+const cache=new Map();
+const el=id=>document.getElementById(id);
+async function holen(pfad){
+  const r=await fetch(pfad,{cache:"no-cache"});
+  if(!r.ok)throw new Error(pfad+" → "+r.status);
+  return r.json();
+}
+async function modulLaden(id){
+  if(cache.has(id))return cache.get(id);
+  const meta=S.index.module.find(m=>m.id===id)||S.index.module[0];
+  const daten=await holen(meta.datei);
+  cache.set(id,daten);
+  return daten;
+}
+function routeTeile(){
+  const t=decodeURIComponent(location.hash.replace(/^#\/?/,"")).split("/").filter(Boolean);
+  return {modul:t[0]||"modul-01",fall:t[1]||null};
+}
+function textAuszug(text){
+  return String(text||"").replace(/\s+/g," ").trim().slice(0,90);
+}
+function modulNavigation(){
+  const bar=el("modulleiste"),select=el("modulwahl");
+  bar.innerHTML="";select.innerHTML="";
+  for(const m of S.index.module){
+    const b=document.createElement("button");
+    b.className="modulknopf";
+    b.textContent=String(m.nummer).padStart(2,"0");
+    b.title=m.titel+" · "+m.anzahl+" Fälle";
+    b.setAttribute("aria-current",String(m.id===S.modulId));
+    b.onclick=()=>location.hash="#/"+m.id;
+    bar.appendChild(b);
+    const o=document.createElement("option");
+    o.value=m.id;o.textContent=m.nummer+" — "+m.titel;o.selected=m.id===S.modulId;
+    select.appendChild(o);
+  }
+  select.onchange=()=>location.hash="#/"+select.value;
+}
+function fallRegister(){
+  el("modultitel-nav").textContent=S.modul.nummer+" · "+S.modul.titel;
+  const ziel=el("fallregister");ziel.innerHTML="";
+  const f=S.filter.trim().toLowerCase();
+  let n=0;
+  for(const fall of S.modul.faelle){
+    const hay=(fall.titel+" "+fall.sachverhalt+" "+fall.loesung).toLowerCase();
+    if(f&&!hay.includes(f))continue;
+    n++;
+    const b=document.createElement("button");
+    b.className="fall-link";
+    b.setAttribute("aria-current",String(fall.id===S.fallId));
+    const strong=document.createElement("strong");strong.textContent=fall.titel;
+    const small=document.createElement("small");small.textContent=textAuszug(fall.sachverhalt);
+    b.append(strong,small);
+    b.onclick=()=>location.hash="#/"+S.modulId+"/"+fall.id;
+    ziel.appendChild(b);
+  }
+  if(!n){const p=document.createElement("p");p.className="leer";p.textContent="Kein Treffer in diesem Modul.";ziel.appendChild(p);}
+}
+function quelleText(fall){
+  const q=fall.quelle||{};
+  return "Fallsammlung S. "+q.fall_seite+" · Lösung S. "+q.loesung_seite;
+}
+function nebenbereich(fall){
+  const a=el("aside");a.innerHTML="";
+  const k=document.createElement("p");k.className="kappe";k.textContent="Modul";
+  const h=document.createElement("h2");h.className="aside-titel";h.textContent=S.modul.nummer+" · "+S.modul.titel;
+  const dl=document.createElement("dl");dl.className="fakten";
+  const daten=[
+    ["Fälle",S.modul.faelle.length],
+    ["Rechtsstand",S.modul.quelle.rechtsstand],
+    ["Ausgabe",S.modul.quelle.ausgabe],
+    ["Fundstelle",quelleText(fall)]
+  ];
+  for(const [begriff,wert] of daten){
+    const dt=document.createElement("dt");dt.textContent=begriff;
+    const dd=document.createElement("dd");dd.textContent=wert;
+    dl.append(dt,dd);
+  }
+  const p=document.createElement("p");p.className="rechtshinweis";
+  p.textContent="Fall und Lösung sind ausschließlich diesem Themenmodul zugeordnet. Die Darstellung ist eine Lernhilfe und keine Rechtsberatung.";
+  a.append(k,h,dl,p);
+}
+function fallZeichnen(){
+  const fall=S.modul.faelle.find(f=>f.id===S.fallId)||S.modul.faelle[0];
+  S.fallId=fall.id;
+  const haupt=el("haupt");haupt.innerHTML="";
+  const kopf=document.createElement("div");kopf.className="fallkopf";
+  const eb=document.createElement("p");eb.className="augenbraue";eb.textContent="Modul "+S.modul.nummer+" · "+S.modul.titel;
+  const h1=document.createElement("h1");h1.textContent=fall.titel;
+  const meta=document.createElement("div");meta.className="meta";
+  const fund=document.createElement("span");fund.textContent=quelleText(fall);
+  const stand=document.createElement("span");stand.textContent="Rechtsstand "+S.modul.quelle.rechtsstand;
+  meta.append(fund,stand);kopf.append(eb,h1,meta);haupt.appendChild(kopf);
+  const abs=document.createElement("section");abs.className="abschnitt inhalt";
+  const h2=document.createElement("h2");h2.textContent="Sachverhalt";
+  const text=document.createElement("div");text.className="falltext";text.lang="de";text.textContent=fall.sachverhalt;
+  abs.append(h2,text);haupt.appendChild(abs);
+  const details=document.createElement("details");details.className="loesung inhalt";
+  const summary=document.createElement("summary");summary.textContent="Lösung";
+  const lin=document.createElement("div");lin.className="loesung-inhalt";
+  const lt=document.createElement("div");lt.className="falltext";lt.lang="de";lt.textContent=fall.loesung;
+  lin.appendChild(lt);details.append(summary,lin);haupt.appendChild(details);
+  const hin=document.createElement("p");hin.className="hinweis";
+  hin.textContent="Quelle: Karsten Melzer, Bilanzierung nach Handels- und Steuerrecht, Fallsammlung und Lösungen zur Fallsammlung, April 2026, Rechtsstand 2025.";
+  haupt.appendChild(hin);
+  const i=S.modul.faelle.indexOf(fall);
+  const nav=document.createElement("div");nav.className="blaettern";
+  function knopf(ziel,richtung){
+    const b=document.createElement("button");
+    if(!ziel){b.style.visibility="hidden";return b;}
+    const r=document.createElement("span");r.className="richtung";r.textContent=richtung;
+    const t=document.createElement("span");t.textContent=ziel.titel;
+    b.append(r,t);b.onclick=()=>location.hash="#/"+S.modulId+"/"+ziel.id;return b;
+  }
+  nav.append(knopf(S.modul.faelle[i-1],"zurück"),knopf(S.modul.faelle[i+1],"weiter"));
+  haupt.appendChild(nav);
+  nebenbereich(fall);
+  document.title=fall.titel+" · "+S.modul.titel+" · steuernorm";
+  window.scrollTo({top:0});
+}
+async function route(){
+  if(!S.index)return;
+  const t=routeTeile();
+  const meta=S.index.module.find(m=>m.id===t.modul)||S.index.module[0];
+  S.modulId=meta.id;
+  try{S.modul=await modulLaden(S.modulId);}
+  catch(err){el("haupt").innerHTML='<div class="melder"><strong>Modul konnte nicht geladen werden.</strong><br>'+err.message+"</div>";return;}
+  S.fallId=t.fall&&S.modul.faelle.some(f=>f.id===t.fall)?t.fall:S.modul.faelle[0].id;
+  modulNavigation();fallRegister();fallZeichnen();
+}
+async function start(){
+  el("suche").oninput=e=>{S.filter=e.target.value;fallRegister();};
+  window.addEventListener("hashchange",route);
+  try{S.index=await holen("faelle/index.json");}
+  catch(err){el("haupt").innerHTML='<div class="melder"><strong>Die Falldaten fehlen oder sind nicht erreichbar.</strong><br>'+err.message+"</div>";return;}
+  route();
+}
+start();
+</script>
+</body>
+</html>

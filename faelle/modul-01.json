@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "modul-01",
+  "nummer": 1,
+  "slug": "01-vermoegensgegenstand-wirtschaftsgut",
+  "titel": "Vermögensgegenstand/Wirtschaftsgut",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      1,
+      2
+    ],
+    "loesung_seiten": [
+      1,
+      3
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m01-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "Im Januar 2025 hatte der Einzelunternehmer A bei der Inventur festgestellt, dass sich ein Werkzeug, das die\nVorteile eines Hammers, einer Zange und eines Bohrers in sich vereinigte und zudem einfach zu handhaben\nund preisgünstig war, nicht in seinem Warenangebot befand. Bei Recherchen konnte er auch am Markt kein\nWerkzeug finden, das seinen Vorstellungen entsprach.\nIm Februar und im März verwendete er einige Mühe darauf, ein neuartiges Werkzeug dieser Art in sein\nAngebot aufnehmen zu können.\nAm 01.04.2025 kam er durch eine überraschende Eingebung darauf, welche konkreten Eigenschaften dieses\nWerkzeug haben müsste, und es gelang ihm innerhalb weniger Tage, den Entwurf eines solchen Werkzeugs\nzu zeichnen und ein patentfähiges Konzept zu erstellen.\nDie Materialkosten bei der Suche nach einer möglichen Realisierung seiner Vorstellungen im Februar und\nMärz 2025 betrugen 7.000 € und wurden als Betriebsausgaben gebucht. Die ebenfalls als Aufwand gebuchten\nGemeinkosten in diesem Zusammenhang betrugen 5.000 €. Der eigene Arbeitslohn von A wäre mit 6.000 €\nangemessen berücksichtigt. Eine Buchung des Arbeitslohns ist bisher nicht erfolgt.\nDie gebuchten Aufwendungen im April für den Entwurf des Werkzeugs und das patentfähige Konzept\nbetrugen insgesamt 9.000 €. Der angemessene Arbeitslohn von A in Höhe von 4.000 € wurde auch hier nicht\ngebucht.\nDie als Aufwand gebuchten Beratungskosten und die Gebühr für die Registrierung des Patents betrugen\ndaneben insgesamt 12.000 €. Das Patent ist damit für A ab 01.09.2025 für 15 Jahre geschützt.\nDer bisher nicht gebuchte Firmenwert ist durch die gesicherte Möglichkeit der konkurrenzlosen Fertigung des\nneuartigen Werkzeugs nach zutreffender Einschätzung vom Jahresbeginn bis zum 31.12.2025 von 300.000 €\nauf 450.000 € gestiegen.\n\nWie ist der Sachverhalt zu behandeln, wenn ein möglichst hoher handelsrechtlicher Eigenkapitalausweis\n(1.Priorität) und ein möglichst niedriger steuerlicher Gewinn gefordert sind?",
+      "loesung": "1. Patentrecht:\na) Handelsbilanz:\nDas Patentrecht ist ein selbstgeschaffener immaterieller Vermögensgegenstand des Anlagevermögens gemäß\n§ 247 Abs. 2 HGB. Gem. § 248 Abs. 2 Satz 1 HGB besteht ein Aktivierungswahlrecht, wenn nicht ein\nAktivierungsverbot gem. § 248 Abs. 2 Satz 2 HGB gegeben ist. Da es sich hier nicht um eine Marke, einen\nDrucktitel oder einen vergleichbaren Vermögensgegenstand handelt, besteht vorliegend kein\nAktivierungsverbot. Eine Aktivierung ist vorzunehmen, da ein möglichst hoher Eigenkapitalausweis\ngewünscht ist.\nDie Bewertung erfolgt gem. § 253 Abs. 1 Satz 1 HGB mit den Herstellungskosten gem. § 255 Abs. 2 und 2a\nHGB abzüglich planmäßiger Abschreibungen gem. § 253 Abs. 3 Sätze 1 und 2 HGB.\nHerstellungskosten sind gem. § 255 Abs. 2a HGB nur die Entwicklungskosten, nicht jedoch die\nForschungskosten. Ist eine klare Abgrenzung nicht möglich, so unterbleibt eine Aktivierung.\nForschungskosten sind Kosten, die bei der planmäßigen Suche nach neuen technischen Erkenntnissen\nentstehen. Die im Februar und März entstandenen Kosten sind bei der planmäßigen Suche angefallen. Diese\nsind keine Herstellungskosten, mithin ist die Buchung als Betriebsausgaben zu Recht erfolgt.\nDie Kosten im April 2025, nämlich der Entwurf des Werkzeugs, das Konzept, die Beratungs- und\nRegistrierungskosten, betreffen dagegen die konkrete Entwicklung eines neuartigen Werkzeugs im Betrieb.\nDer Wert der eigenen Arbeitsleistung des Unternehmers gehört zu den kalkulatorischen Kosten\n(H 6.3 „Kalkulatorische Kosten\" EStH), die auch handelsbilanziell nicht aktivierungsfähig sind.\nDas Patentrecht ist ein abnutzbarer Vermögensgegenstand, da die Nutzungsmöglichkeit voraussichtlich auf\n15 Jahre begrenzt ist. Da eine verlässliche Schätzung möglich ist, ist § 253 Abs. 3 Satz 3 HGB nicht\nanwendbar.\nDie Folgebewertung zum 31.12.2025 erfolgt nach § 253 Abs. 3 Sätze 1 und 2 HGB mit einer planmäßigen,\nhier linearen zeitanteiligen Abschreibung in Höhe von 21.000 € x 1/15 (15 Jahre) x 4/12 (Nutzung ab\nSeptember) = 466 €.\nb) Steuerbilanz:\nGrundsätzlich führt ein handelsrechtliches Aktivierungswahlrecht in der Steuerbilanz über den Grundsatz der\nMaßgeblichkeit gem. § 5 Abs. 1 Satz 1 HS 1 HGB zu einem Aktivierungsgebot. Jedoch wird der Grundsatz\nder Maßgeblichkeit hier durch § 5 Abs. 2 EStG durchbrochen. Danach gilt im Steuerrecht für selbst\ngeschaffene immaterielle Wirtschaftsgüter des Anlagevermögens ein Aktivierungsverbot.\n2. Firmenwert:\nDer selbst geschaffene Firmenwert ist auch handelsbilanziell nicht aktivierungsfähig. Eine Aktivierung über\n§ 246 Abs. 1 Satz 1 HGB kann nicht erfolgen, da dieser kein Vermögensgegenstand ist. Einem\nVermögensgegenstand gleichgestellt ist nur der entgeltlich erworbene Firmenwert gem. § 246 Abs. 1 Satz 4\nHGB. Daraus wird der Umkehrschluss gezogen, dass keine Aktivierungsfähigkeit besteht.\nEbenso ist eine Aktivierung nach § 248 Abs. 2 HGB ausgeschlossen. Danach können nur einzeln\nidentifizierbare immaterielle Vermögensgegenstände aktiviert werden. Der Firmenwert ist jedoch Ausdruck\nder Entwicklung des Unternehmens in seiner Gesamtheit.",
+      "quelle": {
+        "fall_seite": 1,
+        "loesung_seite": 1,
+        "fall_bezeichnung": "Fall 1",
+        "loesung_bezeichnung": "Lösung 1"
+      }
+    },
+    {
+      "id": "m01-f02",
+      "nummer": 2,
+      "titel": "Fall 2",
+      "sachverhalt": "Der Einzelunternehmer A erwirbt die gesamten Vermögensgegenstände und Schulden der B-GmbH (sog.\n\"asset deal\"). Am 02.01.2025 wurde folgende ordnungsgemäße Rechnung (auszugsweise) erstellt:\nFür die Übernahme der gesamten Vermögensgegenstände und Schulden der B-GmbH ist ein Kaufpreis von\n1.150.000 € zu zahlen. Gem. § 1 Abs. 1a UStG fällt Umsatzsteuer nicht an.\nDer Zeitwert des erworbenen Sachanlagevermögens beträgt 2.500.000 €. Die übernommenen Schulden\nentfallen ausschließlich auf Verbindlichkeiten aus Lieferungen und Leistungen in Höhe von 1.500.000 €. Die\nVerbindlichkeiten wurden bislang nicht getilgt. Vorräte und unfertige Erzeugnisse waren am 02.01.2025 nicht\nvorhanden. Die Nutzungsdauer des Geschäfts- oder Firmenwertes lässt sich nicht verlässlich schätzen.\nDer Kaufpreis von 1.150.000 € wurde sofort vom betrieblichen Bankkonto überwiesen.\nGebucht wurde:\n\nTechnische Anlagen und         2.650.000 €    an                      Bank            1.150.000 €\nMaschinen\nVerbindlichkeiten LuL            1.500.000 €\n\nIst ein Firmenwert anzusetzen? Und wenn ja in welcher Höhe? Wie ist der Sachverhalt zu behandeln, wenn\nein möglichst hoher handelsrechtlicher Eigenkapitalausweis (1.Priorität) und ein möglichst niedriger\n\nsteuerlicher Gewinn gefordert sind? Die Buchhaltung ist so eingerichtet, dass für Buchungen, die\nhandelsrechtlich und steuerrechtlich identisch sind, der Buchungskreis „Alle Bereiche“ anzusprechen ist. Im\nFalle von Abweichungen ist jeweils in den besonderen Buchungskreisen „Nur Handelsrecht“ und / oder\n„Nur Steuerrecht“ zu buchen.",
+      "loesung": "Ansatz und Bewertung des Firmenwerts in der Handelsbilanz\nDer Firmenwert ist kein Vermögensgegenstand und daher grundsätzlich nicht gem. § 246 Abs. 1 Satz 1 HGB\nin der Handelsbilanz zu aktivieren. Jedoch gilt dieser gemäß § 246 Abs. 1 Satz 4 HGB als zeitlich begrenzt\nnutzbarer Vermögensgegenstand des Anlagevermögens § 247 Abs. 2 HGB (R 6.1 Abs. 1 Satz 4 EStR), wenn\ndieser entgeltlich erworben wurde.\nDie Bewertung erfolgt gem. § 253 Abs. 1 Satz 1 HGB mit den Anschaffungskosten gem. § 255 Abs. 1 HGB.\nDie Anschaffungskosten des Firmenwertes ermitteln sich aus der Differenz der Gegenleistung von 1.150.000 €\nund dem Zeitwert des übernommenen Sachanlagevermögens in Höhe von 2.500.000 € abzüglich der Schulden\nin Höhe von 1.500.000 €. Die Anschaffungskosten betragen 150.000 €.\nDie Folgebewertung erfolgt gem. § 253 Abs. 3 Sätze 1 und 2 HGB abzüglich planmäßiger zeitanteiliger\nAbschreibung. Gem. § 253 Abs. 3 Sätze 3 und 4 HGB ist der Firmenwert über 10 Jahre abzuschreiben, da eine\nverlässliche Schätzung nicht möglich ist. Die planmäßige Abschreibung beträgt jährlich 10 %, für 2025 also\n15.000 €, Wertansatz 31.12.2025 = 135.000 €.\nAnsatz und Bewertung des Firmenwerts in der Steuerbilanz\nDer Firmenwert ist entgeltlich erworben und gem. §§ 5 Abs. 1 Satz 1 HS 1, 5 Abs. 2 EStG ebenfalls in der\nSteuerbilanz anzusetzen.\nDer Firmenwert ist gem. §§ 5 Abs. 1 Satz 1 HS 1, 5 Abs. 6, 6 Abs. 1 Nr. 1 Satz 1 EStG mit den\nAnschaffungskosten abzüglich AfA anzusetzen. Die AfA erfolgt linear gem. § 7 Abs. 1 Satz 1 und 2 EStG\nüber eine nach § 7 Abs. 1 Satz 3 EStG unterstellte Nutzungsdauer von 15 Jahren. 1/15 von 150.000 € = 10.000\n€ für 2025; Wertansatz 31.12.2025 = 140.000 €.\nBuchungssätze:\nAlle Bereiche\nGeschäfts- oder Firmenwert              150.000 €        an   Technische Anlagen und       150.000 €\nMaschinen\n\nNur Handelsbilanz\nAbschreibungen auf den                    15.000 €       an   Geschäfts- oder               15.000 €\nGeschäfts- oder Firmenwert                                    Firmenwert\n\nNur Steuerbilanz\nAfA auf den Geschäfts- oder               10.000 € an         Geschäfts- oder                10.000 €\nFirmenwert                                                    Firmenwert",
+      "quelle": {
+        "fall_seite": 1,
+        "loesung_seite": 2,
+        "fall_bezeichnung": "Fall 2",
+        "loesung_bezeichnung": "Lösung 2"
+      }
+    },
+    {
+      "id": "m01-f03",
+      "nummer": 3,
+      "titel": "Fall 3",
+      "sachverhalt": "Eine Brauerei plant im Jahr 2026 eine neue Biermarke „Alkopopbier 2.000“ auf den Markt zu bringen. Um\ndie Marke einzuführen, werden am 11.05.2025 Anzeigen in Zeitungen geschaltet, wofür 20.000 € anfallen.\n\nWie ist die Biermarke in Handels- und Steuerbilanz zu behandeln?",
+      "loesung": "Für selbst geschaffene immaterielle Vermögensgegenstände des Anlagevermögens (§ 247 Abs. 2 HGB)\nbesteht grundsätzlich gem. § 246 Abs. 1 Satz 1 HGB, § 248 Abs. 2 Satz 1 HGB ein Aktivierungswahlrecht.\nFür Marken besteht jedoch ein Aktivierungsverbot gem. § 248 Abs. 2 Satz 2 HGB (Marke, Drucktitel,....\nvergleichbarer Vermögensgegenstand).\nGem. § 5 Abs. 1 Satz 1 HS 1 EStG (Grundsatz der Maßgeblichkeit), § 5 Abs. 2 EStG (insofern deklaratorisch)\nscheidet eine Aktivierung ebenfalls in der Steuerbilanz aus.\nDie Kosten für die Anzeigen in der Zeitung in Höhe von 20.000 € werden somit als Aufwand gem. § 4 Abs. 4\nEStG behandelt.",
+      "quelle": {
+        "fall_seite": 2,
+        "loesung_seite": 2,
+        "fall_bezeichnung": "Fall 3",
+        "loesung_bezeichnung": "Lösung 3"
+      }
+    },
+    {
+      "id": "m01-f04",
+      "nummer": 4,
+      "titel": "Fall 4",
+      "sachverhalt": "U erwirbt ein bebautes Grundstück für 400.000 € am 01.01.2025. Das Gebäude ist bis zum 31.12.2027 an den\nA vermietet. Am 02.01.2025 fasst U spontan den Entschluss das Grundstück und das Gebäude selbst\nbetrieblich zu nuten. Damit das Grundstück und das Gebäude zum 02.01.2025 geräumt wird, zahlt U an A\n30.000 €.\n\nUm was handelt es sich bei der Zahlung an A?",
+      "loesung": "Die Abstandszahlung ist hier nicht durch den Erwerb veranlasst. Es handelt sich nicht um Anschaffungskosten\ndes bebauten Grundstücks. Aufgrund der Zahlung hat U die Nutzungsmöglichkeit des Grundstücks zum\n01.01.2025 erlangt. Der Ansatz erfolgt gem. § 246 Abs. 1 Satz 1 HGB, § 5 Abs. 1 Satz 1 HS 1 EStG als\nentgeltlich erworbener immaterieller Vermögensgegenstand/ Wirtschaftsgut des Anlagevermögens § 247 Abs.\n2 HGB (R 6.1 Abs. 1 Satz 3 EStR).\nDie Bewertung erfolgt in der Handelsbilanz gem. §§ 253 Abs. 1 Satz 1 HGB mit den Anschaffungskosten\n§ 255 Abs. 1 HGB abzüglich planmäßiger linearer Abschreibung § 253 Abs. 3 Sätze 1 und 2 HGB und in der\nSteuerbilanz gem. §§ 5 Abs. 1 Satz 1 HS 1, § 6 Abs. 1 Nr. 1 Satz 1 EStG mit den Anschaffungskosten abzüglich\nlinearer AfA gem. § 7 Abs. 1 Satz 1 und 2 EStG.\n01.01.2025                   30.000 €\n./. AfA 30.000 /3 =          10.000 €\n31.12.2025                   20.000 €\n\nHinweis: Wird ein unbebautes Grundstück erworben, welches verpachtet ist, und werden Abstandszahlungen\ngeleistet, um den Pachtvertrag zu lösen und dieses bebauen zu können, stellen die Abstandszahlungen\nAnschaffungskosten dar gem. H 6.4 „Entschädigungs- oder Abfindungszahlungen“ EStH.\nDie Lösung des Pachtvertrags ist zur Herstellung des Gebäudes erforderlich.",
+      "quelle": {
+        "fall_seite": 2,
+        "loesung_seite": 3,
+        "fall_bezeichnung": "Fall 4",
+        "loesung_bezeichnung": "Lösung 4"
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "modul-02",
+  "nummer": 2,
+  "slug": "02-rap",
+  "titel": "RAP",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      3,
+      3
+    ],
+    "loesung_seiten": [
+      4,
+      6
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m02-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "A muss am 01.01.2025 bei Abschluss eines Mietvertrags über Büroräume eine Mietvorauszahlung i.H.v.\n3.600 € für 3 Jahre leisten. Dafür muss er monatlich nur eine Miete in Höhe von 800 € zahlen. Die Miete für\nDezember überweist er erst im Januar 2026. Die bisher gezahlten Mieten wurden als Aufwand verbucht.\n\nWie ist der Sachverhalt zu behandeln?",
+      "loesung": "Gem. § 250 Abs. 1 Satz 1 HGB, § 5 Abs. 5 Satz 1 Nr. 1 EStG hat A einen aktiven\nRechnungsabgrenzungsposten bezüglich des Teils der Miete zu bilden, der nicht Aufwand für das Jahr 2025\ndarstellt. Hier entfallen 1.200 € als Mietaufwand auf das Jahr 2025, daher sind 2.400 € in den aktiven\nRechnungsabgrenzungsposten einzustellen. Ein ARAP ist zu bilden, da die Grenze von 800 € gem. § 5 Abs. 5\nSatz 2 EStG überschritten wird.\n\nBezüglich der erst im Januar überwiesenen Miete ist eine Verbindlichkeit in Höhe von 800 € einzustellen.\nBuchungssätze:\n\nMietaufwand               1.200 €      an               Bank                3.600 €\nARAP                2.400 €\n\nMietaufwand                 800 €      an     Verbindlichkeit                 800 €",
+      "quelle": {
+        "fall_seite": 3,
+        "loesung_seite": 4,
+        "fall_bezeichnung": "Fall 1",
+        "loesung_bezeichnung": "Lösung 1"
+      }
+    },
+    {
+      "id": "m02-f02",
+      "nummer": 2,
+      "titel": "Fall 2",
+      "sachverhalt": "A nimmt am 01.01.2025 ein Darlehen bei der Bank in Höhe von 100.000 € auf. Es werden jedoch nur 90.000€\nausgezahlt.\na) Das Darlehen ist zum 31.12.2029 in voller Höhe zurückzuzahlen.\nb) Das Darlehen ist in vierteljährlichen Raten bis zum 31.12.2029 in voller Höhe zurückzuzahlen.\n\nWie ist der nicht ausgezahlte Betrag in Höhe von 10.000 € zu behandeln?",
+      "loesung": "a) und b) In der Handelsbilanz besteht ein Wahlrecht das Disagio gem. § 250 Abs. 3 HGB anzusetzten. In der\nSteuerbilanz ist gem. § 5 Abs. 5 Satz 1 Nr. 1 EStG ein Disagio anzusetzen (H 6.10 EStH).\n\nBank             90.000 €       an    Verbindlichkeit             100.000 €\nARAP              10.000 €\n\na) Auflösung:\nDer ARAP ist bei einem Fälligkeitsdarlehen linear über 5 Jahre in Höhe von 2.000 € aufzulösen.\n\nAufwand              2.000 €       an              ARAP                2.000 €\n\nb) Auflösung:\nDer ARAP ist bei einem Tilgungsdarlehen digital nach der Zinsstaffelmethode über 5 Jahre aufzulösen.\n20 + 19 + 18 + 17\n= 35,23 %\n20 x (20 + 1) / 2\n10.000 € x 35,23 % = 3.523 €\n\nAufwand                                   3.523 €       an              ARAP                3.523 €",
+      "quelle": {
+        "fall_seite": 3,
+        "loesung_seite": 4,
+        "fall_bezeichnung": "Fall 2",
+        "loesung_bezeichnung": "Lösung 2"
+      }
+    },
+    {
+      "id": "m02-f03",
+      "nummer": 3,
+      "titel": "Fall 3",
+      "sachverhalt": "Die Miete für die Monate November bis Januar in Höhe von 1.800 € wird dem A am 01.11.2025 bezahlt.\n\nWie ist der Sachverhalt zu behandeln? A wünscht in der Handelsbilanz einen möglichst hohen\nEigenkapitalausweis und in der Steuerbilanz einen möglichst niedrigen steuerlichen Gewinn.",
+      "loesung": "Gem. § 250 Abs. 2 HGB, § 5 Abs. 5 Satz 1 Nr. 2 EStG hat A einen passiven Rechnungsabgrenzungsposten\nbezüglich des Teils der Miete zu bilden, der nicht Ertrag für das Jahr 2025 darstellt. Hier entfallen 1.200 € als\nMietertrag auf das Jahr 2025, daher sind 600 € in den passiven Rechnungsabgrenzungsposten einzustellen.\n\nVon dem Wahlrecht - bis 800 € von der Bildung eines Rechnungsabgrenzungspostens abzusehen gem. § 5\nAbs. 5 Satz 2 EStG wird nicht Gebrauch gemacht, da dies zu einem höheren Ertrag in 2025 führt.\nBuchungssatz:\n\nBank                                      1.800 €        an   PRAP                          600 €\nMietertrag                  1.200 €",
+      "quelle": {
+        "fall_seite": 3,
+        "loesung_seite": 4,
+        "fall_bezeichnung": "Fall 3",
+        "loesung_bezeichnung": "Lösung 3"
+      }
+    },
+    {
+      "id": "m02-f04",
+      "nummer": 4,
+      "titel": "Fall 4",
+      "sachverhalt": "A hat im Dezember 2025 von B Anzahlungen in Höhe von 11.900 € erhalten.\nBis zum 31.12.2025 wurde noch nicht mit der Ausführung der Aufträge begonnen.\n\nWie ist der Sachverhalt bei A und B zum 31.12.2025 zu behandeln? Fertigen Sie die Buchungssätze. Die\nBuchhaltung ist so eingerichtet, dass für Buchungen, die handelsrechtlich und steuerrechtlich identisch sind,\nder Buchungskreis „Alle Bereiche“ anzusprechen ist. Im Falle von Abweichungen ist jeweils in den\nbesonderen Buchungskreisen „Nur Handelsrecht“ und / oder „Nur Steuerrecht“ zu buchen.",
+      "loesung": "1. Erhaltene Anzahlung A\nDie Anzahlungen dürfen noch nicht als Ertrag gebucht werden. Dies wäre ein Verstoß gegen das\nRealisationsprinzip § 252 Abs. 1 Nr. 4 HS. 2 HGB.\nDie Anzahlungen sind als Verbindlichkeiten eigener Art (sui generis) gem. § 246 Abs. 1 Satz 1, 3 HGB, § 5\nAbs. 1 Satz 1 HS. 1 EStG anzusetzen.\nBewertung\nDeren Bewertung erfolgt nach § 253 Abs. 1 Satz 2 Alt. 1 HGB bzw. gemäß §§ 5 Abs. 1 Satz 1 HS. 1, 6 Abs.\n1 Nr. 3 i. V. m § 6 Abs. 1 Nr. 2 Satz 1 EStG mit dem Erfüllungsbetrag. In der Handelsbilanz findet eine\nAbzinsung nicht statt, da diese einen Verstoß gegen das Realisationsprinzip darstellt § 252 Abs. 1 Nr. 4 HS. 2\nHGB.\nZum 31.12.2025 ist die Umsatzsteuer in Höhe von 1.900 € (19/119 von 11.900) gem. § 13 Abs. 1 Nr.1 lit. a\nSatz 4 UStG entstanden.\nIn der Handelsbilanz muss die Umsatzsteuer erfolgsneutral behandelt werden. (Beck‘scher Bilanzkommentar,\n§ 266 Rz. 226). Daher muss in der Handelsbilanz zwingend ein Nettoausweis erfolgen. In der Steuerbilanz hat\ngrundsätzlich gem. § 5 Abs. 5 Satz 3 Nr. 2 EStG ein Bruttoausweis zu erfolgen. Da aber nur als Aufwand\nberücksichtigte Umsazsatzsteuer als ARAP auszuweisen ist, ist die handelsrechtliche Nettomethode auch für\ndie Steuerbilanz zulässig.\n\nBuchung „alle Bereiche“:\n\nBank                                     11.900 €       an    Erhaltene Anzahlungen           10.000 €\nUmsatzsteuer                     1.900 €\n\nHinweis:\nDa der ARAP in der Steuerbilanz keinen Sinn macht kann hier als Argument auch wertend (teleologisch)\nreduziert werden. Der ARAP wird in der Praxis regelmäßig gar nicht berücksichtigt.\n\n2. geleistete Anzahlung B\nDie geleistete Anzahlung ist gem. § 246 Abs. 1 Satz 1 HGB, § 5 Abs. 1 Satz 1 HS 1 EStG als Forderung des\nUmlaufvermögens gem. § 247 Abs. 2 HGB Umkehrschluss anzusetzen.\nDie Bewertung erfolgt gem. §§ 253 Abs. 1 Satz 1 HGB, §§ 5 Abs. 1 Satz 1 HS 1, 5 Abs. 6, 6 Abs. 1 Nr. 2\nSatz 1 EStG mit den Anschaffungskosten § 255 Abs. 1 HGB, also dem Nennwert. Gem. § 9 b Abs. 1 EStG\ngehört die gem. § 15 Abs. 1 Satz 1 Nr. 1 Satz 3 UStG abziehbare Vorsteuer nicht zu den Anschaffungskosten.\nBuchung „alle Bereiche“:\n\nGeleistete Anzahlungen                10.000 € an              Bank                           11.900 €\nVorsteuer                              1.900 €",
+      "quelle": {
+        "fall_seite": 3,
+        "loesung_seite": 5,
+        "fall_bezeichnung": "Fall 4",
+        "loesung_bezeichnung": "Lösung 4"
+      }
+    },
+    {
+      "id": "m02-f05",
+      "nummer": 5,
+      "titel": "Fall 5",
+      "sachverhalt": "Im Jahr 2025 hat Bierbrauer B 100.000 Flaschen Bier hergestellt. Für die produzierte Menge sind folgende als\nAufwand erfasste Kosten angefallen:\nFertigungseinzelkosten und Gemeinkosten        100.000 €    zzgl. 19% USt\nBiersteuer                                      10.000 €\nAm 31.12.2025 sind noch 10% der produzierten Menge auf Lager. Sowohl die Umsatzsteuer als auch die\nBierflaschen wurden zutreffend erfasst. Gehen Sie davon aus, dass die Biersteuer zutreffend ermittelt wurde\nund B zum Vorsteuerabzug berechtigt ist. Buchungssätze sind nicht zu ermitteln.",
+      "loesung": "Biervorrat\nBier ist gem. § 246 Abs. 1 Satz 1 HGB; § 5 Abs. 1 Satz 1 HS. 1 EStG als Vermögensgegenstand bzw.\nWirtschaftsgut des Umlaufvermögens (§ 247 Abs. 2 HGB - Umkehrschluss) anzusetzen.\nDie Bewertung erfolgt gem. § 253 Abs. 1 Satz 1 HGB bzw. § 5 Abs. 1 Satz 1 HS 1, Abs. 6 EStG i. v. m. § 6\nAbs. 1 Nr. 2 Satz 1 EStG mit den Herstellungskosten gem. § 255 Abs. 2 HGB.\nZu den Herstellungskosten gehören die Fertigungseinzelkosten und die Fertigungsgemeinkosten (§ 255 Abs. 2\nSatz 2 HGB). Die als Vorsteuer abziehbare Umsatzsteuer gem. § 15 Abs. 1 Satz 1 Nr. 1 UStG gehört nicht zu\nden Herstellungskosten (§ 9 b Abs. 1 EStG). Die Biersteuer zählt nicht zu den Herstellungskosten, da diese\nerst nach dem Herstellungsvorgang mit Überführung aus dem Steuerlager in den freien Verkehr entsteht (§ 14\nBierStG).\n\nDer Bilanzansatz der Biervorräte beträgt zum 31.12.2025:\n10% v. 100.000 € = 10.000 €\n\nBiersteuer\nHandelsbilanz\nIn der Handelsbilanz ist für die Biersteuer kein Rechnungsabgrenzungsposten anzusetzen, da die Biersteuer\nnicht für bestimmte Zeit nach dem Bilanzstichtag anfällt (§ 250 Abs. 1 HGB); es verbleibt beim Aufwand in\nHöhe von 10.000 €.\n\nSteuerbilanz\nIn der Steuerbilanz ist für die Biersteuer als Verbrauchssteuer gem. § 5 Abs. 5 Satz 3 Nr. 1 EStG ein aktiver\nRechnungsabgrenzungsposten zu bilden (Aktivierungsgebot).",
+      "quelle": {
+        "fall_seite": 3,
+        "loesung_seite": 6,
+        "fall_bezeichnung": "Fall 5",
+        "loesung_bezeichnung": "Lösung 5"
+      }
+    }
+  ]
+}
