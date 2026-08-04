@@ -39,7 +39,8 @@ jobs:
             .fallsammlung/part-041 \
             .fallsammlung/part-05 \
             .fallsammlung/part-06 \
-            .fallsammlung/part-07 \
+            .fallsammlung/part-070 \
+            .fallsammlung/part-071 \
             .fallsammlung/part-08 \
             | tr -cd 'A-Za-z0-9+/' > /tmp/fallsammlung-payload.b64
           rest=$(( $(wc -c < /tmp/fallsammlung-payload.b64) % 4 ))
