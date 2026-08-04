@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "modul-12",
+  "nummer": 12,
+  "slug": "12-umlaufvermoegen-lifo-fifo-durchschnittsbewertung",
+  "titel": "Umlaufvermögen - Lifo, Fifo, Durchschnittsbewertung",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      20,
+      21
+    ],
+    "loesung_seiten": [
+      48,
+      51
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m12-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "Es wurde Kohle über das Jahr verteilt eingekauft:\n\nAB      30 kg   Kohle zu   1,20 € = 36 €\n2.2.     90 kg   Kohle zu   1,00 € = 90 €\n15.3     50 kg   Kohle zu   0,90 € = 45 €\n8.9.    150 kg   Kohle zu   1,10 € = 165 €\n1.12     70 kg   Kohle zu   1,40 € = 98 €\n390 kg                       434 €\n\nZum Bewertungsstichtag sind noch 100 kg vorhanden.\n\nErmitteln Sie die Anschaffungskosten nach dem gewogenen Mittel, dem Perioden Lifo und dem Perioden Fifo\nVerfahren.",
+      "loesung": "Bewertung nach dem gewogenen Mittel:\nDurchschnittspreis für 1kg = 434/390 = 1,11 €/kg\n1,11 x 100 kg = 111 €\nLifo Methode:\nBestand: Anfangsbestand und erste Zukäufe\nAB       30 kg Kohle zu 1,20 €    = 36 €\n2.2.     70 kg Kohle zu 1,00 €    = 70 €\n100 kg                     106 €\n\nBestand: Anfangsbestand und durchschnittliche Anschaffungskosten aller Zugänge\nAB 36 € + ( 70 kg x 398 € /360 kg) = 113 €\n\nFifo Methode:\n1.12      70 kg Kohle zu 1,40 €    = 98 €\n8.9.     30 kg Kohle zu 1,10 €    = 33 €\n100 kg                     131 €\n\nDa die Anschaffungskosten des Vorratsvermögens lediglich geschätzt werden, muss immer überprüft werden,\nob in der Handelsbilanz auf den niedrigeren Marktpreis abgeschrieben werden muss und in der Steuerbilanz\neine Abschreibung erfolgen kann.",
+      "quelle": {
+        "fall_seite": 20,
+        "loesung_seite": 48,
+        "fall_bezeichnung": "Fall 1",
+        "loesung_bezeichnung": "Lösung 1"
+      }
+    },
+    {
+      "id": "m12-f02",
+      "nummer": 2,
+      "titel": "Fall 2",
+      "sachverhalt": "Da P unter anderem Silber als Rohstoff verarbeitet, ist ein ständiger Grundstock erforderlich, um die\nEndprodukte termingemäß herstellen und ausliefern zu können. Die Verbrauchsübersicht für das Jahr 2025\n(Anfangsbestand am 01.01.2025, Endbestand am 31.12.2025) vermittelt folgendes Bild:\n\nBestandsentwicklung Kilogramm AK/Kilogramm\nAnfangsbestand             50 kg      500 €\nVerbrauch              ./. 20 kg\nZugang                     20 kg      575 €\nVerbrauch              ./. 20 kg\nVerbrauch              ./. 20 kg\nZugang                     40 kg      600 €\nEndbestand                 50 kg\n\nErgänzen Sie die Tabelle um die Werte, welche sich nach der Fifo-Methode und der (permanenten) Lifo-\nMethode ergeben. Am 31.12.2025 beträgt der Marktpreis 500 € pro kg. Dieser ist bis zum 31.03.2026 dem\nTag der Bilanzerstellung aber wieder auf 600 € pro kg angestiegen. Welche Ansatzmöglichkeiten ergeben\nsich in der Handelsbilanz, welche in der Steuerbilanz? Gewünscht ist ein hoher Eigenkapitalausweis in der\nHandelsbilanz und in der Steuerbilanz ein möglichst niedriger steuerlicher Gewinn.",
+      "loesung": "Grundsätzlich ist jedes einzelne Wirtschaftsgut für sich zu bewerten (Grundsatz der Einzelbewertung § 252\nAbs. 1 Nr. 3 HGB).\n\nAus Vereinfachungsgründen sind folgende Verbrauchsfolgefiktionen gem. § 256 Satz 1 HGB in der\nHandelsbilanz erlaubt:\n•     Lifo\n•     Fifo\nIn der Steuerbilanz ist gem. §§ 5 Abs. 1 Satz 1 HS 1, 5 Abs. 6, 6 Abs. 1 Nr. 2a EStG, R 6.9 EStR nur das Lifo-\nVerfahren, nicht hingegen das Fifo- Verfahren zulässig, wobei auch das Wahlrecht zur Einzelbewertung\nbesteht, welches gem. § 5 Abs. 1 Satz 1 HS 2 EStG unabhängig von der Bewertung in der Handelsbilanz\nausgeübt werden kann.\n\nNach der Aufgabenstellung sind zunächst die beiden Verfahren Lifo und Fifo gem. § 256 Satz 1 HGB\nanzuwenden, um die Werte zu ermitteln.\n\nHinweis: Auch beim Fifo-Verfahren gibt es das permanente oder periodische Verfahren (vgl. Beck‘scher\nBilanzkommentar zu § 256 HGB Tz. 59).\n\nBestandsentwicklung Kilogramm permanentes Lifo\nAnfangsbestand        50 kg        500 €     25.000 €\nVerbrauch    ./. 20 kg        500 € ./. 10.000 €\nNeuer Bestand        30 kg        500 €     15.000 €\nZugang         20 kg        575 € + 11.500 €\nneuer Bestand        50 kg        530 €     26.500 €\nVerbrauch    ./. 20 kg        575 € ./. 11.500 €\nVerbrauch    ./. 20 kg        500 € ./. 10.000 €\nneuer Bestand        10 kg        500 €      5.000 €\nZugang         40 kg        600 € + 24.000 €\nEndbestand        50 kg        580 €     29.000 €\n\nBestandsentwicklung Kilogramm permanentes Fifo\nAnfangsbestand        50 kg        500 €                25.000 €\nVerbrauch    ./. 20 kg        500 €            ./. 10.000 €\nNeuer Bestand        30 kg        500 €                15.000 €\nZugang         20 kg        575 €             + 11.500 €\nneuer Bestand        50 kg        530 €                26.500 €\nVerbrauch    ./. 20 kg        500 €            ./. 10.000 €\nVerbrauch    ./. 20 kg     537,50 €            ./. 10.750 €\nneuer Bestand        10 kg        575 €                 5.750 €\nZugang         40 kg        600 €             + 24.000 €\nEndbestand        50 kg        595 €                29.750 €\n\nDa ein möglichst hoher Eigenkapitalausweis in der Handelsbilanz gefordert ist, ist grundsätzlich das Fifo -\nVerfahren anzuwenden. Da hier jedoch der Marktpreis am Bilanzstichtag 500 € beträgt, ist in der\nHandelsbilanz aufgrund des strengen Niederstwertprinzips gem. § 253 Abs. 4 Satz 1 HGB der niedrigere\nMarktpreis in Höhe von 500 € anzusetzen. Der Gesamtwert beträgt damit in der Handelsbilanz\n25.000 €.\nDer steuerlich zulässige Wert beträgt nach dem Lifo - Verfahren 580 €, der Gesamtwert damit 29.000 €. Ein\nTeilwertabschreibungswahlrecht gem. § 6 Abs. 2 Satz 2 EStG besteht nicht, da es an einer voraussichtlich\ndauerhaften Wertminderung fehlt. Der Marktpreis ist bis zum Tag der Bilanzerstellung über die\nAnschaffungskosten von 29.000 € gestiegen\nAnsatz Handelsbilanz 31.12.:             25.000 €\nAnsatz Steuerbilanz 31.12.:              29.000 €",
+      "quelle": {
+        "fall_seite": 20,
+        "loesung_seite": 48,
+        "fall_bezeichnung": "Fall 2",
+        "loesung_bezeichnung": "Lösung 2"
+      }
+    },
+    {
+      "id": "m12-f03",
+      "nummer": 3,
+      "titel": "Fall 3",
+      "sachverhalt": "A handelt mit Goldbarren (0,3 g). Da A die Goldbarren von mehreren verschiedenen Händlern bezieht und\nder Einkaufspreis nur in gerigem Maß abweicht, wendet er das Perioden Lifo Verfahren an. Der\nGoldbarrenbestand wird dabei von A nur am Bilanzstichtag bewertet.\nIm Jahr 2025 hat A 1.200 Barren erworben. Die Anschaffungskosten betrugen dafür insgesamt 2.500 €. Die\nEinkäufe und die Verkäufe wurden richtig gebucht.\nIn seiner Bilanz zum 31.12.2024 hatte A einen Bestand von insgesamt 1.000 Barren.\n\nDer Wertansatz wurde wie folgt von A ermittelt:\n\n400 Barren aus dem Bestand vom 31.12.2021 =                      8.000 €\n200 Barren aus dem Bestand vom 31.12.2022 =                      3.900 €\n300 Barren aus dem Bestand vom 31.12.2023 =                      6.150 €\n100 Barren aus dem Bestand vom 31.12.2024 =                      2.080 €\nBilanzansatz 31.12.2024                                         20.130 €\n\nLaut Inventur hat A am 31.12.2025 noch 800 Barren im Bestand und die Einkaufspreise für einen Barren\n(0,3g) betragen an diesem Tag 21 €.\n\nBeurteilen Sie den Sachverhalt aus steuerrechtlicher Sicht unter Hinweis auf die gesetzlichen Bestimmungen\ndes Handels- und Steuerrechts sowie der Verwaltungsanweisungen. Buchungssätze sind nicht zu fertigen.\nGewünscht ist ein hoher Eigenkapitalausweis in der Handelsbilanz und in der Steuerbilanz ein möglichst\nniedriger steuerlicher Gewinn.",
+      "loesung": "Die Goldbarren sind gem. § 246 Abs. 1 Satz 1 HGB, § 5 Abs. 1 Satz 1 HS 1 EStG als Vermögensgegenstände\nbzw. Wirtschaftsgüter des Umlaufvermögens (§ 247 Abs. 2 HGB Umkehrschluss) anzusetzen.\nDie Bewertung erfolgt in der Handelsbilanz gem. § 253 Abs. 1 Satz 1 HGB und in der Steuerbilanz gemäß\n§§ 5 Abs. 1 Satz 1 HS 1, 6 Abs. 1 Nr. 2 Satz 1 EStG mit den Anschaffungskosten § 255 Abs. 1 HGB.\nGrundsätzlich ist jedes einzelne Wirtschaftsgut für sich zu bewerten (Grundsatz der Einzelbewertung § 252\n\nAbs. 1 Nr. 3 HGB).\nIn der Handelsbilanz kann A die Barren auch mit dem gewogenen Durchschnitt §§ 256 Satz 2, 240 Abs. 4\nHGB ansetzen, oder das Fifo- oder das Lifo- Verfahren (§ 256 Satz 1 HGB) anwenden.\nLaut Sachverhalt wurde in der Steuerbilanz nach § 6 Abs. 1 Nr. 2a EStG das Wahlrecht zugunsten des Lifo-\nVerfahrens ausgeübt. Das Wahlrecht zum Lifo Verfahren kann in der Steuerbilanz unabhängig vom\nWertansatz in der Handelsbilanz gem. § 5 Abs. 1 Satz 1 HS 2 EStG ausgeübt werden. Aus dem Sachverhalt\nergibt sich auch, dass A das Perioden-Lifo Verfahren anwendet und die Mehrbestände jedes Wirtschaftsjahres\nvon ihm als Layer festgehalten werden (R 6.9 Abs. 4 Satz 4 EStR).\nDer Bestand zum 31.12.2025 hat sich hier laut Inventur gegenüber dem Vorjahr vermindert. Gem. R 6.9 Abs. 4\nSatz 6 EStR sind daher die Minderbestände beginnend beim letzten Layer zu kürzen. Die Bewertung ergibt\nsich daher aus den ersten Layern. Der Layer vom 31.12.2021 (400 Barren) und 31.12.2022 (200 Barren) wird\nfortgeführt, während der Layer vom 31.12.2023 bis auf 200 Barren aufgelöst wird.\n\n400 Barren Bestand vom 31.12.2021 =                             8.000 €\n200 Barren Bestand vom 31.12.2022 =                             3.900 €\n200 Barren Bestand vom 31.12.2023 =                             4.100 €\nBilanzansatz 31.12.2025                                        16.000 €\n\nWährend handelsrechtlich das strenge Niederstwertprinzip (§ 253 Abs. 4 HGB) gilt, besteht für einen Ansatz\ndes niedrigeren Teilwerts im Steuerrecht nur bei voraussichtlich dauernder Wertminderung ein Wahlrecht\ngem. § 6 Abs. 1 Nr. 2 Satz 2 EStG, welches unabhängig vom Wertansatz in der Handelsbilanz ausgeübt werden\nkann § 5 Abs. 1 Satz 1 HS 2 EStG. Hat der Steuerpflichtige Layer gebildet, ist der Wertansatz der einzelnen\nLayer mit dem Teilwert zu vergleichen und kann auf den niedrigeren Teilwert abgeschrieben werden (R 6.9\nAbs. 6 Satz 2 EStR).\nDie Wertansätze der Layer pro Barren betragen:\n\n8.000 €/ 400 = 20,00 €\n3.900 €/ 200 = 19,50 €\n4.100 €/ 200 = 20,50 €\n\nDer Teilwert am 31.12.2025 beträgt 21 € pro Barren und ist damit bei keinem einzelnen Layer niedriger. Der\nBilanzansatz zum 31.12.2025 beträgt 16.000 €.",
+      "quelle": {
+        "fall_seite": 20,
+        "loesung_seite": 49,
+        "fall_bezeichnung": "Fall 3",
+        "loesung_bezeichnung": "Lösung 3"
+      }
+    },
+    {
+      "id": "m12-f04",
+      "nummer": 4,
+      "titel": "Fall 4",
+      "sachverhalt": "Der Unternehmer A hat zulässigerweise zum 31.12.2022 erstmalig für seinen Bestand an Öl einen Festwert\nvon 20.000 € gebildet. Zum 31.12.2025 wird ein Wert in Höhe von 22.000 € ermittelt.\nA hat 2025 Öl für 5.000 €, 2026 für 6.000 €, 2027 für 4.000 € zugekauft.\n\nAbwandlung 1:\nZum 31.12.2025 wird ein Wert in Höhe von 28.000 € ermittelt.\n\nAbwandlung 2:\nZum 31.12.2025 wird ein Wert in Höhe von 18.000 € ermittelt.\n\nGewünscht ist ein hoher Eigenkapitalausweis in der Handelsbilanz und in der Steuerbilanz ein möglichst\nniedriger steuerlicher Gewinn.",
+      "loesung": "Grundsätzlich ist alle drei Jahre eine Überprüfung des gebildeten Festwertes erforderlich gem. R 5.4 Abs. 3\nEStR, H 6.8 „Festwert“ EStH. Der neu ermittelte Wert weicht um nicht mehr als 10 % nach oben ab. Hierbei\nbesteht in Handelsbilanz und Steuerbilanz ein Wahlrecht. Der Festwert darf auch am 31.12.2025 weiterhin mit\n20.000 € bilanziert werden oder es dürfen 22.000 € angesetzt werden. In der Handelsbilanz sind, um einen\nmöglichst hohes Eigenkapital auszuweisen, demnach 22.000 € und in der Steuerbilanz, um einen möglichst\nniedrigen Gewinn zu erzielen 20.000 € anzusetzen. Die Zukäufe sind wie folgt in den einzelnen\nWirtschaftsjahren zu behandeln:\n\nHandelsbilanz                                   Steuerbilanz\n2025:      Aktivierung 2.000 €                              Aufwand 5.000 €\nAufwand 3.000 €\n2026:        Aufwand 6.000 €                                Aufwand 6.000 €\n2027:        Aufwand 4.000 €                                Aufwand 4.000 €\n\nLösung Abwandlung 1:\nBei Abweichungen nach oben um mehr als 10 % ist in der Handels- und auch in der Steuerbilanz eine\nAnpassung erforderlich. Also sind die Anschaffungen ab dem Wirtschaftsjahr 2025 solange zu aktivieren, bis\nder neue Festwert in Höhe von 28.000 € erreicht ist. Die Zukäufe sind wie folgt in den einzelnen\nWirtschaftsjahren zu behandeln:\n\nHandels- und Steuerbilanz\n2025:                          Aktivierung 5.000 €\n2026:                          Aktivierung 3.000 €\nAufwand 3.000 €\n2027:                             Aufwand 4.000 €\n\nLösung Abwandlung 2:\nHandelsrechtlich ist die Herabsetzung auf den niedrigeren Wert zwingend erforderlich gem. § 253 Abs. 4\nHGB. Steuerlich darf der niedrigere Wert von 18.000 € angesetzt werden (Wahlrecht). In der Steuerbilanz sind\ndaher, um einen möglichst niedrigen Gewinn zu erzielen ebenfalls 18.000 € anzusetzen. Die Zukäufe sind wie\nfolgt in den einzelnen Wirtschaftsjahren zu behandeln:\n\nHandels- und Steuerbilanz\n2025:        Aufwand (Abschreibung) 2.000 €\nAufwand (Zugänge) 5.000 €\n2026:            Aufwand (Zugänge) 6.000 €\n2027:            Aufwand (Zugänge) 4.000 €",
+      "quelle": {
+        "fall_seite": 21,
+        "loesung_seite": 50,
+        "fall_bezeichnung": "Fall 4",
+        "loesung_bezeichnung": "Lösung 4"
+      }
+    }
+  ]
+}

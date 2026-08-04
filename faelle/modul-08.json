@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "modul-08",
+  "nummer": 8,
+  "slug": "08-teilwert",
+  "titel": "Teilwert",
+  "quelle": {
+    "werk": "Bilanzierung nach Handels- und Steuerrecht",
+    "teil": "Fallsammlung und Lösungen zur Fallsammlung",
+    "autor": "Karsten Melzer",
+    "ausgabe": "April 2026",
+    "rechtsstand": "2025",
+    "fall_seiten": [
+      14,
+      14
+    ],
+    "loesung_seiten": [
+      34,
+      34
+    ]
+  },
+  "faelle": [
+    {
+      "id": "m08-f01",
+      "nummer": 1,
+      "titel": "Fall 1",
+      "sachverhalt": "A hat feststellen müssen, dass seine Badehosen mit Hosenträgern nur ein kurzfristiger modischer Trend waren.\nDie Anschaffungskosten der Badehosen haben 50.000 € betragen. Bis zum Bilanzstichtag haben sich die\nWiederbeschaffungskosten auch nicht verändert. A kalkuliert mit einem Rohgewinnaufschlagsatz von 25 %,\nso dass der Verkaufspreis (netto) 62.500 € betragen würde.\nZum Bilanzstichtag lassen sich die Badehosen voraussichtlich nur noch für (netto) 55.000 € verkaufen. Der\ndurchschnittliche Unternehmergewinn beträgt 10% der Netto-Verkaufspreise. Die nach dem Bilanzstichtag\nnoch anfallenden betrieblichen Kosten betragen voraussichtlich noch 6.000 €.\n\nIst eine Teilwertabschreibung gerechtfertigt?",
+      "loesung": "Eine Teilwertabschreibung kann gerechtfertigt sein, wenn mit einem dauerhaften Sinken der\nEinkaufspreise/Herstellungskosten, einer Überteuerung der Herstellung oder einem Sinken der Verkaufspreise\nzu rechnen ist. Eine lange Lagerdauer und damit sinkende Verkaufsmöglichkeit von Waren rechtfertigen eine\nTeilwertabschreibung erst, wenn die Ware nicht mehr zu den ursprünglichen Preisen oder ohne erhebliche\nPreisnachlässe verkauft werden kann. Berechnung des Teilwertes nach R 6.8 Abs. 2 EStR:\n\n1. „Subtraktionsmethode“ nach R 6.8 Abs. 2 Satz 3 EStR:\nvoraussichtlich erzielbarer Veräußerungserlös                                                   55.000 €\n./. nach Bilanzstichtag anfallender Aufwand                                                     - 6.000 €\nbeizulegender Wert im Sinne von § 253 Abs. 4 Satz 2 HGB (verlustfreie Bewertung)                49.000 €\n./. durchschnittlicher Unternehmergewinn (10% vom Netto- Verkaufspreis von 55.000 €)            - 5.500 €\nTeilwert                                                                                        43.500 €\nTeilwertabschreibung: 6.500 € (AK 50.000 € – Teilwert 43.500 €)\n\n2. „Formelmethode“ nach R 6.8 Abs. 2 Satz 6 EStR:\nVoraussichtlicher Verkaufserlös (Z)\nTeilwert                  =\n1 + Y1 + Y2 x W\n\n(Formelmethode):\n\nX = Z : (1 + Y1 + Y2 × W)\nDabei sind:\nX der zu suchende Teilwert\nZ der erzielbare Verkaufspreis, hier sind dies 55.000 €\nY1 der Durchschnittsunternehmergewinnprozentsatz (bezogen auf die Anschaffungskosten)\n100% Anschaffungskosten +Rohgewinnaufschlag von 25% = 125%, der Reingewinn von 10%, welcher\nsich auf diese 125 % bezieht, entspricht somit 12,5% bezogen auf die Anschaffungskosten von 100%.\nY2 der Rohgewinnaufschlagsrest (Rohgewinnaufschlag 25% - Reingewinn bezogen auf die\nAnschaffungskosten 12,5% = 12,5%)\nW der Prozentsatz an Kosten, der noch nach Abzug des durchschnittlichen Unternehmer-\ngewinnprozentsatzes vom Rohgewinnaufschlagssatz nach dem Bilanzstichtag anfällt\n\nRohgewinnaufschlag 25%                                        =                           11.000 €\n( 55.000 € /125 x 25)\n./.   Unternehmergewinn 10% von 55.000 €                            =                            5.500 €\n=     Restbetrag an Kosten                                          =                            5.500 €\n\nDa 6.000 € an Kosten nach dem Bilanzstichtag anfallen, entspricht dies 91,67 %.\nX = Z : (1+ Y1 + Y2 x W)\nX = 55.000 € : (1 + 12,5% + (25%-12,5%) x 91,67 %)\nX = 44.369 €\n\nTeilwertabschreibung: 5.631 € (AK 50.000 € – Teilwert 44.369 €)",
+      "quelle": {
+        "fall_seite": 14,
+        "loesung_seite": 34,
+        "fall_bezeichnung": "Fall",
+        "loesung_bezeichnung": "Lösung 23"
+      }
+    }
+  ]
+}
