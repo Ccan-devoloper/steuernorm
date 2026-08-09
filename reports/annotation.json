@@ -1,6 +1,6 @@
 {
-  "erzeugt": "2026-07-30T22:56:21.785Z",
-  "format": 3,
+  "erzeugt": "2026-08-09T02:15:22.299Z",
+  "format": 4,
   "modelle": [
     "nur-syntax"
   ],
@@ -12,7 +12,7 @@
       "bearbeitet": 503,
       "uebernommen": 0,
       "markierbar": 495,
-      "abgelehnt": 442,
+      "abgelehnt": 337,
       "vollstaendig": true
     },
     {
@@ -21,7 +21,7 @@
       "bearbeitet": 204,
       "uebernommen": 0,
       "markierbar": 151,
-      "abgelehnt": 173,
+      "abgelehnt": 166,
       "vollstaendig": true
     },
     {
@@ -30,7 +30,7 @@
       "bearbeitet": 247,
       "uebernommen": 0,
       "markierbar": 221,
-      "abgelehnt": 840,
+      "abgelehnt": 735,
       "vollstaendig": true
     },
     {
@@ -39,7 +39,7 @@
       "bearbeitet": 48,
       "uebernommen": 0,
       "markierbar": 44,
-      "abgelehnt": 117,
+      "abgelehnt": 116,
       "vollstaendig": true
     },
     {
@@ -48,7 +48,7 @@
       "bearbeitet": 93,
       "uebernommen": 0,
       "markierbar": 86,
-      "abgelehnt": 351,
+      "abgelehnt": 238,
       "vollstaendig": true
     },
     {
@@ -57,7 +57,7 @@
       "bearbeitet": 41,
       "uebernommen": 0,
       "markierbar": 38,
-      "abgelehnt": 75,
+      "abgelehnt": 65,
       "vollstaendig": true
     },
     {
@@ -66,7 +66,7 @@
       "bearbeitet": 47,
       "uebernommen": 0,
       "markierbar": 44,
-      "abgelehnt": 140,
+      "abgelehnt": 124,
       "vollstaendig": true
     },
     {
@@ -75,7 +75,7 @@
       "bearbeitet": 38,
       "uebernommen": 0,
       "markierbar": 38,
-      "abgelehnt": 34,
+      "abgelehnt": 29,
       "vollstaendig": true
     },
     {
@@ -83,8 +83,8 @@
       "normen": 173,
       "bearbeitet": 173,
       "uebernommen": 0,
-      "markierbar": 165,
-      "abgelehnt": 52,
+      "markierbar": 166,
+      "abgelehnt": 36,
       "vollstaendig": true
     },
     {
@@ -102,7 +102,7 @@
       "bearbeitet": 28,
       "uebernommen": 0,
       "markierbar": 23,
-      "abgelehnt": 54,
+      "abgelehnt": 45,
       "vollstaendig": true
     },
     {
@@ -111,7 +111,7 @@
       "bearbeitet": 23,
       "uebernommen": 0,
       "markierbar": 20,
-      "abgelehnt": 57,
+      "abgelehnt": 54,
       "vollstaendig": true
     },
     {
@@ -129,7 +129,7 @@
       "bearbeitet": 58,
       "uebernommen": 0,
       "markierbar": 57,
-      "abgelehnt": 119,
+      "abgelehnt": 117,
       "vollstaendig": true
     }
   ],

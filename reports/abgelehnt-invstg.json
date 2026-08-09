@@ -36,10 +36,17 @@
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Nr. 1 (Teil 2)",
+    "pfad": "Abs. 8 Nr. 4",
     "art": "tb",
-    "text": "Anteile an Personengesellschaften, auch wenn die Personengesellschaften Anteile an Kapital",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "Anteile an Kapitalgesellschaften, a) deren Einnahmen unmittelbar oder mittelbar zu mehr al",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 8 Buchst. b (Teil 2)",
+    "art": "tb",
+    "text": "die unmittelbar oder mittelbar Beteiligungen an Kapitalgesellschaften",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
@@ -66,14 +73,14 @@
     "norm": "§ 2",
     "pfad": "Abs. 9 Satz 6",
     "art": "tb",
-    "text": "wenn die Körperschaften, Personenvereinigungen oder Vermögensmassen einer Ertragsbesteueru",
+    "text": "Anteile an Körperschaften, Personenvereinigungen oder Vermögensmassen, bei denen nach gese",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
     "pfad": "Abs. 9 Satz 6",
     "art": "tb",
-    "text": "Anteile an Körperschaften, Personenvereinigungen oder Vermögensmassen, bei denen nach gese",
+    "text": "wenn die Körperschaften, Personenvereinigungen oder Vermögensmassen einer Ertragsbesteueru",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -87,14 +94,14 @@
     "norm": "§ 2",
     "pfad": "Abs. 9a Satz 2",
     "art": "tb",
-    "text": "wenn die Einkünfte der Immobilien-Gesellschaft oder der Auslands-Immobiliengesellschaft au",
+    "text": "Eine Beteiligung an einer Immobilien-Gesellschaft oder Auslands-Immobiliengesellschaft, di",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
     "pfad": "Abs. 9a Satz 2",
     "art": "tb",
-    "text": "Eine Beteiligung an einer Immobilien-Gesellschaft oder Auslands-Immobiliengesellschaft, di",
+    "text": "wenn die Einkünfte der Immobilien-Gesellschaft oder der Auslands-Immobiliengesellschaft au",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -126,6 +133,13 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 4",
+    "pfad": "Abs. 2 1a",
+    "art": "tb",
+    "text": "das Finanzamt, das in den Fällen des § 6 Absatz 4 Satz 1 Nummer 4 in Verbindung mit § 49 A",
+    "grund": "zu grob (52 Wörter)"
+  },
+  {
     "norm": "§ 6",
     "pfad": "Abs. 4 Nr. 4",
     "art": "tb",
@@ -136,15 +150,29 @@
     "norm": "§ 6",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
-    "text": "sofern der Zeitraum zwischen der Anschaffung und der Veräußerung mehr als zehn Jahre beträ",
+    "text": "Wertveränderungen, die vor dem 1. Januar 2018 eingetreten sind",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 6",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
-    "text": "Wertveränderungen, die vor dem 1. Januar 2018 eingetreten sind",
+    "text": "sofern der Zeitraum zwischen der Anschaffung und der Veräußerung mehr als zehn Jahre beträ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 5 Nr. 1",
+    "art": "tb",
+    "text": "Einkünfte nach § 49 Absatz 1 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach §",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 5 Nr. 2",
+    "art": "tb",
+    "text": "Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes mit Ausnahme der Einkünf",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 6",
@@ -152,20 +180,6 @@
     "art": "tb",
     "text": "bei inländischen Investmentfonds in der Rechtsform einer Investmentaktiengesellschaft auch",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 6",
-    "pfad": "Abs. 5a Nr. 3",
-    "art": "tb",
-    "text": "Beteiligungen an gewerblich infizierten oder gewerblich geprägten Personengesellschaften i",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 6",
-    "pfad": "Abs. 5a Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "soweit die Einkünfte der Personengesellschaft ohne Berücksichtigung des § 15 Absatz 3 des ",
-    "grund": "zu grob (46 Wörter)"
   },
   {
     "norm": "§ 6",
@@ -185,15 +199,15 @@
     "norm": "§ 7",
     "pfad": "Abs. 3 Satz 1",
     "art": "tb",
-    "text": "wenn der nach § 44 des Einkommensteuergesetzes zum Abzug der Kapitalertragsteuer verpflich",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "ist nur anzuwenden",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 7",
     "pfad": "Abs. 3 Satz 1",
     "art": "tb",
-    "text": "ist nur anzuwenden",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+    "text": "wenn der nach § 44 des Einkommensteuergesetzes zum Abzug der Kapitalertragsteuer verpflich",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 7",
@@ -218,9 +232,9 @@
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 4 Satz 1",
+    "pfad": "Abs. 2 Nr. 1",
     "art": "tb",
-    "text": "Die Steuerbefreiung bei inländischen Beteiligungseinnahmen setzt voraus, dass der Investme",
+    "text": "inländische juristische Personen des öffentlichen Rechts, soweit die Investmentanteile nic",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -232,24 +246,10 @@
   },
   {
     "norm": "§ 9",
-    "pfad": "Abs. 1 Nr. 3",
-    "art": "tb",
-    "text": "eine von der depotführenden Stelle des Anlegers nach Ablauf des Kalenderjahres nach amtlic",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 9",
     "pfad": "Abs. 2 Satz 3",
     "art": "tb",
     "text": "§ 7 Absatz 4",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
-  },
-  {
-    "norm": "§ 9",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Die Steuerbefreiung nach § 8 Absatz 1 Nummer 2 setzt voraus, dass der Anbieter eines Alter",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 10",
@@ -260,23 +260,9 @@
   },
   {
     "norm": "§ 10",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Die Steuerbefreiung nach den Absätzen 1 und 2 setzt voraus, dass die Anlagebedingungen nur",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 10",
     "pfad": "Abs. 4 Nr. 1",
     "art": "tb",
     "text": "ein Anleger nach § 8 Absatz 1 Nummer 1 oder Absatz 2 eine gültige Bescheinigung nach § 9 A",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 10",
-    "pfad": "Abs. 4 Nr. 2",
-    "art": "tb",
-    "text": "der Anbieter eines Altersvorsorge- oder Basisrentenvertrags gegenüber dem Investmentfonds ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -288,59 +274,10 @@
   },
   {
     "norm": "§ 11",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "Die Erstattung nach Satz 1 Nummer 3 setzt zusätzlich voraus, dass die Bescheinigungen und ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 11",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "Beträgt der Zeitraum zwischen dem Zugang eines Antrags auf Erteilung einer Statusbescheini",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 13",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "Die Steuerbefreiung eines Investmentfonds oder einer Anteilklasse nach § 10 entfällt in de",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "Der Anleger nach § 8 Absatz 1 oder 2, der zum Zeitpunkt des Zuflusses der Einnahmen bei de",
-    "grund": "zu grob (55 Wörter)"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "Der Anleger nach § 8 Absatz 1 oder 2, der einen Investmentanteil an einem Investmentfonds ",
-    "grund": "zu grob (64 Wörter)"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Der Anbieter eines Altersvorsorge- oder Basisrentenvertrags haftet für die Steuer, die ein",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 4 Satz 1",
-    "art": "tb",
-    "text": "Die depotführende Stelle haftet für die Steuer, die aufgrund eines falschen Investmentante",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 5 Nr. 2",
-    "art": "tb",
-    "text": "zu einem späteren Zeitpunkt erkennt, dass die Voraussetzungen für eine Steuerbefreiung nic",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 16",
@@ -348,6 +285,13 @@
     "art": "tb",
     "text": "nicht anzusetzen, wenn die Investmentanteile im Rahmen von Altersvorsorge- oder Basisrente",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "die Ausschüttung zu mehr als 50 Prozent auf nicht",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
@@ -360,14 +304,14 @@
     "norm": "§ 16",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
-    "text": "wenn der Anleger nachweist, dass der Investmentfonds einer Ertragsbesteuerung in Höhe von ",
+    "text": "Von einer allgemeinen Ertragsbesteuerung",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
-    "text": "Von einer allgemeinen Ertragsbesteuerung",
+    "text": "wenn der Anleger nachweist, dass der Investmentfonds einer Ertragsbesteuerung in Höhe von ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -375,13 +319,6 @@
     "pfad": "Abs. 2 Satz 2",
     "art": "ausn",
     "text": "es sei denn, der gesetzliche Vertreter des ausländischen Investmentfonds weist einen davon",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 17",
-    "pfad": "Abs. 2 Satz 2",
-    "art": "rf",
-    "text": "gilt der Zeitpunkt, zu dem das Recht der Verwaltungsstelle zur Verwaltung des Investmentfo",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
@@ -402,15 +339,8 @@
     "norm": "§ 19",
     "pfad": "Abs. 3 Nr. 2 (Teil 2)",
     "art": "tb",
-    "text": "der Anleger a) innerhalb der letzten fünf Jahre vor der Veräußerung im Sinne des Satzes 1 ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 3 Buchst. b",
-    "art": "tb",
-    "text": "im Zeitpunkt der Veräußerung im Sinne des Satzes 1 unmittelbar oder mittelbar Investmentan",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "der Anleger a) innerhalb der",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 20",
@@ -418,13 +348,6 @@
     "art": "tb",
     "text": "wenn der Anleger ein Institut oder Unternehmen nach § 3 Nummer 40 Satz 3 des Einkommensteu",
     "grund": "zu grob (51 Wörter)"
-  },
-  {
-    "norm": "§ 20",
-    "pfad": "Abs. 4 Satz 2",
-    "art": "tb",
-    "text": "Wenn der Anleger in einem folgenden Veranlagungszeitraum Verluste in Höhe von mehr als 500",
-    "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 21",
@@ -437,8 +360,8 @@
     "norm": "§ 22",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
-    "text": "in den Fällen des Absatzes 1 Satz 2 der letzte festgesetzte Rücknahmepreis des Veranlagung",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "in den Fällen des Absatzes 1 Satz 2 der",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 23",
@@ -452,6 +375,20 @@
     "pfad": "Buchst. h",
     "art": "tb",
     "text": "Investmentanteile an inländischen oder ausländischen Investmentfonds sowie Anteile an inlä",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 26",
+    "pfad": "Buchst. j",
+    "art": "tb",
+    "text": "Beteiligungen an ÖPP-Projektgesellschaften nach § 1 Absatz 19 Nummer 28 des Kapitalanlageg",
+    "grund": "zu grob (53 Wörter)"
+  },
+  {
+    "norm": "§ 26",
+    "pfad": "Buchst. n",
+    "art": "tb",
+    "text": "Kryptowerte im Sinne von § 1 Absatz 11 Satz 4 des Kreditwesengesetzes, wenn deren Verkehrs",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -525,18 +462,25 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 32",
-    "pfad": "Abs. 3 Satz 2",
+    "norm": "§ 31",
+    "pfad": "Abs. 3 Nr. 2 (Teil 3)",
     "art": "tb",
-    "text": "Die Haftung setzt voraus, dass der gesetzliche Vertreter zum Zeitpunkt der Abstandnahme vo",
+    "text": "Kapitalertragsteuer in Höhe von 15 Prozent der Kapitalerträge im Sinne des § 43 Absatz 1 S",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 33",
-    "pfad": "Abs. 2 Nr. 1",
+    "pfad": "Abs. 3 Satz 1",
     "art": "tb",
-    "text": "beschränkt steuerpflichtigen Anlegern unmittelbar Einkünfte im Sinne des § 49 Absatz 1 Num",
+    "text": "ausgeschütteten oder ausschüttungsgleichen inländischen Immobilienerträge gelten bei besch",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 33",
+    "pfad": "Abs. 3 Satz 3",
+    "art": "tb",
+    "text": "Der Abzug der Kapitalertragsteuer durch den Spezial-Investmentfonds auf die in den",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 35",
@@ -595,18 +539,18 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 37",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "Der Spezial-Investmentfonds ermittelt die Einkünfte des Spezial-Investmentfonds entspreche",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 38",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
     "text": "§ 11 des Einkommensteuergesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 38",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "Zinsen und angewachsene Ansprüche einer sonstigen Kapitalforderung nach § 20 Absatz 1 Numm",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 38",
@@ -637,18 +581,46 @@
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
-    "norm": "§ 40",
+    "norm": "§ 42",
     "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "Der Anteil, der auf die nach § 43 Absatz 1 steuerbefreiten Einkünfte entfällt, bestimmt si",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "art": "ausn",
+    "text": "Satz 1 gilt nicht für Gewinne aus der Veräußerung von Anteilen an Investmentfonds im Sinne",
+    "grund": "zu grob (47 Wörter)"
   },
   {
     "norm": "§ 42",
     "pfad": "Abs. 2 Satz 3",
+    "art": "ausn",
+    "text": "Satz 2 gilt nicht für Gewinne aus der Veräußerung von Anteilen an Investmentfonds im Sinne",
+    "grund": "zu grob (47 Wörter)"
+  },
+  {
+    "norm": "§ 42",
+    "pfad": "Abs. 4 Satz 1",
     "art": "tb",
-    "text": "nicht für Gewinne aus der Veräußerung von Anteilen an Investmentfonds im Sinne des § 16 Ab",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "Sind in den ausgeschütteten oder ausschüttungsgleichen Erträgen inländische Beteiligungsei",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 42",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "dem Spezial-Investmentfonds kein Ermäßigungsanspruch aus einem Abkommen zur Vermeidung der",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 42",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "Sind in den ausgeschütteten oder ausschüttungsgleichen Erträgen inländische Immobilienertr",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 43",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "ausgeschütteten und ausschüttungsgleichen Erträge sind bei der Veranlagung des Anlegers in",
+    "grund": "zu grob (46 Wörter)"
   },
   {
     "norm": "§ 43",
@@ -669,20 +641,6 @@
     "pfad": "Abs. 1 Nr. 3",
     "art": "tb",
     "text": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 47",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "Enthalten die ausgeschütteten und ausschüttungsgleichen Erträge Einkünfte aus einem auslän",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 47",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "Zur Ermittlung des Teils der Einkommensteuer oder Körperschaftsteuer, der auf die ausländi",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -736,10 +694,52 @@
   },
   {
     "norm": "§ 51",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Eine Erklärung zur",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 51",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "gesonderten und einheitlichen Feststellung der Besteuerungsgrundlagen ist der zuständigen ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 51",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "Die Erklärung zur",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 51",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "Der Erklärung zur",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 51",
     "pfad": "Abs. 4 Nr. 4",
     "art": "tb",
     "text": "das Anteilsregister",
     "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 51",
+    "pfad": "Abs. 4 Nr. 5",
+    "art": "tb",
+    "text": "die Überleitungsrechnung, aus der",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 51",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "und einheitlichen Feststellung steht einer gesonderten und einheitlichen Feststellung unte",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 53",
@@ -747,27 +747,6 @@
     "art": "tb",
     "text": "§ 9 Nummer 2 des Gewerbesteuergesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
-  },
-  {
-    "norm": "§ 54",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "wenn ein Sondervermögen nach § 1 Absatz 10 des Kapitalanlagegesetzbuchs oder ein Teilinves",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 55",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "entgegen § 7 Absatz 4 Satz 5, auch in Verbindung mit § 29 Absatz 1, eine Statusbescheinigu",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 56",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "tb",
-    "text": "Für Rumpfgeschäftsjahre nach Satz 3 verlängert sich die Frist für die Veröffentlichung der",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 56",
@@ -806,6 +785,13 @@
   },
   {
     "norm": "§ 56",
+    "pfad": "Abs. 6 Nr. 2",
+    "art": "tb",
+    "text": "Wertveränderungen, die ab dem 1. Januar 2018 eingetreten sind, steuerpflichtig, soweit der",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 56",
     "pfad": "Abs. 6 Satz 2",
     "art": "tb",
     "text": "im Jahr der erstmaligen Inanspruchnahme der Betrag von 100 000 Euro vermindert um den bei ",
@@ -816,7 +802,7 @@
     "pfad": "Abs. 8 Satz 1",
     "art": "tb",
     "text": "Außerordentliche Alterträge, ausschüttungsgleiche Erträge, die vor dem 1. Januar 2018 als ",
-    "grund": "zu grob (56 Wörter)"
+    "grund": "zu grob (54 Wörter)"
   },
   {
     "norm": "§ 56",

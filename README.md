@@ -1,11 +1,40 @@
-# steuernorm — Umbaupaket, Version 4
+# steuernorm — Fassung 5
 
-Vollständiger Satz Dateien für das Repository `Ccan-devoloper/steuernorm`.
-Alles hier ist gegen Ihren Stand vom 29. Juli 2026 gebaut und getestet.
+Die deutschen Steuergesetze im Volltext, mit positionsgebundener Markierung von
+Tatbestand, Rechtsfolge, Ausnahme und Legaldefinition sowie einem Prüfungsschema
+je Absatz.
 
-**Getestet:** Prüflauf über AO, EStG, UStG, KStG und SolzG — 6 576 Spannen, 0 Fehler,
-0 Warnungen. Frontend mit jsdom gegen die echten Daten geprüft (§ 2 SolzG, § 15 EStG).
-Alle Module bestehen `node --check`, alle Workflows sind gültiges YAML.
+**Fassung 5 betrifft zwei Dinge: die Erkennung und die Oberfläche.**
+Gemessen über den Gesamtbestand (1 537 Normen, 16 709 Rechtssätze, reine
+Syntaxanalyse in beiden Läufen):
+
+| | Fassung 4 | Fassung 5 |
+|---|---:|---:|
+| Spannen insgesamt | 23 570 | **27 267** |
+| Rechtssätze ohne jede Zerlegung | 2 576 | **402** |
+| Zwei Kategorien auf denselben Zeichen | 467 | **7** |
+
+Neu in der Oberfläche: eigene Markierungen und Notizen, gesetzesübergreifende
+Suche, „Zitiert von", Zitat- und Permalink-Übernahme, Druckansicht,
+Offlinezugriff.
+
+**Dabei kam ein Fehler ans Licht, der die Seite unbrauchbar machte:**
+`text-wrap:pretty` brachte den Renderer von Chromium zum Absturz, sobald ein
+Absatz viele Markierungen enthielt. Betroffen waren unter anderem § 1 EStG,
+§ 3 SolzG und § 4 UStG — weiße Seite statt Normtext. In jsdom war das nicht zu
+sehen; dafür gibt es jetzt `tools/browser-pruefen.mjs`. Weiter behoben: Das
+Statusband hatte keine CSS-Regel, die Kopfleiste blieb im Dunkelmodus hell,
+Überschrift und Normtext standen versetzt.
+
+Die vollständige Herleitung mit allen Messungen steht in
+[`docs/04-erkennung-und-oberflaeche-fassung-5.md`](docs/04-erkennung-und-oberflaeche-fassung-5.md).
+
+**Geprüft:** `node tools/pruefen.mjs` über alle 14 Gesetze — 25 133 Spannen,
+0 Fehler, 0 Warnungen. `node tools/frontend-pruefen.mjs` (jsdom, 17 Prüfungen)
+und `node tools/browser-pruefen.mjs` (Chromium, 12 Prüfungen: Absturzfreiheit
+über zwölf Normen, Spaltenbündigkeit, drei Fensterbreiten, Dunkelmodus,
+Betrieb ohne Netz). Alle Module bestehen `node --check`, alle Workflows sind
+gültiges YAML.
 
 ---
 
@@ -24,6 +53,12 @@ tools/eval.mjs                    Messung gegen eval/gold (falls vorhanden)
 
 tools/lib/gliederung.mjs          Norm → adressierte Rechtssätze mit Positionen
 tools/lib/syntax.mjs              Satzgliedanalyse, Vorfeld, Normtyp, Junktoren
+tools/lib/verben.mjs              NEU  morphologische Erkennung finiter Verben
+tools/lib/ausnahmen.mjs           NEU  Ausnahme, Rückausnahme, Vorrangregel
+tools/verweise.mjs                NEU  Rückverweisindex („Zitiert von")
+tools/frontend-pruefen.mjs        NEU  Frontendprüfung mit jsdom
+tools/browser-pruefen.mjs         NEU  Layout- und Offlineprüfung in Chromium
+sw.js                             NEU  Offlinezugriff
 tools/lib/validatoren.mjs         hartes Veto gegen unbrauchbare Spannen
 tools/lib/konsens.mjs             Zusammenführung, Konfidenz, Schema, Belegvalidator
 tools/lib/modell.mjs              GitHub Models, Mehrfachlauf, Gegenprobe
@@ -38,6 +73,7 @@ tools/lib/belegprobe.mjs          NEU  prüft, ob ein Beleg die Zuordnung trägt
 docs/01-befund-und-quellenanbindung.md
 docs/02-ui-ux-analyse.md
 docs/03-richtigkeit-und-grenzen.md
+docs/04-erkennung-und-oberflaeche-fassung-5.md   NEU
 ```
 
 ---
@@ -196,6 +232,9 @@ Alle acht Punkte der UI-Analyse. Die wichtigsten:
 "belege:karte": "node tools/belege.mjs --karte",
 "konsistenz":   "node tools/konsistenz.mjs --schreiben",
 "pruefen":      "node tools/pruefen.mjs",
+"verweise":     "node tools/verweise.mjs",
+"frontend":     "node tools/frontend-pruefen.mjs",
+"browser":      "node tools/browser-pruefen.mjs",
 "eval":         "node tools/eval.mjs"
 ```
 

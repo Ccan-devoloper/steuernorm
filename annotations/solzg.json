@@ -1,14 +1,14 @@
 {
   "abk": "SolzG",
   "titel": "Solidaritätszuschlaggesetz",
-  "format": 3,
+  "format": 4,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-07-30T22:56:24.936Z",
+  "aktualisiert": "2026-08-09T02:15:31.521Z",
   "quelle": "https://www.gesetze-im-internet.de/solzg_1995/",
   "stand": [
     {
@@ -105,30 +105,19 @@
             },
             {
               "art": "rf",
-              "text": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend",
-              "anzeige": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend",
-                  "von": 166,
-                  "laenge": 148
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 315,
-                  "laenge": 10
-                }
-              ],
+              "text": "sind die Vorschriften des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 166,
-              "laenge": 148,
+              "laenge": 49,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -144,7 +133,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
+              "grund": "Bereichsausnahme mit „mit ausnahme des\""
             }
           ]
         },
@@ -173,12 +162,12 @@
             },
             {
               "art": "rf",
-              "text": "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
+              "text": "dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 405,
-              "laenge": 159,
+              "von": 408,
+              "laenge": 156,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -263,22 +252,6 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
-            },
-            {
-              "art": "ausn",
-              "text": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Satz 1",
-              "von": 1051,
-              "laenge": 60,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
             }
           ]
         },
@@ -373,12 +346,12 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
+              "text": "Mit einem Rechtsbehelf",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
               "von": 1478,
-              "laenge": 53,
+              "laenge": 22,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -389,12 +362,12 @@
             },
             {
               "art": "rf",
-              "text": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
+              "text": "gegen den Solidaritätszuschlag kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
-              "von": 1532,
-              "laenge": 99,
+              "von": 1501,
+              "laenge": 130,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -537,15 +510,15 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend … anzuwenden",
+                  "t": "sind die Vorschriften des Einkommensteuergesetzes",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
+                  "t": "dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -624,21 +597,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -683,7 +641,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
+                  "t": "Mit einem Rechtsbehelf",
                   "pfad": "Abs. 5 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -706,7 +664,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
+                  "t": "gegen den Solidaritätszuschlag kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
                   "pfad": "Abs. 5 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -732,23 +690,22 @@
         "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten oder werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst",
         "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
         "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
-        "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
+        "Mit einem Rechtsbehelf",
         "Wird die Bemessungsgrundlage geändert"
       ],
       "rf": [
         "wird ein Solidaritätszuschlag als Ergänzungsabgabe",
-        "sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend",
-        "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
+        "sind die Vorschriften des Einkommensteuergesetzes",
+        "dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
         "gilt dies für den Solidaritätszuschlag entsprechend",
         "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht",
         "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
         "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
-        "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
+        "gegen den Solidaritätszuschlag kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
         "ändert sich der Solidaritätszuschlag entsprechend"
       ],
       "ausnahmen": [
-        "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
-        "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden"
+        "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden"
       ],
       "definitionen": [],
       "status": "syntaktisch",
@@ -762,8 +719,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.931Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.512Z"
     },
     "2": {
       "typ": "gemischt",
@@ -818,7 +775,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -843,7 +800,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -868,7 +825,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         }
@@ -950,8 +907,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedadfc31d59f0fd0989ac390758b6081daf85482b46b061e4e6ef1a94d281ba",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.932Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.512Z"
     },
     "3": {
       "typ": "gemischt",
@@ -970,20 +927,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "ausn",
-              "text": "vorbehaltlich der Absätze 2 bis 5",
+              "art": "rf",
+              "text": "bemisst sich vorbehaltlich der Absätze 2 bis 5",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 38,
-              "laenge": 33,
+              "von": 25,
+              "laenge": 46,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
+              "grund": "Tarif — vollständig Rechtsfolge"
             }
           ]
         },
@@ -1131,7 +1088,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1144,12 +1101,12 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen",
+              "text": "4. soweit ein Lohnsteuer-Jahresausgleich",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
               "von": 816,
-              "laenge": 54,
+              "laenge": 40,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -1160,19 +1117,46 @@
             },
             {
               "art": "rf",
-              "text": "ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
-              "anzeige": null,
-              "teile": null,
+              "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+              "anzeige": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist … 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+              "teile": [
+                {
+                  "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+                  "von": 857,
+                  "laenge": 167
+                },
+                {
+                  "text": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+                  "von": 1202,
+                  "laenge": 180
+                }
+              ],
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 871,
-              "laenge": 511,
-              "konfidenz": 0.42,
+              "von": 857,
+              "laenge": 167,
+              "konfidenz": 0.54,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1025,
+              "laenge": 175,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Bedingungsausnahme mit „außer in den fällen\""
             }
           ]
         },
@@ -1225,7 +1209,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "ausn",
+              "art": "tb",
               "text": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
               "anzeige": null,
               "teile": null,
@@ -1238,7 +1222,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
+              "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
               "art": "rf",
@@ -1435,7 +1419,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1460,7 +1444,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1468,9 +1452,26 @@
           "pfad": "Abs. 3 Satz 1 (Teil 2)",
           "von": 3463,
           "bis": 3474,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "übersteigt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1 (Teil 2)",
+              "von": 3463,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 2",
@@ -1521,22 +1522,6 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
-            },
-            {
-              "art": "ausn",
-              "text": "ungeachtet des Satzes 1 zu erheben",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 2",
-              "von": 3582,
-              "laenge": 34,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
             }
           ]
         },
@@ -1659,7 +1644,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1717,7 +1702,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1807,7 +1792,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1832,7 +1817,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1845,35 +1830,19 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes",
+              "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4a Satz 1 (Teil 2)",
               "von": 5129,
-              "laenge": 78,
+              "laenge": 95,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "finden Anwendung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4a Satz 1 (Teil 2)",
-              "von": 5208,
-              "laenge": 16,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
           ]
         },
@@ -1965,7 +1934,7 @@
                 },
                 {
                   "n": "5.",
-                  "t": "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen",
+                  "t": "4. soweit ein Lohnsteuer-Jahresausgleich",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -1980,8 +1949,8 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich der Absätze 2 bis 5",
-                  "pfad": "Abs. 1 Satz 1",
+                  "t": "außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1995,6 +1964,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "bemisst sich vorbehaltlich der Absätze 2 bis 5",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
@@ -2002,7 +1979,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -2010,7 +1987,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -2018,12 +1995,12 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
-                  "t": "ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+                  "n": "5.",
+                  "t": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist … 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.54,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 }
               ]
             }
@@ -2080,6 +2057,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 2a Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
                   "pfad": "Abs. 2a Satz 2",
                   "konfidenz": 0.6,
@@ -2087,7 +2072,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
                   "pfad": "Abs. 2a Satz 3",
                   "konfidenz": 0.6,
@@ -2098,21 +2083,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
-                  "pfad": "Abs. 2a Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -2146,8 +2116,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -2191,21 +2161,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "ungeachtet des Satzes 1 zu erheben",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -2219,6 +2174,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "übersteigt",
+                  "pfad": "Abs. 3 Satz 1 (Teil 2)",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 … zu erheben",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -2352,7 +2315,7 @@
                 },
                 {
                   "n": "5.",
-                  "t": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes",
+                  "t": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
                   "pfad": "Abs. 4a Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -2370,14 +2333,6 @@
                   "t": "ist der Solidaritätszuschlag nur zu erheben",
                   "pfad": "Abs. 4a Satz 1",
                   "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "finden Anwendung",
-                  "pfad": "Abs. 4a Satz 1 (Teil 2)",
-                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -2429,8 +2384,9 @@
         "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind",
         "soweit Lohnsteuer zu erheben ist",
         "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
-        "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen",
+        "4. soweit ein Lohnsteuer-Jahresausgleich",
         "Bei der Veranlagung zur Einkommensteuer",
+        "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
         "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
         "Bei Anwendung des § 39f des Einkommensteuergesetzes",
         "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
@@ -2447,34 +2403,33 @@
         "wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt",
         "in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2",
         "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1",
-        "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes",
+        "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
         "Beim Lohnsteuer-Jahresausgleich"
       ],
       "rf": [
+        "bemisst sich vorbehaltlich der Absätze 2 bis 5",
         "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
         "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
         "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
-        "ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+        "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
         "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
         "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
         "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge",
         "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer",
         "ist von einkommensteuerpflichtigen Personen nur zu erheben",
+        "übersteigt",
         "ist der Solidaritätszuschlag ungeachtet des Satzes 1",
         "ist der Solidaritätszuschlag nur zu erheben",
         "ist der Solidaritätszuschlag nur zu erheben",
-        "finden Anwendung",
         "ist der Solidaritätszuschlag nur zu ermitteln"
       ],
       "ausnahmen": [
-        "vorbehaltlich der Absätze 2 bis 5",
-        "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
-        "ungeachtet des Satzes 1 zu erheben"
+        "außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.58,
+      "konfidenz": 0.582,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2483,8 +2438,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "12161727c2ccb1e5213cdd02e6b2033958cba2092a019be75410e30bbbda4e4b",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.934Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.518Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2552,12 +2507,12 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "bleiben außer Ansatz",
+              "text": "Bruchteile eines Cents bleiben außer Ansatz",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 3",
-              "von": 347,
-              "laenge": 20,
+              "von": 324,
+              "laenge": 43,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -2576,20 +2531,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "ausn",
-              "text": "ungeachtet des Satzes 2 5,5 Prozent",
+              "art": "rf",
+              "text": "beträgt ungeachtet des Satzes 2 5,5 Prozent",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 4",
-              "von": 551,
-              "laenge": 35,
+              "von": 543,
+              "laenge": 43,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Ausnahmesignal im Satz"
+              "grund": "Tarif — vollständig Rechtsfolge"
             }
           ]
         }
@@ -2602,21 +2557,6 @@
           "schritte": [
             {
               "n": "I.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "ungeachtet des Satzes 2 5,5 Prozent",
-                  "pfad": "Satz 4",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -2638,8 +2578,16 @@
                 },
                 {
                   "n": "3.",
-                  "t": "bleiben außer Ansatz",
+                  "t": "Bruchteile eines Cents bleiben außer Ansatz",
                   "pfad": "Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "beträgt ungeachtet des Satzes 2 5,5 Prozent",
+                  "pfad": "Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2653,11 +2601,10 @@
       "rf": [
         "beträgt 5,5 Prozent der Bemessungsgrundlage",
         "beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze",
-        "bleiben außer Ansatz"
+        "Bruchteile eines Cents bleiben außer Ansatz",
+        "beträgt ungeachtet des Satzes 2 5,5 Prozent"
       ],
-      "ausnahmen": [
-        "ungeachtet des Satzes 2 5,5 Prozent"
-      ],
+      "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -2670,8 +2617,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.935Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.519Z"
     },
     "5": {
       "typ": "konditional",
@@ -2704,12 +2651,12 @@
             },
             {
               "art": "rf",
-              "text": "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
+              "text": "ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 146,
-              "laenge": 71,
+              "von": 149,
+              "laenge": 68,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -2750,7 +2697,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
+                  "t": "ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
                   "pfad": "Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -2765,7 +2712,7 @@
         "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt"
       ],
       "rf": [
-        "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen"
+        "ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen"
       ],
       "ausnahmen": [],
       "definitionen": [],
@@ -2780,8 +2727,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.935Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.519Z"
     },
     "6": {
       "typ": "anwendung",
@@ -3134,8 +3081,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "a8fe08f695a58fccada782cdf000e1ed2556620c2bcab652ef9e71960ed0ae53",
-      "format": 3,
-      "aktualisiert": "2026-07-30T22:56:24.936Z"
+      "format": 4,
+      "aktualisiert": "2026-08-09T02:15:31.521Z"
     }
   }
 }

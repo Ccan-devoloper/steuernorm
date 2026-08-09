@@ -15,6 +15,10 @@
     --def:#DCE3F0; --def-kante:#4A6FA5;
     --beleg:#1F5F8B;
     --warn:#8C3A2B;
+    /* Erhabene Flächen und der Schleier hinter Kopf- und Fußleiste. Bisher
+       standen dort feste Hellwerte; im Dunkelmodus blieb die Kopfleiste weiß. */
+    --erhaben:#FFFFFF; --schleier:rgba(252,252,250,.96);
+    --eigen:#F6D9A8; --eigen-kante:#B9791C;
     --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -30,6 +34,8 @@
       --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
       --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
       --def:#232C3D; --def-kante:#7B9BC9;
+      --erhaben:#22242A; --schleier:rgba(21,22,26,.96);
+      --eigen:#4A3A18; --eigen-kante:#D9A441;
     }
   }
   :root[data-thema=dunkel]{
@@ -38,6 +44,8 @@
     --tb:#463D14; --tb-kante:#CBAE3E; --rf:#1C3826; --rf-kante:#63AC7D;
     --ausn:#3E2621; --ausn-kante:#C67F66; --beleg:#6BA8D6;
     --def:#232C3D; --def-kante:#7B9BC9;
+    --erhaben:#22242A; --schleier:rgba(21,22,26,.96);
+    --eigen:#4A3A18; --eigen-kante:#D9A441;
   }
   :root[data-groesse=klein]{ --basis:15.5px; --spalte:32rem }
   :root[data-groesse=gross]{ --basis:19px;   --spalte:36rem }
@@ -49,7 +57,7 @@
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
   /* ---------- Kopf ---------- */
-  header{position:sticky;top:0;z-index:40;background:rgba(252,252,250,.96);
+  header{position:sticky;top:0;z-index:40;background:var(--schleier);
     backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--linie)}
   .kopf{max-width:1600px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .marke{font-family:var(--serif);font-size:19px;letter-spacing:-.01em;line-height:1;white-space:nowrap}
@@ -58,18 +66,19 @@
     background:transparent;padding:6px 2px;font-size:13.5px}
   .suchfeld::placeholder{color:var(--leise)}
   .suchfeld:focus{outline:0;border-bottom-color:var(--tinte)}
-  .schalter{display:flex;gap:6px}
+  .schalter{display:flex;gap:6px;flex-wrap:wrap}
   .schalter button{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--linie);
     background:transparent;color:var(--leise);border-radius:999px;padding:5px 11px;font-size:12px;cursor:pointer;
     transition:border-color .12s,color .12s}
   .schalter button:hover{border-color:var(--linie-stark)}
-  .schalter button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte);background:#fff}
+  .schalter button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte);background:var(--erhaben)}
   .swatch{width:12px;height:12px;border-radius:2px;border:1px solid var(--linie-stark);flex:none}
   .schalter button.stumm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;min-width:34px;justify-content:center}
   .schalter button[aria-pressed=true] .swatch.tb{background:var(--tb);border-color:var(--tb-kante)}
   .schalter button[aria-pressed=true] .swatch.rf{background:var(--rf);border-color:var(--rf-kante)}
   .schalter button[aria-pressed=true] .swatch.ausn{background:var(--ausn);border-color:var(--ausn-kante)}
   .schalter button[aria-pressed=true] .swatch.def{background:var(--def);border-color:var(--def-kante)}
+  .schalter button[aria-pressed=true] .swatch.eigen{background:var(--eigen);border-color:var(--eigen-kante)}
   .burger{display:none;border:0;background:transparent;padding:6px;cursor:pointer;color:var(--gedeckt)}
 
   /* Gesetzesleiste */
@@ -113,8 +122,14 @@
   .stand .veraltet{color:var(--warn)}
   .stand a{color:var(--leise)}
 
+  /* KEIN `text-wrap:pretty`. Die Eigenschaft verbessert den Flattersatz, bringt
+     in Chromium (geprüft mit 141) aber den Renderer zum Absturz, sobald der
+     Absatz viele ineinandergreifende Inline-Elemente enthält — genau das
+     erzeugen die Markierungen. Betroffen waren unter anderem § 1 EStG,
+     § 3 SolzG und § 4 UStG: weiße Seite statt Normtext. Die Silbentrennung
+     leistet für den Zeilenfall ohnehin den größeren Teil. */
   .text{max-width:var(--spalte);margin-top:22px;font-family:var(--serif);font-size:var(--basis);
-    line-height:1.72;text-wrap:pretty;
+    line-height:1.72;
     -webkit-hyphens:auto;hyphens:auto;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;
     hyphenate-limit-chars:6 3 3}
 
@@ -184,8 +199,8 @@
   @keyframes aufblitzen{0%,40%{background:var(--tb-kante);color:var(--papier)}100%{}}
 
   /* Absatzleiste am linken Rand der Lesespalte */
-  .leseraum{display:flex;gap:18px;align-items:flex-start}
-  .absatzleiste{flex:none;width:52px;position:sticky;top:104px;padding-top:24px;
+  .leseraum{display:flex;gap:26px;align-items:flex-start}
+  .absatzleiste{flex:none;width:44px;position:sticky;top:104px;padding-top:26px;
     display:flex;flex-direction:column;gap:3px}
   .absatzleiste button{border:0;background:transparent;cursor:pointer;padding:2px 4px;text-align:right;
     font-family:var(--mono);font-size:10px;color:var(--leise);border-right:2px solid var(--linie);
@@ -261,18 +276,21 @@
     border:1px solid var(--linie);border-radius:3px;padding:7px 9px}
 
   /* Markierungsschalter bleiben beim Lesen erreichbar. */
-  .fussleiste{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:6px;justify-content:center;
+  .fussleiste{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:6px;
+    justify-content:safe center;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;flex-wrap:nowrap;
     padding:8px 12px calc(8px + env(safe-area-inset-bottom));
-    background:rgba(252,252,250,.96);backdrop-filter:saturate(180%) blur(8px);border-top:1px solid var(--linie)}
-  :root[data-thema=dunkel] .fussleiste{background:rgba(21,22,26,.96)}
-  @media (prefers-color-scheme:dark){:root:not([data-thema=hell]) .fussleiste{background:rgba(21,22,26,.96)}}
+    background:var(--schleier);backdrop-filter:saturate(180%) blur(8px);border-top:1px solid var(--linie)}
+
+  .fussleiste::-webkit-scrollbar{display:none}
+  .fussleiste button{flex:none}
 
   .fuss{max-width:var(--spalte);margin-top:56px;font-size:11.5px;line-height:1.7;color:var(--leise)}
   .fuss a{color:var(--leise)}
 
   .melder{max-width:var(--spalte);border:1px solid var(--warn);border-radius:3px;padding:14px 16px;
     font-size:13.5px;line-height:1.6;color:var(--warn)}
-  .melder code{font-family:var(--mono);font-size:12px;background:#fff;padding:1px 5px;border-radius:2px}
+  .melder code{font-family:var(--mono);font-size:12px;background:var(--erhaben);padding:1px 5px;border-radius:2px}
 
   /* ---------- Schmale Fenster ---------- */
   @media (max-width:1180px){
@@ -283,16 +301,20 @@
     ol.leiter .rn{left:-38px}
   }
   @media (max-width:1180px){
-    .leseraum{gap:10px}
-    .absatzleiste{width:40px}
+    .leseraum{gap:14px}
+    .absatzleiste{width:36px}
   }
   @media (max-width:860px){
+    /* Die Markierungsschalter stehen auf schmalen Fenstern in der festen
+       Fußleiste und damit beim Lesen immer in Reichweite. Im Kopf sind sie
+       dann nur noch drei Reihen Knöpfe, die den Normtext nach unten drücken. */
+    #btn-tb,#btn-rf,#btn-ausn,#btn-def,#btn-eigen{display:none}
     .leiste{display:none}
     .gesetzwahl{display:block}
     .leseraum{display:block}
     .absatzleiste{position:static;flex-direction:row;flex-wrap:wrap;width:auto;padding:0 0 12px;gap:6px}
-    .absatzleiste button{border-right:0;border-bottom:2px solid var(--linie);padding:3px 7px}
-    .schema-unten{order:-1;margin-top:0;border-top:0;border-bottom:1px solid var(--linie);padding-bottom:22px}
+    .absatzleiste button{border-right:0;border-bottom:2px solid var(--linie);
+      padding:3px 9px;text-align:center}
     main{padding-bottom:76px}
     .fussleiste{display:flex}
   }
@@ -306,9 +328,143 @@
   }
   .schliessen{display:none;justify-content:flex-end;margin-bottom:10px}
   .schliessen button{border:0;background:transparent;cursor:pointer;padding:6px;color:var(--gedeckt)}
+
+  /* ═══════════════ Statusband ═══════════════
+     Das Band wurde vom Skript erzeugt, hatte aber keine einzige Regel: Es
+     erschien als unformatierter Fließtext unter der Überschrift. Es qualifiziert
+     alles, was darunter steht, und muss deshalb als Etikett lesbar sein. */
+  .statusband{max-width:var(--spalte);margin-top:14px;display:flex;flex-wrap:wrap;
+    gap:8px 12px;align-items:baseline;font-size:11.5px;color:var(--leise);line-height:1.5}
+  .plakette{flex:none;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;padding:3px 8px;border-radius:999px;
+    border:1px solid var(--linie-stark);color:var(--gedeckt);background:var(--feld)}
+  .plakette[data-s=belegt]{border-color:var(--rf-kante);color:var(--rf-kante)}
+  .plakette[data-s=konsens]{border-color:var(--rf-kante);color:var(--rf-kante)}
+  .plakette[data-s=mehrheit]{border-color:var(--tb-kante);color:var(--tb-kante)}
+  .plakette[data-s=uneinheitlich]{border-color:var(--warn);color:var(--warn)}
+  .plakette[data-s=syntaktisch]{border-color:var(--linie-stark)}
+  .plakette[data-s=ohne_merkmale]{border-color:var(--linie);color:var(--leise)}
+
+  /* ═══════════════ Lesespalte zentrieren ═══════════════
+     `main` war flex:1 und die Spalte 34rem breit — auf einem breiten Fenster
+     klebte der Text am linken Rand und ließ rechts eine leere Fläche stehen.
+
+     Zentriert wird auf EINE Kiste aus Lesespalte plus Absatzleiste (--rand).
+     Alle Blöcke außer dem Leseraum bekommen diesen Rand als Innenabstand — sonst
+     stünde der Normkopf um die Breite der Absatzleiste neben dem Normtext. */
+  main{--rand:70px}   /* 44px Absatzleiste + 26px Spalte */
+  /* `:is()` erbt die Gewichtung seines stärksten Arguments (eine Klasse) und
+     schlägt zusammen mit `main` die Einzelregeln der Bausteine, die weiterhin
+     `max-width:var(--spalte)` setzen. Ohne diesen Vorrang bekämen Überschrift
+     und Normtext verschieden breite Kisten und stünden um die Breite der
+     Absatzleiste gegeneinander versetzt. */
+  main>:is(.norm-kopf,.statusband,.werkzeuge,.leseraum,.fussnote,.hinweis,.belege,
+    .blaettern,.fuss,.zitiert,.eigene,.schema-unten,.melder){
+    max-width:calc(var(--spalte) + var(--rand));margin-left:auto;margin-right:auto;
+    padding-left:var(--rand)}
+  /* Der Leseraum trägt die Absatzleiste selbst im linken Rand — er bekommt
+     deshalb keinen zusätzlichen Innenabstand, wohl aber dieselbe Kistenbreite
+     wie alle anderen Blöcke. Ohne das läuft der Normtext an der Überschrift
+     vorbei. */
+  main>.leseraum{padding-left:0}
+  main>.werkzeuge{max-width:calc(var(--spalte) + var(--rand))}
+  @media (max-width:1180px){ main{--rand:50px} }  /* 36 + 14 */
+  @media (max-width:860px){ main{--rand:0px} }
+
+  /* Die Absatznummer stand zweimal nebeneinander: einmal in der Absatzleiste,
+     einmal als hängender Einzug im Text. Trägt die Leiste die Nummern (also auf
+     breiten Fenstern, wo sie senkrecht steht), entfällt der Einzug — der
+     Normtext beginnt dann bündig unter der Überschrift. Fehlt die Leiste, weil
+     die Norm nur einen Absatz hat, bleibt die Nummer im Text stehen. */
+  @media (min-width:861px){
+    .leseraum:has(.absatzleiste button) .absatz{padding-left:0}
+    .leseraum:has(.absatzleiste button) .absatz>.az{display:none}
+  }
+
+  /* ═══════════════ Eigene Markierungen und Notizen ═══════════════ */
+  mark.eigen{background:var(--eigen);box-shadow:inset 0 -2px 0 var(--eigen-kante);
+    border-radius:2px;padding:0 1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  mark.eigen[data-notiz]{cursor:pointer}
+  mark.eigen[data-notiz]::after{content:"✎";font-size:.62em;vertical-align:super;
+    color:var(--eigen-kante);margin-left:1px}
+  body[data-eigen=aus] mark.eigen{background:transparent;box-shadow:none}
+  body[data-eigen=aus] mark.eigen::after{content:""}
+
+  /* Werkzeugleiste an der Auswahl */
+  .auswahl{position:absolute;z-index:60;display:none;gap:2px;padding:4px;
+    background:var(--erhaben);border:1px solid var(--linie-stark);border-radius:6px;
+    box-shadow:0 6px 22px rgba(0,0,0,.16)}
+  .auswahl.offen{display:flex}
+  .auswahl button{border:0;background:transparent;cursor:pointer;padding:5px 9px;
+    font-size:12px;color:var(--gedeckt);border-radius:4px;white-space:nowrap}
+  .auswahl button:hover{background:var(--feld);color:var(--tinte)}
+  .auswahl .farbe{width:18px;height:18px;padding:0;border-radius:50%;
+    border:1px solid var(--linie-stark);background:var(--eigen)}
+
+  /* Notizenspalte */
+  .eigene{max-width:var(--spalte);margin-top:34px;border-top:1px solid var(--linie);padding-top:16px}
+  .eigene ul{list-style:none;margin:0;padding:0}
+  .eigene li{border-left:2px solid var(--eigen-kante);padding:2px 0 2px 12px;margin-bottom:12px}
+  .eigene .stelle{font-family:var(--serif);font-size:13.5px;line-height:1.6;color:var(--gedeckt)}
+  .eigene .notiz{font-size:13px;line-height:1.6;margin:5px 0 0;white-space:pre-wrap}
+  .eigene .zeile{display:flex;gap:10px;align-items:baseline;margin-top:5px}
+  .eigene .zeile button{border:0;background:transparent;cursor:pointer;padding:0;
+    font-size:11px;color:var(--leise);text-decoration:underline;text-underline-offset:2px}
+  .eigene .zeile button:hover{color:var(--warn)}
+  .eigene li.verschoben{border-left-color:var(--warn)}
+  .eigene li.verschoben .stelle::after{content:" — Textstelle nicht mehr gefunden";color:var(--warn);font-family:var(--sans);font-size:11px}
+
+  /* ═══════════════ Zitiert von ═══════════════ */
+  .zitiert{max-width:var(--spalte);margin-top:30px;border-top:1px solid var(--linie);padding-top:16px}
+  .zitiert .wolke{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .zitiert .wolke button{border:1px solid var(--linie);background:transparent;cursor:pointer;
+    border-radius:3px;padding:3px 8px;font-size:12.5px;color:var(--gedeckt);font-family:var(--serif)}
+  .zitiert .wolke button:hover{border-color:var(--tinte);color:var(--tinte);background:var(--feld)}
+  .zitiert .wolke button .g{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--leise);margin-right:5px}
+
+  /* ═══════════════ Werkzeuge am Normkopf ═══════════════ */
+  .werkzeuge{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .werkzeuge button{border:1px solid var(--linie);background:transparent;color:var(--gedeckt);
+    border-radius:999px;padding:4px 11px;font-size:12px;cursor:pointer}
+  .werkzeuge button:hover{border-color:var(--linie-stark);color:var(--tinte)}
+  .werkzeuge button.getan{border-color:var(--rf-kante);color:var(--rf-kante)}
+
+  /* ═══════════════ Gesetzesübergreifende Trefferliste ═══════════════ */
+  .reg-eintrag .fremd{font-family:var(--mono);font-size:9px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--beleg);flex:none}
+  .such-kopf{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--leise);margin:18px 0 6px;display:flex;justify-content:space-between;gap:8px}
+  .such-kopf button{border:0;background:transparent;cursor:pointer;color:var(--beleg);
+    font:inherit;text-transform:none;letter-spacing:0;font-size:10.5px}
+
+  /* ═══════════════ Druck ═══════════════
+     Gedruckt wird der Normtext, nicht die Anwendung: Navigation, Schalter und
+     Suchfeld verschwinden, Markierungen werden zu Kanten (Flächen fressen Toner
+     und verschwimmen im Graustufendruck), Verweise zeigen ihr Ziel. */
+  @media print{
+    :root{--basis:10.5pt;--spalte:100%}
+    header,nav.register,aside.schema,.fussleiste,.blaettern,.werkzeuge,
+    .auswahl,.absatzleiste,.leiste,.gesetzwahl{display:none!important}
+    body{background:#fff;color:#000}
+    .huelle{display:block;max-width:none}
+    main{padding:0}
+    .leseraum{display:block;max-width:none}
+    .text{max-width:none;font-size:10.5pt;line-height:1.5}
+    h1{font-size:17pt}
+    mark{background:transparent!important;box-shadow:none!important;
+      border-bottom:1.5pt solid #000!important;-webkit-print-color-adjust:exact}
+    mark.rf{border-bottom-style:double!important}
+    mark.ausn{border-bottom-style:dotted!important}
+    mark.eigen{border-bottom-style:dashed!important}
+    .text a.verweis::after{content:" [" attr(data-ziel) "]";font-size:8pt;color:#555}
+    .schema-unten{display:block!important;page-break-inside:avoid}
+    .zitiert,.eigene,.belege{page-break-inside:avoid}
+    .fuss{font-size:8pt;border-top:1px solid #999;padding-top:6pt;margin-top:14pt}
+  }
 </style>
 </head>
-<body data-tb="an" data-rf="an" data-ausn="an" data-def="an" data-satz="flatter">
+<body data-tb="an" data-rf="an" data-ausn="an" data-def="an" data-eigen="an" data-satz="flatter">
 
 <header>
   <div class="kopf">
@@ -316,12 +472,13 @@
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg>
     </button>
     <span class="marke">steuernorm<small>Textausgabe</small></span>
-    <input class="suchfeld" id="suche" type="search" placeholder="Norm oder Stichwort, z. B. 15 oder Vorsteuer" autocomplete="off">
+    <input class="suchfeld" id="suche" type="search" placeholder="Alle Gesetze durchsuchen — „15 EStG“, „Vorsteuer“, „§ 4 Abs. 5“" autocomplete="off">
     <div class="schalter">
       <button id="btn-tb" aria-pressed="true"><span class="swatch tb"></span>Tatbestand</button>
       <button id="btn-rf" aria-pressed="true"><span class="swatch rf"></span>Rechtsfolge</button>
       <button id="btn-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausnahme</button>
       <button id="btn-def" aria-pressed="true"><span class="swatch def"></span>Begriff</button>
+      <button id="btn-eigen" aria-pressed="true"><span class="swatch eigen"></span>Eigene</button>
       <button id="btn-intensitaet" class="stumm" title="Stärke der Markierung">dezent</button>
       <button id="btn-satz" class="stumm" title="Flattersatz oder Blocksatz">Flattersatz</button>
       <button id="btn-groesse" class="stumm" title="Schriftgröße">A</button>
@@ -345,11 +502,20 @@
   <aside class="schema" id="schema-rechts"></aside>
 </div>
 
+<input type="file" id="notizdatei" accept="application/json,.json" hidden>
+
+<div class="auswahl" id="auswahl" role="toolbar" aria-label="Auswahl markieren">
+  <button class="farbe" id="aus-markieren" title="Stelle markieren" aria-label="Stelle markieren"></button>
+  <button id="aus-notiz">Notiz …</button>
+  <button id="aus-kopieren">Zitat kopieren</button>
+</div>
+
 <div class="fussleiste schalter" role="group" aria-label="Markierungen">
   <button id="fb-tb" aria-pressed="true"><span class="swatch tb"></span>TB</button>
   <button id="fb-rf" aria-pressed="true"><span class="swatch rf"></span>RF</button>
   <button id="fb-ausn" aria-pressed="true"><span class="swatch ausn"></span>Ausn.</button>
   <button id="fb-def" aria-pressed="true"><span class="swatch def"></span>Begr.</button>
+  <button id="fb-eigen" aria-pressed="true"><span class="swatch eigen"></span>Eigene</button>
   <button id="fb-intensitaet" class="stumm">dezent</button>
 </div>
 
@@ -365,6 +531,7 @@ const S = {                 // Zustand
   abk: null,
   normId: null,
   filter: "",
+  verweise: {},           // data/verweise.json — Rückverweise je Norm
 };
 const cacheGesetz = new Map();
 const el = (id) => document.getElementById(id);
@@ -467,7 +634,7 @@ function markierungenAnlegen(wurzel, anm){
   const zeiger = new Map(knoten.map(n => [n, new Int16Array(n.nodeValue.length).fill(-1)]));
   let verwaist = 0;
 
-  const BIT = { tb: 1, rf: 2, ausn: 4, def: 8 };
+  const BIT = { tb: 1, rf: 2, ausn: 4, def: 8, eigen: 16 };
 
   /* Format 3: Jede Spanne trägt eine Position. Damit wird genau eine Fundstelle
      markiert statt jeder Wiederholung derselben Zeichenkette im Normtext. */
@@ -497,6 +664,18 @@ function markierungenAnlegen(wurzel, anm){
     }
   }
 
+  /* Eigene Markierungen laufen durch dieselbe Maschinerie wie die automatischen.
+     Sie tragen keine Position, sondern werden über Wortlaut und Umgebung
+     wiedergefunden — siehe notizVerorten(). */
+  for (const n of notizenDerNorm()){
+    const ort = notizVerorten(text, n);
+    if (ort === -1) continue;
+    spannen.push({
+      art: "eigen", text: n.text, von: ort, konfidenz: null, pfad: null, beleg: null,
+      gruppe: null, teil: 1, teile: 1, anzeige: n.text, notiz: n.notiz || "", eigenId: n.id,
+    });
+  }
+
   for (const [nr, sp] of spannen.entries()){
     const bit = BIT[sp.art];
     if (!bit || typeof sp.text !== "string" || !sp.text) continue;
@@ -511,7 +690,7 @@ function markierungenAnlegen(wurzel, anm){
       start = text.indexOf(sp.text, nahe);
       if (start === -1) start = text.indexOf(sp.text);
     }
-    if (start === -1){ verwaist++; continue; }
+    if (start === -1){ if (sp.art !== "eigen") verwaist++; continue; }
 
     const schwach = typeof sp.konfidenz === "number" && sp.konfidenz < 0.5;
     for (let pos = start; pos < start + sp.text.length; pos++){
@@ -545,6 +724,7 @@ function markierungenAnlegen(wurzel, anm){
         if (bit & 2) teile.push("rf");
         if (bit & 4) teile.push("ausn");
         if (bit & 8) teile.push("def");
+        if (bit & 16) teile.push("eigen");
         if (u) teile.push("unsicher");
         mark.className = teile.join(" ");
         const sp = spannen[z];
@@ -559,6 +739,10 @@ function markierungenAnlegen(wurzel, anm){
             mark.dataset.beleg = sp.beleg.fundstelle || sp.beleg.quelle || "";
             mark.title = [sp.beleg.quelle, sp.beleg.fundstelle].filter(Boolean).join(" · ");
           }
+          if (sp.eigenId){
+            mark.dataset.eigen = sp.eigenId;
+            if (sp.notiz){ mark.dataset.notiz = "1"; mark.title = sp.notiz; }
+          }
         }
         mark.textContent = ausschnitt;
         frag.appendChild(mark);
@@ -568,6 +752,136 @@ function markierungenAnlegen(wurzel, anm){
     n.parentNode.replaceChild(frag, n);
   }
   return verwaist;
+}
+
+/* ═══════════════ Eigene Markierungen und Notizen ═══════════════
+
+   Die Funktion, die konkurrierende Angebote auszeichnet: Der Leser markiert
+   selbst und schreibt seine eigenen Gedanken dazu. Entscheidend ist, dass beides
+   eine Gesetzesänderung übersteht — eine Notiz, die beim nächsten Datenlauf
+   verschwindet, ist wertlos.
+
+   Deshalb wird NICHT die Zeichenposition gespeichert (die verschiebt sich bei
+   jeder Änderung), sondern der Wortlaut samt Umgebung. Beim Anzeigen wird die
+   Stelle neu gesucht: zuerst mit Kontext, dann ohne. Wird sie gar nicht mehr
+   gefunden, geht die Notiz nicht verloren — sie erscheint in der Notizenliste
+   mit dem Hinweis, dass der Gesetzestext sich geändert hat.
+
+   Alles bleibt im Browser. Es gibt keinen Server, der mitliest. */
+
+const NOTIZEN_SCHLUESSEL = "eigene-markierungen-v1";
+
+function notizenLesen(){
+  try { return JSON.parse(localStorage.getItem(NOTIZEN_SCHLUESSEL) || "[]"); }
+  catch(e){ return []; }
+}
+function notizenSchreiben(liste){
+  try { localStorage.setItem(NOTIZEN_SCHLUESSEL, JSON.stringify(liste)); }
+  catch(e){ /* Speicher voll oder gesperrt — die Anzeige bleibt trotzdem gültig */ }
+}
+function notizenDerNorm(){
+  return notizenLesen().filter(n => n.gesetz === S.abk && n.norm === S.normId);
+}
+
+/* Kontextfenster um die Fundstelle. 40 Zeichen genügen, um eine wiederholte
+   Wendung („Der Steuerpflichtige") eindeutig zu machen, und sind kurz genug,
+   dass eine Änderung anderswo im Absatz sie nicht entwertet. */
+const KONTEXT = 40;
+
+function notizAnlegen(text, praefix, suffix, notiz){
+  const liste = notizenLesen();
+  liste.push({
+    id: String(Date.now()) + Math.random().toString(36).slice(2, 7),
+    gesetz: S.abk, norm: S.normId,
+    text, praefix, suffix,
+    notiz: notiz || "",
+    angelegt: new Date().toISOString(),
+  });
+  notizenSchreiben(liste);
+}
+
+function notizLoeschen(id){
+  notizenSchreiben(notizenLesen().filter(n => n.id !== id));
+  normZeichnen();
+}
+
+/**
+ * Sucht die gespeicherte Stelle im aktuellen Text wieder.
+ * Erst mit Umgebung (eindeutig), dann ohne (nach einer Textänderung).
+ */
+function notizVerorten(volltext, n){
+  if (n.praefix){
+    const mitKontext = volltext.indexOf(n.praefix + n.text);
+    if (mitKontext !== -1) return mitKontext + n.praefix.length;
+  }
+  return volltext.indexOf(n.text);
+}
+
+/* ═══════════════ Auswahl im Normtext ═══════════════ */
+
+function auswahlLeiste(){
+  const leiste = el("auswahl");
+  const auswahl = window.getSelection();
+  if (!auswahl || auswahl.isCollapsed || !auswahl.rangeCount){ leiste.classList.remove("offen"); return; }
+  const bereich = auswahl.getRangeAt(0);
+  const text = auswahl.toString().replace(/\s+/g, " ").trim();
+  const drin = el("haupt").querySelector(".text");
+  if (!drin || !drin.contains(bereich.commonAncestorContainer) || text.length < 3){
+    leiste.classList.remove("offen"); return;
+  }
+  const kasten = bereich.getBoundingClientRect();
+  leiste.classList.add("offen");
+  leiste.style.top = (window.scrollY + kasten.top - leiste.offsetHeight - 8) + "px";
+  leiste.style.left = Math.max(8, window.scrollX + kasten.left) + "px";
+  leiste.dataset.text = text;
+}
+
+/** Wortlaut und Umgebung der aktuellen Auswahl, gegen den kanonischen Text. */
+function auswahlKontext(text){
+  const drin = el("haupt").querySelector(".text");
+  const { text: voll } = textindex(drin);
+  const i = voll.indexOf(text);
+  if (i === -1) return { praefix: "", suffix: "" };
+  return {
+    praefix: voll.slice(Math.max(0, i - KONTEXT), i),
+    suffix: voll.slice(i + text.length, i + text.length + KONTEXT),
+  };
+}
+
+/** Fundstelle im Zitierstil, wie sie in einen Schriftsatz gehört. */
+function zitat(zusatz){
+  const g = S.gesetz;
+  const norm = g.normen.find(n => n.id === S.normId);
+  const kopf = norm.enbez + " " + S.abk + (norm.titel ? " (" + norm.titel + ")" : "");
+  const stand = (g.stand || []).find(x => x.typ === "Stand");
+  return [
+    zusatz ? "„" + zusatz + "“" : null,
+    kopf,
+    stand ? stand.text : null,
+    location.href,
+  ].filter(Boolean).join("\n");
+}
+
+async function inZwischenablage(text, knopf){
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch(e){
+    // Ohne Berechtigung oder über file:// steht die Zwischenablage nicht bereit.
+    const feld = document.createElement("textarea");
+    feld.value = text;
+    feld.style.position = "fixed";
+    feld.style.opacity = "0";
+    document.body.appendChild(feld);
+    feld.select();
+    try { document.execCommand("copy"); } catch(e2){ /* dann eben nicht */ }
+    feld.remove();
+  }
+  if (knopf){
+    const alt = knopf.textContent;
+    knopf.textContent = "kopiert";
+    knopf.classList.add("getan");
+    setTimeout(() => { knopf.textContent = alt; knopf.classList.remove("getan"); }, 1400);
+  }
 }
 
 /* --------------------------- Querverweise --------------------------- */
@@ -597,6 +911,8 @@ function verweiseSetzen(wurzel, eigenesAbk){
       const a = document.createElement("a");
       a.className = "verweis";
       a.href = "#/" + abk.toLowerCase() + "/" + m[1].toLowerCase();
+      // Im Druck steht der Link nicht zur Verfügung; das Ziel wird ausgeschrieben.
+      a.dataset.ziel = abk + " § " + m[1];
       a.textContent = m[0];
       frag.appendChild(a);
       letzte = m.index + m[0].length;
@@ -683,8 +999,82 @@ function registerZeichnen(){
   if (!gefunden){
     const p = document.createElement("p");
     p.className = "leer";
-    p.textContent = "Keine Norm in " + S.abk + " gefunden. Über die Gesetzesleiste lässt sich ein anderes Gesetz wählen.";
+    p.textContent = "Keine Norm in " + S.abk + " gefunden.";
     ziel.appendChild(p);
+  }
+
+  // Gesetzesübergreifend weitersuchen. Das ist der eigentliche Nachschlagefall:
+  // Wer „Vorsteuer" sucht, weiß in aller Regel nicht, in welchem der vierzehn
+  // Gesetze die Stelle steht — und soll es auch nicht wissen müssen.
+  if (abfrage.frei && abfrage.frei.length >= 3) fremdeTrefferZeichnen(ziel, abfrage);
+}
+
+/** Bereits geladene Gesetze sofort, die übrigen auf Anforderung. */
+function fremdeTrefferZeichnen(ziel, abfrage){
+  const f = abfrage.frei;
+  const offen = S.register.gesetze.filter(g => g.abk !== S.abk);
+  const geladen = offen.filter(g => cacheGesetz.has(g.abk.toLowerCase()));
+  const fehlend = offen.filter(g => !cacheGesetz.has(g.abk.toLowerCase()));
+
+  const treffer = [];
+  for (const meta of geladen){
+    const g = cacheGesetz.get(meta.abk.toLowerCase());
+    for (const norm of g.normen){
+      if (!(norm.enbez + " " + norm.titel).toLowerCase().includes(f) && !volltextTrifft(norm, f)) continue;
+      treffer.push({ abk: meta.abk, norm });
+      if (treffer.length >= 40) break;
+    }
+    if (treffer.length >= 40) break;
+  }
+
+  const kopf = document.createElement("div");
+  kopf.className = "such-kopf";
+  const titel = document.createElement("span");
+  titel.textContent = treffer.length ? "In anderen Gesetzen · " + treffer.length : "In anderen Gesetzen";
+  kopf.appendChild(titel);
+
+  if (fehlend.length){
+    const mehr = document.createElement("button");
+    mehr.textContent = fehlend.length + " weitere laden";
+    mehr.onclick = async () => {
+      mehr.textContent = "lädt …";
+      mehr.disabled = true;
+      // Nacheinander, damit vierzehn Dateien nicht gleichzeitig die Leitung belegen.
+      for (const meta of fehlend){
+        try { await gesetzLaden(meta.abk); } catch(e){ /* dieses Gesetz überspringen */ }
+      }
+      registerZeichnen();
+    };
+    kopf.appendChild(mehr);
+  }
+  ziel.appendChild(kopf);
+
+  if (!treffer.length && !fehlend.length){
+    const p = document.createElement("p");
+    p.className = "leer";
+    p.textContent = "Auch in den übrigen Gesetzen kein Treffer.";
+    ziel.appendChild(p);
+    return;
+  }
+
+  for (const { abk, norm } of treffer){
+    const b = document.createElement("button");
+    b.className = "reg-eintrag";
+    b.innerHTML = '<span class="fremd"></span><span class="nr"></span><span class="tt"></span>';
+    b.querySelector(".fremd").textContent = abk;
+    b.querySelector(".nr").textContent = norm.enbez;
+    b.querySelector(".tt").textContent = norm.titel;
+    if (!(norm.enbez + " " + norm.titel).toLowerCase().includes(f)){
+      const kontext = fundstelleKontext(norm, f);
+      if (kontext){
+        const k = document.createElement("span");
+        k.className = "kontext";
+        k.innerHTML = kontext;
+        b.appendChild(k);
+      }
+    }
+    b.onclick = () => { location.hash = "#/" + abk.toLowerCase() + "/" + norm.id; };
+    ziel.appendChild(b);
   }
 }
 
@@ -945,6 +1335,147 @@ function absatzleisteBauen(anm, textWurzel){
   return leiste;
 }
 
+/* ═══════════════ Zitiert von ═══════════════
+
+   Verweise gingen bisher nur vorwärts: Von § 15 EStG kam man zu § 4 EStG, nicht
+   zurück. Wer eine Norm auslegt, braucht die Gegenrichtung — welche Vorschriften
+   auf sie Bezug nehmen. Der Index wird von tools/verweise.mjs vorberechnet. */
+
+function zitiertBauen(){
+  const schluessel = S.abk.toLowerCase() + "/" + S.normId;
+  const quellen = (S.verweise && S.verweise[schluessel]) || [];
+  if (!quellen.length) return null;
+
+  const d = document.createElement("section");
+  d.className = "zitiert";
+  const k = document.createElement("p");
+  k.className = "schema-kappe";
+  k.textContent = "Zitiert von — " + quellen.length + " " + (quellen.length === 1 ? "Vorschrift" : "Vorschriften");
+  d.appendChild(k);
+
+  const wolke = document.createElement("div");
+  wolke.className = "wolke";
+  for (const q of quellen){
+    const [abk, id] = q.split("/");
+    const b = document.createElement("button");
+    const eintrag = S.register.gesetze.find(g => g.abk.toLowerCase() === abk);
+    const kurz = eintrag ? eintrag.abk : abk.toUpperCase();
+    if (kurz !== S.abk){
+      const g = document.createElement("span");
+      g.className = "g";
+      g.textContent = kurz;
+      b.appendChild(g);
+    }
+    b.appendChild(document.createTextNode("§ " + id));
+    b.onclick = () => { location.hash = "#/" + abk + "/" + id; };
+    wolke.appendChild(b);
+  }
+  d.appendChild(wolke);
+
+  const p = document.createElement("p");
+  p.className = "leer";
+  p.style.marginTop = "10px";
+  p.textContent = "Automatisch aus dem Wortlaut der Verweisungen gewonnen. Verweise über Rechtsverordnungen und Verwaltungsanweisungen sind nicht erfasst.";
+  d.appendChild(p);
+  return d;
+}
+
+/* ═══════════════ Notizenliste unter der Norm ═══════════════ */
+
+function eigeneBauen(){
+  const alle = notizenDerNorm();
+  if (!alle.length) return null;
+  const drin = el("haupt").querySelector(".text");
+  const voll = drin ? textindex(drin).text : "";
+
+  const d = document.createElement("section");
+  d.className = "eigene";
+  const k = document.createElement("p");
+  k.className = "schema-kappe";
+  k.textContent = "Eigene Markierungen — " + alle.length;
+  d.appendChild(k);
+
+  const ul = document.createElement("ul");
+  for (const n of alle){
+    const li = document.createElement("li");
+    const gefunden = voll ? notizVerorten(voll, n) !== -1 : true;
+    if (!gefunden) li.classList.add("verschoben");
+
+    const stelle = document.createElement("p");
+    stelle.className = "stelle";
+    stelle.textContent = "„" + n.text + "“";
+    li.appendChild(stelle);
+
+    if (n.notiz){
+      const notiz = document.createElement("p");
+      notiz.className = "notiz";
+      notiz.textContent = n.notiz;
+      li.appendChild(notiz);
+    }
+
+    const zeile = document.createElement("div");
+    zeile.className = "zeile";
+    const datum = document.createElement("span");
+    datum.style.fontSize = "11px";
+    datum.style.color = "var(--leise)";
+    datum.textContent = new Date(n.angelegt).toLocaleDateString("de-DE");
+    zeile.appendChild(datum);
+
+    const bearbeiten = document.createElement("button");
+    bearbeiten.textContent = n.notiz ? "Notiz ändern" : "Notiz hinzufügen";
+    bearbeiten.onclick = () => {
+      const neu = window.prompt("Notiz zu „" + n.text.slice(0, 60) + "“", n.notiz || "");
+      if (neu === null) return;
+      const liste = notizenLesen();
+      const treffer = liste.find(x => x.id === n.id);
+      if (treffer) treffer.notiz = neu;
+      notizenSchreiben(liste);
+      normZeichnen();
+    };
+    zeile.appendChild(bearbeiten);
+
+    const weg = document.createElement("button");
+    weg.textContent = "löschen";
+    weg.onclick = () => notizLoeschen(n.id);
+    zeile.appendChild(weg);
+    li.appendChild(zeile);
+    ul.appendChild(li);
+  }
+  d.appendChild(ul);
+  return d;
+}
+
+/* Alle Notizen als Datei sichern und zurücklesen. Der Speicher des Browsers
+   ist nicht dauerhaft: Er hängt am Gerät und wird beim Leeren der Websitedaten
+   gelöscht. Ohne Ausfuhr wäre die Arbeit eines Jahres mit einem Klick weg. */
+function notizenAusfuehren(){
+  const daten = JSON.stringify({ art: "steuernorm-notizen", fassung: 1, notizen: notizenLesen() }, null, 2);
+  const url = URL.createObjectURL(new Blob([daten], { type: "application/json" }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "steuernorm-notizen-" + new Date().toISOString().slice(0, 10) + ".json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function notizenEinlesen(datei){
+  const leser = new FileReader();
+  leser.onload = () => {
+    try {
+      const gelesen = JSON.parse(leser.result);
+      const neu = Array.isArray(gelesen) ? gelesen : gelesen.notizen;
+      if (!Array.isArray(neu)) throw new Error("kein Notizenformat");
+      // Zusammenführen statt ersetzen: bestehende Notizen bleiben erhalten.
+      const vorhanden = new Set(notizenLesen().map(n => n.id));
+      notizenSchreiben([...notizenLesen(), ...neu.filter(n => n && n.id && !vorhanden.has(n.id))]);
+      normZeichnen();
+    } catch(e){
+      window.alert("Die Datei enthält keine Notizen im erwarteten Format.");
+    }
+  };
+  leser.readAsText(datei);
+}
+
 /* Belege: rein extraktiv, nichts wird behauptet. */
 function belegeBauen(anm){
   if (!anm || !Array.isArray(anm.belege) || !anm.belege.length) return null;
@@ -1052,7 +1583,23 @@ function normZeichnen(){
   quelle.href = g.quelle; quelle.target = "_blank"; quelle.rel = "noopener";
   quelle.textContent = "amtliche Fassung ↗";
   stand.appendChild(quelle);
-  kopf.append(eb, h1, stand);
+  // Werkzeuge: Fundstelle zitieren, drucken, Notizen sichern.
+  const werkzeuge = document.createElement("div");
+  werkzeuge.className = "werkzeuge";
+  const werkzeug = (beschriftung, tun, titel) => {
+    const b = document.createElement("button");
+    b.textContent = beschriftung;
+    if (titel) b.title = titel;
+    b.onclick = () => tun(b);
+    werkzeuge.appendChild(b);
+  };
+  werkzeug("Zitat kopieren", (b) => inZwischenablage(zitat(null), b),
+    "Fundstelle mit Fassung und Permalink in die Zwischenablage");
+  werkzeug("Link kopieren", (b) => inZwischenablage(location.href, b));
+  werkzeug("Drucken", () => window.print(), "Druckansicht ohne Navigation");
+  werkzeug("Notizen sichern", () => notizenAusfuehren(), "Alle eigenen Markierungen als Datei speichern");
+  werkzeug("Notizen laden", () => el("notizdatei").click(), "Gesicherte Notizen wieder einlesen");
+  kopf.append(eb, h1, stand, werkzeuge);
   haupt.appendChild(kopf);
 
   // Statusband direkt unter den Normkopf — es qualifiziert alles, was folgt.
@@ -1110,6 +1657,12 @@ function normZeichnen(){
 
   const bel = belegeBauen(anm);
   if (bel) haupt.appendChild(bel);
+
+  const eig = eigeneBauen();
+  if (eig) haupt.appendChild(eig);
+
+  const zit = zitiertBauen();
+  if (zit) haupt.appendChild(zit);
 
   // Schema unterhalb (schmale Fenster) und rechts (breite)
   const unten = schemaBauen(anm);
@@ -1193,6 +1746,54 @@ async function start(){
   schalterSetzen("def", gemerkt("marker-def", "an") === "an");
   el("btn-def").onclick = () => schalterSetzen("def", document.body.dataset.def !== "an");
 
+  schalterSetzen("eigen", gemerkt("marker-eigen", "an") === "an");
+  el("btn-eigen").onclick = () => schalterSetzen("eigen", document.body.dataset.eigen !== "an");
+
+  /* Auswahl im Normtext: Werkzeugleiste zeigen, Markierung oder Notiz anlegen. */
+  document.addEventListener("selectionchange", () => requestAnimationFrame(auswahlLeiste));
+  window.addEventListener("scroll", () => el("auswahl").classList.remove("offen"), { passive: true });
+
+  const ausAnlegen = (mitNotiz) => {
+    const leiste = el("auswahl");
+    const text = leiste.dataset.text || "";
+    if (!text) return;
+    let notiz = "";
+    if (mitNotiz){
+      notiz = window.prompt("Notiz zu „" + text.slice(0, 60) + (text.length > 60 ? "…" : "") + "“", "");
+      if (notiz === null) return;
+    }
+    const { praefix, suffix } = auswahlKontext(text);
+    notizAnlegen(text, praefix, suffix, notiz);
+    leiste.classList.remove("offen");
+    window.getSelection().removeAllRanges();
+    normZeichnen();
+  };
+  el("aus-markieren").onclick = () => ausAnlegen(false);
+  el("aus-notiz").onclick = () => ausAnlegen(true);
+  el("aus-kopieren").onclick = (e) => {
+    inZwischenablage(zitat(el("auswahl").dataset.text || ""), e.currentTarget);
+  };
+  el("notizdatei").onchange = (e) => {
+    const datei = e.target.files && e.target.files[0];
+    if (datei) notizenEinlesen(datei);
+    e.target.value = "";
+  };
+
+  /* Klick auf eine eigene Markierung öffnet ihre Notiz. */
+  el("haupt").addEventListener("click", (e) => {
+    const marke = e.target.closest("mark.eigen[data-eigen]");
+    if (!marke) return;
+    const eintrag = notizenLesen().find(n => n.id === marke.dataset.eigen);
+    if (!eintrag) return;
+    const neu = window.prompt("Notiz zu „" + eintrag.text.slice(0, 60) + "“ (leer lassen zum Löschen der Notiz)", eintrag.notiz || "");
+    if (neu === null) return;
+    const liste = notizenLesen();
+    const treffer = liste.find(n => n.id === eintrag.id);
+    if (treffer) treffer.notiz = neu;
+    notizenSchreiben(liste);
+    normZeichnen();
+  });
+
   // Satzart. Voreinstellung Flattersatz: Er ist über alle Fensterbreiten hinweg
   // am zuverlässigsten lesbar. Blocksatz wirkt bei Gesetzestexten ruhiger und
   // amtlicher, verlangt im Deutschen aber zwingend Silbentrennung — die ist im
@@ -1250,7 +1851,7 @@ async function start(){
     themaSetzen(THEMEN[(THEMEN.indexOf(gemerkt("thema", "system")) + 1) % THEMEN.length]);
 
   // Fußleiste auf schmalen Fenstern spiegelt die Kopfschalter.
-  for (const art of ["tb", "rf", "ausn", "def"]){
+  for (const art of ["tb", "rf", "ausn", "def", "eigen"]){
     const b = el("fb-" + art);
     if (b) b.onclick = () => schalterSetzen(art, document.body.dataset[art] !== "an");
   }
@@ -1279,6 +1880,9 @@ async function start(){
 
   try{
     S.register = await holen("data/index.json");
+    // Rückverweise sind eine Zutat: Fehlt die Datei, arbeitet alles andere weiter.
+    try { S.verweise = (await holen("data/verweise.json")).normen; }
+    catch(e){ S.verweise = {}; }
   }catch(err){
     el("haupt").innerHTML =
       '<div class="melder"><strong>Die Gesetzesdaten fehlen oder sind nicht erreichbar.</strong>' +
@@ -1291,6 +1895,18 @@ async function start(){
   route();
 }
 start();
+
+/* Offlinezugriff. Der Arbeiter liegt neben index.html; der relative Pfad hält
+   seinen Geltungsbereich auf dem Veröffentlichungsverzeichnis — unter
+   GitHub Pages ist das /steuernorm/, nicht die Wurzel der Domain.
+   Über file:// gibt es keinen Arbeiter; die Seite läuft dann wie bisher. */
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {
+      /* Ohne Arbeiter bleibt alles beim Alten: Es braucht dann Netz. */
+    });
+  });
+}
 </script>
 </body>
 </html>

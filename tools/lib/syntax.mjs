@@ -13,22 +13,17 @@
 
 /* ─────────────────────────── Wortmaterial ─────────────────────────── */
 
-/** Finite Verbformen, die in Normtexten den Hauptsatz tragen. */
-const FINIT = [
-  "ist", "sind", "war", "waren", "sei", "seien",
-  "wird", "werden", "wurde", "wurden",
-  "hat", "haben", "hatte", "hatten",
-  "kann", "können", "darf", "dürfen", "muss", "müssen", "soll", "sollen",
-  "gilt", "gelten", "galt", "galten",
-  "bleibt", "bleiben", "beträgt", "betragen", "bemisst", "bemessen",
-  "unterliegt", "unterliegen", "entsteht", "entstehen", "erlischt", "erlöschen",
-  "findet", "finden", "ergibt", "ergeben", "tritt", "treten", "steht", "stehen",
-  "bedarf", "bedürfen", "erfolgt", "erfolgen", "endet", "enden", "beginnt", "beginnen",
-  "richtet", "richten", "zählt", "zählen", "gehört", "gehören", "umfasst", "umfassen",
-  "steht", "stehen", "stand", "standen", "greift", "greifen", "liegt", "liegen",
-  "übersteigt", "übersteigen", "erhöht", "vermindert", "ermäßigt", "ändert", "ändern",
-];
-const FINIT_RE = new RegExp(`\\b(${FINIT.join("|")})\\b`, "gi");
+import { AUXILIAR, UNREGELMAESSIG, istFinitesVerb, istKlammerschluss } from "./verben.mjs";
+import { ausnahmeSpannen, ausnahmeAbziehen, DEROGATION } from "./ausnahmen.mjs";
+
+/**
+ * Finite Verbformen werden seit Fassung 5 morphologisch bestimmt (verben.mjs).
+ * Diese Liste bleibt nur noch für die Stellen erhalten, an denen eine
+ * ZEICHENKETTENPRÜFUNG auf die geläufigsten Formen genügt — etwa beim Erkennen
+ * des Nebensatzendes. Sie ist ausdrücklich nicht mehr die Erkennungsgrundlage.
+ */
+const FINIT = [...AUXILIAR, ...UNREGELMAESSIG];
+const FINIT_SET = new Set(FINIT);
 
 /** Subjunktionen: leiten Nebensätze mit Verbletztstellung ein. */
 const SUBJUNKTION = /\b(wenn|soweit|sofern|falls|weil|da|obwohl|damit|dass|ob|solange|sobald|bevor|nachdem|indem|während|insoweit|soweit nicht)\b/i;
@@ -162,34 +157,67 @@ function maskiere(satz) {
   return m;
 }
 
-/** Findet das finite Verb des Hauptsatzes. Liefert {index, form} oder null. */
-export function finitesVerb(satz) {
-  const maske = maskiere(satz);
-  FINIT_RE.lastIndex = 0;
-  let treffer;
-  while ((treffer = FINIT_RE.exec(maske)) !== null) {
-    if (maske[treffer.index] === "\u0000") continue;
-    return { index: treffer.index, form: satz.slice(treffer.index, treffer.index + treffer[0].length) };
+/**
+ * Zerlegt einen Text in Wörter mit ihrer Zeichenposition. `maskiere` erhält die
+ * Länge des Textes, deshalb passen die Positionen aus dem maskierten Text
+ * unverändert auf das Original.
+ */
+function woerterMitOrt(text) {
+  const raus = [];
+  const re = /\S+/g;
+  let m;
+  while ((m = re.exec(text)) !== null) raus.push({ wort: m[0], von: m.index });
+  return raus;
+}
+
+const MASKE = "\u0000";
+
+/**
+ * Findet das finite Verb des Hauptsatzes. Liefert {index, form, art} oder null.
+ *
+ * Seit Fassung 5 morphologisch statt über eine geschlossene Wortliste: Die Liste
+ * ließ 15 % aller Rechtssätze unzerlegt, weil das Deutsche finite Formen
+ * produktiv bildet („bedient", „übernimmt", „erlässt", „fallen").
+ *
+ * @param {string} satz
+ * @param {string|null} vorgabeMaske  bereits maskierter Text gleicher Länge
+ */
+export function finitesVerb(satz, vorgabeMaske = null) {
+  // Ausgeblendete Bereiche werden zu LEERRAUM, nicht bloß zu Platzhalterzeichen.
+  // Das Nullbyte ist selbst ein Nicht-Leerzeichen: „bestimmt, ob …" ergab damit
+  // das Einzeltoken „bestimmt\u0000\u0000…", das die Prüfung nie erreichte —
+  // das finite Verb unmittelbar vor einem Nebensatz blieb unsichtbar.
+  const maske = (vorgabeMaske ?? maskiere(satz)).replaceAll(MASKE, " ");
+  const sichtbar = woerterMitOrt(maske);
+  if (!sichtbar.length) return null;
+
+  const formen = sichtbar.map((w) => satz.slice(w.von, w.von + w.wort.length));
+  // Der Satzanfang zählt nur, wenn das erste sichtbare Wort auch am Textanfang
+  // steht — sonst führt die Großschreibungsregel für Position 0 in die Irre.
+  const amAnfang = sichtbar[0].von <= satz.length - satz.trimStart().length;
+  const liste = amAnfang ? formen : ["\u0000", ...formen];
+  const versatz = amAnfang ? 0 : 1;
+
+  for (let i = 0; i < formen.length; i++) {
+    const art = istFinitesVerb(liste, i + versatz);
+    if (art) return { index: sichtbar[i].von, form: formen[i], art };
   }
   return null;
 }
 
-/** Wie finitesVerb, aber auf einem bereits maskierten Text. */
+/** Wie finitesVerb, aber auf einem bereits maskierten Text (Nullbytes = ausgeblendet). */
 export function finitesVerbAusserhalb(maskiert) {
-  const maske = maskiere(maskiert);
-  FINIT_RE.lastIndex = 0;
-  let treffer;
-  while ((treffer = FINIT_RE.exec(maske)) !== null) {
-    if (maske[treffer.index] === "\u0000" || maskiert[treffer.index] === "\u0000") continue;
-    return { index: treffer.index, form: treffer[0] };
-  }
-  return null;
+  return finitesVerb(maskiert, maskiere(maskiert));
 }
 
 /** Beginnt der Satz mit dem finiten Verb? („Ist die Steuer … abgegolten, gilt …") */
 export function verberst(satz) {
-  const erstes = satz.trim().split(/\s+/)[0] || "";
-  return FINIT.includes(erstes.toLowerCase().replace(/[^a-zäöüß]/g, ""));
+  const erstes = (satz.trim().split(/\s+/)[0] || "").toLowerCase().replace(/[^a-zäöüß]/g, "");
+  // Verberststellung gibt es im Normtext praktisch nur mit Hilfs-, Modal- und
+  // den geläufigen unregelmäßigen Verben. Eine produktiv gebildete Form am
+  // Satzanfang ist dagegen fast immer ein großgeschriebenes Substantiv
+  // („Vermögen und Einkünfte … werden zugerechnet").
+  return FINIT_SET.has(erstes);
 }
 
 /* ─────────────────────────── Normtyp ─────────────────────────── */
@@ -209,7 +237,11 @@ export function normtyp(satz, kontext = {}) {
   if (TARIF.test(satz) && /\d/.test(satz)) return "tarif";
   if (VERWEISUNG.test(satz) && !/\bwenn\b|\bsoweit\b/i.test(satz)) return "verweisung";
   if (DEFINITION_STARK.test(satz)) return "definition";
-  if (DEFINITION_MUSTER.test(satz) && !SUBJUNKTION.test(satz.slice(0, 24))) return "definition";
+  // „Steuerfrei sind die Umsätze …" trifft das Definitionsmuster, ist aber keine
+  // Legaldefinition: Im Vorfeld steht das Prädikativ und damit die RECHTSFOLGE.
+  // Ohne diesen Vorrang wird „Steuerfrei" zum Definiendum erklärt.
+  if (DEFINITION_MUSTER.test(satz) && !SUBJUNKTION.test(satz.slice(0, 24))
+      && !PRAEDIKATIV.test(satz)) return "definition";
   if (verberst(satz) || SUBJUNKTION.test(satz)) return "konditional";
   const v = finitesVerb(satz);
   if (v) {
@@ -234,7 +266,7 @@ export const NICHT_MARKIEREN = new Set(["anwendung"]);
  *   art ∈ tb | rf | ausn | zeit | verwerfen
  *   grund dokumentiert die syntaktische Begründung und landet in der Annotation.
  */
-export function zerlege(satz, kontext = {}) {
+function zerlegeRoh(satz, kontext = {}) {
   const typ = normtyp(satz, kontext);
   const elemente = [];
   /**
@@ -267,13 +299,29 @@ export function zerlege(satz, kontext = {}) {
     return { typ, vorfeldrolle: null, elemente: [], hinweis: "Anwendungsvorschrift — keine Markierung." };
   }
 
+  // Aufzählungsglied: Nummern und Buchstaben sind elliptisch. Ihr Prädikat steht
+  // im Einleitungssatz („Steuerliche Nebenleistungen sind: 1. Verspätungszuschläge
+  // …"), im Glied selbst fehlt es. Ohne eigenen Zweig landeten diese 1 937 Glieder
+  // in der Auffangregel „Kein finites Verb erkannt" — richtig markiert, aber mit
+  // einer Begründung, die den Sachverhalt verfehlt.
+  if (kontext.ebene === "nr" && !finitesVerb(satz)) {
+    const rolle = katalogRolle(kontext.einleitung || "");
+    merk(rolle, satz, `Aufzählungsglied ${kontext.nr || ""}`.trim()
+      + ` — ${rolle === "rf" ? "Anordnungsvariante" : "Merkmalsvariante"} des Einleitungssatzes`);
+    return { typ, vorfeldrolle: "katalog", elemente };
+  }
+
   // Ausnahmeteile zuerst herauslösen, damit sie nicht als Tatbestand landen.
-  const ausn = ausnahmeSpanne(satz);
-  if (ausn) merk("ausn", ausn, "Ausnahmesignal im Satz");
+  // Seit Fassung 5 werden ALLE Ausnahmen eines Rechtssatzes gefunden, nach
+  // Bauform unterschieden und von Vorrangregeln getrennt (ausnahmen.mjs).
+  const hauptverb = finitesVerb(satz);
+  for (const a of ausnahmeSpannen(satz, { verbIndex: hauptverb ? hauptverb.index : -1 })) {
+    merk("ausn", a.text, a.grund);
+  }
 
   // Verberststellung: „Ist X …, gilt Y." → Bedingungssatz = Tatbestand
   if (verberst(satz)) {
-    const komma = hauptKomma(satz);
+    const komma = v1Grenze(satz);
     if (komma > 0) {
       merk("tb", satz.slice(0, komma), "Verberststellung: uneingeleiteter Bedingungssatz");
       merk("rf", satz.slice(komma + 1), "Nachfolgender Hauptsatz");
@@ -403,6 +451,139 @@ export function zerlege(satz, kontext = {}) {
   return { typ, vorfeldrolle: rolle, elemente };
 }
 
+/* ─────────────────────── Entflechtung der Spannen ─────────────────────── */
+
+/**
+ * Rangfolge bei Überlappung. Die spezifischere Kategorie behält die Zeichen,
+ * die allgemeinere wird um sie beschnitten.
+ *
+ * Eine Ausnahme ist immer aus einer Regel herausgeschnitten — sie gewinnt gegen
+ * beide Regelkategorien. Ein Tatbestand ist enger gefasst als eine Rechtsfolge,
+ * die im Regelfall der gesamte Resttext ab dem finiten Verb ist.
+ */
+const RANG = { ausn: 3, def: 2, tb: 1, rf: 0 };
+
+/**
+ * Öffentliche Zerlegung: erst die syntaktische Analyse, dann die Entflechtung.
+ *
+ * Ohne den zweiten Schritt liegen zwei Kategorien auf denselben Zeichen. Im
+ * Bestand betraf das 467 Spannen; das Frontend verodert die Klassen dann zu
+ * `mark.tb.rf` und zeigt einen Farbverlauf, der nichts bedeutet.
+ */
+export function zerlege(satz, kontext = {}) {
+  const roh = zerlegeRoh(satz, kontext);
+  return { ...roh, elemente: entflechte(roh.elemente || [], satz) };
+}
+
+/**
+ * Bringt die Spannen eines Rechtssatzes in eine überschneidungsfreie Lage.
+ * Jedes Element behält seinen Wortlaut; nur die von einer höherrangigen
+ * Kategorie beanspruchten Zeichen werden abgezogen.
+ */
+function entflechte(elemente, satz) {
+  // 1. Jede Spanne im Rechtssatz verorten. Der Cursor verhindert, dass eine
+  //    wiederholte Wendung auf die erste statt auf die gemeinte Stelle trifft.
+  const verortet = [];
+  for (const e of elemente) {
+    const stuecke = e.teile ?? [e.text];
+    const orte = [];
+    let ab = 0;
+    for (const st of stuecke) {
+      let i = satz.indexOf(st, ab);
+      if (i === -1) i = satz.indexOf(st);
+      if (i === -1) continue;
+      orte.push({ von: i, bis: i + st.length });
+      ab = i + st.length;
+    }
+    if (orte.length) verortet.push({ ...e, orte });
+  }
+
+  // 2. Von hoch nach niedrig: Jede Spanne wird um alle bereits vergebenen
+  //    Zeichen höheren Ranges beschnitten.
+  const sortiert = [...verortet].sort((a, b) => (RANG[b.art] ?? 0) - (RANG[a.art] ?? 0));
+  const vergeben = [];
+  const raus = [];
+
+  for (const e of sortiert) {
+    const stuecke = e.orte.flatMap((o) => ausnahmeAbziehen(o, vergeben));
+    const unversehrt = stuecke.length === e.orte.length
+      && stuecke.every((o, k) => o.von === e.orte[k].von && o.bis === e.orte[k].bis);
+    const texte = stuecke
+      .map((o) => saubere(satz.slice(o.von, o.bis)))
+      .filter((x) => gehaltvoll(x) && (unversehrt || keinSplitter(x)));
+    if (!texte.length) continue;
+
+    // Nur die tatsächlich behaltenen Zeichen sperren — sonst beansprucht eine
+    // Spanne Bereiche, die sie nach dem Abzug gar nicht mehr abdeckt.
+    for (const o of stuecke) vergeben.push(o);
+
+    const gekuerzt = texte.join(" ") !== (e.teile ?? [e.text]).join(" ");
+    if (texte.length === 1) {
+      raus.push({
+        art: e.art, text: texte[0], anzeige: null, teile: null,
+        grund: gekuerzt ? `${e.grund} (um Ausnahme gekürzt)` : e.grund,
+      });
+    } else {
+      raus.push({
+        art: e.art, text: texte[0], teile: texte,
+        anzeige: texte.join(" … "),
+        grund: gekuerzt ? `${e.grund} (um Ausnahme gekürzt)` : e.grund,
+      });
+    }
+  }
+
+  // 3. In Lesereihenfolge zurückgeben.
+  const platz = (e) => satz.indexOf((e.teile ?? [e.text])[0]);
+  return raus.sort((a, b) => platz(a) - platz(b));
+}
+
+/**
+ * Grenze zwischen vorangestelltem Bedingungssatz und Hauptsatz bei
+ * Verberststellung.
+ *
+ *   „Werden Einkünfte … dadurch gemindert, dass er … zugrunde legt, …,
+ *    SIND seine Einkünfte … anzusetzen."
+ *
+ * Das erste Komma taugt dafür nicht: Es steht hier vor „dass" und damit mitten
+ * im Bedingungssatz. Maßgeblich ist das Komma, hinter dem der Hauptsatz beginnt
+ * — erkennbar daran, dass dort „so" oder das finite Verb steht, weil das
+ * Vorfeld schon vom Bedingungssatz besetzt ist.
+ */
+function v1Grenze(satz) {
+  const kommas = [...satz.matchAll(/,/g)].map((m) => m.index);
+  for (const k of kommas) {
+    const rest = satz.slice(k + 1).trimStart();
+    const erstes = (rest.split(/\s+/)[0] || "").toLowerCase().replace(/[^a-zäöüß]/g, "");
+    if (erstes === "so" || erstes === "dann") return k;
+    // Der Hauptsatz nach einem vorangestellten Nebensatz beginnt mit dem
+    // finiten Verb. Nur die geschlossenen Klassen zählen — eine produktive
+    // Form wäre hier zu unsicher.
+    if (FINIT_SET.has(erstes) && k > 8) return k;
+  }
+  return hauptKomma(satz);
+}
+
+/**
+ * Welche Rolle nehmen die Glieder einer Aufzählung ein?
+ *
+ * Sie füllen die Leerstelle, die der Einleitungssatz offen lässt. Steht dort
+ * eine Anordnung — ein Modalverb oder eine Infinitivkonstruktion mit „zu" —,
+ * sind die Glieder Rechtsfolgenvarianten:
+ *
+ *   „Das Finanzamt kann anordnen, dass … : 1. …, 2. …"        → Anordnung
+ *   „Steuerliche Nebenleistungen sind: 1. Verspätungszuschläge" → Merkmale
+ *
+ * Im Zweifel gilt die Merkmalslesart: Kataloge des Steuerrechts zählen
+ * überwiegend Tatbestandsvarianten auf.
+ */
+function katalogRolle(einleitung) {
+  const e = String(einleitung || "");
+  if (!e) return "tb";
+  if (/\b(kann|können|darf|dürfen|muss|müssen|soll|sollen|ist zu|sind zu|hat zu|haben zu)\b/i.test(e)
+      && !/\b(sind|ist)\s*:?\s*$/i.test(e.trim())) return "rf";
+  return "tb";
+}
+
 /** rf = Rechtsfolge im Vorfeld, tb = Anwendungsfall im Vorfeld, null = bloßes Subjekt. */
 export function vorfeldrolle(vorfeld) {
   const v = vorfeld.trim();
@@ -414,29 +595,6 @@ export function vorfeldrolle(vorfeld) {
   if (BLOSSES_SUBJEKT.test(v)) return null;
   if (/^[A-ZÄÖÜ]/.test(v) && v.split(/\s+/).length <= 3) return "rf";
   return "tb";
-}
-
-/**
- * Findet den Ausnahmeteil als MINIMALE Klausel um das Signal herum.
- * Bewusst eng: „mit Ausnahme des § 36a EStG" statt des halben Satzes.
- */
-function ausnahmeSpanne(satz) {
-  const m = AUSNAHME.exec(satz);
-  if (!m) return null;
-  const g = zahlkommaSchuetzen(satz);
-  const grenzeVor = Math.max(g.lastIndexOf(";", m.index), g.lastIndexOf(",", m.index));
-  const von = grenzeVor === -1 ? m.index : grenzeVor + 1;
-  const kandidaten = [g.indexOf(";", m.index), g.indexOf(",", m.index), satz.length]
-    .filter((i) => i > m.index + m[0].length);
-  let bis = Math.min(...kandidaten, satz.length);
-
-  // Nie über das finite Verb des Hauptsatzes hinaus, wenn die Ausnahme im Vorfeld steht.
-  const v = finitesVerb(satz);
-  if (v && v.index > m.index && v.index < bis) bis = v.index;
-
-  const t = satz.slice(von, bis).replace(/[.,;]$/, "").trim();
-  if (t.length < 6 || t.split(/\s+/).length > 28) return null;
-  return t;
 }
 
 /** Findet einen eingeleiteten Konditionalsatz und seine Grenzen. */
@@ -492,19 +650,42 @@ function saubere(text) {
     .replace(/\s+([,;.])/g, "$1")
     .trim()
     .replace(/^[,;:]\s*/, "")
+    // Korrelat am Beginn des Hauptsatzes: „…, SO treffen die Behörden …".
+    // Es verweist nur auf den Bedingungssatz zurück und trägt nichts bei.
+    .replace(/^(so|dann|sodann)\s+(?=[a-zäöüß])/i, "")
     .replace(/[.,;:]$/, "")
     // hängende Konjunktion am Ende („… anzuwenden, wenn")
     .replace(/[,;]?\s+(wenn|soweit|sofern|falls|und|oder|sowie|dass)$/i, "")
     .trim();
 }
 
+/** Bloße Fundstellenangabe ohne eigenen Merkmalsgehalt: „Satz 1", „Absatz 2". */
+const NUR_STELLE = /^(?:§+\s*\d+[a-z]?|(?:satz|sätze|absatz|absätze|nummer|nrn?\.?|buchstabe|halbsatz|alternative)\s*\d*[a-z]?)(?:\s*(?:und|bis|sowie|,)\s*\d+[a-z]?)*$/i;
+
+/**
+ * Nach dem Abzug einer Ausnahme bleiben mitunter Reststücke übrig, die
+ * syntaktisch korrekt aus der Regel geschnitten und als Merkmal trotzdem
+ * wertlos sind — „Satz 1", „und der". Kurze, aber vollständige Anordnungen
+ * („ist zulässig", „entsteht nicht") müssen dagegen erhalten bleiben.
+ */
+function keinSplitter(t) {
+  const roh = String(t).trim();
+  if (NUR_STELLE.test(roh)) return false;
+  return roh.split(/\s+/).filter(Boolean).length >= 2;
+}
+
 /** Enthält der Text überhaupt bedeutungstragendes Material? */
 function gehaltvoll(t) {
   if (!t || t.length < 4) return false;
   const woerter = t.split(/\s+/).filter(Boolean);
-  if (woerter.length === 1 && FINIT.includes(woerter[0].toLowerCase())) return false;
+  if (woerter.length === 1 && FINIT_SET.has(woerter[0].toLowerCase())) return false;
+  // „entsteht nicht", „gilt nicht": Verb plus Verneinung ist eine vollständige
+  // Rechtsfolge, auch wenn beide Wörter für sich genommen Funktionswörter sind.
+  // Ohne diese Ausnahme fiel die Regel weg und nur ihre Ausnahme blieb stehen.
+  if (woerter.length >= 2 && /\b(nicht|kein[e]?[nmrs]?|nie|niemals)\b/i.test(t)
+      && woerter.some((w) => FINIT_SET.has(w.toLowerCase()))) return true;
   const inhalt = t.toLowerCase().match(/[a-zäöüß]{4,}/g) || [];
-  return inhalt.some((w) => !FINIT.includes(w) && !FUELLWORT.has(w));
+  return inhalt.some((w) => !FINIT_SET.has(w) && !FUELLWORT.has(w));
 }
 const FUELLWORT = new Set([
   "diese", "dieser", "dieses", "diesem", "diesen", "einer", "eines", "einem", "einen",

@@ -60,6 +60,12 @@ jobs:
           done
           node tools/pruefen.mjs | tee pruefbericht.txt
 
+      - name: Rückverweisindex anlegen
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/verweise.mjs
+
       - name: Fertigen Projektstand veröffentlichen
         shell: bash
         run: |

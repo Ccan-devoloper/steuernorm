@@ -14,11 +14,11 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 12",
-    "pfad": "Abs. 2 Satz 1",
+    "norm": "§ 11",
+    "pfad": "Abs. 3 Satz 1",
     "art": "tb",
-    "text": "Forderungen, die uneinbringlich sind",
-    "grund": "Rechenregel ist vollständig Rechtsfolge"
+    "text": "Ist der gemeine Wert einer Anzahl von Anteilen an einer Kapitalgesellschaft, die einer Per",
+    "grund": "zu grob (54 Wörter)"
   },
   {
     "norm": "§ 13",
@@ -26,13 +26,6 @@
     "art": "tb",
     "text": "Der Ansatz eines geringeren oder höheren Werts",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 14",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "tb",
-    "text": "Das Bundesministerium der Finanzen stellt die Vervielfältiger für den Kapitalwert einer le",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 14",
@@ -52,29 +45,29 @@
     "norm": "§ 15",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
-    "text": "wenn kein anderer Wert feststeht, zu 5,5 Prozent anzunehmen",
+    "text": "Der einjährige Betrag der Nutzung einer Geldsumme",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 15",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
-    "text": "Der einjährige Betrag der Nutzung einer Geldsumme",
+    "text": "wenn kein anderer Wert feststeht, zu 5,5 Prozent anzunehmen",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 30",
     "pfad": "Satz 1",
     "art": "tb",
-    "text": "Die in Deutscher Mark ermittelten Einheitswerte",
+    "text": "Die in Deutscher Mark",
     "grund": "Rechenregel ist vollständig Rechtsfolge"
   },
   {
-    "norm": "§ 70",
-    "pfad": "Abs. 2 Satz 2",
+    "norm": "§ 31",
+    "pfad": "Abs. 1 Satz 1",
     "art": "tb",
-    "text": "wenn das gemeinschaftliche Grundvermögen nach den Anschauungen des Verkehrs als selbständi",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "Für die Bewertung des",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 96",
@@ -87,15 +80,15 @@
     "norm": "§ 97",
     "pfad": "Abs. 1 Nr. 5",
     "art": "tb",
-    "text": "wenn sie ihrer Tätigkeit nach einer Gesellschaft im Sinne des § 15 Absatz 1 Satz 1 Nummer ",
-    "grund": "zu grob (67 Wörter)"
+    "text": "Gesellschaften im Sinne des § 15 Absatz 1 Satz 1 Nummer 2, des § 15 Absatz 3, des § 18 Abs",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 97",
     "pfad": "Abs. 1 Nr. 5",
     "art": "tb",
-    "text": "Gesellschaften im Sinne des § 15 Absatz 1 Satz 1 Nummer 2, des § 15 Absatz 3, des § 18 Abs",
-    "grund": "zu lang (>600 Zeichen)"
+    "text": "wenn sie ihrer Tätigkeit nach einer Gesellschaft im Sinne des § 15 Absatz 1 Satz 1 Nummer ",
+    "grund": "zu grob (67 Wörter)"
   },
   {
     "norm": "§ 97",
@@ -105,46 +98,11 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
-    "norm": "§ 97",
-    "pfad": "Abs. 1b Satz 1",
-    "art": "tb",
-    "text": "Der gemeine Wert eines Anteils an einer in § 97 Abs. 1 Satz 1 Nr. 1 genannten Kapitalgesel",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 121",
     "pfad": "Nr. 4",
     "art": "tb",
     "text": "wenn die Gesellschaft Sitz oder Geschäftsleitung im Inland hat und der Gesellschafter entw",
     "grund": "zu grob (50 Wörter)"
-  },
-  {
-    "norm": "§ 121",
-    "pfad": "Nr. 6",
-    "art": "tb",
-    "text": "Wirtschaftsgüter, die nicht unter die Nummern 1, 2 und 5 fallen und einem inländischen Gew",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 121",
-    "pfad": "Nr. 7",
-    "art": "tb",
-    "text": "Hypotheken, Grundschulden, Rentenschulden und andere Forderungen oder Rechte, wenn sie dur",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 151",
-    "pfad": "Abs. 1 Nr. 4",
-    "art": "tb",
-    "text": "der Anteil am Wert von anderen als in den Nummern 1 bis 3 genannten Vermögensgegenständen ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 151",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "Die Entscheidung über eine Bedeutung für die Besteuerung trifft das für die Festsetzung de",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 151",
@@ -154,11 +112,11 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 153",
-    "pfad": "Abs. 4 Satz 3",
+    "norm": "§ 152",
+    "pfad": "Nr. 1",
     "art": "tb",
-    "text": "Das Bundesministerium der Finanzen legt im Einvernehmen mit den obersten Finanzbehörden de",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "in den Fällen des § 151 Abs. 1 Satz 1 Nr. 1 das Finanzamt, in dessen Bezirk das Grundstück",
+    "grund": "zu grob (52 Wörter)"
   },
   {
     "norm": "§ 157",
@@ -173,6 +131,13 @@
     "art": "tb",
     "text": "die Wirtschaftsgebäude",
     "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 158",
+    "pfad": "Abs. 4 Nr. 5",
+    "art": "tb",
+    "text": "Tierbestände oder Zweige des Tierbestands und die hiermit zusammenhängenden Wirtschaftsgüt",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 159",
@@ -190,30 +155,23 @@
   },
   {
     "norm": "§ 160",
+    "pfad": "Abs. 2 Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "2. die Nebenbetriebe, 3. die",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 160",
     "pfad": "Abs. 7 Satz 2",
     "art": "tb",
     "text": "einzelne land- und forstwirtschaftlich genutzte Flächen, bei denen die Wirtschaftsgebäude ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 162",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "wenn der Veräußerungserlös innerhalb von sechs Monaten ausschließlich zum Erwerb eines and",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 163",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Der Reingewinn für die landwirtschaftliche Nutzung bestimmt sich nach der Region, der maßg",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 163",
     "pfad": "Abs. 4 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "Die Ertragsklassen bestimmen sich für",
+    "art": "rf",
+    "text": "bestimmen sich für",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
@@ -221,20 +179,6 @@
     "pfad": "Abs. 12 Satz 1",
     "art": "tb",
     "text": "Der kapitalisierte Reingewinn für die landwirtschaftliche, die forstwirtschaftliche, die w",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 164",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "Der für den Wert des Grund und Bodens im Sinne des § 158 Abs. 3 Satz 1 Nr. 1 zu ermittelnd",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 164",
-    "pfad": "Abs. 4 Satz 1",
-    "art": "tb",
-    "text": "Der Wert für die übrigen Wirtschaftsgüter im Sinne des § 158 Abs. 3 Satz 1 Nr. 2 bis 5 (Be",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -267,23 +211,9 @@
   },
   {
     "norm": "§ 168",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "Der Grundbesitzwert für Stückländereien als Betrieb der Land- und Forstwirtschaft (§ 160 A",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 168",
     "pfad": "Abs. 4 Nr. 1",
     "art": "tb",
     "text": "der Wert des Grund und Bodens und der Wirtschaftsgebäude oder ein Anteil daran (§ 158 Abs.",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 168",
-    "pfad": "Abs. 4 Nr. 2",
-    "art": "tb",
-    "text": "der Wert der übrigen Wirtschaftsgüter (§ 158 Abs. 3 Satz 1 Nr. 3 bis 5) nach dem Wertverhä",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -385,6 +315,13 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 178",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "unbebaut gilt auch ein Grundstück, auf dem infolge von Zerstörung oder Verfall der Gebäude",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
     "norm": "§ 181",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
@@ -427,6 +364,34 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 188",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "3,5 Prozent für Mietwohngrundstücke",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 188",
+    "pfad": "Abs. 2 Nr. 2",
+    "art": "tb",
+    "text": "4,5 Prozent für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 188",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "5,0 Prozent für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 188",
+    "pfad": "Abs. 2 Nr. 4",
+    "art": "tb",
+    "text": "6,0 Prozent für Geschäftsgrundstücke",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
     "norm": "§ 190",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
@@ -463,44 +428,44 @@
   },
   {
     "norm": "§ 193",
-    "pfad": "Abs. 3 Nr. 2",
+    "pfad": "Abs. 4 Nr. 1",
     "art": "tb",
-    "text": "der nach Absatz 4 über die Restlaufzeit des Erbbaurechts kapitalisierten Differenz aus dem",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "2,5 Prozent für Ein- und Zweifamilienhäuser und Wohnungseigentum, das wie Ein- und Zweifam",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 193",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "3,5 Prozent für Mietwohngrundstücke und Wohnungseigentum, das nicht unter Nummer 1 fällt",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 193",
+    "pfad": "Abs. 4 Nr. 3",
+    "art": "tb",
+    "text": "4,5 Prozent für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 193",
+    "pfad": "Abs. 4 Nr. 4",
+    "art": "tb",
+    "text": "5,0 Prozent für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 193",
+    "pfad": "Abs. 4 Nr. 5",
+    "art": "tb",
+    "text": "6,0 Prozent für Geschäftsgrundstücke und Teileigentum",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 194",
     "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "die von den Gutachterausschüssen im Sinne der §§ 192 ff. des Baugesetzbuchs ermittelten Er",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 194",
-    "pfad": "Abs. 3 Nr. 1",
-    "art": "tb",
-    "text": "dem nach Absatz 4 über die Restlaufzeit des Erbbaurechts abgezinsten Bodenwert des unbelas",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 195",
-    "pfad": "Abs. 2 Nr. 2",
-    "art": "tb",
-    "text": "der nach Absatz 3 über die Restlaufzeit des Nutzungsrechts kapitalisierten Differenz aus d",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 197",
-    "pfad": "Satz 1",
-    "art": "tb",
-    "text": "Gebäude, Teile von Gebäuden und Anlagen, die wegen der in § 1 des Zivilschutzgesetzes vom ",
-    "grund": "zu grob (49 Wörter)"
-  },
-  {
-    "norm": "§ 198",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "Weist der Steuerpflichtige nach, dass der gemeine Wert der wirtschaftlichen Einheit am Bew",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -553,25 +518,11 @@
     "grund": "Rechenregel ist vollständig Rechtsfolge"
   },
   {
-    "norm": "§ 223",
-    "pfad": "Abs. 2 Nr. 2",
-    "art": "tb",
-    "text": "in den Fällen des Absatzes 1 Nummer 2 der Beginn des Kalenderjahres, in dem der Grundsteue",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 224",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
     "text": "in den Fällen des Absatzes 1 Nummer 2 der Beginn des Kalenderjahres, in dem der Grundsteue",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 228",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "Fordert die Finanzbehörde zur Abgabe einer Erklärung auf",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 228",
@@ -581,25 +532,11 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 229",
-    "pfad": "Abs. 6 Satz 1",
+    "norm": "§ 231",
+    "pfad": "Abs. 1 Satz 1",
     "art": "tb",
-    "text": "Die nach den Absätzen 3 oder 4 mitteilungspflichtigen Stellen übermitteln die Mitteilungen",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 229",
-    "pfad": "Abs. 6 Satz 2",
-    "art": "tb",
-    "text": "Die Grundbuchämter und die für die Führung des Liegenschaftskatasters zuständigen Behörden",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 229",
-    "pfad": "Abs. 6 Satz 3",
-    "art": "tb",
-    "text": "Das Bundesministerium der Finanzen legt im Einvernehmen mit den obersten Finanzbehörden de",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "Für die Bewertung des",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 232",
@@ -613,27 +550,13 @@
     "pfad": "Abs. 4 Nr. 2",
     "art": "tb",
     "text": "Tierbestände oder Zweige des Tierbestands und die hiermit zusammenhängenden Wirtschaftsgüt",
-    "grund": "zu grob (59 Wörter)"
+    "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 233",
     "pfad": "Abs. 3 Satz 1",
     "art": "tb",
     "text": "stets dem Grundvermögen zuzurechnen, wenn sie in einem Bebauungsplan als Bauland festgeset",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 236",
-    "pfad": "Abs. 2 Satz 3",
-    "art": "tb",
-    "text": "Er ermittelt sich aus dem Betriebseinkommen abzüglich des Lohnaufwands für die entlohnten ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 237",
-    "pfad": "Abs. 3 Satz 3",
-    "art": "tb",
-    "text": "Die gegendüblichen Bewertungsfaktoren bestimmen sich nach den forstwirtschaftlichen Wuchsg",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -651,17 +574,31 @@
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
+    "norm": "§ 237",
+    "pfad": "Abs. 6 Satz 2",
+    "art": "rf",
+    "text": "Der Reinertrag einer",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 238",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "bei der landwirtschaftlichen Nutzung gemäß Anlage 27, wenn der tatsächliche Tierbestand am",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 238",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "bei der gärtnerischen Nutzung gemäß Anlage 30, wenn in einem Nutzungsteil Flächen unter Gl",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
     "norm": "§ 238",
     "pfad": "Abs. 1 Nr. 2 Halbs. 3",
     "art": "tb",
     "text": "ob die Flächen unter Glas und Kunststoffen neben der Erzeugung auch zur Lagerung oder zum ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 239",
-    "pfad": "Abs. 2 Satz 2",
-    "art": "tb",
-    "text": "Der auf eine Gemeinde entfallende Anteil am Grundsteuerwert berechnet sich aus der jeweils",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -770,10 +707,10 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 244",
+    "norm": "§ 246",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
-    "text": "wenn das gemeinschaftliche Grundvermögen nach den Anschauungen des Verkehrs als selbständi",
+    "text": "unbebaut gilt auch ein Grundstück, auf dem infolge von Zerstörung oder Verfall der Gebäude",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -808,7 +745,7 @@
     "norm": "§ 252",
     "pfad": "Satz 1",
     "art": "tb",
-    "text": "Im Ertragswertverfahren ermittelt sich der Grundsteuerwert aus der Summe des kapitalisiert",
+    "text": "ermittelt sich der Grundsteuerwert aus der Summe des kapitalisierten Reinertrags nach § 25",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -820,10 +757,31 @@
   },
   {
     "norm": "§ 256",
-    "pfad": "Abs. 2 Satz 1",
+    "pfad": "Abs. 1 Nr. 1",
     "art": "tb",
-    "text": "Bei der Bewertung von Ein- und Zweifamilienhäusern im Sinne des § 249 Absatz 2 und 3 verri",
-    "grund": "zu grob (57 Wörter)"
+    "text": "2,5 Prozent für Ein- und Zweifamilienhäuser",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 256",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "3,0 Prozent für Wohnungseigentum",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 256",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "4,0 Prozent für Mietwohngrundstücke mit bis zu sechs Wohnungen",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 256",
+    "pfad": "Abs. 1 Nr. 4",
+    "art": "tb",
+    "text": "4,5 Prozent für Mietwohngrundstücke mit mehr als sechs Wohnungen",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 256",
@@ -834,24 +792,10 @@
   },
   {
     "norm": "§ 256",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Bei der Bewertung von Wohnungseigentum im Sinne des § 249 Absatz 5 verringert sich der Zin",
-    "grund": "zu grob (54 Wörter)"
-  },
-  {
-    "norm": "§ 256",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "Ab einem Bodenrichtwert oder Bodenwert nach § 247 Absatz 3 je Quadratmeter in Höhe von 3 0",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 257",
-    "pfad": "Abs. 2 Satz 2",
-    "art": "tb",
-    "text": "Der jeweilige Abzinsungsfaktor bestimmt sich nach dem Liegenschaftszinssatz nach § 256 und",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 259",
@@ -866,27 +810,6 @@
     "art": "tb",
     "text": "Der nach Abzug der Alterswertminderung verbleibende Gebäudewert",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 263",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "die Anlagen 27 bis 33 durch Anpassung der darin aufgeführten Bewertungsfaktoren und Zuschl",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 263",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "im Einvernehmen mit dem Bundesministerium für Ernährung und Landwirtschaft die Anlagen 34 ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 263",
-    "pfad": "Abs. 1 Nr. 3",
-    "art": "tb",
-    "text": "die Anlagen 36 bis 43 durch Anpassung der darin aufgeführten Bewertungsfaktoren des Ertrag",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 266",
@@ -956,6 +879,13 @@
     "pfad": "Satz 1",
     "art": "tb",
     "text": "(Fundstelle: BGBl. I 2011, 2621 - 2622) Tierart 1 Tier Alpakas 0,08 VE Damtiere Damtiere u",
+    "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "Anlage 19",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "-enten, -gänse 0,04 VE Kaninchen Zucht- und Angorakaninchen 0,025 VE Lamas 0,1 VE Pferde P",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -975,8 +905,8 @@
   {
     "norm": "Anlage 22",
     "pfad": "Satz 1",
-    "art": "tb",
-    "text": "(Fundstelle: BGBl. I 2015, 1846) Ein- und Zweifamilienhäuser 80 Jahre Mietwohngrundstücke,",
+    "art": "rf",
+    "text": "gemischt genutzte Grundstücke und sonstige bebaute Grundstücke: Gemischt genutzte Grundstü",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1010,8 +940,8 @@
   {
     "norm": "Anlage 24",
     "pfad": "Satz 2 (Teil 2)",
-    "art": "tb",
-    "text": "Regelherstellungskosten (RHK) Regelherstellungskosten auf Grundlage der Normalherstellungs",
+    "art": "rf",
+    "text": "ausgebaut 1.01 freistehende Einfamilienhäuser 655 725 835 1005 1260 1.011 freistehende Zwe",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1019,20 +949,20 @@
     "pfad": "Satz 3",
     "art": "tb",
     "text": "Umrechnungsfaktor hinsichtlich der Brutto-Grundfläche (BGF) für Wohnungseigentum in Mehrfa",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "zu grob (58 Wörter)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 12",
-    "art": "tb",
-    "text": "1-5.1 ➀ 1.01-3.33 Ein- und Zweifamilienhäuser ➁ 4.1-5.1 Wohnungseigentum und vergleichbare",
+    "pfad": "Satz 3",
+    "art": "rf",
+    "text": "genutzte Grundstücke, Geschäftsgrundstücke und sonstige bebaute Grundstücke Standardstufe ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
     "pfad": "Satz 12",
     "art": "rf",
-    "text": "Tritt- und Luftschallschutz (z. B. schwimmender Estrich); geradläufige Treppen aus Stahlbe",
+    "text": "gemischt genutzte Grundstücke (Wohnhäuser mit Mischnutzung) Standardstufe Wägungsanteil 1 ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1040,6 +970,13 @@
     "pfad": "Satz 13",
     "art": "tb",
     "text": "Bidet/Urinal, Gäste-WC, bodengleiche Dusche; Wand- und Bodenfliesen; jeweils in gehobener ",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "Anlage 24",
+    "pfad": "Satz 13",
+    "art": "rf",
+    "text": "gesteuerte Fern- oder Zentralheizung, Niedertemperatur- oder Brennwertkessel Fußbodenheizu",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1051,30 +988,30 @@
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 16",
-    "art": "tb",
-    "text": "Automatiktüren, rollstuhlgerechte Bedienung ➄ ➅ ➆ Akustikputz, raumhohe aufwendige Türelem",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
+    "pfad": "Satz 14",
+    "art": "rf",
+    "text": "beschichtete Betondachsteine und Tondachziegel, Folienabdichtung; Dachdämmung (nach ca. 19",
+    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
     "pfad": "Satz 16",
-    "art": "rf",
-    "text": "Tritt- und Luftschallschutz; einfacher Putz ➂ ➃ abgehängte Decken ➄ ➆ Deckenverkleidung ➅ ",
+    "art": "tb",
+    "text": "rollstuhlgerechte Bedienung ➄ ➅ ➆ Akustikputz, raumhohe aufwendige Türelemente ➆ rollstuhl",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
     "pfad": "Satz 17",
-    "art": "tb",
-    "text": "Konstruktion Stahl- und Betonfertigteile überwiegend Betonfertigteile; große stützenfreie ",
+    "art": "rf",
+    "text": "begrünte Metallgitter, Glasbausteine Außentüren in hochwertigen Materialien Fußböden Beton",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
     "pfad": "Satz 18",
-    "art": "tb",
-    "text": "Standardstufe 1-3 4 5 Basis gehoben aufwendig Außenwände Holzfachwerkwand; Holzstützen, Vo",
+    "art": "rf",
+    "text": "gehoben aufwendig Außenwände Holzfachwerkwand; Holzstützen, Vollholz; Brettschalung oder P",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1087,9 +1024,9 @@
   {
     "norm": "Anlage 25",
     "pfad": "Satz 4",
-    "art": "tb",
-    "text": "Wertzahlen für Teileigentum, Geschäftsgrundstücke, gemischt genutzte Grundstücke und sonst",
-    "grund": "zu grob (95 Wörter)"
+    "art": "rf",
+    "text": "gemischt genutzte Grundstücke und sonstige bebaute Grundstücke nach § 181 Absatz 1 Nummer ",
+    "grund": "zu grob (99 Wörter)"
   },
   {
     "norm": "Anlage 26",
@@ -1138,6 +1075,13 @@
     "pfad": "Satz 1",
     "art": "tb",
     "text": "(Fundstelle: BGBl. I 2019, 1824 – 25) Tierart 1 Tier Nach dem Durchschnittsbestand in Stüc",
+    "grund": "zu grob (51 Wörter)"
+  },
+  {
+    "norm": "Anlage 34",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "-enten, -gänse 0,04 VE Kaninchen Zucht- und Angorakaninchen 0,025 VE Lamas 0,1 VE Pferde P",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1164,8 +1108,8 @@
   {
     "norm": "Anlage 38",
     "pfad": "Satz 1",
-    "art": "tb",
-    "text": "(Fundstelle: BGBl. I 2019, 1834) Ein- und Zweifamilienhäuser 80 Jahre Mietwohngrundstücke,",
+    "art": "rf",
+    "text": "gemischt genutzte Grundstücke und sonstige bebaute Grundstücke: Gemischt genutzte Grundstü",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1201,6 +1145,13 @@
     "pfad": "Satz 2",
     "art": "tb",
     "text": "Normalherstellungskosten (NHK) Normalherstellungskosten in Euro/m2 BGF auf der Grundlage d",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "Anlage 42",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "genutzte Grundstücke (Wohnhäuser mit Mischnutzung) 695 886 1 118 2 Banken und ähnliche Ges",
     "grund": "zu lang (>600 Zeichen)"
   },
   {

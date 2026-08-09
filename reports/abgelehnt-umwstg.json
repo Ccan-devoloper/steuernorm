@@ -8,6 +8,13 @@
   },
   {
     "norm": "§ 1",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "die Umwandlung im Sinne des § 1 Abs. 2 des Umwandlungsgesetzes, soweit sie einer Umwandlun",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
     "pfad": "Abs. 3 Nr. 1",
     "art": "tb",
     "text": "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2 und 123 Abs. 1 und 2 des U",
@@ -56,13 +63,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 1",
-    "pfad": "Abs. 5 Nr. 4",
-    "art": "tb",
-    "text": "Buchwert der Wert, der sich nach den steuerrechtlichen Vorschriften über die Gewinnermittl",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 2",
     "pfad": "Abs. 4 Satz 3",
     "art": "tb",
@@ -74,13 +74,6 @@
     "pfad": "Abs. 4 Satz 6",
     "art": "tb",
     "text": "wenn übertragender Rechtsträger und übernehmender Rechtsträger vor Ablauf des steuerlichen",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 2",
-    "pfad": "Abs. 5 Satz 5",
-    "art": "tb",
-    "text": "soweit die Finanzinstrumente oder Anteile an einer Körperschaft ohne die Anwendung der Abs",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -107,13 +100,6 @@
   {
     "norm": "§ 4",
     "pfad": "Abs. 6 Satz 1",
-    "art": "ausn",
-    "text": "Personenvereinigung oder Vermögensmasse als Mitunternehmerin der Personengesellschaft entf",
-    "grund": "Rechenregel ist vollständig Rechtsfolge"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Abs. 6 Satz 1",
     "art": "tb",
     "text": "soweit er auf eine Körperschaft, Personenvereinigung oder Vermögensmasse als Mitunternehme",
     "grund": "Rechenregel ist vollständig Rechtsfolge"
@@ -131,6 +117,13 @@
     "art": "tb",
     "text": "§ 4 Abs. 1 Satz 3",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "wenn sich der Gewinn eines Gesellschafters des übernehmenden Rechtsträgers dadurch erhöht,",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 11",
@@ -161,27 +154,6 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 15",
-    "pfad": "Abs. 2 Satz 8",
-    "art": "tb",
-    "text": "Bei der Trennung von Gesellschafterstämmen setzt die Anwendung des § 11 Abs. 2 außerdem vo",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 15",
-    "pfad": "Abs. 3 Satz 1",
-    "art": "tb",
-    "text": "Bei einer Abspaltung mindern sich verrechenbare Verluste, verbleibende Verlustvorträge, ni",
-    "grund": "zu grob (56 Wörter)"
-  },
-  {
-    "norm": "§ 18",
-    "pfad": "Abs. 3 Satz 3",
-    "art": "tb",
-    "text": "Veräußert eine mittelbar über eine oder mehrere Personengesellschaften an der übernehmende",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
     "norm": "§ 20",
     "pfad": "Abs. 2 Nr. 3",
     "art": "tb",
@@ -197,13 +169,6 @@
   },
   {
     "norm": "§ 20",
-    "pfad": "Abs. 2 Satz 3",
-    "art": "tb",
-    "text": "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4 ermittel",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 20",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
     "text": "ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes nur anzuwenden",
@@ -215,20 +180,6 @@
     "art": "tb",
     "text": "wenn Vermögen im Wege der Sacheinlage durch Aufspaltung, Abspaltung oder Ausgliederung nac",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 20",
-    "pfad": "Abs. 9 Satz 1",
-    "art": "tb",
-    "text": "Ein Zinsvortrag nach § 4h Absatz 1 Satz 5 des Einkommensteuergesetzes und ein EBITDA-Vortr",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 21",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "rf",
-    "text": "hat (qualifizierter Anteilstausch) und",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 21",
@@ -274,10 +225,10 @@
   },
   {
     "norm": "§ 22",
-    "pfad": "Abs. 1 Nr. 5",
-    "art": "tb",
-    "text": "der Einbringende die erhaltenen Anteile in eine Kapitalgesellschaft oder eine Genossenscha",
-    "grund": "zu grob (67 Wörter)"
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "ausn",
+    "text": "es sei denn, er weist nach, dass die Übertragung durch einen Vorgang im Sinne des § 20 Abs",
+    "grund": "zu grob (64 Wörter)"
   },
   {
     "norm": "§ 22",
@@ -309,24 +260,10 @@
   },
   {
     "norm": "§ 22",
-    "pfad": "Abs. 2 Satz 5",
-    "art": "tb",
-    "text": "soweit der Einbringende die erhaltenen Anteile unter Aufdeckung der stillen Reserven veräu",
-    "grund": "zu grob (50 Wörter)"
-  },
-  {
-    "norm": "§ 22",
     "pfad": "Abs. 2 Satz 6",
     "art": "tb",
     "text": "wenn die übernehmende Gesellschaft die eingebrachten Anteile ihrerseits durch einen Vorgan",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 22",
-    "pfad": "Abs. 5 Satz 1",
-    "art": "tb",
-    "text": "Das für den Einbringenden zuständige Finanzamt bescheinigt der übernehmenden Gesellschaft ",
-    "grund": "zu grob (57 Wörter)"
   },
   {
     "norm": "§ 22",
@@ -366,9 +303,9 @@
   {
     "norm": "§ 24",
     "pfad": "Abs. 5 Satz 1",
-    "art": "tb",
-    "text": "Soweit im Rahmen einer Einbringung nach Absatz 1 unter dem gemeinen Wert eingebrachte Ante",
-    "grund": "zu grob (51 Wörter)"
+    "art": "rf",
+    "text": "veräußert oder durch einen Vorgang nach § 22 Absatz 1 Satz 6 Nummer 1 bis 5 weiter übertra",
+    "grund": "zu grob (80 Wörter)"
   },
   {
     "norm": "§ 25",

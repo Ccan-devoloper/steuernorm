@@ -46,7 +46,7 @@ for (const meta of gesetze) {
     continue;
   }
 
-  if (Number(anm.format) !== 3) { console.error(`FEHLER ${meta.abk}: Format ${anm.format}, erwartet 3`); fehler++; }
+  if (Number(anm.format) !== 4) { console.error(`FEHLER ${meta.abk}: Format ${anm.format}, erwartet 4`); fehler++; }
   if (anm.abk !== meta.abk) { console.error(`FEHLER ${meta.abk}: falsches Kürzel`); fehler++; }
 
   for (const norm of gesetz.normen) {
