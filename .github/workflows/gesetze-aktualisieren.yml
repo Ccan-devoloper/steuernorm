@@ -50,11 +50,21 @@ jobs:
         run: |
           set -euo pipefail
           test -s data/index.json
-          anzahl="$(find data -maxdepth 1 -type f -name '*.json' ! -name 'index.json' | wc -l)"
+          # verweise.json ist ein abgeleiteter Index, kein Gesetz — nicht mitzählen.
+          anzahl="$(find data -maxdepth 1 -type f -name '*.json' ! -name 'index.json' ! -name 'verweise.json' | wc -l)"
           test "$anzahl" -eq 14
           for datei in data/*.json; do
             node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$datei"
           done
+
+      - name: Rückverweise neu berechnen
+        shell: bash
+        run: |
+          set -euo pipefail
+          # „Zitiert von" wird aus dem Wortlaut gewonnen und muss dem neuen
+          # Gesetzesstand folgen; sonst zeigt der Index auf entfallene Normen.
+          node tools/verweise.mjs
+          test -s data/verweise.json
 
       - name: Änderungen veröffentlichen
         shell: bash

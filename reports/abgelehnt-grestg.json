@@ -3,22 +3,22 @@
     "norm": "§ 1",
     "pfad": "Abs. 1 Nr. 3 Halbs. 2",
     "art": "tb",
-    "text": "wenn der neue Eigentümer in diesem Verfahren als Eigentümer eines im Flurbereinigungsgebie",
-    "grund": "zu grob (61 Wörter)"
-  },
-  {
-    "norm": "§ 1",
-    "pfad": "Abs. 1 Nr. 3 Halbs. 2",
-    "art": "tb",
     "text": "sind a) der Übergang des Eigentums durch die Abfindung in Land und die unentgeltliche Zute",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 1",
+    "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+    "art": "tb",
+    "text": "wenn der neue Eigentümer in diesem Verfahren als Eigentümer eines im Flurbereinigungsgebie",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 1",
     "pfad": "Abs. 1 Buchst. b",
     "art": "tb",
-    "text": "wenn der neue Eigentümer in diesem Verfahren als Eigentümer eines im Umlegungsgebiet geleg",
-    "grund": "zu grob (61 Wörter)"
+    "text": "der Übergang des Eigentums im Umlegungsverfahren nach dem Bundesbaugesetz in seiner jeweil",
+    "grund": "zu grob (80 Wörter)"
   },
   {
     "norm": "§ 1",
@@ -36,6 +36,13 @@
   },
   {
     "norm": "§ 1",
+    "pfad": "Abs. 2a Satz 1",
+    "art": "tb",
+    "text": "Gehört zum Vermögen einer Personengesellschaft ein inländisches Grundstück und ändert sich",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 1",
     "pfad": "Abs. 2a Satz 4",
     "art": "tb",
     "text": "wenn an ihr mindestens 90 vom Hundert der Anteile auf neue Gesellschafter übergehen",
@@ -43,9 +50,9 @@
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 2a Satz 4",
+    "pfad": "Abs. 2b Satz 1",
     "art": "tb",
-    "text": "Eine unmittelbar beteiligte Kapitalgesellschaft",
+    "text": "Gehört zum Vermögen einer Kapitalgesellschaft ein inländisches Grundstück und ändert sich ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -57,37 +64,51 @@
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 2b Satz 4",
+    "pfad": "Abs. 2c Satz 1",
     "art": "tb",
-    "text": "Eine unmittelbar beteiligte Kapitalgesellschaft",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+    "text": "Bei der Ermittlung des Vomhundertsatzes im Sinne von Absatz 2a Satz 1 und Absatz 2b Satz 1",
+    "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 1",
     "pfad": "Abs. 3 Nr. 1",
     "art": "tb",
-    "text": "wenn durch die Übertragung unmittelbar oder mittelbar mindestens 90 vom Hundert der Anteil",
-    "grund": "zu grob (46 Wörter)"
+    "text": "ein Rechtsgeschäft, das den Anspruch auf Übertragung eines oder mehrerer Anteile der Gesel",
+    "grund": "zu grob (60 Wörter)"
   },
   {
     "norm": "§ 1",
     "pfad": "Abs. 3 Nr. 2",
     "art": "tb",
-    "text": "wenn kein schuldrechtliches Geschäft im Sinne der Nummer 1 vorausgegangen ist",
+    "text": "die Vereinigung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der G",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Nr. 3",
+    "art": "tb",
+    "text": "ein Rechtsgeschäft, das den Anspruch auf Übertragung unmittelbar oder mittelbar von mindes",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 1",
     "pfad": "Abs. 3 Nr. 4",
     "art": "tb",
-    "text": "wenn kein schuldrechtliches Geschäft im Sinne der Nummer 3 vorausgegangen ist",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+    "text": "der Übergang unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gese",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 1",
     "pfad": "Abs. 3b Satz 1",
     "art": "tb",
     "text": "soweit Anteile in Erfüllung eines Rechtsgeschäfts im Sinne des Absatzes 3 Nummer 1 oder Nu",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Nr. 1",
+    "art": "tb",
+    "text": "natürliche Personen, soweit sie einzeln oder zusammengeschlossen einem Unternehmen so eing",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -106,6 +127,20 @@
   },
   {
     "norm": "§ 4",
+    "pfad": "Nr. 1",
+    "art": "tb",
+    "text": "der Erwerb eines Grundstücks durch eine juristische Person öffentlichen Rechts, wenn das G",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Nr. 3",
+    "art": "tb",
+    "text": "der Erwerb eines Grundstücks durch einen ausländischen Staat oder eine ausländische kultur",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 4",
     "pfad": "Nr. 4",
     "art": "tb",
     "text": "der Übergang von Grundstücken gemäß § 1 Absatz 1 Nummer 3 und von Gesellschaftsanteilen ge",
@@ -115,35 +150,28 @@
     "norm": "§ 4",
     "pfad": "Nr. 5",
     "art": "tb",
-    "text": "wenn das Grundstück im Rahmen einer Öffentlich Privaten Partnerschaft für einen öffentlich",
-    "grund": "zu grob (48 Wörter)"
+    "text": "der Erwerb eines Grundstücks von einer juristischen Person des öffentlichen Rechts sowie d",
+    "grund": "zu grob (71 Wörter)"
   },
   {
     "norm": "§ 4",
     "pfad": "Nr. 7",
     "art": "tb",
-    "text": "soweit diese Übertragung oder dieser Übergang durch demokratische Wahlen des Vorstands ein",
-    "grund": "zu grob (46 Wörter)"
+    "text": "die Übertragung oder der Übergang von Anteilen am Gesellschaftsvermögen gemäß § 1 Absatz 2",
+    "grund": "zu grob (81 Wörter)"
   },
   {
     "norm": "§ 5",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "soweit allein durch den Austritt des Vereinigten Königreichs Großbritannien und Nordirland",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "pfad": "Abs. 1 Satz 2",
+    "art": "ausn",
+    "text": "Satz 1 gilt nicht für eine Gesamthand, die nach § 1a des Körperschaftsteuergesetzes optier",
+    "grund": "zu grob (55 Wörter)"
   },
   {
     "norm": "§ 6",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "insoweit nicht entsprechend anzuwenden, als sich der Anteil des Gesamthänders am Vermögen ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 6",
-    "pfad": "Abs. 3 Satz 3",
-    "art": "tb",
-    "text": "soweit allein durch den Austritt des Vereinigten Königreichs Großbritannien und Nordirland",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -169,10 +197,17 @@
   },
   {
     "norm": "§ 6",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "die vom Beteiligungsverhältnis abweichende Auseinandersetzungsquote innerhalb der",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 6",
     "pfad": "Abs. 4 Nr. 3",
     "art": "tb",
     "text": "bei einem Erwerbsvorgang im Sinne des § 1 Absatz 3 Nummer 1 oder Nummer 2 oder Absatz 3a d",
-    "grund": "zu grob (47 Wörter)"
+    "grund": "zu grob (46 Wörter)"
   },
   {
     "norm": "§ 6a",
@@ -198,15 +233,22 @@
   {
     "norm": "§ 6a",
     "pfad": "Satz 5",
-    "art": "tb",
-    "text": "soweit allein durch den Austritt des Vereinigten Königreichs Großbritannien und Nordirland",
-    "grund": "zu grob (47 Wörter)"
+    "art": "ausn",
+    "text": "Satz 3 gilt nicht, soweit allein durch den Austritt des Vereinigten Königreichs Großbritan",
+    "grund": "zu grob (51 Wörter)"
   },
   {
     "norm": "§ 8",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "wenn die Änderung des Gesellschafterbestandes im Sinne des § 1 Absatz 2a oder 2b oder das ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Nr. 6",
+    "art": "tb",
+    "text": "bei der Abtretung des Übereignungsanspruchs: die Übernahme der Verpflichtung aus dem Recht",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -225,10 +267,17 @@
   },
   {
     "norm": "§ 13",
+    "pfad": "Nr. 5",
+    "art": "tb",
+    "text": "a) bei der Vereinigung von mindestens 90 vom Hundert der Anteile an einer Gesellschaft in ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
     "pfad": "Satz 1 (Teil 2)",
-    "art": "rf",
+    "art": "tb",
     "text": "b) bei der Übertragung vereinigter Anteile von mindestens 90 vom Hundert an einer Gesellsc",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
@@ -236,13 +285,6 @@
     "art": "tb",
     "text": "wenn die Vertragsbedingungen des Rechtsgeschäfts, das den Anspruch auf Übereignung begründ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 17",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "In den Fällen des Absatzes 1 Satz 2 sowie in Fällen, in denen sich ein Rechtsvorgang auf m",
-    "grund": "zu grob (48 Wörter)"
   },
   {
     "norm": "§ 17",
@@ -267,6 +309,20 @@
   },
   {
     "norm": "§ 18",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf ein",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 18",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 18",
     "pfad": "Abs. 1 Satz 1 (Teil 2)",
     "art": "tb",
     "text": "die Anzeige nach Satz 1 auch elektronisch nach amtlich vorgeschriebenem Datensatz über die",
@@ -274,51 +330,9 @@
   },
   {
     "norm": "§ 19",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "Rechtsvorgänge, die es ohne Begründung eines Anspruchs auf Übereignung einem anderen recht",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 3a",
-    "art": "tb",
-    "text": "wenn zum Vermögen der Personengesellschaft ein inländisches Grundstück gehört (§ 1 Abs. 2a",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 3b",
-    "art": "tb",
-    "text": "wenn zum Vermögen der Kapitalgesellschaft ein inländisches Grundstück gehört (§ 1 Absatz 2",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 Nr. 4",
-    "art": "tb",
-    "text": "wenn zum Vermögen der Gesellschaft ein Grundstück gehört (§ 1 Abs. 3 Nr. 1)",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 19",
     "pfad": "Abs. 1 Nr. 5",
     "art": "tb",
     "text": "die Vereinigung von mindestens 90 vom Hundert der Anteile einer Gesellschaft, zu deren Ver",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 Nr. 6",
-    "art": "tb",
-    "text": "wenn zum Vermögen der Gesellschaft ein Grundstück gehört (§ 1 Abs. 3 Nr. 3)",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 Nr. 7",
-    "art": "tb",
-    "text": "wenn zum Vermögen der Gesellschaft ein Grundstück gehört (§ 1 Abs. 3 Nr. 4)",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -358,45 +372,17 @@
   },
   {
     "norm": "§ 19",
-    "pfad": "Abs. 6 Satz 1",
+    "pfad": "Abs. 2 Nr. 5",
     "art": "tb",
-    "text": "Die Höhe des Verspätungszuschlags bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordn",
+    "text": "Änderungen in der Nutzung oder den Verzicht auf Rückübertragung, wenn der Grundstückserwer",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 20",
     "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
+    "art": "rf",
     "text": "Name, Vorname, Anschrift, Geburtsdatum sowie die Identifikationsnummer gemäß § 139b der Ab",
     "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 20",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "die Bezeichnung des Grundstücks nach Grundbuch, Kataster, Straße und Hausnummer, den Antei",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 20",
-    "pfad": "Abs. 1 Nr. 4",
-    "art": "tb",
-    "text": "die Bezeichnung des anzeigepflichtigen Vorgangs, den Tag der Beurkundung und die Urkundenn",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 20",
-    "pfad": "Abs. 2 Nr. 1",
-    "art": "tb",
-    "text": "die Firma, den Ort der Geschäftsführung sowie die Wirtschafts-Identifikationsnummer der Ge",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 22a",
-    "pfad": "Nr. 1",
-    "art": "tb",
-    "text": "Einzelheiten der Datenübermittlung und Datenbereitstellung zu regeln sowie Dateiformate un",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 22a",
@@ -414,6 +400,13 @@
   },
   {
     "norm": "§ 23",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Auf vor dem 1. Januar 1983",
+    "grund": "reine Zeitangabe"
+  },
+  {
+    "norm": "§ 23",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "wenn für einen vor dem 1. Januar 1983 verwirklichten Erwerbsvorgang Steuerbefreiung in Ans",
@@ -422,9 +415,16 @@
   {
     "norm": "§ 23",
     "pfad": "Abs. 20 Satz 2",
+    "art": "ausn",
+    "text": "Dies gilt nicht, wenn der Rechtsvorgang nach § 1 Absatz 1, 2, 2a, 3 oder Absatz 3a in der ",
+    "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 21 Satz 2",
     "art": "tb",
-    "text": "wenn der Rechtsvorgang nach § 1 Absatz 1, 2, 2a, 3 oder Absatz 3a in der am 1. Juli 2021 g",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "Bei der Ermittlung der",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 23",
@@ -435,17 +435,17 @@
   },
   {
     "norm": "§ 23",
-    "pfad": "Abs. 22 Satz 2",
-    "art": "tb",
-    "text": "wenn der Rechtsvorgang nach § 1 Absatz 1, 2, 2a, 2b, 3 oder Absatz 3a in der am 1. Juli 20",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 23",
     "pfad": "Abs. 22 Satz 3",
     "art": "tb",
     "text": "Sinkt nach dem 30. Juni 2021 die wirtschaftliche Beteiligung im Sinne des § 1 Absatz 3a un",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 23 Satz 1",
+    "art": "tb",
+    "text": "Bei der Anwendung des § 1 Absatz 2b bleiben Übergänge von Anteilen der Gesellschaft, die v",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 23",

@@ -1,8 +1,8 @@
 {
   "name": "steuernorm",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "private": true,
-  "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Tatbestand-/Rechtsfolge-Annotation",
+  "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Annotation von Tatbestand, Rechtsfolge und Ausnahme",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8000",
@@ -13,7 +13,9 @@
     "belege": "node tools/belege.mjs",
     "belege:karte": "node tools/belege.mjs --karte",
     "aufwerten": "node tools/annotieren.mjs --aufwerten",
-    "konsistenz": "node tools/konsistenz.mjs --schreiben"
+    "konsistenz": "node tools/konsistenz.mjs --schreiben",
+    "verweise": "node tools/verweise.mjs",
+    "frontend": "node tools/frontend-pruefen.mjs"
   },
   "license": "MIT"
 }

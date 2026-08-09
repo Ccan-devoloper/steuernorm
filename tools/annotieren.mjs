@@ -38,7 +38,7 @@ const ZIEL = path.join(WURZEL, "annotations");
 const ZWISCHEN = path.join(WURZEL, ".fortschritt");
 const BERICHTE = path.join(WURZEL, "reports");
 const BELEGE = path.join(WURZEL, "belege");
-const FORMAT = 3;
+const FORMAT = 4;
 
 const args = process.argv.slice(2);
 const flagWert = (f, v = null) => { const i = args.indexOf(f); return i >= 0 ? (args[i + 1] ?? v) : v; };
@@ -128,7 +128,14 @@ for (const meta of gesetze) {
       continue;
     }
 
-    const syntax = einheiten.map((e) => syntaxZerlege(e.text, { normtitel: norm.titel }));
+    // Aufzählungsglieder brauchen ihren Einleitungssatz: Das Prädikat steht dort,
+    // nicht im Glied selbst.
+    const syntax = einheiten.map((e, i) => syntaxZerlege(e.text, {
+      normtitel: norm.titel,
+      ebene: e.ebene,
+      nr: e.nr,
+      einleitung: e.ebene === "nr" ? einleitungZu(einheiten, i) : null,
+    }));
     const kontext = { volltext, gegenstand: gegenstandAus(gesetz) };
     const normBelege = belegdatei?.normen?.[norm.id] ?? null;
     if (normBelege?.verwaltung?.length || normBelege?.rechtsprechung?.length) belegLiegtVor = true;
@@ -377,6 +384,24 @@ function sammleKandidaten(einheit, syn, laeufe) {
   }
   for (const el of syn.elemente || []) zufuegen(el.text);
   return raus.slice(0, 12);
+}
+
+/**
+ * Sucht den Einleitungssatz eines Aufzählungsglieds: den letzten voranstehenden
+ * Rechtssatz derselben Ebene „satz" im selben Absatz.
+ */
+function einleitungZu(einheiten, i) {
+  const absatz = absatzTeil(einheiten[i].pfad);
+  for (let k = i - 1; k >= 0; k--) {
+    if (absatzTeil(einheiten[k].pfad) !== absatz) break;
+    if (einheiten[k].ebene === "satz") return einheiten[k].text;
+  }
+  return null;
+}
+
+function absatzTeil(pfad) {
+  const m = /^Abs\. \d+[a-z]?/.exec(String(pfad || ""));
+  return m ? m[0] : "";
 }
 
 function gegenstandAus(gesetz) {
