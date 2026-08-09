@@ -15,7 +15,8 @@
     "aufwerten": "node tools/annotieren.mjs --aufwerten",
     "konsistenz": "node tools/konsistenz.mjs --schreiben",
     "verweise": "node tools/verweise.mjs",
-    "frontend": "node tools/frontend-pruefen.mjs"
+    "frontend": "node tools/frontend-pruefen.mjs",
+    "browser": "node tools/browser-pruefen.mjs"
   },
   "license": "MIT"
 }

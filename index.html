@@ -122,8 +122,14 @@
   .stand .veraltet{color:var(--warn)}
   .stand a{color:var(--leise)}
 
+  /* KEIN `text-wrap:pretty`. Die Eigenschaft verbessert den Flattersatz, bringt
+     in Chromium (geprüft mit 141) aber den Renderer zum Absturz, sobald der
+     Absatz viele ineinandergreifende Inline-Elemente enthält — genau das
+     erzeugen die Markierungen. Betroffen waren unter anderem § 1 EStG,
+     § 3 SolzG und § 4 UStG: weiße Seite statt Normtext. Die Silbentrennung
+     leistet für den Zeilenfall ohnehin den größeren Teil. */
   .text{max-width:var(--spalte);margin-top:22px;font-family:var(--serif);font-size:var(--basis);
-    line-height:1.72;text-wrap:pretty;
+    line-height:1.72;
     -webkit-hyphens:auto;hyphens:auto;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;
     hyphenate-limit-chars:6 3 3}
 
@@ -309,7 +315,6 @@
     .absatzleiste{position:static;flex-direction:row;flex-wrap:wrap;width:auto;padding:0 0 12px;gap:6px}
     .absatzleiste button{border-right:0;border-bottom:2px solid var(--linie);
       padding:3px 9px;text-align:center}
-    .schema-unten{order:-1;margin-top:0;border-top:0;border-bottom:1px solid var(--linie);padding-bottom:22px}
     main{padding-bottom:76px}
     .fussleiste{display:flex}
   }
@@ -1890,6 +1895,18 @@ async function start(){
   route();
 }
 start();
+
+/* Offlinezugriff. Der Arbeiter liegt neben index.html; der relative Pfad hält
+   seinen Geltungsbereich auf dem Veröffentlichungsverzeichnis — unter
+   GitHub Pages ist das /steuernorm/, nicht die Wurzel der Domain.
+   Über file:// gibt es keinen Arbeiter; die Seite läuft dann wie bisher. */
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {
+      /* Ohne Arbeiter bleibt alles beim Alten: Es braucht dann Netz. */
+    });
+  });
+}
 </script>
 </body>
 </html>

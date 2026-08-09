@@ -174,7 +174,28 @@ aus der Satztrennung und Einträge wie „(weggefallen)".
 
 ## 6. Oberfläche
 
-### Behobene Fehler
+### Der schwerste Fehler: die Seite stürzte ab
+
+`text-wrap: pretty` stand auf der Lesespalte. Die Eigenschaft verbessert den
+Zeilenfall — und bringt in Chromium (geprüft mit 141) den Renderer zum Absturz,
+sobald ein Absatz viele ineinandergreifende Inline-Elemente enthält. Genau das
+erzeugen die Markierungen: In § 15 EStG sind es 42 `<mark>`-Elemente in einem
+Absatz.
+
+Betroffen war ein Teil des Bestands, darunter **§ 1 EStG, § 3 SolzG und
+§ 4 UStG** — also auch die Norm, die beim Aufruf ohne Adresse als erste
+erscheint. Statt des Normtextes kam eine weiße Seite.
+
+Der Fehler war in der bisherigen Prüfung nicht zu sehen: `frontend-pruefen.mjs`
+läuft in jsdom, und jsdom setzt nichts — es kennt kein `text-wrap`. Aufgefallen
+ist er erst beim Versuch, den Offlinezugriff in einem echten Browser zu prüfen.
+
+`tools/browser-pruefen.mjs` schließt diese Lücke: zwölf Normen über alle
+Gesetze auf Absturz, die Spaltenkanten auf Bündigkeit, drei Fensterbreiten auf
+waagerechten Überlauf, die Kopfleiste auf den Dunkelmodus und die Seite auf
+Lauffähigkeit ohne Netz.
+
+### Weitere behobene Fehler
 
 - **Das Statusband hatte keine einzige CSS-Regel.** Das Skript erzeugte es, die
   Plakette („Nur Syntaxanalyse", „Modellkonsens") erschien als unformatierter
@@ -207,6 +228,15 @@ aus der Satztrennung und Einträge wie „(weggefallen)".
 - **Zitat und Permalink kopieren.** Fundstelle mit Fassungsangabe und Link.
 - **Druckansicht.** Ohne Navigation, Markierungen als Kanten statt Flächen
   (Flächen verschwimmen im Graustufendruck), Verweise mit ausgeschriebenem Ziel.
+- **Offlinezugriff** (`sw.js`). Vorab abgelegt wird nur das Gerüst; jedes Gesetz
+  landet beim ersten Lesen in der Ablage und ist danach ohne Netz verfügbar.
+  Bewusst kein Vorabladen des Gesamtbestands: Das sind rund 30 MB Annotationen,
+  allein `estg.json` gut 9 MB. Daten werden aus der Ablage sofort ausgeliefert
+  und im Hintergrund erneuert — für Gesetzestexte, die sich höchstens täglich
+  ändern, der richtige Tausch.
+
+  Was das **nicht** ist: der vollständige Offlinebestand, mit dem native Apps
+  werben. Verfügbar ist, was gelesen wurde.
 
 ---
 
