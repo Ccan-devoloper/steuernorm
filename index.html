@@ -337,6 +337,44 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   border:1px dashed var(--linie);border-radius:var(--r-karte);padding:12px 13px;margin:0;
 }
 
+/* ── Blöcke im Apparat ── */
+.block{
+  border-left:2px solid var(--linie-schwach);
+  padding:2px 0 2px 12px;margin-bottom:18px;
+}
+.block:last-of-type{margin-bottom:0}
+.block.betont{border-left-color:var(--verweis)}
+.block>.mono-etikett{display:block;margin-bottom:5px}
+.block p{margin:0 0 6px;font-size:13px;line-height:1.62;color:var(--text-2)}
+.block p:last-child{margin-bottom:0}
+.block .fundstelle{
+  font-family:var(--mono);font-size:10.5px;color:var(--text-3);
+  display:block;margin-bottom:4px;
+}
+.block .quelle{
+  font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--vw);background:var(--vw-grund);border:1px solid var(--vw-rand);
+  border-radius:var(--r-chip);padding:1px 5px;margin-right:6px;white-space:nowrap;
+}
+.block a{color:var(--verweis);border-bottom:1px solid var(--verweis-kante)}
+.block .fehlt{color:var(--text-4);font-size:12.5px;line-height:1.6}
+
+/* Fehlender Datensatz — sichtbar als fehlend, nicht überspielt. */
+.fehlmeldung{
+  border:1px dashed var(--linie);border-radius:var(--r-karte);
+  padding:11px 12px;margin-bottom:18px;
+}
+.fehlmeldung .mono-etikett{display:block;margin-bottom:5px}
+.fehlmeldung p{margin:0;font-size:12.5px;line-height:1.6;color:var(--text-4)}
+.fehlmeldung code{font-family:var(--mono);font-size:11px;color:var(--text-3)}
+
+/* Haftungssatz. Er steht auf jeder Ansicht mit Hinweisen und in der
+   Druckfassung — das ist eine inhaltliche Auflage, keine Gestaltungsfrage. */
+.haftung{
+  margin-top:22px;padding-top:14px;border-top:1px solid var(--linie-zart);
+  font-size:11.5px;line-height:1.6;color:var(--text-5);
+}
+
 /* ── Fehlermeldung ── */
 .melder{
   max-width:var(--lesespalte);border:1px solid var(--linie-stark);border-radius:var(--r-karte);
@@ -470,6 +508,8 @@ const S = {
   geoeffnet: [],           // [{gesetz, norm}] — Sitzung überdauernd
   zuletzt: [],             // zuletzt gelesene Normen
   apparatRegister: "hinweise",
+  anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
+  belege: {},              // abk → belege/<gesetz>.json
 };
 
 const cacheGesetz = new Map();
@@ -501,6 +541,25 @@ async function gesetzLaden(abk){
   const gesetz = await holen("data/" + (eintrag ? eintrag.datei : schluessel + ".json"));
   cacheGesetz.set(schluessel, gesetz);
   return gesetz;
+}
+
+/**
+ * Zutaten neben dem Normtext.
+ *
+ * Jede Datei ist für sich entbehrlich: Fehlt sie, bleibt der Eintrag leer und
+ * die Oberfläche weist die Lücke aus. Der Normtext erscheint in jedem Fall.
+ */
+async function zutatenLaden(abk){
+  const schluessel = String(abk).toLowerCase();
+
+  if (!(abk in S.anmerkungen)){
+    try { S.anmerkungen[abk] = (await holen("annotations/" + schluessel + ".json")).normen || {}; }
+    catch (e) { S.anmerkungen[abk] = null; }
+  }
+  if (!(abk in S.belege)){
+    try { S.belege[abk] = await holen("belege/" + schluessel + ".json"); }
+    catch (e) { S.belege[abk] = null; }
+  }
 }
 
 /* ── Kleinigkeiten ─────────────────────────────────────────────────── */
@@ -889,9 +948,13 @@ function hauptZeichnen(){
     e1.textContent = "Fassung " + fassung;
     meta.appendChild(e1);
   }
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][norm.id] : null;
   const e2 = document.createElement("span");
   e2.className = "etikett";
-  e2.textContent = "Struktur: noch nicht angebunden";
+  // Der Status kommt aus annotations/; fehlt die Datei, wird das gesagt.
+  e2.textContent = "Struktur: " + (anm && anm.status
+    ? (STATUSNAME[anm.status] || anm.status)
+    : "kein Datensatz");
   meta.appendChild(e2);
   const e3 = document.createElement("span");
   e3.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
@@ -1001,6 +1064,201 @@ const REGISTER = [
   ["markierungen", "Markierungen"],
 ];
 
+/** Der Haftungssatz, wörtlich wie in der Spezifikation. */
+const HAFTUNGSSATZ = "Hinweise sind eine Zutat dieser Seite und keine Rechtsberatung. "
+  + "Maßgeblich ist die im Bundesgesetzblatt verkündete Fassung.";
+
+/** Ein Block im Apparat: Mono-Überschrift, darunter Fließtext. */
+function block(ueberschrift, betont = false){
+  const d = document.createElement("div");
+  d.className = "block" + (betont ? " betont" : "");
+  const k = document.createElement("span");
+  k.className = "mono-etikett";
+  k.textContent = ueberschrift;
+  d.appendChild(k);
+  return d;
+}
+
+/** Sichtbare Fehlanzeige statt stillem Nichts. */
+function fehlmeldung(ueberschrift, text, datei){
+  const d = document.createElement("div");
+  d.className = "fehlmeldung";
+  const k = document.createElement("span");
+  k.className = "mono-etikett";
+  k.textContent = ueberschrift;
+  const p = document.createElement("p");
+  p.textContent = text;
+  d.append(k, p);
+  if (datei){
+    const c = document.createElement("p");
+    const code = document.createElement("code");
+    code.textContent = datei;
+    c.append(document.createTextNode("Erwartet in "), code);
+    d.appendChild(c);
+  }
+  return d;
+}
+
+function haftungssatz(){
+  const p = document.createElement("p");
+  p.className = "haftung";
+  p.textContent = HAFTUNGSSATZ;
+  return p;
+}
+
+/**
+ * Bedienelemente der Handbuchseite, die beim Abruf mitgelesen wurden.
+ *
+ * 728 der 1 005 Verwaltungsauszüge im Bestand (72 %) beginnen mit
+ * „aufklappen Zuklappen" — das sind die Schaltflächen der BMF-Seite, nicht der
+ * Wortlaut der Richtlinie. Sie stehen am Anfang jedes Auszugs und lassen ihn
+ * so aussehen, als begänne die Richtlinie damit.
+ *
+ * Entfernt wird ausschließlich diese Seitenmöblierung am Anfang. Der amtliche
+ * Wortlaut selbst bleibt unangetastet; das Änderungsverbot des BMF
+ * (§ 14 UrhG) ist damit gewahrt — es wird nichts am Werk geändert, sondern
+ * etwas entfernt, das nie zum Werk gehörte.
+ *
+ * Der Bestand in belege/ bleibt unverändert; die Bereinigung findet in der
+ * Anzeige statt.
+ */
+const SEITENMOEBEL = /^(?:\s*(?:auf|zu)klappen\b[\s.:–-]*)+/i;
+
+/** Kürzt einen Belegauszug auf Satzgrenze — Auszüge werden nie umgeschrieben. */
+function aufSatzgrenze(text, grenze = 340){
+  const roh = String(text || "").replace(SEITENMOEBEL, "").replace(/\s+/g, " ").trim();
+  if (roh.length <= grenze) return roh;
+  const stueck = roh.slice(0, grenze);
+  const punkt = Math.max(stueck.lastIndexOf(". "), stueck.lastIndexOf("; "));
+  return (punkt > 80 ? stueck.slice(0, punkt + 1) : stueck) + " …";
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Register „Hinweise"
+
+   Gespeist wird ausschließlich aus dem Bestand: annotations/ liefert das
+   Verfahren und seinen Status, belege/ die Verwaltungs- und
+   Rechtsprechungsnachweise.
+
+   Was der Entwurf zusätzlich zeigt — redaktionelle Anmerkungen je Absatz
+   („Zu Absatz 1: Sechs Anknüpfungen …") —, gibt es im Repository nicht. Diese
+   Sätze sind Entwurfstext, keine Daten. Sie werden deshalb NICHT abgetippt,
+   sondern als fehlender Datensatz ausgewiesen.
+   ══════════════════════════════════════════════════════════════════════ */
+function hinweiseBauen(){
+  const raus = document.createDocumentFragment();
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const belegDatei = S.belege[S.abk] || null;
+  const beleg = belegDatei && belegDatei.normen ? belegDatei.normen[S.normId] : null;
+
+  /* ── Redaktionelle Anmerkungen: nicht vorhanden ── */
+  raus.appendChild(fehlmeldung(
+    "Anmerkungen zu den Absätzen",
+    "Für diese Norm liegen keine redaktionellen Anmerkungen vor. "
+    + "Es werden keine erzeugt — was hier stünde, müsste geschrieben und geprüft sein.",
+    "annotations/" + S.abk.toLowerCase() + ".json",
+  ));
+
+  /* ── Verwaltung ── */
+  const verwaltung = (beleg && beleg.verwaltung) || [];
+  if (verwaltung.length){
+    for (const v of verwaltung.slice(0, 4)){
+      const b = block("Verwaltung");
+      const kopf = document.createElement("span");
+      kopf.className = "fundstelle";
+      if (v.quelle){
+        const q = document.createElement("span");
+        q.className = "quelle";
+        q.textContent = v.quelle;
+        kopf.appendChild(q);
+      }
+      kopf.appendChild(document.createTextNode(v.fundstelle || ""));
+      b.appendChild(kopf);
+      if (v.text){
+        const p = document.createElement("p");
+        p.textContent = aufSatzgrenze(v.text);
+        b.appendChild(p);
+      }
+      if (v.url){
+        const p = document.createElement("p");
+        const a = document.createElement("a");
+        a.href = v.url; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = "amtliche Fundstelle ↗";
+        p.appendChild(a);
+        b.appendChild(p);
+      }
+      raus.appendChild(b);
+    }
+  } else {
+    const b = block("Verwaltung");
+    const p = document.createElement("p");
+    p.className = "fehlt";
+    // Der Satz stammt aus belege/<gesetz>.json, er ist Bestand — nicht erfunden.
+    p.textContent = (belegDatei && belegDatei.hinweis)
+      || "Keine Verwaltungsanweisung zu dieser Norm im Bestand.";
+    b.appendChild(p);
+    raus.appendChild(b);
+  }
+
+  /* ── Rechtsprechung ── */
+  const rechtsprechung = (beleg && beleg.rechtsprechung) || [];
+  if (rechtsprechung.length){
+    const b = block("Rechtsprechung");
+    for (const e of rechtsprechung.slice(0, 5)){
+      const p = document.createElement("p");
+      const bezeichnung = [e.gericht, e.az, e.datum].filter(Boolean).join(" · ");
+      if (e.url){
+        const a = document.createElement("a");
+        a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = bezeichnung || "Entscheidung";
+        p.appendChild(a);
+      } else {
+        p.textContent = bezeichnung || "Entscheidung";
+      }
+      b.appendChild(p);
+    }
+    raus.appendChild(b);
+  } else {
+    const b = block("Rechtsprechung");
+    const p = document.createElement("p");
+    p.className = "fehlt";
+    p.textContent = "Keine Entscheidung zu dieser Norm im Bestand.";
+    b.appendChild(p);
+    raus.appendChild(b);
+  }
+
+  /* ── Verfahren: wie die maschinellen Zutaten zustande kamen ── */
+  if (anm){
+    const b = block("Verfahren");
+    const p = document.createElement("p");
+    p.textContent = anm.hinweis || "";
+    b.appendChild(p);
+    const teile = [];
+    if (anm.status) teile.push("Status: " + STATUSNAME[anm.status] || anm.status);
+    if (typeof anm.konfidenz === "number") teile.push("mittlere Konfidenz " + anm.konfidenz.toFixed(2));
+    if (anm.laeufe) teile.push(anm.laeufe + " Modellläufe");
+    if (teile.length){
+      const q = document.createElement("p");
+      q.className = "fehlt";
+      q.textContent = teile.join(" · ");
+      b.appendChild(q);
+    }
+    raus.appendChild(b);
+  }
+
+  raus.appendChild(haftungssatz());
+  return raus;
+}
+
+const STATUSNAME = {
+  belegt: "amtlich gestützt",
+  konsens: "Modellkonsens",
+  mehrheit: "mehrheitlich",
+  uneinheitlich: "uneinheitlich",
+  syntaktisch: "nur Syntaxanalyse",
+  ohne_merkmale: "ohne Markierung",
+};
+
 function apparatZeichnen(){
   const apparat = el("apparat");
   apparat.innerHTML = "";
@@ -1021,12 +1279,18 @@ function apparatZeichnen(){
 
   const inhalt = document.createElement("div");
   inhalt.className = "registerinhalt";
-  const p = document.createElement("p");
-  p.className = "platzhalter";
-  const name = (REGISTER.find(r => r[0] === S.apparatRegister) || ["", ""])[1];
-  p.textContent = "Register „" + name + "“ — noch nicht angebunden. "
-    + "Das Grundraster steht; die Inhalte folgen in den nächsten Schritten.";
-  inhalt.appendChild(p);
+
+  if (S.apparatRegister === "hinweise"){
+    inhalt.appendChild(hinweiseBauen());
+  } else {
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    const name = (REGISTER.find(r => r[0] === S.apparatRegister) || ["", ""])[1];
+    p.textContent = "Register „" + name + "“ — noch nicht angebunden. "
+      + "Die Inhalte folgen in den nächsten Schritten.";
+    inhalt.appendChild(p);
+  }
+
   apparat.appendChild(inhalt);
 }
 
@@ -1060,6 +1324,8 @@ async function wegweiser(){
 
   S.normId = teile[1] || S.gesetz.normen[0].id;
   if (!S.gesetz.normen.some(n => n.id === S.normId)) S.normId = S.gesetz.normen[0].id;
+
+  await zutatenLaden(S.abk);
 
   /* Die aufgerufene Norm ist immer geöffnet. */
   reiterOeffnen(S.abk, S.normId, false);
