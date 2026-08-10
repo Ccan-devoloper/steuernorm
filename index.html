@@ -336,6 +336,95 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 .legende .m-verwaltung{border-bottom:2px dotted var(--vw)}
 .legende .anmerkung{color:var(--text-5);flex-basis:100%}
 
+/* ══════════════════════════════════════════════════════════════════════
+   Auszeichnungsebene 2: eigene Markierung
+
+   Kodierung ist der MARKER — halbdurchsichtige Fläche mit farbiger
+   Unterkante. Damit bleibt sie von der maschinellen Struktur (volle Fläche,
+   keine Kante) und von der Verwaltungsstelle (Punktlinie, keine Fläche) auf
+   den ersten Blick unterscheidbar, auch wenn alle drei übereinander liegen.
+
+   Farbe und Deckkraft stehen im style-Attribut, weil sie frei wählbar sind;
+   alles Übrige steht hier.
+   ══════════════════════════════════════════════════════════════════════ */
+.eigen{
+  border-radius:var(--r-marke) var(--r-marke) 0 0;
+  padding:0 1px;cursor:pointer;
+}
+.eigen.gewaehlt{outline:2px solid rgba(20,22,26,.35);outline-offset:1px}
+
+/* ── Werkzeugleiste an der Auswahl ── */
+.auswahlleiste{
+  position:absolute;z-index:70;display:none;align-items:center;gap:5px;
+  padding:5px 6px;background:var(--weiss);
+  border:1px solid var(--linie);border-radius:var(--r-karte);
+  box-shadow:var(--schatten-popover);
+}
+.auswahlleiste.offen{display:flex}
+.auswahlleiste .titel{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-4);margin-right:3px;white-space:nowrap;
+}
+
+/* ── Farbkreise ── */
+.farbreihe{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.farbkreis{
+  width:20px;height:20px;border-radius:50%;cursor:pointer;flex:none;
+  border:0;padding:0;
+}
+.farbwaehler{
+  -webkit-appearance:none;appearance:none;border:0;background:none;padding:0;
+  width:22px;height:22px;cursor:pointer;flex:none;
+}
+.farbwaehler::-webkit-color-swatch-wrapper{padding:0}
+.farbwaehler::-webkit-color-swatch{border:1px solid var(--linie);border-radius:50%}
+.farbwaehler::-moz-color-swatch{border:1px solid var(--linie);border-radius:50%}
+.hexwert{font-family:var(--mono);font-size:10.5px;color:var(--text-3)}
+
+/* ── Popover am Text ── */
+.popover{
+  position:absolute;z-index:70;display:none;flex-direction:column;gap:10px;
+  width:300px;background:var(--weiss);
+  border:1px solid var(--linie);border-radius:var(--r-karte);
+  box-shadow:var(--schatten-popover);padding:12px 13px;
+}
+.popover.offen{display:flex}
+.popover-kopf{display:flex;align-items:center;justify-content:space-between}
+.popover-kopf .mono-etikett{font-size:9.5px;letter-spacing:.16em}
+.popover-kopf button{color:var(--text-4);font-size:13px;line-height:1;padding:2px 4px}
+.popover-kopf button:hover{color:var(--text)}
+.popover hr{border:0;border-top:1px solid var(--linie-zart);margin:0}
+.popover textarea{
+  width:100%;min-height:56px;resize:vertical;font:inherit;font-size:12.5px;line-height:1.55;
+  color:var(--text-2);background:var(--flaeche);
+  border:1px solid var(--linie-schwach);border-radius:var(--r-knopf);padding:7px 8px;
+}
+.popover textarea:focus{outline:0;border-color:var(--linie-stark)}
+.popover-fuss{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-size:11px;color:var(--text-5);
+}
+.popover-fuss button{color:var(--text-3);font-size:11px}
+.popover-fuss button:hover{color:var(--warnrot,#B23B3B)}
+
+/* ── Register „Markierungen“ ── */
+.karte{
+  cursor:pointer;border-left:2px solid var(--linie-schwach);
+  padding:2px 0 2px 11px;margin-bottom:16px;
+}
+.karte:last-of-type{margin-bottom:0}
+.karte.aktiv{background:var(--flaeche)}
+.karte-kopf{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.karte-punkt{width:9px;height:9px;border-radius:50%;flex:none}
+.karte-fundstelle{font-family:var(--mono);font-size:10.5px;color:var(--text-3)}
+.karte-datum{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-5)}
+.karte-wortlaut{font-family:var(--serif);font-size:13.5px;line-height:1.5;color:var(--text);margin:0}
+.karte-notiz{font-size:12.5px;line-height:1.55;color:var(--text-2b);margin:5px 0 0}
+.karte-farbzeile{margin-top:9px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.karte-verschoben{
+  font-size:11px;color:var(--text-4);margin:5px 0 0;
+}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -539,6 +628,29 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 
 <div class="verdunkelung" id="verdunkelung"></div>
 
+<div class="auswahlleiste" id="auswahlleiste" role="toolbar" aria-label="Auswahl markieren">
+  <span class="titel">Markieren</span>
+  <div class="farbreihe" id="auswahl-farben"></div>
+</div>
+
+<div class="popover" id="popover" role="dialog" aria-label="Eigene Markierung">
+  <div class="popover-kopf">
+    <span class="mono-etikett">Eigene Markierung</span>
+    <button type="button" id="popover-zu" aria-label="Schließen">×</button>
+  </div>
+  <div class="farbreihe" id="popover-farben"></div>
+  <hr>
+  <div class="farbreihe">
+    <input type="color" class="farbwaehler" id="popover-waehler" aria-label="Eigene Farbe wählen">
+    <span class="hexwert" id="popover-hex"></span>
+  </div>
+  <textarea id="popover-notiz" placeholder="Notiz …" aria-label="Notiz zur Markierung"></textarea>
+  <div class="popover-fuss">
+    <span>Nur für Sie sichtbar</span>
+    <button type="button" id="popover-weg">Entfernen</button>
+  </div>
+</div>
+
 <div class="raster">
   <nav class="navspalte" id="navspalte" aria-label="Normen des Gesetzes"></nav>
   <main class="hauptspalte" id="haupt"><p class="platzhalter">Wird geladen …</p></main>
@@ -564,7 +676,16 @@ const S = {
   anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
   belege: {},              // abk → belege/<gesetz>.json
   struktur: {},            // abk → struktur/<gesetz>.json .normen
+  markierungen: [],        // eigene Markierungen, localStorage
+  aktiveMarkierung: null,  // id | null — flüchtig
+  letzteFarbe: "#F2C744",  // localStorage
 };
+
+/* Voreinstellungen der Farbwahl, dazu ein freier Wähler. */
+const PALETTE = [
+  ["#F2C744", "Gelb"], ["#4E9A5F", "Grün"], ["#3B7BD1", "Blau"],
+  ["#C4577A", "Rosa"], ["#8B7BC7", "Violett"], ["#7A8087", "Grau"],
+];
 
 const cacheGesetz = new Map();
 const el = (id) => document.getElementById(id);
@@ -940,8 +1061,12 @@ function textindex(wurzel){
 function spannenLegen(wurzel, spannen){
   if (!spannen.length) return 0;
   const { text, karte, knoten } = textindex(wurzel);
-  const klasse = new Map(knoten.map(n => [n, new Array(n.nodeValue.length).fill(null)]));
-  const daten = new Map(knoten.map(n => [n, new Array(n.nodeValue.length).fill(null)]));
+
+  /* Je Zeichen wird eine LISTE von Spannen geführt, keine einzelne.
+     Die drei Auszeichnungsebenen liegen übereinander: Eine Stelle kann
+     zugleich Rechtsfolge, eigene Markierung und Verwaltungsstelle sein. Wer
+     hier nur die zuletzt gesetzte Spanne behält, löscht die anderen beiden. */
+  const belegung = new Map(knoten.map(n => [n, new Array(n.nodeValue.length).fill(null)]));
   let verwaist = 0;
 
   for (const spanne of spannen){
@@ -951,31 +1076,41 @@ function spannenLegen(wurzel, spannen){
     for (let pos = von; pos < bis; pos++){
       const ref = karte[pos];
       if (!ref) continue;
-      klasse.get(ref.n)[ref.i] = spanne.klasse;
-      daten.get(ref.n)[ref.i] = spanne;
+      const liste = belegung.get(ref.n);
+      if (!liste[ref.i]) liste[ref.i] = [];
+      liste[ref.i].push(spanne);
     }
   }
 
+  /* Zwei Zeichen gehören in dasselbe Element, wenn genau dieselben Spannen auf
+     ihnen liegen — in derselben Reihenfolge. */
+  const kennung = (liste) => (liste ? liste.map(s => s.schluessel || s.klasse).join(" ") : "");
+
   for (const n of knoten){
     const roh = n.nodeValue;
-    const kl = klasse.get(n);
-    const dt = daten.get(n);
-    if (!kl.some(Boolean)) continue;
+    const belegt = belegung.get(n);
+    if (!belegt.some(Boolean)) continue;
 
     const teil = document.createDocumentFragment();
     let start = 0;
     while (start < roh.length){
-      const jetzt = kl[start], quelle = dt[start];
+      const jetzt = kennung(belegt[start]);
       let ende = start + 1;
-      while (ende < roh.length && kl[ende] === jetzt && dt[ende] === quelle) ende++;
+      while (ende < roh.length && kennung(belegt[ende]) === jetzt) ende++;
       const stueck = roh.slice(start, ende);
+
       if (!jetzt){
         teil.appendChild(document.createTextNode(stueck));
       } else {
+        const liste = belegt[start];
         const s = document.createElement("span");
-        s.className = jetzt;
-        if (quelle && quelle.titel) s.title = quelle.titel;
-        if (quelle && quelle.datensatz) Object.assign(s.dataset, quelle.datensatz);
+        s.className = liste.map(x => x.klasse).join(" ");
+        const titel = liste.map(x => x.titel).filter(Boolean);
+        if (titel.length) s.title = titel.join(" · ");
+        for (const x of liste){
+          if (x.datensatz) Object.assign(s.dataset, x.datensatz);
+          if (x.stil) s.setAttribute("style", (s.getAttribute("style") || "") + x.stil);
+        }
         s.textContent = stueck;
         teil.appendChild(s);
       }
@@ -984,6 +1119,201 @@ function spannenLegen(wurzel, spannen){
     n.parentNode.replaceChild(teil, n);
   }
   return verwaist;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Eigene Markierungen
+
+   Sie liegen im Browser, nicht auf einem Server — es gibt keinen. Verankert
+   wird über den WORTLAUT samt Umgebung, nicht über Zeichenpositionen: Eine
+   Gesetzesänderung verschiebt jede Position, aber selten den markierten Satz.
+   Findet eine Markierung ihre Stelle nicht mehr, geht sie nicht verloren; sie
+   erscheint im Register mit dem Hinweis, dass der Text sich geändert hat.
+   ══════════════════════════════════════════════════════════════════════ */
+const KONTEXT = 40;   // Zeichen Umgebung je Seite
+
+const hexZuRgba = (hex, alpha) => {
+  const wert = parseInt(String(hex).replace("#", ""), 16);
+  if (Number.isNaN(wert)) return `rgba(0,0,0,${alpha})`;
+  return `rgba(${(wert >> 16) & 255},${(wert >> 8) & 255},${wert & 255},${alpha})`;
+};
+
+function markierungenLesen(){
+  const alle = gemerkt("markierungen", []);
+  return Array.isArray(alle) ? alle : [];
+}
+function markierungenSchreiben(liste){
+  S.markierungen = liste;
+  merken("markierungen", liste);
+}
+function markierungenDerNorm(){
+  return S.markierungen.filter(m => m.gesetz === S.abk && m.norm === S.normId);
+}
+
+/** Sucht die gespeicherte Stelle wieder: erst mit Umgebung, dann ohne. */
+function markierungVerorten(volltext, m){
+  if (m.praefix){
+    const mitKontext = volltext.indexOf(m.praefix + m.anker);
+    if (mitKontext !== -1) return mitKontext + m.praefix.length;
+  }
+  return volltext.indexOf(m.anker);
+}
+
+/** Absatzangabe zur Fundstelle — aus struktur/, sonst leer. */
+function fundstelleZu(von){
+  const segmente = strukturDerNorm();
+  if (!Array.isArray(segmente)) return "";
+  const treffer = segmente.find(s => von >= s.von && von < s.bis)
+    || segmente.find(s => s.von >= von);
+  return treffer && treffer.pfad ? treffer.pfad : "";
+}
+
+function markierungAnlegen(anker, praefix, suffix, von){
+  const eintrag = {
+    id: String(Date.now()) + Math.random().toString(36).slice(2, 7),
+    gesetz: S.abk,
+    norm: S.normId,
+    anker, praefix, suffix,
+    fundstelle: fundstelleZu(von),
+    farbe: S.letzteFarbe,
+    notiz: "",
+    datum: new Date().toISOString(),
+    mappe: null,
+  };
+  markierungenSchreiben(S.markierungen.concat([eintrag]));
+  return eintrag;
+}
+
+function markierungAendern(id, aenderung){
+  markierungenSchreiben(S.markierungen.map(m => (m.id === id ? { ...m, ...aenderung } : m)));
+}
+function markierungLoeschen(id){
+  markierungenSchreiben(S.markierungen.filter(m => m.id !== id));
+  if (S.aktiveMarkierung === id) S.aktiveMarkierung = null;
+}
+
+/* ── Farbwahl ───────────────────────────────────────────────────────── */
+
+/**
+ * Eine Reihe Farbkreise.
+ *
+ * ALLE Klicks hier rufen `stopPropagation()`. Ohne das schließt der Klick auf
+ * einen Kreis zugleich die Karte, auf der er liegt — die Auswahl wäre nach dem
+ * ersten Klick wieder zu. Derselbe Fehler ist im Entwurf aufgetreten.
+ */
+function farbreiheFuellen(behaelter, aktuell, waehlen){
+  behaelter.innerHTML = "";
+  for (const [hex, name] of PALETTE){
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "farbkreis";
+    b.title = name;
+    b.setAttribute("aria-label", "Farbe " + name);
+    b.setAttribute("aria-pressed", String(String(aktuell).toLowerCase() === hex.toLowerCase()));
+    b.style.background = hexZuRgba(hex, .45);
+    b.style.boxShadow = String(aktuell).toLowerCase() === hex.toLowerCase()
+      ? `0 0 0 2px #FFFFFF, 0 0 0 3.5px ${hex}`
+      : `inset 0 0 0 1px ${hex}`;
+    b.onclick = (e) => { e.stopPropagation(); waehlen(hex); };
+    behaelter.appendChild(b);
+  }
+}
+
+/* ── Werkzeugleiste an der Auswahl ──────────────────────────────────── */
+
+function auswahlleisteZeigen(){
+  const leiste = el("auswahlleiste");
+  const auswahl = window.getSelection();
+  if (!auswahl || auswahl.isCollapsed || !auswahl.rangeCount){ leiste.classList.remove("offen"); return; }
+
+  const bereich = auswahl.getRangeAt(0);
+  const lese = document.querySelector(".lesespalte");
+  const text = auswahl.toString().replace(/\s+/g, " ").trim();
+  if (!lese || !lese.contains(bereich.commonAncestorContainer) || text.length < 3){
+    leiste.classList.remove("offen");
+    return;
+  }
+
+  farbreiheFuellen(el("auswahl-farben"), S.letzteFarbe, (hex) => {
+    S.letzteFarbe = hex;
+    merken("letzteFarbe", hex);
+    auswahlMarkieren(text);
+  });
+
+  const kasten = bereich.getBoundingClientRect();
+  leiste.classList.add("offen");
+  leiste.style.top = (window.scrollY + kasten.top - leiste.offsetHeight - 8) + "px";
+  leiste.style.left = Math.max(8, window.scrollX + kasten.left) + "px";
+}
+
+function auswahlMarkieren(text){
+  const lese = document.querySelector(".lesespalte");
+  const { text: voll } = textindex(lese);
+  const stelle = voll.indexOf(text);
+  const praefix = stelle === -1 ? "" : voll.slice(Math.max(0, stelle - KONTEXT), stelle);
+  const suffix = stelle === -1 ? "" : voll.slice(stelle + text.length, stelle + text.length + KONTEXT);
+
+  const eintrag = markierungAnlegen(text, praefix, suffix, stelle);
+  el("auswahlleiste").classList.remove("offen");
+  window.getSelection().removeAllRanges();
+  S.aktiveMarkierung = eintrag.id;
+  S.apparatRegister = "markierungen";
+  hauptZeichnen();
+  apparatZeichnen();
+}
+
+/* ── Popover am Text ────────────────────────────────────────────────── */
+
+function popoverOeffnen(id, ankerKnoten){
+  const eintrag = S.markierungen.find(m => m.id === id);
+  if (!eintrag) return;
+  const pop = el("popover");
+
+  farbreiheFuellen(el("popover-farben"), eintrag.farbe, (hex) => {
+    markierungAendern(id, { farbe: hex });
+    S.letzteFarbe = hex;
+    merken("letzteFarbe", hex);
+    popoverOeffnen(id, ankerKnoten);
+    hauptZeichnen();
+    apparatZeichnen();
+  });
+
+  const waehler = el("popover-waehler");
+  waehler.value = /^#[0-9a-f]{6}$/i.test(eintrag.farbe) ? eintrag.farbe : "#F2C744";
+  el("popover-hex").textContent = eintrag.farbe;
+  waehler.oninput = (e) => {
+    e.stopPropagation();
+    markierungAendern(id, { farbe: e.target.value });
+    el("popover-hex").textContent = e.target.value;
+  };
+  waehler.onchange = () => { hauptZeichnen(); apparatZeichnen(); popoverOeffnen(id, ankerKnoten); };
+  waehler.onclick = (e) => e.stopPropagation();
+
+  const notiz = el("popover-notiz");
+  notiz.value = eintrag.notiz || "";
+  notiz.oninput = () => markierungAendern(id, { notiz: notiz.value });
+  notiz.onclick = (e) => e.stopPropagation();
+
+  el("popover-weg").onclick = (e) => {
+    e.stopPropagation();
+    markierungLoeschen(id);
+    popoverSchliessen();
+    hauptZeichnen();
+    apparatZeichnen();
+  };
+
+  pop.classList.add("offen");
+  const kasten = ankerKnoten.getBoundingClientRect();
+  const links = Math.min(
+    Math.max(8, window.scrollX + kasten.left),
+    window.scrollX + document.documentElement.clientWidth - pop.offsetWidth - 12,
+  );
+  pop.style.top = (window.scrollY + kasten.bottom + 8) + "px";
+  pop.style.left = links + "px";
+}
+
+function popoverSchliessen(){
+  el("popover").classList.remove("offen");
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1171,16 +1501,40 @@ function hauptZeichnen(){
      Knotengrenzen verschöben sich unnötig. */
   const stand = strukturSetzen(S.strukturModus, true);
   const segmente = strukturDerNorm();
-  let verwaist = 0;
+  const spannen = [];
+
   if (stand.moeglich){
-    verwaist = spannenLegen(lese, segmente.map(seg => ({
-      von: seg.von,
-      bis: seg.bis,
-      klasse: "s s-" + seg.typ,
-      titel: BESCHREIBUNG[seg.typ] || "",
-      datensatz: seg.pfad ? { pfad: seg.pfad } : null,
-    })));
+    for (const seg of segmente){
+      spannen.push({
+        von: seg.von,
+        bis: seg.bis,
+        klasse: "s s-" + seg.typ,
+        schluessel: "s" + seg.von + "-" + seg.bis,
+        titel: BESCHREIBUNG[seg.typ] || "",
+        datensatz: seg.pfad ? { pfad: seg.pfad } : null,
+      });
+    }
   }
+
+  /* Eigene Markierungen liegen ÜBER der Struktur, aber sie löschen sie nicht:
+     spannenLegen führt je Zeichen eine Liste, beide Klassen bleiben stehen. */
+  const { text: kanonisch } = textindex(lese);
+  let verschoben = 0;
+  for (const m of markierungenDerNorm()){
+    const von = markierungVerorten(kanonisch, m);
+    if (von === -1){ verschoben++; continue; }
+    spannen.push({
+      von,
+      bis: von + m.anker.length,
+      klasse: "eigen" + (S.aktiveMarkierung === m.id ? " gewaehlt" : ""),
+      schluessel: "m" + m.id,
+      titel: m.notiz || "Eigene Markierung",
+      datensatz: { eigen: m.id },
+      stil: `background:${hexZuRgba(m.farbe, .45)};border-bottom:2px solid ${m.farbe};`,
+    });
+  }
+
+  const verwaist = spannenLegen(lese, spannen);
 
   /* Verweise anklickbar machen — nach dem Einsetzen des Wortlauts, damit die
      amtliche Auszeichnung unberührt bleibt. */
@@ -1203,6 +1557,17 @@ function hauptZeichnen(){
   leseraum.append(rinne, spalte);
   haupt.appendChild(leseraum);
 
+  if (verschoben){
+    const w = fehlmeldung(
+      "Eigene Markierungen",
+      verschoben + " Markierung(en) finden ihre Textstelle nicht mehr. Der Gesetzestext"
+      + " hat sich geändert; im Register „Markierungen“ stehen sie weiterhin.",
+    );
+    w.style.maxWidth = "var(--lesespalte)";
+    w.style.marginTop = "18px";
+    spalte.appendChild(w);
+  }
+
   if (verwaist){
     const warnung = fehlmeldung(
       "Markierung",
@@ -1214,6 +1579,23 @@ function hauptZeichnen(){
     warnung.style.marginTop = "18px";
     spalte.appendChild(warnung);
   }
+
+  /* Klick auf eine eigene Markierung öffnet das Register und wählt die Karte;
+     erneuter Klick hebt die Auswahl wieder auf. */
+  lese.addEventListener("click", (e) => {
+    const marke = e.target.closest(".eigen[data-eigen]");
+    if (!marke) return;
+    e.preventDefault();
+    const id = marke.dataset.eigen;
+    const schonAktiv = S.aktiveMarkierung === id;
+    S.aktiveMarkierung = schonAktiv ? null : id;
+    S.apparatRegister = "markierungen";
+    hauptZeichnen();
+    apparatZeichnen();
+    if (schonAktiv){ popoverSchliessen(); return; }
+    const neuerKnoten = document.querySelector('.eigen[data-eigen="' + id + '"]');
+    if (neuerKnoten) popoverOeffnen(id, neuerKnoten);
+  });
 
   rinneMitlaufen(rinne, marken);
   haupt.appendChild(blaetternBauen(gesetz, norm));
@@ -1537,6 +1919,149 @@ const STATUSNAME = {
   ohne_merkmale: "ohne Markierung",
 };
 
+/* ══════════════════════════════════════════════════════════════════════
+   Register „Markierungen"
+   ══════════════════════════════════════════════════════════════════════ */
+function markierungenBauen(){
+  const raus = document.createDocumentFragment();
+  const eigene = markierungenDerNorm();
+
+  if (!eigene.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.textContent = "Noch keine eigene Markierung in dieser Norm. "
+      + "Stelle im Text auswählen, dann Farbe wählen.";
+    raus.appendChild(p);
+    raus.appendChild(markierungsFuss());
+    return raus;
+  }
+
+  const lese = document.querySelector(".lesespalte");
+  const kanonisch = lese ? textindex(lese).text : "";
+
+  for (const m of eigene){
+    const aktiv = S.aktiveMarkierung === m.id;
+    const karte = document.createElement("div");
+    karte.className = "karte" + (aktiv ? " aktiv" : "");
+    karte.style.borderLeftColor = aktiv ? m.farbe : "";
+    karte.tabIndex = 0;
+    karte.setAttribute("role", "button");
+    karte.setAttribute("aria-expanded", String(aktiv));
+
+    const kopf = document.createElement("div");
+    kopf.className = "karte-kopf";
+    const punkt = document.createElement("span");
+    punkt.className = "karte-punkt";
+    punkt.style.background = hexZuRgba(m.farbe, .45);
+    punkt.style.boxShadow = "inset 0 0 0 1px " + m.farbe;
+    const fund = document.createElement("span");
+    fund.className = "karte-fundstelle";
+    fund.textContent = m.fundstelle || "ohne Fundstelle";
+    const datum = document.createElement("span");
+    datum.className = "karte-datum";
+    datum.textContent = new Date(m.datum).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+    kopf.append(punkt, fund, datum);
+    karte.appendChild(kopf);
+
+    const wortlaut = document.createElement("p");
+    wortlaut.className = "karte-wortlaut";
+    wortlaut.textContent = "„" + m.anker + "“";
+    karte.appendChild(wortlaut);
+
+    if (m.notiz){
+      const notiz = document.createElement("p");
+      notiz.className = "karte-notiz";
+      notiz.textContent = m.notiz;
+      karte.appendChild(notiz);
+    }
+
+    /* Findet die Markierung ihre Stelle nicht mehr, wird das gesagt — sie
+       verschwindet nicht. */
+    if (kanonisch && markierungVerorten(kanonisch, m) === -1){
+      const hinweis = document.createElement("p");
+      hinweis.className = "karte-verschoben";
+      hinweis.textContent = "Textstelle nicht gefunden — der Gesetzestext hat sich geändert.";
+      karte.appendChild(hinweis);
+    }
+
+    if (aktiv){
+      const zeile = document.createElement("div");
+      zeile.className = "karte-farbzeile";
+      const kreise = document.createElement("div");
+      kreise.className = "farbreihe";
+      farbreiheFuellen(kreise, m.farbe, (hex) => {
+        markierungAendern(m.id, { farbe: hex });
+        S.letzteFarbe = hex;
+        merken("letzteFarbe", hex);
+        hauptZeichnen();
+        apparatZeichnen();
+      });
+      const waehler = document.createElement("input");
+      waehler.type = "color";
+      waehler.className = "farbwaehler";
+      waehler.setAttribute("aria-label", "Eigene Farbe wählen");
+      waehler.value = /^#[0-9a-f]{6}$/i.test(m.farbe) ? m.farbe : "#F2C744";
+      // stopPropagation an JEDEM Klick der Farbzeile: sonst schließt der Klick
+      // die Karte, auf der die Auswahl gerade steht.
+      waehler.onclick = (e) => e.stopPropagation();
+      waehler.oninput = (e) => { e.stopPropagation(); markierungAendern(m.id, { farbe: e.target.value }); };
+      waehler.onchange = (e) => { e.stopPropagation(); hauptZeichnen(); apparatZeichnen(); };
+      const hex = document.createElement("span");
+      hex.className = "hexwert";
+      hex.textContent = m.farbe;
+      zeile.append(kreise, waehler, hex);
+      zeile.onclick = (e) => e.stopPropagation();
+      karte.appendChild(zeile);
+
+      const fuss = document.createElement("div");
+      fuss.className = "popover-fuss";
+      fuss.style.marginTop = "9px";
+      const notizKnopf = knopf("", m.notiz ? "Notiz ändern" : "Notiz hinzufügen");
+      notizKnopf.onclick = (e) => {
+        e.stopPropagation();
+        const neu = window.prompt("Notiz zu „" + m.anker.slice(0, 60) + "“", m.notiz || "");
+        if (neu === null) return;
+        markierungAendern(m.id, { notiz: neu });
+        apparatZeichnen();
+        hauptZeichnen();
+      };
+      const weg = knopf("", "Entfernen");
+      weg.onclick = (e) => {
+        e.stopPropagation();
+        markierungLoeschen(m.id);
+        hauptZeichnen();
+        apparatZeichnen();
+      };
+      fuss.append(notizKnopf, weg);
+      karte.appendChild(fuss);
+    }
+
+    const umschalten = () => {
+      S.aktiveMarkierung = S.aktiveMarkierung === m.id ? null : m.id;
+      popoverSchliessen();
+      hauptZeichnen();
+      apparatZeichnen();
+    };
+    karte.onclick = umschalten;
+    karte.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " "){ e.preventDefault(); umschalten(); }
+    };
+    raus.appendChild(karte);
+  }
+
+  raus.appendChild(markierungsFuss());
+  return raus;
+}
+
+function markierungsFuss(){
+  const p = document.createElement("p");
+  p.className = "haftung";
+  // Ehrlich: Es gibt kein Konto und keinen Server. Die Daten liegen im Browser.
+  p.textContent = "Markierungen liegen nur in diesem Browser. "
+    + "Sie werden nicht übertragen und gehen verloren, wenn die Websitedaten gelöscht werden.";
+  return p;
+}
+
 function apparatZeichnen(){
   const apparat = el("apparat");
   apparat.innerHTML = "";
@@ -1560,6 +2085,8 @@ function apparatZeichnen(){
 
   if (S.apparatRegister === "hinweise"){
     inhalt.appendChild(hinweiseBauen());
+  } else if (S.apparatRegister === "markierungen"){
+    inhalt.appendChild(markierungenBauen());
   } else {
     const p = document.createElement("p");
     p.className = "platzhalter";
@@ -1604,6 +2131,8 @@ async function wegweiser(){
   if (!S.gesetz.normen.some(n => n.id === S.normId)) S.normId = S.gesetz.normen[0].id;
 
   await zutatenLaden(S.abk);
+  S.aktiveMarkierung = null;
+  popoverSchliessen();
 
   /* Die aufgerufene Norm ist immer geöffnet. */
   reiterOeffnen(S.abk, S.normId, false);
@@ -1629,6 +2158,8 @@ async function wegweiser(){
    ══════════════════════════════════════════════════════════════════════ */
 async function start(){
   S.strukturModus = gemerkt("strukturModus", "voll");
+  S.markierungen = markierungenLesen();
+  S.letzteFarbe = gemerkt("letzteFarbe", "#F2C744");
   S.geoeffnet = gemerkt("geoeffnet", []);
   S.zuletzt = gemerkt("zuletzt", []);
   strukturSetzen(S.strukturModus);
@@ -1669,8 +2200,26 @@ async function start(){
     }
     if (e.key === "Escape"){
       document.body.dataset.schublade = "zu";
+      popoverSchliessen();
+      el("auswahlleiste").classList.remove("offen");
       if (imFeld) document.activeElement.blur();
     }
+  });
+
+  /* Auswahl im Normtext: Werkzeugleiste zeigen. */
+  document.addEventListener("selectionchange", () => requestAnimationFrame(auswahlleisteZeigen));
+  window.addEventListener("scroll", () => {
+    el("auswahlleiste").classList.remove("offen");
+    popoverSchliessen();
+  }, { passive: true });
+
+  el("popover-zu").onclick = popoverSchliessen;
+  el("popover").onclick = (e) => e.stopPropagation();
+  document.addEventListener("click", (e) => {
+    if (el("popover").contains(e.target)) return;
+    if (e.target.closest(".eigen[data-eigen]")) return;
+    if (e.target.closest(".auswahlleiste")) return;
+    popoverSchliessen();
   });
 
   window.addEventListener("hashchange", wegweiser);

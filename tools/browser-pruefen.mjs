@@ -176,6 +176,73 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4c. Eigene Markierungen ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+
+  /* Auswählen wie beim Lesen: über eine bekannte Wendung. */
+  await seite.evaluate(() => {
+    const treffer = [...document.querySelectorAll(".lesespalte span")]
+      .find((x) => x.textContent.trim() === "bemisst sich");
+    const r = document.createRange();
+    r.selectNodeContents(treffer);
+    const s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+    document.dispatchEvent(new Event("selectionchange"));
+  });
+  await seite.waitForTimeout(400);
+  ok("Werkzeugleiste erscheint bei Auswahl", await seite.isVisible(".auswahlleiste.offen"));
+
+  await seite.click(".auswahlleiste .farbkreis:nth-child(3)");
+  await seite.waitForTimeout(700);
+
+  const nachher = await seite.evaluate(() => {
+    const marke = document.querySelector(".lesespalte .eigen");
+    return {
+      wortlaut: marke ? marke.textContent : null,
+      stil: marke ? marke.getAttribute("style") : "",
+      // Liegt die Markierung ÜBER der Struktur, ohne sie zu löschen?
+      beideEbenen: Boolean(document.querySelector(".lesespalte .eigen.s")),
+      register: [...document.querySelectorAll(".register button")]
+        .find((b) => b.getAttribute("aria-selected") === "true").textContent,
+      karten: document.querySelectorAll(".apparat .karte").length,
+      fundstelle: (document.querySelector(".apparat .karte-fundstelle") || {}).textContent,
+      fuss: (document.querySelector(".apparat .haftung") || {}).textContent || "",
+    };
+  });
+  ok("Markierung sitzt auf der Auswahl", nachher.wortlaut === "bemisst sich", String(nachher.wortlaut));
+  ok("Marker mit farbiger Unterkante",
+    /border-bottom:2px solid #3B7BD1/i.test(nachher.stil), nachher.stil);
+  ok("Struktur bleibt unter der Markierung erhalten", nachher.beideEbenen);
+  ok("Klick öffnet das Register „Markierungen“", nachher.register === "Markierungen", nachher.register);
+  ok("Karte im Register angelegt", nachher.karten === 1, String(nachher.karten));
+  ok("Fundstelle aus struktur/", nachher.fundstelle === "Abs. 1 Satz 1", String(nachher.fundstelle));
+  ok("Fuß sagt, wo die Markierungen liegen",
+    nachher.fuss.includes("nur in diesem Browser"));
+
+  /* Der Klick auf einen Farbkreis darf die Karte nicht schließen. */
+  await seite.click(".apparat .karte .farbkreis:nth-child(2)");
+  await seite.waitForTimeout(500);
+  const nachFarbwechsel = await seite.evaluate(() => ({
+    offen: Boolean(document.querySelector(".apparat .karte.aktiv")),
+    farbe: (document.querySelector(".apparat .hexwert") || {}).textContent,
+  }));
+  ok("Farbwechsel schließt die Karte nicht", nachFarbwechsel.offen);
+  ok("Farbe übernommen", nachFarbwechsel.farbe === "#4E9A5F", String(nachFarbwechsel.farbe));
+
+  /* Markierungen überdauern den Neuaufbau der Seite. */
+  await seite.reload({ waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+  ok("Markierung überdauert den Seitenaufbau",
+    Boolean(await seite.$(".lesespalte .eigen")));
+
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });
