@@ -10,6 +10,10 @@ on:
       - "wirtschaftsgesetze.html"
       - "data/**"
       - "annotations/**"
+      - "belege/**"
+      - "struktur/**"
+      - "verwaltung/**"
+      - "schriften/**"
       - ".github/workflows/pages.yml"
   workflow_run:
     workflows:
@@ -52,7 +56,21 @@ jobs:
           cp wirtschaftsgesetze.html _site/wirtschaftsgesetze.html
           cp -a data _site/data
           cp -a annotations _site/annotations
+          # Ohne diese drei bleibt die Oberfläche live ohne Einfärbung, ohne
+          # Verwaltungsstellen und ohne Belege — sie degradiert dann sauber,
+          # aber eben zu einer halben Ausgabe.
+          cp -a belege _site/belege
+          cp -a struktur _site/struktur
+          cp -a verwaltung _site/verwaltung
+          cp -a schriften _site/schriften
           touch _site/.nojekyll
+
+          # Nachweis, dass wirklich alles mitgeht.
+          for ordner in data annotations belege struktur verwaltung schriften; do
+            test -d "_site/$ordner" || { echo "::error::_site/$ordner fehlt"; exit 1; }
+          done
+          test -s _site/struktur/solzg.json
+          test -s _site/verwaltung/solzg.json
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v5

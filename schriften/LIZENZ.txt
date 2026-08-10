@@ -1,0 +1,16 @@
+Schriften in diesem Ordner
+==========================
+
+Source Serif 4   — © 2014–2023 Adobe (https://github.com/adobe-fonts/source-serif)
+IBM Plex Sans    — © 2017 IBM Corp. (https://github.com/IBM/plex)
+IBM Plex Mono    — © 2017 IBM Corp. (https://github.com/IBM/plex)
+
+Alle drei stehen unter der SIL Open Font License, Version 1.1.
+Volltext: https://openfontlicense.org
+
+Die Lizenz erlaubt Weitergabe und Einbettung, auch in gebündelter Form,
+solange die Schriften nicht einzeln verkauft werden und der Lizenztext
+mitgeliefert wird. Genau dazu dient diese Datei.
+
+Ausgeliefert werden nur die Zeichensätze latin und latin-ext.
+Erneuern mit: node tools/schriften-holen.mjs

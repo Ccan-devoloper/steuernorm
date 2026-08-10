@@ -6,9 +6,15 @@
 <title>steuernorm — Arbeitsplatz</title>
 <meta name="description" content="Die deutschen Steuergesetze im Volltext, mit maschinell erkannter Struktur von Tatbestand und Rechtsfolge, eigenen Markierungen und Verwaltungsstellen.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Schriften liegen im Repository, nicht bei Google.
+
+     Zwei Gründe: Die Seite arbeitet ohne Netz — von dort kämen die Schriften
+     dann nicht, und der Normtext fiele auf eine Systemschrift zurück, womit
+     Zeilenfall und Spaltenbreite nicht mehr stimmen. Und es geht bei jedem
+     Aufruf eine Anfrage weniger an einen Dritten.
+
+     Erneuern mit: node tools/schriften-holen.mjs -->
+<link rel="stylesheet" href="schriften/schriften.css">
 
 <style>
 /* ══════════════════════════════════════════════════════════════════════

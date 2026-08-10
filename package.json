@@ -1,8 +1,8 @@
 {
   "name": "steuernorm",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "private": true,
-  "description": "Deutsche Steuergesetze mit vollautomatischer, positionsgebundener Annotation von Tatbestand, Rechtsfolge und Ausnahme",
+  "description": "Deutsche Steuergesetze im Volltext — Arbeitsplatz mit erkannter Struktur, eigenen Markierungen und Verwaltungsstellen",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8000",
@@ -16,7 +16,10 @@
     "konsistenz": "node tools/konsistenz.mjs --schreiben",
     "verweise": "node tools/verweise.mjs",
     "frontend": "node tools/frontend-pruefen.mjs",
-    "browser": "node tools/browser-pruefen.mjs"
+    "browser": "node tools/browser-pruefen.mjs",
+    "struktur": "node tools/struktur.mjs",
+    "schriften": "node tools/schriften-holen.mjs",
+    "pruefen:alle": "node tools/pruefen.mjs && node tools/frontend-pruefen.mjs && node tools/browser-pruefen.mjs"
   },
   "license": "MIT"
 }

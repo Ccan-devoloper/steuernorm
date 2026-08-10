@@ -24,7 +24,7 @@
  * `activate` alle älteren Ablagen weg.
  */
 
-const FASSUNG = "steuernorm-v6-arbeitsplatz";
+const FASSUNG = "steuernorm-v7-arbeitsplatz";
 const GERUEST = `${FASSUNG}-geruest`;
 const INHALTE = `${FASSUNG}-inhalte`;
 
@@ -32,6 +32,7 @@ const INHALTE = `${FASSUNG}-inhalte`;
 const GRUNDBESTAND = [
   "./",
   "./index.html",
+  "./schriften/schriften.css",
   "./data/index.json",
   "./data/verweise.json",
 ];
@@ -61,7 +62,8 @@ self.addEventListener("activate", (e) => {
 
 /** Gesetzestexte und Annotationen — alles, was beim Lesen nachgeladen wird. */
 function istInhalt(url) {
-  return /\/(data|annotations)\/[^/]+\.json$/.test(url.pathname);
+  return /\/(data|annotations|belege|struktur|verwaltung)\/[^/]+\.json$/.test(url.pathname)
+    || /\/schriften\/[^/]+\.(woff2|css)$/.test(url.pathname);
 }
 
 self.addEventListener("fetch", (e) => {

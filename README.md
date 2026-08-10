@@ -1,40 +1,38 @@
-# steuernorm — Fassung 5
+# steuernorm — Fassung 6
 
-Die deutschen Steuergesetze im Volltext, mit positionsgebundener Markierung von
-Tatbestand, Rechtsfolge, Ausnahme und Legaldefinition sowie einem Prüfungsschema
-je Absatz.
+Die deutschen Steuergesetze im Volltext, als **Arbeitsplatz**: mehrere Normen
+gleichzeitig geöffnet, links das Gesetz, in der Mitte der Lesetext, rechts ein
+Apparat in Registern.
 
-**Fassung 5 betrifft zwei Dinge: die Erkennung und die Oberfläche.**
-Gemessen über den Gesamtbestand (1 537 Normen, 16 709 Rechtssätze, reine
-Syntaxanalyse in beiden Läufen):
+Drei Auszeichnungsebenen im Normtext, gleichzeitig lesbar:
 
-| | Fassung 4 | Fassung 5 |
-|---|---:|---:|
-| Spannen insgesamt | 23 570 | **27 267** |
-| Rechtssätze ohne jede Zerlegung | 2 576 | **402** |
-| Zwei Kategorien auf denselben Zeichen | 467 | **7** |
+| Ebene | Kodierung |
+|---|---|
+| **Maschinelle Struktur** — Tatbestand · Rechtsfolge · Ausnahme/Vorbehalt | Fläche, in drei Stufen (aus · dezent · voll) |
+| **Eigene Markierung** — freie Farbe, Notiz | Fläche 45 % mit farbiger Unterkante |
+| **Verwaltungsstelle** — Richtlinie, BMF-Schreiben | Punktlinie mit Fundstellen-Chip |
 
-Neu in der Oberfläche: eigene Markierungen und Notizen, gesetzesübergreifende
-Suche, „Zitiert von", Zitat- und Permalink-Übernahme, Druckansicht,
-Offlinezugriff.
+Der Normtext bleibt dabei unangetastet. Was die Farben bedeuten, sagt allein
+die Legende darüber — im Wortlaut steht kein Wort dazu.
 
-**Dabei kam ein Fehler ans Licht, der die Seite unbrauchbar machte:**
-`text-wrap:pretty` brachte den Renderer von Chromium zum Absturz, sobald ein
-Absatz viele Markierungen enthielt. Betroffen waren unter anderem § 1 EStG,
-§ 3 SolzG und § 4 UStG — weiße Seite statt Normtext. In jsdom war das nicht zu
-sehen; dafür gibt es jetzt `tools/browser-pruefen.mjs`. Weiter behoben: Das
-Statusband hatte keine CSS-Regel, die Kopfleiste blieb im Dunkelmodus hell,
-Überschrift und Normtext standen versetzt.
+**Neu in Fassung 6:** Oberfläche nach dem Übergabepaket neu gebaut · zwei neue
+Datenformate `struktur/` und `verwaltung/` · Startseite, Gesetzesübersicht und
+Trefferliste · Apparat als Blatt auf Mobil · Druckfassung · Schriften lokal.
 
-Die vollständige Herleitung mit allen Messungen steht in
+Die vollständige Herleitung steht in
+[`docs/05-oberflaeche-arbeitsplatz.md`](docs/05-oberflaeche-arbeitsplatz.md),
+die der Erkennung in
 [`docs/04-erkennung-und-oberflaeche-fassung-5.md`](docs/04-erkennung-und-oberflaeche-fassung-5.md).
 
-**Geprüft:** `node tools/pruefen.mjs` über alle 14 Gesetze — 25 133 Spannen,
-0 Fehler, 0 Warnungen. `node tools/frontend-pruefen.mjs` (jsdom, 17 Prüfungen)
-und `node tools/browser-pruefen.mjs` (Chromium, 12 Prüfungen: Absturzfreiheit
-über zwölf Normen, Spaltenbündigkeit, drei Fensterbreiten, Dunkelmodus,
-Betrieb ohne Netz). Alle Module bestehen `node --check`, alle Workflows sind
-gültiges YAML.
+**Geprüft:** `node tools/pruefen.mjs` über alle 14 Gesetze — 1 537 Normen,
+25 236 Spannen, 0 Fehler, 0 Warnungen. `node tools/frontend-pruefen.mjs`
+(jsdom, 17 Prüfungen) und `node tools/browser-pruefen.mjs` (Chromium, 65
+Prüfungen: Spaltenmaße, Absturzfreiheit, vier Fensterbreiten, Zuordnung der
+Einfärbung, Farbwahl, Blatt, Druckfassung, Betrieb ohne Netz).
+
+```bash
+python3 -m http.server 8000     # dann http://localhost:8000
+```
 
 ---
 
