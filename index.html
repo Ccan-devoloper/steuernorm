@@ -177,6 +177,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .reiter[aria-selected=true] .zu{color:var(--text-4)}
 .reiter-plus{display:flex;align-items:center;padding:8px 12px;font-size:15px;color:var(--text-4);flex:none}
 .reiter-plus:hover{color:var(--text)}
+/* Beim Umsortieren per Ziehen: der gezogene Reiter tritt zurück, das Ziel
+   bekommt eine Kante an der Seite, an der eingefügt wird. */
+.reiter[draggable=true]{cursor:grab}
+.reiter.zieht{opacity:.4}
+.reiter.ziel-links{box-shadow:inset 2px 0 0 var(--text)}
+.reiter.ziel-rechts{box-shadow:inset -2px 0 0 var(--text)}
 .reiter-zahl{
   display:flex;align-items:center;margin-left:auto;padding-left:16px;
   font-size:11.5px;color:var(--text-4);white-space:nowrap;flex:none;
@@ -276,6 +282,30 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   font-family:var(--mono);font-size:12px;white-space:pre-wrap;color:var(--text-2);
   background:var(--flaeche);padding:10px 12px;border-radius:var(--r-chip);overflow-x:auto;
 }
+
+/* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
+   der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
+.lesespalte a.verweis{
+  color:var(--verweis);border-bottom:1px solid var(--verweis-kante);
+  white-space:nowrap;
+}
+.lesespalte a.verweis:hover{border-bottom-color:var(--verweis)}
+
+/* Blättern zur Nachbarnorm */
+.blaettern{
+  display:flex;justify-content:space-between;gap:24px;
+  max-width:calc(var(--lesespalte) + var(--rinne) + 24px);
+  margin:44px 0 0 calc(var(--rinne) + 24px);
+  border-top:1px solid var(--linie-schwach);padding-top:16px;
+}
+.blaettern button{text-align:left;max-width:46%}
+.blaettern button:last-child{text-align:right}
+.blaettern .richtung{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-4);margin-bottom:3px;
+}
+.blaettern .wohin{font-family:var(--serif);font-size:14.5px;color:var(--text-2b);line-height:1.35}
+.blaettern button:hover .wohin{color:var(--text)}
 
 /* ── Rechter Apparat ── */
 .apparat{
@@ -549,6 +579,8 @@ function reiterZeichnen(){
     const reiter = knopf("reiter");
     reiter.setAttribute("role", "tab");
     reiter.setAttribute("aria-selected", String(aktiv));
+    reiter.draggable = true;
+    reiter.dataset.stelle = String(S.geoeffnet.indexOf(eintrag));
     if (norm && norm.t) reiter.title = norm.t;
 
     const nr = document.createElement("span");
@@ -576,6 +608,8 @@ function reiterZeichnen(){
     leiste.appendChild(reiter);
   }
 
+  reiterZiehenVerdrahten(leiste);
+
   const plus = knopf("reiter-plus", "+");
   plus.title = "Norm öffnen";
   plus.setAttribute("aria-label", "Norm öffnen");
@@ -587,6 +621,68 @@ function reiterZeichnen(){
   const anzahl = S.geoeffnet.length;
   zahl.textContent = anzahl === 1 ? "1 geöffnete Norm" : anzahl + " geöffnete Normen";
   leiste.appendChild(zahl);
+}
+
+/**
+ * Reiter per Ziehen umsortieren.
+ *
+ * Die Reihenfolge ist Arbeitsordnung: Wer sieben Normen offen hat, will sie
+ * gruppieren können. Gearbeitet wird auf den Stellen im Zustand, nicht auf den
+ * Knoten — nach dem Ablegen wird ohnehin neu gezeichnet.
+ */
+function reiterZiehenVerdrahten(leiste){
+  let quelle = null;
+
+  const aufraeumen = () => {
+    for (const r of leiste.querySelectorAll(".reiter")){
+      r.classList.remove("zieht", "ziel-links", "ziel-rechts");
+    }
+  };
+
+  for (const reiter of leiste.querySelectorAll(".reiter")){
+    reiter.addEventListener("dragstart", (e) => {
+      quelle = Number(reiter.dataset.stelle);
+      reiter.classList.add("zieht");
+      e.dataTransfer.effectAllowed = "move";
+      // Firefox startet das Ziehen nur mit gesetzten Daten.
+      e.dataTransfer.setData("text/plain", String(quelle));
+    });
+    reiter.addEventListener("dragend", aufraeumen);
+
+    reiter.addEventListener("dragover", (e) => {
+      if (quelle === null) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      const kasten = reiter.getBoundingClientRect();
+      const linkeHaelfte = e.clientX < kasten.left + kasten.width / 2;
+      reiter.classList.toggle("ziel-links", linkeHaelfte);
+      reiter.classList.toggle("ziel-rechts", !linkeHaelfte);
+    });
+    reiter.addEventListener("dragleave", () => {
+      reiter.classList.remove("ziel-links", "ziel-rechts");
+    });
+
+    reiter.addEventListener("drop", (e) => {
+      e.preventDefault();
+      if (quelle === null) return;
+      const kasten = reiter.getBoundingClientRect();
+      const linkeHaelfte = e.clientX < kasten.left + kasten.width / 2;
+      let ziel = Number(reiter.dataset.stelle) + (linkeHaelfte ? 0 : 1);
+      const [bewegt] = S.geoeffnet.splice(quelle, 1);
+      if (quelle < ziel) ziel--;
+      S.geoeffnet.splice(ziel, 0, bewegt);
+      quelle = null;
+      merken("geoeffnet", S.geoeffnet);
+      reiterZeichnen();
+    });
+  }
+}
+
+/** Zum Reiter an der Stelle `index` wechseln — für die Tasten 1 bis 9. */
+function reiterWechseln(index){
+  const ziel = S.geoeffnet[index];
+  if (!ziel) return;
+  location.hash = "#/" + ziel.gesetz.toLowerCase() + "/" + ziel.norm;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -643,6 +739,108 @@ function navZeichnen(){
     }
     block.appendChild(liste);
     spalte.appendChild(block);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Verweise im Normtext
+
+   „§ 15 Abs. 2 EStG" wird anklickbar. Das ist die Arbeitsweise, die eine
+   Gesetzessammlung ausmacht: Jede Norm hängt an den anderen. Der Wortlaut
+   bleibt dabei unangetastet — es wird ausschließlich umschlossen, nie
+   ergänzt, gekürzt oder umgestellt.
+   ══════════════════════════════════════════════════════════════════════ */
+/**
+ * Verweismuster.
+ *
+ * Erfasst wird die Paragrafennummer, ein etwaiger Absatz- und Satzzusatz und
+ * das Zielgesetz — als Kürzel („§ 32d EStG") ODER als ausgeschriebener Name.
+ *
+ * Der ausgeschriebene Name ist der Regelfall im Gesetzestext: Das SolzG
+ * verweist auf „§ 43b DES EINKOMMENSTEUERGESETZES", nie auf „§ 43b EStG".
+ * Wer nur nach Kürzeln sucht, hält diese Verweise für Verweise auf das eigene
+ * Gesetz und verlinkt § 43b SolzG — eine Norm, die es nicht gibt.
+ */
+function verweisMuster(){
+  const kuerzel = S.register.gesetze
+    .map(g => g.abk.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  // Genitiv und Nominativ des Volltitels: „des Einkommensteuergesetzes",
+  // „das Umsatzsteuergesetz". Der Titel kommt aus dem Register, nicht aus
+  // einer eigenen Liste.
+  const titel = S.register.gesetze
+    .map(g => g.titel.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?:es|s)?")
+    .join("|");
+  return new RegExp(
+    "§+\\s?(\\d+[a-z]?)"
+    + "((?:\\s?Abs(?:atz|\\.)\\s?\\d+[a-z]?)?(?:\\s?(?:Satz|S\\.|Nummer|Nr\\.)\\s?\\d+)?)"
+    + "(?:\\s(?:(" + kuerzel + ")\\b|(?:des|der|dem|das|die)\\s+(" + titel + ")))?",
+    "g",
+  );
+}
+
+/** Kürzel zum ausgeschriebenen Gesetzesnamen — über das Register, nicht geraten. */
+function abkAusTitel(name){
+  const rein = String(name).replace(/(?:es|s)$/, "");
+  const treffer = S.register.gesetze.find(g => g.titel === rein || g.titel === name);
+  return treffer ? treffer.abk : null;
+}
+
+/** Gibt es die Norm im Zielgesetz überhaupt? */
+function normVorhanden(abk, nr){
+  const eintrag = registerEintrag(abk);
+  if (!eintrag || !Array.isArray(eintrag.normen)) return false;
+  return eintrag.normen.some(n => String(n.id).toLowerCase() === String(nr).toLowerCase());
+}
+
+function verweiseSetzen(wurzel, eigenesAbk){
+  const muster = verweisMuster();
+
+  const gehe = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => n.parentElement.closest("a") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+  });
+  const ziele = [];
+  let n;
+  while ((n = gehe.nextNode())) if (n.nodeValue.includes("§")) ziele.push(n);
+
+  for (const knoten of ziele){
+    const roh = knoten.nodeValue;
+    muster.lastIndex = 0;
+    const teil = document.createDocumentFragment();
+    let letzte = 0, treffer;
+
+    while ((treffer = muster.exec(roh)) !== null){
+      if (muster.lastIndex <= treffer.index) muster.lastIndex = treffer.index + 1;
+
+      const abk = (treffer[3] || "").trim()
+        || (treffer[4] ? abkAusTitel(treffer[4].trim()) : null)
+        || eigenesAbk;
+
+      /* Kein Verweis ins Leere. Fehlt das Gesetz oder die Norm im Bestand,
+         bleibt die Stelle unverlinkter Wortlaut — sichtbar unverändert, aber
+         ohne Klick auf eine Seite, die es nicht gibt. */
+      if (!normVorhanden(abk, treffer[1])) continue;
+
+      /* Nur die Paragrafenangabe wird zum Verweis, nicht der nachgestellte
+         Gesetzesname: „§ 43b" ist der Anker, „des Einkommensteuergesetzes"
+         bleibt Fließtext. */
+      const ankerLaenge = treffer[1].length + (treffer[2] || "").length
+        + (treffer[0].indexOf(treffer[1]));
+      const anker = treffer[0].slice(0, ankerLaenge);
+
+      if (treffer.index > letzte) teil.appendChild(document.createTextNode(roh.slice(letzte, treffer.index)));
+      const a = document.createElement("a");
+      a.className = "verweis";
+      a.href = "#/" + abk.toLowerCase() + "/" + treffer[1].toLowerCase();
+      a.dataset.ziel = abk + " § " + treffer[1];   // für die Druckfassung
+      a.textContent = anker;                        // wörtlich wie im Gesetz
+      teil.appendChild(a);
+      letzte = treffer.index + anker.length;
+    }
+
+    if (!letzte) continue;
+    if (letzte < roh.length) teil.appendChild(document.createTextNode(roh.slice(letzte)));
+    knoten.parentNode.replaceChild(teil, knoten);
   }
 }
 
@@ -710,7 +908,7 @@ function hauptZeichnen(){
   lese.className = "lesespalte";
 
   const marken = [];
-  for (const [i, abs] of norm.abs.entries()){
+  for (const abs of norm.abs){
     const block = document.createElement("div");
     block.className = "absatz";
     // Der Wortlaut kommt unverändert aus data/. Es wird nichts eingefügt.
@@ -719,14 +917,17 @@ function hauptZeichnen(){
     if (abs.n) marken.push({ text: "(" + abs.n + ")", knoten: block });
   }
 
+  /* Verweise anklickbar machen — nach dem Einsetzen des Wortlauts, damit die
+     amtliche Auszeichnung unberührt bleibt. */
+  verweiseSetzen(lese, gesetz.abk);
+
   // Die Rinne trägt nur Marken, wenn die Norm nummerierte Absätze hat.
   for (const [i, marke] of marken.entries()){
     const b = knopf("", marke.text);
     b.setAttribute("aria-current", String(i === 0));
     b.onclick = () => {
       marke.knoten.scrollIntoView({ block: "start", behavior: "smooth" });
-      for (const andere of rinne.children) andere.setAttribute("aria-current", "false");
-      b.setAttribute("aria-current", "true");
+      rinneSetzen(rinne, i);
     };
     rinne.appendChild(b);
   }
@@ -734,7 +935,58 @@ function hauptZeichnen(){
   leseraum.append(rinne, lese);
   haupt.appendChild(leseraum);
 
+  rinneMitlaufen(rinne, marken);
+  haupt.appendChild(blaetternBauen(gesetz, norm));
+
   document.title = norm.enbez + " " + gesetz.abk + (norm.titel ? " — " + norm.titel : "") + " · steuernorm";
+}
+
+/** Genau eine Marke der Rinne ist die aktuelle. */
+function rinneSetzen(rinne, index){
+  [...rinne.children].forEach((b, i) => b.setAttribute("aria-current", String(i === index)));
+}
+
+/**
+ * Die Absatzmarke läuft beim Lesen mit.
+ *
+ * Ohne das ist die Rinne eine Sprungliste, die nie sagt, wo man gerade ist.
+ * Der Beobachter meldet den Absatz, der das obere Drittel des Fensters füllt.
+ */
+function rinneMitlaufen(rinne, marken){
+  if (!marken.length || !("IntersectionObserver" in window)) return;
+  const wache = new IntersectionObserver((eintraege) => {
+    for (const e of eintraege){
+      if (!e.isIntersecting) continue;
+      const index = marken.findIndex(m => m.knoten === e.target);
+      if (index >= 0) rinneSetzen(rinne, index);
+    }
+  }, { rootMargin: "-15% 0px -70% 0px" });
+  for (const m of marken) wache.observe(m.knoten);
+}
+
+/** Blättern zur vorigen und nächsten Norm desselben Gesetzes. */
+function blaetternBauen(gesetz, norm){
+  const nav = document.createElement("nav");
+  nav.className = "blaettern";
+  nav.setAttribute("aria-label", "Benachbarte Normen");
+  const stelle = gesetz.normen.indexOf(norm);
+
+  const mach = (ziel, richtung) => {
+    const b = knopf("");
+    if (!ziel){ b.style.visibility = "hidden"; b.setAttribute("aria-hidden", "true"); return b; }
+    const r = document.createElement("span");
+    r.className = "richtung";
+    r.textContent = richtung;
+    const w = document.createElement("span");
+    w.className = "wohin";
+    w.textContent = ziel.enbez + (ziel.titel ? " " + ziel.titel : "");
+    b.append(r, w);
+    b.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + ziel.id; };
+    return b;
+  };
+
+  nav.append(mach(gesetz.normen[stelle - 1], "zurück"), mach(gesetz.normen[stelle + 1], "weiter"));
+  return nav;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -848,14 +1100,32 @@ async function start(){
   el("verdunkelung").onclick = () => { document.body.dataset.schublade = "zu"; };
 
   document.addEventListener("keydown", (e) => {
+    const imFeld = /^(INPUT|TEXTAREA)$/.test((document.activeElement || {}).tagName || "");
+
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k"){
       e.preventDefault();
       el("suche").focus();
       el("suche").select();
+      return;
+    }
+    /* ⌘W / Strg+W schließt den Reiter. Der Browser fängt die Tastenfolge in
+       vielen Fällen selbst ab; wo er sie durchlässt, arbeitet sie hier. */
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "w"){
+      if (S.abk && S.normId){
+        e.preventDefault();
+        reiterSchliessen(S.abk, S.normId);
+      }
+      return;
+    }
+    /* 1 bis 9 wechseln den Reiter — nur außerhalb von Eingabefeldern. */
+    if (!imFeld && !e.metaKey && !e.ctrlKey && !e.altKey && /^[1-9]$/.test(e.key)){
+      e.preventDefault();
+      reiterWechseln(Number(e.key) - 1);
+      return;
     }
     if (e.key === "Escape"){
       document.body.dataset.schublade = "zu";
-      if (document.activeElement === el("suche")) el("suche").blur();
+      if (imFeld) document.activeElement.blur();
     }
   });
 
