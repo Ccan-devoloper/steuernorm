@@ -413,6 +413,116 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   await ctx.close();
 }
 
+/* ── 5d. Dunkelmodus ──
+   Die Spezifikation verlangt beide Paletten als Variablen, den Dreischalter,
+   `prefers-color-scheme` als Voreinstellung und eine immer helle Druckfassung.
+   Und sie warnt vor festen Hellwerten, die den Moduswechsel überstehen —
+   genau daran ist der Bestand gescheitert. */
+{
+  const graustufe = (farbe) => {
+    const [r, g, b] = (String(farbe).match(/[\d.]+/g) || [255, 255, 255]).map(Number);
+    return (r + g + b) / 3;
+  };
+  /* Relative Leuchtdichte nach WCAG, für den Kontrastwert. */
+  const leuchte = (farbe) => {
+    const [r, g, b] = (String(farbe).match(/[\d.]+/g) || [0, 0, 0]).map(Number)
+      .map((x) => { const k = x / 255; return k <= 0.03928 ? k / 12.92 : ((k + 0.055) / 1.055) ** 2.4; });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const kontrast = (a, b) => {
+    const [h, d] = [leuchte(a), leuchte(b)].sort((x, y) => y - x);
+    return (h + 0.05) / (d + 0.05);
+  };
+
+  /* Systemvorgabe dunkel, ohne ausdrückliche Wahl. */
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1100 }, colorScheme: "dark" });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const dunkel = await seite.evaluate(() => {
+    const g = (wahl, eigenschaft) => getComputedStyle(document.querySelector(wahl))[eigenschaft];
+    return {
+      kopf: g("header .kopf", "backgroundColor"),
+      papier: g("body", "backgroundColor"),
+      text: g(".lesespalte", "color"),
+      tb: g(".lesespalte .s-tatbestand", "backgroundColor"),
+      rf: g(".lesespalte .s-rechtsfolge", "backgroundColor"),
+      au: g(".lesespalte .s-ausnahme", "backgroundColor"),
+      deckkraft: getComputedStyle(document.documentElement).getPropertyValue("--eigen-deckkraft").trim(),
+      gewaehlt: [...document.querySelectorAll("#darstellung button")]
+        .find((b) => b.getAttribute("aria-checked") === "true").textContent,
+    };
+  });
+  ok("Systemvorgabe dunkel greift", graustufe(dunkel.papier) < 40, dunkel.papier);
+  ok("Kopfleiste folgt dem Dunkelmodus", graustufe(dunkel.kopf) < 50, dunkel.kopf);
+  ok("Schalter steht auf System", dunkel.gewaehlt === "System", dunkel.gewaehlt);
+  ok("Marker-Deckkraft sinkt auf .22", dunkel.deckkraft === ".22", dunkel.deckkraft);
+
+  /* Die Spezifikation fordert 7:1 für Normtext über den „voll“-Tönen. */
+  for (const [name, ton] of [["Tatbestand", dunkel.tb], ["Rechtsfolge", dunkel.rf], ["Ausnahme", dunkel.au]]) {
+    const wert = kontrast(dunkel.text, ton);
+    ok(`Kontrast über ${name} hält 7:1 (dunkel)`, wert >= 7, wert.toFixed(1) + ":1");
+  }
+
+  /* Die ausdrückliche Wahl schlägt die Systemvorgabe — in beide Richtungen. */
+  await seite.click('#darstellung button[data-modus=hell]');
+  await seite.waitForTimeout(500);
+  const erzwungenHell = await seite.evaluate(() => ({
+    papier: getComputedStyle(document.body).backgroundColor,
+    kopf: getComputedStyle(document.querySelector("header .kopf")).backgroundColor,
+    merker: localStorage.getItem("sn.darstellung"),
+  }));
+  ok("Wahl „hell“ schlägt die dunkle Systemvorgabe",
+    graustufe(erzwungenHell.papier) > 200 && graustufe(erzwungenHell.kopf) > 200,
+    erzwungenHell.papier + " / " + erzwungenHell.kopf);
+  ok("Wahl wird gemerkt", erzwungenHell.merker === '"hell"', String(erzwungenHell.merker));
+
+  /* Die Druckfassung ist immer hell — auch bei ausdrücklicher Wahl „dunkel“. */
+  await seite.click('#darstellung button[data-modus=dunkel]');
+  await seite.waitForTimeout(400);
+  await seite.emulateMedia({ media: "print" });
+  await seite.waitForTimeout(400);
+  const druck = await seite.evaluate(() => ({
+    text: getComputedStyle(document.querySelector(".lesespalte")).color,
+    papier: getComputedStyle(document.documentElement).getPropertyValue("--papier").trim(),
+  }));
+  ok("Druck bleibt hell trotz Wahl „dunkel“",
+    graustufe(druck.text) < 60 && druck.papier === "#FCFCFC",
+    druck.text + " auf " + druck.papier);
+  await seite.emulateMedia({ media: "screen" });
+  await ctx.close();
+}
+
+/* ── 5e. Keine festen Hellwerte, die den Moduswechsel überstehen ──
+   Gemessen wird stumpf: Im Dunkelmodus darf keine sichtbare Fläche der
+   Oberfläche hell bleiben. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1100 }, colorScheme: "dark" });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const helleFlecken = await seite.evaluate(() => {
+    const raus = [];
+    for (const knoten of document.querySelectorAll("body *")) {
+      const stil = getComputedStyle(knoten);
+      if (stil.display === "none" || stil.visibility === "hidden") continue;
+      const [r, g, b, a] = (stil.backgroundColor.match(/[\d.]+/g) || []).map(Number);
+      if (a === 0 || r === undefined) continue;
+      // Eine helle Fläche im Dunkelmodus ist entweder Absicht (aktiver
+      // Schalter, invertiert) oder ein vergessener fester Wert.
+      if ((r + g + b) / 3 > 200 && knoten.getAttribute("aria-checked") !== "true") {
+        raus.push(knoten.tagName + "." + String(knoten.className).slice(0, 30) + " → " + stil.backgroundColor);
+      }
+    }
+    return raus.slice(0, 6);
+  });
+  ok("Keine vergessene helle Fläche im Dunkelmodus",
+    helleFlecken.length === 0, helleFlecken.join(" | "));
+  await ctx.close();
+}
+
 /* ── 6. Ohne Netz ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1200, height: 800 } });

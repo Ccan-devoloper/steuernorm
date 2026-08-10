@@ -92,6 +92,170 @@
   --schatten-popover:0 8px 24px rgba(20,22,26,.13);
   --schatten-blatt:0 -8px 28px rgba(20,22,26,.12);
   --schatten-feld:0 1px 2px rgba(20,22,26,.05);
+
+  /* ── Was sonst als fester Wert im Regelwerk gelandet wäre ──
+     Jeder dieser sechs Werte stand bis eben mitten in einer Regel und hätte
+     den Moduswechsel überstanden. Genau daran ist der Bestand gescheitert:
+     Die Kopfleiste trug einen festen Hellwert und blieb im Dunkelmodus weiß. */
+  --legende-eigen:rgba(242,199,68,.5);   /* Marke „eigene Markierung“ in der Legende */
+  --legende-eigen-kante:#C9A227;
+  --auswahlrahmen:rgba(20,22,26,.35);    /* Rahmen um die gewählte Markierung */
+  --vw-karte:#F8F7FA;                    /* Grund der aktiven Verwaltungskarte */
+  --schleier-schublade:rgba(20,22,26,.28);
+  --schleier-blatt:rgba(20,22,26,.58);
+  --warnrot:#B23B3B;
+
+  /* Deckkraft der eigenen Markierung. Im Dunkelmodus sinkt sie von .45 auf
+     .22 — die Farbe bleibt dieselbe, damit die Zuordnung zwischen den Modi
+     erhalten bleibt, aber die Fläche blendet nicht. Das JavaScript liest
+     diesen Wert aus, statt .45 fest einzubauen. */
+  --eigen-deckkraft:.45;
+
+  color-scheme:light;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Dunkelmodus
+
+   Zwei Regelblöcke, wie im Bestand und in der Spezifikation:
+
+     :root[data-darstellung=dunkel]                   ausdrückliche Wahl
+     @media (prefers-color-scheme:dark) auf
+       :root:not([data-darstellung=hell])             Systemvorgabe
+
+   Der zweite Block greift nur, wenn NICHT ausdrücklich hell gewählt wurde.
+   Damit gewinnt die Wahl in beide Richtungen, und „System“ ist schlicht die
+   Abwesenheit einer Wahl.
+
+   Die Werte stammen aus der Spezifikation, Abschnitt „Farben — Dunkelmodus“.
+   Sie sind aus der Dunkelpalette des Bestands abgeleitet und auf die kühlere
+   Hellpalette umgestimmt — nicht algorithmisch invertiert. Die Struktur-Töne
+   sind eigens gewählt, weil helle Flächen auf dunklem Grund blenden.
+   ══════════════════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme:dark){
+  :root:not([data-darstellung=hell]){
+    --papier:#15161A;
+    --leiste:#1D1F24;
+    --flaeche:#1A1C21;
+    --zeile-aktiv:#23262C;
+    --zeile-weich:#202227;
+    --weiss:#15161A;              /* „weiß“ meint hier die erhabene Fläche */
+
+    --text:#E7E9EC;
+    --text-2:#C6CBD1;
+    --text-2b:#B9BEC5;
+    --text-3:#9AA1AA;
+    --text-4:#7C838C;
+    --text-5:#727982;
+    --text-6:#666D76;
+    --titel-2:#9AA1AA;
+
+    --linie-stark:#3E4147;
+    --linie:#2F3238;
+    --linie-schwach:#282A2F;
+    --linie-zart:#202227;
+
+    --verweis:#7FA9E0;
+    --verweis-kante:#35486B;
+
+    --vw:#A98FD6;
+    --vw-grund:#241F30;
+    --vw-rand:#3A3050;
+    --vw-karte:#1F1B29;
+
+    --treffer:#574A16;
+    --treffer-ohne:#262930;
+
+    --tb-dezent:#2E2A17;  --tb-voll:#463D14;  --tb-rand:#C9AE4A;
+    --rf-dezent:#192720;  --rf-voll:#1C3826;  --rf-rand:#6FB588;
+    --au-dezent:#2A1E1D;  --au-voll:#3E2621;  --au-rand:#CE8B72;
+
+    --legende-eigen:rgba(242,199,68,.22);
+    --legende-eigen-kante:#F2C744;
+    --auswahlrahmen:rgba(231,233,236,.42);
+    --schleier-schublade:rgba(0,0,0,.5);
+    --schleier-blatt:rgba(0,0,0,.66);
+    --warnrot:#E08A8A;
+
+    /* Fläche der eigenen Markierung: dieselbe Farbe, geringere Deckkraft. */
+    --eigen-deckkraft:.22;
+
+    --schatten-popover:0 8px 24px rgba(0,0,0,.5);
+    --schatten-blatt:0 -8px 28px rgba(0,0,0,.45);
+    --schatten-feld:0 1px 2px rgba(0,0,0,.3);
+
+    color-scheme:dark;
+  }
+}
+
+:root[data-darstellung=dunkel]{
+  --papier:#15161A;
+  --leiste:#1D1F24;
+  --flaeche:#1A1C21;
+  --zeile-aktiv:#23262C;
+  --zeile-weich:#202227;
+  --weiss:#15161A;              /* „weiß“ meint hier die erhabene Fläche */
+
+  --text:#E7E9EC;
+  --text-2:#C6CBD1;
+  --text-2b:#B9BEC5;
+  --text-3:#9AA1AA;
+  --text-4:#7C838C;
+  --text-5:#727982;
+  --text-6:#666D76;
+  --titel-2:#9AA1AA;
+
+  --linie-stark:#3E4147;
+  --linie:#2F3238;
+  --linie-schwach:#282A2F;
+  --linie-zart:#202227;
+
+  --verweis:#7FA9E0;
+  --verweis-kante:#35486B;
+
+  --vw:#A98FD6;
+  --vw-grund:#241F30;
+  --vw-rand:#3A3050;
+  --vw-karte:#1F1B29;
+
+  --treffer:#574A16;
+  --treffer-ohne:#262930;
+
+  --tb-dezent:#2E2A17;  --tb-voll:#463D14;  --tb-rand:#C9AE4A;
+  --rf-dezent:#192720;  --rf-voll:#1C3826;  --rf-rand:#6FB588;
+  --au-dezent:#2A1E1D;  --au-voll:#3E2621;  --au-rand:#CE8B72;
+
+  --legende-eigen:rgba(242,199,68,.22);
+  --legende-eigen-kante:#F2C744;
+  --auswahlrahmen:rgba(231,233,236,.42);
+  --schleier-schublade:rgba(0,0,0,.5);
+  --schleier-blatt:rgba(0,0,0,.66);
+  --warnrot:#E08A8A;
+
+  /* Fläche der eigenen Markierung: dieselbe Farbe, geringere Deckkraft. */
+  --eigen-deckkraft:.22;
+
+  --schatten-popover:0 8px 24px rgba(0,0,0,.5);
+  --schatten-blatt:0 -8px 28px rgba(0,0,0,.45);
+  --schatten-feld:0 1px 2px rgba(0,0,0,.3);
+
+  color-scheme:dark;
+}
+
+/* Die Druckfassung ist IMMER hell — unabhängig von der Einstellung und von
+   der Systemvorgabe. Tonwerte auf Papier folgen anderen Regeln als am Schirm,
+   und ein dunkler Grund wird nicht gedruckt, sondern weggelassen; übrig bliebe
+   heller Text auf Weiß. */
+@media print{
+  :root,:root[data-darstellung=dunkel]{
+    --papier:#FCFCFC; --leiste:#F1F3F5; --flaeche:#F7F8F9; --weiss:#FFFFFF;
+    --text:#14161A; --text-2:#3B4149; --text-2b:#4B525B; --text-3:#6C737C;
+    --text-4:#8B929B; --text-5:#9AA1A9; --text-6:#B4BAC1; --titel-2:#5A616A;
+    --linie-stark:#C4C9CF; --linie:#D8DBE0; --linie-schwach:#E4E7EA; --linie-zart:#F0F2F4;
+    --verweis:#2F5FA8; --verweis-kante:#C6D5EA;
+    --vw:#6A4C93; --vw-grund:#F3F0F8; --vw-rand:#D9CFEA;
+    color-scheme:light;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -157,7 +321,10 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   border:1px solid var(--linie);background:var(--weiss);color:var(--text-2b);
   border-radius:var(--r-knopf);padding:5px 10px;white-space:nowrap;
 }
-.kopf-knoepfe button:hover{border-color:var(--text);color:var(--text)}
+.kopf-knoepfe button:hover:not(:disabled){border-color:var(--text);color:var(--text)}
+.kopf-knoepfe button:disabled,.stufen button:disabled{
+  color:var(--text-5);border-color:var(--linie-schwach);cursor:not-allowed;
+}
 
 /* ══════════════════════════════════════════════════════════════════════
    Reiterleiste — GEÖFFNETE Normen, nicht die Normen des Gesetzes
@@ -338,7 +505,7 @@ body[data-struktur=dezent] .legende .m-ausnahme{background:var(--au-dezent)}
 body[data-struktur=voll] .legende .m-tatbestand{background:var(--tb-voll)}
 body[data-struktur=voll] .legende .m-rechtsfolge{background:var(--rf-voll)}
 body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
-.legende .m-eigen{background:rgba(242,199,68,.5);border-bottom:2px solid #C9A227}
+.legende .m-eigen{background:var(--legende-eigen);border-bottom:2px solid var(--legende-eigen-kante)}
 .legende .m-verwaltung{border-bottom:2px dotted var(--vw)}
 .legende .anmerkung{color:var(--text-5);flex-basis:100%}
 
@@ -357,7 +524,7 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   border-radius:var(--r-marke) var(--r-marke) 0 0;
   padding:0 1px;cursor:pointer;
 }
-.eigen.gewaehlt{outline:2px solid rgba(20,22,26,.35);outline-offset:1px}
+.eigen.gewaehlt{outline:2px solid var(--auswahlrahmen);outline-offset:1px}
 
 /* ── Werkzeugleiste an der Auswahl ── */
 .auswahlleiste{
@@ -411,7 +578,7 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   font-size:11px;color:var(--text-5);
 }
 .popover-fuss button{color:var(--text-3);font-size:11px}
-.popover-fuss button:hover{color:var(--warnrot,#B23B3B)}
+.popover-fuss button:hover{color:var(--warnrot)}
 
 /* ── Register „Markierungen“ ── */
 .karte{
@@ -455,7 +622,7 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 .vw-chip:hover{border-color:var(--vw)}
 
 /* ── Karten im Register „Verwaltung“ ── */
-.karte.vw-karte.aktiv{background:#F8F7FA}
+.karte.vw-karte.aktiv{background:var(--vw-karte)}
 .karte.vw-karte.aktiv{border-left-color:var(--vw)}
 .vw-beleg{
   font-family:var(--mono);font-size:10px;color:var(--text-4);
@@ -717,7 +884,7 @@ body[data-ansicht=start] .suchfeld{display:none}
   }
   body[data-schublade=offen] .navspalte{transform:translateX(0)}
   body[data-schublade=offen] .verdunkelung{
-    display:block;position:fixed;inset:0;z-index:55;background:rgba(20,22,26,.28);
+    display:block;position:fixed;inset:0;z-index:55;background:var(--schleier-schublade);
   }
 }
 
@@ -805,7 +972,7 @@ body[data-ansicht=start] .suchfeld{display:none}
   }
   body[data-blatt=offen] .apparat{transform:translateY(0)}
   body[data-blatt=offen] .verdunkelung{
-    display:block;position:fixed;inset:0;z-index:55;background:rgba(20,22,26,.58);
+    display:block;position:fixed;inset:0;z-index:55;background:var(--schleier-blatt);
   }
   /* Der Text hinter dem Blatt wird festgehalten. */
   body[data-blatt=offen]{overflow:hidden}
@@ -926,9 +1093,24 @@ body[data-ansicht=start] .suchfeld{display:none}
         </div>
       </div>
       <div class="trenner" aria-hidden="true"></div>
+      <div class="einfaerben">
+        <span id="darstellung-beschriftung">Darstellung</span>
+        <div class="stufen" role="radiogroup" id="darstellung"
+             aria-label="Darstellung hell, dunkel oder nach Systemvorgabe">
+          <button type="button" role="radio" data-modus="hell" aria-checked="false">hell</button>
+          <button type="button" role="radio" data-modus="dunkel" aria-checked="false">dunkel</button>
+          <button type="button" role="radio" data-modus="system" aria-checked="false">System</button>
+        </div>
+      </div>
+      <div class="trenner" aria-hidden="true"></div>
       <div class="kopf-knoepfe">
-        <button type="button">Vergleichen</button>
-        <button type="button">Mappe</button>
+        <!-- Kein Knopf ohne Funktion: Beide sind gesperrt, bis Schritt 11 und 12
+             sie anbinden, und sagen im Titel, warum. Ein Knopf, der ins Leere
+             klickt, ist schlechter als einer, der sichtbar noch nicht kann. -->
+        <button type="button" id="knopf-vergleichen" disabled
+                title="Fassungsvergleich — folgt in Schritt 12 (fassungen/&lt;gesetz&gt;.json).">Vergleichen</button>
+        <button type="button" id="knopf-mappe" disabled
+                title="Sammelmappe — folgt in Schritt 11.">Mappe</button>
       </div>
     </div>
   </div>
@@ -993,6 +1175,7 @@ const S = {
   aktiveVerwaltung: null,  // id | null — flüchtig
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
+  darstellung: "system",   // system | hell | dunkel — global, localStorage
   letzteFarbe: "#F2C744",  // localStorage
   filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
 };
@@ -1102,6 +1285,39 @@ function fassungAus(gesetz){
   if (!stand) return null;
   const treffer = /(\d{1,2}\.\d{1,2}\.\d{4})/.exec(stand.text || "");
   return treffer ? treffer[1] : null;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Darstellung: hell · dunkel · System
+
+   „System“ ist keine dritte Palette, sondern die Abwesenheit einer Wahl: Das
+   Attribut wird entfernt, und die Medienabfrage entscheidet. Deshalb steht im
+   CSS `:root:not([data-darstellung=hell])` — die ausdrückliche Wahl gewinnt
+   in beide Richtungen.
+   ══════════════════════════════════════════════════════════════════════ */
+function darstellungSetzen(modus){
+  const gueltig = ["system", "hell", "dunkel"].includes(modus) ? modus : "system";
+  S.darstellung = gueltig;
+  if (gueltig === "system") delete document.documentElement.dataset.darstellung;
+  else document.documentElement.dataset.darstellung = gueltig;
+  for (const b of el("darstellung").querySelectorAll("button")){
+    b.setAttribute("aria-checked", String(b.dataset.modus === gueltig));
+  }
+  merken("darstellung", gueltig);
+}
+
+/**
+ * Deckkraft der eigenen Markierung — aus der Gestaltungsmarke, nicht fest.
+ *
+ * Hell .45, dunkel .22. Die Farbe bleibt in beiden Modi dieselbe, damit die
+ * Zuordnung erhalten bleibt; nur die Fläche tritt zurück, weil ein heller Ton
+ * auf dunklem Grund blendet.
+ */
+function eigenDeckkraft(){
+  const wert = getComputedStyle(document.documentElement)
+    .getPropertyValue("--eigen-deckkraft").trim();
+  const zahl = Number.parseFloat(wert);
+  return Number.isFinite(zahl) ? zahl : 0.45;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1538,7 +1754,7 @@ function farbreiheFuellen(behaelter, aktuell, waehlen){
     b.title = name;
     b.setAttribute("aria-label", "Farbe " + name);
     b.setAttribute("aria-pressed", String(String(aktuell).toLowerCase() === hex.toLowerCase()));
-    b.style.background = hexZuRgba(hex, .45);
+    b.style.background = hexZuRgba(hex, eigenDeckkraft());
     b.style.boxShadow = String(aktuell).toLowerCase() === hex.toLowerCase()
       ? `0 0 0 2px #FFFFFF, 0 0 0 3.5px ${hex}`
       : `inset 0 0 0 1px ${hex}`;
@@ -1893,7 +2109,7 @@ function hauptZeichnen(){
       schluessel: "m" + m.id,
       titel: m.notiz || "Eigene Markierung",
       datensatz: { eigen: m.id },
-      stil: `background:${hexZuRgba(m.farbe, .45)};border-bottom:2px solid ${m.farbe};`,
+      stil: `background:${hexZuRgba(m.farbe, eigenDeckkraft())};border-bottom:2px solid ${m.farbe};`,
     });
   }
 
@@ -2441,7 +2657,7 @@ function markierungenBauen(){
     kopf.className = "karte-kopf";
     const punkt = document.createElement("span");
     punkt.className = "karte-punkt";
-    punkt.style.background = hexZuRgba(m.farbe, .45);
+    punkt.style.background = hexZuRgba(m.farbe, eigenDeckkraft());
     punkt.style.boxShadow = "inset 0 0 0 1px " + m.farbe;
     const fund = document.createElement("span");
     fund.className = "karte-fundstelle";
@@ -3287,6 +3503,24 @@ async function wegweiser(){
    Start
    ══════════════════════════════════════════════════════════════════════ */
 async function start(){
+  S.darstellung = gemerkt("darstellung", "system");
+  darstellungSetzen(S.darstellung);
+  for (const b of el("darstellung").querySelectorAll("button")){
+    b.onclick = () => {
+      darstellungSetzen(b.dataset.modus);
+      // Die Marker-Deckkraft steckt in erzeugten style-Attributen und muss
+      // beim Moduswechsel neu gerechnet werden.
+      if (document.body.dataset.ansicht === "norm"){ hauptZeichnen(); apparatZeichnen(); }
+    };
+  }
+  /* Folgt die Seite der Systemvorgabe, muss sie auf deren Wechsel reagieren. */
+  if (window.matchMedia){
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+      if (S.darstellung !== "system") return;
+      if (document.body.dataset.ansicht === "norm"){ hauptZeichnen(); apparatZeichnen(); }
+    });
+  }
+
   S.strukturModus = gemerkt("strukturModus", "voll");
   S.markierungen = markierungenLesen();
   S.letzteFarbe = gemerkt("letzteFarbe", "#F2C744");
