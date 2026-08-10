@@ -24,7 +24,10 @@ const PROBEN = [
   "#/solzg/3", "#/estg/1", "#/estg/15", "#/ustg/4", "#/ao/1",
   "#/astg/2", "#/fgo/1", "#/bewg/1", "#/kstg/1", "#/erbstg/1", "#/gewstg/1",
 ];
-const PROBEN_OHNE_TEXT = ["/", "#/solzg", "#/suche/Vorsteuer"];
+const PROBEN_OHNE_TEXT = ["/", "#/solzg", "#/suche/Vorsteuer",
+  /* Der Vergleich in beiden Ausprägungen: mit zwei Zeitständen und mit einem.
+     Der zweite Fall ist der häufigere und darf genauso wenig abstürzen. */
+  "#/gewstg/16/fassungen", "#/solzg/3/fassungen"];
 
 const pruef = [];
 const ok = (name, bedingung, zusatz = "") => pruef.push({ name, bestanden: Boolean(bedingung), zusatz });
@@ -86,7 +89,9 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     if (krachte) { abgestuerzt++; console.log(`     ✗ ${ziel} — Renderer abgestürzt`); }
     await ctx.close();
   }
-  ok("Startseite, Übersicht und Trefferliste tragen eine Überschrift", ohneKopf === 0);
+  ok("Ansichten ohne Normtext tragen eine Überschrift", ohneKopf === 0,
+    `${PROBEN_OHNE_TEXT.length} Proben`);
+  ok("Auch die Ansichten ohne Normtext stürzen nicht ab", abgestuerzt === 0);
 }
 
 /* ── 2. Das Grundraster hält die Maße der Spezifikation ── */
@@ -416,6 +421,164 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   ok("Esc schließt die Mappe",
     !(await seite.evaluate(() => document.getElementById("mappe").classList.contains("offen"))));
   ok("Kein waagerechter Überlauf mit offener Mappe", !(await ueberlauf(seite)));
+  await ctx.close();
+}
+
+/* ── 4g. Fassungsvergleich ──
+   § 16 GewStG ist die einzige Norm im Bestand mit zwei Zeitständen. Das ist
+   kein gewählter Prüffall, sondern der Bestand: Nur dort hat sich der
+   Datensatz zwischen zwei Abrufen geändert. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+
+  /* Zuerst der Regelfall: nur ein Zeitstand, Knopf gesperrt mit Begründung. */
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+  ok("Ohne zweiten Zeitstand ist „Vergleichen“ gesperrt",
+    await seite.isDisabled("#knopf-vergleichen"));
+  const titel = await seite.getAttribute("#knopf-vergleichen", "title");
+  ok("Der gesperrte Knopf sagt, woran es liegt",
+    (titel || "").includes("fassungen/solzg.json"), titel);
+
+  /* Und der Fall mit zwei Ständen. */
+  await seite.goto(WURZEL + "/#/gewstg/16", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  ok("Mit zwei Zeitständen ist „Vergleichen“ bedienbar",
+    !(await seite.isDisabled("#knopf-vergleichen")));
+
+  /* Der Wortvergleich selbst, an Fällen mit bekannter Antwort. */
+  const einWort = await seite.evaluate(() =>
+    wortvergleich("Die Steuer beträgt 280 Prozent.", "Die Steuer beträgt 300 Prozent.")
+      .map((s) => s.art + ":" + s.text.trim()));
+  ok("Wortvergleich findet das eine geänderte Wort",
+    einWort.join("|") === "gleich:Die Steuer beträgt|weg:280|neu:300|gleich:Prozent.",
+    einWort.join(" "));
+  const eingefuegt = await seite.evaluate(() =>
+    wortvergleich("A B C D E", "A B X C D E").map((s) => s.art));
+  ok("Wortvergleich findet die Einfügung", eingefuegt.join("|") === "gleich|neu|gleich",
+    eingefuegt.join("|"));
+  const gestrichen = await seite.evaluate(() =>
+    wortvergleich("A B C D E", "A C D E").map((s) => s.art));
+  ok("Wortvergleich findet die Streichung", gestrichen.join("|") === "gleich|weg|gleich",
+    gestrichen.join("|"));
+
+  /* Satznummern und benachbarte Elemente dürfen nicht verkleben — sonst
+     meldete jede Aufzählung eine Änderung, die es nicht gibt. */
+  const satznummern = await seite.evaluate(() =>
+    textAusHtml('<p><span class="sn">1</span>Erster Satz. <span class="sn">2</span>Zweiter Satz.</p>'));
+  ok("Satznummern kleben nicht am Satz",
+    satznummern === "1 Erster Satz. 2 Zweiter Satz.", satznummern);
+  const nachbarn = await seite.evaluate(() =>
+    textAusHtml("<dl><dd><span>ist:</span><span>nach der</span></dd></dl>"));
+  ok("Benachbarte Elemente werden getrennt", nachbarn === "ist: nach der", nachbarn);
+
+  await seite.click("#knopf-vergleichen");
+  await seite.waitForTimeout(1000);
+  const v = await seite.evaluate(() => {
+    const sichtbar = (wahl) => {
+      const k = document.querySelector(wahl);
+      return Boolean(k) && getComputedStyle(k).display !== "none";
+    };
+    return {
+      ansicht: document.body.dataset.ansicht,
+      verweis: location.hash,
+      koepfe: [...document.querySelectorAll(".vergleich-kopf .vergleich-stand")]
+        .map((x) => x.textContent),
+      spalten: getComputedStyle(document.querySelector(".vergleich-raster")).gridTemplateColumns
+        .split(" ").length,
+      zellen: document.querySelectorAll(".vergleich-zelle").length,
+      neu: [...document.querySelectorAll("ins.v-neu")].map((x) => x.textContent),
+      fehlend: document.querySelectorAll(".vergleich-zelle.fehlt").length,
+      struktur: document.querySelectorAll(".vergleich-raster .s").length,
+      eigen: document.querySelectorAll(".vergleich-raster .eigen").length,
+      apparat: sichtbar(".apparat"),
+      navspalte: sichtbar(".navspalte"),
+      hinweis: (document.querySelector(".vergleich-hinweis") || {}).textContent || "",
+      bilanz: (document.querySelector(".vergleich-bilanz") || {}).textContent || "",
+      quelle: (document.querySelector(".vergleich-quelle") || {}).textContent || "",
+    };
+  });
+  ok("Vergleich öffnet als eigene Ansicht", v.ansicht === "vergleich", v.ansicht);
+  ok("Vergleich steht im Verweis", v.verweis === "#/gewstg/16/fassungen", v.verweis);
+  ok("Zwei Spalten", v.spalten === 2, String(v.spalten));
+  ok("Beide Standangaben aus den Daten",
+    v.koepfe.length === 2
+    && v.koepfe[0].includes("Art. 4 G v. 28.2.2025")
+    && v.koepfe[1].includes("Art. 8 G v. 29.6.2026"),
+    v.koepfe.join(" || "));
+  ok("Jeder Abschnitt in beiden Spalten", v.zellen === 12, String(v.zellen));
+  ok("Der Unterschied ist ausgezeichnet",
+    v.neu.length === 1 && v.neu[0].includes("Zur Anwendung vgl. § 36"), v.neu.join(" "));
+  ok("Die leere Gegenseite bleibt nicht leer", v.fehlend === 1, String(v.fehlend));
+  ok("Keine Struktur-Einfärbung im Vergleich", v.struktur === 0, String(v.struktur));
+  ok("Keine eigenen Markierungen im Vergleich", v.eigen === 0, String(v.eigen));
+  ok("Apparat im Vergleich ausgeblendet", !v.apparat);
+  ok("Normenverzeichnis bleibt stehen", v.navspalte);
+  ok("Wortvergleich als maschinell gekennzeichnet",
+    v.hinweis.includes("maschinell erzeugt, nicht redaktionell geprüft"), v.hinweis);
+  ok("Bilanz nennt den Vorbehalt", v.bilanz.includes("Bundesgesetzblatt"), v.bilanz.slice(0, 50));
+  ok("Herkunft der Fassungen wird gesagt",
+    v.quelle.includes("nicht") && v.quelle.includes("Inkrafttretens"), v.quelle.slice(0, 60));
+  ok("Kein waagerechter Überlauf im Vergleich", !(await ueberlauf(seite)));
+
+  /* Rücksprung */
+  await seite.click(".vergleich-zurueck");
+  await seite.waitForTimeout(900);
+  ok("„Zum Normtext“ führt zurück",
+    (await seite.evaluate(() => document.body.dataset.ansicht)) === "norm");
+
+  /* Der Verweis lässt sich direkt aufrufen. */
+  await seite.goto(WURZEL + "/#/gewstg/16/fassungen", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  ok("Vergleich ist direkt aufrufbar",
+    (await seite.evaluate(() => document.body.dataset.ansicht)) === "vergleich");
+
+  /* Wählleiste: beide Seiten auf denselben Stand — der Vergleich sagt es. */
+  await seite.selectOption(".vergleich-wahl", { index: 0 });
+  await seite.waitForTimeout(700);
+  const gleich = await seite.evaluate(() => ({
+    bilanz: (document.querySelector(".vergleich-bilanz") || {}).textContent || "",
+    marken: document.querySelectorAll("ins.v-neu, del.v-weg").length,
+  }));
+  ok("Gleicher Stand beidseitig ergibt keinen Unterschied",
+    gleich.marken === 0 && gleich.bilanz.includes("Kein Unterschied"), gleich.bilanz.slice(0, 40));
+
+  /* Druckfassung: die Wählleiste ist ein Bedienelement und entfällt. */
+  await seite.emulateMedia({ media: "print" });
+  await seite.waitForTimeout(400);
+  const druck = await seite.evaluate(() => ({
+    leiste: getComputedStyle(document.querySelector(".vergleich-leiste")).display,
+    kopf: getComputedStyle(document.querySelector(".vergleich-kopf")).position,
+  }));
+  ok("Wählleiste wird nicht gedruckt", druck.leiste === "none", druck.leiste);
+  ok("Spaltenkopf klebt im Druck nicht", druck.kopf === "static", druck.kopf);
+  await ctx.close();
+}
+
+/* ── 4h. Fassungsvergleich auf dem Telefon ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/gewstg/16/fassungen", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  const m = await seite.evaluate(() => {
+    const raster = document.querySelector(".vergleich-raster");
+    const leiste = document.querySelector(".vergleich-leiste");
+    const links = document.querySelector(".vergleich-zelle.links .vergleich-nummer");
+    return {
+      spalten: getComputedStyle(raster).gridTemplateColumns.split(" ").length,
+      leiste: getComputedStyle(leiste).position,
+      marke: links ? getComputedStyle(links, "::after").content : "",
+      werkzeuge: [...document.querySelectorAll(".werkzeugleiste button")].map((b) => b.textContent),
+    };
+  });
+  ok("Auf 390 px eine Spalte", m.spalten === 1, String(m.spalten));
+  ok("Wählleiste klebt auf Mobil", m.leiste === "sticky", m.leiste);
+  ok("Jede Zelle nennt ihre Fassung", m.marke.includes("ältere Fassung"), m.marke);
+  ok("Rückweg zum Normtext in der Werkzeugleiste",
+    m.werkzeuge.includes("Normtext"), m.werkzeuge.join(" · "));
+  ok("Kein waagerechter Überlauf im Vergleich (390 px)", !(await ueberlauf(seite)));
   await ctx.close();
 }
 

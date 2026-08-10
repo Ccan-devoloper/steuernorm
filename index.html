@@ -709,6 +709,71 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   padding:10px 14px 12px;font-size:11px;line-height:1.55;color:var(--text-5);
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Fassungsvergleich
+
+   Zwei Spalten, Wort für Wort verglichen. Die Farben kommen aus denselben
+   Marken wie die Struktur-Einfärbung und folgen damit dem Dunkelmodus von
+   selbst — ein fester Hellwert überstünde den Moduswechsel.
+   ══════════════════════════════════════════════════════════════════════ */
+.vergleich-leiste{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--linie-schwach);
+}
+.vergleich-wahl{
+  font-family:var(--mono);font-size:12px;color:var(--text-2b);
+  background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r-knopf);
+  padding:5px 8px;
+}
+.vergleich-gegen{font-size:12px;color:var(--text-4)}
+.vergleich-zurueck{
+  margin-left:auto;border:1px solid var(--linie);border-radius:var(--r-knopf);
+  padding:5px 10px;font-size:12.5px;color:var(--text-2b);background:var(--weiss);
+}
+.vergleich-zurueck:hover{border-color:var(--text);color:var(--text)}
+.vergleich-legende{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.vergleich-marke{
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 7px;border-radius:var(--r-chip);
+}
+.vergleich-hinweis{font-size:11px;color:var(--text-4)}
+
+.vergleich-raster{display:grid;grid-template-columns:1fr 1fr;gap:1px 18px;align-items:start}
+.vergleich-kopf{
+  position:sticky;top:0;z-index:3;background:var(--papier);
+  display:flex;flex-direction:column;gap:3px;
+  padding:8px 0 9px;border-bottom:1px solid var(--linie);margin-bottom:6px;
+}
+.vergleich-stand{font-size:11.5px;line-height:1.45;color:var(--text-3)}
+.vergleich-zelle{
+  font-family:var(--serif);font-size:14.5px;line-height:1.7;color:var(--text);
+  padding:10px 12px;border-radius:var(--r-knopf);
+  border:1px solid transparent;
+}
+.vergleich-zelle.geaendert{background:var(--flaeche);border-color:var(--linie-zart)}
+.vergleich-zelle.fehlt em{color:var(--text-4);font-size:12.5px}
+.vergleich-nummer{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:var(--text-4);margin-bottom:5px;
+}
+/* Entfallenes und Neues. Beides trägt zusätzlich zur Fläche eine Kante —
+   Farbe allein trägt die Auskunft nicht, wenn sie nicht unterschieden wird. */
+del.v-weg,.vergleich-marke.v-weg{
+  background:var(--au-voll);box-shadow:0 0 0 1px var(--au-rand);
+  text-decoration:line-through;text-decoration-thickness:1px;
+  border-radius:2px;
+}
+ins.v-neu,.vergleich-marke.v-neu{
+  background:var(--rf-voll);box-shadow:0 0 0 1px var(--rf-rand);
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
+  border-radius:2px;
+}
+.vergleich-bilanz{
+  margin:20px 0 0;padding-top:14px;border-top:1px solid var(--linie-schwach);
+  font-size:12.5px;line-height:1.6;color:var(--text-3);
+}
+.vergleich-quelle{margin:8px 0 0;font-size:11px;line-height:1.6;color:var(--text-5)}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -822,6 +887,14 @@ body[data-ansicht=uebersicht] .navspalte,
 body[data-ansicht=uebersicht] .apparat,
 body[data-ansicht=suche] .navspalte,
 body[data-ansicht=suche] .apparat{display:none}
+/* Im Vergleich bleibt das Normenverzeichnis stehen — man springt von hier
+   zur nächsten Norm. Der Apparat geht: Er zeigt Hinweise zur geltenden
+   Fassung, und neben zwei Zeitständen ist nicht zu sagen, zu welchem. */
+body[data-ansicht=vergleich] .apparat{display:none}
+/* Die Einfärbung gilt dem Normtext; im Vergleich ist sie ausgeblendet, also
+   darf ihr Schalter dort auch nicht bedienbar dastehen. */
+body[data-ansicht=vergleich] .einfaerben,
+body[data-ansicht=vergleich] .trenner:first-of-type{display:none}
 body[data-ansicht=start] .reiterleiste,
 body[data-ansicht=suche] .reiterleiste{display:none}
 /* Ohne Normtext gibt es nichts einzufärben — der Schalter gehört dort nicht hin. */
@@ -1070,6 +1143,31 @@ body[data-ansicht=start] .suchfeld{display:none}
   body[data-mappe=offen] .verdunkelung{
     display:block;position:fixed;inset:0;z-index:65;background:var(--schleier-blatt);
   }
+
+  /* Fassungsvergleich: eine Spalte, Paar für Paar untereinander. Zwei
+     Textspalten auf 390 px wären je 175 px breit — darin steht kein Satz.
+     Die Reihenfolge im DOM ist bereits ältere/jüngere je Abschnitt, das
+     Stapeln braucht deshalb nur die eine Spalte. */
+  .vergleich-raster{grid-template-columns:1fr;gap:0}
+  /* Nebeneinander sagt der Spaltenkopf, welche Fassung eine Zelle zeigt.
+     Untereinander sagt es niemand — deshalb klebt hier die Wählleiste, die
+     beide Daten nennt und zugleich das Umschalten von jeder Stelle erlaubt,
+     und jede Zelle trägt ihre Fassung an der Nummer. */
+  .vergleich-leiste{
+    position:sticky;top:0;z-index:4;background:var(--papier);
+    margin:0 0 12px;padding:10px 0 12px;
+  }
+  .vergleich-kopf{position:static;padding:8px 0;margin-bottom:0;border-bottom:0}
+  .vergleich-kopf.links{border-bottom:1px solid var(--linie-zart)}
+  .vergleich-kopf.rechts{border-bottom:1px solid var(--linie);margin-bottom:6px}
+  .vergleich-zelle{padding:12px 12px 14px}
+  .vergleich-zelle.links{margin-top:10px}
+  .vergleich-zelle.rechts{margin-bottom:14px;border-bottom:1px solid var(--linie-zart)}
+  /* Ohne Marke wäre auf dem Telefon nicht zu sehen, welche Zelle welche
+     Fassung zeigt — nebeneinander sagt das der Spaltenkopf, untereinander
+     niemand. */
+  .vergleich-zelle.links .vergleich-nummer::after{content:" · ältere Fassung"}
+  .vergleich-zelle.rechts .vergleich-nummer::after{content:" · jüngere Fassung"}
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1148,6 +1246,23 @@ body[data-ansicht=start] .suchfeld{display:none}
   }
 
   .karte,.zitat,.platzhalter{page-break-inside:avoid}
+
+  /* Fassungsvergleich auf Papier. Die Wählleiste ist ein Bedienelement und
+     entfällt; die Fassungen stehen in den Spaltenköpfen. Entfallenes und
+     Neues tragen im Graustufendruck Strich und Unterstreichung, nicht
+     Farbe — zwei Tonwerte lassen sich auf Papier nicht auseinanderhalten. */
+  .vergleich-leiste{display:none!important}
+  .vergleich-raster{gap:0 12pt}
+  .vergleich-kopf{position:static!important;background:none!important;padding:0 0 5pt}
+  .vergleich-zelle{
+    font-size:10pt;line-height:1.55;color:#000;padding:6pt 0 0;
+    background:none!important;border:0!important;page-break-inside:avoid;
+  }
+  del.v-weg{background:none!important;box-shadow:none!important;color:#444}
+  ins.v-neu{background:none!important;box-shadow:none!important;font-weight:600}
+  .vergleich-legende{font-size:8pt;color:#444;margin-bottom:8pt}
+  .vergleich-marke{background:none!important;box-shadow:none!important;padding:0}
+  .vergleich-bilanz,.vergleich-quelle{font-size:8pt;color:#444}
 }
 
 /* Nur im Druck sichtbar. */
@@ -1261,6 +1376,8 @@ const S = {
   verweise: null,          // data/verweise.json .normen — Rückverweise
   verwaltung: {},          // abk → verwaltung/<gesetz>.json
   aktiveVerwaltung: null,  // id | null — flüchtig
+  fassungen: {},           // abk → fassungen/<gesetz>.json
+  vergleich: null,         // { links, rechts } — gewählte Fassungen
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
   mappen: [],              // Sammelmappen, localStorage
@@ -1331,6 +1448,10 @@ async function zutatenLaden(abk){
   if (!(abk in S.verwaltung)){
     try { S.verwaltung[abk] = await holen("verwaltung/" + schluessel + ".json"); }
     catch (e) { S.verwaltung[abk] = null; }
+  }
+  if (!(abk in S.fassungen)){
+    try { S.fassungen[abk] = await holen("fassungen/" + schluessel + ".json"); }
+    catch (e) { S.fassungen[abk] = null; }
   }
 }
 
@@ -2354,6 +2475,394 @@ function mappeUmschalten(){
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   Fassungsvergleich
+
+   Zwei Zeitstände derselben Norm nebeneinander, Wort für Wort verglichen.
+
+   Die Fassungen stammen aus `fassungen/<gesetz>.json`, das der Git-Verlauf
+   von `data/` speist — echte, datierte Zeitschnitte, keine nachgebaute
+   Historie. Wo es nur einen Stand gibt, bleibt der Knopf gesperrt und sagt
+   warum. Ein Vergleich mit sich selbst ist keiner.
+
+   Struktur-Einfärbung und eigene Markierungen sind hier ausgeblendet: Im
+   Vergleich zählt der Unterschied zwischen den Fassungen; drei weitere
+   Farbebenen darüber machen ihn unlesbar.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/** Fassungen der laufenden Norm, jüngste zuerst — leer ohne Datensatz. */
+function fassungenDerNorm(abk = S.abk, normId = S.normId){
+  const datei = S.fassungen[abk];
+  if (!datei || !datei.normen) return [];
+  const eintrag = datei.normen[normId];
+  return eintrag && Array.isArray(eintrag.fassungen) ? eintrag.fassungen : [];
+}
+
+/**
+ * Wortlaut einer Fassung.
+ *
+ * Die jüngste führt keinen eigenen — sie steht in `data/` und würde sonst
+ * doppelt im Bestand liegen. Sie wird hier aus der geladenen Norm ergänzt.
+ */
+function fassungWortlaut(fassung){
+  if (!fassung.aktuell) return fassung;
+  const norm = S.gesetz.normen.find(n => n.id === S.normId);
+  return norm
+    ? { ...fassung, enbez: norm.enbez, titel: norm.titel, abs: norm.abs, fussnote: norm.fussnote ?? null }
+    : { ...fassung, abs: [] };
+}
+
+/**
+ * Reiner Text aus dem amtlichen HTML eines Absatzes.
+ *
+ * Zwischen zwei UNMITTELBAR benachbarten Elementen steht im Quelltext kein
+ * Leerzeichen, und der Browser setzt auch keines. Ohne die eingefügte
+ * Trennung klebte „vorzunehmen ist:nach der" zusammen, und der Wortvergleich
+ * sähe ein Wort, wo zwei stehen — mit dem Ergebnis, dass jede Aufzählung als
+ * geändert gälte.
+ *
+ * Maßgeblich ist `nextSibling`, nicht `nextElementSibling`: Letzteres
+ * überspringt Text und träfe auch auf `<span>1</span>Der Beschluss … <span>2`
+ * zu, wo die Satznummer schon durch den Text getrennt ist. Die Regel ist
+ * dieselbe wie in der Anzeige (`dd>span+span::before`).
+ */
+function textAusHtml(html){
+  const kasten = document.createElement("div");
+  kasten.innerHTML = String(html || "");
+  for (const knoten of [...kasten.querySelectorAll("*")]){
+    /* Die Satznummer steht im Quelltext ohne Abstand vor dem Satz („<span
+       class="sn">2</span>Nach diesem"); in der Lesespalte trennt sie eine
+       Marge, hier ein Leerzeichen. Ohne das läse der Vergleich „2Nach" als
+       ein Wort und meldete den ganzen Satz als geändert, sobald sich die
+       Nummerierung verschiebt. */
+    if (knoten.classList.contains("sn")){ knoten.after(document.createTextNode(" ")); continue; }
+    const naechster = knoten.nextSibling;
+    if (naechster && naechster.nodeType === 1) knoten.after(document.createTextNode(" "));
+  }
+  return kasten.textContent.replace(/\s+/g, " ").trim();
+}
+
+/** Wörter samt folgendem Leerraum — die Einheit des Vergleichs. */
+const inWoerter = (text) => text.match(/\S+\s*/g) || [];
+
+/* Über dieser Größe wird der Wortvergleich nicht mehr gerechnet. 1200 × 1200
+   Wörter sind 1,4 Mio. Zellen; darüber steht die Wartezeit in keinem
+   Verhältnis, und ein Absatz mit über 1200 Wörtern ist ohnehin keiner, den
+   man wortweise liest. Dann wird der Absatz als Ganzes ausgewiesen. */
+const VERGLEICH_GRENZE = 1200;
+
+/**
+ * Wortvergleich zweier Absätze über die längste gemeinsame Teilfolge.
+ *
+ * Ergebnis ist eine Folge von Stücken `{ art, text }` mit art ∈
+ * gleich | weg | neu. „weg" steht nur links, „neu" nur rechts.
+ */
+function wortvergleich(alt, neu){
+  const a = inWoerter(alt);
+  const b = inWoerter(neu);
+  if (a.length > VERGLEICH_GRENZE || b.length > VERGLEICH_GRENZE){
+    return alt === neu
+      ? [{ art: "gleich", text: alt }]
+      : [{ art: "weg", text: alt }, { art: "neu", text: neu }];
+  }
+
+  /* Gleiche Ränder vorweg abschneiden. Das ist der Normalfall — geändert wird
+     selten der ganze Absatz — und drückt die Tabelle auf einen Bruchteil. */
+  let vorn = 0;
+  while (vorn < a.length && vorn < b.length && a[vorn] === b[vorn]) vorn++;
+  let hinten = 0;
+  while (hinten < a.length - vorn && hinten < b.length - vorn
+    && a[a.length - 1 - hinten] === b[b.length - 1 - hinten]) hinten++;
+
+  const ka = a.slice(vorn, a.length - hinten);
+  const kb = b.slice(vorn, b.length - hinten);
+
+  /* Längste gemeinsame Teilfolge, Zeile für Zeile. */
+  const n = ka.length, m = kb.length;
+  const tafel = new Uint32Array((n + 1) * (m + 1));
+  for (let i = n - 1; i >= 0; i--){
+    for (let j = m - 1; j >= 0; j--){
+      tafel[i * (m + 1) + j] = ka[i] === kb[j]
+        ? tafel[(i + 1) * (m + 1) + j + 1] + 1
+        : Math.max(tafel[(i + 1) * (m + 1) + j], tafel[i * (m + 1) + j + 1]);
+    }
+  }
+
+  const stuecke = [];
+  const anfuegen = (art, text) => {
+    if (!text) return;
+    const letztes = stuecke[stuecke.length - 1];
+    if (letztes && letztes.art === art) letztes.text += text;
+    else stuecke.push({ art, text });
+  };
+
+  anfuegen("gleich", a.slice(0, vorn).join(""));
+  let i = 0, j = 0;
+  while (i < n && j < m){
+    if (ka[i] === kb[j]){ anfuegen("gleich", ka[i]); i++; j++; }
+    else if (tafel[(i + 1) * (m + 1) + j] >= tafel[i * (m + 1) + j + 1]){ anfuegen("weg", ka[i]); i++; }
+    else { anfuegen("neu", kb[j]); j++; }
+  }
+  while (i < n){ anfuegen("weg", ka[i]); i++; }
+  while (j < m){ anfuegen("neu", kb[j]); j++; }
+  anfuegen("gleich", a.slice(a.length - hinten).join(""));
+  return stuecke;
+}
+
+/**
+ * Absätze zweier Fassungen paarweise ordnen.
+ *
+ * Geordnet wird über die Absatznummer, nicht über die Reihenfolge: Fällt ein
+ * Absatz weg oder kommt einer hinzu, verschöbe sich sonst alles danach und der
+ * Vergleich zeigte lauter Änderungen, wo keine sind.
+ */
+function absatzpaare(alt, neu){
+  const links = alt.abs || [];
+  const rechts = neu.abs || [];
+  const namen = [];
+  const gesehen = new Set();
+  for (const liste of [links, rechts]){
+    for (const [i, a] of liste.entries()){
+      const name = a.n || "o" + i;
+      if (!gesehen.has(name)){ gesehen.add(name); namen.push(name); }
+    }
+  }
+  const finde = (liste, name) => liste.find((a, i) => (a.n || "o" + i) === name) || null;
+  return namen.map(name => ({ n: name, links: finde(links, name), rechts: finde(rechts, name) }));
+}
+
+/** Eine Zelle des Vergleichs: Stücke als ins/del, Gleiches als Text. */
+function vergleichZelle(stuecke, seite){
+  const zelle = document.createElement("div");
+  zelle.className = "vergleich-zelle";
+  for (const s of stuecke){
+    if (s.art === "gleich"){ zelle.appendChild(document.createTextNode(s.text)); continue; }
+    if (s.art === "weg" && seite !== "links") continue;
+    if (s.art === "neu" && seite !== "rechts") continue;
+    const marke = document.createElement(s.art === "weg" ? "del" : "ins");
+    marke.className = s.art === "weg" ? "v-weg" : "v-neu";
+    marke.textContent = s.text;
+    zelle.appendChild(marke);
+  }
+  return zelle;
+}
+
+function vergleichZeichnen(){
+  const haupt = el("haupt");
+  haupt.innerHTML = "";
+  const gesetz = S.gesetz;
+  const norm = gesetz.normen.find(n => n.id === S.normId) || gesetz.normen[0];
+  const alle = fassungenDerNorm();
+
+  const druckkopf = document.createElement("div");
+  druckkopf.className = "druckkopf";
+  const dk1 = document.createElement("span"); dk1.textContent = "steuernorm";
+  const dk2 = document.createElement("span");
+  dk2.textContent = gesetz.abk + " · " + norm.enbez + " · Fassungsvergleich";
+  druckkopf.append(dk1, dk2);
+  haupt.appendChild(druckkopf);
+
+  const krume = document.createElement("div");
+  krume.className = "brotkrume";
+  for (const stueck of [gesetz.abk.toUpperCase(), "›", norm.enbez, "›", "Fassungen"]){
+    const s = document.createElement("span");
+    s.textContent = stueck;
+    krume.appendChild(s);
+  }
+  haupt.appendChild(krume);
+
+  const h1 = document.createElement("h1");
+  h1.appendChild(document.createTextNode(norm.enbez + " "));
+  if (norm.titel){
+    const t = document.createElement("span");
+    t.className = "titel";
+    t.textContent = norm.titel;
+    h1.appendChild(t);
+  }
+  haupt.appendChild(h1);
+
+  /* Weniger als zwei Fassungen: Es gibt nichts zu vergleichen, und das wird
+     gesagt — samt der Datei, in der der zweite Stand stünde. */
+  if (alle.length < 2){
+    const kasten = document.createElement("div");
+    kasten.className = "melder";
+    const stark = document.createElement("strong");
+    stark.textContent = "Von dieser Norm liegt nur ein Zeitstand vor.";
+    const p = document.createElement("p");
+    p.textContent = "Ein zweiter stünde in fassungen/"
+      + gesetz.abk.toLowerCase() + ".json. Der Bestand kennt bisher nur den "
+      + "geltenden Wortlaut; frühere Fassungen entstehen erst, wenn sich der "
+      + "Text zwischen zwei Abrufen ändert.";
+    kasten.append(stark, p);
+    const zurueck = knopf("", "Zum Normtext");
+    zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+    kasten.appendChild(zurueck);
+    haupt.appendChild(kasten);
+    reiterZeichnen();
+    return;
+  }
+
+  /* Voreinstellung: die beiden jüngsten. Links steht immer die ältere.
+     Die Wahl gilt für diese Norm; bei einer anderen fängt sie von vorn an,
+     denn Datumsangaben können sich zwischen Normen zufällig gleichen. */
+  const kennung = S.abk + "/" + norm.id;
+  if (!S.vergleich || S.vergleich.norm !== kennung
+      || !alle.some(f => f.id === S.vergleich.links)
+      || !alle.some(f => f.id === S.vergleich.rechts)){
+    S.vergleich = { norm: kennung, links: alle[1].id, rechts: alle[0].id };
+  }
+  const linksF = fassungWortlaut(alle.find(f => f.id === S.vergleich.links));
+  const rechtsF = fassungWortlaut(alle.find(f => f.id === S.vergleich.rechts));
+
+  /* Wählleiste */
+  const leiste = document.createElement("div");
+  leiste.className = "vergleich-leiste";
+  const waehler = (seite) => {
+    const w = document.createElement("select");
+    w.className = "vergleich-wahl";
+    w.setAttribute("aria-label", seite === "links" ? "Ältere Fassung" : "Jüngere Fassung");
+    for (const f of alle){
+      const o = document.createElement("option");
+      o.value = f.id;
+      o.textContent = f.abgerufen + (f.aktuell ? " · geltend" : "");
+      o.selected = f.id === S.vergleich[seite];
+      w.appendChild(o);
+    }
+    w.onchange = () => { S.vergleich = { ...S.vergleich, [seite]: w.value }; vergleichZeichnen(); };
+    return w;
+  };
+  const gegen = document.createElement("span");
+  gegen.className = "vergleich-gegen";
+  gegen.textContent = "gegen";
+  const zurueck = knopf("vergleich-zurueck", "Zum Normtext");
+  zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+  leiste.append(waehler("links"), gegen, waehler("rechts"), zurueck);
+  haupt.appendChild(leiste);
+
+  /* Legende und Kennzeichnung des Maschinellen */
+  const legende = document.createElement("div");
+  legende.className = "vergleich-legende";
+  for (const [klasse, name] of [["v-weg", "entfallen"], ["v-neu", "neu"]]){
+    const marke = document.createElement("span");
+    marke.className = "vergleich-marke " + klasse;
+    marke.textContent = name;
+    legende.appendChild(marke);
+  }
+  const hinweis = document.createElement("span");
+  hinweis.className = "vergleich-hinweis";
+  hinweis.textContent = "Wortvergleich maschinell erzeugt, nicht redaktionell geprüft";
+  legende.appendChild(hinweis);
+  haupt.appendChild(legende);
+
+  /* Spaltenköpfe. Sie kleben, damit auch weit unten klar ist, welche Spalte
+     welche Fassung zeigt. */
+  const raster = document.createElement("div");
+  raster.className = "vergleich-raster";
+  for (const [seite, f] of [["links", linksF], ["rechts", rechtsF]]){
+    const kopf = document.createElement("div");
+    kopf.className = "vergleich-kopf " + seite;
+    const datum = document.createElement("span");
+    datum.className = "mono-etikett";
+    datum.textContent = "Abgerufen " + f.abgerufen + (f.aktuell ? " · geltend" : "");
+    const stand = document.createElement("span");
+    stand.className = "vergleich-stand";
+    // Maßgeblich ist die amtliche Standangabe, nicht das Abrufdatum.
+    stand.textContent = f.stand || "ohne Standangabe";
+    kopf.append(datum, stand);
+    raster.appendChild(kopf);
+  }
+
+  /* Überschrift, Absätze, Fußnote — in dieser Reihenfolge. */
+  const reihen = [];
+  if ((linksF.titel || "") !== (rechtsF.titel || "")){
+    reihen.push({ n: "Überschrift", links: linksF.titel || "", rechts: rechtsF.titel || "" });
+  }
+  for (const paar of absatzpaare(linksF, rechtsF)){
+    reihen.push({
+      n: "(" + paar.n + ")",
+      links: paar.links ? textAusHtml(paar.links.html) : "",
+      rechts: paar.rechts ? textAusHtml(paar.rechts.html) : "",
+      fehltLinks: !paar.links,
+      fehltRechts: !paar.rechts,
+    });
+  }
+  if ((linksF.fussnote || "") !== (rechtsF.fussnote || "")){
+    reihen.push({ n: "Fußnote", links: linksF.fussnote || "", rechts: rechtsF.fussnote || "" });
+  }
+
+  let geaendert = 0;
+  for (const reihe of reihen){
+    const stuecke = wortvergleich(reihe.links, reihe.rechts);
+    const gleich = stuecke.every(s => s.art === "gleich");
+    if (!gleich) geaendert++;
+
+    for (const seite of ["links", "rechts"]){
+      const zelle = vergleichZelle(stuecke, seite);
+      zelle.classList.add(seite);
+      if (!gleich) zelle.classList.add("geaendert");
+      const marke = document.createElement("span");
+      marke.className = "vergleich-nummer";
+      marke.textContent = reihe.n;
+      zelle.prepend(marke);
+      /* Eine leere Seite bleibt nicht leer stehen. Ohne den Satz sähe eine
+         neu hinzugekommene Fußnote links wie ein Anzeigefehler aus. */
+      const fehlt = seite === "links"
+        ? (reihe.fehltLinks || !reihe.links)
+        : (reihe.fehltRechts || !reihe.rechts);
+      if (fehlt){
+        zelle.classList.add("fehlt");
+        const leer = document.createElement("em");
+        leer.textContent = "In dieser Fassung nicht enthalten.";
+        zelle.appendChild(leer);
+      }
+      raster.appendChild(zelle);
+    }
+  }
+  haupt.appendChild(raster);
+
+  const bilanz = document.createElement("p");
+  bilanz.className = "vergleich-bilanz";
+  bilanz.textContent = geaendert === 0
+    ? "Kein Unterschied im Wortlaut. Die beiden Zeitstände unterscheiden sich "
+      + "nur in Angaben außerhalb des Textes."
+    : geaendert + (geaendert === 1 ? " Abschnitt weicht ab." : " Abschnitte weichen ab.")
+      + " Maßgeblich ist allein der im Bundesgesetzblatt verkündete Wortlaut.";
+  haupt.appendChild(bilanz);
+
+  const quelle = document.createElement("p");
+  quelle.className = "vergleich-quelle";
+  const datei = S.fassungen[S.abk];
+  quelle.textContent = (datei && datei.hinweis) || "";
+  if (quelle.textContent) haupt.appendChild(quelle);
+
+  reiterZeichnen();
+  document.title = norm.enbez + " " + gesetz.abk + " — Fassungsvergleich · steuernorm";
+}
+
+/**
+ * Zustand des Knopfes „Vergleichen".
+ *
+ * Kein Knopf ohne Funktion: Wo es nur einen Zeitstand gibt, bleibt er gesperrt
+ * und sagt im Titel, woran es liegt — statt eine leere Ansicht zu öffnen.
+ */
+function vergleichKnopfSetzen(){
+  const k = el("knopf-vergleichen");
+  if (!k) return;
+  const norm = document.body.dataset.ansicht === "norm"
+    || document.body.dataset.ansicht === "vergleich";
+  const zahl = norm ? fassungenDerNorm().length : 0;
+  k.disabled = zahl < 2;
+  k.title = !norm
+    ? "Fassungsvergleich — erst mit geöffneter Norm."
+    : zahl < 2
+      ? "Von dieser Norm liegt nur ein Zeitstand vor (fassungen/"
+        + String(S.abk).toLowerCase() + ".json)."
+      : zahl + " Zeitstände dieser Norm vergleichen";
+  k.onclick = () => {
+    location.hash = "#/" + String(S.abk).toLowerCase() + "/" + S.normId + "/fassungen";
+  };
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    Verweise im Normtext
 
    „§ 15 Abs. 2 EStG" wird anklickbar. Das ist die Arbeitsweise, die eine
@@ -2834,6 +3343,20 @@ function werkzeugleisteBauen(){
     const apparat = knopf("pille", "Apparat");
     apparat.onclick = () => blattSetzen(true);
     teile.push(einfaerben, apparat);
+  }
+
+  /* „Fassungen" nur, wo es mehr als einen Zeitstand gibt — sonst gar nicht.
+     Ein gesperrter Schalter kostet auf 390 px Platz, den er nicht wert ist. */
+  if ((document.body.dataset.ansicht === "norm" && fassungenDerNorm().length >= 2)
+      || document.body.dataset.ansicht === "vergleich"){
+    const vergleich = knopf("pille",
+      document.body.dataset.ansicht === "vergleich" ? "Normtext" : "Fassungen");
+    vergleich.onclick = () => {
+      location.hash = document.body.dataset.ansicht === "vergleich"
+        ? "#/" + String(S.abk).toLowerCase() + "/" + S.normId
+        : "#/" + String(S.abk).toLowerCase() + "/" + S.normId + "/fassungen";
+    };
+    teile.push(vergleich);
   }
 
   const mappe = knopf("pille", "Mappe");
@@ -3513,6 +4036,7 @@ function hauptStilZuruecksetzen(){
 function startseiteZeichnen(){
   document.body.dataset.ansicht = "start";
   werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3630,6 +4154,7 @@ function startseiteZeichnen(){
 function uebersichtZeichnen(){
   document.body.dataset.ansicht = "uebersicht";
   werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3780,6 +4305,7 @@ function trefferliste(begriff){
 function trefferZeichnen(begriff){
   document.body.dataset.ansicht = "suche";
   werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3969,11 +4495,27 @@ async function wegweiser(){
   merken("zuletzt", S.zuletzt);
 
   hauptStilZuruecksetzen();
+
+  /* Dritter Pfadteil „fassungen" → Vergleichsansicht. Sie steckt im Verweis,
+     damit sie sich verschicken und mit dem Rücksprung verlassen lässt. */
+  if (teile[2] === "fassungen"){
+    document.body.dataset.ansicht = "vergleich";
+    navZeichnen();
+    vergleichZeichnen();
+    vergleichKnopfSetzen();
+    werkzeugleisteBauen();
+    const gewaehlt = el("navspalte").querySelector('[aria-current=true]');
+    if (gewaehlt && gewaehlt.scrollIntoView) gewaehlt.scrollIntoView({ block: "nearest" });
+    window.scrollTo({ top: 0 });
+    return;
+  }
+
   document.body.dataset.ansicht = "norm";
   reiterZeichnen();
   navZeichnen();
   hauptZeichnen();
   apparatZeichnen();
+  vergleichKnopfSetzen();
 
   const aktiv = el("navspalte").querySelector('[aria-current=true]');
   if (aktiv && aktiv.scrollIntoView) aktiv.scrollIntoView({ block: "nearest" });
