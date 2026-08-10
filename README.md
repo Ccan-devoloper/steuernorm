@@ -1,4 +1,4 @@
-# steuernorm — Fassung 6
+# steuernorm — Fassung 7
 
 Die deutschen Steuergesetze im Volltext, als **Arbeitsplatz**: mehrere Normen
 gleichzeitig geöffnet, links das Gesetz, in der Mitte der Lesetext, rechts ein
@@ -15,20 +15,26 @@ Drei Auszeichnungsebenen im Normtext, gleichzeitig lesbar:
 Der Normtext bleibt dabei unangetastet. Was die Farben bedeuten, sagt allein
 die Legende darüber — im Wortlaut steht kein Wort dazu.
 
+**Neu in Fassung 7:** Dunkelmodus mit Umschalter hell · dunkel · System ·
+**Sammelmappe** für Normen und markierte Stellen · **Fassungsvergleich** zweier
+Zeitstände derselben Norm, wortweise · drittes Datenformat `fassungen/`.
+
 **Neu in Fassung 6:** Oberfläche nach dem Übergabepaket neu gebaut · zwei neue
 Datenformate `struktur/` und `verwaltung/` · Startseite, Gesetzesübersicht und
 Trefferliste · Apparat als Blatt auf Mobil · Druckfassung · Schriften lokal.
 
 Die vollständige Herleitung steht in
-[`docs/05-oberflaeche-arbeitsplatz.md`](docs/05-oberflaeche-arbeitsplatz.md),
+[`docs/06-mappe-und-fassungsvergleich.md`](docs/06-mappe-und-fassungsvergleich.md)
+und [`docs/05-oberflaeche-arbeitsplatz.md`](docs/05-oberflaeche-arbeitsplatz.md),
 die der Erkennung in
 [`docs/04-erkennung-und-oberflaeche-fassung-5.md`](docs/04-erkennung-und-oberflaeche-fassung-5.md).
 
 **Geprüft:** `node tools/pruefen.mjs` über alle 14 Gesetze — 1 537 Normen,
 25 236 Spannen, 0 Fehler, 0 Warnungen. `node tools/frontend-pruefen.mjs`
-(jsdom, 17 Prüfungen) und `node tools/browser-pruefen.mjs` (Chromium, 65
+(jsdom, 27 Prüfungen) und `node tools/browser-pruefen.mjs` (Chromium, 130
 Prüfungen: Spaltenmaße, Absturzfreiheit, vier Fensterbreiten, Zuordnung der
-Einfärbung, Farbwahl, Blatt, Druckfassung, Betrieb ohne Netz).
+Einfärbung, Farbwahl, Blatt, Mappe, Fassungsvergleich, Dunkelmodus,
+Druckfassung, Betrieb ohne Netz).
 
 ```bash
 python3 -m http.server 8000     # dann http://localhost:8000
@@ -56,6 +62,10 @@ tools/lib/ausnahmen.mjs           NEU  Ausnahme, Rückausnahme, Vorrangregel
 tools/verweise.mjs                NEU  Rückverweisindex („Zitiert von")
 tools/frontend-pruefen.mjs        NEU  Frontendprüfung mit jsdom
 tools/browser-pruefen.mjs         NEU  Layout- und Offlineprüfung in Chromium
+tools/struktur.mjs                NEU  erzeugt struktur/<gesetz>.json
+tools/fassungen.mjs               NEU  erzeugt fassungen/<gesetz>.json aus dem
+                                       Git-Verlauf von data/
+tools/schriften-holen.mjs         NEU  legt die Schriften ins Repository
 sw.js                             NEU  Offlinezugriff
 tools/lib/validatoren.mjs         hartes Veto gegen unbrauchbare Spannen
 tools/lib/konsens.mjs             Zusammenführung, Konfidenz, Schema, Belegvalidator
@@ -68,10 +78,16 @@ tools/lib/belegprobe.mjs          NEU  prüft, ob ein Beleg die Zuordnung trägt
 .github/workflows/annotationen.yml  geändert: Push erzwingt nicht mehr --ohne-ki
 .github/workflows/belege.yml        NEU
 
+struktur/<gesetz>.json            NEU  Zeichenpositionen der Kategorien
+verwaltung/<gesetz>.json          NEU  Richtlinien und BMF-Schreiben je Stelle
+fassungen/<gesetz>.json           NEU  Zeitstände für den Fassungsvergleich
+
 docs/01-befund-und-quellenanbindung.md
 docs/02-ui-ux-analyse.md
 docs/03-richtigkeit-und-grenzen.md
-docs/04-erkennung-und-oberflaeche-fassung-5.md   NEU
+docs/04-erkennung-und-oberflaeche-fassung-5.md
+docs/05-oberflaeche-arbeitsplatz.md
+docs/06-mappe-und-fassungsvergleich.md            NEU
 ```
 
 ---
@@ -231,6 +247,8 @@ Alle acht Punkte der UI-Analyse. Die wichtigsten:
 "konsistenz":   "node tools/konsistenz.mjs --schreiben",
 "pruefen":      "node tools/pruefen.mjs",
 "verweise":     "node tools/verweise.mjs",
+"struktur":     "node tools/struktur.mjs",
+"fassungen":    "node tools/fassungen.mjs",
 "frontend":     "node tools/frontend-pruefen.mjs",
 "browser":      "node tools/browser-pruefen.mjs",
 "eval":         "node tools/eval.mjs"

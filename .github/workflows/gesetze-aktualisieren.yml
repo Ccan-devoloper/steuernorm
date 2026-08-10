@@ -19,6 +19,12 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v5
+        with:
+          # Der Fassungsvergleich liest die früheren Zeitstände aus dem
+          # Git-Verlauf von data/. Mit der Voreinstellung (depth 1) sähe
+          # tools/fassungen.mjs genau einen Abruf und fände nie eine zweite
+          # Fassung.
+          fetch-depth: 0
 
       - name: Node.js einrichten
         uses: actions/setup-node@v5
@@ -78,5 +84,21 @@ jobs:
             echo "Keine Änderungen am Gesetzesbestand."
           else
             git commit -m "Gesetzestexte aktualisieren"
+            git push
+          fi
+
+      - name: Fassungen fortschreiben
+        shell: bash
+        run: |
+          set -euo pipefail
+          # NACH dem Commit: Das Werkzeug liest den Verlauf, der neue Stand
+          # muss also schon darin stehen. Ändert sich nichts am Wortlaut,
+          # bleibt die Datei gleich und es wird nichts committet.
+          node tools/fassungen.mjs
+          git add fassungen
+          if git diff --cached --quiet; then
+            echo "Keine neuen Fassungen."
+          else
+            git commit -m "Fassungen fortschreiben"
             git push
           fi

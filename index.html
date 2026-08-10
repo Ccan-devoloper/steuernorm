@@ -640,6 +640,140 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   color:var(--text-4);margin-right:5px;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Mappe — Sammelmappe für Normen und markierte Stellen
+   ══════════════════════════════════════════════════════════════════════ */
+.mappe{
+  position:absolute;z-index:70;display:none;flex-direction:column;
+  width:392px;background:var(--weiss);
+  border:1px solid var(--linie);border-radius:8px;
+  box-shadow:var(--schatten-popover);overflow:hidden;
+}
+.mappe.offen{display:flex}
+.mappe-kopf{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 14px 10px;border-bottom:1px solid var(--linie-zart);
+}
+.mappe-kopf-zahl{
+  margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-4);
+}
+.mappe-kopf button{font-size:16px;line-height:1;color:var(--text-4);padding:0 2px}
+.mappe-kopf button:hover{color:var(--text)}
+.mappe-liste{padding:6px}
+.mappe-zeile{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  padding:7px 9px;border-radius:var(--r-knopf);font-size:13.5px;color:var(--text-2b);
+}
+.mappe-zeile:hover{background:var(--zeile-weich)}
+.mappe-zeile[aria-current=true]{background:var(--zeile-aktiv);color:var(--text)}
+.mappe-punkt{width:6px;height:6px;border-radius:50%;flex:none}
+.mappe-zahl{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-4)}
+.mappe-neu{
+  display:flex;align-items:center;gap:8px;width:100%;text-align:left;
+  padding:9px;margin-top:4px;border-top:1px solid var(--linie-zart);
+  font-size:13px;color:var(--text-3);
+}
+.mappe-neu:hover{color:var(--text)}
+
+.mappe-inhalt{background:var(--flaeche);border-top:1px solid var(--linie-zart);padding:12px 14px}
+.mappe-inhalt-kopf{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}
+.mappe-name{font-family:var(--serif);font-size:15px;color:var(--text)}
+.mappe-meta{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-4)}
+.mappe-eintraege{display:flex;flex-direction:column;gap:8px;max-height:320px;overflow-y:auto}
+.mappe-eintrag{
+  display:block;width:100%;text-align:left;
+  background:var(--weiss);border:1px solid var(--linie-schwach);
+  border-left:2px solid var(--linie-schwach);border-radius:var(--r-knopf);
+  padding:8px 10px;
+}
+.mappe-eintrag:hover{border-color:var(--linie-stark)}
+.mappe-eintrag-kopf{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.mappe-eintrag-stelle{font-family:var(--mono);font-size:11px;color:var(--text-2b)}
+.mappe-eintrag-art{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-4);border:1px solid var(--linie-schwach);border-radius:var(--r-chip);padding:1px 5px;
+}
+.mappe-eintrag-datum{margin-left:auto;font-family:var(--mono);font-size:9.5px;color:var(--text-5)}
+.mappe-eintrag-text{font-size:12.5px;line-height:1.5;color:var(--text-2);margin:0}
+.mappe-knoepfe{
+  display:flex;gap:8px;padding:12px 14px 0;border-top:1px solid var(--linie-zart);margin-top:12px;
+}
+.mappe-knoepfe button{
+  border:1px solid var(--linie);background:var(--weiss);color:var(--text-2b);
+  border-radius:var(--r-knopf);padding:5px 10px;font-size:12.5px;white-space:nowrap;
+}
+.mappe-knoepfe button:hover:not(:disabled){border-color:var(--text);color:var(--text)}
+.mappe-knoepfe button:disabled{color:var(--text-5);border-color:var(--linie-schwach);cursor:not-allowed}
+.mappe-knoepfe .rechts{margin-left:auto}
+.mappe-fuss{
+  padding:10px 14px 12px;font-size:11px;line-height:1.55;color:var(--text-5);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Fassungsvergleich
+
+   Zwei Spalten, Wort für Wort verglichen. Die Farben kommen aus denselben
+   Marken wie die Struktur-Einfärbung und folgen damit dem Dunkelmodus von
+   selbst — ein fester Hellwert überstünde den Moduswechsel.
+   ══════════════════════════════════════════════════════════════════════ */
+.vergleich-leiste{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--linie-schwach);
+}
+.vergleich-wahl{
+  font-family:var(--mono);font-size:12px;color:var(--text-2b);
+  background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r-knopf);
+  padding:5px 8px;
+}
+.vergleich-gegen{font-size:12px;color:var(--text-4)}
+.vergleich-zurueck{
+  margin-left:auto;border:1px solid var(--linie);border-radius:var(--r-knopf);
+  padding:5px 10px;font-size:12.5px;color:var(--text-2b);background:var(--weiss);
+}
+.vergleich-zurueck:hover{border-color:var(--text);color:var(--text)}
+.vergleich-legende{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.vergleich-marke{
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 7px;border-radius:var(--r-chip);
+}
+.vergleich-hinweis{font-size:11px;color:var(--text-4)}
+
+.vergleich-raster{display:grid;grid-template-columns:1fr 1fr;gap:1px 18px;align-items:start}
+.vergleich-kopf{
+  position:sticky;top:0;z-index:3;background:var(--papier);
+  display:flex;flex-direction:column;gap:3px;
+  padding:8px 0 9px;border-bottom:1px solid var(--linie);margin-bottom:6px;
+}
+.vergleich-stand{font-size:11.5px;line-height:1.45;color:var(--text-3)}
+.vergleich-zelle{
+  font-family:var(--serif);font-size:14.5px;line-height:1.7;color:var(--text);
+  padding:10px 12px;border-radius:var(--r-knopf);
+  border:1px solid transparent;
+}
+.vergleich-zelle.geaendert{background:var(--flaeche);border-color:var(--linie-zart)}
+.vergleich-zelle.fehlt em{color:var(--text-4);font-size:12.5px}
+.vergleich-nummer{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:var(--text-4);margin-bottom:5px;
+}
+/* Entfallenes und Neues. Beides trägt zusätzlich zur Fläche eine Kante —
+   Farbe allein trägt die Auskunft nicht, wenn sie nicht unterschieden wird. */
+del.v-weg,.vergleich-marke.v-weg{
+  background:var(--au-voll);box-shadow:0 0 0 1px var(--au-rand);
+  text-decoration:line-through;text-decoration-thickness:1px;
+  border-radius:2px;
+}
+ins.v-neu,.vergleich-marke.v-neu{
+  background:var(--rf-voll);box-shadow:0 0 0 1px var(--rf-rand);
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
+  border-radius:2px;
+}
+.vergleich-bilanz{
+  margin:20px 0 0;padding-top:14px;border-top:1px solid var(--linie-schwach);
+  font-size:12.5px;line-height:1.6;color:var(--text-3);
+}
+.vergleich-quelle{margin:8px 0 0;font-size:11px;line-height:1.6;color:var(--text-5)}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -753,6 +887,14 @@ body[data-ansicht=uebersicht] .navspalte,
 body[data-ansicht=uebersicht] .apparat,
 body[data-ansicht=suche] .navspalte,
 body[data-ansicht=suche] .apparat{display:none}
+/* Im Vergleich bleibt das Normenverzeichnis stehen — man springt von hier
+   zur nächsten Norm. Der Apparat geht: Er zeigt Hinweise zur geltenden
+   Fassung, und neben zwei Zeitständen ist nicht zu sagen, zu welchem. */
+body[data-ansicht=vergleich] .apparat{display:none}
+/* Die Einfärbung gilt dem Normtext; im Vergleich ist sie ausgeblendet, also
+   darf ihr Schalter dort auch nicht bedienbar dastehen. */
+body[data-ansicht=vergleich] .einfaerben,
+body[data-ansicht=vergleich] .trenner:first-of-type{display:none}
 body[data-ansicht=start] .reiterleiste,
 body[data-ansicht=suche] .reiterleiste{display:none}
 /* Ohne Normtext gibt es nichts einzufärben — der Schalter gehört dort nicht hin. */
@@ -985,6 +1127,47 @@ body[data-ansicht=start] .suchfeld{display:none}
   }
   .register{justify-content:flex-start;gap:18px;padding:0 18px}
   .registerinhalt{padding:16px 18px}
+
+  /* Die Mappe als Blatt von unten. 392 px hängen an keinem Telefonrand; und
+     der Knopf, an dem sie sonst hängt, ist hier ausgeblendet. Die von der
+     Anzeige gesetzten Koordinaten müssen deshalb überschrieben werden — sie
+     stehen im style-Attribut und gewinnen ohne `!important`. */
+  .mappe{
+    position:fixed;right:0;bottom:0;
+    top:auto!important;left:0!important;
+    width:auto;max-height:82vh;overflow-y:auto;
+    border:0;border-top:1px solid var(--linie);border-radius:16px 16px 0 0;
+    box-shadow:var(--schatten-blatt);
+  }
+  .mappe-eintraege{max-height:none}
+  body[data-mappe=offen] .verdunkelung{
+    display:block;position:fixed;inset:0;z-index:65;background:var(--schleier-blatt);
+  }
+
+  /* Fassungsvergleich: eine Spalte, Paar für Paar untereinander. Zwei
+     Textspalten auf 390 px wären je 175 px breit — darin steht kein Satz.
+     Die Reihenfolge im DOM ist bereits ältere/jüngere je Abschnitt, das
+     Stapeln braucht deshalb nur die eine Spalte. */
+  .vergleich-raster{grid-template-columns:1fr;gap:0}
+  /* Nebeneinander sagt der Spaltenkopf, welche Fassung eine Zelle zeigt.
+     Untereinander sagt es niemand — deshalb klebt hier die Wählleiste, die
+     beide Daten nennt und zugleich das Umschalten von jeder Stelle erlaubt,
+     und jede Zelle trägt ihre Fassung an der Nummer. */
+  .vergleich-leiste{
+    position:sticky;top:0;z-index:4;background:var(--papier);
+    margin:0 0 12px;padding:10px 0 12px;
+  }
+  .vergleich-kopf{position:static;padding:8px 0;margin-bottom:0;border-bottom:0}
+  .vergleich-kopf.links{border-bottom:1px solid var(--linie-zart)}
+  .vergleich-kopf.rechts{border-bottom:1px solid var(--linie);margin-bottom:6px}
+  .vergleich-zelle{padding:12px 12px 14px}
+  .vergleich-zelle.links{margin-top:10px}
+  .vergleich-zelle.rechts{margin-bottom:14px;border-bottom:1px solid var(--linie-zart)}
+  /* Ohne Marke wäre auf dem Telefon nicht zu sehen, welche Zelle welche
+     Fassung zeigt — nebeneinander sagt das der Spaltenkopf, untereinander
+     niemand. */
+  .vergleich-zelle.links .vergleich-nummer::after{content:" · ältere Fassung"}
+  .vergleich-zelle.rechts .vergleich-nummer::after{content:" · jüngere Fassung"}
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1002,7 +1185,7 @@ body[data-ansicht=start] .suchfeld{display:none}
   @page{size:A4;margin:18mm 16mm 20mm}
 
   header,.navspalte,.werkzeugleiste,.blattgriff,.auswahlleiste,.popover,
-  .verdunkelung,.blaettern,.rinne,.legende,.reiterleiste{display:none!important}
+  .mappe,.verdunkelung,.blaettern,.rinne,.legende,.reiterleiste{display:none!important}
 
   body{background:#fff;color:#000;font-size:10.5pt}
   .raster{display:block}
@@ -1063,6 +1246,23 @@ body[data-ansicht=start] .suchfeld{display:none}
   }
 
   .karte,.zitat,.platzhalter{page-break-inside:avoid}
+
+  /* Fassungsvergleich auf Papier. Die Wählleiste ist ein Bedienelement und
+     entfällt; die Fassungen stehen in den Spaltenköpfen. Entfallenes und
+     Neues tragen im Graustufendruck Strich und Unterstreichung, nicht
+     Farbe — zwei Tonwerte lassen sich auf Papier nicht auseinanderhalten. */
+  .vergleich-leiste{display:none!important}
+  .vergleich-raster{gap:0 12pt}
+  .vergleich-kopf{position:static!important;background:none!important;padding:0 0 5pt}
+  .vergleich-zelle{
+    font-size:10pt;line-height:1.55;color:#000;padding:6pt 0 0;
+    background:none!important;border:0!important;page-break-inside:avoid;
+  }
+  del.v-weg{background:none!important;box-shadow:none!important;color:#444}
+  ins.v-neu{background:none!important;box-shadow:none!important;font-weight:600}
+  .vergleich-legende{font-size:8pt;color:#444;margin-bottom:8pt}
+  .vergleich-marke{background:none!important;box-shadow:none!important;padding:0}
+  .vergleich-bilanz,.vergleich-quelle{font-size:8pt;color:#444}
 }
 
 /* Nur im Druck sichtbar. */
@@ -1104,13 +1304,14 @@ body[data-ansicht=start] .suchfeld{display:none}
       </div>
       <div class="trenner" aria-hidden="true"></div>
       <div class="kopf-knoepfe">
-        <!-- Kein Knopf ohne Funktion: Beide sind gesperrt, bis Schritt 11 und 12
-             sie anbinden, und sagen im Titel, warum. Ein Knopf, der ins Leere
-             klickt, ist schlechter als einer, der sichtbar noch nicht kann. -->
+        <!-- Kein Knopf ohne Funktion: „Vergleichen" bleibt gesperrt, bis
+             Schritt 12 ihn anbindet, und sagt im Titel, warum. Ein Knopf, der
+             ins Leere klickt, ist schlechter als einer, der sichtbar noch
+             nicht kann. -->
         <button type="button" id="knopf-vergleichen" disabled
                 title="Fassungsvergleich — folgt in Schritt 12 (fassungen/&lt;gesetz&gt;.json).">Vergleichen</button>
-        <button type="button" id="knopf-mappe" disabled
-                title="Sammelmappe — folgt in Schritt 11.">Mappe</button>
+        <button type="button" id="knopf-mappe" aria-haspopup="dialog" aria-expanded="false"
+                title="Sammelmappe für Normen und markierte Stellen">Mappe</button>
       </div>
     </div>
   </div>
@@ -1125,6 +1326,8 @@ body[data-ansicht=start] .suchfeld{display:none}
   <div class="farbreihe" id="auswahl-farben"></div>
 </div>
 
+<div class="mappe" id="mappe" role="dialog" aria-label="Mappe"></div>
+
 <div class="popover" id="popover" role="dialog" aria-label="Eigene Markierung">
   <div class="popover-kopf">
     <span class="mono-etikett">Eigene Markierung</span>
@@ -1138,7 +1341,7 @@ body[data-ansicht=start] .suchfeld{display:none}
   </div>
   <textarea id="popover-notiz" placeholder="Notiz …" aria-label="Notiz zur Markierung"></textarea>
   <div class="popover-fuss">
-    <span>Nur für Sie sichtbar</span>
+    <span id="popover-mappe">Nur für Sie sichtbar</span>
     <button type="button" id="popover-weg">Entfernen</button>
   </div>
 </div>
@@ -1173,8 +1376,12 @@ const S = {
   verweise: null,          // data/verweise.json .normen — Rückverweise
   verwaltung: {},          // abk → verwaltung/<gesetz>.json
   aktiveVerwaltung: null,  // id | null — flüchtig
+  fassungen: {},           // abk → fassungen/<gesetz>.json
+  vergleich: null,         // { links, rechts } — gewählte Fassungen
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
+  mappen: [],              // Sammelmappen, localStorage
+  aktiveMappe: null,
   darstellung: "system",   // system | hell | dunkel — global, localStorage
   letzteFarbe: "#F2C744",  // localStorage
   filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
@@ -1241,6 +1448,10 @@ async function zutatenLaden(abk){
   if (!(abk in S.verwaltung)){
     try { S.verwaltung[abk] = await holen("verwaltung/" + schluessel + ".json"); }
     catch (e) { S.verwaltung[abk] = null; }
+  }
+  if (!(abk in S.fassungen)){
+    try { S.fassungen[abk] = await holen("fassungen/" + schluessel + ".json"); }
+    catch (e) { S.fassungen[abk] = null; }
   }
 }
 
@@ -1724,6 +1935,11 @@ function markierungAnlegen(anker, praefix, suffix, von){
     datum: new Date().toISOString(),
     mappe: null,
   };
+  /* Eine Markierung gehört immer genau einer Mappe — der zuletzt benutzten.
+     Sie wird angelegt, bevor die Markierung geschrieben wird, damit `mappe`
+     schon beim ersten Schreiben stimmt und nicht in einem zweiten Durchgang
+     nachgetragen werden muss. */
+  eintrag.mappe = markierungInMappe(eintrag).id;
   markierungenSchreiben(S.markierungen.concat([eintrag]));
   return eintrag;
 }
@@ -1733,6 +1949,16 @@ function markierungAendern(id, aenderung){
 }
 function markierungLoeschen(id){
   markierungenSchreiben(S.markierungen.filter(m => m.id !== id));
+  /* Sonst bliebe in der Mappe ein Eintrag stehen, der auf nichts mehr zeigt.
+     Die Anzeige käme damit zurecht („Markierung nicht mehr im Bestand"), aber
+     das ist die Anzeige für verlorene Datensätze, nicht für gelöschte. */
+  let betroffen = false;
+  for (const m of S.mappen){
+    const vorher = m.eintraege.length;
+    m.eintraege = m.eintraege.filter(e => e.markierungId !== id);
+    if (m.eintraege.length !== vorher) betroffen = true;
+  }
+  if (betroffen){ mappenSchreiben(); if (el("mappe").classList.contains("offen")) mappeZeichnen(); }
   if (S.aktiveMarkierung === id) S.aktiveMarkierung = null;
 }
 
@@ -1833,6 +2059,14 @@ function popoverOeffnen(id, ankerKnoten){
   waehler.onchange = () => { hauptZeichnen(); apparatZeichnen(); popoverOeffnen(id, ankerKnoten); };
   waehler.onclick = (e) => e.stopPropagation();
 
+  /* Der Fuß sagt zweierlei: dass nichts davon das Gerät verlässt, und in
+     welcher Mappe die Stelle liegt. Ohne die zweite Angabe ist nicht zu
+     sehen, wohin eine Markierung gelaufen ist. */
+  const mappe = mappeVonMarkierung(id);
+  el("popover-mappe").textContent = mappe
+    ? "Nur für Sie sichtbar · Mappe „" + mappe.name + "“"
+    : "Nur für Sie sichtbar";
+
   const notiz = el("popover-notiz");
   notiz.value = eintrag.notiz || "";
   notiz.oninput = () => markierungAendern(id, { notiz: notiz.value });
@@ -1884,6 +2118,748 @@ function chipsSetzen(wurzel, stellen){
       "Verwaltungsstelle " + [v.quelle, v.fundstelle].filter(Boolean).join(" "));
     letztes.after(chip);
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Mappe
+
+   Die Sammelmappe ist der Ort, an dem Arbeit über die einzelne Sitzung hinaus
+   bestehen bleibt — je Fall, je Seminar, je Frage. Sie liegt im Browser; ein
+   Konto gibt es nicht, und der Fußsatz sagt das.
+
+   Regeln der Spezifikation, die leicht untergehen:
+     · Jede Markierung gehört GENAU EINER Mappe.
+     · Es gibt immer mindestens eine Mappe; ist keine da, heißt sie „Ohne Titel“.
+     · Eine Norm darf in mehreren Mappen liegen.
+     · Eine Mappe zu löschen löscht ihre Markierungen mit — mit Rückfrage.
+   ══════════════════════════════════════════════════════════════════════ */
+const MAPPENFARBEN = ["#F2C744", "#3B7BD1", "#8B7BC7", "#4E9A5F", "#C4577A", "#7A8087"];
+
+function mappenLesen(){
+  const alle = gemerkt("mappen", []);
+  return Array.isArray(alle) && alle.length ? alle : null;
+}
+
+/** Es gibt immer mindestens eine Mappe, und immer genau eine aktive. */
+function mappenSichern(){
+  if (!S.mappen.length){
+    S.mappen = [{
+      id: "m" + Date.now().toString(36),
+      name: "Ohne Titel",
+      farbe: MAPPENFARBEN[0],
+      angelegt: new Date().toISOString(),
+      eintraege: [],
+    }];
+    S.aktiveMappe = null;
+    mappenSchreiben();
+  }
+  if (!S.mappen.some(m => m.id === S.aktiveMappe)){
+    S.aktiveMappe = S.mappen[0].id;
+    mappenSchreiben();
+  }
+}
+
+/**
+ * Markierungen aus der Zeit vor den Mappen einsortieren.
+ *
+ * Die Regel lautet: Jede Markierung liegt in genau einer Mappe. Wer den
+ * Bestand vorher angelegt hat, hätte sonst Markierungen im Text, die in keiner
+ * Mappe auftauchen — die Mappe sähe leer aus, obwohl markiert wurde.
+ */
+function mappenNachtragen(){
+  mappenSichern();
+  const bekannt = new Set(S.mappen.flatMap(m => m.eintraege.map(e => e.markierungId)));
+  const offen = S.markierungen.filter(m => !bekannt.has(m.id));
+  if (!offen.length) return;
+  const ziel = aktiveMappe();
+  for (const m of offen){
+    ziel.eintraege.unshift({
+      art: "markierung", gesetz: m.gesetz, normId: m.norm,
+      markierungId: m.id, hinzugefuegt: m.datum,
+    });
+  }
+  ziel.eintraege.sort((a, b) => String(b.hinzugefuegt).localeCompare(String(a.hinzugefuegt)));
+  mappenSchreiben();
+}
+
+function mappenSchreiben(){
+  merken("mappen", S.mappen);
+  merken("aktiveMappe", S.aktiveMappe);
+}
+
+const aktiveMappe = () => S.mappen.find(m => m.id === S.aktiveMappe) || S.mappen[0];
+
+/**
+ * Die Mappe, in der eine Markierung liegt.
+ *
+ * Maßgeblich ist der Eintrag in der Mappe, nicht das Feld `mappe` an der
+ * Markierung: Beim Verschieben wird der Eintrag umgehängt, und zwei Quellen
+ * für dieselbe Auskunft laufen früher oder später auseinander.
+ */
+const mappeVonMarkierung = (id) =>
+  S.mappen.find(m => m.eintraege.some(e => e.markierungId === id)) || null;
+
+function mappeAnlegen(){
+  const name = window.prompt("Name der neuen Mappe", "");
+  if (name === null) return;
+  const eintrag = {
+    id: "m" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5),
+    name: name.trim() || "Ohne Titel",
+    farbe: MAPPENFARBEN[S.mappen.length % MAPPENFARBEN.length],
+    angelegt: new Date().toISOString(),
+    eintraege: [],
+  };
+  S.mappen.push(eintrag);
+  S.aktiveMappe = eintrag.id;
+  mappenSchreiben();
+  mappeZeichnen();
+}
+
+/** Fügt die offene Norm in die aktive Mappe ein. Doppelt geht nicht. */
+function normInMappe(){
+  const mappe = aktiveMappe();
+  const schon = mappe.eintraege.some(e => e.art === "norm" && e.gesetz === S.abk && e.normId === S.normId);
+  if (schon) return;
+  mappe.eintraege.unshift({
+    art: "norm", gesetz: S.abk, normId: S.normId,
+    hinzugefuegt: new Date().toISOString(),
+  });
+  mappenSchreiben();
+  mappeZeichnen();
+}
+
+/** Eine neue Markierung landet in der zuletzt benutzten Mappe. */
+function markierungInMappe(markierung){
+  mappenSichern();
+  const mappe = aktiveMappe();
+  mappe.eintraege.unshift({
+    art: "markierung", gesetz: markierung.gesetz, normId: markierung.norm,
+    markierungId: markierung.id, hinzugefuegt: markierung.datum,
+  });
+  mappenSchreiben();
+  return mappe;
+}
+
+function mappeEintragEntfernen(mappeId, index){
+  const mappe = S.mappen.find(m => m.id === mappeId);
+  if (!mappe) return;
+  mappe.eintraege.splice(index, 1);
+  mappenSchreiben();
+  mappeZeichnen();
+}
+
+function mappeUmbenennen(){
+  const mappe = aktiveMappe();
+  const name = window.prompt("Mappe umbenennen", mappe.name);
+  if (name === null) return;
+  mappe.name = name.trim() || "Ohne Titel";
+  mappenSchreiben();
+  mappeZeichnen();
+}
+
+function mappeLoeschen(){
+  const mappe = aktiveMappe();
+  const markierungen = mappe.eintraege.filter(e => e.art === "markierung").length;
+  const frage = markierungen
+    ? `Mappe „${mappe.name}“ löschen? ${markierungen} enthaltene Markierung(en) werden mitgelöscht.`
+    : `Mappe „${mappe.name}“ löschen?`;
+  if (!window.confirm(frage)) return;
+
+  const ids = new Set(mappe.eintraege.filter(e => e.art === "markierung").map(e => e.markierungId));
+  if (ids.size) markierungenSchreiben(S.markierungen.filter(m => !ids.has(m.id)));
+  S.mappen = S.mappen.filter(m => m.id !== mappe.id);
+  S.aktiveMappe = S.mappen.length ? S.mappen[0].id : null;
+  mappenSichern();
+  mappenSchreiben();
+  mappeZeichnen();
+  if (document.body.dataset.ansicht === "norm"){ hauptZeichnen(); apparatZeichnen(); }
+}
+
+/** „Alle öffnen" legt jede Norm der Mappe als Reiter an. */
+function mappeAlleOeffnen(){
+  const mappe = aktiveMappe();
+  const normen = mappe.eintraege.filter(e => e.gesetz && e.normId);
+  let erste = null;
+  for (const e of normen){
+    if (!S.geoeffnet.some(r => r.gesetz === e.gesetz && r.norm === e.normId)){
+      S.geoeffnet.push({ gesetz: e.gesetz, norm: e.normId });
+    }
+    if (!erste) erste = e;
+  }
+  merken("geoeffnet", S.geoeffnet);
+  mappeSchliessen();
+  if (erste) location.hash = "#/" + erste.gesetz.toLowerCase() + "/" + erste.normId;
+  else reiterZeichnen();
+}
+
+/* ── Anzeige ───────────────────────────────────────────────────────── */
+
+function mappeZeichnen(){
+  mappenSichern();
+  const feld = el("mappe");
+  feld.innerHTML = "";
+  const mappe = aktiveMappe();
+
+  /* Kopfzeile */
+  const kopf = document.createElement("div");
+  kopf.className = "mappe-kopf";
+  const etikett = document.createElement("span");
+  etikett.className = "mono-etikett";
+  etikett.textContent = "Mappe";
+  /* Kein Knopf, der nur eine Meldung aufmacht: Alle Mappen stehen ohnehin
+     gleich darunter. Die Kopfzeile zählt sie und schließt. */
+  const kopfzahl = document.createElement("span");
+  kopfzahl.className = "mappe-kopf-zahl";
+  kopfzahl.textContent = S.mappen.length + (S.mappen.length === 1 ? " Mappe" : " Mappen");
+  const zu = knopf("", "×");
+  zu.setAttribute("aria-label", "Mappe schließen");
+  zu.onclick = mappeSchliessen;
+  kopf.append(etikett, kopfzahl, zu);
+  feld.appendChild(kopf);
+
+  /* Liste der Mappen */
+  const liste = document.createElement("div");
+  liste.className = "mappe-liste";
+  for (const m of S.mappen){
+    const zeile = knopf("mappe-zeile");
+    zeile.setAttribute("aria-current", String(m.id === mappe.id));
+    const punkt = document.createElement("span");
+    punkt.className = "mappe-punkt";
+    punkt.style.background = m.farbe;
+    const name = document.createElement("span");
+    name.textContent = m.name;
+    const zahl = document.createElement("span");
+    zahl.className = "mappe-zahl";
+    zahl.textContent = m.eintraege.length;
+    zeile.append(punkt, name, zahl);
+    zeile.onclick = () => { S.aktiveMappe = m.id; mappenSchreiben(); mappeZeichnen(); };
+    liste.appendChild(zeile);
+  }
+  const neu = knopf("mappe-neu", "+  Neue Mappe anlegen");
+  neu.onclick = mappeAnlegen;
+  liste.appendChild(neu);
+  feld.appendChild(liste);
+
+  /* Inhalt der aktiven Mappe */
+  const inhalt = document.createElement("div");
+  inhalt.className = "mappe-inhalt";
+  const ikopf = document.createElement("div");
+  ikopf.className = "mappe-inhalt-kopf";
+  const iname = document.createElement("span");
+  iname.className = "mappe-name";
+  iname.textContent = mappe.name;
+  const imeta = document.createElement("span");
+  imeta.className = "mappe-meta";
+  const zahl = mappe.eintraege.length;
+  imeta.textContent = zahl + (zahl === 1 ? " Eintrag" : " Einträge")
+    + " · " + new Date(mappe.angelegt).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+  ikopf.append(iname, imeta);
+  inhalt.appendChild(ikopf);
+
+  const eintraege = document.createElement("div");
+  eintraege.className = "mappe-eintraege";
+  if (!mappe.eintraege.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.textContent = "Noch nichts gesammelt. Über „§ … hinzufügen“ kommt die offene Norm hinein; "
+      + "eigene Markierungen landen von selbst hier.";
+    eintraege.appendChild(p);
+  }
+
+  for (const [i, e] of mappe.eintraege.entries()){
+    const karte = knopf("mappe-eintrag");
+    const meta = registerEintrag(e.gesetz);
+    const norm = meta && meta.normen ? meta.normen.find(n => n.id === e.normId) : null;
+    const markierung = e.markierungId ? S.markierungen.find(m => m.id === e.markierungId) : null;
+
+    /* Eine Markierung, deren Datensatz fehlt, wird als fehlend gezeigt —
+       nicht stillschweigend übersprungen. */
+    if (e.art === "markierung" && markierung) karte.style.borderLeftColor = markierung.farbe;
+
+    const kzeile = document.createElement("div");
+    kzeile.className = "mappe-eintrag-kopf";
+    const stelle = document.createElement("span");
+    stelle.className = "mappe-eintrag-stelle";
+    stelle.textContent = e.art === "markierung"
+      ? (markierung && markierung.fundstelle ? markierung.fundstelle : "ohne Fundstelle")
+      : (norm ? norm.e + " " + meta.abk : "§ " + e.normId + " " + e.gesetz);
+    const art = document.createElement("span");
+    art.className = "mappe-eintrag-art";
+    art.textContent = e.art === "markierung" ? "Markierung" : "Norm";
+    const datum = document.createElement("span");
+    datum.className = "mappe-eintrag-datum";
+    datum.textContent = new Date(e.hinzugefuegt).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+    kzeile.append(stelle, art, datum);
+    karte.appendChild(kzeile);
+
+    const text = document.createElement("p");
+    text.className = "mappe-eintrag-text";
+    if (e.art === "markierung"){
+      text.textContent = markierung
+        ? "„" + markierung.anker + "“" + (markierung.notiz ? " — " + markierung.notiz : "")
+        : "Markierung nicht mehr im Bestand.";
+      if (!markierung) text.style.color = "var(--text-4)";
+    } else {
+      text.textContent = norm ? (norm.t || "ohne Überschrift")
+        : "Datensatz " + e.gesetz + " ausstehend";
+      if (!norm) text.style.color = "var(--text-4)";
+    }
+    karte.appendChild(text);
+
+    karte.onclick = () => {
+      mappeSchliessen();
+      location.hash = "#/" + String(e.gesetz).toLowerCase() + "/" + e.normId;
+    };
+    karte.oncontextmenu = (ev) => {
+      ev.preventDefault();
+      if (window.confirm("Eintrag aus der Mappe entfernen?")) mappeEintragEntfernen(mappe.id, i);
+    };
+    eintraege.appendChild(karte);
+  }
+  inhalt.appendChild(eintraege);
+
+  /* Knopfzeile */
+  const knoepfe = document.createElement("div");
+  knoepfe.className = "mappe-knoepfe";
+  const norm = S.gesetz && S.normId ? S.gesetz.normen.find(n => n.id === S.normId) : null;
+  const hinzu = knopf("", norm ? norm.enbez + " hinzufügen" : "Norm hinzufügen");
+  hinzu.disabled = !norm || document.body.dataset.ansicht !== "norm";
+  if (hinzu.disabled) hinzu.title = "Keine Norm geöffnet.";
+  hinzu.onclick = normInMappe;
+  const umbenennen = knopf("", "Umbenennen");
+  umbenennen.onclick = mappeUmbenennen;
+  const loeschen = knopf("", "Löschen");
+  loeschen.onclick = mappeLoeschen;
+  const oeffnen = knopf("rechts", "Alle öffnen");
+  oeffnen.disabled = !mappe.eintraege.length;
+  oeffnen.onclick = mappeAlleOeffnen;
+  knoepfe.append(hinzu, umbenennen, loeschen, oeffnen);
+  inhalt.appendChild(knoepfe);
+  feld.appendChild(inhalt);
+
+  const fuss = document.createElement("p");
+  fuss.className = "mappe-fuss";
+  // Ehrlich: Es gibt kein Konto. Die Mappen liegen im Browser.
+  fuss.textContent = "Mappen liegen nur in diesem Browser. Eine Markierung gehört immer genau "
+    + "einer Mappe; „Alle öffnen“ legt jede Norm der Mappe als Reiter an.";
+  feld.appendChild(fuss);
+}
+
+function mappeOeffnen(){
+  mappeZeichnen();
+  const feld = el("mappe");
+  feld.classList.add("offen");
+  const knopfKasten = el("knopf-mappe").getBoundingClientRect();
+  const links = Math.min(
+    window.scrollX + knopfKasten.right - feld.offsetWidth,
+    window.scrollX + document.documentElement.clientWidth - feld.offsetWidth - 12,
+  );
+  feld.style.top = (window.scrollY + knopfKasten.bottom + 8) + "px";
+  feld.style.left = Math.max(8, links) + "px";
+  el("knopf-mappe").setAttribute("aria-expanded", "true");
+  /* Auf dem Telefon ist die Mappe ein Blatt von unten; die Marke schaltet den
+     Schleier dahinter. Am Schreibtisch hat sie keine Wirkung. */
+  document.body.dataset.mappe = "offen";
+}
+
+function mappeSchliessen(){
+  el("mappe").classList.remove("offen");
+  const k = el("knopf-mappe");
+  if (k) k.setAttribute("aria-expanded", "false");
+  delete document.body.dataset.mappe;
+}
+
+function mappeUmschalten(){
+  if (el("mappe").classList.contains("offen")) mappeSchliessen();
+  else mappeOeffnen();
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Fassungsvergleich
+
+   Zwei Zeitstände derselben Norm nebeneinander, Wort für Wort verglichen.
+
+   Die Fassungen stammen aus `fassungen/<gesetz>.json`, das der Git-Verlauf
+   von `data/` speist — echte, datierte Zeitschnitte, keine nachgebaute
+   Historie. Wo es nur einen Stand gibt, bleibt der Knopf gesperrt und sagt
+   warum. Ein Vergleich mit sich selbst ist keiner.
+
+   Struktur-Einfärbung und eigene Markierungen sind hier ausgeblendet: Im
+   Vergleich zählt der Unterschied zwischen den Fassungen; drei weitere
+   Farbebenen darüber machen ihn unlesbar.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/** Fassungen der laufenden Norm, jüngste zuerst — leer ohne Datensatz. */
+function fassungenDerNorm(abk = S.abk, normId = S.normId){
+  const datei = S.fassungen[abk];
+  if (!datei || !datei.normen) return [];
+  const eintrag = datei.normen[normId];
+  return eintrag && Array.isArray(eintrag.fassungen) ? eintrag.fassungen : [];
+}
+
+/**
+ * Wortlaut einer Fassung.
+ *
+ * Die jüngste führt keinen eigenen — sie steht in `data/` und würde sonst
+ * doppelt im Bestand liegen. Sie wird hier aus der geladenen Norm ergänzt.
+ */
+function fassungWortlaut(fassung){
+  if (!fassung.aktuell) return fassung;
+  const norm = S.gesetz.normen.find(n => n.id === S.normId);
+  return norm
+    ? { ...fassung, enbez: norm.enbez, titel: norm.titel, abs: norm.abs, fussnote: norm.fussnote ?? null }
+    : { ...fassung, abs: [] };
+}
+
+/**
+ * Reiner Text aus dem amtlichen HTML eines Absatzes.
+ *
+ * Zwischen zwei UNMITTELBAR benachbarten Elementen steht im Quelltext kein
+ * Leerzeichen, und der Browser setzt auch keines. Ohne die eingefügte
+ * Trennung klebte „vorzunehmen ist:nach der" zusammen, und der Wortvergleich
+ * sähe ein Wort, wo zwei stehen — mit dem Ergebnis, dass jede Aufzählung als
+ * geändert gälte.
+ *
+ * Maßgeblich ist `nextSibling`, nicht `nextElementSibling`: Letzteres
+ * überspringt Text und träfe auch auf `<span>1</span>Der Beschluss … <span>2`
+ * zu, wo die Satznummer schon durch den Text getrennt ist. Die Regel ist
+ * dieselbe wie in der Anzeige (`dd>span+span::before`).
+ */
+function textAusHtml(html){
+  const kasten = document.createElement("div");
+  kasten.innerHTML = String(html || "");
+  for (const knoten of [...kasten.querySelectorAll("*")]){
+    /* Die Satznummer steht im Quelltext ohne Abstand vor dem Satz („<span
+       class="sn">2</span>Nach diesem"); in der Lesespalte trennt sie eine
+       Marge, hier ein Leerzeichen. Ohne das läse der Vergleich „2Nach" als
+       ein Wort und meldete den ganzen Satz als geändert, sobald sich die
+       Nummerierung verschiebt. */
+    if (knoten.classList.contains("sn")){ knoten.after(document.createTextNode(" ")); continue; }
+    const naechster = knoten.nextSibling;
+    if (naechster && naechster.nodeType === 1) knoten.after(document.createTextNode(" "));
+  }
+  return kasten.textContent.replace(/\s+/g, " ").trim();
+}
+
+/** Wörter samt folgendem Leerraum — die Einheit des Vergleichs. */
+const inWoerter = (text) => text.match(/\S+\s*/g) || [];
+
+/* Über dieser Größe wird der Wortvergleich nicht mehr gerechnet. 1200 × 1200
+   Wörter sind 1,4 Mio. Zellen; darüber steht die Wartezeit in keinem
+   Verhältnis, und ein Absatz mit über 1200 Wörtern ist ohnehin keiner, den
+   man wortweise liest. Dann wird der Absatz als Ganzes ausgewiesen. */
+const VERGLEICH_GRENZE = 1200;
+
+/**
+ * Wortvergleich zweier Absätze über die längste gemeinsame Teilfolge.
+ *
+ * Ergebnis ist eine Folge von Stücken `{ art, text }` mit art ∈
+ * gleich | weg | neu. „weg" steht nur links, „neu" nur rechts.
+ */
+function wortvergleich(alt, neu){
+  const a = inWoerter(alt);
+  const b = inWoerter(neu);
+  if (a.length > VERGLEICH_GRENZE || b.length > VERGLEICH_GRENZE){
+    return alt === neu
+      ? [{ art: "gleich", text: alt }]
+      : [{ art: "weg", text: alt }, { art: "neu", text: neu }];
+  }
+
+  /* Gleiche Ränder vorweg abschneiden. Das ist der Normalfall — geändert wird
+     selten der ganze Absatz — und drückt die Tabelle auf einen Bruchteil. */
+  let vorn = 0;
+  while (vorn < a.length && vorn < b.length && a[vorn] === b[vorn]) vorn++;
+  let hinten = 0;
+  while (hinten < a.length - vorn && hinten < b.length - vorn
+    && a[a.length - 1 - hinten] === b[b.length - 1 - hinten]) hinten++;
+
+  const ka = a.slice(vorn, a.length - hinten);
+  const kb = b.slice(vorn, b.length - hinten);
+
+  /* Längste gemeinsame Teilfolge, Zeile für Zeile. */
+  const n = ka.length, m = kb.length;
+  const tafel = new Uint32Array((n + 1) * (m + 1));
+  for (let i = n - 1; i >= 0; i--){
+    for (let j = m - 1; j >= 0; j--){
+      tafel[i * (m + 1) + j] = ka[i] === kb[j]
+        ? tafel[(i + 1) * (m + 1) + j + 1] + 1
+        : Math.max(tafel[(i + 1) * (m + 1) + j], tafel[i * (m + 1) + j + 1]);
+    }
+  }
+
+  const stuecke = [];
+  const anfuegen = (art, text) => {
+    if (!text) return;
+    const letztes = stuecke[stuecke.length - 1];
+    if (letztes && letztes.art === art) letztes.text += text;
+    else stuecke.push({ art, text });
+  };
+
+  anfuegen("gleich", a.slice(0, vorn).join(""));
+  let i = 0, j = 0;
+  while (i < n && j < m){
+    if (ka[i] === kb[j]){ anfuegen("gleich", ka[i]); i++; j++; }
+    else if (tafel[(i + 1) * (m + 1) + j] >= tafel[i * (m + 1) + j + 1]){ anfuegen("weg", ka[i]); i++; }
+    else { anfuegen("neu", kb[j]); j++; }
+  }
+  while (i < n){ anfuegen("weg", ka[i]); i++; }
+  while (j < m){ anfuegen("neu", kb[j]); j++; }
+  anfuegen("gleich", a.slice(a.length - hinten).join(""));
+  return stuecke;
+}
+
+/**
+ * Absätze zweier Fassungen paarweise ordnen.
+ *
+ * Geordnet wird über die Absatznummer, nicht über die Reihenfolge: Fällt ein
+ * Absatz weg oder kommt einer hinzu, verschöbe sich sonst alles danach und der
+ * Vergleich zeigte lauter Änderungen, wo keine sind.
+ */
+function absatzpaare(alt, neu){
+  const links = alt.abs || [];
+  const rechts = neu.abs || [];
+  const namen = [];
+  const gesehen = new Set();
+  for (const liste of [links, rechts]){
+    for (const [i, a] of liste.entries()){
+      const name = a.n || "o" + i;
+      if (!gesehen.has(name)){ gesehen.add(name); namen.push(name); }
+    }
+  }
+  const finde = (liste, name) => liste.find((a, i) => (a.n || "o" + i) === name) || null;
+  return namen.map(name => ({ n: name, links: finde(links, name), rechts: finde(rechts, name) }));
+}
+
+/** Eine Zelle des Vergleichs: Stücke als ins/del, Gleiches als Text. */
+function vergleichZelle(stuecke, seite){
+  const zelle = document.createElement("div");
+  zelle.className = "vergleich-zelle";
+  for (const s of stuecke){
+    if (s.art === "gleich"){ zelle.appendChild(document.createTextNode(s.text)); continue; }
+    if (s.art === "weg" && seite !== "links") continue;
+    if (s.art === "neu" && seite !== "rechts") continue;
+    const marke = document.createElement(s.art === "weg" ? "del" : "ins");
+    marke.className = s.art === "weg" ? "v-weg" : "v-neu";
+    marke.textContent = s.text;
+    zelle.appendChild(marke);
+  }
+  return zelle;
+}
+
+function vergleichZeichnen(){
+  const haupt = el("haupt");
+  haupt.innerHTML = "";
+  const gesetz = S.gesetz;
+  const norm = gesetz.normen.find(n => n.id === S.normId) || gesetz.normen[0];
+  const alle = fassungenDerNorm();
+
+  const druckkopf = document.createElement("div");
+  druckkopf.className = "druckkopf";
+  const dk1 = document.createElement("span"); dk1.textContent = "steuernorm";
+  const dk2 = document.createElement("span");
+  dk2.textContent = gesetz.abk + " · " + norm.enbez + " · Fassungsvergleich";
+  druckkopf.append(dk1, dk2);
+  haupt.appendChild(druckkopf);
+
+  const krume = document.createElement("div");
+  krume.className = "brotkrume";
+  for (const stueck of [gesetz.abk.toUpperCase(), "›", norm.enbez, "›", "Fassungen"]){
+    const s = document.createElement("span");
+    s.textContent = stueck;
+    krume.appendChild(s);
+  }
+  haupt.appendChild(krume);
+
+  const h1 = document.createElement("h1");
+  h1.appendChild(document.createTextNode(norm.enbez + " "));
+  if (norm.titel){
+    const t = document.createElement("span");
+    t.className = "titel";
+    t.textContent = norm.titel;
+    h1.appendChild(t);
+  }
+  haupt.appendChild(h1);
+
+  /* Weniger als zwei Fassungen: Es gibt nichts zu vergleichen, und das wird
+     gesagt — samt der Datei, in der der zweite Stand stünde. */
+  if (alle.length < 2){
+    const kasten = document.createElement("div");
+    kasten.className = "melder";
+    const stark = document.createElement("strong");
+    stark.textContent = "Von dieser Norm liegt nur ein Zeitstand vor.";
+    const p = document.createElement("p");
+    p.textContent = "Ein zweiter stünde in fassungen/"
+      + gesetz.abk.toLowerCase() + ".json. Der Bestand kennt bisher nur den "
+      + "geltenden Wortlaut; frühere Fassungen entstehen erst, wenn sich der "
+      + "Text zwischen zwei Abrufen ändert.";
+    kasten.append(stark, p);
+    const zurueck = knopf("", "Zum Normtext");
+    zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+    kasten.appendChild(zurueck);
+    haupt.appendChild(kasten);
+    reiterZeichnen();
+    return;
+  }
+
+  /* Voreinstellung: die beiden jüngsten. Links steht immer die ältere.
+     Die Wahl gilt für diese Norm; bei einer anderen fängt sie von vorn an,
+     denn Datumsangaben können sich zwischen Normen zufällig gleichen. */
+  const kennung = S.abk + "/" + norm.id;
+  if (!S.vergleich || S.vergleich.norm !== kennung
+      || !alle.some(f => f.id === S.vergleich.links)
+      || !alle.some(f => f.id === S.vergleich.rechts)){
+    S.vergleich = { norm: kennung, links: alle[1].id, rechts: alle[0].id };
+  }
+  const linksF = fassungWortlaut(alle.find(f => f.id === S.vergleich.links));
+  const rechtsF = fassungWortlaut(alle.find(f => f.id === S.vergleich.rechts));
+
+  /* Wählleiste */
+  const leiste = document.createElement("div");
+  leiste.className = "vergleich-leiste";
+  const waehler = (seite) => {
+    const w = document.createElement("select");
+    w.className = "vergleich-wahl";
+    w.setAttribute("aria-label", seite === "links" ? "Ältere Fassung" : "Jüngere Fassung");
+    for (const f of alle){
+      const o = document.createElement("option");
+      o.value = f.id;
+      o.textContent = f.abgerufen + (f.aktuell ? " · geltend" : "");
+      o.selected = f.id === S.vergleich[seite];
+      w.appendChild(o);
+    }
+    w.onchange = () => { S.vergleich = { ...S.vergleich, [seite]: w.value }; vergleichZeichnen(); };
+    return w;
+  };
+  const gegen = document.createElement("span");
+  gegen.className = "vergleich-gegen";
+  gegen.textContent = "gegen";
+  const zurueck = knopf("vergleich-zurueck", "Zum Normtext");
+  zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+  leiste.append(waehler("links"), gegen, waehler("rechts"), zurueck);
+  haupt.appendChild(leiste);
+
+  /* Legende und Kennzeichnung des Maschinellen */
+  const legende = document.createElement("div");
+  legende.className = "vergleich-legende";
+  for (const [klasse, name] of [["v-weg", "entfallen"], ["v-neu", "neu"]]){
+    const marke = document.createElement("span");
+    marke.className = "vergleich-marke " + klasse;
+    marke.textContent = name;
+    legende.appendChild(marke);
+  }
+  const hinweis = document.createElement("span");
+  hinweis.className = "vergleich-hinweis";
+  hinweis.textContent = "Wortvergleich maschinell erzeugt, nicht redaktionell geprüft";
+  legende.appendChild(hinweis);
+  haupt.appendChild(legende);
+
+  /* Spaltenköpfe. Sie kleben, damit auch weit unten klar ist, welche Spalte
+     welche Fassung zeigt. */
+  const raster = document.createElement("div");
+  raster.className = "vergleich-raster";
+  for (const [seite, f] of [["links", linksF], ["rechts", rechtsF]]){
+    const kopf = document.createElement("div");
+    kopf.className = "vergleich-kopf " + seite;
+    const datum = document.createElement("span");
+    datum.className = "mono-etikett";
+    datum.textContent = "Abgerufen " + f.abgerufen + (f.aktuell ? " · geltend" : "");
+    const stand = document.createElement("span");
+    stand.className = "vergleich-stand";
+    // Maßgeblich ist die amtliche Standangabe, nicht das Abrufdatum.
+    stand.textContent = f.stand || "ohne Standangabe";
+    kopf.append(datum, stand);
+    raster.appendChild(kopf);
+  }
+
+  /* Überschrift, Absätze, Fußnote — in dieser Reihenfolge. */
+  const reihen = [];
+  if ((linksF.titel || "") !== (rechtsF.titel || "")){
+    reihen.push({ n: "Überschrift", links: linksF.titel || "", rechts: rechtsF.titel || "" });
+  }
+  for (const paar of absatzpaare(linksF, rechtsF)){
+    reihen.push({
+      n: "(" + paar.n + ")",
+      links: paar.links ? textAusHtml(paar.links.html) : "",
+      rechts: paar.rechts ? textAusHtml(paar.rechts.html) : "",
+      fehltLinks: !paar.links,
+      fehltRechts: !paar.rechts,
+    });
+  }
+  if ((linksF.fussnote || "") !== (rechtsF.fussnote || "")){
+    reihen.push({ n: "Fußnote", links: linksF.fussnote || "", rechts: rechtsF.fussnote || "" });
+  }
+
+  let geaendert = 0;
+  for (const reihe of reihen){
+    const stuecke = wortvergleich(reihe.links, reihe.rechts);
+    const gleich = stuecke.every(s => s.art === "gleich");
+    if (!gleich) geaendert++;
+
+    for (const seite of ["links", "rechts"]){
+      const zelle = vergleichZelle(stuecke, seite);
+      zelle.classList.add(seite);
+      if (!gleich) zelle.classList.add("geaendert");
+      const marke = document.createElement("span");
+      marke.className = "vergleich-nummer";
+      marke.textContent = reihe.n;
+      zelle.prepend(marke);
+      /* Eine leere Seite bleibt nicht leer stehen. Ohne den Satz sähe eine
+         neu hinzugekommene Fußnote links wie ein Anzeigefehler aus. */
+      const fehlt = seite === "links"
+        ? (reihe.fehltLinks || !reihe.links)
+        : (reihe.fehltRechts || !reihe.rechts);
+      if (fehlt){
+        zelle.classList.add("fehlt");
+        const leer = document.createElement("em");
+        leer.textContent = "In dieser Fassung nicht enthalten.";
+        zelle.appendChild(leer);
+      }
+      raster.appendChild(zelle);
+    }
+  }
+  haupt.appendChild(raster);
+
+  const bilanz = document.createElement("p");
+  bilanz.className = "vergleich-bilanz";
+  bilanz.textContent = geaendert === 0
+    ? "Kein Unterschied im Wortlaut. Die beiden Zeitstände unterscheiden sich "
+      + "nur in Angaben außerhalb des Textes."
+    : geaendert + (geaendert === 1 ? " Abschnitt weicht ab." : " Abschnitte weichen ab.")
+      + " Maßgeblich ist allein der im Bundesgesetzblatt verkündete Wortlaut.";
+  haupt.appendChild(bilanz);
+
+  const quelle = document.createElement("p");
+  quelle.className = "vergleich-quelle";
+  const datei = S.fassungen[S.abk];
+  quelle.textContent = (datei && datei.hinweis) || "";
+  if (quelle.textContent) haupt.appendChild(quelle);
+
+  reiterZeichnen();
+  document.title = norm.enbez + " " + gesetz.abk + " — Fassungsvergleich · steuernorm";
+}
+
+/**
+ * Zustand des Knopfes „Vergleichen".
+ *
+ * Kein Knopf ohne Funktion: Wo es nur einen Zeitstand gibt, bleibt er gesperrt
+ * und sagt im Titel, woran es liegt — statt eine leere Ansicht zu öffnen.
+ */
+function vergleichKnopfSetzen(){
+  const k = el("knopf-vergleichen");
+  if (!k) return;
+  const norm = document.body.dataset.ansicht === "norm"
+    || document.body.dataset.ansicht === "vergleich";
+  const zahl = norm ? fassungenDerNorm().length : 0;
+  k.disabled = zahl < 2;
+  k.title = !norm
+    ? "Fassungsvergleich — erst mit geöffneter Norm."
+    : zahl < 2
+      ? "Von dieser Norm liegt nur ein Zeitstand vor (fassungen/"
+        + String(S.abk).toLowerCase() + ".json)."
+      : zahl + " Zeitstände dieser Norm vergleichen";
+  k.onclick = () => {
+    location.hash = "#/" + String(S.abk).toLowerCase() + "/" + S.normId + "/fassungen";
+  };
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -2347,26 +3323,51 @@ function blattSetzen(offen){
 function werkzeugleisteBauen(){
   const leiste = el("werkzeugleiste");
   leiste.innerHTML = "";
-  if (document.body.dataset.ansicht !== "norm") return;
+  const teile = [];
 
-  const stand = strukturSetzen(S.strukturModus, true);
-  const STUFEN = ["aus", "dezent", "voll"];
-  const einfaerben = knopf("pille", "Einfärben: " + stand.angezeigt);
-  einfaerben.disabled = !stand.moeglich;
-  if (!stand.moeglich) einfaerben.title = "Für diese Norm liegt kein Strukturdatensatz vor.";
-  einfaerben.onclick = () => {
-    const naechste = STUFEN[(STUFEN.indexOf(S.strukturModus) + 1) % STUFEN.length];
-    strukturSetzen(naechste);
-    hauptZeichnen();
-  };
+  /* Einfärben und Apparat gibt es nur, wo ein Normtext liegt. Mappe und
+     Gesetze stehen in jeder Ansicht — auf dem Telefon ist die Kopfzeile der
+     Knöpfe ausgeblendet, die Leiste ist dort der einzige Weg zur Mappe. */
+  if (document.body.dataset.ansicht === "norm"){
+    const stand = strukturSetzen(S.strukturModus, true);
+    const STUFEN = ["aus", "dezent", "voll"];
+    const einfaerben = knopf("pille", "Einfärben: " + stand.angezeigt);
+    einfaerben.disabled = !stand.moeglich;
+    if (!stand.moeglich) einfaerben.title = "Für diese Norm liegt kein Strukturdatensatz vor.";
+    einfaerben.onclick = () => {
+      const naechste = STUFEN[(STUFEN.indexOf(S.strukturModus) + 1) % STUFEN.length];
+      strukturSetzen(naechste);
+      hauptZeichnen();
+    };
 
-  const apparat = knopf("pille", "Apparat");
-  apparat.onclick = () => blattSetzen(true);
+    const apparat = knopf("pille", "Apparat");
+    apparat.onclick = () => blattSetzen(true);
+    teile.push(einfaerben, apparat);
+  }
+
+  /* „Fassungen" nur, wo es mehr als einen Zeitstand gibt — sonst gar nicht.
+     Ein gesperrter Schalter kostet auf 390 px Platz, den er nicht wert ist. */
+  if ((document.body.dataset.ansicht === "norm" && fassungenDerNorm().length >= 2)
+      || document.body.dataset.ansicht === "vergleich"){
+    const vergleich = knopf("pille",
+      document.body.dataset.ansicht === "vergleich" ? "Normtext" : "Fassungen");
+    vergleich.onclick = () => {
+      location.hash = document.body.dataset.ansicht === "vergleich"
+        ? "#/" + String(S.abk).toLowerCase() + "/" + S.normId
+        : "#/" + String(S.abk).toLowerCase() + "/" + S.normId + "/fassungen";
+    };
+    teile.push(vergleich);
+  }
+
+  const mappe = knopf("pille", "Mappe");
+  mappe.id = "leiste-mappe";
+  mappe.onclick = (e) => { e.stopPropagation(); mappeUmschalten(); };
 
   const start = knopf("pille", "Gesetze");
   start.onclick = () => { location.hash = "#/"; };
 
-  leiste.append(einfaerben, apparat, start);
+  teile.push(mappe, start);
+  leiste.append(...teile);
 }
 
 /** Genau eine Marke der Rinne ist die aktuelle. */
@@ -3034,6 +4035,8 @@ function hauptStilZuruecksetzen(){
    ══════════════════════════════════════════════════════════════════════ */
 function startseiteZeichnen(){
   document.body.dataset.ansicht = "start";
+  werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3150,6 +4153,8 @@ function startseiteZeichnen(){
    ══════════════════════════════════════════════════════════════════════ */
 function uebersichtZeichnen(){
   document.body.dataset.ansicht = "uebersicht";
+  werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3299,6 +4304,8 @@ function trefferliste(begriff){
 
 function trefferZeichnen(begriff){
   document.body.dataset.ansicht = "suche";
+  werkzeugleisteBauen();
+  vergleichKnopfSetzen();
   const haupt = el("haupt");
   haupt.className = "breit";
   haupt.innerHTML = "";
@@ -3488,11 +4495,27 @@ async function wegweiser(){
   merken("zuletzt", S.zuletzt);
 
   hauptStilZuruecksetzen();
+
+  /* Dritter Pfadteil „fassungen" → Vergleichsansicht. Sie steckt im Verweis,
+     damit sie sich verschicken und mit dem Rücksprung verlassen lässt. */
+  if (teile[2] === "fassungen"){
+    document.body.dataset.ansicht = "vergleich";
+    navZeichnen();
+    vergleichZeichnen();
+    vergleichKnopfSetzen();
+    werkzeugleisteBauen();
+    const gewaehlt = el("navspalte").querySelector('[aria-current=true]');
+    if (gewaehlt && gewaehlt.scrollIntoView) gewaehlt.scrollIntoView({ block: "nearest" });
+    window.scrollTo({ top: 0 });
+    return;
+  }
+
   document.body.dataset.ansicht = "norm";
   reiterZeichnen();
   navZeichnen();
   hauptZeichnen();
   apparatZeichnen();
+  vergleichKnopfSetzen();
 
   const aktiv = el("navspalte").querySelector('[aria-current=true]');
   if (aktiv && aktiv.scrollIntoView) aktiv.scrollIntoView({ block: "nearest" });
@@ -3523,6 +4546,9 @@ async function start(){
 
   S.strukturModus = gemerkt("strukturModus", "voll");
   S.markierungen = markierungenLesen();
+  S.mappen = mappenLesen() || [];
+  S.aktiveMappe = gemerkt("aktiveMappe", null);
+  mappenNachtragen();
   S.letzteFarbe = gemerkt("letzteFarbe", "#F2C744");
   S.geoeffnet = gemerkt("geoeffnet", []);
   S.zuletzt = gemerkt("zuletzt", []);
@@ -3539,7 +4565,11 @@ async function start(){
   el("verdunkelung").onclick = () => {
     document.body.dataset.schublade = "zu";
     blattSetzen(false);
+    mappeSchliessen();
   };
+
+  el("knopf-mappe").onclick = (e) => { e.stopPropagation(); mappeUmschalten(); };
+  el("mappe").onclick = (e) => e.stopPropagation();
 
   document.addEventListener("keydown", (e) => {
     const imFeld = /^(INPUT|TEXTAREA)$/.test((document.activeElement || {}).tagName || "");
@@ -3569,6 +4599,7 @@ async function start(){
       document.body.dataset.schublade = "zu";
       blattSetzen(false);
       popoverSchliessen();
+      mappeSchliessen();
       el("auswahlleiste").classList.remove("offen");
       if (imFeld) document.activeElement.blur();
     }
@@ -3584,6 +4615,13 @@ async function start(){
   el("popover-zu").onclick = popoverSchliessen;
   el("popover").onclick = (e) => e.stopPropagation();
   document.addEventListener("click", (e) => {
+    /* Die Mappe schließt beim Klick daneben. Der Klick auf ihren eigenen Knopf
+       ist ausgenommen — sonst schlösse dieser Zuhörer sie in demselben
+       Ereignis wieder, in dem der Knopf sie öffnet. */
+    if (!el("mappe").contains(e.target)
+        && !e.target.closest("#knopf-mappe")
+        && !e.target.closest("#leiste-mappe")) mappeSchliessen();
+
     if (el("popover").contains(e.target)) return;
     if (e.target.closest(".eigen[data-eigen]")) return;
     if (e.target.closest(".auswahlleiste")) return;
