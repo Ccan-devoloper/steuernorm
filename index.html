@@ -425,6 +425,37 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   font-size:11px;color:var(--text-4);margin:5px 0 0;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Auszeichnungsebene 3: Verwaltungsstelle
+
+   Kodierung ist die PUNKTLINIE — keine Fläche, keine durchgezogene Kante.
+   Damit bleibt sie unter einer Struktur-Tönung und unter einer eigenen
+   Markierung sichtbar. Dahinter steht ein Mono-Chip mit der Fundstelle; die
+   Farbe allein trägt die Information also nicht.
+   ══════════════════════════════════════════════════════════════════════ */
+.vw{border-bottom:2px dotted var(--vw);cursor:pointer;padding-bottom:1px}
+.vw.gewaehlt{background:var(--vw-grund)}
+
+/* Der Chip ist ein Verweiszeichen, kein Wortlaut. `user-select:none` hält ihn
+   aus der Zwischenablage heraus: Wer den Normtext kopiert, bekommt den
+   Normtext — nicht die Fundstellen dieser Seite. */
+.vw-chip{
+  font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--vw);background:var(--vw-grund);border:1px solid var(--vw-rand);
+  border-radius:var(--r-chip);padding:1px 4px;margin-left:3px;
+  vertical-align:3px;cursor:pointer;white-space:nowrap;
+  -webkit-user-select:none;user-select:none;
+}
+.vw-chip:hover{border-color:var(--vw)}
+
+/* ── Karten im Register „Verwaltung“ ── */
+.karte.vw-karte.aktiv{background:#F8F7FA}
+.karte.vw-karte.aktiv{border-left-color:var(--vw)}
+.vw-beleg{
+  font-family:var(--mono);font-size:10px;color:var(--text-4);
+  display:block;margin-top:6px;
+}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -676,6 +707,8 @@ const S = {
   anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
   belege: {},              // abk → belege/<gesetz>.json
   struktur: {},            // abk → struktur/<gesetz>.json .normen
+  verwaltung: {},          // abk → verwaltung/<gesetz>.json
+  aktiveVerwaltung: null,  // id | null — flüchtig
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
   letzteFarbe: "#F2C744",  // localStorage
@@ -739,6 +772,18 @@ async function zutatenLaden(abk){
     try { S.struktur[abk] = (await holen("struktur/" + schluessel + ".json")).normen || {}; }
     catch (e) { S.struktur[abk] = null; }
   }
+  if (!(abk in S.verwaltung)){
+    try { S.verwaltung[abk] = await holen("verwaltung/" + schluessel + ".json"); }
+    catch (e) { S.verwaltung[abk] = null; }
+  }
+}
+
+/** Verwaltungsstellen der laufenden Norm — leer, wenn es keine Datei gibt. */
+function verwaltungDerNorm(){
+  const datei = S.verwaltung[S.abk];
+  if (!datei || !datei.normen) return [];
+  const eintrag = datei.normen[S.normId];
+  return eintrag && Array.isArray(eintrag.stellen) ? eintrag.stellen : [];
 }
 
 /** Segmente der laufenden Norm — leer, wenn es keinen Datensatz gibt. */
@@ -1316,6 +1361,32 @@ function popoverSchliessen(){
   el("popover").classList.remove("offen");
 }
 
+/**
+ * Setzt hinter jede Verwaltungsstelle ihren Fundstellen-Chip.
+ *
+ * Der Chip ist ein Verweiszeichen wie eine Fußnotenziffer, kein Wortlaut. Er
+ * steht deshalb außerhalb der markierten Spanne, trägt `user-select:none` und
+ * ist als Schaltfläche ausgezeichnet — wer den Normtext kopiert, bekommt den
+ * Normtext.
+ */
+function chipsSetzen(wurzel, stellen){
+  for (const v of stellen){
+    if (!v.chip) continue;
+    const teile = [...wurzel.querySelectorAll('[data-vw="' + v.id + '"]')];
+    if (!teile.length) continue;
+    const letztes = teile[teile.length - 1];
+    if (letztes.nextElementSibling && letztes.nextElementSibling.classList.contains("vw-chip")) continue;
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "vw-chip";
+    chip.dataset.vw = v.id;
+    chip.textContent = v.chip;
+    chip.setAttribute("aria-label",
+      "Verwaltungsstelle " + [v.quelle, v.fundstelle].filter(Boolean).join(" "));
+    letztes.after(chip);
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════════════
    Verweise im Normtext
 
@@ -1534,7 +1605,24 @@ function hauptZeichnen(){
     });
   }
 
+  /* Verwaltungsstellen: Punktlinie, darunter bleibt alles sichtbar. */
+  const stellen = verwaltungDerNorm();
+  let vwOhneStelle = 0;
+  for (const v of stellen){
+    const von = markierungVerorten(kanonisch, { anker: v.anker, praefix: v.praefix });
+    if (von === -1){ vwOhneStelle++; continue; }
+    spannen.push({
+      von,
+      bis: von + v.anker.length,
+      klasse: "vw" + (S.aktiveVerwaltung === v.id ? " gewaehlt" : ""),
+      schluessel: "v" + v.id,
+      titel: [v.quelle, v.fundstelle].filter(Boolean).join(" · "),
+      datensatz: { vw: v.id },
+    });
+  }
+
   const verwaist = spannenLegen(lese, spannen);
+  chipsSetzen(lese, stellen);
 
   /* Verweise anklickbar machen — nach dem Einsetzen des Wortlauts, damit die
      amtliche Auszeichnung unberührt bleibt. */
@@ -1556,6 +1644,18 @@ function hauptZeichnen(){
   spalte.append(legendeBauen(stand, segmente), lese);
   leseraum.append(rinne, spalte);
   haupt.appendChild(leseraum);
+
+  if (vwOhneStelle){
+    const w = fehlmeldung(
+      "Verwaltungsstellen",
+      vwOhneStelle + " Verwaltungsstelle(n) finden ihren Ankertext nicht im Normtext."
+      + " Der Datensatz gehört gegen die geltende Fassung geprüft.",
+      "verwaltung/" + S.abk.toLowerCase() + ".json",
+    );
+    w.style.maxWidth = "var(--lesespalte)";
+    w.style.marginTop = "18px";
+    spalte.appendChild(w);
+  }
 
   if (verschoben){
     const w = fehlmeldung(
@@ -1595,6 +1695,18 @@ function hauptZeichnen(){
     if (schonAktiv){ popoverSchliessen(); return; }
     const neuerKnoten = document.querySelector('.eigen[data-eigen="' + id + '"]');
     if (neuerKnoten) popoverOeffnen(id, neuerKnoten);
+  });
+
+  /* Klick auf Punktlinie oder Chip öffnet das Register „Verwaltung“. */
+  lese.addEventListener("click", (e) => {
+    const stelle = e.target.closest("[data-vw]");
+    if (!stelle) return;
+    e.preventDefault();
+    const id = stelle.dataset.vw;
+    S.aktiveVerwaltung = S.aktiveVerwaltung === id ? null : id;
+    S.apparatRegister = "verwaltung";
+    hauptZeichnen();
+    apparatZeichnen();
   });
 
   rinneMitlaufen(rinne, marken);
@@ -2062,6 +2174,104 @@ function markierungsFuss(){
   return p;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Register „Verwaltung"
+   ══════════════════════════════════════════════════════════════════════ */
+function verwaltungBauen(){
+  const raus = document.createDocumentFragment();
+  const datei = S.verwaltung[S.abk];
+  const stellen = verwaltungDerNorm();
+
+  if (!datei){
+    raus.appendChild(fehlmeldung(
+      "Kein Datensatz",
+      "Für dieses Gesetz liegt keine Zuordnung von Verwaltungsanweisungen vor.",
+      "verwaltung/" + S.abk.toLowerCase() + ".json",
+    ));
+    raus.appendChild(haftungssatz());
+    return raus;
+  }
+
+  /* Ein Beispieldatensatz sagt das von sich aus — an erster Stelle, nicht im
+     Kleingedruckten. Er zeigt den Aufbau des Formats, er ist kein Nachweis. */
+  if (datei.beispiel){
+    const warnung = fehlmeldung("Beispieldatensatz", datei.hinweis || "");
+    warnung.style.borderColor = "var(--vw-rand)";
+    raus.appendChild(warnung);
+  }
+
+  if (!stellen.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.textContent = "Zu dieser Norm ist keine Verwaltungsanweisung zugeordnet.";
+    raus.appendChild(p);
+    raus.appendChild(haftungssatz());
+    return raus;
+  }
+
+  for (const v of stellen){
+    const aktiv = S.aktiveVerwaltung === v.id;
+    const karte = document.createElement("div");
+    karte.className = "karte vw-karte" + (aktiv ? " aktiv" : "");
+    karte.tabIndex = 0;
+    karte.setAttribute("role", "button");
+
+    const kopf = document.createElement("div");
+    kopf.className = "karte-kopf";
+    if (v.quelle){
+      const q = document.createElement("span");
+      q.className = "quelle";
+      q.textContent = v.quelle;
+      kopf.appendChild(q);
+    }
+    const fund = document.createElement("span");
+    fund.className = "karte-fundstelle";
+    fund.textContent = v.fundstelle || "";
+    kopf.appendChild(fund);
+    karte.appendChild(kopf);
+
+    const wortlaut = document.createElement("p");
+    wortlaut.className = "karte-wortlaut";
+    wortlaut.textContent = "„" + v.anker + "“";
+    karte.appendChild(wortlaut);
+
+    if (v.erlaeuterung){
+      const p = document.createElement("p");
+      p.className = "karte-notiz";
+      p.textContent = v.erlaeuterung;
+      karte.appendChild(p);
+    }
+    if (v.beleg){
+      const b = document.createElement("span");
+      b.className = "vw-beleg";
+      b.textContent = v.beleg;
+      karte.appendChild(b);
+    }
+    if (v.url){
+      const p = document.createElement("p");
+      const a = document.createElement("a");
+      a.href = v.url; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = "amtliche Fundstelle ↗";
+      p.appendChild(a);
+      karte.appendChild(p);
+    }
+
+    const umschalten = () => {
+      S.aktiveVerwaltung = S.aktiveVerwaltung === v.id ? null : v.id;
+      hauptZeichnen();
+      apparatZeichnen();
+    };
+    karte.onclick = umschalten;
+    karte.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " "){ e.preventDefault(); umschalten(); }
+    };
+    raus.appendChild(karte);
+  }
+
+  raus.appendChild(haftungssatz());
+  return raus;
+}
+
 function apparatZeichnen(){
   const apparat = el("apparat");
   apparat.innerHTML = "";
@@ -2087,6 +2297,8 @@ function apparatZeichnen(){
     inhalt.appendChild(hinweiseBauen());
   } else if (S.apparatRegister === "markierungen"){
     inhalt.appendChild(markierungenBauen());
+  } else if (S.apparatRegister === "verwaltung"){
+    inhalt.appendChild(verwaltungBauen());
   } else {
     const p = document.createElement("p");
     p.className = "platzhalter";
@@ -2132,6 +2344,7 @@ async function wegweiser(){
 
   await zutatenLaden(S.abk);
   S.aktiveMarkierung = null;
+  S.aktiveVerwaltung = null;
   popoverSchliessen();
 
   /* Die aufgerufene Norm ist immer geöffnet. */

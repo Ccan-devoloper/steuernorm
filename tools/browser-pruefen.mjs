@@ -243,6 +243,64 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4d. Verwaltungsstellen ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const imText = await seite.evaluate(() => ({
+    punktlinien: [...document.querySelectorAll(".lesespalte .vw")].map((x) => x.textContent),
+    chips: [...document.querySelectorAll(".lesespalte .vw-chip")].map((x) => x.textContent),
+    // Der Chip darf nicht in die Zwischenablage geraten.
+    chipAuswahl: getComputedStyle(document.querySelector(".lesespalte .vw-chip")).userSelect,
+    stil: getComputedStyle(document.querySelector(".lesespalte .vw")).borderBottomStyle,
+  }));
+  ok("Verwaltungsstellen im Text verankert",
+    imText.punktlinien.length === 2, imText.punktlinien.join(" · "));
+  ok("Fundstellen-Chips gesetzt", imText.chips.join(" · ") === "R 39b.2 · BMF 2021", imText.chips.join(" · "));
+  ok("Punktlinie als Kodierung", imText.stil === "dotted", imText.stil);
+  ok("Chip bleibt aus der Zwischenablage", imText.chipAuswahl === "none", imText.chipAuswahl);
+
+  await seite.click(".lesespalte .vw-chip");
+  await seite.waitForTimeout(700);
+  const nachher = await seite.evaluate(() => ({
+    register: [...document.querySelectorAll(".register button")]
+      .find((b) => b.getAttribute("aria-selected") === "true").textContent,
+    karten: document.querySelectorAll(".apparat .vw-karte").length,
+    aktiv: Boolean(document.querySelector(".apparat .vw-karte.aktiv")),
+    warnung: (document.querySelector(".apparat .fehlmeldung .mono-etikett") || {}).textContent,
+    beleg: (document.querySelector(".apparat .vw-beleg") || {}).textContent,
+  }));
+  ok("Chip öffnet das Register „Verwaltung“", nachher.register === "Verwaltung", nachher.register);
+  ok("Beide Stellen als Karten", nachher.karten === 2, String(nachher.karten));
+  ok("Angeklickte Karte ist hervorgehoben", nachher.aktiv);
+  ok("Beispieldatensatz sagt es von sich aus",
+    nachher.warnung === "Beispieldatensatz", String(nachher.warnung));
+  ok("Belegnachweis vorhanden",
+    nachher.beleg === "Lohnsteuer-Richtlinien 2023", String(nachher.beleg));
+  await ctx.close();
+}
+
+/* ── 4e. Ein Gesetz ohne Verwaltungsdatensatz degradiert sauber ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/astg/2", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+  await seite.click('.register button:nth-child(3)');
+  await seite.waitForTimeout(400);
+  const ohne = await seite.evaluate(() => ({
+    text: (document.querySelector(".apparat .registerinhalt") || {}).textContent || "",
+    punktlinien: document.querySelectorAll(".lesespalte .vw").length,
+  }));
+  ok("Ohne Datensatz sagt das Register es",
+    ohne.text.includes("keine Zuordnung von Verwaltungsanweisungen"), ohne.text.slice(0, 60));
+  ok("Ohne Datensatz keine Punktlinien", ohne.punktlinien === 0);
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });

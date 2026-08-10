@@ -1,0 +1,47 @@
+{
+  "abk": "SolzG",
+  "titel": "Solidaritätszuschlaggesetz",
+  "format": 1,
+  "beispiel": true,
+  "hinweis": "BEISPIELDATENSATZ. Die beiden Einträge stammen aus dem Gestaltungsentwurf und sind nicht redaktionell geprüft. Sie zeigen den Aufbau des Formats; sie sind kein Nachweis. Vor produktivem Einsatz gegen die amtlichen Fundstellen prüfen.",
+  "felder": {
+    "anker": "Wortlaut im kanonischen Volltext der Norm. Verankert wird über den Text, nicht über Zeichenpositionen — eine Gesetzesänderung verschiebt jede Position, aber selten den Wortlaut.",
+    "praefix": "Zeichen davor, zur Unterscheidung mehrfach vorkommender Wendungen. Darf leer sein.",
+    "chip": "Kurzform für den Chip im Normtext, hinter der Punktlinie.",
+    "quelle": "Herausgeber der Anweisung: LStR, EStR, UStAE, BMF …",
+    "fundstelle": "Stelle innerhalb der Anweisung.",
+    "erlaeuterung": "Wozu die Stelle etwas sagt. Ein bis zwei Sätze.",
+    "beleg": "Nachweis, unter dem die Anweisung veröffentlicht ist.",
+    "url": "Verweis auf die amtliche Fassung, falls vorhanden."
+  },
+  "normen": {
+    "3": {
+      "stellen": [
+        {
+          "id": "v1",
+          "absatz": "1",
+          "anker": "laufenden Arbeitslohn",
+          "praefix": "berechneten Lohnsteuer für a) ",
+          "chip": "R 39b.2",
+          "quelle": "LStR",
+          "fundstelle": "R 39b.2 Abs. 1",
+          "erlaeuterung": "Abgrenzung laufender Arbeitslohn / sonstige Bezüge; maßgeblich für die Bemessungsgrundlage nach Absatz 1 Nummer 3.",
+          "beleg": "Lohnsteuer-Richtlinien 2023",
+          "url": null
+        },
+        {
+          "id": "v2",
+          "absatz": "2",
+          "anker": "Freibeträgen nach § 32 Abs. 6",
+          "praefix": "unter Berücksichtigung von ",
+          "chip": "BMF 2021",
+          "quelle": "BMF",
+          "fundstelle": "Schreiben v. 24.11.2021",
+          "erlaeuterung": "Ansatz der Kinderfreibeträge bei der Ermittlung der fiktiven Einkommensteuer, auch wenn die Günstigerprüfung zum Kindergeld führt.",
+          "beleg": "BStBl I 2021, 2431",
+          "url": null
+        }
+      ]
+    }
+  }
+}
