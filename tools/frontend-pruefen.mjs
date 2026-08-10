@@ -88,6 +88,46 @@ ok("Fünf Register", register.length === 5, register.join(" · "));
 ok("Register in der vorgesehenen Reihenfolge",
   register.join("|") === "Hinweise|Schema|Verwaltung|Zitate|Markierungen");
 
+/* ── Mappe ──
+   Geprüft wird die Datenanbindung, nicht das Aussehen: Gibt es beim ersten
+   Aufruf eine Mappe, landet eine neue Markierung darin, und sagt der Fuß der
+   Markierungskarte, in welcher? */
+const knopfMappe = d.getElementById("knopf-mappe");
+ok("Mappenknopf ist bedienbar", knopfMappe && !knopfMappe.disabled);
+
+window.mappeOeffnen();
+ok("Mappe öffnet", d.getElementById("mappe").classList.contains("offen"));
+const mappen = JSON.parse(speicher.get("sn.mappen") || "[]");
+ok("Immer mindestens eine Mappe", mappen.length >= 1, mappen.length + " angelegt");
+ok("Mappe hat einen Namen", Boolean(mappen[0] && mappen[0].name), mappen[0] && mappen[0].name);
+ok("Fuß nennt den Speicherort",
+  (d.querySelector(".mappe-fuss") || {}).textContent.includes("nur in diesem Browser"));
+
+/* Eine Markierung anlegen und nachsehen, wo sie liegt.
+   `S` ist eine `const` im Skriptkopf und liegt damit im lexikalischen
+   Globalbereich, nicht am `window`. Erreichbar ist sie über `eval` im selben
+   Bereich — deshalb hier `js()` statt `window.S`. */
+const js = (ausdruck) => window.eval(ausdruck);
+
+const vorher = js("S.markierungen.length");
+js('auswahlMarkieren("Der Solidaritätszuschlag")');
+const neueId = js("S.markierungen[S.markierungen.length - 1].id");
+ok("Markierung wird angelegt", js("S.markierungen.length") === vorher + 1);
+ok("Markierung liegt in genau einer Mappe",
+  js(`S.mappen.filter(m => m.eintraege.some(e => e.markierungId === "${neueId}")).length`) === 1);
+ok("Markierung kennt ihre Mappe",
+  js(`S.markierungen.find(m => m.id === "${neueId}").mappe`) === js("S.mappen[0].id"));
+
+js(`popoverOeffnen("${neueId}", document.querySelector(".lesespalte"))`);
+const fuss = (d.getElementById("popover-mappe") || {}).textContent || "";
+ok("Karte nennt die Mappe", fuss.startsWith("Nur für Sie sichtbar · Mappe "), fuss);
+
+/* Löschen räumt beide Seiten auf. */
+js(`markierungLoeschen("${neueId}")`);
+ok("Löschen räumt die Mappe mit auf",
+  !js(`S.mappen.some(m => m.eintraege.some(e => e.markierungId === "${neueId}"))`));
+window.mappeSchliessen();
+
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
   (d.getElementById("stufen") || {}).getAttribute

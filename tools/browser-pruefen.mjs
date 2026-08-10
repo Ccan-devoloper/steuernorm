@@ -324,6 +324,101 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4f. Die Mappe ──
+   Geprüft wird, was jsdom nicht sieht: dass das Feld überhaupt sichtbar wird,
+   am Knopf hängt, beim Klick daneben wieder zugeht — und dass eine markierte
+   Stelle den Neustart in der Mappe übersteht. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+
+  ok("Mappenknopf nicht mehr gesperrt", !(await seite.isDisabled("#knopf-mappe")));
+
+  await seite.click("#knopf-mappe");
+  await seite.waitForTimeout(400);
+  const auf = await seite.evaluate(() => {
+    const feld = document.getElementById("mappe");
+    const knopf = document.getElementById("knopf-mappe");
+    const fk = feld.getBoundingClientRect();
+    const kk = knopf.getBoundingClientRect();
+    return {
+      sichtbar: getComputedStyle(feld).display !== "none",
+      breite: Math.round(fk.width),
+      unterDemKnopf: fk.top > kk.bottom && fk.top - kk.bottom < 20,
+      rechtsbuendig: Math.abs(fk.right - kk.right) < 20,
+      angesagt: knopf.getAttribute("aria-expanded"),
+      zeilen: document.querySelectorAll(".mappe-zeile").length,
+      fuss: (document.querySelector(".mappe-fuss") || {}).textContent || "",
+    };
+  });
+  ok("Mappe wird sichtbar", auf.sichtbar);
+  ok("Mappe ist 392 px breit", auf.breite === 392, String(auf.breite));
+  ok("Mappe hängt unter ihrem Knopf", auf.unterDemKnopf && auf.rechtsbuendig, JSON.stringify(auf));
+  ok("Zustand für Vorleseprogramme angesagt", auf.angesagt === "true", String(auf.angesagt));
+  ok("Mindestens eine Mappe angelegt", auf.zeilen >= 1, String(auf.zeilen));
+  ok("Fuß sagt, wo die Mappen liegen", auf.fuss.includes("nur in diesem Browser"));
+
+  /* Norm hineinlegen. */
+  await seite.click(".mappe-knoepfe button:nth-child(1)");
+  await seite.waitForTimeout(400);
+  const mitNorm = await seite.evaluate(() => ({
+    eintraege: document.querySelectorAll(".mappe-eintrag").length,
+    stelle: (document.querySelector(".mappe-eintrag-stelle") || {}).textContent || "",
+    art: (document.querySelector(".mappe-eintrag-art") || {}).textContent || "",
+  }));
+  ok("Norm landet in der Mappe", mitNorm.eintraege === 1, String(mitNorm.eintraege));
+  ok("Eintrag trägt die echte Fundstelle",
+    mitNorm.stelle === "§ 3 SolzG" && mitNorm.art === "Norm", mitNorm.stelle + " · " + mitNorm.art);
+
+  /* Klick daneben schließt. */
+  await seite.click(".lesespalte", { position: { x: 5, y: 5 } });
+  await seite.waitForTimeout(300);
+  ok("Klick daneben schließt die Mappe",
+    !(await seite.evaluate(() => document.getElementById("mappe").classList.contains("offen"))));
+
+  /* Eine Markierung anlegen — sie muss von selbst in der Mappe landen. */
+  await seite.evaluate(() => {
+    const satz = document.querySelector(".lesespalte .s");
+    const bereich = document.createRange();
+    bereich.selectNodeContents(satz);
+    const auswahl = window.getSelection();
+    auswahl.removeAllRanges();
+    auswahl.addRange(bereich);
+    document.dispatchEvent(new Event("selectionchange"));
+  });
+  await seite.waitForTimeout(400);
+  await seite.click(".auswahlleiste .farbkreis:nth-child(2)");
+  await seite.waitForTimeout(600);
+
+  await seite.click("#knopf-mappe");
+  await seite.waitForTimeout(400);
+  const mitMarkierung = await seite.evaluate(() => ({
+    eintraege: document.querySelectorAll(".mappe-eintrag").length,
+    arten: [...document.querySelectorAll(".mappe-eintrag-art")].map((x) => x.textContent),
+  }));
+  ok("Markierung landet von selbst in der Mappe",
+    mitMarkierung.eintraege === 2 && mitMarkierung.arten.includes("Markierung"),
+    mitMarkierung.arten.join(" · "));
+
+  /* Neustart: Mappen liegen im Browserspeicher. */
+  await seite.reload({ waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  await seite.click("#knopf-mappe");
+  await seite.waitForTimeout(400);
+  ok("Mappe übersteht den Neustart",
+    (await seite.evaluate(() => document.querySelectorAll(".mappe-eintrag").length)) === 2);
+
+  /* Esc schließt. */
+  await seite.keyboard.press("Escape");
+  await seite.waitForTimeout(300);
+  ok("Esc schließt die Mappe",
+    !(await seite.evaluate(() => document.getElementById("mappe").classList.contains("offen"))));
+  ok("Kein waagerechter Überlauf mit offener Mappe", !(await ueberlauf(seite)));
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });
@@ -347,7 +442,11 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
     rinne: getComputedStyle(document.querySelector(".rinne")).flexDirection,
   }));
   ok("Blattgriff nennt den Inhalt", zu.griff.includes("Apparat"), zu.griff.trim());
-  ok("Werkzeugleiste am Fuß", zu.werkzeuge.length === 3, zu.werkzeuge.join(" · "));
+  /* Vier Schalter: Einfärben, Apparat, Mappe, Gesetze. Die Mappe muss dabei
+     sein — die Kopfzeile der Knöpfe ist auf dem Telefon ausgeblendet, die
+     Leiste ist dort der einzige Weg dorthin. */
+  ok("Werkzeugleiste am Fuß", zu.werkzeuge.length === 4, zu.werkzeuge.join(" · "));
+  ok("Mappe von der Werkzeugleiste erreichbar", zu.werkzeuge.includes("Mappe"));
   ok("Absatzmarken laufen waagerecht", zu.rinne === "row", zu.rinne);
 
   await seite.click(".blattgriff");
@@ -366,6 +465,30 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   ok("Blatt ist rund 78 % hoch", Math.abs(offen.hoehe - 844 * 0.78) < 12, String(offen.hoehe));
   ok("Text dahinter wird festgehalten", offen.festgehalten === "hidden", offen.festgehalten);
   ok("Register im Blatt erreichbar", offen.register === 5, String(offen.register));
+
+  /* Die Mappe ist auf dem Telefon ebenfalls ein Blatt von unten — 392 px
+     hängen an keinem Telefonrand. */
+  await seite.keyboard.press("Escape");
+  await seite.waitForTimeout(400);
+  await seite.click("#leiste-mappe");
+  await seite.waitForTimeout(500);
+  const mappeMobil = await seite.evaluate(() => {
+    const feld = document.getElementById("mappe");
+    const k = feld.getBoundingClientRect();
+    return {
+      lage: getComputedStyle(feld).position,
+      links: Math.round(k.left),
+      breite: Math.round(k.width),
+      amBoden: Math.round(window.innerHeight - k.bottom),
+      schleier: getComputedStyle(document.querySelector(".verdunkelung")).display,
+    };
+  });
+  ok("Mappe auf Mobil als Blatt", mappeMobil.lage === "fixed" && mappeMobil.links === 0,
+    JSON.stringify(mappeMobil));
+  ok("Mappe füllt die Breite", mappeMobil.breite === 390, String(mappeMobil.breite));
+  ok("Mappe sitzt am unteren Rand", mappeMobil.amBoden === 0, String(mappeMobil.amBoden));
+  ok("Schleier hinter der Mappe", mappeMobil.schleier === "block", mappeMobil.schleier);
+  ok("Kein waagerechter Überlauf mit offener Mappe (390 px)", !(await ueberlauf(seite)));
   await ctx.close();
 }
 
