@@ -1,14 +1,14 @@
 {
   "abk": "GewStG",
   "titel": "Gewerbesteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:30.782Z",
+  "aktualisiert": "2026-08-10T09:19:25.632Z",
   "quelle": "https://www.gesetze-im-internet.de/gewstg/",
   "stand": [
     {
@@ -94,8 +94,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4fdde31e9964949af4b824b39b3e8f0759d1c497bdb567837c02ad5aa19e4b5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.711Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.561Z"
     },
     "2": {
       "typ": "gemischt",
@@ -1466,8 +1466,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4ab98e94f46ca2477c12d5471e98b0a9f83c862b960679bce1dfc4f0485d5bcd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.715Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.565Z"
     },
     "3": {
       "typ": "gemischt",
@@ -3229,8 +3229,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c3c73b2f1e3b3818cfcdf656b4893d88b67243f24f3459a02d4170f0eb3a17f0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.726Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.576Z"
     },
     "4": {
       "typ": "gemischt",
@@ -3738,8 +3738,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "86522c9d59c1a86840c9f3b8130dfc89bbbaea429924ba41748ae0512b9df721",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.727Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.577Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4159,8 +4159,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "757b2da58ece4505397a4ca3308781e92a1f645c03aab3b0926d10df9df88cc4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.728Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.578Z"
     },
     "6": {
       "typ": "aussage",
@@ -4269,8 +4269,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "459507ac60585aa2d4baa7a7497698407089b1a1eaaf064497a6b95d517f819f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.728Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.578Z"
     },
     "7": {
       "typ": "gemischt",
@@ -4928,8 +4928,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "550c7afa57c8b29b00fd4f54e5701769d926b904e078493443dfee62677aae7a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.731Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.580Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5781,8 +5781,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "98360b7f1b49d8ca79275d8280c81bb31ba585e9c09d43e30551fc3d7c48c751",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.738Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.588Z"
     },
     "9": {
       "typ": "gemischt",
@@ -8770,8 +8770,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24f02d7989ada3d29bb854c98e47823e6cd54e36a33706fa16f1b4920b809b8d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.752Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.601Z"
     },
     "10": {
       "typ": "gemischt",
@@ -8987,8 +8987,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a5b18c31886bbdeeb84ad41768c175c92588d0ccdd764555ef41fa1b059a7807",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.753Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.602Z"
     },
     "11": {
       "typ": "gemischt",
@@ -9387,8 +9387,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b9d1f3cfee22fcd6ac103ee3bcbf66ad139524e4e93ed60257f59bf5bf034bb3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.757Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.606Z"
     },
     "14": {
       "typ": "gemischt",
@@ -9566,8 +9566,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1d1bc875f48c8df0aa545853711b6ff8b5e288eaacabd4a77b0ceb2c060729a2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.757Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.606Z"
     },
     "15": {
       "typ": "konditional",
@@ -9676,8 +9676,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f29c0ab69b2e324acf3afbeacea4d9baa498830711812889b2da64f45de463b4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.758Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.607Z"
     },
     "16": {
       "typ": "gemischt",
@@ -10290,8 +10290,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "85adf9ba5f8c8105d3ba64cdfd086021d93f4a27cf93b2d7cd9c994bf579fb82",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.760Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.609Z"
     },
     "17": {
       "typ": "aussage",
@@ -10367,8 +10367,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.760Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.609Z"
     },
     "18": {
       "typ": "konditional",
@@ -10444,8 +10444,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3e80a2b66813ed7eed7ef07273e42de1b9552845554ea789ace3849890d175d9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.760Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.609Z"
     },
     "19": {
       "typ": "gemischt",
@@ -11142,8 +11142,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9438be7dce2d0289c698ac4a5d5a36501c95dbee9e91150b1de1ab345d0d08e3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.762Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.611Z"
     },
     "20": {
       "typ": "gemischt",
@@ -11426,8 +11426,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0a98ea490b3da8069e5495b6b7cd9e8d8842124008b12330d14bb70555b4840a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.769Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.618Z"
     },
     "21": {
       "typ": "konditional",
@@ -11547,8 +11547,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "20e5163d38278d9c8bf5c2dc548ca27b87632a91988671494da12b479c9dfa24",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.769Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.618Z"
     },
     "28": {
       "typ": "gemischt",
@@ -12026,8 +12026,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c1d2bf2ee54d5bf3f70675df9b4149a4f733bdc4507abf376d04c15ad517be4d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.770Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.619Z"
     },
     "29": {
       "typ": "gemischt",
@@ -12071,20 +12071,36 @@
           "junktor": "und",
           "elemente": [
             {
-              "art": "tb",
-              "text": "vorbehaltlich der Nummern 2 und 3 das Verhältnis, in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
+              "art": "ausn",
+              "text": "vorbehaltlich der Nummern 2 und 3 das Verhältnis",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
               "von": 25,
-              "laenge": 197,
+              "laenge": 48,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "tb",
+              "text": "in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 75,
+              "laenge": 147,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall (um Ausnahme gekürzt)"
             },
             {
               "art": "rf",
@@ -12113,19 +12129,35 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a) vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1",
+              "text": "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
               "von": 340,
-              "laenge": 229,
-              "konfidenz": 0.48,
+              "laenge": 164,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 505,
+              "laenge": 64,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "rf",
@@ -12500,7 +12532,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich der Nummern 2 und 3 das Verhältnis, in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
+                  "t": "in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -12508,9 +12540,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a) vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1",
+                  "t": "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a)",
                   "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -12558,6 +12590,29 @@
             },
             {
               "n": "III.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der Nummern 2 und 3 das Verhältnis",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "IV.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -12691,8 +12746,8 @@
         }
       ],
       "tb": [
-        "vorbehaltlich der Nummern 2 und 3 das Verhältnis, in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
-        "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a) vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1",
+        "in dem die Summe der Arbeitslöhne, die an die bei allen Betriebsstätten (§ 28) beschäftigten Arbeitnehmer gezahlt worden sind, zu den Arbeitslöhnen",
+        "bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus Windenergie und solarer Strahlungsenergie betreiben, a)",
         "für die Erhebungszeiträume 2021 bis 2023 bei Betrieben, die ausschließlich Anlagen zur Erzeugung von Strom und anderen Energieträgern sowie Wärme aus solarer Strahlungsenergie betreiben, aa) für den auf Neuanlagen im Sinne von Satz 3 entfallenden Anteil am Steuermessbetrag zu einem Zehntel das in Nummer 1",
         "für den auf die übrigen Anlagen im Sinne von Satz 4 entfallenden Anteil am Steuermessbetrag das in Nummer 1",
         "Der auf Neuanlagen und auf übrige Anlagen jeweils entfallende Anteil am Steuermessbetrag",
@@ -12712,13 +12767,16 @@
         "sind die Arbeitslöhne",
         "sind die Arbeitslöhne auf volle 1 000 Euro abzurunden"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der Nummern 2 und 3 das Verhältnis",
+        "vorbehaltlich des Buchstabens b zu einem Zehntel das in Nummer 1"
+      ],
       "definitionen": [
         "Neuanlagen"
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.543,
+      "konfidenz": 0.554,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12727,8 +12785,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "068cea340d6d436e7afcadfdd5530005162d58dbedf5f86bf4133f6ca053b464",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.773Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.622Z"
     },
     "30": {
       "typ": "aussage",
@@ -12803,8 +12861,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "da81b362afbe448d0bdd1a52a824f4686eae304c7ac5f5f2041d7e2b400f6b3e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.773Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.622Z"
     },
     "31": {
       "typ": "gemischt",
@@ -12836,6 +12894,38 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Definiendum vor dem Kopulaverb"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der Absätze 2 bis 5 die Vergütungen im Sinne des § 19 Abs. 1 Nr. 1 des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 18,
+              "laenge": 108,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "tb",
+              "text": "soweit sie nicht durch andere Rechtsvorschriften von der Einkommensteuer befreit sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 128,
+              "laenge": 85,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Definiens — Merkmale des Begriffs (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -12863,20 +12953,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "gehören unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen",
+              "art": "ausn",
+              "text": "unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
-              "von": 286,
-              "laenge": 77,
+              "von": 294,
+              "laenge": 69,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Vorbehalt mit „unbeschadet\""
             }
           ]
         },
@@ -13153,6 +13243,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "soweit sie nicht durch andere Rechtsvorschriften von der Einkommensteuer befreit sind",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Zuschläge für Mehrarbeit und für Sonntags-, Feiertags- und Nachtarbeit",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -13163,12 +13261,20 @@
             },
             {
               "n": "III.",
-              "art": "rf",
-              "t": "Rechtsfolge",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gehören unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen",
+                  "t": "vorbehaltlich der Absätze 2 bis 5 die Vergütungen im Sinne des § 19 Abs. 1 Nr. 1 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -13356,6 +13462,7 @@
         }
       ],
       "tb": [
+        "soweit sie nicht durch andere Rechtsvorschriften von der Einkommensteuer befreit sind",
         "Zuschläge für Mehrarbeit und für Sonntags-, Feiertags- und Nachtarbeit",
         "die an Personen gezahlt worden sind, die zu ihrer Berufsausbildung beschäftigt werden",
         "In Fällen einer Befreiung von der Gewerbesteuer",
@@ -13364,7 +13471,6 @@
         "Bei Unternehmen, die nicht von einer juristischen Person betrieben werden"
       ],
       "rf": [
-        "gehören unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen",
         "Zu den Arbeitslöhnen",
         "gehören nicht Vergütungen",
         "bleiben die Vergütungen an solche Arbeitnehmer",
@@ -13372,13 +13478,16 @@
         "gilt für sonstige Vergütungen",
         "sind für die im Betrieb tätigen Unternehmer (Mitunternehmer) insgesamt 25.000 Euro jährlich"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der Absätze 2 bis 5 die Vergütungen im Sinne des § 19 Abs. 1 Nr. 1 des Einkommensteuergesetzes",
+        "unbeschadet der einkommensteuerlichen Behandlung zu den Arbeitslöhnen"
+      ],
       "definitionen": [
         "Arbeitslöhne"
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.589,
+      "konfidenz": 0.591,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13387,8 +13496,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "894bf31f1cbbcfc5845d88bca672f77b3872c0d165822de8cf8e02be42eb184e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.775Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.624Z"
     },
     "32": {
       "typ": "aussage",
@@ -13464,8 +13573,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.775Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.624Z"
     },
     "33": {
       "typ": "gemischt",
@@ -13727,8 +13836,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1a98f8221522e3de505b77310120eacef0bbf3891a798436d1b6cb9802fc786f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.775Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.624Z"
     },
     "34": {
       "typ": "gemischt",
@@ -14117,8 +14226,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a5e37af0cc57a9da2e725ab2cf2dfbd1c51e9354d255e7a14fec232ddb81904b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.776Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.625Z"
     },
     "35": {
       "typ": "aussage",
@@ -14194,8 +14303,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.776Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.625Z"
     },
     "36": {
       "typ": "anwendung",
@@ -14484,8 +14593,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "efb2a2a74789359f637b05579d6588468e862f26ec9b5eafa34599eed699291d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.782Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.632Z"
     },
     "37": {
       "typ": "aussage",
@@ -14561,8 +14670,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.782Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.632Z"
     },
     "2a": {
       "typ": "gemischt",
@@ -14705,8 +14814,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2bbe59529f8bc4251f840cee48928372764bf2d7b42a429a24752d8b7acb6d98",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.716Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.566Z"
     },
     "7a": {
       "typ": "gemischt",
@@ -15196,8 +15305,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbad60fb7220803a17808f92a186775a9333136ae6c2e045c0510e8b892afe79",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.732Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.581Z"
     },
     "7b": {
       "typ": "gemischt",
@@ -15231,31 +15340,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "sind vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend",
-              "anzeige": "sind vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend",
-                  "von": 54,
-                  "laenge": 95
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 150,
-                  "laenge": 10
-                }
-              ],
+              "art": "ausn",
+              "text": "vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 54,
-              "laenge": 95,
+              "von": 59,
+              "laenge": 101,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -15359,19 +15457,35 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "im Sanierungsjahr ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums",
+              "text": "im Sanierungsjahr",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 3",
               "von": 499,
-              "laenge": 115,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 517,
+              "laenge": 97,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Vorbehalt mit „ungeachtet\""
             },
             {
               "art": "rf",
@@ -15752,16 +15866,16 @@
             },
             {
               "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend … anzuwenden",
+                  "t": "vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend anzuwenden",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 }
               ]
             }
@@ -15804,9 +15918,9 @@
                 },
                 {
                   "n": "4.",
-                  "t": "im Sanierungsjahr ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums",
+                  "t": "im Sanierungsjahr",
                   "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -15862,6 +15976,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -15985,7 +16114,7 @@
         "Der nach Anwendung des § 3a Absatz 3 Satz 2 Nummer 1 des Einkommensteuergesetzes verbleibende",
         "den negativen Gewerbeertrag des Sanierungsjahrs des zu sanierenden Unternehmens",
         "Fehlbeträge im Sinne des § 10a Satz 3",
-        "im Sanierungsjahr ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums",
+        "im Sanierungsjahr",
         "Ein nach Satz 1 verbleibender Sanierungsertrag",
         "wenn dieses die erlassenen Schulden innerhalb eines Zeitraums von fünf Jahren vor dem Schuldenerlass auf das zu sanierende Unternehmen übertragen hat und soweit die entsprechenden Beträge zum Ablauf des Wirtschaftsjahrs der Übertragung bereits entstanden waren",
         "Der verbleibende Sanierungsertrag nach Satz 2",
@@ -15996,7 +16125,6 @@
         "Absatz 2 Satz 3"
       ],
       "rf": [
-        "sind vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend",
         "geminderte Sanierungsertrag im Sinne des § 3a Absatz 3 Satz 1 des Einkommensteuergesetzes mindert nacheinander",
         "gesondert festgestellten Fehlbeträge; die in § 10a Satz 1 und 2 genannten Beträge werden der Minderung entsprechend aufgebraucht",
         "mindert die Beträge nach Satz 1 Nummer 1 bis 3 eines anderen Unternehmens",
@@ -16007,11 +16135,14 @@
         "ist § 15 Satz 1 Nummer 1a des Körperschaftsteuergesetzes entsprechend",
         "gilt entsprechend"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der nachfolgenden Absätze bei der Ermittlung des Gewerbeertrags entsprechend anzuwenden",
+        "ungeachtet des § 10a Satz 2 die nach § 10a Satz 6 zum Ende des vorangegangenen Erhebungszeitraums"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.578,
+      "konfidenz": 0.572,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16020,8 +16151,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "52af668051e6e42c3039d2f03906f9c0610e778df5d430f1a0a7559daa0ceb08",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.734Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.583Z"
     },
     "8a": {
       "typ": "aussage",
@@ -16097,8 +16228,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.738Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.588Z"
     },
     "10a": {
       "typ": "gemischt",
@@ -16994,8 +17125,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "08b087f6853e4b23033bbb30e931077b0ea614435179b695ee0f9f8d27130681",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.755Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.604Z"
     },
     "(xxxx)-§§-12-und-13": {
       "typ": "gemischt",
@@ -17017,8 +17148,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.757Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.606Z"
     },
     "14a": {
       "typ": "gemischt",
@@ -17198,8 +17329,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0976bbd31585c808968769345f49e042b3b06670c41e52d3b66b98f9b59bc45a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.758Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.607Z"
     },
     "14b": {
       "typ": "gemischt",
@@ -17472,8 +17603,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "949f36d49f4f4cddf034900c280db86c065c7dd13ecdff5e80a04e6a2377a96a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.758Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.607Z"
     },
     "(xxxx)-§§-22-bis-27": {
       "typ": "gemischt",
@@ -17495,8 +17626,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.769Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.618Z"
     },
     "35a": {
       "typ": "gemischt",
@@ -17909,8 +18040,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8d26a570efa3397dc566b00a74f8e2708d90ea55d993bc950110b3c7c689dcef",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.777Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.626Z"
     },
     "35b": {
       "typ": "gemischt",
@@ -18358,8 +18489,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1a07c0053676ac7e8ec14ed9fcaaaaa2d635320e51f6f1b0ba51f030a600df44",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.779Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.628Z"
     },
     "35c": {
       "typ": "gemischt",
@@ -18976,8 +19107,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9aca1b9a0973bb384ef9ddba6b8b73d9c1f7d1dbf65600722a0c88b3141daeb1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.781Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.631Z"
     }
   }
 }

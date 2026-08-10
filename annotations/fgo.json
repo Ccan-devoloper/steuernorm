@@ -1,14 +1,14 @@
 {
   "abk": "FGO",
   "titel": "Finanzgerichtsordnung",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:31.246Z",
+  "aktualisiert": "2026-08-10T09:19:26.090Z",
   "quelle": "https://www.gesetze-im-internet.de/fgo/",
   "stand": [
     {
@@ -117,8 +117,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "47c86c3e8b082dfe7983693ab5194be1c205a063f097c8dacca5e966cb496ed2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.048Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.888Z"
     },
     "2": {
       "typ": "aussage",
@@ -227,8 +227,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3cb00c649b8106879ab5f82b90e4d2e3b61c5613e161b82f4a7a740587949fa4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.049Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.888Z"
     },
     "3": {
       "typ": "gemischt",
@@ -564,8 +564,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "614bd99230b67b4ab2ca92f2455d2a0d58dfe4ee99369e52aee974696a736ab0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.050Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.889Z"
     },
     "4": {
       "typ": "konditional",
@@ -674,8 +674,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "af4df7dd7ff3c7429ba34f0d498c408659b8715bcfa906566dedc31ea9f085a3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.050Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.889Z"
     },
     "5": {
       "typ": "gemischt",
@@ -1245,8 +1245,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0127d73e7a3a60f4ede381142eabd2fd3db43ffc3d996233279de5a86f86e6ce",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.051Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.890Z"
     },
     "6": {
       "typ": "gemischt",
@@ -1818,8 +1818,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7aa88d48ff9ac3e6789eaeea3c131f0ed6623543a5eebb7bf6287c5f97996e2f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.052Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.891Z"
     },
     "10": {
       "typ": "gemischt",
@@ -2070,8 +2070,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "220bcfde96c7fb173a9e34fe262154baec827326a27aa8f42f7c98cbb870505b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.053Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.892Z"
     },
     "11": {
       "typ": "gemischt",
@@ -3174,8 +3174,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "401463d9e55eaf05e1e770318ea9f1fcf75523d468aa427cf390c836ec5932df",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.055Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.894Z"
     },
     "12": {
       "typ": "gemischt",
@@ -3341,8 +3341,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0524960d08dd98907785cfe7da6dd547bcc73e0d99dd8ebc4193e9d9d4e41fce",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.055Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.894Z"
     },
     "13": {
       "typ": "aussage",
@@ -3451,8 +3451,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bb83db2c62cdd7f4f8b904aedee5c10311f7a3b98f3040dba4d7fe08a95e937b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.055Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.895Z"
     },
     "14": {
       "typ": "gemischt",
@@ -3651,8 +3651,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "293c14a0fd0aac50b0c93ca0a317e220a6746e93d0413de6870b240281dc8710",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.055Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.895Z"
     },
     "15": {
       "typ": "konditional",
@@ -3761,8 +3761,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff0b6846bf96b80655e852f2a22af6de8b0fbe8018739fd95a82d75c592105c0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.056Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.895Z"
     },
     "16": {
       "typ": "aussage",
@@ -3837,8 +3837,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8289ae077676b651acc22f13ad4114df494cdf077572d1e7166655cb7ca37ca",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.056Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.895Z"
     },
     "17": {
       "typ": "aussage",
@@ -4014,8 +4014,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b5e277de7710ae305f1ae11792acb2b07aec14cb053bfd1ba61b9e3bbb6c8c0d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.056Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.896Z"
     },
     "18": {
       "typ": "gemischt",
@@ -4358,8 +4358,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "66dad2ecbf387c78a6545bbf94ba9f820acf80a0196fabd9b37c85c408687e7e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.057Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.897Z"
     },
     "19": {
       "typ": "gemischt",
@@ -4664,8 +4664,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "660c4c9e7ad288ec66dc26ce8b69436cb13a1b764f9ef4b8772851637ec4232e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.058Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.898Z"
     },
     "20": {
       "typ": "aussage",
@@ -5026,8 +5026,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "55277f413bb142ffb7ec6d2e551d6698c2edc0ba8cc30b7b50fc302130bcf8f1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.059Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.898Z"
     },
     "21": {
       "typ": "gemischt",
@@ -5840,8 +5840,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8cf4198681e7e8324e7a246dfd3e732e9beddedd322d8cc77bbcd97f013e9c09",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.060Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.900Z"
     },
     "22": {
       "typ": "aussage",
@@ -5950,8 +5950,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dc298d03cc6cd93c1ded72f300ca391fe60c86328566652a6320cb8df5e7e0cd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.061Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.900Z"
     },
     "23": {
       "typ": "gemischt",
@@ -6432,8 +6432,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a80b6e83fad83dfee474fec87f64b69f90cfe1d13fd484f11dc1452bf4231f04",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.062Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.902Z"
     },
     "24": {
       "typ": "konditional",
@@ -6553,8 +6553,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3ae1a4e0e63685fc65f9889e6ac9be6670cc6d2074b506a8c41a3e424f49cc45",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.063Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.902Z"
     },
     "25": {
       "typ": "aussage",
@@ -6742,8 +6742,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "94094f9866fbdef48a35d3cadf89cc1937687c890819b17fbd6050ab20551d7e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.063Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.903Z"
     },
     "26": {
       "typ": "gemischt",
@@ -6901,8 +6901,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "19a3acb9e56f5ebefd89eb90e36f1a9c0776485e3b52b4adb5eb22724d2bdeae",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.063Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.903Z"
     },
     "27": {
       "typ": "gemischt",
@@ -7138,8 +7138,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4c10bd639ee75294dea4a12c85def4a48ada168ec847ebb0215d055e069cb225",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.064Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.903Z"
     },
     "28": {
       "typ": "aussage",
@@ -7215,8 +7215,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.067Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.907Z"
     },
     "29": {
       "typ": "aussage",
@@ -7325,8 +7325,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ede1db3d9ba91e99502c0c4e3edc148a0ead5e005486eff7f1473f29d7b25fc3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.068Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.907Z"
     },
     "30": {
       "typ": "aussage",
@@ -7576,8 +7576,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7ef9681442eaa11a1c1d03f9d8c12c3bc229261d47c74fbb6e2255a52baad254",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.068Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.908Z"
     },
     "31": {
       "typ": "aussage",
@@ -7653,8 +7653,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f04d1efdfbb0360872516e4a94fb412c506b226592e6c0979a69de6bdf71d1ab",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.068Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.908Z"
     },
     "32": {
       "typ": "aussage",
@@ -7763,8 +7763,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dc4342505b22a8f7501f74b8c3e98926e678bf0e63d560c3cc2806f43ef0753b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.069Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.908Z"
     },
     "33": {
       "typ": "gemischt",
@@ -8226,8 +8226,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1745c864fb64df3787a8f8f6248cccc9f0082d89d4061459e601aa3dff0d931c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.070Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.909Z"
     },
     "34": {
       "typ": "aussage",
@@ -8303,8 +8303,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.070Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.909Z"
     },
     "35": {
       "typ": "aussage",
@@ -8379,8 +8379,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "99851062bab4767426cde42e49959c05b43ee47479b3fddd147107eb310d0cb3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.070Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.910Z"
     },
     "36": {
       "typ": "aussage",
@@ -8532,8 +8532,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bfb4563cd5cd5350e0ff551245914aa6023a1b43f3d08f0819019d5510f630a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.071Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.910Z"
     },
     "37": {
       "typ": "aussage",
@@ -8609,8 +8609,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.071Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.910Z"
     },
     "38": {
       "typ": "gemischt",
@@ -9049,8 +9049,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6b28b60045aa7ba412a8f10cdbbf49bbbc20c4d5e6a6be5e46e88fe0054f4769",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.072Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.911Z"
     },
     "39": {
       "typ": "gemischt",
@@ -9506,8 +9506,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78ed2fc8652f0a7af79d435750e4cf8aa357156d5887f5c99c288de66dee15b8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.073Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.912Z"
     },
     "40": {
       "typ": "gemischt",
@@ -9746,8 +9746,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9e244350776b793b9da06d86445c75f39de784f5a01f99b260adab43f56e2a0b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.074Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.913Z"
     },
     "41": {
       "typ": "konditional",
@@ -10004,8 +10004,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff949aac21b828f9c41791c4770b6d3c5ab960506fabee61f11ae0f2807148bd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.074Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.914Z"
     },
     "42": {
       "typ": "konditional",
@@ -10114,8 +10114,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f9c798f2e9e871c9a5334f11082e7f40922dd829957575f52d34adbebdc079ae",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.075Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.914Z"
     },
     "43": {
       "typ": "konditional",
@@ -10249,8 +10249,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a6bbc0bf44b5f5a61ef5c784b365996524c7e7390e88315af1f5ea021b2f011f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.075Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.914Z"
     },
     "44": {
       "typ": "gemischt",
@@ -10284,19 +10284,35 @@
             },
             {
               "art": "rf",
-              "text": "gegeben ist, ist die Klage vorbehaltlich der §§ 45 und 46 nur zulässig",
+              "text": "gegeben ist, ist die Klage",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 60,
-              "laenge": 70,
+              "laenge": 26,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Hauptsatzprädikat (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der §§ 45 und 46 nur zulässig",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 87,
+              "laenge": 43,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "tb",
@@ -10374,12 +10390,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der §§ 45 und 46 nur zulässig",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gegeben ist, ist die Klage vorbehaltlich der §§ 45 und 46 nur zulässig",
+                  "t": "gegeben ist, ist die Klage",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10419,9 +10450,11 @@
         "Gegenstand der Anfechtungsklage nach einem Vorverfahren"
       ],
       "rf": [
-        "gegeben ist, ist die Klage vorbehaltlich der §§ 45 und 46 nur zulässig"
+        "gegeben ist, ist die Klage"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der §§ 45 und 46 nur zulässig"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -10434,8 +10467,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6d2d065ea0898288c96696d8936b9b8480c0892b88bebbb0e447da6fc059a5f9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.075Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.915Z"
     },
     "45": {
       "typ": "gemischt",
@@ -10870,8 +10903,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "da21052115bb80f3fd0baf99e05050846b48cd2a5ff6aae7a39c2e25b4ffb22c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.077Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.916Z"
     },
     "46": {
       "typ": "gemischt",
@@ -11174,8 +11207,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "de0fb4678af9d3a03d5789cd2a0e5665f975a8b8beff55a771f09afe4615dfc1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.078Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.917Z"
     },
     "47": {
       "typ": "gemischt",
@@ -11564,8 +11597,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "53463dcafc35e811cae591e0ee3b78d8d5cd8773a3b886936d0281f83a6f6cfa",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.079Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.918Z"
     },
     "48": {
       "typ": "gemischt",
@@ -12204,8 +12237,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78366842648ed5a700a56b0909296b2213c084b4f07244542f3153cbe3c60353",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.081Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.920Z"
     },
     "49": {
       "typ": "aussage",
@@ -12281,8 +12314,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.081Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.921Z"
     },
     "50": {
       "typ": "gemischt",
@@ -12762,8 +12795,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8db2df229e59874647e19c9cd8271637317806a441a24924c2b56bd96ab9705",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.082Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.922Z"
     },
     "51": {
       "typ": "konditional",
@@ -13143,8 +13176,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "69182419dbd43548fdab9ed2559a9e49541dad8d8abfaf052d158fc77beac457",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.083Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.923Z"
     },
     "52": {
       "typ": "gemischt",
@@ -13452,8 +13485,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "67c18c714dc745967f322281393810a7bab745685dfc9b86c10a5645e43c850b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.084Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.923Z"
     },
     "53": {
       "typ": "gemischt",
@@ -13820,8 +13853,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0efc11a9f90106daee7ff37655485df5d015585616e26f5fee5f0ba99f8bb4b5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.101Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.940Z"
     },
     "54": {
       "typ": "konditional",
@@ -14047,8 +14080,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5678ffee64e634a3c0f073ae415d7f3a9c96b047c47ae8024613671e50d0f52c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.101Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.940Z"
     },
     "55": {
       "typ": "gemischt",
@@ -14317,8 +14350,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "296abd2c0baf55015cdfcdbb86bee0561cde3a8626196749576b72f2dc8da16a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.102Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.941Z"
     },
     "56": {
       "typ": "gemischt",
@@ -14926,8 +14959,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db32ea107388f1b843403039c0a1c12651992be62636e6bed98ca375767a9423",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.103Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.942Z"
     },
     "57": {
       "typ": "aussage",
@@ -15069,8 +15102,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4fe0fb4962678c227e140c8dba58f7abf1069584f72d3f1649010a7cc308459b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.104Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.943Z"
     },
     "58": {
       "typ": "gemischt",
@@ -15319,8 +15352,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a47838cbdbbd1833d5d8cbfcd8ccc31a0be4181190befc0b704347b6edb4cde5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.105Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.944Z"
     },
     "59": {
       "typ": "aussage",
@@ -15440,8 +15473,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "982bb4a1b3d6c298339e4faf3b240a2b575a5ce07b916871fb2431260f9bc28f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.105Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.944Z"
     },
     "60": {
       "typ": "gemischt",
@@ -16139,8 +16172,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "42a2724b360e24ae0b06c308f7376c74aeac4578ab776e7537a4ff5a1b767da1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.106Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.945Z"
     },
     "61": {
       "typ": "aussage",
@@ -16216,8 +16249,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.108Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.946Z"
     },
     "62": {
       "typ": "gemischt",
@@ -18022,8 +18055,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "12c77224f9a0b62047740204452e6e7c2757024f97296ad815ea2655a1290b33",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.112Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.951Z"
     },
     "63": {
       "typ": "gemischt",
@@ -18526,8 +18559,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a0ab14dc8c34157326b70bde6ff46c23603f60059a5a0c121163a09f9e8aff6d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.114Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.953Z"
     },
     "64": {
       "typ": "gemischt",
@@ -18651,8 +18684,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7dbc40236df04919d8472a32126ac55fea07ac87d69827766b6f07489496ccb9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.114Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.953Z"
     },
     "65": {
       "typ": "gemischt",
@@ -19109,8 +19142,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a32371c83c629a0d44779fd21299fd593832a69f395bc48841b0ac99d0cb241",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.115Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.955Z"
     },
     "66": {
       "typ": "gemischt",
@@ -19279,8 +19312,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b6fadc7f5dcb0efff6e4ddaeab133e90ab53a4086bf030fb466ae6012ad9c750",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.116Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.955Z"
     },
     "67": {
       "typ": "konditional",
@@ -19562,8 +19595,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5307254cd2b1b28dc632c93acfc74f0492cece1a003e7d54db2a1be07be1a6d1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.116Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.955Z"
     },
     "68": {
       "typ": "gemischt",
@@ -19854,8 +19887,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "955c6de6288ec6875253c733165806b48e9df4d4ada949d356d71ca34562afb0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.117Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.956Z"
     },
     "69": {
       "typ": "gemischt",
@@ -19890,30 +19923,46 @@
             },
             {
               "art": "rf",
-              "text": "wird die Vollziehung des angefochtenen Verwaltungsakts vorbehaltlich des Absatzes 5 nicht gehemmt, insbesondere die Erhebung einer Abgabe nicht",
-              "anzeige": "wird die Vollziehung des angefochtenen Verwaltungsakts vorbehaltlich des Absatzes 5 nicht gehemmt, insbesondere die Erhebung einer Abgabe nicht … aufgehalten",
+              "text": "wird die Vollziehung des angefochtenen Verwaltungsakts",
+              "anzeige": "wird die Vollziehung des angefochtenen Verwaltungsakts … insbesondere die Erhebung einer Abgabe nicht",
               "teile": [
                 {
-                  "text": "wird die Vollziehung des angefochtenen Verwaltungsakts vorbehaltlich des Absatzes 5 nicht gehemmt, insbesondere die Erhebung einer Abgabe nicht",
+                  "text": "wird die Vollziehung des angefochtenen Verwaltungsakts",
                   "von": 25,
-                  "laenge": 143
+                  "laenge": 54
                 },
                 {
-                  "text": "aufgehalten",
-                  "von": 169,
-                  "laenge": 11
+                  "text": "insbesondere die Erhebung einer Abgabe nicht",
+                  "von": 124,
+                  "laenge": 44
                 }
               ],
               "pfad": "Abs. 1 Satz 1",
               "von": 25,
-              "laenge": 143,
+              "laenge": 54,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 5 nicht gehemmt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 80,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -20946,12 +20995,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 5 nicht gehemmt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird die Vollziehung des angefochtenen Verwaltungsakts vorbehaltlich des Absatzes 5 nicht gehemmt, insbesondere die Erhebung einer Abgabe nicht … aufgehalten",
+                  "t": "wird die Vollziehung des angefochtenen Verwaltungsakts … insbesondere die Erhebung einer Abgabe nicht",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -21509,7 +21573,7 @@
         "die Änderung oder Aufhebung wegen veränderter oder im ursprünglichen Verfahren ohne Verschulden nicht geltend gemachter Umstände beantragen"
       ],
       "rf": [
-        "wird die Vollziehung des angefochtenen Verwaltungsakts vorbehaltlich des Absatzes 5 nicht gehemmt, insbesondere die Erhebung einer Abgabe nicht",
+        "wird die Vollziehung des angefochtenen Verwaltungsakts",
         "gilt bei Anfechtung von Grundlagenbescheiden für die darauf beruhenden Folgebescheide",
         "Die zuständige Finanzbehörde",
         "soll die Aussetzung erfolgen",
@@ -21536,6 +21600,7 @@
         "Lehnt die Behörde die Aussetzung der Vollziehung ab, kann das Gericht nur nach den Absätzen 3 und 5 Satz 3 angerufen werden"
       ],
       "ausnahmen": [
+        "vorbehaltlich des Absatzes 5 nicht gehemmt",
         "es sei denn, dass bei der Aussetzung der Vollziehung des Grundlagenbescheides die Sicherheitsleistung ausdrücklich ausgeschlossen worden ist",
         "dies gilt nicht, wenn die Aussetzung oder Aufhebung der Vollziehung zur Abwendung wesentlicher Nachteile nötig erscheint",
         "Das gilt nicht"
@@ -21552,8 +21617,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "962aaa0a614f6a098036447a762abc4bca0db8e31606cd53a69bfc1a69deeb33",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.120Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.960Z"
     },
     "70": {
       "typ": "gemischt",
@@ -21722,8 +21787,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "aafce0577ae4a4d016395904187b008cdb765cc0bbe239b60a1ed5949c50835b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.121Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.960Z"
     },
     "71": {
       "typ": "gemischt",
@@ -22052,8 +22117,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6fcc3862666b9fbdf0887b469425b272bc91628950fbcc2380d59e9195856721",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.121Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.961Z"
     },
     "72": {
       "typ": "gemischt",
@@ -22569,8 +22634,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4bb7536bc63470f629efb070c8122e8cf3b7b034eec227a5d4c3c50cfd3fc834",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.131Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.970Z"
     },
     "73": {
       "typ": "gemischt",
@@ -22762,8 +22827,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2bdf645f376d6a40f516a4597cdb7921ae9b6ebd8a0950ce210ebcd0c42e860d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.132Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.970Z"
     },
     "74": {
       "typ": "konditional",
@@ -22872,8 +22937,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1703d18074e1077637b92527ef38b279afd3825ce6342be0cdadf0c4e640d19b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.132Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.971Z"
     },
     "75": {
       "typ": "konditional",
@@ -23007,8 +23072,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "230325cff59b82e0227a88ecb5a211a0fe20b093d74cb6f337061740e267219e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.132Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.971Z"
     },
     "76": {
       "typ": "gemischt",
@@ -23498,8 +23563,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3f73e6e59b4a4fb35ab3db7dc8cc252c48ec1417783f44a34dfb4b24a4d86fd3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.134Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.972Z"
     },
     "77": {
       "typ": "gemischt",
@@ -23851,8 +23916,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebb21b0630afdd82f1fc11aeb52528d6a3c2c4ad2475b3e9c750b89b2f7408da",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.134Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.973Z"
     },
     "78": {
       "typ": "gemischt",
@@ -24565,8 +24630,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b8913e3c017a1ccf62c45d9c4b8e02a90432f0be98ba8a562036fcdc5331568",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.136Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.975Z"
     },
     "79": {
       "typ": "gemischt",
@@ -25236,8 +25301,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "be57f241eab06398f686a24058dd5606778cc191c83e6123616a42dfc3ebe7be",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.139Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.978Z"
     },
     "80": {
       "typ": "gemischt",
@@ -25699,8 +25764,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "52b6ae4900520c54b0c9d721396b1de9ea21bb01bf02f370d7aaa822ddddc5ea",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.143Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.982Z"
     },
     "81": {
       "typ": "aussage",
@@ -25868,8 +25933,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9e074953f2e148fea732d9cecdcb1a5233b1e272983d73ff200a3bf5235cc286",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.143Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.982Z"
     },
     "82": {
       "typ": "konditional",
@@ -25978,8 +26043,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0152a708353698b0d2472eff5f6c14d23318800fed35c1fe97d401e56f4d29a9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.144Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.983Z"
     },
     "83": {
       "typ": "gemischt",
@@ -26168,8 +26233,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ec0d802488260ee0bd5d5a37cb88b9f7b64d67ddb6a5e7911421559f665ffb24",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.144Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.983Z"
     },
     "84": {
       "typ": "gemischt",
@@ -26360,8 +26425,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fecc53618201e6acfa14fb8a096c49a60d241914fbeadb6a306e04124f53b121",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.145Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.983Z"
     },
     "85": {
       "typ": "gemischt",
@@ -26555,8 +26620,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "efd3fe137e8efd69e6fdc6afc55a6ee45cd9eeaf15ff3ad25847191ee1362c8e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.145Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.984Z"
     },
     "86": {
       "typ": "gemischt",
@@ -27316,8 +27381,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "135685331572dbe2297271fc48bdceb9276279e632f8d832864620e9638845ce",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.147Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.986Z"
     },
     "87": {
       "typ": "konditional",
@@ -27484,8 +27549,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b6ff778d88fd9d2e32258dcb9411e5d5e3a114a71eb6c2d812b10ae5f8b18a45",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.147Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.986Z"
     },
     "88": {
       "typ": "konditional",
@@ -27594,8 +27659,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c54ebdb29032a237fe89ca25885e458fd381803dbf08218513cbdb9527cc07a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.148Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.987Z"
     },
     "89": {
       "typ": "konditional",
@@ -27704,8 +27769,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8e7cf9a4f3c9cf13255bd64c0d57a683defec68700efbd5cb66c7babeedcf787",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.148Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.987Z"
     },
     "90": {
       "typ": "gemischt",
@@ -27988,8 +28053,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8b9f8881284cead47caefcd21737ce65664451eae0f2a29a84aa3396ce746aad",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.149Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.988Z"
     },
     "91": {
       "typ": "gemischt",
@@ -28435,8 +28500,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "05f445fddfc7be503024a808916f931eac127c384456b7528e55772204625c44",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.150Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.990Z"
     },
     "92": {
       "typ": "gemischt",
@@ -28675,8 +28740,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "170be9f4a96bf0057fa36a6019e8ac4417ff88382edbf51b6a3e7db79f141b35",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.151Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.991Z"
     },
     "93": {
       "typ": "gemischt",
@@ -29005,8 +29070,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7e4e1d4e21333a7159c01275bc6e11b453433e3b207db51b3acf5a5b75d80b3a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.162Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.005Z"
     },
     "94": {
       "typ": "konditional",
@@ -29115,8 +29180,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9f0e9927168d6f75bcd7e0f5919a7ae7c4da1da0637101a8a4be7ae08f989dcd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.163Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.006Z"
     },
     "95": {
       "typ": "konditional",
@@ -29250,8 +29315,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f9d80c0089908843f20a4f844841707e02c3d871b8d778907c3a0f150a961c58",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.164Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.007Z"
     },
     "96": {
       "typ": "aussage",
@@ -29512,8 +29577,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "45e68ecb7c50440fb9edbfe33267aa158606f7c6b11c3fcc1ece90f996b31986",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.164Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.007Z"
     },
     "97": {
       "typ": "konditional",
@@ -29622,8 +29687,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7f722fa6d53b0b19e731d8a6835b46d6e387b5a95bf062b045036f1e39ceb6c2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.165Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.007Z"
     },
     "98": {
       "typ": "konditional",
@@ -29732,8 +29797,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "01563e3400ec37af2a6b92f9bb2dc1d62e35b887ac1ae641d6b8b37fc2b5126f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.165Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.008Z"
     },
     "99": {
       "typ": "konditional",
@@ -29923,8 +29988,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedf5a30b7b20ef6c58c9dd5890a69fd40a1aca5cd5da1b908f710831491ed22",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.165Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.008Z"
     },
     "100": {
       "typ": "gemischt",
@@ -30680,8 +30745,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6871f448eccb80b7e4d6fea2a4fa14441a633a083aed017f0aa1002a9f3871ef",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.167Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.010Z"
     },
     "101": {
       "typ": "gemischt",
@@ -30875,8 +30940,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "708f3e1f07a673e2d47c53e842c0791907a724d158d07ca6b61c086ad74a84a2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.168Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.011Z"
     },
     "102": {
       "typ": "gemischt",
@@ -31056,8 +31121,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f484fdf662571145155870d4c4bad98c8aaafd7b34003b9ed273595c16a5090",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.169Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.011Z"
     },
     "103": {
       "typ": "aussage",
@@ -31132,8 +31197,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "92922ca8b312f29942d8ad8c70ccc4ff50380fced6a9786ac101ce75e299e665",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.169Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.012Z"
     },
     "104": {
       "typ": "gemischt",
@@ -31462,8 +31527,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dcbb5bc3de6bc26ac98010c567b9c63cba6efc2274363ab4218ed2b90921f09b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.170Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.013Z"
     },
     "105": {
       "typ": "gemischt",
@@ -32441,8 +32506,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78028c5877842fb91b68060d5b35410cc2a9ab48f06f6cb86455d5b3e178ed05",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.172Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.015Z"
     },
     "106": {
       "typ": "aussage",
@@ -32517,8 +32582,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e78e79aa1b750ba14afe295e4ba317ee7ab87ac1038701f763374e6343384ec4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.172Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.016Z"
     },
     "107": {
       "typ": "gemischt",
@@ -32824,8 +32889,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c48835e25f4fa5be620819463ad7e87ffc884518d93b4f691b0f279f4e13abea",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.173Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.016Z"
     },
     "108": {
       "typ": "gemischt",
@@ -33247,8 +33312,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a3429257d0817ee685fc94f0eb84efa5eceb95ec28fee405a36f9b96d9a8201",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.173Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.017Z"
     },
     "109": {
       "typ": "gemischt",
@@ -33557,8 +33622,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7a66ed59bfe18512808f8ed75baf1f83fafda1bd5d2f45de881229e1f4520ce2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.174Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.018Z"
     },
     "110": {
       "typ": "gemischt",
@@ -33985,8 +34050,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1f2b1efa2c6766848536f27fc0e39c24b4d9c5e5177d18ad87b3f904960a5306",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.176Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.019Z"
     },
     "113": {
       "typ": "gemischt",
@@ -34340,8 +34405,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "10a52254dacd23d38db5a04bed36f65316e91d227bd8051160f38d2688f65756",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.177Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.020Z"
     },
     "114": {
       "typ": "gemischt",
@@ -34932,8 +34997,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3b5156e8e56c1ad33ba1f5a95a4e4540b9ea458277798bfaeee16e2288ceb717",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.178Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.021Z"
     },
     "115": {
       "typ": "gemischt",
@@ -35335,8 +35400,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c19847b6715ce834e296fd455b9fc7e14f9c0d16053b28b46a5806a5e9acf5da",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.180Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.022Z"
     },
     "116": {
       "typ": "gemischt",
@@ -36365,8 +36430,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "43529103d0c4662391adddcaca6ad4c2b316aad4d5d4e6e4f3ddd2fc5b22a285",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.182Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.024Z"
     },
     "117": {
       "typ": "aussage",
@@ -36442,8 +36507,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.196Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.037Z"
     },
     "118": {
       "typ": "gemischt",
@@ -36808,8 +36873,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ffe103b8b6ca7bef353d48443b1bfa3b07c187f44668978313b593e17efddb2b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.197Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.039Z"
     },
     "119": {
       "typ": "gemischt",
@@ -37267,8 +37332,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "83aec20c0924fb244719051554b799a8d5c7af30a18b60fadd6fce326e4fe014",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.198Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.040Z"
     },
     "120": {
       "typ": "gemischt",
@@ -37769,8 +37834,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "46eb16479aa8b096315da32a05c72db231fb6be060f20547cc5293052ca0bff2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.200Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.041Z"
     },
     "121": {
       "typ": "gemischt",
@@ -37975,8 +38040,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "107d425f1ce19c03f56e60c9c51d4f7d35995d4f9fe014e5dfae680aaf638dea",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.200Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.042Z"
     },
     "122": {
       "typ": "gemischt",
@@ -38269,8 +38334,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f3f48c9434e1e4088b8f1527ff504c9c57d4f97eef8c65ce81160c43bf697a1f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.201Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.042Z"
     },
     "123": {
       "typ": "gemischt",
@@ -38538,8 +38603,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "945686f48497d89b70e61c8fb61bec001242864a07b72f777568d67524c46bc7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.202Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.043Z"
     },
     "124": {
       "typ": "gemischt",
@@ -38731,8 +38796,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "edcc534241f2aa40c0257761839787689d6c08649d002f08e1ad5cbc14b6c0ed",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.202Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.044Z"
     },
     "125": {
       "typ": "gemischt",
@@ -38924,8 +38989,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "268010eb1f034ead66b005697609b3454a6f8d5ea0bf68a40d27bb7fc30bdc01",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.203Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.044Z"
     },
     "126": {
       "typ": "gemischt",
@@ -39645,8 +39710,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b43b4a1f7d24b14df6c4acb485c51184f48b10a6ce474745a530a8b5c797481",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.204Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.046Z"
     },
     "127": {
       "typ": "konditional",
@@ -39755,8 +39820,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fc911f559de7a637bc17e4daadaf2b2b43bdc26f42cbca2525c3e19f17bb760c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.207Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.049Z"
     },
     "128": {
       "typ": "gemischt",
@@ -40245,8 +40310,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a8db1085f614ee45513c5fff99731e4824ca8374b4930c7b04f9a94f63737bb7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.209Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.050Z"
     },
     "129": {
       "typ": "gemischt",
@@ -40415,8 +40480,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f8651789b4a186ca0f8ced684e232ec6259fd0703e272f34f454935b5d47f9c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.209Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.051Z"
     },
     "130": {
       "typ": "gemischt",
@@ -40574,8 +40639,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "39aae2f567e32b20b8cd492fc45114f96ec240d797ea7c38c357a814eeaa3c07",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.210Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.051Z"
     },
     "131": {
       "typ": "gemischt",
@@ -40836,8 +40901,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "28650509faa1802562bc3d3b1f64fa38c032b7a305fc9d4a673c9a18e02602f6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.210Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.052Z"
     },
     "132": {
       "typ": "konditional",
@@ -40946,8 +41011,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "49b1afb97eec887356f4c585789436da2250d8d1dee5f6e689fbad1fcfee7f74",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.210Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.052Z"
     },
     "133": {
       "typ": "aussage",
@@ -41183,8 +41248,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a7e0d927678e4741b9ef088f8651fb3e03185a548fc260397da3c796551bb16b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.211Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.053Z"
     },
     "134": {
       "typ": "aussage",
@@ -41293,8 +41358,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b1ebe8433f75b9fcfd57b6fd1f4b2423f79659be020cd3995e2681daca4923e0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.214Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.056Z"
     },
     "135": {
       "typ": "gemischt",
@@ -41812,8 +41877,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f07f811d5168fb1193221c355263160269eb567401dd8b97f3bfa61746ed3c85",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.214Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.056Z"
     },
     "136": {
       "typ": "gemischt",
@@ -42228,8 +42293,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f1a8ad8b3d920070a27e21327b6542e128a5a506689c4e73909d9a61b0fa9c1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.215Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.057Z"
     },
     "137": {
       "typ": "gemischt",
@@ -42468,8 +42533,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4207e650386ebb3539ef630a131db7b8ef56aed946029379a7e479ddd8992046",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.216Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.058Z"
     },
     "138": {
       "typ": "konditional",
@@ -42667,8 +42732,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71bfa4dbc3abd24facd6db30a87b2795e8431f4039a4fb61190de6de5abd76b4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.217Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.059Z"
     },
     "139": {
       "typ": "gemischt",
@@ -43145,8 +43210,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "861129acd2492a569c38387da2d5a32cf7133752a8f3269ab99fe4d0636db7e5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.218Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.060Z"
     },
     "142": {
       "typ": "gemischt",
@@ -43989,8 +44054,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a3b7bd3d5076212d4bf0b929195db523c099ac543a0bac69d1128fd8c7daeb50",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.237Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.078Z"
     },
     "143": {
       "typ": "konditional",
@@ -44191,8 +44256,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "274a393e12d5986a35c8c166ba7d347e964a16a291ce647d7bc27cff9140ab92",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.237Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.078Z"
     },
     "144": {
       "typ": "konditional",
@@ -44301,8 +44366,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d4739ba68d8553b2015c41583ebbf1af43ac146d246e75ab91cee518a7bab1bd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.237Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.079Z"
     },
     "145": {
       "typ": "konditional",
@@ -44410,8 +44475,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "de2697f72624890ad9c2dbf7900ff7af333926ead312ae63a0606921b7acdd44",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.238Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.079Z"
     },
     "146": {
       "typ": "gemischt",
@@ -44950,8 +45015,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "614a6e9053e9ea012ba5e36cfb29da63ec1a272e55bdf2edd950a1ccb3cf19a6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.239Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.080Z"
     },
     "149": {
       "typ": "gemischt",
@@ -45375,8 +45440,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "02141156efd0027b8b0b698c1648f8fbb1f66d211882db765f96bf4213027898",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.239Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.081Z"
     },
     "150": {
       "typ": "gemischt",
@@ -45645,8 +45710,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fb45dad27cd1b8b0c5b8571dde6df36b073c98adc3dcc2c325f96cf5eaf93b69",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.240Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.081Z"
     },
     "151": {
       "typ": "gemischt",
@@ -46120,8 +46185,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "111ca9cdde0b5e46afbd995712a9a5e4a67234df67b7dacef345ac4e90bb5e52",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.241Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.083Z"
     },
     "152": {
       "typ": "gemischt",
@@ -46733,8 +46798,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6a253ebb5bb15162f7185b7ade2f42ce62fce329cedf71e461688d40dc2def0a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.242Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.084Z"
     },
     "153": {
       "typ": "konditional",
@@ -46843,8 +46908,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "35c0d351cb45209bc8bf6c0d46f4ed4828d72e31cd1d5ff06f4f9c3533745ebc",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.243Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.084Z"
     },
     "154": {
       "typ": "aussage",
@@ -46953,8 +47018,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4ded570b0dd96ef8777f762d2420ef10c3549d42e71e9c675fb036cc16e170d2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.243Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.085Z"
     },
     "155": {
       "typ": "gemischt",
@@ -47134,8 +47199,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c2217eeb69d37cdcb227d280b53cafbfceb15af61f481bfd30a948fcd31e763",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.244Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.086Z"
     },
     "156": {
       "typ": "verweisung",
@@ -47244,8 +47309,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbca400c165fe09e8e805c1a013ee7e14bcee544e9b917124a1413dbfea91509",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.244Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.086Z"
     },
     "157": {
       "typ": "gemischt",
@@ -47278,20 +47343,36 @@
               "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
             {
-              "art": "rf",
-              "text": "bleiben vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit, die auf der für nichtig erklärten Norm beruhen, unberührt",
+              "art": "ausn",
+              "text": "vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 144,
-              "laenge": 216,
+              "von": 152,
+              "laenge": 149,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "die auf der für nichtig erklärten Norm beruhen, unberührt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 303,
+              "laenge": 57,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfolgender Hauptsatz (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -47369,12 +47450,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "bleiben vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit, die auf der für nichtig erklärten Norm beruhen, unberührt",
+                  "t": "die auf der für nichtig erklärten Norm beruhen, unberührt",
                   "pfad": "Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -47398,10 +47494,12 @@
         "Die Vollstreckung aus einer solchen Entscheidung"
       ],
       "rf": [
-        "bleiben vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit, die auf der für nichtig erklärten Norm beruhen, unberührt",
+        "die auf der für nichtig erklärten Norm beruhen, unberührt",
         "ist unzulässig. § 767 der Zivilprozessordnung gilt sinngemäß"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich einer besonderen gesetzlichen Regelung durch das Land die nicht mehr anfechtbaren Entscheidungen der Gerichte der Finanzgerichtsbarkeit"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -47414,8 +47512,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2f9e65658de649094ec623364f0efcc3d1a899125c3411b299d104c5e84dddbe",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.244Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.087Z"
     },
     "158": {
       "typ": "aussage",
@@ -47558,8 +47656,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "424de49b8b2032db23f1966f5611891d34aab83571ea016a6616cc82a2e6adc1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.245Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.087Z"
     },
     "159": {
       "typ": "verweisung",
@@ -47668,8 +47766,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "742e802293738459d64f4e59e8c25e026f9a46be0fe7ac2c10736d3d38cc9302",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.245Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.087Z"
     },
     "160": {
       "typ": "konditional",
@@ -47778,8 +47876,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a1f3cba72df6a86e82773b4279ecac3f0b9c574a19e33ba431f7f4246a3ceb16",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.245Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.088Z"
     },
     "161": {
       "typ": "aussage",
@@ -47855,8 +47953,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fb524a1ffbf3bae18ff625ad138bd5fef8a9522fe29a8f7ee1bc7b7d8f1b4bf1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.246Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.088Z"
     },
     "162": {
       "typ": "gemischt",
@@ -48084,8 +48182,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f6a7316b892782246c0c9242a5abe0c7752caf74152eab258062bbe5753c4694",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.246Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.089Z"
     },
     "184": {
       "typ": "aussage",
@@ -48210,8 +48308,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4567a34b7d5e0ab80daa5841803a65160a931b3bca84dc7e0da87b36049e2318",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.246Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.090Z"
     },
     "(xxxx)-§§-7-bis-9": {
       "typ": "gemischt",
@@ -48233,8 +48331,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.052Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.892Z"
     },
     "52a": {
       "typ": "gemischt",
@@ -49382,8 +49480,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e5b683b8827665e116270c1a11c8e9080950fe66f54fb7c7bbc711b28fc85e97",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.095Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.935Z"
     },
     "52b": {
       "typ": "gemischt",
@@ -50776,8 +50874,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e03fbdff06b6ae8474f3066b35f36dd7b763ddf491527b198faf6ee481ff9228",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.098Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.937Z"
     },
     "52c": {
       "typ": "gemischt",
@@ -50966,8 +51064,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "edc72f31b848d16e753c0b0f98695cf00ee2b39fb371482f2aae16ec8124983e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.099Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.938Z"
     },
     "52d": {
       "typ": "gemischt",
@@ -51262,8 +51360,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d98d1236955f1d68baaafeb08fd7716fca6b252bb345997901f8a02e3bd7fee4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.100Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.939Z"
     },
     "60a": {
       "typ": "gemischt",
@@ -51718,8 +51816,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6ba880e1035cdc305a25ae7175a97546e6f9285b415dd895d125a73166b9313e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.107Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.946Z"
     },
     "62a": {
       "typ": "gemischt",
@@ -51741,8 +51839,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.113Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.951Z"
     },
     "77a": {
       "typ": "aussage",
@@ -51818,8 +51916,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.134Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.973Z"
     },
     "79a": {
       "typ": "gemischt",
@@ -52441,8 +52539,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae629eb696dd86e8c5519e0771add5efca063b605989462699d1ad745ba99d21",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.141Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.979Z"
     },
     "79b": {
       "typ": "gemischt",
@@ -53091,8 +53189,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c63971a6620b834dd9651e8cc874ed589141d667622cd23e24b959477e3b7223",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.142Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.981Z"
     },
     "90a": {
       "typ": "gemischt",
@@ -53505,8 +53603,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22134cc508a5407d77b04584319fffa5feda012e828b7e96553d052d4e0bf622",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.150Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.989Z"
     },
     "93a": {
       "typ": "gemischt",
@@ -53528,8 +53626,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.162Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.005Z"
     },
     "94a": {
       "typ": "gemischt",
@@ -53732,8 +53830,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2d499bd0bc975532e66cd2a579f396d8b9a1c198538f611fbcbd3c2a22a25c4b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.163Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.006Z"
     },
     "(xxxx)-§§-111-und-112": {
       "typ": "gemischt",
@@ -53755,8 +53853,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.176Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.019Z"
     },
     "126a": {
       "typ": "gemischt",
@@ -53991,8 +54089,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0a034944ea80d87aa7f3c47dd01b9e39b16d9aa7cf28d69a0e8488ec0966d400",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.207Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.046Z"
     },
     "133a": {
       "typ": "gemischt",
@@ -55147,8 +55245,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b48bab31615336f4a283e6cb3fb69fce5b38d1bce10b94708520d3a54f489f18",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.213Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.055Z"
     },
     "(xxxx)-§§-140-und-141": {
       "typ": "gemischt",
@@ -55170,8 +55268,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.234Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.075Z"
     },
     "(xxxx)-§§-147-bis-148": {
       "typ": "gemischt",
@@ -55193,8 +55291,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.239Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.080Z"
     },
     "(xxxx)-§§-163-bis-183": {
       "typ": "gemischt",
@@ -55216,8 +55314,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.246Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.089Z"
     }
   }
 }

@@ -1,14 +1,14 @@
 {
   "abk": "GrStG",
   "titel": "Grundsteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:31.017Z",
+  "aktualisiert": "2026-08-10T09:19:25.860Z",
   "quelle": "https://www.gesetze-im-internet.de/grstg_1973/",
   "stand": [
     {
@@ -253,8 +253,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bf9ba9942f6721a92612e76cd6583b5da68befdfab2c978584b9414d0ee1c71",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.975Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.818Z"
     },
     "2": {
       "typ": "gemischt",
@@ -512,8 +512,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "37c6379c0d4e6b6d1bfe5af833e583f52122f097b18fec1f95b3aba8a034d647",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.976Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.819Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1503,8 +1503,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf7476b2978f26c237cc3b6ff6c3f36c37e9c99383f482a4dcbe8445fe661b3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.979Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.822Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1977,8 +1977,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e9c7b2a9bddb1a3b709d0bcfcab09ba1ebca33a4897a1a83b179d21ad81a1a7a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.981Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.824Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2313,8 +2313,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6cbb4367adf752036679227aa5934b7afffc3c216e8f307ad56864a819866af7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.983Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.825Z"
     },
     "6": {
       "typ": "gemischt",
@@ -2467,8 +2467,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "264157584796d9e3617c61b5bfc56512893d31be536ad46156323d323a115b6f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.983Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.826Z"
     },
     "7": {
       "typ": "konditional",
@@ -2611,8 +2611,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdcd579bbb462e1dc74e74078d00ab202662f020268bb0c37a75d9e306a059ea",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.984Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.826Z"
     },
     "8": {
       "typ": "konditional",
@@ -2802,8 +2802,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa9fbc6f2f77539a0cb05f1ad49b2bb1066cc876e6f379607a0d535ac4d06f82",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.984Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.827Z"
     },
     "9": {
       "typ": "aussage",
@@ -2926,8 +2926,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "caf0e52999418e76d7dec6e8947a30ebeaaf28e4e39db52e054e5ee23cd94773",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.984Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.827Z"
     },
     "10": {
       "typ": "gemischt",
@@ -3143,8 +3143,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16a76da4021ee34c3646a011ff16b6503cae2fb6e477ad133f6eeddb01eb532c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.986Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.829Z"
     },
     "11": {
       "typ": "gemischt",
@@ -3377,8 +3377,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b4da73c3f07132a591bd520c7fe9766d3c368965343036b5e20443a5699b36a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.987Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.830Z"
     },
     "12": {
       "typ": "aussage",
@@ -3453,8 +3453,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae83092d9e669f83a9557af0ffb3606f1aa239cdaeada08bb00e1c608579bdd1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.987Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.830Z"
     },
     "13": {
       "typ": "gemischt",
@@ -3583,8 +3583,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fce85cded2154ad807e1d74d97ecc57372013c4a132184f72f45f9704592658a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.988Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.831Z"
     },
     "14": {
       "typ": "tarif",
@@ -3693,8 +3693,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b558c2ddabfa10afb5370acac3448475de42b3f9e1193ed5609ff0c517d5db2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.988Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.831Z"
     },
     "15": {
       "typ": "gemischt",
@@ -4734,8 +4734,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ee5866c36a2de6b129d7d54b198bd9da45abe3e919a0eab680d1663d0dc16567",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.991Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.834Z"
     },
     "16": {
       "typ": "gemischt",
@@ -4803,19 +4803,46 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "festgesetzte Steuermeßbetrag gilt vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an, das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
-              "anzeige": null,
-              "teile": null,
+              "text": "festgesetzte Steuermeßbetrag gilt",
+              "anzeige": "festgesetzte Steuermeßbetrag gilt … das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
+              "teile": [
+                {
+                  "text": "festgesetzte Steuermeßbetrag gilt",
+                  "von": 228,
+                  "laenge": 33
+                },
+                {
+                  "text": "das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
+                  "von": 318,
+                  "laenge": 58
+                }
+              ],
               "pfad": "Abs. 2 Satz 1",
               "von": 228,
-              "laenge": 148,
+              "laenge": 33,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 262,
+              "laenge": 54,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -4827,20 +4854,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "bleibt unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend, von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
+              "art": "ausn",
+              "text": "unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 401,
-              "laenge": 144,
+              "von": 408,
+              "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorbehalt mit „unbeschadet\""
+            },
+            {
+              "art": "rf",
+              "text": "von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 2",
+              "von": 469,
+              "laenge": 76,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -4949,12 +4992,12 @@
           "schritte": [
             {
               "n": "I.",
-              "art": "rf",
-              "t": "Rechtsfolge",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "festgesetzte Steuermeßbetrag gilt vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an, das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
+                  "t": "vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -4962,7 +5005,30 @@
                 },
                 {
                   "n": "2.",
-                  "t": "bleibt unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend, von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
+                  "t": "unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "festgesetzte Steuermeßbetrag gilt … das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "2.",
+                  "t": "von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -5025,12 +5091,15 @@
       "rf": [
         "werden auf den Hauptfeststellungszeitpunkt (§ 221 Absatz 2 des Bewertungsgesetzes) allgemein festgesetzt (Hauptveranlagung)",
         "ist der Hauptveranlagungszeitpunkt",
-        "festgesetzte Steuermeßbetrag gilt vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an, das zwei Jahre nach dem Hauptveranlagungszeitpunkt beginnt",
-        "bleibt unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend, von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
+        "festgesetzte Steuermeßbetrag gilt",
+        "von dem an die Steuermeßbeträge der nächsten Hauptveranlagung wirksam werden",
         "ist der Hauptveranlagungszeitraum",
         "kann die Hauptveranlagung unter Zugrundelegung der Verhältnisse vom Hauptveranlagungszeitpunkt mit Wirkung für einen späteren Veranlagungszeitpunkt vorgenommen werden, für den diese Frist noch nicht abgelaufen ist"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der §§ 17 und 20 von dem Kalenderjahr an",
+        "unbeschadet der §§ 17 und 20 bis zu dem Zeitpunkt maßgebend"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -5043,8 +5112,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4251053215e47cd9ab4c45a2687344be9d603dea5a67ade028dba7189f30af8f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.992Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.835Z"
     },
     "17": {
       "typ": "gemischt",
@@ -5766,8 +5835,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6a6584441ea7ed057a3aadc93fbc4f36593d2273927667d96650087b6b1769c8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.994Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.837Z"
     },
     "18": {
       "typ": "gemischt",
@@ -6279,8 +6348,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e53441336dc7d71fd10d96c626cd9e1a110504748657b722d318f14ab015bbc1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.995Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.838Z"
     },
     "19": {
       "typ": "gemischt",
@@ -6712,8 +6781,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf5a48afdc0ea8253c9d03d95b00c268938a894943b9bb14075fc130c7e09e69",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.996Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.839Z"
     },
     "20": {
       "typ": "gemischt",
@@ -7159,8 +7228,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9684318000b78577cb8170673df1ba182678a68572ea41178c2537335218bf9b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.998Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.841Z"
     },
     "21": {
       "typ": "gemischt",
@@ -7304,8 +7373,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "594182bacc9c66f39b00abf575994fe357f2b56bc20c12d398fd5bd4eb4c2149",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.998Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.841Z"
     },
     "22": {
       "typ": "gemischt",
@@ -7323,19 +7392,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)",
+              "text": "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 207,
+              "laenge": 87,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 88,
+              "laenge": 119,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -7491,12 +7576,27 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)",
+                  "t": "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -7625,18 +7725,20 @@
         "Entfällt auf eine Gemeinde ein Zerlegungsanteil von weniger als 25 Euro, so"
       ],
       "rf": [
-        "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)",
+        "Erstreckt sich der Steuergegenstand über mehrere Gemeinden, so ist der Steuermessbetrag",
         "Führt die Zerlegung nach Flächengrößen zu einem offenbar unbilligen Ergebnis, sind die Zerlegungsanteile maßgebend, auf die sich die Gemeinden mit dem Steuerschuldner einigen",
         "ist dieser Anteil der Gemeinde"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des § 24 anteilig in die auf die einzelnen Gemeinden entfallenden Anteile zu zerlegen (Zerlegungsanteile)"
+      ],
       "definitionen": [
         "Zerlegungsmaßstab",
         "Zerlegungsmaßstab"
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.557,
+      "konfidenz": 0.563,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7645,8 +7747,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9c16d77dec30838a13d83447e40db66f953be0e0ec6a36f34791c3b189686ab",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.999Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.842Z"
     },
     "23": {
       "typ": "gemischt",
@@ -7829,8 +7931,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79172c45be3a65d36bbf30d7ed1e174fa31e19a0b6590e4c302831ba1fadf123",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.999Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.842Z"
     },
     "24": {
       "typ": "gemischt",
@@ -8019,8 +8121,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "51066c3f20699499aaa67b46d2b5cea88be66d6fff6a2254a63537ffb1d5a25f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.000Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.843Z"
     },
     "25": {
       "typ": "gemischt",
@@ -8208,20 +8310,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "muss vorbehaltlich des Absatzes 5 jeweils einheitlich sein",
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 5 jeweils einheitlich sein",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
-              "von": 614,
-              "laenge": 58,
+              "von": 619,
+              "laenge": 53,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -8718,19 +8820,26 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 5 jeweils einheitlich sein",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "muss vorbehaltlich des Absatzes 5 jeweils einheitlich sein",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "für die in einer Gemeinde liegenden Betriebe der Land- und Forstwirtschaft",
                   "pfad": "Abs. 4 Nr. 1",
                   "konfidenz": 0.6,
@@ -8738,7 +8847,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "für die in einer Gemeinde liegenden Grundstücke",
                   "pfad": "Abs. 4 Nr. 2",
                   "konfidenz": 0.6,
@@ -8746,7 +8855,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "kann die Landesregierung oder die von ihr bestimmte Stelle für die von der Änderung betroffenen Gebietsteile für eine bestimmte Zeit verschiedene Hebesätze zulassen",
                   "pfad": "Abs. 4 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -8900,7 +9009,6 @@
         "ist für ein oder mehrere Kalenderjahre, höchstens jedoch für den Hauptveranlagungszeitraum der Steuermeßbeträge",
         "ist bis zum 30. Juni eines Kalenderjahres mit Wirkung vom Beginn dieses Kalenderjahres",
         "kann der Beschluß über die Festsetzung des Hebesatzes gefaßt werden",
-        "muss vorbehaltlich des Absatzes 5 jeweils einheitlich sein",
         "für die in einer Gemeinde liegenden Betriebe der Land- und Forstwirtschaft",
         "für die in einer Gemeinde liegenden Grundstücke",
         "kann die Landesregierung oder die von ihr bestimmte Stelle für die von der Änderung betroffenen Gebietsteile für eine bestimmte Zeit verschiedene Hebesätze zulassen",
@@ -8913,7 +9021,9 @@
         "In der Allgemeinverfügung",
         "muss dieser Hebesatz für alle in der Gemeinde oder dem Gemeindeteil liegenden baureifen Grundstücke einheitlich und höher als der einheitliche Hebesatz für die übrigen in der Gemeinde liegenden Grundstücke sein"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Absatzes 5 jeweils einheitlich sein"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -8926,8 +9036,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c887609139a05e170d87e1a33e3faa61bd37e0bf97fec14f711d20cb8dcd998",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.003Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.846Z"
     },
     "26": {
       "typ": "aussage",
@@ -9036,8 +9146,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a80903e2e57d1b8b7ef3bc5d4cf3411a59f5df6d6b38906544e9521955caa842",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.007Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.850Z"
     },
     "27": {
       "typ": "gemischt",
@@ -9402,8 +9512,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "897f0904b6d893b4c6fe51a47a7f44fe77eac7c82e4e0ff336f541a06228b32c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.008Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.851Z"
     },
     "28": {
       "typ": "gemischt",
@@ -9795,8 +9905,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a69fbd6d3d8bacdc28a6b903036e5ce078ab530759ae021b29e54a9b1ef1359",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.009Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.852Z"
     },
     "29": {
       "typ": "aussage",
@@ -9882,8 +9992,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2a150f54ecd134be88554e94f7b97de8e84949f3edaf46383a5ce41e2d574ddd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.009Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.852Z"
     },
     "30": {
       "typ": "gemischt",
@@ -10250,8 +10360,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f65ef67bbaaf69800803af67180f401ebae71c33e2a226582c9c6f865da06597",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.010Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.853Z"
     },
     "31": {
       "typ": "konditional",
@@ -10360,8 +10470,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c7eee80c34b15b7377e7b80282888d97bf542b200b8406064ea389d40037da6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.010Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.854Z"
     },
     "32": {
       "typ": "gemischt",
@@ -10687,8 +10797,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "60da591d3e4e2a025f76728efd9f58c479b7a7adb23fa413220ef4c5ac3977c6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.011Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.855Z"
     },
     "33": {
       "typ": "gemischt",
@@ -11123,8 +11233,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a3359e18fd567cb4534945a5ad05cc32430fcb60cede87110323f24e622837fc",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.013Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.856Z"
     },
     "34": {
       "typ": "gemischt",
@@ -11792,8 +11902,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c46b652bd20f5cf969b1f54ead4c919436432865a9c4d4ac8ee3dfcdb5ca8d3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.014Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.857Z"
     },
     "35": {
       "typ": "gemischt",
@@ -12178,8 +12288,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b3174e49e56707c47dfca6873090d51cb4e819ca5999b2d9d81ef0c1a2e900fa",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.015Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.858Z"
     },
     "36": {
       "typ": "gemischt",
@@ -12223,19 +12333,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2 vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an",
+              "text": "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 143,
-              "laenge": 164,
+              "laenge": 67,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 211,
+              "laenge": 96,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -12461,12 +12587,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2 vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an",
+                  "t": "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -12563,17 +12704,19 @@
       ],
       "rf": [
         "findet eine Hauptveranlagung der Grundsteuermessbeträge statt (Hauptveranlagung 2025)",
-        "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2 vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an",
+        "festgesetzten Steuermessbeträge gelten abweichend von § 16 Absatz 2",
         "ist der Hauptveranlagungszeitpunkt",
         "können schon vor dem Hauptveranlagungszeitpunkt erteilt werden",
         "ist entsprechend",
         "findet auch zur Beseitigung eines Fehlers statt"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich der §§ 17 bis 20 mit Wirkung von dem am 1. Januar 2025 beginnenden Kalenderjahr an"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.585,
+      "konfidenz": 0.586,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12582,8 +12725,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "099113b0fceabc36aaafdfa704f5e42ef9c46d215647a487e128595ba313a98a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.016Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.859Z"
     },
     "37": {
       "typ": "gemischt",
@@ -12750,8 +12893,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6010fb8f794ad90a4535deb883206507ba17b36c72bcf9f730ac78487d875721",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.017Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.860Z"
     },
     "38": {
       "typ": "aussage",
@@ -12826,8 +12969,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "65388219925d862aa54454120d49ec0413c06e22da7d72a1790c607d61674a95",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.017Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.860Z"
     }
   }
 }

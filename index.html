@@ -250,7 +250,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 }
 .rinne button:hover{color:var(--text-2b)}
 .rinne button[aria-current=true]{color:var(--text);border-right-color:var(--text)}
-.lesespalte{flex:1;min-width:0;max-width:var(--lesespalte)}
+.lesespalte-huelle{flex:1;min-width:0;max-width:var(--lesespalte)}
+.lesespalte{max-width:var(--lesespalte)}
 
 /* Lesetypografie. Der Wortlaut kommt unverändert aus data/; hier wird
    ausschließlich gesetzt, nicht ergänzt. */
@@ -282,6 +283,58 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   font-family:var(--mono);font-size:12px;white-space:pre-wrap;color:var(--text-2);
   background:var(--flaeche);padding:10px 12px;border-radius:var(--r-chip);overflow-x:auto;
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Auszeichnungsebene 1: maschinelle Struktur
+
+   Kodierung ist die FLÄCHE. Der `box-shadow` in derselben Farbe zieht die
+   Tönung über die Zeilenhöhe hinaus — ohne ihn endet sie an der Schriftkante
+   und die Zeilen wirken zerschnitten.
+
+   Im Normtext steht kein Wort dazu. Was die Farben bedeuten, sagt allein die
+   Legende darüber.
+   ══════════════════════════════════════════════════════════════════════ */
+.s{border-radius:var(--r-marke)}
+
+body[data-struktur=dezent] .s-tatbestand{background:var(--tb-dezent);box-shadow:0 0 0 1px var(--tb-dezent)}
+body[data-struktur=dezent] .s-rechtsfolge{background:var(--rf-dezent);box-shadow:0 0 0 1px var(--rf-dezent)}
+body[data-struktur=dezent] .s-ausnahme{background:var(--au-dezent);box-shadow:0 0 0 1px var(--au-dezent)}
+
+body[data-struktur=voll] .s-tatbestand{background:var(--tb-voll);box-shadow:0 0 0 2px var(--tb-voll)}
+body[data-struktur=voll] .s-rechtsfolge{background:var(--rf-voll);box-shadow:0 0 0 2px var(--rf-voll)}
+body[data-struktur=voll] .s-ausnahme{background:var(--au-voll);box-shadow:0 0 0 2px var(--au-voll)}
+
+/* Stufe „aus“ entfernt jede Struktur-Tönung. Eigene Markierungen und
+   Verwaltungsstellen bleiben in allen Stufen sichtbar — sie sind keine
+   Struktur, sondern Nachweis und eigene Arbeit. */
+body[data-struktur=aus] .s{background:transparent;box-shadow:none}
+
+/* Aufzählungsmarken („1.“, „a)“) stehen im kanonischen Volltext und liegen
+   deshalb rechnerisch innerhalb der Spannen — eine Rechtsfolge, die über eine
+   Aufzählung läuft, schließt sie ein. Eingefärbt werden sie trotzdem nicht:
+   Sie gliedern den Text, sie sind nicht sein Inhalt. Die Zeichenpositionen
+   bleiben davon unberührt; es ändert sich nur, was man sieht. */
+.lesespalte dt .s{background:transparent!important;box-shadow:none!important}
+
+/* ── Legende ── */
+.legende{
+  display:flex;flex-wrap:wrap;align-items:center;gap:7px 14px;
+  margin-bottom:18px;font-size:11.5px;color:var(--text-3);
+}
+.legende span{display:flex;align-items:center;gap:6px}
+.legende .marke{width:22px;height:9px;border-radius:var(--r-marke);flex:none}
+.legende .m-tatbestand{box-shadow:inset 0 0 0 1px var(--tb-rand)}
+.legende .m-rechtsfolge{box-shadow:inset 0 0 0 1px var(--rf-rand)}
+.legende .m-ausnahme{box-shadow:inset 0 0 0 1px var(--au-rand)}
+body[data-struktur=dezent] .legende .m-tatbestand{background:var(--tb-dezent)}
+body[data-struktur=dezent] .legende .m-rechtsfolge{background:var(--rf-dezent)}
+body[data-struktur=dezent] .legende .m-ausnahme{background:var(--au-dezent)}
+body[data-struktur=voll] .legende .m-tatbestand{background:var(--tb-voll)}
+body[data-struktur=voll] .legende .m-rechtsfolge{background:var(--rf-voll)}
+body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
+.legende .m-eigen{background:rgba(242,199,68,.5);border-bottom:2px solid #C9A227}
+.legende .m-verwaltung{border-bottom:2px dotted var(--vw)}
+.legende .anmerkung{color:var(--text-5);flex-basis:100%}
 
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
@@ -510,6 +563,7 @@ const S = {
   apparatRegister: "hinweise",
   anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
   belege: {},              // abk → belege/<gesetz>.json
+  struktur: {},            // abk → struktur/<gesetz>.json .normen
 };
 
 const cacheGesetz = new Map();
@@ -560,6 +614,18 @@ async function zutatenLaden(abk){
     try { S.belege[abk] = await holen("belege/" + schluessel + ".json"); }
     catch (e) { S.belege[abk] = null; }
   }
+  if (!(abk in S.struktur)){
+    try { S.struktur[abk] = (await holen("struktur/" + schluessel + ".json")).normen || {}; }
+    catch (e) { S.struktur[abk] = null; }
+  }
+}
+
+/** Segmente der laufenden Norm — leer, wenn es keinen Datensatz gibt. */
+function strukturDerNorm(){
+  const gesetz = S.struktur[S.abk];
+  if (!gesetz) return null;
+  const eintrag = gesetz[S.normId];
+  return eintrag && Array.isArray(eintrag.segmente) ? eintrag.segmente : [];
 }
 
 /* ── Kleinigkeiten ─────────────────────────────────────────────────── */
@@ -594,14 +660,27 @@ function fassungAus(gesetz){
    Die Wirkung auf den Normtext folgt in Schritt 4. Hier wird der Zustand
    gehalten und am Rumpf ausgewiesen, damit das CSS ihn später auswerten kann.
    ══════════════════════════════════════════════════════════════════════ */
-function strukturSetzen(modus){
+function strukturSetzen(modus, nurAnzeige = false){
   const gueltig = ["aus", "dezent", "voll"].includes(modus) ? modus : "voll";
-  S.strukturModus = gueltig;
-  document.body.dataset.struktur = gueltig;
-  for (const b of el("stufen").querySelectorAll("button")){
-    b.setAttribute("aria-checked", String(b.dataset.stufe === gueltig));
+  if (!nurAnzeige){
+    S.strukturModus = gueltig;
+    merken("strukturModus", gueltig);
   }
-  merken("strukturModus", gueltig);
+
+  /* Ohne Datensatz gibt es nichts einzufärben. Der Schalter steht dann auf
+     „aus" und ist gesperrt — mit einem Titel, der sagt, warum. Das ist der
+     Unterschied zwischen „ausgeschaltet" und „nicht vorhanden". */
+  const segmente = S.abk ? strukturDerNorm() : null;
+  const moeglich = Array.isArray(segmente) && segmente.length > 0;
+  const angezeigt = moeglich ? S.strukturModus : "aus";
+
+  document.body.dataset.struktur = angezeigt;
+  for (const b of el("stufen").querySelectorAll("button")){
+    b.setAttribute("aria-checked", String(b.dataset.stufe === angezeigt));
+    b.disabled = !moeglich;
+    b.title = moeglich ? "" : "Für diese Norm liegt kein Strukturdatensatz vor.";
+  }
+  return { moeglich, angezeigt };
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -802,6 +881,112 @@ function navZeichnen(){
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   Kanonischer Textindex
+
+   Die Zeichenpositionen in struktur/ beziehen sich auf den kanonischen
+   Volltext der Norm, den `tools/lib/gliederung.mjs` bildet:
+   Satznummern entfernt, Auszeichnung durch Leerzeichen ersetzt, Leerraum
+   zusammengezogen, kein Leerzeichen vor Satzzeichen.
+
+   Hier wird DIESELBE Zeichenkette aus dem DOM aufgebaut — zusammen mit einer
+   Karte, die jedem Zeichen seinen Textknoten zuordnet. Nur wenn beide Seiten
+   identisch rechnen, sitzen die Farben an der richtigen Stelle. Weicht eine
+   Seite ab, verschiebt sich alles ab der ersten Abweichung.
+   ══════════════════════════════════════════════════════════════════════ */
+function textindex(wurzel){
+  const gehe = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT, {
+    acceptNode(n){
+      if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      // Satznummern blendet auch die Pipeline aus (entkerne).
+      if (n.parentElement.closest(".sn")) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+
+  const knoten = [], karte = [];
+  let text = "", n;
+
+  const leerzeichen = (ref = null) => {
+    if (text && !text.endsWith(" ")){ text += " "; karte.push(ref); }
+  };
+
+  const zeichen = (ch, ref) => {
+    if (/\s/.test(ch)){ leerzeichen(ref); return; }
+    // Kein Leerzeichen vor Satzzeichen — genau wie in entkerne().
+    if (/[,.;:!?]/.test(ch) && text.endsWith(" ")){ text = text.slice(0, -1); karte.pop(); }
+    text += ch;
+    karte.push(ref);
+  };
+
+  while ((n = gehe.nextNode())){
+    if (knoten.length) leerzeichen();
+    knoten.push(n);
+    for (let i = 0; i < n.nodeValue.length; i++) zeichen(n.nodeValue[i], { n, i });
+  }
+  if (text.endsWith(" ")){ text = text.slice(0, -1); karte.pop(); }
+  return { text, karte, knoten };
+}
+
+/**
+ * Legt Spannen über den Normtext, ohne ihn zu verändern.
+ *
+ * Gearbeitet wird zeichenweise: Jedes Zeichen bekommt seine Klasse, danach
+ * werden gleich ausgezeichnete Nachbarn zu einem Element zusammengefasst. Das
+ * ist der einzige Weg, der auch dann trägt, wenn eine Spanne mitten in einem
+ * Textknoten beginnt oder über mehrere Knoten läuft.
+ *
+ * @returns {number} Zahl der Spannen, die ihre Stelle nicht gefunden haben
+ */
+function spannenLegen(wurzel, spannen){
+  if (!spannen.length) return 0;
+  const { text, karte, knoten } = textindex(wurzel);
+  const klasse = new Map(knoten.map(n => [n, new Array(n.nodeValue.length).fill(null)]));
+  const daten = new Map(knoten.map(n => [n, new Array(n.nodeValue.length).fill(null)]));
+  let verwaist = 0;
+
+  for (const spanne of spannen){
+    const von = spanne.von;
+    const bis = Math.min(spanne.bis, text.length);
+    if (!Number.isInteger(von) || von < 0 || bis <= von || von >= text.length){ verwaist++; continue; }
+    for (let pos = von; pos < bis; pos++){
+      const ref = karte[pos];
+      if (!ref) continue;
+      klasse.get(ref.n)[ref.i] = spanne.klasse;
+      daten.get(ref.n)[ref.i] = spanne;
+    }
+  }
+
+  for (const n of knoten){
+    const roh = n.nodeValue;
+    const kl = klasse.get(n);
+    const dt = daten.get(n);
+    if (!kl.some(Boolean)) continue;
+
+    const teil = document.createDocumentFragment();
+    let start = 0;
+    while (start < roh.length){
+      const jetzt = kl[start], quelle = dt[start];
+      let ende = start + 1;
+      while (ende < roh.length && kl[ende] === jetzt && dt[ende] === quelle) ende++;
+      const stueck = roh.slice(start, ende);
+      if (!jetzt){
+        teil.appendChild(document.createTextNode(stueck));
+      } else {
+        const s = document.createElement("span");
+        s.className = jetzt;
+        if (quelle && quelle.titel) s.title = quelle.titel;
+        if (quelle && quelle.datensatz) Object.assign(s.dataset, quelle.datensatz);
+        s.textContent = stueck;
+        teil.appendChild(s);
+      }
+      start = ende;
+    }
+    n.parentNode.replaceChild(teil, n);
+  }
+  return verwaist;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    Verweise im Normtext
 
    „§ 15 Abs. 2 EStG" wird anklickbar. Das ist die Arbeitsweise, die eine
@@ -980,6 +1165,23 @@ function hauptZeichnen(){
     if (abs.n) marken.push({ text: "(" + abs.n + ")", knoten: block });
   }
 
+  /* Struktur-Einfärbung VOR den Verweisen: Sie rechnet auf dem kanonischen
+     Volltext, und der darf zu diesem Zeitpunkt noch keine eingefügten
+     Verweis-Elemente enthalten — Zeichen bleiben dieselben, aber die
+     Knotengrenzen verschöben sich unnötig. */
+  const stand = strukturSetzen(S.strukturModus, true);
+  const segmente = strukturDerNorm();
+  let verwaist = 0;
+  if (stand.moeglich){
+    verwaist = spannenLegen(lese, segmente.map(seg => ({
+      von: seg.von,
+      bis: seg.bis,
+      klasse: "s s-" + seg.typ,
+      titel: BESCHREIBUNG[seg.typ] || "",
+      datensatz: seg.pfad ? { pfad: seg.pfad } : null,
+    })));
+  }
+
   /* Verweise anklickbar machen — nach dem Einsetzen des Wortlauts, damit die
      amtliche Auszeichnung unberührt bleibt. */
   verweiseSetzen(lese, gesetz.abk);
@@ -995,13 +1197,89 @@ function hauptZeichnen(){
     rinne.appendChild(b);
   }
 
-  leseraum.append(rinne, lese);
+  const spalte = document.createElement("div");
+  spalte.className = "lesespalte-huelle";
+  spalte.append(legendeBauen(stand, segmente), lese);
+  leseraum.append(rinne, spalte);
   haupt.appendChild(leseraum);
+
+  if (verwaist){
+    const warnung = fehlmeldung(
+      "Markierung",
+      verwaist + " Segment(e) finden ihre Textstelle nicht. Der Gesetzestext wurde"
+      + " vermutlich geändert; der Strukturdatensatz gehört nachgezogen.",
+      "struktur/" + S.abk.toLowerCase() + ".json",
+    );
+    warnung.style.maxWidth = "var(--lesespalte)";
+    warnung.style.marginTop = "18px";
+    spalte.appendChild(warnung);
+  }
 
   rinneMitlaufen(rinne, marken);
   haupt.appendChild(blaetternBauen(gesetz, norm));
 
   document.title = norm.enbez + " " + gesetz.abk + (norm.titel ? " — " + norm.titel : "") + " · steuernorm";
+}
+
+/** Was die Farben bedeuten — für den Titel der Spanne, nicht für den Text. */
+const BESCHREIBUNG = {
+  tatbestand: "Tatbestand (maschinell erkannt)",
+  rechtsfolge: "Rechtsfolge (maschinell erkannt)",
+  ausnahme: "Ausnahme oder Vorbehalt (maschinell erkannt)",
+};
+
+/**
+ * Die Legende ist der einzige Ort, an dem die Kategorien benannt werden.
+ * Im Normtext selbst steht kein Wort dazu — das ist der Grund, warum es sie
+ * überhaupt gibt.
+ */
+function legendeBauen(stand, segmente){
+  const d = document.createElement("div");
+  d.className = "legende";
+
+  if (!stand.moeglich){
+    const p = document.createElement("span");
+    p.className = "anmerkung";
+    p.textContent = segmente === null
+      ? "Kein Strukturdatensatz für dieses Gesetz — der Wortlaut steht ohne Einfärbung."
+      : "Für diese Norm wurde keine Struktur erkannt — der Wortlaut steht ohne Einfärbung.";
+    d.appendChild(p);
+    return d;
+  }
+
+  if (stand.angezeigt !== "aus"){
+    const marke = (typ, beschriftung) => {
+      const s = document.createElement("span");
+      const m = document.createElement("span");
+      m.className = "marke m-" + typ;
+      s.append(m, document.createTextNode(beschriftung));
+      return s;
+    };
+    d.appendChild(marke("tatbestand", "Tatbestand"));
+    d.appendChild(marke("rechtsfolge", "Rechtsfolge"));
+    d.appendChild(marke("ausnahme", "Ausnahme / Vorbehalt"));
+  }
+
+  const eigen = document.createElement("span");
+  const me = document.createElement("span");
+  me.className = "marke m-eigen";
+  eigen.append(me, document.createTextNode("eigene Markierung"));
+  d.appendChild(eigen);
+
+  const vw = document.createElement("span");
+  const mv = document.createElement("span");
+  mv.className = "marke m-verwaltung";
+  vw.append(mv, document.createTextNode("in Richtlinie / BMF-Schreiben"));
+  d.appendChild(vw);
+
+  const anmerkung = document.createElement("span");
+  anmerkung.className = "anmerkung";
+  anmerkung.textContent = stand.angezeigt === "aus"
+    ? "Struktur ausgeblendet — reiner Wortlaut."
+    : "Einfärbung maschinell erkannt, nicht redaktionell geprüft.";
+  d.appendChild(anmerkung);
+
+  return d;
 }
 
 /** Genau eine Marke der Rinne ist die aktuelle. */
@@ -1356,7 +1634,7 @@ async function start(){
   strukturSetzen(S.strukturModus);
 
   for (const b of el("stufen").querySelectorAll("button")){
-    b.onclick = () => strukturSetzen(b.dataset.stufe);
+    b.onclick = () => { strukturSetzen(b.dataset.stufe); hauptZeichnen(); };
   }
 
   el("schublade-auf").onclick = () => {

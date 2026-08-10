@@ -1,14 +1,14 @@
 {
   "abk": "KStG",
   "titel": "Körperschaftsteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:30.026Z",
+  "aktualisiert": "2026-08-10T09:19:25.028Z",
   "quelle": "https://www.gesetze-im-internet.de/kstg_1977/",
   "stand": [
     {
@@ -825,8 +825,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79e9bff3f597217332e5cf1eebdbbdce4360f7219fa2f09aafe025654cb9dd84",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.856Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.863Z"
     },
     "2": {
       "typ": "gemischt",
@@ -1147,8 +1147,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7095009d300ccde317da077f8947919dca619376d30d2c0f39b795480c263798",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.865Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.871Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1434,8 +1434,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "14b619b4e3fa7cfde960174b5afbba14bb602ce706268be8aeb84dd338d99f00",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.865Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.872Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1468,20 +1468,36 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "sind vorbehaltlich des Absatzes 5 alle Einrichtungen, die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 5 alle Einrichtungen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 106,
-              "laenge": 273,
-              "konfidenz": 0.48,
+              "von": 111,
+              "laenge": 47,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 160,
+              "laenge": 219,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -1937,14 +1953,29 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 5 alle Einrichtungen",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind vorbehaltlich des Absatzes 5 alle Einrichtungen, die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
+                  "t": "die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -2230,7 +2261,7 @@
         "Ein Betrieb gewerblicher Art"
       ],
       "rf": [
-        "sind vorbehaltlich des Absatzes 5 alle Einrichtungen, die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
+        "die einer nachhaltigen wirtschaftlichen Tätigkeit zur Erzielung von Einnahmen außerhalb der Land- und Forstwirtschaft dienen und die sich innerhalb der Gesamtbetätigung der juristischen Person wirtschaftlich herausheben",
         "sind nicht erforderlich",
         "ist auch unbeschränkt steuerpflichtig",
         "gehören auch Betriebe, die der Versorgung der Bevölkerung mit Wasser, Gas, Elektrizität oder Wärme, dem öffentlichen Verkehr oder dem Hafenbetrieb dienen",
@@ -2241,11 +2272,13 @@
         "vorliegen",
         "kann nicht mit einem Hoheitsbetrieb zusammengefasst werden"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Absatzes 5 alle Einrichtungen"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.581,
+      "konfidenz": 0.587,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2254,8 +2287,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "122af1175305714eab14e9be066a03ccd1ab90a9a3905eb724c83854af4cc65b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.867Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.874Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2471,6 +2504,33 @@
               "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
+              "art": "tb",
+              "text": "wenn sich diese Leistungen",
+              "anzeige": "wenn sich diese Leistungen … d) wenn bei Pensions-, Sterbe- und Krankenkassen am Schluss des Wirtschaftsjahrs, zu dem der Wert der Deckungsrückstellung versicherungsmathematisch zu berechnen ist",
+              "teile": [
+                {
+                  "text": "wenn sich diese Leistungen",
+                  "von": 2911,
+                  "laenge": 26
+                },
+                {
+                  "text": "d) wenn bei Pensions-, Sterbe- und Krankenkassen am Schluss des Wirtschaftsjahrs, zu dem der Wert der Deckungsrückstellung versicherungsmathematisch zu berechnen ist",
+                  "von": 3245,
+                  "laenge": 165
+                }
+              ],
+              "pfad": "Abs. 1 Satz 2",
+              "von": 2911,
+              "laenge": 26,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\" (um Ausnahme gekürzt)"
+            },
+            {
               "art": "ausn",
               "text": "mit Ausnahme des Sterbegeldes auf Fälle der Not oder Arbeitslosigkeit beschränken",
               "anzeige": null,
@@ -2485,6 +2545,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bereichsausnahme mit „mit ausnahme des\""
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des § 6 die ausschließliche und unmittelbare Verwendung des Vermögens und der Einkünfte der Kasse nach der Satzung und der tatsächlichen Geschäftsführung für die Zwecke der Kasse dauernd gesichert ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 3029,
+              "laenge": 214,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -4525,6 +4601,14 @@
                 },
                 {
                   "n": "5.",
+                  "t": "wenn sich diese Leistungen … d) wenn bei Pensions-, Sterbe- und Krankenkassen am Schluss des Wirtschaftsjahrs, zu dem der Wert der Deckungsrückstellung versicherungsmathematisch zu berechnen ist",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "6.",
                   "t": "Bei der Ermittlung des Vermögens",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -4532,7 +4616,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "sich ihr Geschäftsbetrieb auf die Sterbegeldversicherung",
                   "pfad": "Abs. 1 Buchst. b",
                   "konfidenz": 0.6,
@@ -4540,7 +4624,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "wenn der Zweck dieser Verbände nicht auf einen wirtschaftlichen Geschäftsbetrieb gerichtet ist",
                   "pfad": "Abs. 1 Satz 1 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4548,7 +4632,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "soweit die Körperschaften oder Personenvereinigungen einen wirtschaftlichen Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Buchst. a (Teil 2)",
                   "konfidenz": 0.6,
@@ -4556,7 +4640,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "10.",
                   "t": "Die Sätze 1 und 2",
                   "pfad": "Abs. 1 Satz 1 (Teil 4)",
                   "konfidenz": 0.6,
@@ -4564,7 +4648,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
                   "t": "sofern ihre Erträge im Wesentlichen aus dieser Vermögensverwaltung herrühren und ausschließlich dem Berufsverband zufließen; 7. politische Parteien im Sinne des § 2 des Parteiengesetzes und ihre Gebietsverbände, sofern die jeweilige Partei nicht gemäß § 18 Absatz 7 des Parteiengesetzes von der staatlichen Teilfinanzierung ausgeschlossen ist",
                   "pfad": "Abs. 1 Satz 3 (Teil 2)",
                   "konfidenz": 0.42,
@@ -4572,7 +4656,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "12.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Satz 4 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4580,7 +4664,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "13.",
                   "t": "wenn die Satzung die Zahlung keiner höheren jährlichen Beiträge zulässt als das Fünfzehnfache der Beiträge, die sich bei einer Beitragsbemessungsgrundlage in Höhe der doppelten monatlichen Beitragsbemessungsgrenze in der allgemeinen Rentenversicherung ergeben würden",
                   "pfad": "Abs. 1 Satz 5 (Teil 2)",
                   "konfidenz": 0.48,
@@ -4588,7 +4672,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "14.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.6,
@@ -4596,7 +4680,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "15.",
                   "t": "soweit sie",
                   "pfad": "Abs. 1 Satz 9",
                   "konfidenz": 0.45,
@@ -4604,7 +4688,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "16.",
                   "t": "im Zusammenhang mit einer Tätigkeit im Sinne des Buchstabens a Gemeinschaftsanlagen oder Folgeeinrichtungen herstellen",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.6,
@@ -4612,7 +4696,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "16.",
+                  "n": "17.",
                   "t": "wenn sie überwiegend für Mitglieder bestimmt sind und der Betrieb durch die Genossenschaft oder den Verein notwendig ist",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.54,
@@ -4620,7 +4704,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "17.",
+                  "n": "18.",
                   "t": "Zu den Einnahmen nach Satz 3",
                   "pfad": "Abs. 1 Satz 3 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4628,7 +4712,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "18.",
+                  "n": "19.",
                   "t": "Investierende Mitglieder im Sinne des § 8 Absatz 2 des Genossenschaftsgesetzes",
                   "pfad": "Abs. 1 Satz 4 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4636,7 +4720,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "19.",
+                  "n": "20.",
                   "t": "wenn die Einnahmen des Unternehmens aus den in Satz 1 nicht bezeichneten Tätigkeiten die Einnahmen aus den in Satz 1 bezeichneten Tätigkeiten übersteigen",
                   "pfad": "Abs. 1 Satz 7 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4644,7 +4728,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "20.",
+                  "n": "21.",
                   "t": "soweit sich ihr Geschäftsbetrieb beschränkt",
                   "pfad": "Abs. 1 Satz 8 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4652,7 +4736,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "21.",
+                  "n": "22.",
                   "t": "auf die gemeinschaftliche Benutzung land- und forstwirtschaftlicher Betriebseinrichtungen oder Betriebsgegenstände",
                   "pfad": "Abs. 1 Buchst. a (Teil 4)",
                   "konfidenz": 0.54,
@@ -4660,7 +4744,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "22.",
+                  "n": "23.",
                   "t": "auf die Bearbeitung oder die Verwertung der von den Mitgliedern selbst",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -4668,7 +4752,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "23.",
+                  "n": "24.",
                   "t": "wenn die Bearbeitung oder die Verwertung im Bereich der Land- und Forstwirtschaft liegt",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -4676,7 +4760,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "24.",
+                  "n": "25.",
                   "t": "auf die Beratung für die Produktion oder Verwertung land- und forstwirtschaftlicher Erzeugnisse der Betriebe der Mitglieder",
                   "pfad": "Abs. 1 Buchst. d",
                   "konfidenz": 0.6,
@@ -4684,7 +4768,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "25.",
+                  "n": "26.",
                   "t": "Bei Genossenschaften und Vereinen, deren Geschäftsbetrieb sich überwiegend auf die Durchführung von Milchqualitäts- und Milchleistungsprüfungen oder auf die Tierbesamung beschränkt",
                   "pfad": "Abs. 1 Satz 2 (Teil 5)",
                   "konfidenz": 0.54,
@@ -4692,7 +4776,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "26.",
+                  "n": "27.",
                   "t": "wenn seine Leistungen nach dem Kreis der Empfänger sowie nach Art und Höhe den in den §§ 7 bis 9",
                   "pfad": "Abs. 1 Buchst. b (Teil 5)",
                   "konfidenz": 0.6,
@@ -4700,7 +4784,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "27.",
+                  "n": "28.",
                   "t": "17 und 30 des Gesetzes zur Verbesserung der betrieblichen Altersversorgung",
                   "pfad": "Abs. 1 Buchst. b (Teil 5)",
                   "konfidenz": 0.6,
@@ -4708,7 +4792,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "28.",
+                  "n": "29.",
                   "t": "soweit sie",
                   "pfad": "Abs. 1 Satz 2 (Teil 6)",
                   "konfidenz": 0.45,
@@ -4716,7 +4800,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "29.",
+                  "n": "30.",
                   "t": "als nicht als Einlagensicherungssysteme",
                   "pfad": "Abs. 1 Buchst. b (Teil 6)",
                   "konfidenz": 0.6,
@@ -4724,7 +4808,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "30.",
+                  "n": "31.",
                   "t": "Voraussetzung für die Steuerbefreiung nach Satz 1",
                   "pfad": "Abs. 1 Satz 1 (Teil 8)",
                   "konfidenz": 0.6,
@@ -4732,7 +4816,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "31.",
+                  "n": "32.",
                   "t": "Die Sätze 1 und 2",
                   "pfad": "Abs. 1 Satz 2 (Teil 7)",
                   "konfidenz": 0.6,
@@ -4740,7 +4824,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "32.",
+                  "n": "33.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung des in Satz 1 genannten Zwecks verwendet werden; 18",
                   "pfad": "Abs. 1 Satz 5 (Teil 4)",
                   "konfidenz": 0.54,
@@ -4748,7 +4832,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "33.",
+                  "n": "34.",
                   "t": "Wirtschaftsförderungsgesellschaften, deren Tätigkeit sich auf die Verbesserung der sozialen und wirtschaftlichen Struktur einer bestimmten Region durch Förderung der Wirtschaft, insbesondere durch Industrieansiedlung, Beschaffung neuer Arbeitsplätze und der Sanierung von Altlasten",
                   "pfad": "Abs. 1 Satz 6 (Teil 4)",
                   "konfidenz": 0.6,
@@ -4756,7 +4840,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "34.",
+                  "n": "35.",
                   "t": "wenn an ihnen überwiegend Gebietskörperschaften beteiligt sind",
                   "pfad": "Abs. 1 Satz 6 (Teil 4)",
                   "konfidenz": 0.6,
@@ -4764,7 +4848,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "35.",
+                  "n": "36.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung des in Satz 1 genannten Zwecks verwendet werden; 19",
                   "pfad": "Abs. 1 Satz 7 (Teil 3)",
                   "konfidenz": 0.54,
@@ -4772,7 +4856,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "36.",
+                  "n": "37.",
                   "t": "soweit sie Tätigkeiten ausüben, die in § 2 Abs. 1 dieses Gesetzes bestimmt und nach § 2 Abs. 2 dieses Gesetzes genehmigt worden sind",
                   "pfad": "Abs. 1 Satz 8 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4780,7 +4864,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "37.",
+                  "n": "38.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erfüllung der begünstigten Tätigkeiten verwendet werden",
                   "pfad": "Abs. 1 Satz 9 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4788,7 +4872,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "38.",
+                  "n": "39.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten, dessen Tätigkeit nicht ausschließlich auf die Erfüllung der begünstigten Tätigkeiten gerichtet ist",
                   "pfad": "Abs. 1 Satz 10",
                   "konfidenz": 0.6,
@@ -4796,7 +4880,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "39.",
+                  "n": "40.",
                   "t": "Zusammenschlüsse von juristischen Personen des öffentlichen Rechts, von steuerbefreiten Körperschaften oder von steuerbefreiten Personenvereinigungen",
                   "pfad": "Abs. 1 Satz 11",
                   "konfidenz": 0.6,
@@ -4804,7 +4888,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "40.",
+                  "n": "41.",
                   "t": "deren Tätigkeit sich auf den Zweck",
                   "pfad": "Abs. 1 Buchst. a (Teil 7)",
                   "konfidenz": 0.6,
@@ -4812,7 +4896,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "41.",
+                  "n": "42.",
                   "t": "21. die nicht in der Rechtsform einer Körperschaft des öffentlichen Rechts",
                   "pfad": "Abs. 1 Satz 1 (Teil 9)",
                   "konfidenz": 0.6,
@@ -4820,7 +4904,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "42.",
+                  "n": "43.",
                   "t": "soweit sie die ihnen durch Gesetz zugewiesenen Aufgaben wahrnehmen",
                   "pfad": "Abs. 1 Satz 1 (Teil 9)",
                   "konfidenz": 0.6,
@@ -4828,7 +4912,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "43.",
+                  "n": "44.",
                   "t": "wenn sie dabei zu nicht steuerbegünstigten Betrieben derselben oder ähnlicher Art nicht in größerem Umfang in Wettbewerb treten",
                   "pfad": "Abs. 1 Satz 2 (Teil 8)",
                   "konfidenz": 0.6,
@@ -4836,7 +4920,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "44.",
+                  "n": "45.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten, dessen Tätigkeit nicht ausschließlich auf die Erfüllung der begünstigten Tätigkeiten gerichtet ist",
                   "pfad": "Abs. 1 Satz 3 (Teil 5)",
                   "konfidenz": 0.6,
@@ -4860,6 +4944,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "vorbehaltlich des § 6 die ausschließliche und unmittelbare Verwendung des Vermögens und der Einkünfte der Kasse nach der Satzung und der tatsächlichen Geschäftsführung für die Zwecke der Kasse dauernd gesichert ist",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Satz 2 gilt nicht für selbstbewirtschaftete Forstbetriebe",
                   "pfad": "Abs. 1 Satz 8",
                   "konfidenz": 0.6,
@@ -4867,7 +4959,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "mit Ausnahme des Wohnungsbaus durchführen",
                   "pfad": "Abs. 1 Satz 6 (Teil 3)",
                   "konfidenz": 0.6,
@@ -5320,6 +5412,7 @@
         "die Bundesanstalt für vereinigungsbedingte Sonderaufgaben",
         "rechtsfähige Pensions-, Sterbe- und Krankenkassen, die den Personen, denen die Leistungen der Kasse",
         "zu den Zugehörigen oder Arbeitnehmern",
+        "wenn sich diese Leistungen",
         "Bei der Ermittlung des Vermögens",
         "sich ihr Geschäftsbetrieb auf die Sterbegeldversicherung",
         "wenn der Zweck dieser Verbände nicht auf einen wirtschaftlichen Geschäftsbetrieb gerichtet ist",
@@ -5414,6 +5507,7 @@
       ],
       "ausnahmen": [
         "mit Ausnahme des Sterbegeldes auf Fälle der Not oder Arbeitslosigkeit beschränken",
+        "vorbehaltlich des § 6 die ausschließliche und unmittelbare Verwendung des Vermögens und der Einkünfte der Kasse nach der Satzung und der tatsächlichen Geschäftsführung für die Zwecke der Kasse dauernd gesichert ist",
         "Satz 2 gilt nicht für selbstbewirtschaftete Forstbetriebe",
         "mit Ausnahme des Wohnungsbaus durchführen",
         "es sei denn, es handelt sich um Steuerpflichtige im Sinne des Absatzes 1 Nr. 9, die nach den Rechtsvorschriften eines Mitgliedstaats der Europäischen Union oder nach den Rechtsvorschriften eines Staates, auf den das Abkommen über den Europäischen Wirtschaftsraum vom 3. Januar 1994 (ABl"
@@ -5421,7 +5515,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.557,
+      "konfidenz": 0.556,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -5430,8 +5524,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cfe696693fefdde61bc05414029d0c3b18fcb00953eaf34e784d780599555309",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.883Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.890Z"
     },
     "6": {
       "typ": "gemischt",
@@ -6741,8 +6835,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f15729a3d946e238e9e4eb8b7f6d1ada527526d2576e0144b85d527c642473f9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.890Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.898Z"
     },
     "7": {
       "typ": "gemischt",
@@ -7273,8 +7367,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9bd2baaa87141d5e933accfbbd4bd90ec670cbbf88745f4b6cb206333926720",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.891Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.899Z"
     },
     "8": {
       "typ": "gemischt",
@@ -9597,8 +9691,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "69c060674657d48163f28853c7c9ee99e622eb4021a937fa9fdc41c4978bae31",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.899Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.906Z"
     },
     "9": {
       "typ": "gemischt",
@@ -11114,8 +11208,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "25b0223e9b6f12947e375a745fb1966b12e3d39f290c0f023171f38ef3290b3c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.930Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.935Z"
     },
     "10": {
       "typ": "gemischt",
@@ -11496,8 +11590,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eb9259dbb1ba0c7d16369402754d43c9d4bc655c06336daaa0653881f9e5a15f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.931Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.937Z"
     },
     "11": {
       "typ": "gemischt",
@@ -12263,8 +12357,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8279329c35028528457f331818c88c7941128bd9f301032d6c0bd47e53d31fa",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.933Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.938Z"
     },
     "12": {
       "typ": "gemischt",
@@ -12721,8 +12815,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5fa009f8a03e2d7944bfeae12753502dec8a048430b2bf28c4ac0b27f8f06f05",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.934Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.940Z"
     },
     "13": {
       "typ": "gemischt",
@@ -12838,30 +12932,35 @@
             },
             {
               "art": "rf",
-              "text": "sind die Wirtschaftsgüter vorbehaltlich des Absatzes 4 mit den Teilwerten",
-              "anzeige": "sind die Wirtschaftsgüter vorbehaltlich des Absatzes 4 mit den Teilwerten … anzusetzen",
-              "teile": [
-                {
-                  "text": "sind die Wirtschaftsgüter vorbehaltlich des Absatzes 4 mit den Teilwerten",
-                  "von": 584,
-                  "laenge": 73
-                },
-                {
-                  "text": "anzusetzen",
-                  "von": 658,
-                  "laenge": 10
-                }
-              ],
+              "text": "sind die Wirtschaftsgüter",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 3 Satz 1",
               "von": 584,
-              "laenge": 73,
+              "laenge": 25,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 4 mit den Teilwerten anzusetzen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 610,
+              "laenge": 58,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -13237,16 +13336,31 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 4 mit den Teilwerten anzusetzen",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind die Wirtschaftsgüter vorbehaltlich des Absatzes 4 mit den Teilwerten … anzusetzen",
+                  "t": "sind die Wirtschaftsgüter",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 }
               ]
             }
@@ -13437,7 +13551,7 @@
       "rf": [
         "hat sie auf den Zeitpunkt, in dem die Steuerpflicht endet, eine Schlussbilanz aufzustellen",
         "hat sie auf den Zeitpunkt, in dem die Steuerpflicht beginnt, eine Anfangsbilanz aufzustellen",
-        "sind die Wirtschaftsgüter vorbehaltlich des Absatzes 4 mit den Teilwerten",
+        "sind die Wirtschaftsgüter",
         "Beginnt die Steuerbefreiung auf Grund des § 5 Abs. 1 Nr. 9, sind die Wirtschaftsgüter, die der Förderung steuerbegünstigter Zwecke im Sinne der §§ 52 bis 54 der Abgabenordnung dienen, in der Schlussbilanz mit den Buchwerten anzusetzen",
         "ist in der Anfangsbilanz für die in Satz 1 bezeichneten Wirtschaftsgüter der Wert anzusetzen, der sich bei ununterbrochener Steuerpflicht nach den Vorschriften über die steuerliche Gewinnermittlung ergeben würde",
         "Beginnt",
@@ -13446,11 +13560,13 @@
         "gilt der gemeine Wert der Anteile als Anschaffungskosten der Anteile",
         "gelten nicht in den Fällen des Absatzes 4 Satz 1"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Absatzes 4 mit den Teilwerten anzusetzen"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.578,
+      "konfidenz": 0.579,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13459,8 +13575,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbb49d6630379d00b25fef08a857580a9d33385952fa39e3f5361c16f472441b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.936Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.941Z"
     },
     "14": {
       "typ": "gemischt",
@@ -15800,8 +15916,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e3305ab81d7f0b12b5878e38c1998bbb57b829222dae00e166b8dc99dfbc39ad",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.943Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.948Z"
     },
     "15": {
       "typ": "gemischt",
@@ -17454,8 +17570,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ece99741ab0530e678e1af5a47133c5cd3ad963cc08c6c06353840d08e832bd1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.950Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.954Z"
     },
     "16": {
       "typ": "gemischt",
@@ -17599,8 +17715,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7f9bb4b3d8e9d9694d24604829a98f32053979a8e25f8d8eebf1b444272171a8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.951Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.954Z"
     },
     "17": {
       "typ": "gemischt",
@@ -17918,8 +18034,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4dbfb97eda7d0e7f743bf7d321f9c1668e5b8cc26e099f8aaad38a0642af5391",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.952Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.955Z"
     },
     "18": {
       "typ": "gemischt",
@@ -17941,8 +18057,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.952Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.955Z"
     },
     "19": {
       "typ": "konditional",
@@ -18445,8 +18561,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ba1a5ac603f1614e4acc3454aa2c3b622f11b42604349144088d25f049e54bee",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.953Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.956Z"
     },
     "20": {
       "typ": "gemischt",
@@ -18877,8 +18993,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "93c3b91ecd8f0eed33fe93b22ba22c0eeadec310a1f493d466ad85fc885686b1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.963Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.967Z"
     },
     "21": {
       "typ": "gemischt",
@@ -19553,8 +19669,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a1804ca849a12ba8ca162a1d9a2951e8501fe4c8aa175e220900c035da79832",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.966Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.969Z"
     },
     "22": {
       "typ": "gemischt",
@@ -20260,8 +20376,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "217ef567c6ad208a2f94923885bf233970a15de4cf70bfaad1d67b086d5b199e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.969Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.972Z"
     },
     "23": {
       "typ": "gemischt",
@@ -20477,8 +20593,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1899a904c17341006f47192339ff5a1575a0c8b9b104ad10ebb1ac7a59ccdab9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.969Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.973Z"
     },
     "24": {
       "typ": "aussage",
@@ -20682,8 +20798,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d194a6564888d76beaef4839cb22d7eb0285e6bc3389a758b9a0769a81385050",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.970Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.973Z"
     },
     "25": {
       "typ": "gemischt",
@@ -21053,8 +21169,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "702f4b4501d77c2a94010934a5127524c69a5ad0e520d66e17d42280564f2f0f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.972Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.975Z"
     },
     "26": {
       "typ": "gemischt",
@@ -21088,20 +21204,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "gelten vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
+              "art": "ausn",
+              "text": "vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 215,
-              "laenge": 92,
+              "von": 222,
+              "laenge": 85,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -21164,30 +21280,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben, vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend",
-              "anzeige": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben, vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend … anzuwenden",
-              "teile": [
-                {
-                  "text": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben, vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend",
-                  "von": 539,
-                  "laenge": 260
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 800,
-                  "laenge": 10
-                }
-              ],
+              "text": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
               "von": 539,
-              "laenge": 260,
+              "laenge": 155,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend anzuwenden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 696,
+              "laenge": 114,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -21314,12 +21435,12 @@
             },
             {
               "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gelten vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
+                  "t": "vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -21327,11 +21448,26 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben, vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend … anzuwenden",
+                  "t": "vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend anzuwenden",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.48,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 }
               ]
             }
@@ -21400,16 +21536,18 @@
         "Bei der entsprechenden Anwendung von § 34c Absatz 2 des Einkommensteuergesetzes"
       ],
       "rf": [
-        "gelten vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
-        "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben, vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend",
+        "ist auf Bezüge im Sinne des § 8b Absatz 1 Satz 1, die auf Grund des § 8b Absatz 1 Satz 2 und 3 bei der Ermittlung des Einkommens nicht außer Ansatz bleiben",
         "ist die auf die ausländischen Einkünfte entfallende deutsche Körperschaftsteuer in der Weise zu ermitteln, dass die sich bei der Veranlagung des zu versteuernden Einkommens, einschließlich der ausländischen Einkünfte, ohne Anwendung der §§ 37 und 38 ergebende deutsche Körperschaftsteuer im Verhältnis dieser ausländischen Einkünfte zur Summe der Einkünfte aufgeteilt wird",
         "ist die ausländische Steuer abzuziehen"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Satzes 2 und des Absatzes 2 die folgenden Bestimmungen entsprechend",
+        "vorbehaltlich des Absatzes 2 § 34c Absatz 1 bis 3 und 6 Satz 6 des Einkommensteuergesetzes entsprechend anzuwenden"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.576,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -21418,8 +21556,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0138db314758c388c04cedcbecb3ae2afaaf1dd179ab4f805a856bbd908aa792",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.975Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.978Z"
     },
     "27": {
       "typ": "gemischt",
@@ -23683,8 +23821,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17c1e7ddb9d43a6f867723f3e060a89c73d98bcca2b788e3b21ca15bc636d593",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.980Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.983Z"
     },
     "28": {
       "typ": "gemischt",
@@ -24322,8 +24460,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "307b90782d9125773eaa5503b97e7a2bc25e7e11db9b71bb63ed2a2559ade9e7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.982Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.985Z"
     },
     "29": {
       "typ": "gemischt",
@@ -25119,8 +25257,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d3240ee8e92f6603411416b20dbd3196dd2d9d79f741395ccec3c0c9e794173",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.984Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.988Z"
     },
     "30": {
       "typ": "gemischt",
@@ -25330,8 +25468,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6382c8b0934a41e55ee5b31dbea0ba1b63b887b45f895532eb47dba202ed1a08",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.985Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.989Z"
     },
     "31": {
       "typ": "gemischt",
@@ -25733,8 +25871,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b1c77d766917f13e5ca916cc1acebb83fb99a74f599f2a8901778e3bc25525a8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.986Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.990Z"
     },
     "32": {
       "typ": "gemischt",
@@ -27979,8 +28117,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c026719e7a722a9987dd0ed68d0664761b0beafae5b241be868cd25952df3d9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.996Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.999Z"
     },
     "33": {
       "typ": "gemischt",
@@ -28646,8 +28784,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1505bb2049194f03d242a1cc49d9b4db017e3d7e782c4973918ea9a12a6503e4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.001Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.004Z"
     },
     "34": {
       "typ": "anwendung",
@@ -29448,8 +29586,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "96c424c80bcf0da2814201c63381cd09bbd74199a02a403f495cb9d8fade0991",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.005Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.008Z"
     },
     "35": {
       "typ": "anwendung",
@@ -29482,8 +29620,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "71ee4f52ea58bb8400ef450878d41c7b5b3899cc39c641d4a8cdd14fd54da583",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.005Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.008Z"
     },
     "36": {
       "typ": "gemischt",
@@ -30228,8 +30366,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "86295463c873a304a74a018f1d5b7864870aa2ca9a76d0ec0e90f07880dd9968",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.009Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.011Z"
     },
     "37": {
       "typ": "gemischt",
@@ -30326,19 +30464,46 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "mindert sich vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen, die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
+              "text": "mindert sich",
+              "anzeige": "mindert sich … die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
+              "teile": [
+                {
+                  "text": "mindert sich",
+                  "von": 303,
+                  "laenge": 12
+                },
+                {
+                  "text": "die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
+                  "von": 387,
+                  "laenge": 157
+                }
+              ],
+              "pfad": "Abs. 2 Satz 1",
+              "von": 303,
+              "laenge": 12,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 303,
-              "laenge": 241,
+              "von": 316,
+              "laenge": 69,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -31761,16 +31926,31 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "mindert sich vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen, die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
+                  "t": "mindert sich … die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "2.",
@@ -32370,7 +32550,7 @@
       "rf": [
         "wird ein Körperschaftsteuerguthaben",
         "beträgt 1/6 des Endbestands des mit einer Körperschaftsteuer von 40 Prozent belasteten Teilbetrags",
-        "mindert sich vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen, die in den folgenden Wirtschaftsjahren erfolgen und die auf einem den gesellschaftsrechtlichen Vorschriften entsprechenden Gewinnverteilungsbeschluss beruhen",
+        "mindert sich",
         "gilt für Mehrabführungen im Sinne des § 14 Abs. 3 entsprechend",
         "endet, in dem die Gewinnausschüttung erfolgt, mindert sich bis zum Verbrauch des Körperschaftsteuerguthabens um diesen Betrag, letztmalig in dem Veranlagungszeitraum, in dem das 18",
         "Wirtschaftsjahr",
@@ -32405,12 +32585,13 @@
         "ist aus den Einnahmen an Körperschaftsteuer"
       ],
       "ausnahmen": [
+        "vorbehaltlich des Absatzes 2a um jeweils 1/6 der Gewinnausschüttungen",
         "gelten nicht für steuerbefreite Körperschaften und Personenvereinigungen im Sinne des § 5 Abs. 1 Nr. 9, soweit die Einnahmen in einem wirtschaftlichen Geschäftsbetrieb anfallen, für den die Steuerbefreiung ausgeschlossen ist"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.577,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -32419,8 +32600,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9b4c79c49c17ba97c6c1b1c5a10c627a5d01b52eafadd6091496adb808c2bbaf",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.018Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.020Z"
     },
     "38": {
       "typ": "gemischt",
@@ -34646,8 +34827,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "18fd23789bdda490be67508b8e408625f96638af61b5defdb5e44f1366f91227",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.025Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.027Z"
     },
     "39": {
       "typ": "aussage",
@@ -34815,8 +34996,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d906ecfc0c8df241fc7c45290a56a226b6f11f223000e1dcc1b6229aee19efda",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.026Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.028Z"
     },
     "40": {
       "typ": "gemischt",
@@ -34838,8 +35019,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.026Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.028Z"
     },
     "1a": {
       "typ": "gemischt",
@@ -35645,31 +35826,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "sind vorbehaltlich des Satzes 4 nicht",
-              "anzeige": "sind vorbehaltlich des Satzes 4 nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind vorbehaltlich des Satzes 4 nicht",
-                  "von": 4398,
-                  "laenge": 37
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 4436,
-                  "laenge": 10
-                }
-              ],
+              "art": "ausn",
+              "text": "vorbehaltlich des Satzes 4 nicht anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 3 Satz 1 (Teil 2)",
-              "von": 4398,
-              "laenge": 37,
+              "von": 4403,
+              "laenge": 43,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -36460,6 +36630,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Satzes 4 nicht anzuwenden",
+                  "pfad": "Abs. 3 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -36481,14 +36666,6 @@
                 },
                 {
                   "n": "3.",
-                  "t": "sind vorbehaltlich des Satzes 4 nicht … anzuwenden",
-                  "pfad": "Abs. 3 Satz 1 (Teil 2)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "4.",
                   "t": "gilt abweichend von Satz 3, dass auch die Einnahmen des Gesellschafters der optierenden Gesellschaft zu diesen Einkünften gehören",
                   "pfad": "Abs. 3 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -36496,7 +36673,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "Gewinnanteile",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.45,
@@ -36504,7 +36681,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "ist bei einer optierenden Gesellschaft nicht … anzuwenden",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -36512,7 +36689,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "gelten die optierende Gesellschaft als lohnsteuerlicher Arbeitgeber und der Gesellschafter als Arbeitnehmer",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -36689,7 +36866,6 @@
         "ermächtigten Personen gelten als gesetzliche Vertreter der optierenden",
         "gilt die Beteiligung an einer optierenden Gesellschaft für Zwecke der Besteuerung nach dem Einkommen als Beteiligung eines nicht persönlich haftenden Gesellschafters an einer Kapitalgesellschaft",
         "veranlasste Einnahmen zu Einkünften im Sinne des § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes",
-        "sind vorbehaltlich des Satzes 4 nicht",
         "gilt abweichend von Satz 3, dass auch die Einnahmen des Gesellschafters der optierenden Gesellschaft zu diesen Einkünften gehören",
         "Gewinnanteile",
         "ist bei einer optierenden Gesellschaft nicht",
@@ -36702,7 +36878,9 @@
         "Erfüllt der verbleibende Gesellschafter nicht die persönlichen Voraussetzungen eines übernehmenden Rechtsträgers einer Umwandlung einer Kapitalgesellschaft im Sinne des § 1 Absatz 1 Satz 1 Nummer 1 oder 4 des Umwandlungssteuergesetzes, gilt die optierende Gesellschaft als aufgelöst und ihr Vermögen als an die Gesellschafter ausgeschüttet; § 11 des Körperschaftsteuergesetzes ist entsprechend mit der Maßgabe anzuwenden, dass an die Stelle des zur Verteilung kommenden Vermögens der gemeine Wert des vorhandenen Vermögens tritt",
         "gilt die Umwandlung der optierenden Gesellschaft in eine Körperschaft im Sinne des Umwandlungssteuergesetzes als Umwandlung einer Kapitalgesellschaft in eine Körperschaft"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Satzes 4 nicht anzuwenden"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -36715,8 +36893,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "628964109d76fbef94b03595759dd535b2921c47089d2bda8eb4208f7f969097",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.863Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.869Z"
     },
     "6a": {
       "typ": "verweisung",
@@ -36836,8 +37014,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f934e64c63d0066278de9a15625f0e9c90b5dd4283d5be5745f46b2b35221db1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.890Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.898Z"
     },
     "8a": {
       "typ": "gemischt",
@@ -37309,8 +37487,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d1912797214a4b37a46324b0de9b4c9d46fc988723aa499557cca44ded9cd3ca",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.901Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.908Z"
     },
     "8b": {
       "typ": "gemischt",
@@ -37464,19 +37642,35 @@
             },
             {
               "art": "rf",
-              "text": "gilt Satz 2 ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
+              "text": "gilt Satz 2",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 4",
               "von": 769,
-              "laenge": 86,
+              "laenge": 11,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Nachfolgender Hauptsatz (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 4",
+              "von": 781,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -39495,6 +39689,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
+                  "pfad": "Abs. 1 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Satz 2 gilt nicht, soweit die verdeckte Gewinnausschüttung das Einkommen einer dem Steuerpflichtigen nahe stehenden Person erhöht hat und § 32a des Körperschaftsteuergesetzes auf die Veranlagung dieser nahe stehenden Person keine Anwendung findet",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.48,
@@ -39526,7 +39728,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "gilt Satz 2 ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
+                  "t": "gilt Satz 2",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -40512,7 +40714,7 @@
       "rf": [
         "bleiben bei der Ermittlung des Einkommens",
         "gilt Satz 1 nur, soweit das Einkommen der anderen Person oder ihr nahestehender Personen nicht niedriger ist als bei einer dem deutschen Recht entsprechenden Zurechnung",
-        "gilt Satz 2 ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
+        "gilt Satz 2",
         "sind auch Einnahmen aus der Veräußerung von Dividendenscheinen und sonstigen Ansprüchen im Sinne des § 20 Abs. 2 Satz 1 Nr. 2 Buchstabe a des Einkommensteuergesetzes sowie Einnahmen aus der Abtretung von Dividendenansprüchen oder sonstigen Ansprüchen im Sinne des § 20 Abs. 2 Satz 2 des Einkommensteuergesetzes",
         "ist der Betrag, um den der Veräußerungspreis oder der an dessen Stelle tretende Wert nach Abzug der Veräußerungskosten den Wert übersteigt, der sich nach den Vorschriften über die steuerliche Gewinnermittlung im Zeitpunkt der Veräußerung ergibt (Buchwert)",
         "gilt entsprechend für Gewinne aus der Auflösung oder der Herabsetzung des Nennkapitals oder aus dem Ansatz des in § 6 Absatz 1 Nummer 2 Satz 3 des Einkommensteuergesetzes bezeichneten Werts",
@@ -40556,6 +40758,7 @@
         "sind nicht anzuwenden bei Anteilen an"
       ],
       "ausnahmen": [
+        "ungeachtet des Wortlauts des Abkommens für diese Freistellung entsprechend",
         "Satz 2 gilt nicht, soweit die verdeckte Gewinnausschüttung das Einkommen einer dem Steuerpflichtigen nahe stehenden Person erhöht hat und § 32a des Körperschaftsteuergesetzes auf die Veranlagung dieser nahe stehenden Person keine Anwendung findet",
         "außer für Gewinne aus dem Ansatz mit dem Wert, der sich nach § 6 Abs. 1 Nr. 2 Satz 3 des Einkommensteuergesetzes ergibt, auch für steuerwirksam vorgenommene Abzüge nach § 6b des Einkommensteuergesetzes und ähnliche Abzüge",
         "Satz 1 gilt nicht für Gewinne im Sinne des Absatzes 2, soweit eine Teilwertabschreibung in früheren Jahren nach Absatz 3 bei der Ermittlung des Einkommens unberücksichtigt geblieben ist und diese Minderung nicht durch den Ansatz eines höheren Werts ausgeglichen worden ist",
@@ -40573,8 +40776,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e88f70833b99e0a623740d8bc1efc6ccaa42e982e232b4d701c27d0e3cb5957e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.915Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.919Z"
     },
     "8c": {
       "typ": "gemischt",
@@ -41896,8 +42099,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e582d7dcde72e48baf458ccc02d4181546f03ce301ad6af62e38182784cefd0b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.919Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.924Z"
     },
     "8d": {
       "typ": "gemischt",
@@ -42876,8 +43079,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d90c50a95a16a1250ff7cc734dd4ed4b36f4b889739040a67c99060c2d259ce",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.922Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.927Z"
     },
     "21a": {
       "typ": "konditional",
@@ -43104,8 +43307,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1cd8c1a7c893d753ca623605447011339fcc92ee215102551c807d07b32c5a25",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.967Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:24.970Z"
     },
     "32a": {
       "typ": "gemischt",
@@ -43449,8 +43652,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f5eb11d4837d540ea3174d10ec0461ca5c083502961fbc362d175d0722444df",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:29.998Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.001Z"
     }
   }
 }

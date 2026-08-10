@@ -1,14 +1,14 @@
 {
   "abk": "UmwStG",
   "titel": "Umwandlungssteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:31.414Z",
+  "aktualisiert": "2026-08-10T09:19:26.258Z",
   "quelle": "https://www.gesetze-im-internet.de/umwstg_2006/",
   "stand": [
     {
@@ -1056,8 +1056,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "692301f68f8ced6d0fea4a955cc2645ee38647aa49ca92ec43bd6d93f6659762",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.354Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.195Z"
     },
     "2": {
       "typ": "gemischt",
@@ -1469,7 +1469,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
+              "art": "ausn",
               "text": "Unbeschadet anderer Vorschriften",
               "anzeige": null,
               "teile": null,
@@ -1482,7 +1482,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+              "grund": "Vorbehalt mit „unbeschadet\""
             },
             {
               "art": "rf",
@@ -2082,6 +2082,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Unbeschadet anderer Vorschriften",
+                  "pfad": "Abs. 5 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Satz 2 findet keine Anwendung, soweit die Finanzinstrumente oder Anteile an einer Körperschaft ohne die Anwendung der Absätze 1 und 2 beim übertragenden Rechtsträger in dessen steuerlicher Schlussbilanz mit einem anderen als dem gemeinen Wert hätten angesetzt werden können",
                   "pfad": "Abs. 5 Satz 5",
                   "konfidenz": 0.48,
@@ -2097,14 +2105,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Unbeschadet anderer Vorschriften",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "ist der Ausgleich oder die sonstige Verrechnung negativer Einkünfte des übernehmenden Rechtsträgers",
                   "pfad": "Abs. 5 Satz 1",
                   "konfidenz": 0.6,
@@ -2112,7 +2112,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "gelten auch Aufwendungen außerhalb des Rückwirkungszeitraums, die darauf beruhen, dass Finanzinstrumente oder Anteile an einer Körperschaft, die dem übernehmenden Rechtsträger auf Grund der Anwendung der Absätze 1 und 2 zugerechnet werden, bis zu dem in Satz 4 bezeichneten Zeitpunkt veräußert werden oder nach den Sätzen 3 und 4 als veräußert",
                   "pfad": "Abs. 5 Satz 2",
                   "konfidenz": 0.42,
@@ -2120,7 +2120,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "Als Veräußerung im Sinne der Sätze 1 und 2 gilt",
                   "pfad": "Abs. 5 Satz 3",
                   "konfidenz": 0.6,
@@ -2128,7 +2128,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "veräußerte oder nach Satz 3 als veräußert geltende Wirtschaftsgüter im Sinne des Satzes 2 gelten zu diesem Zeitpunkt als zum gemeinen Wert veräußert und wieder angeschafft",
                   "pfad": "Abs. 5 Satz 4",
                   "konfidenz": 0.6,
@@ -2136,7 +2136,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "finden keine Anwendung",
                   "pfad": "Abs. 5 Satz 6",
                   "konfidenz": 0.6,
@@ -2144,7 +2144,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "gelten die Sätze 2 bis 6 sinngemäß für Aufwendungen und Einkünfteminderungen infolge der Veräußerung oder eines niedrigeren Wertansatzes der Finanzinstrumente oder Anteile beziehungsweise infolge der Veräußerung von Anteilen an den Personengesellschaften oder deren Auflösung",
                   "pfad": "Abs. 5 Satz 7",
                   "konfidenz": 0.42,
@@ -2185,7 +2185,6 @@
         "gilt Satz 3 auch für einen Ausgleich oder eine Verrechnung beim Organträger entsprechend",
         "gilt Satz 3 auch für einen Ausgleich oder eine Verrechnung bei den Gesellschaftern entsprechend",
         "gelten nicht",
-        "Unbeschadet anderer Vorschriften",
         "ist der Ausgleich oder die sonstige Verrechnung negativer Einkünfte des übernehmenden Rechtsträgers",
         "gelten auch Aufwendungen außerhalb des Rückwirkungszeitraums, die darauf beruhen, dass Finanzinstrumente oder Anteile an einer Körperschaft, die dem übernehmenden Rechtsträger auf Grund der Anwendung der Absätze 1 und 2 zugerechnet werden, bis zu dem in Satz 4 bezeichneten Zeitpunkt veräußert werden oder nach den Sätzen 3 und 4 als veräußert",
         "Als Veräußerung im Sinne der Sätze 1 und 2 gilt",
@@ -2194,6 +2193,7 @@
         "gelten die Sätze 2 bis 6 sinngemäß für Aufwendungen und Einkünfteminderungen infolge der Veräußerung oder eines niedrigeren Wertansatzes der Finanzinstrumente oder Anteile beziehungsweise infolge der Veräußerung von Anteilen an den Personengesellschaften oder deren Auflösung"
       ],
       "ausnahmen": [
+        "Unbeschadet anderer Vorschriften",
         "Satz 2 findet keine Anwendung, soweit die Finanzinstrumente oder Anteile an einer Körperschaft ohne die Anwendung der Absätze 1 und 2 beim übertragenden Rechtsträger in dessen steuerlicher Schlussbilanz mit einem anderen als dem gemeinen Wert hätten angesetzt werden können"
       ],
       "definitionen": [],
@@ -2208,8 +2208,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "28fbf5c9f1b825589c4757d1e654df9d6be5c8506faac049f1b124ef2893edb9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.358Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.200Z"
     },
     "3": {
       "typ": "gemischt",
@@ -2838,8 +2838,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "804c88ca9a563a7bec1cd8d34092d9a79f72b10a685c7ec95b3c568c0b4a5816",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.360Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.202Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4270,8 +4270,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ccdd4c31abed0ba7c2f031d2a635d61930d6dd049c57f73893b2f693d5d8b89a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.364Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.207Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4589,8 +4589,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d8e06422c2302540d8fa8eaf46a27dfe01d40d7c44b73062437e7b044d6e0975",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.365Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.209Z"
     },
     "6": {
       "typ": "gemischt",
@@ -4992,8 +4992,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "610d6303078c8157a48737653e01afc4de6a75b664718722bfd1fafd5d993cbb",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.367Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.210Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5162,8 +5162,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b19c12fad0c8657076fa12f0e54448e2e0aef801d03b97d893e37d1458d9d22",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.367Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.211Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5399,8 +5399,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c7f59089f8505df5b208b517ea3f7051ddc9f6d1e1d1cc5b148095b371371298",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.368Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.211Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5589,8 +5589,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f59fe61fae6b917a310d2b6a06756db2db2f09012ca3cd5ecd5576e23e82e75",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.368Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.212Z"
     },
     "10": {
       "typ": "gemischt",
@@ -5612,8 +5612,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.368Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.212Z"
     },
     "11": {
       "typ": "gemischt",
@@ -6212,8 +6212,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17007795c634f2056711c702aaec1b8a5614c878fc8ebd29e4e079df7ae46428",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.370Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.214Z"
     },
     "12": {
       "typ": "gemischt",
@@ -6744,8 +6744,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e1ca6251d90130e25ebea592eaaeba7aaa3356458868254e416d62a8810d0121",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.372Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.216Z"
     },
     "13": {
       "typ": "gemischt",
@@ -6910,19 +6910,46 @@
             },
             {
               "art": "rf",
-              "text": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
-              "anzeige": null,
-              "teile": null,
+              "text": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
+              "anzeige": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+              "teile": [
+                {
+                  "text": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
+                  "von": 682,
+                  "laenge": 90
+                },
+                {
+                  "text": "wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+                  "von": 898,
+                  "laenge": 83
+                }
+              ],
               "pfad": "Abs. 2 Nr. 2",
               "von": 682,
-              "laenge": 299,
-              "konfidenz": 0.42,
+              "laenge": 90,
+              "konfidenz": 0.54,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 773,
+              "laenge": 123,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -7167,6 +7194,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -7188,11 +7230,11 @@
                 },
                 {
                   "n": "3.",
-                  "t": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+                  "t": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.54,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "4.",
@@ -7242,17 +7284,19 @@
         "gelten als zum gemeinen Wert veräußert und die an ihre Stelle tretenden Anteile an der übernehmenden Körperschaft gelten als mit diesem Wert",
         "sind auf Antrag die Anteile an der übernehmenden Körperschaft mit dem Buchwert der Anteile an der übertragenden Körperschaft",
         "beschränkt wird",
-        "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+        "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
         "ist entsprechend",
         "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Anteilseigners zuständigen Finanzamt",
         "treten steuerlich an die Stelle der Anteile an der übertragenden Körperschaft",
         "treten an die Stelle des Buchwerts die Anschaffungskosten"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.563,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7261,8 +7305,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c5fc6e6b03505cda25e0345baae595203edb6257bd1e749ed30efbc9b28de5c4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.373Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.217Z"
     },
     "14": {
       "typ": "gemischt",
@@ -7284,8 +7328,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.373Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.217Z"
     },
     "15": {
       "typ": "gemischt",
@@ -7320,20 +7364,20 @@
               "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
             {
-              "art": "rf",
-              "text": "gelten die §§ 11 bis 13 vorbehaltlich des Satzes 2 und des § 16 entsprechend",
+              "art": "ausn",
+              "text": "vorbehaltlich des Satzes 2 und des § 16 entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 126,
-              "laenge": 76,
+              "von": 150,
+              "laenge": 52,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -7883,19 +7927,26 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Satzes 2 und des § 16 entsprechend",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gelten die §§ 11 bis 13 vorbehaltlich des Satzes 2 und des § 16 entsprechend",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "sind nur anzuwenden",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -7903,7 +7954,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "Als Teilbetrieb",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.45,
@@ -7911,7 +7962,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "gilt auch ein Mitunternehmeranteil oder die Beteiligung an einer Kapitalgesellschaft",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -8134,7 +8185,6 @@
         "Bei einer Abspaltung"
       ],
       "rf": [
-        "gelten die §§ 11 bis 13 vorbehaltlich des Satzes 2 und des § 16 entsprechend",
         "sind nur anzuwenden",
         "Als Teilbetrieb",
         "gilt auch ein Mitunternehmeranteil oder die Beteiligung an einer Kapitalgesellschaft",
@@ -8149,7 +8199,9 @@
         "setzt die Anwendung des § 11 Abs. 2 außerdem voraus, dass die Beteiligungen an der übertragenden Körperschaft mindestens fünf Jahre vor dem steuerlichen Übertragungsstichtag bestanden haben",
         "mindern sich verrechenbare Verluste, verbleibende Verlustvorträge, nicht ausgeglichene negative Einkünfte, ein Zinsvortrag nach § 4h Absatz 1 Satz 5 des Einkommensteuergesetzes und ein EBITDA-Vortrag nach § 4h Absatz 1 Satz 3 des Einkommensteuergesetzes der übertragenden Körperschaft in dem Verhältnis, in dem bei Zugrundelegung des gemeinen Werts das Vermögen auf eine andere Körperschaft übergeht"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Satzes 2 und des § 16 entsprechend"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -8162,8 +8214,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d72e47a513a8546e48723f6394773d94e5e7f14a1b5f1a07bdb604c92d807ad2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.376Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.220Z"
     },
     "16": {
       "typ": "konditional",
@@ -8272,8 +8324,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8f3e1ba807fde9d6d9232b325ec6891f7fe7f21090538c01cd5bad0ee3a660a8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.377Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.220Z"
     },
     "17": {
       "typ": "gemischt",
@@ -8295,8 +8347,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.377Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.220Z"
     },
     "18": {
       "typ": "gemischt",
@@ -8871,8 +8923,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "992ec7fc49e542bda8c55d80a229fec9dae96838e0ed1a625fbc47fe5a6b340d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.378Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.222Z"
     },
     "19": {
       "typ": "konditional",
@@ -9062,8 +9114,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22ce9304e0af7106c9ee0c115d3eac01eeefaf2492521de2b2073abfe571ceac",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.379Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.222Z"
     },
     "20": {
       "typ": "gemischt",
@@ -10672,8 +10724,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ea36c720801a0634a5f8ba2d6ffb545ae9518f4f976568ecec48956827b0293a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.386Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.230Z"
     },
     "21": {
       "typ": "gemischt",
@@ -11139,30 +11191,46 @@
             },
             {
               "art": "rf",
-              "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
-              "anzeige": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend … anzuwenden",
+              "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
+              "anzeige": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
               "teile": [
                 {
-                  "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
+                  "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
                   "von": 2643,
-                  "laenge": 386
+                  "laenge": 106
                 },
                 {
-                  "text": "anzuwenden",
-                  "von": 3030,
-                  "laenge": 10
+                  "text": "wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
+                  "von": 2875,
+                  "laenge": 154
                 }
               ],
               "pfad": "Abs. 2 Nr. 2",
               "von": 2643,
-              "laenge": 386,
-              "konfidenz": 0.42,
+              "laenge": 106,
+              "konfidenz": 0.54,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 2750,
+              "laenge": 123,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -11517,6 +11585,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -11554,9 +11637,9 @@
                 },
                 {
                   "n": "5.",
-                  "t": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend … anzuwenden",
+                  "t": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": true
                 },
@@ -11661,18 +11744,20 @@
         "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile",
         "gilt in den Fällen des Satzes 2 unter den Voraussetzungen des Absatzes 1 Satz 2 der Buchwert oder ein höherer Wert, höchstens der gemeine Wert, als Veräußerungspreis der eingebrachten Anteile und als Anschaffungskosten der erhaltenen Anteile",
         "beschränkt ist",
-        "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern, wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
+        "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
         "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Einbringenden zuständigen Finanzamt",
         "treten an die Stelle des Buchwerts die Anschaffungskosten",
         "gilt entsprechend",
         "ist § 17 Abs. 3 des Einkommensteuergesetzes nur anzuwenden",
         "findet keine Anwendung"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11681,8 +11766,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8983bf2950f1f99d8fb4eb46088bde704057131ad7aaf6a9580118deabdcfde5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.389Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.233Z"
     },
     "22": {
       "typ": "gemischt",
@@ -13562,8 +13647,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "889d713fa7c495e7bb74409ae1d23557e6429e8a1b4a818870c0af07f16aa78f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.398Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.241Z"
     },
     "23": {
       "typ": "gemischt",
@@ -14303,8 +14388,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74de4b817bc70550532ec38d63bdc8cde46401aa684f90c4cedc5dc161484fa3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.401Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.244Z"
     },
     "24": {
       "typ": "gemischt",
@@ -15131,8 +15216,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9816ac1f9eec71e329f86ed7d09a45d2b9f80e4962551aef37fe23746772cbb0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.404Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.248Z"
     },
     "25": {
       "typ": "gemischt",
@@ -15287,8 +15372,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dd8c0fbb4374cc097779aadb9f34b48ecdb0c1b019e8385526dc18ad460aa0b7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.405Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.249Z"
     },
     "26": {
       "typ": "gemischt",
@@ -15310,8 +15395,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.411Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.255Z"
     },
     "27": {
       "typ": "anwendung",
@@ -15616,8 +15701,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "546aff936ab9687b671a466b9f5b411687bef794d3ef671f5282d1ba6372695e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.413Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.258Z"
     },
     "28": {
       "typ": "aussage",
@@ -15692,8 +15777,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab5470b11d877e1d750db81377c7ff533d57ac69ecc1f6c9a9991a25aed63d9c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.414Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.258Z"
     }
   }
 }

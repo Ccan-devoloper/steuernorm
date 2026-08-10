@@ -476,13 +476,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 3a",
-    "pfad": "Abs. 3 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "12. ungeachtet der Beträge des § 10d Absatz 1 Satz 1 die negativen Einkünfte nach § 10d Ab",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 3b",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
@@ -1914,7 +1907,7 @@
     "norm": "§ 17",
     "pfad": "Abs. 5 Satz 3",
     "art": "tb",
-    "text": "ist der Gewinn aus einer späteren Veräußerung der Anteile ungeachtet der Bestimmungen eine",
+    "text": "ist der Gewinn aus einer späteren Veräußerung der Anteile",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
@@ -2996,13 +2989,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 38b",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "Soweit dem Arbeitnehmer Kinderfreibeträge nach § 32 Absatz 1 bis 6 zustehen, die nicht nac",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 39",
     "pfad": "Abs. 3 Satz 3",
     "art": "rf",
@@ -3498,5 +3484,19 @@
     "art": "tb",
     "text": "wenn der Überlassung eine Erlaubnis nach § 1 des Arbeitnehmerüberlassungsgesetzes in der j",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 42d",
+    "pfad": "Abs. 6 Satz 7",
+    "art": "tb",
+    "text": "Ist durch die Umstände der Arbeitnehmerüberlassung die Lohnsteuer schwer zu ermitteln",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 42d",
+    "pfad": "Abs. 8 Satz 3",
+    "art": "rf",
+    "text": "Die Höhe des",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   }
 ]

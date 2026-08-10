@@ -1,14 +1,14 @@
 {
   "abk": "UStG",
   "titel": "Umsatzsteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:30.623Z",
+  "aktualisiert": "2026-08-10T09:19:25.514Z",
   "quelle": "https://www.gesetze-im-internet.de/ustg_1980/",
   "stand": [
     {
@@ -1511,8 +1511,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9c9b09228d52426bf55aea0b63cc1dfa10bafa43a38aaf75515a8e9d88618e7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.139Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.094Z"
     },
     "2": {
       "typ": "gemischt",
@@ -2146,8 +2146,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "04dc0a239b7fc232292278d9f62c12368fe0dfdf2a362a53bf25de34f9a82151",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.147Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.101Z"
     },
     "3": {
       "typ": "gemischt",
@@ -2996,19 +2996,46 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "richtet sich vorbehaltlich der §§ 3c, 3e und 3g nach den Absätzen 6 bis 8",
+              "text": "richtet sich",
+              "anzeige": "richtet sich … 3e und 3g nach den Absätzen 6 bis 8",
+              "teile": [
+                {
+                  "text": "richtet sich",
+                  "von": 4134,
+                  "laenge": 12
+                },
+                {
+                  "text": "3e und 3g nach den Absätzen 6 bis 8",
+                  "von": 4172,
+                  "laenge": 35
+                }
+              ],
+              "pfad": "Abs. 5a Satz 1",
+              "von": 4134,
+              "laenge": 12,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der §§ 3c",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5a Satz 1",
-              "von": 4134,
-              "laenge": 73,
+              "von": 4147,
+              "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -5378,16 +5405,31 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der §§ 3c",
+                  "pfad": "Abs. 5a Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "richtet sich vorbehaltlich der §§ 3c, 3e und 3g nach den Absätzen 6 bis 8",
+                  "t": "richtet sich … 3e und 3g nach den Absätzen 6 bis 8",
                   "pfad": "Abs. 5a Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 }
               ]
             }
@@ -6528,7 +6570,7 @@
         "gilt auch dann",
         "beschränkt sich die Lieferung auf den Gehalt des Gegenstands an den Bestandteilen, die dem Abnehmer verbleiben",
         "gilt auch dann",
-        "richtet sich vorbehaltlich der §§ 3c, 3e und 3g nach den Absätzen 6 bis 8",
+        "richtet sich",
         "gilt die Lieferung dort als ausgeführt, wo die Beförderung oder Versendung an den Abnehmer oder in dessen Auftrag an einen Dritten beginnt",
         "Versenden",
         "beginnt mit der Übergabe des Gegenstands an den Beauftragten",
@@ -6577,6 +6619,7 @@
       "ausnahmen": [
         "ausgenommen zu einer nur vorübergehenden Verwendung",
         "Satz 2 gilt nicht für die Lieferung neuer Fahrzeuge und eines Gegenstandes, der mit oder ohne probeweise Inbetriebnahme durch den Lieferer oder für dessen Rechnung montiert oder installiert geliefert wird",
+        "vorbehaltlich der §§ 3c",
         "es sei denn, er weist nach, dass er den Gegenstand als Lieferer befördert oder versendet hat",
         "dies gilt nicht, wenn der Vorsteuerabzug nach § 15 Absatz 1b ausgeschlossen oder wenn eine Vorsteuerberichtigung nach § 15a Absatz 6a durchzuführen ist",
         "Dies gilt nicht, wenn der Anbieter dieser sonstigen Leistung von dem Unternehmer als Leistungserbringer ausdrücklich benannt wird und dies in den vertraglichen Vereinbarungen zwischen den Parteien zum Ausdruck kommt"
@@ -6586,7 +6629,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.571,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -6595,8 +6638,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cf8237c2f47304236053287e2fb2887dc4fc325e7a0c7cfb292f0395fe62729d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.169Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.119Z"
     },
     "4": {
       "typ": "gemischt",
@@ -13377,8 +13420,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "60c77f8eddfa0d2954937ea28673135e82c58cc886f36c2eab6c9d9f29de0b24",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.222Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.172Z"
     },
     "5": {
       "typ": "gemischt",
@@ -14610,8 +14653,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a863421658fcd3aebbf41a09d46dea28122f25fbc0cca545c54fcd6ec8fb7cf5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.235Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.185Z"
     },
     "6": {
       "typ": "gemischt",
@@ -16044,8 +16087,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3e36cfccdd6d7e44f8c439f2ccf9d8bd5b7d9562ea73ac96b6957d77d9879390",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.240Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.189Z"
     },
     "7": {
       "typ": "gemischt",
@@ -16727,8 +16770,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3f72536d32c2c29c24e38e1285b430b9f3dd2254451d5b5658b496293f160c78",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.249Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.197Z"
     },
     "8": {
       "typ": "aussage",
@@ -17321,8 +17364,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3ec5d053275399f36fc43f90c61c960c8bb6673a70e81f7e65e4fb0907816666",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.251Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.200Z"
     },
     "9": {
       "typ": "gemischt",
@@ -17673,8 +17716,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d385e3583bbe580ca8cd11f1f2d0298f12c49e1bd31a03d20796c84a4b49f8e3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.263Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.211Z"
     },
     "10": {
       "typ": "gemischt",
@@ -18865,8 +18908,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6bd92b253686c8ebc8220baa148e0e81e0a5d390eca25cfcbb5936cfeaf157cd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.267Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.215Z"
     },
     "11": {
       "typ": "gemischt",
@@ -19569,8 +19612,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7062c43fe141897844b19849f11479d22815d0e4cb4af108bff2754e26c43d5a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.270Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.217Z"
     },
     "12": {
       "typ": "gemischt",
@@ -21223,8 +21266,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "00939a3be89ce5d7567077d7fd581873b9969b46f0ace50941a0df93009e1de5",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.282Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.224Z"
     },
     "13": {
       "typ": "gemischt",
@@ -21584,19 +21627,46 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "in den Fällen des § 18j vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1, in dem die Leistungen",
-              "anzeige": null,
-              "teile": null,
+              "text": "in den Fällen des § 18j",
+              "anzeige": "in den Fällen des § 18j … in dem die Leistungen",
+              "teile": [
+                {
+                  "text": "in den Fällen des § 18j",
+                  "von": 1387,
+                  "laenge": 23
+                },
+                {
+                  "text": "in dem die Leistungen",
+                  "von": 1508,
+                  "laenge": 21
+                }
+              ],
               "pfad": "Abs. 1 Buchst. g",
               "von": 1387,
-              "laenge": 142,
+              "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. g",
+              "von": 1411,
+              "laenge": 95,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "rf",
@@ -21850,11 +21920,11 @@
                 },
                 {
                   "n": "8.",
-                  "t": "in den Fällen des § 18j vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1, in dem die Leistungen",
+                  "t": "in den Fällen des § 18j … in dem die Leistungen",
                   "pfad": "Abs. 1 Buchst. g",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "9.",
@@ -21884,6 +21954,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1",
+                  "pfad": "Abs. 1 Buchst. g",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -22026,7 +22111,7 @@
         "in den Fällen des § 18 Abs. 4c mit Ablauf des Besteuerungszeitraums nach § 16 Abs. 1a Satz 1, in dem die Leistungen",
         "in den Fällen des § 18 Absatz 4e mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1b Satz 1, in dem die Leistungen",
         "in den Fällen des § 18i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1c Satz 1, in dem die Leistungen",
-        "in den Fällen des § 18j vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1, in dem die Leistungen",
+        "in den Fällen des § 18j",
         "in den Fällen des § 18k mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1e Satz 1, in dem die Lieferungen",
         "in den Fällen des § 3 Absatz 3a zu dem Zeitpunkt, zu dem die Zahlung angenommen",
         "2. für Leistungen im Sinne des § 3 Abs. 1b und 9a mit Ablauf des Voranmeldungszeitraums, in dem diese Leistungen",
@@ -22045,11 +22130,13 @@
         "ausgeführt worden sind; Buchstabe b bleibt",
         "ausgeführt worden sind; die Gegenstände gelten als zu dem Zeitpunkt geliefert, zu dem die Zahlung angenommen wurde; Buchstabe b bleibt"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Buchstabens i mit Ablauf des Besteuerungszeitraums nach § 16 Absatz 1d Satz 1"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -22058,8 +22145,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "08fc9722252565a83a1c607763cb10185cf0ddeea2b4d0c72a002fbc982faff6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.287Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.229Z"
     },
     "14": {
       "typ": "gemischt",
@@ -22120,19 +22207,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "kann als elektronische Rechnung oder vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+              "text": "kann als elektronische Rechnung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
               "von": 183,
-              "laenge": 106,
+              "laenge": 31,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 220,
+              "laenge": 69,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -22670,7 +22773,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Unbeschadet der Verpflichtungen nach Satz 2",
               "anzeige": null,
               "teile": null,
@@ -22683,7 +22786,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Vorbehalt mit „unbeschadet\""
             },
             {
               "art": "rf",
@@ -22934,7 +23037,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Unbeschadet anderer zulässiger Verfahren",
               "anzeige": null,
               "teile": null,
@@ -22947,7 +23050,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Vorbehalt mit „unbeschadet\""
             },
             {
               "art": "rf",
@@ -24030,12 +24133,27 @@
             },
             {
               "n": "III.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "IV.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "kann als elektronische Rechnung oder vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+                  "t": "kann als elektronische Rechnung",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -24178,14 +24296,6 @@
                 },
                 {
                   "n": "7.",
-                  "t": "Unbeschadet der Verpflichtungen nach Satz 2",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "8.",
                   "t": "sofern dies vorher vereinbart wurde (Gutschrift)",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -24196,6 +24306,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Unbeschadet der Verpflichtungen nach Satz 2",
+                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -24296,14 +24421,6 @@
                 },
                 {
                   "n": "3.",
-                  "t": "Unbeschadet anderer zulässiger Verfahren",
-                  "pfad": "Abs. 3 Satz 6",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
                   "t": "eine",
                   "pfad": "Abs. 3 Nr. 1",
                   "konfidenz": 0.45,
@@ -24314,6 +24431,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Unbeschadet anderer zulässiger Verfahren",
+                  "pfad": "Abs. 3 Satz 6",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -24806,11 +24938,9 @@
         "wenn der leistende Unternehmer und der Leistungsempfänger im Inland oder in einem der in § 1 Absatz 3 bezeichneten Gebiete ansässig sind",
         "für eine Leistung an eine juristische Person, die nicht Unternehmer ist",
         "Ein im Inland oder in einem der in § 1 Absatz 3",
-        "Unbeschadet der Verpflichtungen nach Satz 2",
         "sofern dies vorher vereinbart wurde (Gutschrift)",
         "Die Echtheit der Herkunft der Rechnung, die Unversehrtheit ihres Inhalts und ihre Lesbarkeit müssen gewährleistet werden",
         "die Unversehrtheit des Inhalts und die Lesbarkeit der Rechnung gewährleistet werden",
-        "Unbeschadet anderer zulässiger Verfahren",
         "eine",
         "die dem leistenden Unternehmer vom Finanzamt",
         "das nach Steuersätzen und einzelnen Steuerbefreiungen",
@@ -24828,7 +24958,7 @@
         "L 347 vom 11.12.2006, S. 1) in der jeweils gültigen Fassung teil, so"
       ],
       "rf": [
-        "kann als elektronische Rechnung oder vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+        "kann als elektronische Rechnung",
         "Eine elektronische Rechnung",
         "ist eine Rechnung",
         "Eine sonstige Rechnung",
@@ -24880,6 +25010,9 @@
         "gelten für die in den besonderen Besteuerungsverfahren zu erklärenden Umsätze abweichend von den Absätzen 1 bis 6 für die Rechnungserteilung die Vorschriften des Mitgliedstaates, in dem der Unternehmer seine Teilnahme anzeigt"
       ],
       "ausnahmen": [
+        "vorbehaltlich des Absatzes 2 als sonstige Rechnung übermittelt werden",
+        "Unbeschadet der Verpflichtungen nach Satz 2",
+        "Unbeschadet anderer zulässiger Verfahren",
         "Satz 1 gilt nicht, wenn eine Gutschrift gemäß Absatz 2 Satz 2 vereinbart worden ist"
       ],
       "definitionen": [
@@ -24896,8 +25029,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c2df2a2d5fc8d69e4bd3c0631a470eccd7b9051ac13d6f21715e62eaabcf41b3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.329Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.251Z"
     },
     "15": {
       "typ": "gemischt",
@@ -27061,8 +27194,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cc5f103f3ba22a8f4ddb819544b2f9575cdaeb2cda7e0cfd52d16cd8f9be24ce",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.358Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.268Z"
     },
     "16": {
       "typ": "gemischt",
@@ -27931,13 +28064,18 @@
             },
             {
               "art": "rf",
-              "text": "berechneten Steuer sind vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden, nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist",
-              "anzeige": "berechneten Steuer sind vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden, nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist … zu berücksichtigen",
+              "text": "berechneten Steuer sind",
+              "anzeige": "berechneten Steuer sind … nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist … zu berücksichtigen",
               "teile": [
                 {
-                  "text": "berechneten Steuer sind vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden, nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist",
+                  "text": "berechneten Steuer sind",
                   "von": 4363,
-                  "laenge": 166
+                  "laenge": 23
+                },
+                {
+                  "text": "nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist",
+                  "von": 4469,
+                  "laenge": 60
                 },
                 {
                   "text": "zu berücksichtigen",
@@ -27947,14 +28085,30 @@
               ],
               "pfad": "Abs. 2 Satz 1",
               "von": 4363,
-              "laenge": 166,
+              "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 4387,
+              "laenge": 80,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -29166,12 +29320,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "berechneten Steuer sind vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden, nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist … zu berücksichtigen",
+                  "t": "berechneten Steuer sind … nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist … zu berücksichtigen",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -29673,7 +29842,7 @@
         "ist bei der Berechnung der Steuer von der Summe der Fernverkäufe nach § 3 Absatz 3a Satz 2 und § 3c Absatz 2 und 3, die im Gemeinschaftsgebiet steuerbar sind, auszugehen",
         "ist bei der Berechnung der Steuer von der Summe der Fernverkäufe nach § 3 Absatz 3a Satz 2 und § 3c Absatz 2 und 3 auszugehen",
         "Absatz 2",
-        "berechneten Steuer sind vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden, nach § 15 abziehbaren Vorsteuerbeträge abzusetzen. § 15a ist",
+        "berechneten Steuer sind",
         "tritt dieser Teil an die Stelle des Kalenderjahres",
         "kann das Finanzamt einen kürzeren Besteuerungszeitraum bestimmen",
         "wird die Steuer, abweichend von Absatz 1, für jeden einzelnen steuerpflichtigen Umsatz durch die zuständige Zolldienststelle berechnet",
@@ -29692,14 +29861,15 @@
         "hat der Unternehmer die Steuer nach den für den nächsten Tag nach Ablauf des Besteuerungszeitraums nach Absatz 1a Satz 1, Absatz 1b Satz 1, Absatz 1c Satz 1, Absatz 1d Satz 1 oder Absatz 1e Satz 1 von der Europäischen Zentralbank festgestellten Umrechnungskursen umzurechnen"
       ],
       "ausnahmen": [
-        "soweit nicht § 20 gilt, nach vereinbarten Entgelten zu berechnen"
+        "soweit nicht § 20 gilt, nach vereinbarten Entgelten zu berechnen",
+        "vorbehaltlich des § 18 Absatz 9 Satz 3 die in den Besteuerungszeitraum fallenden"
       ],
       "definitionen": [
         "Besteuerungszeitraum"
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.559,
+      "konfidenz": 0.56,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -29708,8 +29878,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f3f9e51baca4a0e248a1d0032b873aa736dfb9ad8d61ccf2900dee25030af387",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.380Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.281Z"
     },
     "17": {
       "typ": "gemischt",
@@ -30914,8 +31084,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dfce26bce22de4872b538a3c0decfe55eb87beb2ee4a5e856cf87d12d287de05",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.385Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.284Z"
     },
     "18": {
       "typ": "gemischt",
@@ -30936,20 +31106,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "hat vorbehaltlich des § 18i Absatz 3, des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
+              "art": "ausn",
+              "text": "vorbehaltlich des § 18i Absatz 3",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 16,
-              "laenge": 372,
+              "von": 20,
+              "laenge": 32,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 54,
+              "laenge": 334,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -31462,7 +31648,40 @@
           "bis": 3514,
           "typ": "aussage",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des § 18i Absatz 3",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 3061,
+              "laenge": 32,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 für das Kalenderjahr oder für den kürzeren Besteuerungszeitraum eine Steuererklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die zu entrichtende Steuer oder den Überschuss, der sich zu seinen Gunsten ergibt, nach § 16 Absatz 1 bis 4 und § 17 selbst zu berechnen hat (Steueranmeldung)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 3095,
+              "laenge": 418,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 2",
@@ -35777,12 +35996,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des § 18i Absatz 3",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "hat vorbehaltlich des § 18i Absatz 3, des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
+                  "t": "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.48,
                   "beleg": null,
@@ -36034,11 +36268,34 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des § 18i Absatz 3",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 für das Kalenderjahr oder für den kürzeren Besteuerungszeitraum eine Steuererklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die zu entrichtende Steuer oder den Überschuss, der sich zu seinen Gunsten ergibt, nach § 16 Absatz 1 bis 4 und § 17 selbst zu berechnen hat (Steueranmeldung)",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "ist die Steueranmeldung binnen einem Monat nach Ablauf des kürzeren Besteuerungszeitraums zu übermitteln",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -36046,7 +36303,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "kann das Finanzamt zur Vermeidung von unbilligen Härten auf eine elektronische Übermittlung verzichten; in diesem Fall hat der Unternehmer eine Steueranmeldung nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig … zu unterschreiben",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.54,
@@ -37994,7 +38251,7 @@
         "Im Ausland ansässige Unternehmer nach § 13b Absatz 7, die grenzüberschreitende Personenbeförderungen mit nicht im Inland zugelassenen Kraftomnibussen durchführen"
       ],
       "rf": [
-        "hat vorbehaltlich des § 18i Absatz 3, des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
+        "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 bis zum zehnten Tag nach Ablauf jedes Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die Steuer für den Voranmeldungszeitraum (Vorauszahlung) selbst zu berechnen hat",
         "kann das Finanzamt zur Vermeidung von unbilligen Härten auf eine elektronische Übermittlung verzichten; in diesem Fall hat der Unternehmer eine Voranmeldung nach amtlich vorgeschriebenem Vordruck",
         "sind entsprechend",
         "ist am zehnten Tag nach Ablauf des Voranmeldungszeitraums fällig und bis dahin vom Unternehmer",
@@ -38007,6 +38264,7 @@
         "In diesem Fall",
         "bindet den Unternehmer für dieses Kalenderjahr",
         "gilt entsprechend",
+        "des § 18j Absatz 4, des § 18k Absatz 4 und des § 19 Absatz 1 Satz 2 für das Kalenderjahr oder für den kürzeren Besteuerungszeitraum eine Steuererklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle zu übermitteln, in der er die zu entrichtende Steuer oder den Überschuss, der sich zu seinen Gunsten ergibt, nach § 16 Absatz 1 bis 4 und § 17 selbst zu berechnen hat (Steueranmeldung)",
         "ist die Steueranmeldung binnen einem Monat nach Ablauf des kürzeren Besteuerungszeitraums zu übermitteln",
         "kann das Finanzamt zur Vermeidung von unbilligen Härten auf eine elektronische Übermittlung verzichten; in diesem Fall hat der Unternehmer eine Steueranmeldung nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
         "Berechnet der Unternehmer die zu entrichtende Steuer oder den Überschuss in der Steueranmeldung für das Kalenderjahr abweichend von der Summe der Vorauszahlungen, so ist der Unterschiedsbetrag zugunsten des Finanzamts einen Monat nach dem Eingang der Steueranmeldung fällig und bis dahin vom Unternehmer zu entrichten",
@@ -38104,6 +38362,8 @@
         "teilnimmt"
       ],
       "ausnahmen": [
+        "vorbehaltlich des § 18i Absatz 3",
+        "vorbehaltlich des § 18i Absatz 3",
         "Das gilt nicht für Münzen und Medaillen aus diesen Edelmetallen"
       ],
       "definitionen": [
@@ -38125,8 +38385,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "424684533911ffb5a0150b37309f6431c25a5edb2f6024c79d96d8f78324c45f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.414Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.309Z"
     },
     "19": {
       "typ": "gemischt",
@@ -39263,8 +39523,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d35921a099c6153d5ecda318780b06b8296025b2b31901bc1fde81b3c92caa12",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.476Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.369Z"
     },
     "20": {
       "typ": "gemischt",
@@ -39622,8 +39882,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f6fc56035428a775b3cccd440748916e047f39fe73da22a55d5adcfab2f1107d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.480Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.373Z"
     },
     "21": {
       "typ": "gemischt",
@@ -40501,8 +40761,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "77d807511b232ae06e864c17ebb49cbbbba6a78c2b7a7127886fecf4b7d0c2c6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.482Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.375Z"
     },
     "22": {
       "typ": "gemischt",
@@ -44416,8 +44676,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b097121f77f48697e9972d65a42e9d0cd7921ab36e55b91c4e8158c74c941c84",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.503Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.397Z"
     },
     "23": {
       "typ": "gemischt",
@@ -44439,8 +44699,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.519Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.411Z"
     },
     "24": {
       "typ": "gemischt",
@@ -44476,19 +44736,35 @@
             },
             {
               "art": "rf",
-              "text": "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
+              "text": "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 124,
-              "laenge": 155,
+              "laenge": 101,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Nachfolgender Hauptsatz (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 226,
+              "laenge": 53,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -45228,6 +45504,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "ausgenommen die Lieferungen in das Ausland und die im Ausland bewirkten Umsätze",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -45235,7 +45519,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "mit Ausnahme der Nummern 1 bis 7",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -45251,7 +45535,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
+                  "t": "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -45526,7 +45810,7 @@
         "Ergibt sich in einem Folgejahr aus der Berechnung nach Anlage 5 eine Abweichung zum Prozentsatz nach Absatz 1 Satz 1 Nummer 3"
       ],
       "rf": [
-        "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
+        "wird die Steuer für die im Rahmen eines land- und forstwirtschaftlichen Betriebs ausgeführten Umsätze",
         "aufgeführten Sägewerkserzeugnisse und Getränke sowie von alkoholischen Flüssigkeiten",
         "bleiben unberührt; § 9 findet keine Anwendung",
         "mit dem dort bestimmten Prozentsatz, in den übrigen Fällen des Satzes 1 mit dem in Satz 1 Nummer 3 bestimmten Prozentsatz der Bemessungsgrundlage für diese Umsätze festgesetzt",
@@ -45544,13 +45828,14 @@
         "ändert das Bundesministerium der Finanzen diesen durch Rechtsverordnung mit Zustimmung des Bundesrates jeweils mit Wirkung zum 1. Januar des Folgejahres entsprechend"
       ],
       "ausnahmen": [
+        "vorbehaltlich der Sätze 2 bis 4 wie folgt festgesetzt",
         "ausgenommen die Lieferungen in das Ausland und die im Ausland bewirkten Umsätze",
         "mit Ausnahme der Nummern 1 bis 7"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.592,
+      "konfidenz": 0.593,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -45559,8 +45844,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebd9a47fcd82f43f2ca61c0dce6968f5c8a9f1a2338a1c05ae00035196be20ad",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.523Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.415Z"
     },
     "25": {
       "typ": "gemischt",
@@ -46558,8 +46843,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e7d33503770c6f7c7e00bdf8e9f66f8eb9788ced59f6beaa7963481235e36c90",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.525Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.417Z"
     },
     "26": {
       "typ": "gemischt",
@@ -46678,20 +46963,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "kann unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen, dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
+              "art": "ausn",
+              "text": "unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 939,
-              "laenge": 224,
-              "konfidenz": 0.42,
+              "von": 944,
+              "laenge": 75,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "grund": "Vorbehalt mit „unbeschadet\""
+            },
+            {
+              "art": "rf",
+              "text": "dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 1021,
+              "laenge": 142,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (um Ausnahme gekürzt)"
             },
             {
               "art": "tb",
@@ -47492,14 +47793,29 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "kann unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen, dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
+                  "t": "dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -47828,7 +48144,7 @@
         "kann mit Zustimmung des Bundesrates durch Rechtsverordnung zur Wahrung der Gleichmäßigkeit bei der Besteuerung, zur Beseitigung von Unbilligkeiten in Härtefällen oder zur Vereinfachung des Besteuerungsverfahrens den Umfang der in diesem Gesetz enthaltenen Steuerbefreiungen, Steuerermäßigungen und des Vorsteuerabzugs näher bestimmen sowie die zeitlichen Bindungen nach § 19 Absatz 3 und 5 und § 24 Abs. 4",
         "kann von der zolltariflichen Abgrenzung abgewichen werden",
         "kann mit Zustimmung des Bundesrates durch Rechtsverordnung den Wortlaut derjenigen Vorschriften des Gesetzes und der auf Grund dieses Gesetzes erlassenen Rechtsverordnungen, in denen auf den Zolltarif hingewiesen wird, dem Wortlaut des Zolltarifs in der jeweils geltenden Fassung anpassen",
-        "kann unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen, dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
+        "dass die Steuer für grenzüberschreitende Beförderungen von Personen im Luftverkehr niedriger festgesetzt oder ganz oder zum Teil erlassen wird",
         "kann die Anordnung davon abhängig gemacht werden, dass in dem Land, in dem der ausländische Unternehmer seinen Sitz hat, für grenzüberschreitende Beförderungen im Luftverkehr, die von Unternehmern mit Sitz in der Bundesrepublik Deutschland durchgeführt werden, eine Umsatzsteuer oder ähnliche Steuer nicht erhoben wird",
         "wird einem Konsortium, das auf der Grundlage der Verordnung (EG) Nr. 723/2009 des Rates vom 25. Juni 2009 über den gemeinschaftlichen Rechtsrahmen für ein Konsortium für eine europäische Forschungsinfrastruktur (ABl",
         "gegründet wurde, vom Bundeszentralamt für Steuern",
@@ -47847,11 +48163,13 @@
         "zwischen der Bundesrepublik Deutschland und dem Obersten Hauptquartier der Alliierten Mächte, Europa, über die besonderen Bedingungen für die Einrichtung und den Betrieb internationaler militärischer Hauptquartiere in der Bundesrepublik Deutschland (BGBl. 1969 II S. 1997, 2009)",
         "kann dieses Gesetz und die auf Grund dieses Gesetzes erlassenen Rechtsverordnungen in der jeweils geltenden Fassung mit neuem Datum und unter neuer Überschrift im Bundesgesetzblatt"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "unbeschadet der Vorschriften der §§ 163 und 227 der Abgabenordnung anordnen"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -47860,8 +48178,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "887ef3e6b59ad98d6a98f9ae7b73752c4e61c29f331650c5b8136b56c9908086",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.578Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.470Z"
     },
     "27": {
       "typ": "gemischt",
@@ -49700,19 +50018,46 @@
             },
             {
               "art": "rf",
-              "text": "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-              "anzeige": null,
-              "teile": null,
+              "text": "ausgeführten Umsatz auf Papier",
+              "anzeige": "ausgeführten Umsatz auf Papier … das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+              "teile": [
+                {
+                  "text": "ausgeführten Umsatz auf Papier",
+                  "von": 14808,
+                  "laenge": 30
+                },
+                {
+                  "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+                  "von": 14920,
+                  "laenge": 61
+                }
+              ],
               "pfad": "Abs. 38 Nr. 1",
               "von": 14808,
-              "laenge": 173,
+              "laenge": 30,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 38 Nr. 1",
+              "von": 14844,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -49741,19 +50086,46 @@
             },
             {
               "art": "rf",
-              "text": "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-              "anzeige": null,
-              "teile": null,
+              "text": "ausgeführten Umsatz auf Papier",
+              "anzeige": "ausgeführten Umsatz auf Papier … das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+              "teile": [
+                {
+                  "text": "ausgeführten Umsatz auf Papier",
+                  "von": 15076,
+                  "laenge": 30
+                },
+                {
+                  "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+                  "von": 15188,
+                  "laenge": 61
+                }
+              ],
               "pfad": "Abs. 38 Nr. 2",
               "von": 15076,
-              "laenge": 173,
+              "laenge": 30,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Hauptsatzprädikat (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 38 Nr. 2",
+              "von": 15112,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "tb",
@@ -49798,19 +50170,46 @@
             },
             {
               "art": "rf",
-              "text": "ausgeführten Umsatz vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
+              "text": "ausgeführten Umsatz",
+              "anzeige": "ausgeführten Umsatz … das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
+              "teile": [
+                {
+                  "text": "ausgeführten Umsatz",
+                  "von": 15500,
+                  "laenge": 19
+                },
+                {
+                  "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
+                  "von": 15596,
+                  "laenge": 61
+                }
+              ],
+              "pfad": "Abs. 38 Nr. 3",
+              "von": 15500,
+              "laenge": 19,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 3",
-              "von": 15500,
-              "laenge": 157,
+              "von": 15520,
+              "laenge": 74,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "tb",
@@ -51182,6 +51581,37 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+                  "pfad": "Abs. 38 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+                  "pfad": "Abs. 38 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+                  "pfad": "Abs. 38 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -51195,27 +51625,27 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+                  "t": "ausgeführten Umsatz auf Papier … das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
                   "pfad": "Abs. 38 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "3.",
-                  "t": "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
+                  "t": "ausgeführten Umsatz auf Papier … das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
                   "pfad": "Abs. 38 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "4.",
-                  "t": "ausgeführten Umsatz vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
+                  "t": "ausgeführten Umsatz … das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
                   "pfad": "Abs. 38 Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "5.",
@@ -51439,9 +51869,9 @@
         "be-ziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
         "sind letztmalig auf Umsätze",
         "kann eine Rechnung",
-        "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-        "ausgeführten Umsatz auf Papier oder vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-        "ausgeführten Umsatz vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format, das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
+        "ausgeführten Umsatz auf Papier",
+        "ausgeführten Umsatz auf Papier",
+        "ausgeführten Umsatz",
         "übermittelt wird",
         "unberührt",
         "ist auf alle Rechnungen",
@@ -51450,12 +51880,15 @@
         "gelten alle bis zu diesem Zeitpunkt nicht ausgelagerten Gegenstände als ausgelagert im Sinne des § 4 Nummer 4a Satz 1 Buchstabe a Satz 3 in der bis zum 31. Dezember 2025 geltenden Fassung"
       ],
       "ausnahmen": [
-        "Dies gilt nicht für nach dem 1. Januar 2004 anfallende Vorsteuerbeträge, die auf die Miete oder den Betrieb dieser Fahrzeuge entfallen"
+        "Dies gilt nicht für nach dem 1. Januar 2004 anfallende Vorsteuerbeträge, die auf die Miete oder den Betrieb dieser Fahrzeuge entfallen",
+        "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+        "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format",
+        "vorbehaltlich der Zustimmung des Empfängers in einem elektronischen Format"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.576,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -51464,8 +51897,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b34ceec2fc31d83c21299cb08a5347f9c6cfcaf8ab40586603b0c92b6d0ca650",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.593Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.485Z"
     },
     "28": {
       "typ": "gemischt",
@@ -51966,8 +52399,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0cb46d29a06e28ba96a72064f8b0bb577703e8bf54121a5eb45a809b0e1ad0fb",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.600Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.492Z"
     },
     "29": {
       "typ": "gemischt",
@@ -52271,8 +52704,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2fb149ea8999cde05edbcf325397d71d2ea693e93daa9550074fcbba237b0890",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.601Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.493Z"
     },
     "30": {
       "typ": "gemischt",
@@ -52512,8 +52945,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2db396826053ce36ba0026e954bb0c4f1b6b74327778ba90336da9efed8089da",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.602Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.494Z"
     },
     "1a": {
       "typ": "gemischt",
@@ -53677,8 +54110,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7175f863f2f9590f9c0aa682a463ecb6d7129d293a0af4f0801b639901cdd4f4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.142Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.097Z"
     },
     "1b": {
       "typ": "gemischt",
@@ -54165,8 +54598,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6ab7b7d8336bed3ffa6969ecf1fa1110d54b3079dcdab4b5ac45998e0759ac21",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.144Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.098Z"
     },
     "1c": {
       "typ": "gemischt",
@@ -54650,8 +55083,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6de13b919442ff733a90cd5788066e8ebe51988e13b2f50846e4643383fb68e3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.145Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.100Z"
     },
     "2a": {
       "typ": "konditional",
@@ -54804,8 +55237,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7b3148d1939908008c0ed26f3322246e8f9b69a048503c10066715e93cc9da01",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.147Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.102Z"
     },
     "2b": {
       "typ": "gemischt",
@@ -54823,7 +55256,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Vorbehaltlich des Absatzes 4",
               "anzeige": null,
               "teile": null,
@@ -54836,7 +55269,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "rf",
@@ -55519,19 +55952,11 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Vorbehaltlich des Absatzes 4",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "soweit sie Tätigkeiten ausüben, die ihnen im Rahmen der öffentlichen Gewalt obliegen",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
@@ -55547,6 +55972,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Vorbehaltlich des Absatzes 4",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Satz 1 gilt nicht, sofern eine Behandlung als Nichtunternehmer zu größeren Wettbewerbsverzerrungen führen würde",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -55871,7 +56304,6 @@
         }
       ],
       "tb": [
-        "Vorbehaltlich des Absatzes 4",
         "soweit sie Tätigkeiten ausüben, die ihnen im Rahmen der öffentlichen Gewalt obliegen",
         "Größere Wettbewerbsverzerrungen liegen insbesondere nicht vor",
         "der von einer juristischen Person des öffentlichen Rechts im Kalenderjahr aus gleichartigen Tätigkeiten",
@@ -55905,6 +56337,7 @@
         "genannt sind"
       ],
       "ausnahmen": [
+        "Vorbehaltlich des Absatzes 4",
         "Satz 1 gilt nicht, sofern eine Behandlung als Nichtunternehmer zu größeren Wettbewerbsverzerrungen führen würde"
       ],
       "definitionen": [
@@ -55921,8 +56354,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a258da496fc7beb84e98f10a5e0608e120ac5254c2aaac2781883d43d9a2685f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.150Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.104Z"
     },
     "3a": {
       "typ": "gemischt",
@@ -55956,20 +56389,36 @@
               "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
-              "art": "tb",
-              "text": "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Unternehmer sein Unternehmen betreibt",
+              "art": "ausn",
+              "text": "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 28,
-              "laenge": 131,
+              "laenge": 76,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "tb",
+              "text": "von dem aus der Unternehmer sein Unternehmen betreibt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 106,
+              "laenge": 53,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfeld trägt die Voraussetzungen (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -56038,31 +56487,36 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "wird vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen",
-              "anzeige": "wird vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen … betreibt",
-              "teile": [
-                {
-                  "text": "wird vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen",
-                  "von": 374,
-                  "laenge": 125
-                },
-                {
-                  "text": "betreibt",
-                  "von": 500,
-                  "laenge": 8
-                }
-              ],
+              "art": "ausn",
+              "text": "vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 374,
-              "laenge": 125,
+              "von": 379,
+              "laenge": 76,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "von dem aus der Empfänger sein Unternehmen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 457,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -57884,7 +58338,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Unternehmer sein Unternehmen betreibt",
+                  "t": "von dem aus der Unternehmer sein Unternehmen betreibt",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -57902,6 +58356,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -57969,6 +58438,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "dies gilt nicht für sonstige Leistungen, die ausschließlich für den privaten Bedarf des Personals oder eines Gesellschafters bestimmt sind",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -57984,11 +58461,11 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen … betreibt",
+                  "t": "von dem aus der Empfänger sein Unternehmen",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
@@ -58766,7 +59243,7 @@
         }
       ],
       "tb": [
-        "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Unternehmer sein Unternehmen betreibt",
+        "von dem aus der Unternehmer sein Unternehmen betreibt",
         "Wird die sonstige Leistung von einer Betriebsstätte ausgeführt",
         "Eine sonstige Leistung, die an einen Unternehmer für dessen Unternehmen ausgeführt wird",
         "Wird die sonstige Leistung an die Betriebsstätte eines Unternehmers ausgeführt",
@@ -58816,7 +59293,7 @@
       "rf": [
         "Eine sonstige Leistung",
         "gilt die Betriebsstätte als der Ort der sonstigen Leistung",
-        "wird vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen",
+        "von dem aus der Empfänger sein Unternehmen",
         "ist stattdessen der Ort der Betriebsstätte maßgebend",
         "gelten entsprechend bei einer sonstigen Leistung an eine ausschließlich nicht unternehmerisch tätige juristische Person, der eine Umsatzsteuer-Identifikationsnummer erteilt worden ist, und bei einer sonstigen Leistung an eine juristische Person, die sowohl unternehmerisch als auch nicht unternehmerisch tätig ist",
         "wird dort ausgeführt, wo das Grundstück liegt",
@@ -58853,6 +59330,8 @@
         "Erbringt ein Unternehmer eine Güterbeförderungsleistung, ein Beladen, Entladen, Umschlagen oder ähnliche mit der Beförderung eines Gegenstandes im Zusammenhang stehende Leistungen im Sinne des § 3b Absatz 2, eine Arbeit an beweglichen körperlichen Gegenständen oder eine Begutachtung dieser Gegenstände, eine Reisevorleistung im Sinne des § 25 Absatz 1 Satz 5 oder eine Veranstaltungsleistung im Zusammenhang mit Messen und Ausstellungen, ist diese Leistung abweichend von Absatz 2 als im Drittlandsgebiet ausgeführt zu behandeln"
       ],
       "ausnahmen": [
+        "vorbehaltlich der Absätze 2 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
+        "vorbehaltlich der Absätze 3 bis 8 und der §§ 3b und 3e an dem Ort ausgeführt",
         "dies gilt nicht für sonstige Leistungen, die ausschließlich für den privaten Bedarf des Personals oder eines Gesellschafters bestimmt sind",
         "Das gilt nicht für Münzen und Medaillen aus diesen Edelmetallen",
         "ausgenommen Beförderungsmittel",
@@ -58870,8 +59349,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f37ca5c786529bbbcacea68088d84ada21a464540b7b3c429e68bd535f4be88",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.180Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.130Z"
     },
     "3b": {
       "typ": "gemischt",
@@ -59421,8 +59900,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c061d54b785fd6e83d132e5251d65f242a2a2c8a0a035fc2c7bc457313acbe61",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.182Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.132Z"
     },
     "3c": {
       "typ": "gemischt",
@@ -60402,8 +60881,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9e20843f6338afc095b6cf1a5611da41888f233da670c23fb667da9bd50f84ec",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.185Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.135Z"
     },
     "3d": {
       "typ": "gemischt",
@@ -60572,8 +61051,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "440765bed02caff2bb965dfb6d376d1bb5d2b961c6096adcdb0a1f881b23096e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.186Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.136Z"
     },
     "3e": {
       "typ": "gemischt",
@@ -60942,8 +61421,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0c9fe427dab3da73dc7c9121a415e6c2e803a1b72d9f5cb8fd185d3220ea915c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.186Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.137Z"
     },
     "3f": {
       "typ": "gemischt",
@@ -60965,8 +61444,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.187Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.137Z"
     },
     "3g": {
       "typ": "gemischt",
@@ -61389,8 +61868,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74502242d8d8fbdddeaac29a1ba30e6eb71fa4ba607a42c32b109fc61fb1126f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.188Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.138Z"
     },
     "4a": {
       "typ": "gemischt",
@@ -62093,8 +62572,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "065b1d1e18a5a20d816ab688148b9c98eaed3caae9c31790b23f69c95e92f696",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.224Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.174Z"
     },
     "4b": {
       "typ": "gemischt",
@@ -62390,8 +62869,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9ea48e3c0a6872eaa49a17558496e0926accb9540a40fa7bc7581a60da70f65c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.225Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.175Z"
     },
     "4c": {
       "typ": "gemischt",
@@ -63175,8 +63654,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "41255b603fcb1be5fdd42ccc15b97bd9facf65b9a51ce4205bff48e3b1b4a6fd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.227Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.177Z"
     },
     "6a": {
       "typ": "gemischt",
@@ -63880,8 +64359,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "84cd0b1a01e4cde5dbf4379c5db3fee9b04d352a4306278ea7cc9defd4489f57",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.242Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.191Z"
     },
     "6b": {
       "typ": "gemischt",
@@ -65073,8 +65552,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4a00dfdec3983dfc3eb17bef452127993f10d3f92bc97146af4bdd2ea9829683",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.246Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.195Z"
     },
     "13a": {
       "typ": "gemischt",
@@ -65702,8 +66181,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "029e4b52752d933ec8fbc174dd01519d8aacbbc8a27756b0c58ce850b4a19266",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.292Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.230Z"
     },
     "13b": {
       "typ": "gemischt",
@@ -66862,20 +67341,20 @@
               "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
-              "art": "rf",
-              "text": "gelten vorbehaltlich des Satzes 11 auch",
+              "art": "ausn",
+              "text": "vorbehaltlich des Satzes 11 auch",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 7",
-              "von": 6345,
-              "laenge": 39,
+              "von": 6352,
+              "laenge": 32,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "tb",
@@ -68416,6 +68895,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Satzes 11 auch",
+                  "pfad": "Abs. 5 Satz 7",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -68469,14 +68963,6 @@
                 },
                 {
                   "n": "7.",
-                  "t": "gelten vorbehaltlich des Satzes 11 auch",
-                  "pfad": "Abs. 5 Satz 7",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "8.",
                   "t": "gilt der Leistungsempfänger dennoch als Steuerschuldner, sofern dadurch keine Steuerausfälle entstehen",
                   "pfad": "Abs. 5 Satz 8",
                   "konfidenz": 0.6,
@@ -68484,7 +68970,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "8.",
                   "t": "gelten auch dann",
                   "pfad": "Abs. 5 Satz 9",
                   "konfidenz": 0.6,
@@ -68492,7 +68978,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "9.",
                   "t": "gelten nicht",
                   "pfad": "Abs. 5 Satz 10",
                   "konfidenz": 0.45,
@@ -68500,7 +68986,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "10.",
                   "t": "genannten Fällen schulden juristische Personen des öffentlichen Rechts die Steuer nicht",
                   "pfad": "Abs. 5 Satz 11",
                   "konfidenz": 0.6,
@@ -68965,7 +69451,6 @@
         "genannten Lieferungen von Elektrizität schuldet der Leistungsempfänger in den Fällen die Steuer, in denen der liefernde Unternehmer und der Leistungsempfänger Wiederverkäufer von Elektrizität im Sinne des § 3g sind",
         "genannten Fällen schuldet der Leistungsempfänger die Steuer unabhängig davon, ob er sie für eine von ihm erbrachte Leistung im Sinne des Absatzes 2 Nummer 8 Satz 1 verwendet",
         "genannten Leistungen schuldet der Leistungsempfänger die Steuer",
-        "gelten vorbehaltlich des Satzes 11 auch",
         "gilt der Leistungsempfänger dennoch als Steuerschuldner, sofern dadurch keine Steuerausfälle entstehen",
         "gelten auch dann",
         "gelten nicht",
@@ -68987,6 +69472,7 @@
       ],
       "ausnahmen": [
         "mit Ausnahme von Planungs- und Überwachungsleistungen",
+        "vorbehaltlich des Satzes 11 auch",
         "dies gilt nicht, wenn der Unternehmer ausschließlich einen Wohnsitz oder einen gewöhnlichen Aufenthaltsort in den Gebieten der übrigen Mitgliedstaaten der Europäischen Union, die nach dem Gemeinschaftsrecht als Inland dieser Mitgliedstaaten gelten, aber seinen Sitz, den Ort der Geschäftsleitung oder eine Betriebsstätte im Drittlandsgebiet hat"
       ],
       "definitionen": [],
@@ -69001,8 +69487,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "baf3cc8bb4c028b8e3b74eda731fbe1cb680a2a102509f43455b52fdd588a227",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.311Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.241Z"
     },
     "13c": {
       "typ": "gemischt",
@@ -69755,8 +70241,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "88a464818d36ddf3bdc780e34918058ffa729f970acb264774258d3353302d8b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.314Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.243Z"
     },
     "13d": {
       "typ": "gemischt",
@@ -69778,8 +70264,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.315Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.243Z"
     },
     "14a": {
       "typ": "gemischt",
@@ -70853,8 +71339,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9fd9e60d76e11c188837e6d56f536580c12d767a3193742536aaee5d6a6263fd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.335Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.255Z"
     },
     "14b": {
       "typ": "gemischt",
@@ -71963,8 +72449,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9db4ffff5ffc3923ce709fdc52d7d042b2b92ca1423f1a3f0064797633b1a644",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.341Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.258Z"
     },
     "14c": {
       "typ": "gemischt",
@@ -72637,8 +73123,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30a886099e943abf51a0de8b93390ea4287b5a39aa1103a91e8bac47c89ca5d3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.344Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.260Z"
     },
     "15a": {
       "typ": "gemischt",
@@ -74394,8 +74880,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3031752f46c6fb79f0f48a3d60b0dd7cd3e65760d0350f4782c636bb9ef4443b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.367Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.273Z"
     },
     "18a": {
       "typ": "gemischt",
@@ -77618,8 +78104,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "efb287c7c7be1a45767c9fad4c61da5d4e4de50f9c30d35b5a377305b4278d76",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.424Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.318Z"
     },
     "18b": {
       "typ": "gemischt",
@@ -78087,8 +78573,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9b5d2d734fc7c00c016e362df39d89677a1934bca7624454a35ba7187f078d6c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.425Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.320Z"
     },
     "18c": {
       "typ": "gemischt",
@@ -78413,8 +78899,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "41713c9bc3b78e6e3dbe2f75cd0fabea2840e481d8b8033debe557238cc8a5f6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.426Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.321Z"
     },
     "18d": {
       "typ": "gemischt",
@@ -78611,8 +79097,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf2cd2e1fd60095bda14faf9e70b331c4b29eebd412ae119ee556b9ffe3877a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.427Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.321Z"
     },
     "18e": {
       "typ": "aussage",
@@ -78746,8 +79232,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "70011df76304237aa72527b3af523eb128166613764c7683285449fc31a0cb0d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.427Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.322Z"
     },
     "18f": {
       "typ": "konditional",
@@ -78915,8 +79401,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "038232132ffd5ee0ca40e404b54d2f0dbd23cac538b87085c0937d23a2a0f078",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.428Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.322Z"
     },
     "18g": {
       "typ": "gemischt",
@@ -79207,8 +79693,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8e9fd006d3def33d76c21e1290bd8bcecaf3ebc9b7e522244181d9e21f23f31",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.429Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.323Z"
     },
     "18h": {
       "typ": "gemischt",
@@ -80204,8 +80690,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6dbcc4d0f3b3696dc313028b66730d8364fcf4a2cc809c5d9f97603c8c0c52c4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.453Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.347Z"
     },
     "18i": {
       "typ": "gemischt",
@@ -81313,8 +81799,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ee207478109cf223932c91851b1bd94fa9c75530bff8188e3d41693549935c5f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.459Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.353Z"
     },
     "18j": {
       "typ": "gemischt",
@@ -83014,8 +83500,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "708d604a17960c41e659da84ccaf0e8c823b94a3573673f0d5b32fe27a3c6d82",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.466Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.360Z"
     },
     "18k": {
       "typ": "gemischt",
@@ -84748,8 +85234,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f82d3ab60562afa42cbf701b87aa796dadacc2156691a19e8c8b0183a925bf58",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.473Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.366Z"
     },
     "19a": {
       "typ": "gemischt",
@@ -85632,8 +86118,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7b05402373bb6405e8d36856311d46010bdba99576e1308ead621ef805179795",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.478Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.371Z"
     },
     "21a": {
       "typ": "gemischt",
@@ -87264,8 +87750,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "10f5c30671052385605c508d16a98bdd7918b15d390dc59d163b1a1d308c5f65",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.487Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.380Z"
     },
     "21b": {
       "typ": "gemischt",
@@ -87950,8 +88436,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3866a118e78e605912112f59758ff18731fd9eb903b1a80287326fa0e8ac8efa",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.489Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.383Z"
     },
     "22a": {
       "typ": "gemischt",
@@ -88201,8 +88687,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "40ec37b2ced8b8edb0ad677c8529241c73fd6bfcde4c0a33b37376544ba5db53",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.504Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.398Z"
     },
     "22b": {
       "typ": "gemischt",
@@ -88568,8 +89054,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1e031057664ceaf50bff72e46ae450e7457fc29f91d52d18bfb8ebee65c9952d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.505Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.399Z"
     },
     "22c": {
       "typ": "aussage",
@@ -88780,8 +89266,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "77dca298245552b8b61bfd519956dc4abe62b5aee748b31b5716caeb95adcb5c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.506Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.399Z"
     },
     "22d": {
       "typ": "aussage",
@@ -88915,8 +89401,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff6eaac7142097fdad67c70f9702d4327f9063c4c82935db7137819badfbf1ef",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.506Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.400Z"
     },
     "22e": {
       "typ": "konditional",
@@ -89164,8 +89650,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "27ca446120c8f54f735f532915c3ab41e81c2c692c196dc826f0baddd6b0ab22",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.507Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.400Z"
     },
     "22f": {
       "typ": "gemischt",
@@ -90183,8 +90669,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4d261601d766eb416ae474d7f4db3d091640343ebfe39cbc8014f9443c268065",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.510Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.403Z"
     },
     "22g": {
       "typ": "gemischt",
@@ -92316,8 +92802,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d80d06fc2c5d0762c9348e6283e18f41122cd26c3545976e90e2f6e01242689a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.519Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.411Z"
     },
     "23a": {
       "typ": "gemischt",
@@ -92883,8 +93369,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "307763be30dd5b3c17fccb1cb4ef4ab3aa668798cf7c50f5d87c13f03a963725",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.520Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.412Z"
     },
     "25a": {
       "typ": "gemischt",
@@ -94692,8 +95178,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "29d4eec32414b148a559c7a52ea98177e3ee9701ea7c07ddf942e3018ae898ae",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.530Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.423Z"
     },
     "25b": {
       "typ": "gemischt",
@@ -95967,8 +96453,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4edf4ede0b0e4e23a70cffbb00ef89028bca9a2129e3d9130cf2f06739cd4317",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.535Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.426Z"
     },
     "25c": {
       "typ": "gemischt",
@@ -96817,8 +97303,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5ee06ecf94d082319d61bf7b9d520f3aac5c29dc28d8a20f778f6cd2432159a7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.539Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.430Z"
     },
     "25d": {
       "typ": "gemischt",
@@ -96840,8 +97326,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.568Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.460Z"
     },
     "25e": {
       "typ": "gemischt",
@@ -98320,8 +98806,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "70eb7cff344b197dd0462cf1b83635a504a8669452990cd1150298c32667f8b6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.572Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.464Z"
     },
     "25f": {
       "typ": "gemischt",
@@ -98626,8 +99112,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fe3142939419e34f463609aa7385d8b37c9b07ba31d73ffdbd9c891c9c5875cf",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.573Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.465Z"
     },
     "26a": {
       "typ": "gemischt",
@@ -99304,8 +99790,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "310a7a428e5393d25a0050e6391e9688e6ba3b936e8e2cf5a9695402896b4f37",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.580Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.472Z"
     },
     "26b": {
       "typ": "gemischt",
@@ -99327,8 +99813,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.580Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.472Z"
     },
     "26c": {
       "typ": "konditional",
@@ -99437,8 +99923,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "67fe64581512fd867fb9549fd800d6222573c14ebeab42a26dcf6e79e8d34355",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.581Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.472Z"
     },
     "27a": {
       "typ": "gemischt",
@@ -100223,8 +100709,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71568695d72c4125bcb87b25ca3bd8e9e2e274e3276fe37b1514bb663c659a9f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.595Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.487Z"
     },
     "27b": {
       "typ": "gemischt",
@@ -100799,8 +101285,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e7905ed85e11f38a8dda091ac8c9f92dd827d3da7a10dc437d6d401cc4fea3ba",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.598Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.491Z"
     },
     "anlage-1": {
       "typ": "gemischt",
@@ -100822,8 +101308,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.602Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.494Z"
     },
     "anlage-2": {
       "typ": "gemischt",
@@ -106170,8 +106656,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "96ceb172658c0f1b31762557be5dbdba5360eb9f6112a7c53cb1e3a5847dfa7e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.618Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.509Z"
     },
     "anlage-3": {
       "typ": "aussage",
@@ -106354,8 +106840,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "59e6ce733d7111e3a76cb0ad297068536d1275451c9f91bdd1fc6da0678a2dec",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.620Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.511Z"
     },
     "anlage-4": {
       "typ": "aussage",
@@ -106396,8 +106882,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "b64ac1898d89db720afb2aecc09495707d438b1ef689a36b1e190784cfebdd46",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.622Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.513Z"
     },
     "anlage-5": {
       "typ": "gemischt",
@@ -106745,8 +107231,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "92178a781ae7184f2cb6cede06431720aa7780ab8b4a07c7318cff54469d4caf",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.623Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.514Z"
     }
   }
 }

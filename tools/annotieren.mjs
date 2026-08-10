@@ -38,7 +38,7 @@ const ZIEL = path.join(WURZEL, "annotations");
 const ZWISCHEN = path.join(WURZEL, ".fortschritt");
 const BERICHTE = path.join(WURZEL, "reports");
 const BELEGE = path.join(WURZEL, "belege");
-const FORMAT = 4;
+const FORMAT = 5;
 
 const args = process.argv.slice(2);
 const flagWert = (f, v = null) => { const i = args.indexOf(f); return i >= 0 ? (args[i + 1] ?? v) : v; };

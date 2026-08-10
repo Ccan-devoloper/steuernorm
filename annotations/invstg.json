@@ -1,14 +1,14 @@
 {
   "abk": "InvStG",
   "titel": "Investmentsteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:31.705Z",
+  "aktualisiert": "2026-08-10T09:19:26.536Z",
   "quelle": "https://www.gesetze-im-internet.de/invstg_2018/",
   "stand": [
     {
@@ -998,8 +998,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f02be1c6474d157175923cd2718d53182ecfc815c7e633d147477f31b775873",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.556Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.387Z"
     },
     "2": {
       "typ": "gemischt",
@@ -3985,8 +3985,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b499cbf860ff878268ed8b3d3c0257ee955cfe1bad03876b8ee0814319a5903",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.563Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.396Z"
     },
     "3": {
       "typ": "gemischt",
@@ -4516,8 +4516,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "03397224999090dfda847e28fd040730b5983e00ae1dd4a4adc980f8d48206fd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.565Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.397Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4877,8 +4877,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79322484ca452b156ff8deb8ef07092606e2b4d47119a7eb377160a4308aaae8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.566Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.399Z"
     },
     "5": {
       "typ": "gemischt",
@@ -5216,8 +5216,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "10606fba09617c1c0d677a5e1554ffc9791823006e1e4267b9507f9cc4ae4fd8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.567Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.400Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5336,7 +5336,7 @@
               "grund": "Definiendum vor dem Kopulaverb"
             },
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "vorbehaltlich des Satzes 2 steuerbefreit",
               "anzeige": null,
               "teile": null,
@@ -5349,7 +5349,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Definiens — Merkmale des Begriffs"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -5920,20 +5920,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "liegt vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 2",
-              "von": 3125,
-              "laenge": 106,
+              "von": 3131,
+              "laenge": 100,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -6555,14 +6555,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich des Satzes 2 steuerbefreit",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "steuerbefreit sind inländische Beteiligungseinnahmen, inländische Immobilienerträge und sonstige inländische Einkünfte",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -6570,7 +6562,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "Die nach Satz 2 steuerpflichtigen Einkünfte",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -6581,6 +6573,21 @@
             },
             {
               "n": "III.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Satzes 2 steuerbefreit",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "IV.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -6791,6 +6798,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
+                  "pfad": "Abs. 5 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -6806,14 +6828,6 @@
                   "n": "2.",
                   "t": "unterliegen diese der Besteuerung als sonstige inländische Einkünfte",
                   "pfad": "Abs. 5 Satz 1 (Teil 2)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "liegt vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
-                  "pfad": "Abs. 5 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7134,7 +7148,6 @@
       "tb": [
         "als Zweckvermögen nach § 1 Absatz 1 Nummer 5 des Körperschaftsteuergesetzes und sind unbeschränkt körperschaftsteuerpflichtig",
         "als Vermögensmassen nach § 2 Nummer 1 des Körperschaftsteuergesetzes und sind beschränkt körperschaftsteuerpflichtig",
-        "vorbehaltlich des Satzes 2 steuerbefreit",
         "steuerbefreit sind inländische Beteiligungseinnahmen, inländische Immobilienerträge und sonstige inländische Einkünfte",
         "Die nach Satz 2 steuerpflichtigen Einkünfte",
         "Einnahmen nach § 43 Absatz 1 Satz 1 Nummer 1 und 1a des Einkommensteuergesetzes",
@@ -7171,7 +7184,6 @@
         "sind steuerfrei",
         "Sonstige inländische Einkünfte",
         "unterliegen diese der Besteuerung als sonstige inländische Einkünfte",
-        "liegt vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
         "vergibt, die keine Verbraucher nach § 13 des Bürgerlichen Gesetzbuchs sind",
         "Beteiligungen an gewerblich",
         "infizierten oder gewerblich geprägten Personengesellschaften im Sinne des § 15 Absatz 3 des Einkommensteuergesetzes unmittelbar hält und der Investmentfonds oder die zuständige Finanzbehörde nachweist",
@@ -7185,6 +7197,8 @@
         "sind in den folgenden Veranlagungszeiträumen abzuziehen. § 10d Absatz 4 des Einkommensteuergesetzes ist sinngemäß"
       ],
       "ausnahmen": [
+        "vorbehaltlich des Satzes 2 steuerbefreit",
+        "vorbehaltlich des Absatzes 5a Satz 1 Nummer 3 stets eine aktive unternehmerische Bewirtschaftung vor",
         "es sei denn, die Beteiligungen werden mit der Absicht erworben, nach einer kurzfristigen Haltedauer Veräußerungsgewinne zu erzielen",
         "mit Ausnahme des § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes wären und nicht von den Absätzen 3 oder 4 erfasst werden",
         "Satz 3 ist nicht anzuwenden auf sonstige inländische Einkünfte nach Absatz 5 Satz 1 Nummer 2 und 3"
@@ -7203,8 +7217,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "539944b6cfacdf5304c217fbb6ac354345c0ecf8053cc48861f38030b10f8564",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.573Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.406Z"
     },
     "7": {
       "typ": "gemischt",
@@ -8140,8 +8154,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c97fba45a9da4274aee5e09d0ffb416d8989ca7647a760763bcc8514ff82734c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.575Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.408Z"
     },
     "8": {
       "typ": "gemischt",
@@ -9031,8 +9045,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9b1f311eac8900ca37eb644301bd18fef6bbc0b2a414722e70c1bf0f08a7b415",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.577Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.411Z"
     },
     "9": {
       "typ": "gemischt",
@@ -9427,8 +9441,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a913468c0c97e05192f6a4de85b0f4cad1d69c360d281b87a050fc58036125cc",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.579Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.412Z"
     },
     "10": {
       "typ": "gemischt",
@@ -9462,20 +9476,36 @@
               "grund": "Definiendum vor dem Kopulaverb"
             },
             {
-              "art": "tb",
-              "text": "vorbehaltlich der Sätze 2 und 3 steuerbefreit, wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
+              "art": "ausn",
+              "text": "vorbehaltlich der Sätze 2 und 3 steuerbefreit",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 40,
-              "laenge": 149,
+              "laenge": 45,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Definiens — Merkmale des Begriffs"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "tb",
+              "text": "wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 87,
+              "laenge": 102,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Definiens — Merkmale des Begriffs (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -9945,7 +9975,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich der Sätze 2 und 3 steuerbefreit, wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
+                  "t": "wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -9971,6 +10001,21 @@
             },
             {
               "n": "III.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der Sätze 2 und 3 steuerbefreit",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "IV.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -10225,7 +10270,7 @@
         }
       ],
       "tb": [
-        "vorbehaltlich der Sätze 2 und 3 steuerbefreit, wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
+        "wenn sich nach den Anlagebedingungen nur steuerbegünstigte Anleger nach § 8 Absatz 1 beteiligen dürfen",
         "wenn der Investmentfonds die Voraussetzungen für eine Anrechenbarkeit der Kapitalertragsteuer nach § 36a des Einkommensteuergesetzes erfüllt",
         "Sonstige inländische Einkünfte nach § 6 Absatz 5 Satz 1 Nummer 2 und 3",
         "Inländische Immobilienerträge eines Investmentfonds oder einer Anteilklasse",
@@ -10248,6 +10293,7 @@
         "hat der Anleger die auf seine Investmentanteile entfallenden inländischen Beteiligungseinnahmen, inländischen Immobilienerträge und sonstigen inländischen Einkünfte sowie die Investmenterträge nach § 16 Absatz 1 zu versteuern. § 36a Absatz 4 des Einkommensteuergesetzes ist entsprechend anzuwenden"
       ],
       "ausnahmen": [
+        "vorbehaltlich der Sätze 2 und 3 steuerbefreit",
         "ausgenommen sind sonstige inländische Einkünfte nach § 6 Absatz 5 Satz 1 Nummer 2 und 3"
       ],
       "definitionen": [
@@ -10255,7 +10301,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -10264,8 +10310,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c3522895e04a5410564cc970007a87281b38bb556c78203e0d04a5b40ff4d324",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.581Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.414Z"
     },
     "11": {
       "typ": "gemischt",
@@ -10884,8 +10930,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0dbc1d1127782663bc7f18e19e43678ed43813d513cbea6dd28a1736ec37e9c9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.582Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.416Z"
     },
     "12": {
       "typ": "gemischt",
@@ -11133,8 +11179,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ac27f861b9ac6582694b9b433194ebf493d27dc7364223ff16dd533b77672401",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.583Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.417Z"
     },
     "13": {
       "typ": "gemischt",
@@ -11544,8 +11590,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "795ab9ca2af9780e89a5476143adf749e9cd656ece62e7889c1d13d50024bdf4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.584Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.418Z"
     },
     "14": {
       "typ": "gemischt",
@@ -12625,8 +12671,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f20378512833f546edd2d9193fe89e18adc11517caf89150297e54e130063909",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.591Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.424Z"
     },
     "15": {
       "typ": "gemischt",
@@ -13348,8 +13394,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ef0b34a520fc859d50704cd5d12894eb959e3009c29d1a4be6cfc622fd5b66c9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.593Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.426Z"
     },
     "16": {
       "typ": "gemischt",
@@ -13678,19 +13724,35 @@
             },
             {
               "art": "rf",
-              "text": "wird die Freistellung ungeachtet des Abkommens nur gewährt",
+              "text": "wird die Freistellung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
               "von": 1167,
-              "laenge": 58,
+              "laenge": 21,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Nachfolgender Hauptsatz (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet des Abkommens nur gewährt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1",
+              "von": 1189,
+              "laenge": 36,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -13982,12 +14044,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet des Abkommens nur gewährt",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird die Freistellung ungeachtet des Abkommens nur gewährt",
+                  "t": "wird die Freistellung",
                   "pfad": "Abs. 4 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -14037,19 +14114,21 @@
       ],
       "rf": [
         "sind § 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes nicht",
-        "wird die Freistellung ungeachtet des Abkommens nur gewährt",
+        "wird die Freistellung",
         "steuerbefreiten Einkünften des Investmentfonds beruht",
         "ist auch dann anzuwenden",
         "ist auszugehen"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet des Abkommens nur gewährt"
+      ],
       "definitionen": [
         "Investmenterträge",
         "Vorabpauschalen"
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.575,
+      "konfidenz": 0.576,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -14058,8 +14137,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b004d946519b0e8ae4564d2386088c1ae48a899133696febec6584235d510b0d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.595Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.427Z"
     },
     "17": {
       "typ": "gemischt",
@@ -14553,8 +14632,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b205379aea619a7db452ce419d055903133d9a121287a3fc4bb8db6ab4bf23d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.597Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.429Z"
     },
     "18": {
       "typ": "gemischt",
@@ -15054,8 +15133,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "455c94747ae118970b4315ed09778aee0fcdb15af1cadf1096f908c27a12cf82",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.598Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.430Z"
     },
     "19": {
       "typ": "gemischt",
@@ -15204,7 +15283,7 @@
               "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "ungeachtet einer möglichen Teilfreistellung nach § 20 in voller Höhe zu berücksichtigen",
               "anzeige": null,
               "teile": null,
@@ -15217,7 +15296,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen"
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -15716,8 +15795,8 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
@@ -15726,9 +15805,16 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
-                },
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
                 {
-                  "n": "2.",
+                  "n": "1.",
                   "t": "ungeachtet einer möglichen Teilfreistellung nach § 20 in voller Höhe zu berücksichtigen",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -15738,7 +15824,7 @@
               ]
             },
             {
-              "n": "II.",
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -15993,7 +16079,6 @@
       ],
       "tb": [
         "Für die Ermittlung des Gewinns aus der Veräußerung von Investmentanteilen, die nicht zu einem Betriebsvermögen gehören",
-        "ungeachtet einer möglichen Teilfreistellung nach § 20 in voller Höhe zu berücksichtigen",
         "Fällt ein Investmentfonds nicht mehr in den Anwendungsbereich dieses Gesetzes",
         "der gemeine Wert der Investmentanteile zu dem Zeitpunkt, zu dem der Investmentfonds nicht mehr in den Anwendungsbereich fällt",
         "stehen der Veräußerung von Investmentanteilen zum gemeinen Wert",
@@ -16022,7 +16107,9 @@
         "treten die Ausschüttungen nach § 16 Absatz 1 Nummer 1 an die Stelle der Gewinnausschüttungen und die steuerfreien Kapitalrückzahlungen nach § 17 Absatz 1 an die Stelle der Einlagenrückgewähr",
         "ist keine Kapitalertragsteuer"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet einer möglichen Teilfreistellung nach § 20 in voller Höhe zu berücksichtigen"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -16035,8 +16122,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "636576029e9c758f0bb47b6da6fd340cb8533c4f4bfbbbba6b02212368f69323",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.601Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.432Z"
     },
     "20": {
       "typ": "gemischt",
@@ -16684,30 +16771,35 @@
             },
             {
               "art": "rf",
-              "text": "ist eine Veranlagung ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes",
-              "anzeige": "ist eine Veranlagung ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes … vorzunehmen",
-              "teile": [
-                {
-                  "text": "ist eine Veranlagung ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes",
-                  "von": 2950,
-                  "laenge": 77
-                },
-                {
-                  "text": "vorzunehmen",
-                  "von": 3028,
-                  "laenge": 11
-                }
-              ],
+              "text": "ist eine Veranlagung",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 4 Satz 4",
               "von": 2950,
-              "laenge": 77,
+              "laenge": 20,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes vorzunehmen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 4",
+              "von": 2971,
+              "laenge": 68,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -17166,6 +17258,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes vorzunehmen",
+                  "pfad": "Abs. 4 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -17195,11 +17302,11 @@
                 },
                 {
                   "n": "4.",
-                  "t": "ist eine Veranlagung ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes … vorzunehmen",
+                  "t": "ist eine Veranlagung",
                   "pfad": "Abs. 4 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "5.",
@@ -17325,16 +17432,18 @@
         "Weist der Anleger nach, dass der Investmentfonds die Aktienfonds- oder Mischfonds-Kapitalbeteiligungsquote oder Immobilienfonds- oder Auslands-Immobilienfondsquote während des Kalenderjahres tatsächlich durchgehend überschritten hat, so ist die Teilfreistellung auf Antrag des Anlegers in der Veranlagung anzuwenden",
         "erbracht hat, dann ist er verpflichtet, für den gesamten Besitzzeitraum die für die Prüfung der Voraussetzungen einer Teilfreistellung erforderlichen Informationen sowie die Rücknahmepreise zum jeweiligen Kalenderjahresende zu beschaffen und dem Finanzamt mit der Steuererklärung vorzulegen",
         "ist eine Steuerbescheinigung nach § 45a Absatz 2 des Einkommensteuergesetzes oder eine Verlustbescheinigung nach § 43a Absatz 3 Satz 4 des Einkommensteuergesetzes beizufügen",
-        "ist eine Veranlagung ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes",
+        "ist eine Veranlagung",
         "kann das Finanzamt für den Verlust",
         "kann bei Verlusten aus der Veräußerung von Investmentanteilen oder bei Wertminderungen im Sinne von § 6 Absatz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes von Investmentanteilen selbst im Rahmen der Veranlagung den Nachweis führen, dass der Investmentfonds die Aktienfonds- oder Mischfonds-Kapitalbeteiligungsquote oder Immobilienfonds- oder Auslands-Immobilienfondsquote während des Kalenderjahres tatsächlich durchgehend überschritten hat und die Höhe der Rücknahmepreise ermitteln",
         "sind die Freistellungen nach den Absätzen 1 bis 3 nur zur Hälfte"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet von § 46 Absatz 2 des Einkommensteuergesetzes vorzunehmen"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.566,
+      "konfidenz": 0.567,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -17343,8 +17452,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "62c5960f73814f92b1e541d7e6cba7967bee06b70acc4ee6c59047dfacedadb6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.605Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.436Z"
     },
     "21": {
       "typ": "gemischt",
@@ -17521,8 +17630,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b21f65704ba589501410bed3ba9fcacdf8708054461340a36b8717e4ed439239",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.606Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.436Z"
     },
     "22": {
       "typ": "gemischt",
@@ -18276,8 +18385,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b77ecbaf580691b5e2405cd87af9f0458704ee08f51afc5839c410d7973f9c01",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.609Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.439Z"
     },
     "23": {
       "typ": "gemischt",
@@ -18876,8 +18985,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "00228f08d384bde850a5dc0922239eddf26369d1914c532b47e77fb795b46f57",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.610Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.440Z"
     },
     "24": {
       "typ": "konditional",
@@ -18986,8 +19095,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "530089afd5fdd262178da40f52ffe3d79d507dfaa978c9e2cfacc0e354aff074",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.610Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.440Z"
     },
     "25": {
       "typ": "aussage",
@@ -19095,8 +19204,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4f99fb7e3d4d62e26704f8f1aed121c60cfceb4213b1b01b56b3447a22c67551",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.618Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.447Z"
     },
     "26": {
       "typ": "gemischt",
@@ -20855,8 +20964,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "49dc02ffa2ad5bd001eb7cbdb5ef130eb2816cf7adfbf9966c772a7049550711",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.624Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.453Z"
     },
     "27": {
       "typ": "aussage",
@@ -21033,8 +21142,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "00370369b51412d60e6fb686da7c4289c3be48fbe071ffaf78cf0d436299f0f4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.624Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.454Z"
     },
     "28": {
       "typ": "aussage",
@@ -21339,8 +21448,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "817829d7de84946f4b8025b9bb82f7e057a8643cd833a680d83646fbf5909b70",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.625Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.455Z"
     },
     "29": {
       "typ": "gemischt",
@@ -21808,8 +21917,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "43a63c4991a86901e9ecf156dee98cfc3c2042c3dca96ac88466fcd3c4633f91",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.626Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.456Z"
     },
     "30": {
       "typ": "gemischt",
@@ -21909,20 +22018,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "ist vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 538,
-              "laenge": 98,
+              "von": 542,
+              "laenge": 94,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -22449,19 +22558,26 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "handelt",
                   "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.45,
@@ -22469,7 +22585,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "erfüllt",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.45,
@@ -22723,7 +22839,6 @@
       "rf": [
         "entfällt",
         "gelten in diesem Fall als Gläubiger der inländischen Beteiligungseinnahmen und als Schuldner der Kapitalertragsteuer",
-        "ist vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
         "handelt",
         "erfüllt",
         "sind auf die dem Anleger zugerechneten inländischen Beteiligungseinnahmen nicht anzuwenden",
@@ -22734,6 +22849,7 @@
         "gelten entsprechend für sonstige inländische Einkünfte eines Spezial-Investmentfonds, die bei Vereinnahmung durch den Spezial-Investmentfonds einem Steuerabzug unterliegen"
       ],
       "ausnahmen": [
+        "vorbehaltlich des Absatzes 3 auf die dem Anleger zugerechneten Beteiligungseinnahmen anwendbar",
         "Dies gilt nicht, soweit der Dach-Spezial-Investmentfonds Spezial-Investmentanteile an einem anderen Dach-Spezial-Investmentfonds hält",
         "Dies gilt nicht für sonstige inländische Einkünfte nach § 6 Absatz 5 Satz 1 Nummer 2 und 3"
       ],
@@ -22749,8 +22865,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a224fd08b89c4279c40c5e2b92d6155eea31e91e350fa31640e90bc0b0baa1fd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.628Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.458Z"
     },
     "31": {
       "typ": "gemischt",
@@ -23972,8 +24088,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbb53fb71aae2e2fcb24fb0e2fbac95db90932812c26b737020dc793c597618f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.632Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.462Z"
     },
     "32": {
       "typ": "gemischt",
@@ -24338,8 +24454,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "61157ca44a041f44d00a7441b66b01d54cd841bcc4351f965bb4a0f5c37ea401",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.633Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.463Z"
     },
     "33": {
       "typ": "gemischt",
@@ -25399,8 +25515,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "539ea6d6bb15648c3be66573e1e52a41b196a2431e32b1201154c4119a32d157",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.637Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.467Z"
     },
     "34": {
       "typ": "gemischt",
@@ -25574,31 +25690,20 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "sind vorbehaltlich des § 42 nicht",
-              "anzeige": "sind vorbehaltlich des § 42 nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind vorbehaltlich des § 42 nicht",
-                  "von": 468,
-                  "laenge": 33
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 502,
-                  "laenge": 10
-                }
-              ],
+              "art": "ausn",
+              "text": "vorbehaltlich des § 42 nicht anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 468,
-              "laenge": 33,
+              "von": 473,
+              "laenge": 39,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -25651,7 +25756,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung",
               "anzeige": null,
               "teile": null,
@@ -25664,7 +25769,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Vorbehalt mit „ungeachtet\""
             },
             {
               "art": "rf",
@@ -25782,6 +25887,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des § 42 nicht anzuwenden",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -25792,14 +25912,6 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "sind vorbehaltlich des § 42 nicht … anzuwenden",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": true
                 }
               ]
             }
@@ -25813,8 +25925,8 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
@@ -25823,9 +25935,16 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
-                },
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
                 {
-                  "n": "2.",
+                  "n": "1.",
                   "t": "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -25835,7 +25954,7 @@
               ]
             },
             {
-              "n": "II.",
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -25866,17 +25985,18 @@
         "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
         "Auf Spezial-Investmenterträge",
         "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
-        "ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1",
-        "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung"
+        "ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1"
       ],
       "rf": [
         "ausgeschüttete Erträge nach § 35",
         "sind § 2 Absatz 5b, § 20 Absatz 6 und 9, die §§ 32d und 43 Absatz 5 Satz 1 des Einkommensteuergesetzes nicht anzuwenden",
-        "sind vorbehaltlich des § 42 nicht",
         "Die Freistellung von",
         "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des § 42 nicht anzuwenden",
+        "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -25889,8 +26009,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "867eb79e5a1aa4ffffe3fe5317c310838b0d1eac1629960fcd87b185d4f7b4ff",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.638Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.468Z"
     },
     "35": {
       "typ": "gemischt",
@@ -26585,8 +26705,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "21813ab698f24d180f4aff0a41110e9e4b00a4015adb01aa44ea344fcf2b2748",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.640Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.470Z"
     },
     "36": {
       "typ": "gemischt",
@@ -28001,8 +28121,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5983121665fcb4a3f862e04876c5a9635de0935b701fe731b694b97a09aa759e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.643Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.473Z"
     },
     "37": {
       "typ": "gemischt",
@@ -28508,8 +28628,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff4958443305424afd0e2d2b88db5c7d04f272d221347b095a09563958ba25ae",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.645Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.475Z"
     },
     "38": {
       "typ": "gemischt",
@@ -29695,8 +29815,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebb55165b73490e290c477baf0a3c978dddc432c595edbac41dc74886b118472",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.647Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.477Z"
     },
     "39": {
       "typ": "gemischt",
@@ -30248,8 +30368,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8729beacd0d310713e4c21d330f33f779e05216f57cd390a4ed5785647c6e3a8",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.648Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.478Z"
     },
     "40": {
       "typ": "gemischt",
@@ -31202,8 +31322,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "351eb84ea52a69918a12f2fcb743320d741a020af198c6dd16d0306c861d62a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.650Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.480Z"
     },
     "41": {
       "typ": "gemischt",
@@ -31549,8 +31669,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6fe177b692a19809c8fef86f86d2369cbf2ef77e63233ba3a4e48bdfb44d7690",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.651Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.481Z"
     },
     "42": {
       "typ": "gemischt",
@@ -32362,8 +32482,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "520b9be7ac2c630998e394255ce5f5676b7c76aebab4c77060fb3c5fce75bcff",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.653Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.484Z"
     },
     "43": {
       "typ": "gemischt",
@@ -32776,8 +32896,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "53a55f857fb78325ea400a30993a8877f984b4928d7a483445c2cea685665488",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.654Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.485Z"
     },
     "44": {
       "typ": "aussage",
@@ -32863,8 +32983,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bcc237adf75797a3b04feef959c5ef962fc1858cfbf88cf9ef0272141323ddfd",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.655Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.485Z"
     },
     "45": {
       "typ": "gemischt",
@@ -33375,8 +33495,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3e75bffcf8033cafc9d59ec8c04faf70d9fb4f2522a800e0f17cff44b79cd578",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.656Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.487Z"
     },
     "46": {
       "typ": "gemischt",
@@ -33837,8 +33957,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24bb87a46453655837078849e12879d3030e493a6fb716b0ca14aecd29981313",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.657Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.488Z"
     },
     "47": {
       "typ": "gemischt",
@@ -34676,8 +34796,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fc4a84ea6ad14e8a9aa3511b239797eeb7dd4cd763111c84d693a5cd1a57c2ed",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.660Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.490Z"
     },
     "48": {
       "typ": "gemischt",
@@ -35877,8 +35997,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1a4ceaf51a31d4e4922e08f21bf91367102c53f9db5072559bae6b44b581d8e1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.663Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.494Z"
     },
     "49": {
       "typ": "gemischt",
@@ -36138,20 +36258,36 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "rf",
-              "text": "ist, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
+              "art": "ausn",
+              "text": "vorbehaltlich einer Berichtigung nach Satz 4 oder 5",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 984,
-              "laenge": 381,
+              "von": 989,
+              "laenge": 51,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 1042,
+              "laenge": 323,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
             }
           ]
         },
@@ -36205,30 +36341,46 @@
             },
             {
               "art": "rf",
-              "text": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, auf die Auswirkung auf den Bilanzansatz",
-              "anzeige": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, auf die Auswirkung auf den Bilanzansatz … begrenzt",
+              "text": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge",
+              "anzeige": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge … auf die Auswirkung auf den Bilanzansatz",
               "teile": [
                 {
-                  "text": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, auf die Auswirkung auf den Bilanzansatz",
+                  "text": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge",
                   "von": 1629,
-                  "laenge": 153
+                  "laenge": 59
                 },
                 {
-                  "text": "begrenzt",
-                  "von": 1783,
-                  "laenge": 8
+                  "text": "auf die Auswirkung auf den Bilanzansatz",
+                  "von": 1743,
+                  "laenge": 39
                 }
               ],
               "pfad": "Abs. 2 Satz 3",
               "von": 1629,
-              "laenge": 153,
+              "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich einer Berichtigung nach Satz 4 oder 5",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 3",
+              "von": 1690,
+              "laenge": 51,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -37239,12 +37391,35 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich einer Berichtigung nach Satz 4 oder 5",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "vorbehaltlich einer Berichtigung nach Satz 4 oder 5",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
+                  "t": "der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.48,
                   "beleg": null,
@@ -37260,7 +37435,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, auf die Auswirkung auf den Bilanzansatz … begrenzt",
+                  "t": "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge … auf die Auswirkung auf den Bilanzansatz",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -37624,9 +37799,9 @@
         "freizustellen und § 44 anzuwenden",
         "ist bei bilanziellem Ansatz der Spezial-Investmentanteile mit einem niedrigeren Teilwert nach § 6 Absatz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes und bei einer Teilwertzuschreibung nach § 6 Absatz 1 Nummer 2 Satz 3 des Einkommensteuergesetzes auf die Anschaffungskosten der Spezial-Investmentanteile entsprechend",
         "gilt § 30 Absatz 3 entsprechend",
-        "ist, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
+        "der Unterschiedsbetrag zwischen dem Fonds-Aktiengewinn zu dem Zeitpunkt, zu dem der Spezial-Investmentanteil veräußert wird oder zu dem ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert wird oder zu dem er zu bewerten ist, und dem Fonds-Aktiengewinn bei der Anschaffung des Spezial-Investmentanteils",
         "gilt entsprechend für die Ermittlung des Anleger-Abkommensgewinns und des Anleger-Teilfreistellungsgewinns",
-        "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge, vorbehaltlich einer Berichtigung nach Satz 4 oder 5, auf die Auswirkung auf den Bilanzansatz",
+        "sind die nach Satz 1 oder 2 ermittelten Unterschiedsbeträge",
         "ermittelten Unterschiedsbeträge sind jeweils um den zum Schluss des vorangegangenen Wirtschaftsjahres angesetzten Anleger-Aktiengewinn, Anleger-Abkommensgewinn oder Anleger-Teilfreistellungsgewinn",
         "sind bei einer bilanziellen Teilwertzuschreibung nach § 6 Absatz 1 Nummer 2 Satz 3 des Einkommensteuergesetzes auf die Anschaffungskosten der Spezial-Investmentanteile entsprechend",
         "ermittelte Anleger-Aktiengewinn, Anleger-Abkommensgewinn oder Anleger-Teilfreistellungsgewinn kann positiv oder negativ sein",
@@ -37647,11 +37822,14 @@
         "ist keine Kapitalertragsteuer",
         "hat den Spezial-Investmentfonds unverzüglich über die Veräußerung nach Satz 1 und 5"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich einer Berichtigung nach Satz 4 oder 5",
+        "vorbehaltlich einer Berichtigung nach Satz 4 oder 5"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -37660,8 +37838,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db5e1dd0475b402b00bb0fe26a21e881107524f924a000c1cb776fd8fc5ee219",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.668Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.498Z"
     },
     "50": {
       "typ": "gemischt",
@@ -38101,8 +38279,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1df77567016e3e34861987f391f87dac38c509c3915cecf4f7224f411a8f22fa",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.684Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.515Z"
     },
     "51": {
       "typ": "gemischt",
@@ -38200,19 +38378,35 @@
             },
             {
               "art": "rf",
-              "text": "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene",
+              "text": "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
               "von": 572,
-              "laenge": 258,
+              "laenge": 199,
               "konfidenz": 0.54,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Tarif — vollständig Rechtsfolge (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 2",
+              "von": 772,
+              "laenge": 58,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             }
           ]
         },
@@ -38871,12 +39065,27 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene",
+                  "t": "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.54,
                   "beleg": null,
@@ -39168,7 +39377,7 @@
       ],
       "rf": [
         "sind gegenüber dem Spezial-Investmentfonds und dem Anleger gesondert und einheitlich",
-        "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene",
+        "beträgt der Verspätungszuschlag nach § 152 der Abgabenordnung für jeden angefangenen Monat der eingetretenen Verspätung 0,0625 Prozent der ausgeschütteten und ausschüttungsgleichen Erträge; dies gilt",
         "hervorgeht, wie die Besteuerungsgrundlagen aus der handels- oder investmentrechtlichen Rechnungslegung ermittelt wurden",
         "Die Erklärung zur gesonderten",
         "Eine berichtigte Feststellungserklärung",
@@ -39179,7 +39388,9 @@
         "ist der gesetzliche Vertreter des Spezial-Investmentfonds befugt; § 352 Absatz 1 Nummer 4 und 5 der Abgabenordnung und § 48 Absatz 1 Nummer 4 und 5 der Finanzgerichtsordnung sind entsprechend",
         "gelten § 352 Absatz 1 Nummer 3 der Abgabenordnung und § 48 Absatz 1 Nummer 3 der Finanzgerichtsordnung entsprechend"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "ungeachtet einer etwaigen Steuerbefreiung auf Anlegerebene"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -39192,8 +39403,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "34164805d204941d1e2c435b46c642ef4fbaf85500b98f03a69e510e763d617a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.687Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.518Z"
     },
     "52": {
       "typ": "gemischt",
@@ -39805,8 +40016,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "618ce9e89668202e178d1f9d42b4f3e38fec059d9369c466101df36f239c0438",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.688Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.519Z"
     },
     "53": {
       "typ": "gemischt",
@@ -40601,8 +40812,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c3ac88750cfebab975a7381b418facb20d10f7c9d497878cc5a30c29c0db953",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.690Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.521Z"
     },
     "54": {
       "typ": "konditional",
@@ -41037,8 +41248,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c260059c547cc07949ccd3deedf71f705d43f929ac394467b3e9a441e4ba7aeb",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.691Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.522Z"
     },
     "55": {
       "typ": "aussage",
@@ -41446,8 +41657,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c69f66c275cab03071305d9cc4f64ce1e5000b41299f3575c648b4e9fad008a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.692Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.523Z"
     },
     "56": {
       "typ": "gemischt",
@@ -44698,8 +44909,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5918fa1620b9f66faac06271fea9ee993ce53925338437a919ce452a3348e042",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.703Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.534Z"
     },
     "57": {
       "typ": "anwendung",
@@ -45220,8 +45431,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "c4ed9c2913164dcd83409431169f75fe674d4e1d2caccd0d0bd779f4ad6f52cc",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.705Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.536Z"
     },
     "5a": {
       "typ": "gemischt",
@@ -45460,8 +45671,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "35518449d235ff3abfbd78e63c98ad1a9a625a67bc973d90880112fab540bc50",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.567Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.401Z"
     }
   }
 }

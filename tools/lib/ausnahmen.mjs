@@ -70,6 +70,30 @@ const SATZAUSNAHME = /(?:^|;\s*)((?:dies|das|die(?:se)?s?|satz\s?\d+[a-z]?|sätz
  */
 const RUECKAUSNAHME = /\b(gilt jedoch|gelten jedoch|ist jedoch anzuwenden|sind jedoch anzuwenden|bleibt jedoch|bleiben jedoch|dies gilt jedoch|gilt gleichwohl|findet jedoch Anwendung|abweichend hiervon jedoch|es sei denn wiederum)\b/i;
 
+/* ─────────────────────── Bauform D: Vorbehalt ─────────────────────── */
+
+/**
+ * Der Vorbehalt schränkt die Anordnung zugunsten einer anderen Vorschrift ein.
+ *
+ *   „Der Solidaritätszuschlag bemisst sich VORBEHALTLICH DER ABSÄTZE 2 BIS 5 …"
+ *   „… sind die Einkünfte UNBESCHADET ANDERER VORSCHRIFTEN so anzusetzen …"
+ *
+ * In Fassung 5 galt das als bloße Konkurrenzregel und wurde gar nicht
+ * markiert. Der Grund war ein technischer: Ohne Entflechtung lag der Vorbehalt
+ * mitten in der Rechtsfolge, in der er steht, und erzeugte zwei Kategorien auf
+ * denselben Zeichen — allein „vorbehaltlich" und „unbeschadet" trugen einen
+ * großen Teil der damaligen 467 Überlappungen.
+ *
+ * Der Grund ist entfallen: Die Entflechtung schneidet den Vorbehalt sauber aus
+ * der Rechtsfolge heraus. Und in der Sache gehört er dorthin — die Kategorie
+ * heißt „Ausnahme / Vorbehalt", und wer § 3 SolzG liest, muss sehen, dass die
+ * Bemessung unter dem Vorbehalt der Absätze 2 bis 5 steht.
+ *
+ * Er endet mit seiner Nominalphrase, nicht am Satzende: Vorbehalten wird eine
+ * bestimmte Vorschrift, nicht der Rest des Satzes.
+ */
+const VORBEHALT = /\b(vorbehaltlich|unbeschadet|ungeachtet)\b/gi;
+
 /* ─────────────────────── Vorrangregel — KEINE Ausnahme ─────────────────────── */
 
 /**
@@ -139,7 +163,7 @@ function nominalphraseEnde(satz, von, verbIndex = -1) {
  * den Zähler der laufenden `exec`-Schleife zurück — die Schleife läuft dann
  * endlos, weil sie immer wieder denselben Treffer findet.
  */
-const SIGNAL_AUSBLENDEN = /\b(es sei denn|außer wenn|sofern nicht|soweit nicht|solange nicht|wenn nicht|falls nicht|mit Ausnahme(?:\s+(?:der|des|von|dem|den))?|ausgenommen|ausschließlich der|gilt|gelten|nicht|ist|sind|anzuwenden|findet|finden|keine|Anwendung|entfällt|dies|das|satz|absatz|nummer)\b/gi;
+const SIGNAL_AUSBLENDEN = /\b(es sei denn|außer wenn|sofern nicht|soweit nicht|solange nicht|wenn nicht|falls nicht|mit Ausnahme(?:\s+(?:der|des|von|dem|den))?|ausgenommen|ausschließlich der|vorbehaltlich|unbeschadet|ungeachtet|gilt|gelten|nicht|ist|sind|anzuwenden|findet|finden|keine|Anwendung|entfällt|dies|das|satz|absatz|nummer)\b/gi;
 
 /** Enthält die Spanne über das Signal hinaus überhaupt Inhalt? */
 function hatGehalt(text) {
@@ -213,6 +237,21 @@ export function ausnahmeSpannen(satz, kontext = {}) {
       von, bis, text, klasse: "bereich",
       rueck: false,
       grund: `Bereichsausnahme mit „${m[1].toLowerCase()}"`,
+    });
+  }
+
+  // ── Bauform D: Vorbehalt zugunsten einer anderen Vorschrift
+  VORBEHALT.lastIndex = 0;
+  while ((m = VORBEHALT.exec(satz)) !== null) {
+    if (VORBEHALT.lastIndex <= m.index) VORBEHALT.lastIndex = m.index + 1;
+    const von = m.index;
+    const bis = nominalphraseEnde(satz, m.index + m[0].length, kontext.verbIndex ?? -1);
+    if (belegt(von, bis)) continue;
+    const text = satz.slice(von, bis).replace(/^[\s,;]+|[.,;\s]+$/g, "");
+    if (!hatGehalt(text)) continue;
+    raus.push({
+      von, bis, text, klasse: "vorbehalt", rueck: false,
+      grund: `Vorbehalt mit „${m[1].toLowerCase()}"`,
     });
   }
 

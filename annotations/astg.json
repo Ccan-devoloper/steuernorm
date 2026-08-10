@@ -1,14 +1,14 @@
 {
   "abk": "AStG",
   "titel": "Außensteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:31.495Z",
+  "aktualisiert": "2026-08-10T09:19:26.340Z",
   "quelle": "https://www.gesetze-im-internet.de/astg/",
   "stand": [
     {
@@ -50,19 +50,46 @@
             },
             {
               "art": "rf",
-              "text": "sind seine Einkünfte unbeschadet anderer Vorschriften so anzusetzen, wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
-              "anzeige": null,
-              "teile": null,
+              "text": "sind seine Einkünfte",
+              "anzeige": "sind seine Einkünfte … wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
+              "teile": [
+                {
+                  "text": "sind seine Einkünfte",
+                  "von": 382,
+                  "laenge": 20
+                },
+                {
+                  "text": "wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
+                  "von": 451,
+                  "laenge": 101
+                }
+              ],
               "pfad": "Abs. 1 Satz 1",
               "von": 382,
-              "laenge": 170,
+              "laenge": 20,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Nachfolgender Hauptsatz (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "unbeschadet anderer Vorschriften so anzusetzen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 403,
+              "laenge": 46,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „unbeschadet\""
             }
           ]
         },
@@ -2747,16 +2774,31 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "unbeschadet anderer Vorschriften so anzusetzen",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind seine Einkünfte unbeschadet anderer Vorschriften so anzusetzen, wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
+                  "t": "sind seine Einkünfte … wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 },
                 {
                   "n": "2.",
@@ -4008,7 +4050,7 @@
         "Ist ein Abkommen zur Vermeidung der Doppelbesteuerung anzuwenden und macht der Steuerpflichtige geltend, dass dessen Regelungen den Sätzen 1 bis 7 widersprechen"
       ],
       "rf": [
-        "sind seine Einkünfte unbeschadet anderer Vorschriften so anzusetzen, wie sie unter den zwischen voneinander unabhängigen Dritten vereinbarten Bedingungen angefallen wären",
+        "sind seine Einkünfte",
         "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft; eine Personengesellschaft oder Mitunternehmerschaft ist selbst nahestehende Person",
         "ist davon",
         "Führt die Anwendung des Fremdvergleichsgrundsatzes zu weitergehenden Berichtigungen als die anderen Vorschriften, sind die weitergehenden Berichtigungen neben den Rechtsfolgen der anderen Vorschriften durchzuführen",
@@ -4061,6 +4103,7 @@
         "wird ermächtigt, mit Zustimmung des Bundesrates durch Rechtsverordnung Einzelheiten des Fremdvergleichsgrundsatzes im Sinne der Absätze 1, 3 bis 3e und 5 und Einzelheiten zu dessen einheitlicher Anwendung zu regeln sowie Grundsätze zur Bestimmung des Dotationskapitals im Sinne des Absatzes 5 Satz 3 Nummer 4"
       ],
       "ausnahmen": [
+        "unbeschadet anderer Vorschriften so anzusetzen",
         "es sei denn, der Steuerpflichtige macht im Einzelfall etwas anderes glaubhaft",
         "es sei denn, die Zugehörigkeit der Betriebsstätte zum Unternehmen erfordert eine andere Behandlung"
       ],
@@ -4080,8 +4123,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b25b85c0d4ed179a6b8287b81055a2646a98d85ab1de760965aa34b41a1a50f7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.444Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.290Z"
     },
     "2": {
       "typ": "gemischt",
@@ -5054,8 +5097,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1c100336b3605ea952e84dadc5a5be824adefda922f91390d2ae817fa8ceef84",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.451Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.297Z"
     },
     "3": {
       "typ": "aussage",
@@ -5131,8 +5174,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.451Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.297Z"
     },
     "4": {
       "typ": "gemischt",
@@ -5250,8 +5293,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b16419a2b43ad7ad2cfb634788cb7c556e6964e2b64e3efa2f6096c4f39b1fe",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.452Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.298Z"
     },
     "5": {
       "typ": "gemischt",
@@ -5524,8 +5567,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4cae677550013700fb24fdee55ff9c445b3205ce0c561044272de8929446093",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.453Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.299Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5544,31 +5587,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes, Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
-              "anzeige": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes, Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen … gleich",
-              "teile": [
-                {
-                  "text": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes, Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
-                  "von": 0,
-                  "laenge": 123
-                },
-                {
-                  "text": "gleich",
-                  "von": 268,
-                  "laenge": 6
-                }
-              ],
+              "art": "ausn",
+              "text": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 123,
+              "laenge": 58,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Gleichstellungsanordnung (mehrteilig)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
+            },
+            {
+              "art": "rf",
+              "text": "Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 60,
+              "laenge": 63,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Gleichstellungsanordnung (mehrteilig) (um Ausnahme gekürzt)"
             },
             {
               "art": "tb",
@@ -7067,16 +7115,31 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes, Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen … gleich",
+                  "t": "Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
@@ -7624,7 +7687,7 @@
         "Auf Antrag"
       ],
       "rf": [
-        "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes, Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
+        "Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
         "unbeschränkt steuerpflichtige Person",
         "eintritt",
         "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben",
@@ -7653,7 +7716,9 @@
         "hat dem nach Satz 1 zuständigen Finanzamt jährlich bis zum 31. Juli nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch seine aktuelle Anschrift mitzuteilen",
         "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -7666,8 +7731,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1dcf0a06e31520822a2ec779e357d0f19d6503f52aadd2db74248ae6cdb7ad98",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.460Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.306Z"
     },
     "7": {
       "typ": "gemischt",
@@ -8009,7 +8074,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Unbeschadet des Absatzes 3",
               "anzeige": null,
               "teile": null,
@@ -8022,7 +8087,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Vorbehalt mit „unbeschadet\""
             },
             {
               "art": "rf",
@@ -8382,14 +8447,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Unbeschadet des Absatzes 3",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "wenn sie mit ihm in Bezug auf die Zwischengesellschaft durch abgestimmtes Verhalten zusammenwirken",
                   "pfad": "Abs. 4 Satz 1",
                   "konfidenz": 0.6,
@@ -8397,7 +8454,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "Bei den unmittelbaren oder mittelbaren Gesellschaftern einer Personengesellschaft oder Mitunternehmerschaft, die an einer Zwischengesellschaft unmittelbar oder mittelbar beteiligt ist",
                   "pfad": "Abs. 4 Satz 2",
                   "konfidenz": 0.6,
@@ -8408,6 +8465,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Unbeschadet des Absatzes 3",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -8502,7 +8574,6 @@
         "Für Zwecke der §§ 7 bis 12",
         "Eine Personengesellschaft oder Mitunternehmerschaft",
         "wenn sie die Voraussetzungen des § 1 Absatz 2 erfüllt",
-        "Unbeschadet des Absatzes 3",
         "wenn sie mit ihm in Bezug auf die Zwischengesellschaft durch abgestimmtes Verhalten zusammenwirken",
         "Bei den unmittelbaren oder mittelbaren Gesellschaftern einer Personengesellschaft oder Mitunternehmerschaft, die an einer Zwischengesellschaft unmittelbar oder mittelbar beteiligt ist",
         "Die Absätze 1 bis 4",
@@ -8521,6 +8592,7 @@
       ],
       "ausnahmen": [
         "ausgenommen ist (ausländische Gesellschaft)",
+        "Unbeschadet des Absatzes 3",
         "Satz 1 gilt nicht, wenn die den Einkünften zugrunde liegenden Geschäfte zu mehr als einem Drittel mit dem Steuerpflichtigen oder ihm nahestehenden Personen betrieben werden"
       ],
       "definitionen": [],
@@ -8535,8 +8607,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1ae069fd3fff8e400cd3f67dd068fd9cb4be33aebb5034fa09e14b76bcca9dc2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.463Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.310Z"
     },
     "8": {
       "typ": "gemischt",
@@ -9154,7 +9226,7 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
+              "art": "ausn",
               "text": "Ungeachtet des Absatzes 1",
               "anzeige": null,
               "teile": null,
@@ -9167,7 +9239,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Vorbehalt mit „ungeachtet\""
             },
             {
               "art": "rf",
@@ -9787,14 +9859,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Ungeachtet des Absatzes 1",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "Der wesentlichen wirtschaftlichen Tätigkeit der Gesellschaft",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -9802,7 +9866,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "Die Sätze 1 bis 3",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -9810,7 +9874,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "wenn die Gesellschaft ihre wesentliche wirtschaftliche Tätigkeit überwiegend durch Dritte besorgen lässt",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -9821,6 +9885,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Ungeachtet des Absatzes 1",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -10014,7 +10093,6 @@
         "Bezügen im Sinne des § 8b Absatz 1 des Körperschaftsteuergesetzes",
         "eine verdeckte Gewinnausschüttung das Einkommen der ausländischen Gesellschaft oder einer ihr nahestehenden Person",
         "wenn diese unbeschränkt körperschaftsteuerpflichtig wäre; dies gilt auch dann, wenn die ausländische Gesellschaft hinsichtlich dieser Bezüge gemäß den Nummern 1 bis 6 oder 7 Buchstabe a Doppelbuchstabe aa und bb nicht Zwischengesellschaft ist",
-        "Ungeachtet des Absatzes 1",
         "Der wesentlichen wirtschaftlichen Tätigkeit der Gesellschaft",
         "Die Sätze 1 bis 3",
         "wenn die Gesellschaft ihre wesentliche wirtschaftliche Tätigkeit überwiegend durch Dritte besorgen lässt",
@@ -10047,7 +10125,8 @@
         "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft einen für das Bewirken derartiger Dienstleistungen eingerichteten Geschäftsbetrieb unter Teilnahme am allgemeinen wirtschaftlichen Verkehr unterhält und die zu der Dienstleistung gehörenden Tätigkeiten ohne Mitwirkung eines solchen Steuerpflichtigen oder einer solchen nahestehenden Person ausübt",
         "es sei denn, der Steuerpflichtige weist nach, dass die Einkünfte daraus nach einem Abkommen zur Vermeidung der Doppelbesteuerung steuerbefreit wären, wenn sie von den unbeschränkt Steuerpflichtigen, die gemäß § 7 an der ausländischen Gesellschaft beteiligt sind, unmittelbar bezogen worden wären",
         "Dies gilt nicht, soweit aa) die leistende Körperschaft mit den diesen Bezügen zugrunde liegenden Einkünften Zwischengesellschaft ist",
-        "ausgenommen Veräußerungsgewinne"
+        "ausgenommen Veräußerungsgewinne",
+        "Ungeachtet des Absatzes 1"
       ],
       "definitionen": [],
       "status": "syntaktisch",
@@ -10061,8 +10140,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c78c7d24316ef4c4393e4a262884fbf3b86b11aaf508545424bbad5f87f5c841",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.470Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.318Z"
     },
     "9": {
       "typ": "konditional",
@@ -10196,8 +10275,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6535cbaa94c6725ed62a6a804260fecdb5162e563f12bfd63239b9b44526a96f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.470Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.318Z"
     },
     "10": {
       "typ": "gemischt",
@@ -11238,8 +11317,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "82dd30ef6318d865dd51b9039cad216043a4a878c1b5f508d3b3ad3cc0ca9b3d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.473Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.321Z"
     },
     "11": {
       "typ": "gemischt",
@@ -11936,8 +12015,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9af91334e938369ab5c7c7bca2de06008b8ebcf1c462a83f9892a35aa6672f10",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.478Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.325Z"
     },
     "12": {
       "typ": "gemischt",
@@ -12312,8 +12391,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "515ce469624e891ef8fee7f5abf4733eb93ba65af6e309feb86a4a5c178afb4e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.479Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.326Z"
     },
     "13": {
       "typ": "gemischt",
@@ -13060,8 +13139,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7cea57fe64e07ff3828250d3d6e015265e2dafcfe4ba02d8aa211b4c6b5adb49",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.482Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.329Z"
     },
     "14": {
       "typ": "gemischt",
@@ -13083,8 +13162,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.482Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.329Z"
     },
     "15": {
       "typ": "gemischt",
@@ -14655,8 +14734,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4b6e3962f8a965c502e38acbadec1997acebc620e3c3e76f1d6c16b64a6c217",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.487Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.333Z"
     },
     "16": {
       "typ": "konditional",
@@ -14824,8 +14903,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "968a035dc79c683387b7aed61db6c6e039d65931d68aceb8137ab9d2823b49dc",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.488Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.334Z"
     },
     "17": {
       "typ": "gemischt",
@@ -15166,8 +15245,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2fb36d61e508817f5ff45dcd398e646e83a5d17ee6786e85cf05d4160b7d4ae0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.489Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.335Z"
     },
     "18": {
       "typ": "gemischt",
@@ -16169,8 +16248,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d91a3cd76ac729f3947fd7a41690569ca3f94384d878a22b8dbb677f32fc24ef",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.492Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.338Z"
     },
     "19": {
       "typ": "gemischt",
@@ -16192,8 +16271,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.492Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.338Z"
     },
     "20": {
       "typ": "gemischt",
@@ -16248,19 +16327,46 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig, falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
-              "anzeige": null,
-              "teile": null,
+              "text": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte",
+              "anzeige": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte … falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
+              "teile": [
+                {
+                  "text": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte",
+                  "von": 130,
+                  "laenge": 224
+                },
+                {
+                  "text": "falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
+                  "von": 422,
+                  "laenge": 62
+                }
+              ],
               "pfad": "Abs. 2 Satz 1",
               "von": 130,
-              "laenge": 354,
-              "konfidenz": 0.48,
+              "laenge": 224,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Verberststellung: uneingeleiteter Bedingungssatz (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 355,
+              "laenge": 65,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „ungeachtet\""
             },
             {
               "art": "rf",
@@ -16367,11 +16473,11 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig, falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
+                  "t": "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte … falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 }
               ]
             },
@@ -16382,6 +16488,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Satz 1 gilt nicht, soweit in der ausländischen Betriebsstätte Einkünfte anfallen, die nach § 8 Absatz 1 Nummer 5 Buchstabe a als Zwischeneinkünfte steuerpflichtig wären",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -16432,7 +16546,7 @@
         }
       ],
       "tb": [
-        "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig, falls diese Betriebsstätte eine ausländische Gesellschaft wäre",
+        "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte",
         "(weggefallen)"
       ],
       "rf": [
@@ -16440,12 +16554,13 @@
         "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden; ein negativer Betrag ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend"
       ],
       "ausnahmen": [
+        "ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig",
         "Satz 1 gilt nicht, soweit in der ausländischen Betriebsstätte Einkünfte anfallen, die nach § 8 Absatz 1 Nummer 5 Buchstabe a als Zwischeneinkünfte steuerpflichtig wären"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.51,
+      "konfidenz": 0.545,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16454,8 +16569,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b5fe2a06929272edf36e80539e49f84684d5a348924e9dead269a673f6ccba7c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.493Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.339Z"
     },
     "21": {
       "typ": "anwendung",
@@ -16744,8 +16859,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "3a4bc013a818b5f2585d3d58aae5259ea19b1d23b022aef3c717557a972c255c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.494Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.340Z"
     },
     "22": {
       "typ": "aussage",
@@ -16820,8 +16935,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "38f5729c46c1ec23b2fdf474e696548e72ab92930a0860aafb21591619931e8c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.495Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.340Z"
     },
     "1a": {
       "typ": "gemischt",
@@ -17278,8 +17393,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ef6ef7ef076620b96c5399e032c8481f46d1bb482fbbc685af5e245bb5e24b29",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:31.446Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:26.292Z"
     }
   }
 }

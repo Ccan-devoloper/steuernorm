@@ -127,6 +127,55 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4b. Struktur-Einfärbung sitzt an der richtigen Stelle ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+
+  const farben = await seite.evaluate(() => {
+    const s = [...document.querySelectorAll(".lesespalte .s")];
+    const finde = (klasse) => s.filter((x) => x.classList.contains(klasse)).map((x) => x.textContent);
+    return {
+      anzahl: s.length,
+      rf: finde("s-rechtsfolge").slice(0, 1),
+      au: finde("s-ausnahme").slice(0, 1),
+      tb: finde("s-tatbestand").slice(0, 1),
+      legende: (document.querySelector(".legende") || {}).textContent || "",
+    };
+  });
+  // Die Zuordnung des Entwurfs für § 3 Abs. 1 SolzG: „bemisst sich“ =
+  // Rechtsfolge, „vorbehaltlich der Absätze 2 bis 5“ = Ausnahme.
+  ok("Einfärbung vorhanden", farben.anzahl > 20, farben.anzahl + " Spannen");
+  ok("„bemisst sich“ ist Rechtsfolge", farben.rf[0] === "bemisst sich", String(farben.rf[0]));
+  ok("„vorbehaltlich …“ ist Ausnahme",
+    farben.au[0] === "vorbehaltlich der Absätze 2 bis 5", String(farben.au[0]));
+  ok("„soweit …“ ist Tatbestand",
+    String(farben.tb[0]).startsWith("soweit eine Veranlagung"), String(farben.tb[0]).slice(0, 32));
+  ok("Legende erklärt die drei Kategorien",
+    farben.legende.includes("Tatbestand") && farben.legende.includes("Rechtsfolge")
+    && farben.legende.includes("Ausnahme / Vorbehalt"));
+  ok("Legende weist die Maschine aus",
+    farben.legende.includes("maschinell erkannt, nicht redaktionell geprüft"));
+
+  /* Stufe „aus“ nimmt jede Tönung zurück. */
+  await seite.click('.stufen button[data-stufe=aus]');
+  await seite.waitForTimeout(500);
+  const ausgeschaltet = await seite.evaluate(() => {
+    const s = document.querySelector(".lesespalte .s");
+    const grund = s ? getComputedStyle(s).backgroundColor : "";
+    return { modus: document.body.dataset.struktur, grund,
+      hinweis: (document.querySelector(".legende .anmerkung") || {}).textContent || "" };
+  });
+  ok("Stufe „aus“ nimmt die Tönung zurück",
+    ausgeschaltet.modus === "aus" && /rgba\(0, 0, 0, 0\)|transparent/.test(ausgeschaltet.grund),
+    ausgeschaltet.grund);
+  ok("Stufe „aus“ sagt es auch",
+    ausgeschaltet.hinweis.includes("reiner Wortlaut"), ausgeschaltet.hinweis);
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });

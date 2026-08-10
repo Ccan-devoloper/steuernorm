@@ -1,14 +1,14 @@
 {
   "abk": "ErbStG",
   "titel": "Erbschaftsteuer- und Schenkungsteuergesetz",
-  "format": 4,
+  "format": 5,
   "automatisch": true,
   "verfahren": "syntaxanalyse",
   "modelle": [
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-09T02:15:30.954Z",
+  "aktualisiert": "2026-08-10T09:19:25.794Z",
   "quelle": "https://www.gesetze-im-internet.de/erbstg_1974/",
   "stand": [
     {
@@ -320,8 +320,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2142da7ac2176ff102419b1e4ed1f85f9d70ef4c608cf83970470eb80c90997b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.813Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.662Z"
     },
     "2": {
       "typ": "gemischt",
@@ -900,8 +900,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "300446e719a2870d532539a65970da5945a6351965f14139174622e91be37c0a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.815Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.664Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1837,8 +1837,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c2b14f9031e1d979b68d2b736ce332826d82e7a6b5fb25e7875c5d01d86397e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.819Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.668Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2089,8 +2089,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9cfc0f51f141dfd0f6a4ada4a20a6685836431b1e9b8e4bb0fcada5ea2b090c9",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.820Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.669Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2659,8 +2659,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30ae833eed4fa9cbfedcada0b98e6aee0d836d62c3b112f3c0f4393de36e9d51",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.823Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.670Z"
     },
     "6": {
       "typ": "gemischt",
@@ -3335,8 +3335,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "936e756ef314add29a615154c3cc9623bd1cf1562e91cbaba5a904c18d0df9c1",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.825Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.672Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5268,8 +5268,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "29714ed1c4b50e13a488ec5eec8cc9d07aee171cc7eb1d4d772523328ebb444a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.831Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.676Z"
     },
     "8": {
       "typ": "definition",
@@ -5344,8 +5344,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "838f692b28be3161f2b44950cce26cecef3ba226a0a9d362e5e563a3d65e3a1e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.831Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.677Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5923,8 +5923,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fd286ad2f6e5598846bcf4f9d0ddf4aa001c2b3d4aa0c2384e81f959b5ed3ea6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.834Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.679Z"
     },
     "10": {
       "typ": "gemischt",
@@ -6018,14 +6018,30 @@
               "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
+              "art": "ausn",
+              "text": "unbeschadet Absatz 10 als Bereicherung der Betrag",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 167,
+              "laenge": 49,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „unbeschadet\""
+            },
+            {
               "art": "rf",
-              "text": "gilt unbeschadet Absatz 10 als Bereicherung der Betrag, der sich ergibt",
-              "anzeige": "gilt unbeschadet Absatz 10 als Bereicherung der Betrag, der sich ergibt … die nach den Absätzen 3 bis 9 abzugsfähigen Nachlassverbindlichkeiten mit ihrem nach § 12 zu ermittelnden Wert abgezogen werden",
+              "text": "der sich ergibt",
+              "anzeige": "der sich ergibt … die nach den Absätzen 3 bis 9 abzugsfähigen Nachlassverbindlichkeiten mit ihrem nach § 12 zu ermittelnden Wert abgezogen werden",
               "teile": [
                 {
-                  "text": "gilt unbeschadet Absatz 10 als Bereicherung der Betrag, der sich ergibt",
-                  "von": 162,
-                  "laenge": 71
+                  "text": "der sich ergibt",
+                  "von": 218,
+                  "laenge": 15
                 },
                 {
                   "text": "die nach den Absätzen 3 bis 9 abzugsfähigen Nachlassverbindlichkeiten mit ihrem nach § 12 zu ermittelnden Wert abgezogen werden",
@@ -6034,15 +6050,15 @@
                 }
               ],
               "pfad": "Abs. 1 Satz 2",
-              "von": 162,
-              "laenge": 71,
+              "von": 218,
+              "laenge": 15,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
             },
             {
               "art": "tb",
@@ -7400,6 +7416,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "unbeschadet Absatz 10 als Bereicherung der Betrag",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -7413,7 +7444,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "gilt unbeschadet Absatz 10 als Bereicherung der Betrag, der sich ergibt … die nach den Absätzen 3 bis 9 abzugsfähigen Nachlassverbindlichkeiten mit ihrem nach § 12 zu ermittelnden Wert abgezogen werden",
+                  "t": "der sich ergibt … die nach den Absätzen 3 bis 9 abzugsfähigen Nachlassverbindlichkeiten mit ihrem nach § 12 zu ermittelnden Wert abgezogen werden",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -8129,7 +8160,7 @@
       ],
       "rf": [
         "Als steuerpflichtiger Erwerb",
-        "gilt unbeschadet Absatz 10 als Bereicherung der Betrag, der sich ergibt",
+        "der sich ergibt",
         "sind bei der Ermittlung der Bereicherung zu berücksichtigen, auch wenn sie rechtlich erst nach dem Tod des Erblassers entstanden sind",
         "gilt als Erwerb der anteiligen Wirtschaftsgüter; die dabei übergehenden Schulden und Lasten der Gesellschaft sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
         "tritt an die Stelle des Vermögensanfalls die Verpflichtung des Beschwerten",
@@ -8162,6 +8193,7 @@
         "Überträgt ein Erbe ein auf ihn von Todes wegen übergegangenes Mitgliedschaftsrecht an einer Personengesellschaft unverzüglich nach dessen Erwerb auf Grund einer im Zeitpunkt des Todes des Erblassers bestehenden Regelung im Gesellschaftsvertrag an die Mitgesellschafter und ist der Wert, der sich für seinen Anteil zur Zeit des Todes des Erblassers nach § 12 ergibt, höher als der gesellschaftsvertraglich festgelegte Abfindungsanspruch, so gehört nur der Abfindungsanspruch zum Vermögensanfall im Sinne des Absatzes 1 Satz 2"
       ],
       "ausnahmen": [
+        "unbeschadet Absatz 10 als Bereicherung der Betrag",
         "Dies gilt nicht für Kosten im Sinne des Absatzes 5 Nummer 3"
       ],
       "definitionen": [
@@ -8178,8 +8210,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5574bf273aadb44251a62aeac62b0603f4a072dd3dbb552e204c15b0e8e55414",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.842Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.686Z"
     },
     "11": {
       "typ": "konditional",
@@ -8313,8 +8345,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c1951c250e9298b4f453fb55a6150a39c7c6dd2c0bf45cbccd374e76e52293a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.842Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.686Z"
     },
     "12": {
       "typ": "gemischt",
@@ -8957,8 +8989,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16c6c1d70dfff675aa205bedbdc3e8e8fff5439f969222e5191c3695d9c4a713",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.844Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.688Z"
     },
     "13": {
       "typ": "gemischt",
@@ -12136,8 +12168,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24a6ee8c672557d6297f2fd93f4245253eb5560d2387a4b0ffc7d461b794661f",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.862Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.704Z"
     },
     "14": {
       "typ": "gemischt",
@@ -12717,8 +12749,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "88f86d798a76d9158b7cbf1097ed2f40199da5765709845cca6c2e67c10893a4",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.900Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.738Z"
     },
     "15": {
       "typ": "gemischt",
@@ -13839,8 +13871,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74ff3f91e3bb1bf43f37d65a5239cc45a4c69ac7c18185cc8890183ac882d9d0",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.903Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.741Z"
     },
     "16": {
       "typ": "gemischt",
@@ -14347,8 +14379,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdaafa1ae7f172273de571ad1b87cf2a8003efc8e0ee3428c15fcd56bb61a4de",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.904Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.743Z"
     },
     "17": {
       "typ": "gemischt",
@@ -15079,8 +15111,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2879162f8fd285ca64c78ca67dc5ba24c9e97cbb3aae05c59b80c82532526545",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.906Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.745Z"
     },
     "18": {
       "typ": "gemischt",
@@ -15249,8 +15281,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2e3f7fde7915028bc88da41874398d9faae5a0d8cec438dcd47687dcb1f8770c",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.907Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.745Z"
     },
     "19": {
       "typ": "gemischt",
@@ -15595,8 +15627,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c311b0ac60024b9a3a171fdb646a57cfe708253f42cef349fc2921154c260532",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.908Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.746Z"
     },
     "20": {
       "typ": "gemischt",
@@ -16239,8 +16271,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "32c7de36fd09578a4fd973e83630671d389e36ea8456090c3eaf13ee365c622d",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.921Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.760Z"
     },
     "21": {
       "typ": "gemischt",
@@ -16974,8 +17006,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f646dcdb314147089aae5955e88030b6a6ca16b15fbdea7b67e61ad2965037a",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.923Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.762Z"
     },
     "22": {
       "typ": "konditional",
@@ -17109,8 +17141,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8252b7d4f2ac6010fb528d7ffb616d3f997e1fbbb74f3c959054c866658a374e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.924Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.763Z"
     },
     "23": {
       "typ": "gemischt",
@@ -17415,8 +17447,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebbc70f3d7cb9ef0615c88bbb90235b3a1133cfa75a8db96ff66b767c8a90b43",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.924Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.764Z"
     },
     "24": {
       "typ": "gemischt",
@@ -17571,8 +17603,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71545daa216ad81ef94785e8493a88adb6f631e4308c378c1192198668056b04",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.925Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.764Z"
     },
     "25": {
       "typ": "gemischt",
@@ -17594,8 +17626,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.925Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.764Z"
     },
     "26": {
       "typ": "gemischt",
@@ -17732,8 +17764,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bfbbc0332f8622948a20ce7216922654ee53843380be768742b5aca827465578",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.925Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.765Z"
     },
     "27": {
       "typ": "gemischt",
@@ -17752,12 +17784,12 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag vorbehaltlich des Absatzes 3 wie folgt: um",
+              "text": "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 334,
+              "laenge": 291,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
@@ -17765,6 +17797,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Absatzes 3 wie folgt: um",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 292,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -17868,12 +17916,27 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Absatzes 3 wie folgt: um",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag vorbehaltlich des Absatzes 3 wie folgt: um",
+                  "t": "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.48,
                   "beleg": null,
@@ -17956,16 +18019,18 @@
         "Zur Ermittlung des Steuerbetrags, der auf das begünstigte Vermögen entfällt"
       ],
       "rf": [
-        "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag vorbehaltlich des Absatzes 3 wie folgt: um",
+        "Fällt Personen der Steuerklasse I von Todes wegen Vermögen an, das in den letzten zehn Jahren vor dem Erwerb bereits von Personen dieser Steuerklasse erworben worden ist und für das nach diesem Gesetz eine Steuer zu erheben war, ermäßigt sich der auf dieses Vermögen entfallende Steuerbetrag",
         "Prozent",
         "ist die Steuer für den Gesamterwerb in dem Verhältnis aufzuteilen, in dem der Wert des begünstigten Vermögens zu dem Wert des steuerpflichtigen Gesamterwerbs ohne Abzug des dem Erwerber zustehenden Freibetrags steht",
         "darf den Betrag nicht überschreiten, der sich bei Anwendung der in Absatz 1 genannten Prozentsätze auf die Steuer ergibt, die der Vorerwerber für den Erwerb desselben Vermögens entrichtet hat"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "vorbehaltlich des Absatzes 3 wie folgt: um"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.522,
+      "konfidenz": 0.535,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -17974,8 +18039,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "62ab571ed9d0a004f69c91b7751483825f7d0566d3561ff5a7f3d84e77089d18",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.927Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.766Z"
     },
     "28": {
       "typ": "gemischt",
@@ -18751,8 +18816,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b68ba12b3a3368ef24160947cb0e9623f72237f3bfbb71763650140d7b154244",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.929Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.768Z"
     },
     "29": {
       "typ": "gemischt",
@@ -19224,8 +19289,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a323dfb3bcbdf6b85fce1cf6e3cfb40956f7e3d0b54d4e8f235e858ba3271ba2",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.938Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.777Z"
     },
     "30": {
       "typ": "gemischt",
@@ -20165,8 +20230,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "39804987ccaff3319ba669a819a2885d2703fcb0dbbdf4e337c759e41ef5a413",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.941Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.780Z"
     },
     "31": {
       "typ": "gemischt",
@@ -21043,8 +21108,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e2a74f7505bf4dc6135212d9313d19e0368bf77d2f0b965ff1fca0363eaf13bb",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.942Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.782Z"
     },
     "32": {
       "typ": "gemischt",
@@ -21443,8 +21508,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "67b557f0f8000c5d817d043577f2a0dd0d2c2ba7cb072a765d69b11c00f35785",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.943Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.782Z"
     },
     "33": {
       "typ": "gemischt",
@@ -21927,8 +21992,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa4044a3cc3fb37aec4bfd3bc86b6ee312eb94e4994d568fd9c346995d6674ae",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.944Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.784Z"
     },
     "34": {
       "typ": "aussage",
@@ -22168,8 +22233,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a587c992a2c8988b713f8d67abd7b93e33c7eabd71d27583bd4121d94963b52",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.945Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.784Z"
     },
     "35": {
       "typ": "gemischt",
@@ -22798,8 +22863,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "27c544d96f56dbc88b8149d347b0cb30f7917b6f190259cbb66c444914125ac7",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.947Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.786Z"
     },
     "36": {
       "typ": "gemischt",
@@ -23136,8 +23201,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f5faedc19c64c9dad556af31ef276b239ec5f68bce809963d196becc72ae9431",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.948Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.788Z"
     },
     "37": {
       "typ": "gemischt",
@@ -23818,8 +23883,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "54a44d508034057e7db5a2afb6853d67505636827f45e0f5d5af769a7ccccca6",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.952Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.791Z"
     },
     "38": {
       "typ": "gemischt",
@@ -23841,8 +23906,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.954Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.794Z"
     },
     "39": {
       "typ": "gemischt",
@@ -23864,8 +23929,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.954Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.794Z"
     },
     "2a": {
       "typ": "gemischt",
@@ -24104,8 +24169,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ea58db00845cb63c2b3c87ac3ad241aad5413a67e82562243e5362f0ef1a303e",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.816Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.665Z"
     },
     "13a": {
       "typ": "gemischt",
@@ -24127,20 +24192,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "bleibt vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
+              "art": "ausn",
+              "text": "vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 50,
-              "laenge": 90,
+              "von": 57,
+              "laenge": 83,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -26876,19 +26941,26 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "bleibt vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "begünstigten Vermögens im Sinne des § 13b Absatz 2 von derselben Person innerhalb von zehn Jahren werden bei der Anwendung des Satzes 1 die früheren Erwerbe nach ihrem früheren Wert dem letzten Erwerb hinzugerechnet",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.48,
@@ -26896,7 +26968,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "entfällt die Steuerbefreiung für die bis dahin nach Satz 1 oder Absatz 10 als steuerfrei behandelten früheren Erwerbe mit Wirkung für die Vergangenheit",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -26904,7 +26976,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "endet nicht vor dem Ablauf des vierten Jahres, nachdem das für die Erbschaftsteuer zuständige Finanzamt von dem letzten Erwerb Kenntnis erlangt",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -28103,7 +28175,6 @@
         "Die Absätze 1 bis 10"
       ],
       "rf": [
-        "bleibt vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
         "begünstigten Vermögens im Sinne des § 13b Absatz 2 von derselben Person innerhalb von zehn Jahren werden bei der Anwendung des Satzes 1 die früheren Erwerbe nach ihrem früheren Wert dem letzten Erwerb hinzugerechnet",
         "entfällt die Steuerbefreiung für die bis dahin nach Satz 1 oder Absatz 10 als steuerfrei behandelten früheren Erwerbe mit Wirkung für die Vergangenheit",
         "endet nicht vor dem Ablauf des vierten Jahres, nachdem das für die Erbschaftsteuer zuständige Finanzamt von dem letzten Erwerb Kenntnis erlangt",
@@ -28173,6 +28244,7 @@
         "gelten in den Fällen des § 1 Absatz 1 Nummer 4 entsprechend"
       ],
       "ausnahmen": [
+        "vorbehaltlich der folgenden Absätze zu 85 Prozent steuerfrei (Verschonungsabschlag)",
         "Satz 1 ist nicht anzuwenden"
       ],
       "definitionen": [
@@ -28190,8 +28262,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "44615e3bf612d7c087a3d25eba1142cd10fd370bade8fb995e0d001b604c2062",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.879Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.718Z"
     },
     "13b": {
       "typ": "gemischt",
@@ -29340,20 +29412,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "wird vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
+              "art": "ausn",
+              "text": "vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 13410,
-              "laenge": 67,
+              "von": 13415,
+              "laenge": 62,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             },
             {
               "art": "tb",
@@ -30525,19 +30597,26 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
+                  "pfad": "Abs. 7 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
-                  "pfad": "Abs. 7 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "sind kein unschädliches … Verwaltungsvermögen",
                   "pfad": "Abs. 7 Satz 2",
                   "konfidenz": 0.6,
@@ -30878,7 +30957,6 @@
         "hat das Vorliegen der Voraussetzungen der Sätze 1 bis 4",
         "ergibt sich durch Kürzung des gemeinen Werts des Verwaltungsvermögens um den nach Anwendung der Absätze 3 und 4 verbleibenden anteiligen gemeinen Wert der Schulden",
         "bestimmen sich nach dem Verhältnis des gemeinen Werts des Verwaltungsvermögens zum gemeinen Wert des Betriebsvermögens des Betriebs oder der Gesellschaft zuzüglich der nach Anwendung der Absätze 3 und 4 verbleibenden Schulden",
-        "wird vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
         "sind kein unschädliches",
         "findet für junge Finanzmittel im Sinne des Absatzes 4 Nummer 5 Satz 2 und junges Verwaltungsvermögen im Sinne des Absatzes 7 Satz 2 nicht statt",
         "ist bei wirtschaftlich nicht belastenden Schulden und darüber hinaus ausgeschlossen",
@@ -30894,6 +30972,7 @@
       ],
       "ausnahmen": [
         "mit Ausnahme der Stückländereien (§ 160 Absatz 7 des Bewertungsgesetzes) und selbst",
+        "vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
         "dies gilt nicht, soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist"
       ],
       "definitionen": [],
@@ -30908,8 +30987,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab23a303ba5a8550a6779aa6bcf75286b284411b43af7b9a0260fdcb52856fec",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.895Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.734Z"
     },
     "13c": {
       "typ": "gemischt",
@@ -31471,8 +31550,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fe98c40118ee964924adbe1a164eb5a2f3a72a7aa99409e9ce501b136b0679d3",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.897Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.735Z"
     },
     "13d": {
       "typ": "gemischt",
@@ -31962,8 +32041,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a73d702f232fd5b539e3895bcc2af4a5d80e29b70542280d139aa7dcb741fe8b",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.898Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.737Z"
     },
     "19a": {
       "typ": "gemischt",
@@ -32602,8 +32681,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8c9c9f1cfde03c82171c0baf529f0e3d5f329d8690f6bcfe5dfee80659ddb59",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.910Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.748Z"
     },
     "28a": {
       "typ": "gemischt",
@@ -34470,8 +34549,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2783e7658c2b494e50e70db22a956b92295c3c1506deca327026c2609e7ef315",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.936Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.775Z"
     },
     "37a": {
       "typ": "gemischt",
@@ -35247,8 +35326,8 @@
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "335e291385549af9e5fd45ae8783b050ebaca0796bb1f2afa43d8aec9eeca040",
-      "format": 4,
-      "aktualisiert": "2026-08-09T02:15:30.954Z"
+      "format": 5,
+      "aktualisiert": "2026-08-10T09:19:25.793Z"
     }
   }
 }
