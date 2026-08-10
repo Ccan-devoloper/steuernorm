@@ -456,6 +456,17 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   display:block;margin-top:6px;
 }
 
+.zitatwolke{display:flex;flex-wrap:wrap;gap:6px}
+.zitat{
+  border:1px solid var(--linie);border-radius:var(--r-chip);padding:3px 8px;
+  font-family:var(--serif);font-size:12.5px;color:var(--text-2b);
+}
+.zitat:hover{border-color:var(--text);color:var(--text);background:var(--flaeche)}
+.zitat-gesetz{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-4);margin-right:5px;
+}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -561,6 +572,112 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 .melder p{margin:0 0 8px}
 
 /* ══════════════════════════════════════════════════════════════════════
+   Startseite, Gesetzesübersicht, Trefferliste
+   ══════════════════════════════════════════════════════════════════════ */
+body[data-ansicht=start] .navspalte,
+body[data-ansicht=start] .apparat,
+body[data-ansicht=uebersicht] .navspalte,
+body[data-ansicht=uebersicht] .apparat,
+body[data-ansicht=suche] .navspalte,
+body[data-ansicht=suche] .apparat{display:none}
+body[data-ansicht=start] .reiterleiste,
+body[data-ansicht=suche] .reiterleiste{display:none}
+/* Ohne Normtext gibt es nichts einzufärben — der Schalter gehört dort nicht hin. */
+body[data-ansicht=start] .einfaerben,
+body[data-ansicht=uebersicht] .einfaerben,
+body[data-ansicht=suche] .einfaerben,
+body[data-ansicht=start] .trenner,
+body[data-ansicht=uebersicht] .trenner,
+body[data-ansicht=suche] .trenner{display:none}
+/* Auf der Startseite steht das große Suchfeld — die Kopfleiste bleibt schlank. */
+body[data-ansicht=start] .suchfeld{display:none}
+.breit{width:100%;padding:0}
+.mitte{max-width:920px;margin:0 auto;padding:76px 96px}
+.mitte h1{
+  font-family:var(--serif);font-size:38px;line-height:1.15;letter-spacing:-.02em;
+  font-weight:400;margin:0 0 26px;
+}
+.mitte h1 .zweite{display:block;color:var(--titel-2)}
+.grossfeld{
+  display:flex;align-items:center;gap:12px;
+  border:1px solid var(--linie-stark);border-radius:8px;background:var(--weiss);
+  padding:13px 16px;box-shadow:var(--schatten-feld);
+}
+.grossfeld input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:15px}
+.grossfeld input:focus{outline:0}
+.grossfeld .enter{font-family:var(--mono);font-size:10px;color:var(--text-4);white-space:nowrap}
+.haeufig{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-size:12.5px;color:var(--text-3)}
+.pille{
+  border:1px solid var(--linie);border-radius:var(--r-pille);padding:4px 11px;
+  font-size:12.5px;color:var(--text-2b);background:var(--weiss);
+}
+.pille:hover{border-color:var(--text);color:var(--text)}
+.pille[aria-pressed=true]{background:var(--text);color:var(--papier);border-color:var(--text)}
+
+.zweispalt{display:grid;grid-template-columns:1fr 300px;gap:48px;margin-top:56px;align-items:start}
+.spaltenkopf{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-4);margin:0 0 12px;
+}
+.gesetzraster{display:grid;grid-template-columns:1fr 1fr;gap:2px 24px}
+.gesetzzeile{
+  display:flex;align-items:baseline;gap:10px;width:100%;text-align:left;
+  padding:7px 8px;border-radius:var(--r-knopf);
+}
+.gesetzzeile:hover{background:var(--zeile-weich)}
+.gesetzzeile .abk{font-family:var(--serif);font-size:14.5px;color:var(--text);white-space:nowrap}
+.gesetzzeile .name{font-size:12.5px;color:var(--text-4);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gesetzzeile .zahl{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-5)}
+.kasten{
+  background:var(--flaeche);border:1px solid var(--linie-schwach);
+  border-radius:var(--r-karte);padding:16px;
+}
+.kasten p{margin:0 0 8px;font-size:12.5px;line-height:1.6;color:var(--text-2b)}
+.kasten p:last-child{margin-bottom:0}
+
+/* ── Gesetzesübersicht ── */
+.uebersicht{max-width:1040px;margin:0 auto;padding:44px 48px 80px}
+.uebersicht h1{font-family:var(--serif);font-size:32px;line-height:1.2;font-weight:400;margin:8px 0 0;letter-spacing:-.015em}
+.verzeichnis{display:flex;flex-direction:column}
+.verzeichniszeile{
+  display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;
+  padding:9px 6px;border-bottom:1px solid var(--linie-zart);
+}
+.verzeichniszeile:hover{background:var(--zeile-weich)}
+.verzeichniszeile .nr{font-family:var(--serif);font-size:14.5px;width:56px;flex:none;color:var(--text)}
+.verzeichniszeile .tt{font-size:13.5px;color:var(--text-2b)}
+.verzeichniszeile .abs{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-5);white-space:nowrap}
+
+/* ── Trefferliste ── */
+.trefferraster{display:flex;align-items:flex-start}
+.filterspalte{width:var(--nav);flex:none;padding:22px 16px 60px;border-right:1px solid var(--linie-schwach)}
+.filterzeile{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:12.5px;color:var(--text-2b);width:100%;text-align:left}
+.filterzeile .zahl{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-5)}
+.trefferspalte{flex:1;min-width:0;padding:22px 32px 70px}
+.trefferkopf{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.trefferkopf h1{font-family:var(--serif);font-size:20px;font-weight:400;margin:0}
+.treffer{
+  display:block;width:100%;text-align:left;
+  padding:14px 0;border-bottom:1px solid var(--linie-zart);
+}
+.treffer:hover{background:var(--zeile-weich)}
+.treffer-kopf{display:flex;align-items:baseline;gap:10px;margin-bottom:5px}
+.treffer-nr{font-family:var(--serif);font-size:16.5px;color:var(--text)}
+.treffer-titel{font-size:13px;color:var(--text-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.treffer-gesetz{
+  margin-left:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-4);border:1px solid var(--linie);border-radius:var(--r-chip);padding:2px 6px;flex:none;
+}
+.treffer-text{font-family:var(--serif);font-size:15px;line-height:1.62;color:var(--text-2);margin:0}
+.treffer-text mark{background:var(--treffer);color:var(--text);padding:0 1px;border-radius:var(--r-marke)}
+.treffer-fund{font-family:var(--mono);font-size:10px;color:var(--text-5);display:block;margin-top:6px}
+/* Norm ohne geladenen Datensatz: grau, ohne Gelb, mit Fundstellenhinweis.
+   Niemals erfundener Wortlaut. */
+.treffer.ausstehend .treffer-nr,
+.treffer.ausstehend .treffer-text{color:var(--text-4)}
+.treffer.ausstehend .treffer-text mark{background:var(--treffer-ohne);color:var(--text-3)}
+
+/* ══════════════════════════════════════════════════════════════════════
    Stufe 768–1199 px: linke Spalte wird zur Schublade, Apparat auf 300 px
    ══════════════════════════════════════════════════════════════════════ */
 .schubladen-knopf{display:none}
@@ -629,7 +746,7 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 <header>
   <div class="kopf">
     <button class="schubladen-knopf" id="schublade-auf" aria-label="Normenverzeichnis öffnen">☰&nbsp;Normen</button>
-    <span class="wortmarke">steuernorm</span>
+    <button type="button" class="wortmarke" id="wortmarke" aria-label="Zur Startseite">steuernorm</button>
 
     <label class="suchfeld" for="suche">
       <span class="kuerzel" aria-hidden="true">⌘K</span>
@@ -707,11 +824,13 @@ const S = {
   anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
   belege: {},              // abk → belege/<gesetz>.json
   struktur: {},            // abk → struktur/<gesetz>.json .normen
+  verweise: null,          // data/verweise.json .normen — Rückverweise
   verwaltung: {},          // abk → verwaltung/<gesetz>.json
   aktiveVerwaltung: null,  // id | null — flüchtig
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
   letzteFarbe: "#F2C744",  // localStorage
+  filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
 };
 
 /* Voreinstellungen der Farbwahl, dazu ein freier Wähler. */
@@ -2272,6 +2391,114 @@ function verwaltungBauen(){
   return raus;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Register „Schema"
+
+   Der Aufbau der Norm in Stufen, aus annotations/. Das ist eine strukturierte
+   Wiedergabe des Normaufbaus, kein Prüfungsschema im juristischen Sinn: Es
+   endet an der Normgrenze, und die Reihenfolge ist gesetzt, nicht abgeleitet.
+   Genau so steht es auch darunter.
+   ══════════════════════════════════════════════════════════════════════ */
+function schemaBauen(){
+  const raus = document.createDocumentFragment();
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const schema = anm && Array.isArray(anm.schema) ? anm.schema : [];
+
+  if (!schema.length){
+    raus.appendChild(fehlmeldung(
+      "Kein Schema",
+      anm ? "Für diese Norm wird kein Schema erzeugt — sie hat keine Tatbestand-Rechtsfolge-Struktur."
+          : "Für dieses Gesetz liegen keine Annotationen vor.",
+      "annotations/" + S.abk.toLowerCase() + ".json",
+    ));
+    raus.appendChild(haftungssatz());
+    return raus;
+  }
+
+  for (const b of schema){
+    const abschnitt = block(b.absatz ? b.absatz + (b.rolle ? " · " + b.rolle : "") : (b.rolle || "Aufbau"));
+    for (const stufe of b.schritte || []){
+      const kopf = document.createElement("p");
+      kopf.style.fontWeight = "500";
+      kopf.textContent = (stufe.n ? stufe.n + " " : "") + stufe.t
+        + (stufe.junktor ? (stufe.junktor === "oder" ? " (alternativ)" : " (kumulativ)") : "");
+      abschnitt.appendChild(kopf);
+      for (const unter of stufe.sub || []){
+        const p = document.createElement("p");
+        p.style.paddingLeft = "12px";
+        p.style.color = "var(--text-2b)";
+        p.textContent = "— " + (typeof unter === "string" ? unter : unter.t);
+        if (typeof unter === "object" && unter.pfad) p.title = unter.pfad;
+        abschnitt.appendChild(p);
+      }
+    }
+    raus.appendChild(abschnitt);
+  }
+
+  const p = document.createElement("p");
+  p.className = "haftung";
+  p.textContent = "Strukturierte Wiedergabe des Normaufbaus, maschinell erzeugt. "
+    + "Kein Prüfungsschema im juristischen Sinn: Es endet an der Normgrenze, "
+    + "und die Reihenfolge ist gesetzt, nicht abgeleitet.";
+  raus.appendChild(p);
+  return raus;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Register „Zitate" — welche Normen auf diese verweisen
+   ══════════════════════════════════════════════════════════════════════ */
+function zitateBauen(){
+  const raus = document.createDocumentFragment();
+  const schluessel = S.abk.toLowerCase() + "/" + S.normId;
+  const quellen = (S.verweise && S.verweise[schluessel]) || [];
+
+  if (!S.verweise){
+    raus.appendChild(fehlmeldung("Kein Verweisindex",
+      "Der Rückverweisindex fehlt.", "data/verweise.json"));
+    return raus;
+  }
+  if (!quellen.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.textContent = "Keine Norm im Bestand verweist auf diese Vorschrift.";
+    raus.appendChild(p);
+    return raus;
+  }
+
+  const kappe = document.createElement("p");
+  kappe.className = "mono-etikett";
+  kappe.style.marginBottom = "10px";
+  kappe.textContent = quellen.length + (quellen.length === 1 ? " Vorschrift" : " Vorschriften");
+  raus.appendChild(kappe);
+
+  const wolke = document.createElement("div");
+  wolke.className = "zitatwolke";
+  for (const q of quellen){
+    const [abk, id] = q.split("/");
+    const meta = registerEintrag(abk);
+    const norm = meta && meta.normen ? meta.normen.find(n => n.id === id) : null;
+    const b = knopf("zitat");
+    if (meta && meta.abk !== S.abk){
+      const g = document.createElement("span");
+      g.className = "zitat-gesetz";
+      g.textContent = meta.abk;
+      b.appendChild(g);
+    }
+    b.appendChild(document.createTextNode(norm ? norm.e : "§ " + id));
+    if (norm && norm.t) b.title = norm.t;
+    b.onclick = () => { location.hash = "#/" + abk + "/" + id; };
+    wolke.appendChild(b);
+  }
+  raus.appendChild(wolke);
+
+  const p = document.createElement("p");
+  p.className = "haftung";
+  p.textContent = "Automatisch aus dem Wortlaut der Verweisungen gewonnen. "
+    + "Verweise über Rechtsverordnungen und Verwaltungsanweisungen sind nicht erfasst.";
+  raus.appendChild(p);
+  return raus;
+}
+
 function apparatZeichnen(){
   const apparat = el("apparat");
   apparat.innerHTML = "";
@@ -2299,6 +2526,10 @@ function apparatZeichnen(){
     inhalt.appendChild(markierungenBauen());
   } else if (S.apparatRegister === "verwaltung"){
     inhalt.appendChild(verwaltungBauen());
+  } else if (S.apparatRegister === "schema"){
+    inhalt.appendChild(schemaBauen());
+  } else if (S.apparatRegister === "zitate"){
+    inhalt.appendChild(zitateBauen());
   } else {
     const p = document.createElement("p");
     p.className = "platzhalter";
@@ -2311,14 +2542,426 @@ function apparatZeichnen(){
   apparat.appendChild(inhalt);
 }
 
+/** Die drei weiteren Ansichten nutzen die volle Breite und keinen Apparat. */
+function hauptStilZuruecksetzen(){
+  const haupt = el("haupt");
+  haupt.className = "hauptspalte";
+  el("auswahlleiste").classList.remove("offen");
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Startseite
+   ══════════════════════════════════════════════════════════════════════ */
+function startseiteZeichnen(){
+  document.body.dataset.ansicht = "start";
+  const haupt = el("haupt");
+  haupt.className = "breit";
+  haupt.innerHTML = "";
+  el("navspalte").innerHTML = "";
+  el("apparat").innerHTML = "";
+
+  const mitte = document.createElement("div");
+  mitte.className = "mitte";
+
+  const h1 = document.createElement("h1");
+  h1.appendChild(document.createTextNode("Die Steuergesetze im Volltext."));
+  const zweite = document.createElement("span");
+  zweite.className = "zweite";
+  zweite.textContent = "Mit erkannter Struktur, eigenen Markierungen und Nachweisen.";
+  h1.appendChild(zweite);
+  mitte.appendChild(h1);
+
+  const feld = document.createElement("form");
+  feld.className = "grossfeld";
+  const eingabe = document.createElement("input");
+  eingabe.type = "search";
+  eingabe.placeholder = "Norm, Wortlaut oder Fundstelle …";
+  eingabe.setAttribute("aria-label", "Suche");
+  const enter = document.createElement("span");
+  enter.className = "enter";
+  enter.textContent = "Enter zum Suchen";
+  feld.append(eingabe, enter);
+  feld.onsubmit = (e) => { e.preventDefault(); if (eingabe.value.trim()) sucheOeffnen(eingabe.value.trim()); };
+  mitte.appendChild(feld);
+
+  /* „Häufig" führt auf echte Normen des Bestands, nicht auf erfundene. */
+  const haeufig = document.createElement("div");
+  haeufig.className = "haeufig";
+  haeufig.appendChild(document.createTextNode("Häufig:"));
+  for (const [abk, id] of [["EStG", "15"], ["EStG", "9"], ["UStG", "4"], ["AO", "370"], ["SolzG", "3"]]){
+    const meta = registerEintrag(abk);
+    const norm = meta && meta.normen ? meta.normen.find(n => n.id === id) : null;
+    if (!norm) continue;                       // nichts anbieten, was es nicht gibt
+    const b = knopf("pille", norm.e + " " + meta.abk);
+    b.title = norm.t || "";
+    b.onclick = () => { location.hash = "#/" + abk.toLowerCase() + "/" + id; };
+    haeufig.appendChild(b);
+  }
+  mitte.appendChild(haeufig);
+
+  const raster = document.createElement("div");
+  raster.className = "zweispalt";
+
+  const links = document.createElement("div");
+  const kopf = document.createElement("p");
+  kopf.className = "spaltenkopf";
+  kopf.textContent = "Gesetze";
+  links.appendChild(kopf);
+  const liste = document.createElement("div");
+  liste.className = "gesetzraster";
+  for (const g of S.register.gesetze){
+    const b = knopf("gesetzzeile");
+    const abk = document.createElement("span"); abk.className = "abk"; abk.textContent = g.abk;
+    const name = document.createElement("span"); name.className = "name"; name.textContent = g.titel;
+    const zahl = document.createElement("span"); zahl.className = "zahl"; zahl.textContent = g.anzahl;
+    b.append(abk, name, zahl);
+    b.title = g.titel;
+    b.onclick = () => { location.hash = "#/" + g.abk.toLowerCase(); };
+    liste.appendChild(b);
+  }
+  links.appendChild(liste);
+
+  const rechts = document.createElement("div");
+  if (S.zuletzt.length){
+    const k = document.createElement("p");
+    k.className = "spaltenkopf";
+    k.textContent = "Zuletzt gelesen";
+    rechts.appendChild(k);
+    const l = document.createElement("div");
+    l.style.display = "flex"; l.style.flexDirection = "column"; l.style.gap = "6px";
+    l.style.marginBottom = "28px"; l.style.alignItems = "flex-start";
+    for (const eintrag of S.zuletzt.slice(0, 6)){
+      const meta = registerEintrag(eintrag.gesetz);
+      const norm = meta && meta.normen ? meta.normen.find(n => n.id === eintrag.norm) : null;
+      const b = knopf("", (norm ? norm.e : "§ " + eintrag.norm) + " " + (meta ? meta.abk : eintrag.gesetz));
+      b.style.fontSize = "13px"; b.style.color = "var(--text-2b)";
+      b.onclick = () => { location.hash = "#/" + eintrag.gesetz.toLowerCase() + "/" + eintrag.norm; };
+      l.appendChild(b);
+    }
+    rechts.appendChild(l);
+  }
+  const k2 = document.createElement("p");
+  k2.className = "spaltenkopf";
+  k2.textContent = "Über die Daten";
+  rechts.appendChild(k2);
+  const kasten = document.createElement("div");
+  kasten.className = "kasten";
+  const p1 = document.createElement("p");
+  p1.textContent = "Volltexte aus \u201eGesetze im Internet\u201c (BMJ / Bundesamt für Justiz), "
+    + "amtliche Werke und nach § 5 Abs. 1 UrhG gemeinfrei. Maßgeblich ist allein die im "
+    + "Bundesgesetzblatt verkündete Fassung.";
+  const p2 = document.createElement("p");
+  p2.textContent = "Struktur, Schema und Verweise sind maschinell erzeugt und nicht "
+    + "redaktionell geprüft. Sie sind eine Zutat dieser Seite und keine Rechtsberatung.";
+  kasten.append(p1, p2);
+  rechts.appendChild(kasten);
+
+  raster.append(links, rechts);
+  mitte.appendChild(raster);
+  haupt.appendChild(mitte);
+
+  reiterZeichnen();
+  document.title = "steuernorm — die Steuergesetze im Volltext";
+  eingabe.focus();
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Gesetzesübersicht
+   ══════════════════════════════════════════════════════════════════════ */
+function uebersichtZeichnen(){
+  document.body.dataset.ansicht = "uebersicht";
+  const haupt = el("haupt");
+  haupt.className = "breit";
+  haupt.innerHTML = "";
+  el("navspalte").innerHTML = "";
+  el("apparat").innerHTML = "";
+
+  const gesetz = S.gesetz;
+  const wrap = document.createElement("div");
+  wrap.className = "uebersicht";
+
+  const etikett = document.createElement("p");
+  etikett.className = "mono-etikett";
+  etikett.textContent = "Gesetz";
+  const h1 = document.createElement("h1");
+  h1.textContent = gesetz.titel;
+
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  const chip = document.createElement("span");
+  chip.className = "etikett gefuellt";
+  chip.textContent = gesetz.abk;
+  meta.appendChild(chip);
+  const zahl = document.createElement("span");
+  zahl.textContent = gesetz.normen.length + " Normen";
+  meta.appendChild(zahl);
+  const fassung = fassungAus(gesetz);
+  if (fassung){
+    const f = document.createElement("span");
+    f.textContent = "Fassung " + fassung;
+    meta.appendChild(f);
+  }
+  if (gesetz.quelle){
+    const a = document.createElement("a");
+    a.href = gesetz.quelle; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "amtliche Fassung ↗";
+    a.style.color = "var(--verweis)";
+    meta.appendChild(a);
+  }
+  wrap.append(etikett, h1, meta);
+
+  const raster = document.createElement("div");
+  raster.className = "zweispalt";
+  raster.style.marginTop = "34px";
+
+  const verzeichnis = document.createElement("div");
+  verzeichnis.className = "verzeichnis";
+  let letzteGliederung = null;
+  for (const norm of gesetz.normen){
+    if (norm.gliederung && norm.gliederung !== letzteGliederung){
+      letzteGliederung = norm.gliederung;
+      const g = document.createElement("p");
+      g.className = "spaltenkopf";
+      g.style.marginTop = "22px";
+      g.textContent = norm.gliederung;
+      verzeichnis.appendChild(g);
+    }
+    const b = knopf("verzeichniszeile");
+    const nr = document.createElement("span"); nr.className = "nr"; nr.textContent = norm.enbez;
+    const tt = document.createElement("span"); tt.className = "tt"; tt.textContent = norm.titel || "";
+    const abs = document.createElement("span");
+    abs.className = "abs";
+    // Absatzzahl aus den Daten, nicht geschätzt.
+    abs.textContent = norm.abs.length + (norm.abs.length === 1 ? " Abs." : " Abs.");
+    b.append(nr, tt, abs);
+    b.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+    verzeichnis.appendChild(b);
+  }
+
+  const rechts = document.createElement("div");
+  const k = document.createElement("p");
+  k.className = "spaltenkopf";
+  k.textContent = "Zum Gesetz";
+  const kasten = document.createElement("div");
+  kasten.className = "kasten";
+  const p1 = document.createElement("p");
+  const stand = (gesetz.stand || []).map(x => x.text).filter(Boolean).join(" ");
+  p1.textContent = stand || "Keine Standangabe im Datensatz.";
+  kasten.appendChild(p1);
+  const druck = knopf("", "Ganzes Gesetz drucken");
+  druck.style.color = "var(--verweis)";
+  druck.style.fontSize = "12.5px";
+  druck.onclick = () => window.print();
+  const p2 = document.createElement("p");
+  p2.appendChild(druck);
+  kasten.appendChild(p2);
+  rechts.append(k, kasten);
+
+  raster.append(verzeichnis, rechts);
+  wrap.appendChild(raster);
+  haupt.appendChild(wrap);
+
+  reiterZeichnen();
+  document.title = gesetz.titel + " · steuernorm";
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Trefferliste
+
+   Gesucht wird in dem, was geladen ist. Normen, deren Volltext noch nicht
+   vorliegt, erscheinen grau mit dem Vermerk „Datensatz … ausstehend" — nie mit
+   erfundenem Wortlaut.
+   ══════════════════════════════════════════════════════════════════════ */
+function sucheOeffnen(begriff){
+  location.hash = "#/suche/" + encodeURIComponent(begriff);
+}
+
+function normVolltext(norm){
+  if (norm.__vt) return norm.__vt;
+  const roh = (norm.abs || []).map(a => a.html || "").join(" ")
+    .replace(/<[^>]+>/g, " ").replace(/&sect;/g, "§").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ").trim();
+  Object.defineProperty(norm, "__vt", { value: roh, enumerable: false });
+  return roh;
+}
+
+function trefferliste(begriff){
+  const suche = begriff.toLowerCase();
+  const treffer = [];
+  for (const meta of S.register.gesetze){
+    if (S.filterGesetze.size && !S.filterGesetze.has(meta.abk)) continue;
+    const geladen = cacheGesetz.get(meta.abk.toLowerCase());
+    if (!geladen){
+      /* Nicht geladen: Der Registereintrag trägt Nummern und Titel, mehr nicht.
+         Diese Treffer werden als ausstehend gezeigt. */
+      for (const n of meta.normen || []){
+        if (!((n.e + " " + (n.t || "")).toLowerCase().includes(suche))) continue;
+        treffer.push({ abk: meta.abk, id: n.id, enbez: n.e, titel: n.t || "", ausstehend: true });
+        if (treffer.length > 300) return treffer;
+      }
+      continue;
+    }
+    for (const norm of geladen.normen){
+      const kopf = (norm.enbez + " " + (norm.titel || "")).toLowerCase();
+      const text = normVolltext(norm);
+      const imKopf = kopf.includes(suche);
+      const stelle = text.toLowerCase().indexOf(suche);
+      if (!imKopf && stelle === -1) continue;
+      treffer.push({
+        abk: meta.abk, id: norm.id, enbez: norm.enbez, titel: norm.titel || "",
+        ausstehend: false, text, stelle,
+      });
+      if (treffer.length > 300) return treffer;
+    }
+  }
+  return treffer;
+}
+
+function trefferZeichnen(begriff){
+  document.body.dataset.ansicht = "suche";
+  const haupt = el("haupt");
+  haupt.className = "breit";
+  haupt.innerHTML = "";
+  el("navspalte").innerHTML = "";
+  el("apparat").innerHTML = "";
+  el("suche").value = begriff;
+
+  const raster = document.createElement("div");
+  raster.className = "trefferraster";
+
+  /* ── Filterspalte ── */
+  const filter = document.createElement("div");
+  filter.className = "filterspalte";
+  const fk = document.createElement("p");
+  fk.className = "spaltenkopf";
+  fk.textContent = "Gesetze";
+  filter.appendChild(fk);
+
+  const alle = trefferliste(begriff);
+  const zahlProGesetz = new Map();
+  for (const t of alle) zahlProGesetz.set(t.abk, (zahlProGesetz.get(t.abk) || 0) + 1);
+
+  for (const g of S.register.gesetze){
+    const b = knopf("filterzeile");
+    const kasten = document.createElement("span");
+    kasten.textContent = S.filterGesetze.has(g.abk) ? "☑" : "☐";
+    const name = document.createElement("span");
+    name.textContent = g.abk;
+    const zahl = document.createElement("span");
+    zahl.className = "zahl";
+    zahl.textContent = zahlProGesetz.get(g.abk) || 0;
+    b.append(kasten, name, zahl);
+    b.setAttribute("aria-pressed", String(S.filterGesetze.has(g.abk)));
+    b.onclick = () => {
+      if (S.filterGesetze.has(g.abk)) S.filterGesetze.delete(g.abk);
+      else S.filterGesetze.add(g.abk);
+      trefferZeichnen(begriff);
+    };
+    filter.appendChild(b);
+  }
+
+  const nachladen = S.register.gesetze.filter(g => !cacheGesetz.has(g.abk.toLowerCase()));
+  if (nachladen.length){
+    const b = knopf("pille", nachladen.length + " Gesetze laden");
+    b.style.marginTop = "14px";
+    b.title = "Ohne geladenen Volltext wird nur in Nummer und Überschrift gesucht.";
+    b.onclick = async () => {
+      b.textContent = "lädt …"; b.disabled = true;
+      for (const g of nachladen){ try { await gesetzLaden(g.abk); } catch (e) { /* weiter */ } }
+      trefferZeichnen(begriff);
+    };
+    filter.appendChild(b);
+  }
+
+  /* ── Trefferspalte ── */
+  const spalte = document.createElement("div");
+  spalte.className = "trefferspalte";
+  const kopf = document.createElement("div");
+  kopf.className = "trefferkopf";
+  const h1 = document.createElement("h1");
+  h1.textContent = alle.length + (alle.length === 1 ? " Treffer für „" : " Treffer für „") + begriff + "“";
+  kopf.appendChild(h1);
+  spalte.appendChild(kopf);
+
+  if (!alle.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.style.maxWidth = "var(--lesespalte)";
+    p.textContent = "Kein Treffer. Es wird in den geladenen Volltexten gesucht; "
+      + "über „Gesetze laden“ lässt sich der Bestand erweitern.";
+    spalte.appendChild(p);
+  }
+
+  for (const t of alle.slice(0, 80)){
+    const b = knopf("treffer" + (t.ausstehend ? " ausstehend" : ""));
+    const zeile = document.createElement("div");
+    zeile.className = "treffer-kopf";
+    const nr = document.createElement("span"); nr.className = "treffer-nr"; nr.textContent = t.enbez;
+    const titel = document.createElement("span"); titel.className = "treffer-titel"; titel.textContent = t.titel;
+    const chip = document.createElement("span"); chip.className = "treffer-gesetz"; chip.textContent = t.abk;
+    zeile.append(nr, titel, chip);
+    b.appendChild(zeile);
+
+    const text = document.createElement("p");
+    text.className = "treffer-text";
+    if (t.ausstehend){
+      text.textContent = "Wortlaut noch nicht geladen.";
+    } else if (t.stelle >= 0){
+      const von = Math.max(0, t.stelle - 90);
+      const bis = Math.min(t.text.length, t.stelle + begriff.length + 150);
+      text.appendChild(document.createTextNode((von ? "… " : "") + t.text.slice(von, t.stelle)));
+      const m = document.createElement("mark");
+      m.textContent = t.text.slice(t.stelle, t.stelle + begriff.length);
+      text.appendChild(m);
+      text.appendChild(document.createTextNode(t.text.slice(t.stelle + begriff.length, bis) + (bis < t.text.length ? " …" : "")));
+    } else {
+      text.textContent = t.text.slice(0, 190) + (t.text.length > 190 ? " …" : "");
+    }
+    b.appendChild(text);
+
+    const fund = document.createElement("span");
+    fund.className = "treffer-fund";
+    fund.textContent = t.ausstehend
+      ? "Datensatz " + t.abk + " ausstehend"
+      : t.abk + " " + t.enbez;
+    b.appendChild(fund);
+
+    b.onclick = () => { location.hash = "#/" + t.abk.toLowerCase() + "/" + t.id; };
+    spalte.appendChild(b);
+  }
+
+  raster.append(filter, spalte);
+  haupt.appendChild(raster);
+  reiterZeichnen();
+  document.title = "„" + begriff + "“ — Suche · steuernorm";
+}
+
 /* ══════════════════════════════════════════════════════════════════════
    Wegweiser
    ══════════════════════════════════════════════════════════════════════ */
 async function wegweiser(){
   if (!S.register) return;
+  popoverSchliessen();
 
-  const teile = decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
-  const abkRoh = (teile[0] || gemerkt("letztesGesetz", "solzg")).toLowerCase();
+  const roh = location.hash.replace(/^#\/?/, "");
+  const teile = roh.split("/").map(decodeURIComponent).filter(Boolean);
+
+  /* Leerer Pfad → Startseite. Der Einstieg ist nicht die zuletzt gelesene
+     Norm, sondern die Übersicht; wer weiterlesen will, findet sie unter
+     „Zuletzt gelesen". */
+  if (!teile.length){
+    hauptStilZuruecksetzen();
+    startseiteZeichnen();
+    return;
+  }
+
+  if (teile[0] === "suche"){
+    hauptStilZuruecksetzen();
+    trefferZeichnen(teile.slice(1).join("/"));
+    return;
+  }
+
+  const abkRoh = teile[0].toLowerCase();
   const eintrag = registerEintrag(abkRoh) || S.register.gesetze[0];
   S.abk = eintrag.abk;
   merken("letztesGesetz", S.abk.toLowerCase());
@@ -2339,7 +2982,14 @@ async function wegweiser(){
     return;
   }
 
-  S.normId = teile[1] || S.gesetz.normen[0].id;
+  /* Nur das Gesetz genannt → Gesetzesübersicht. */
+  if (teile.length === 1){
+    hauptStilZuruecksetzen();
+    uebersichtZeichnen();
+    return;
+  }
+
+  S.normId = teile[1];
   if (!S.gesetz.normen.some(n => n.id === S.normId)) S.normId = S.gesetz.normen[0].id;
 
   await zutatenLaden(S.abk);
@@ -2356,6 +3006,8 @@ async function wegweiser(){
     .slice(0, 12);
   merken("zuletzt", S.zuletzt);
 
+  hauptStilZuruecksetzen();
+  document.body.dataset.ansicht = "norm";
   reiterZeichnen();
   navZeichnen();
   hauptZeichnen();
@@ -2435,10 +3087,21 @@ async function start(){
     popoverSchliessen();
   });
 
+  el("suche").addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    const begriff = el("suche").value.trim();
+    if (begriff) sucheOeffnen(begriff);
+  });
+  el("wortmarke").onclick = () => { location.hash = "#/"; };
+
   window.addEventListener("hashchange", wegweiser);
 
   try {
     S.register = await holen("data/index.json");
+    // Rückverweise sind eine Zutat: Fehlt die Datei, arbeitet alles andere weiter.
+    try { S.verweise = (await holen("data/verweise.json")).normen; }
+    catch (e) { S.verweise = null; }
   } catch (fehler) {
     el("haupt").innerHTML =
       '<div class="melder"><strong>Die Gesetzesdaten fehlen oder sind nicht erreichbar.</strong>'
