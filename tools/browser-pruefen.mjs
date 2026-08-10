@@ -18,11 +18,13 @@ import { chromium } from "playwright";
 
 const WURZEL = process.argv[2] || "http://localhost:8123";
 
-/* Eine Auswahl über alle Gesetze, mit den Normen, die früher abstürzten. */
+/* Eine Auswahl über alle Gesetze, mit den Normen, die früher abstürzten.
+   Dazu die drei Ansichten ohne Normtext — sie tragen keine `.lesespalte`. */
 const PROBEN = [
-  "/", "#/solzg/3", "#/estg/1", "#/estg/15", "#/ustg/4", "#/ao/1",
+  "#/solzg/3", "#/estg/1", "#/estg/15", "#/ustg/4", "#/ao/1",
   "#/astg/2", "#/fgo/1", "#/bewg/1", "#/kstg/1", "#/erbstg/1", "#/gewstg/1",
 ];
+const PROBEN_OHNE_TEXT = ["/", "#/solzg", "#/suche/Vorsteuer"];
 
 const pruef = [];
 const ok = (name, bedingung, zusatz = "") => pruef.push({ name, bestanden: Boolean(bedingung), zusatz });
@@ -53,9 +55,12 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     try {
       await seite.goto(WURZEL + "/" + ziel, { waitUntil: "domcontentloaded", timeout: 20000 });
       await seite.waitForTimeout(1500);
-      const kopf = (await seite.textContent("h1")) || "";
-      const text = (await seite.textContent(".lesespalte")) || "";
-      if (!kopf.trim() || text.trim().length < 20) leer++;
+      /* `$eval` würde bei fehlendem Knoten werfen und einen Absturz vortäuschen. */
+      const inhalt = await seite.evaluate(() => ({
+        kopf: (document.querySelector("h1") || {}).textContent || "",
+        text: (document.querySelector(".lesespalte") || {}).textContent || "",
+      }));
+      if (!inhalt.kopf.trim() || inhalt.text.trim().length < 20) leer++;
     } catch (fehler) {
       krachte = true;
     }
@@ -64,6 +69,24 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   }
   ok("Keine Norm bringt den Renderer zum Absturz", abgestuerzt === 0, `${PROBEN.length} Proben`);
   ok("Jede Probe zeigt Normkopf und Wortlaut", leer === 0);
+
+  /* Die Ansichten ohne Normtext: Startseite, Gesetzesübersicht, Trefferliste. */
+  let ohneKopf = 0;
+  for (const ziel of PROBEN_OHNE_TEXT) {
+    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    const seite = await ctx.newPage();
+    let krachte = false;
+    seite.on("crash", () => { krachte = true; });
+    try {
+      await seite.goto(WURZEL + "/" + ziel, { waitUntil: "domcontentloaded", timeout: 20000 });
+      await seite.waitForTimeout(1400);
+      const kopf = await seite.evaluate(() => (document.querySelector("h1") || {}).textContent || "");
+      if (!kopf.trim()) ohneKopf++;
+    } catch (fehler) { krachte = true; }
+    if (krachte) { abgestuerzt++; console.log(`     ✗ ${ziel} — Renderer abgestürzt`); }
+    await ctx.close();
+  }
+  ok("Startseite, Übersicht und Trefferliste tragen eine Überschrift", ohneKopf === 0);
 }
 
 /* ── 2. Das Grundraster hält die Maße der Spezifikation ── */
@@ -308,6 +331,85 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
   await seite.waitForTimeout(1000);
   ok(`Kein waagerechter Überlauf (${name})`, !(await ueberlauf(seite)));
+  await ctx.close();
+}
+
+/* ── 5b. Mobil: der Apparat als Blatt ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+
+  const zu = await seite.evaluate(() => ({
+    griff: (document.querySelector(".blattgriff") || {}).textContent || "",
+    werkzeuge: [...document.querySelectorAll(".werkzeugleiste button")].map((b) => b.textContent),
+    rinne: getComputedStyle(document.querySelector(".rinne")).flexDirection,
+  }));
+  ok("Blattgriff nennt den Inhalt", zu.griff.includes("Apparat"), zu.griff.trim());
+  ok("Werkzeugleiste am Fuß", zu.werkzeuge.length === 3, zu.werkzeuge.join(" · "));
+  ok("Absatzmarken laufen waagerecht", zu.rinne === "row", zu.rinne);
+
+  await seite.click(".blattgriff");
+  await seite.waitForTimeout(700);
+  const offen = await seite.evaluate(() => {
+    const kasten = document.querySelector(".apparat").getBoundingClientRect();
+    return {
+      zustand: document.body.dataset.blatt,
+      oben: Math.round(kasten.top),
+      hoehe: Math.round(kasten.height),
+      festgehalten: getComputedStyle(document.body).overflow,
+      register: document.querySelectorAll(".apparat .register button").length,
+    };
+  });
+  ok("Blatt fährt hoch", offen.zustand === "offen" && offen.oben > 100, JSON.stringify(offen));
+  ok("Blatt ist rund 78 % hoch", Math.abs(offen.hoehe - 844 * 0.78) < 12, String(offen.hoehe));
+  ok("Text dahinter wird festgehalten", offen.festgehalten === "hidden", offen.festgehalten);
+  ok("Register im Blatt erreichbar", offen.register === 5, String(offen.register));
+  await ctx.close();
+}
+
+/* ── 5c. Druckfassung ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+  await seite.emulateMedia({ media: "print" });
+  await seite.waitForTimeout(400);
+
+  const druck = await seite.evaluate(() => {
+    const sichtbar = (wahl) => {
+      const k = document.querySelector(wahl);
+      if (!k) return false;
+      const stil = getComputedStyle(k);
+      return stil.display !== "none" && stil.visibility !== "hidden";
+    };
+    const s = document.querySelector(".lesespalte .s");
+    return {
+      kopfleiste: sichtbar("header"),
+      navspalte: sichtbar(".navspalte"),
+      legende: sichtbar(".legende"),
+      druckkopf: sichtbar(".druckkopf"),
+      druckfuss: sichtbar(".druckfuss"),
+      apparat: sichtbar(".apparat"),
+      strukturGrund: s ? getComputedStyle(s).backgroundColor : "",
+      fussText: (document.querySelector(".druckfuss") || {}).textContent || "",
+      haftung: (document.querySelector(".apparat .haftung") || {}).textContent || "",
+    };
+  });
+  ok("Druck ohne Kopfleiste", !druck.kopfleiste);
+  ok("Druck ohne Normenverzeichnis", !druck.navspalte);
+  ok("Druck ohne Legende", !druck.legende);
+  ok("Druckkopf erscheint", druck.druckkopf);
+  ok("Druckfuß erscheint", druck.druckfuss);
+  ok("Apparat wird zum Fußapparat", druck.apparat);
+  ok("Struktur-Einfärbung wird nicht gedruckt",
+    /rgba\(0, 0, 0, 0\)|transparent/.test(druck.strukturGrund), druck.strukturGrund);
+  ok("Druckfuß nennt Quelle und Vorbehalt",
+    druck.fussText.includes("Gesetze im Internet") && druck.fussText.includes("Bundesgesetzblatt"));
+  ok("Haftungssatz auch im Druck", druck.haftung.includes("keine Rechtsberatung"));
+  await seite.emulateMedia({ media: "screen" });
   await ctx.close();
 }
 

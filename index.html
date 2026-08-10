@@ -720,6 +720,31 @@ body[data-ansicht=start] .suchfeld{display:none}
    Der Apparat wird in Schritt 8 zum Blatt von unten; bis dahin steht er
    unter dem Normtext, damit nichts unerreichbar ist.
    ══════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════════════
+   Mobil: der Apparat wird zum Blatt von unten
+
+   Auf 390 px ist eine dritte Spalte nicht darstellbar. Der Apparat fährt
+   deshalb als Blatt über den Text — mit Griff, Radius oben und Schatten nach
+   oben. Dahinter tritt der Normtext zurück und wird festgehalten: Scrollt er
+   mit, verliert man beim Lesen im Blatt die Stelle.
+   ══════════════════════════════════════════════════════════════════════ */
+.blattgriff{
+  display:none;
+  width:100%;align-items:center;justify-content:space-between;gap:10px;
+  padding:12px 18px;background:var(--leiste);
+  border-top:1px solid var(--linie-schwach);border-bottom:1px solid var(--linie-schwach);
+  font-size:12.5px;color:var(--text-2b);
+}
+.blattgriff .pfeil{color:var(--text-4);font-size:13px}
+.werkzeugleiste{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;
+  gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  background:var(--leiste);border-top:1px solid var(--linie);
+  overflow-x:auto;scrollbar-width:none;
+}
+.werkzeugleiste::-webkit-scrollbar{display:none}
+.werkzeugleiste button{flex:none;min-height:44px}
+
 @media (max-width:767px){
   .kopf{gap:10px;flex-wrap:wrap}
   .kopf .einfaerben>span{display:none}
@@ -738,7 +763,138 @@ body[data-ansicht=start] .suchfeld{display:none}
   /* Tippziele mindestens 44 px hoch. */
   .normzeile{padding:11px 16px}
   .reiter{padding:12px 14px}
+  .rinne button{min-height:32px;padding:6px 8px}
+
+  /* Absatzmarken laufen waagerecht statt senkrecht. */
+  .leseraum{display:block}
+  .rinne{
+    flex-direction:row;flex-wrap:nowrap;width:auto;overflow-x:auto;
+    scrollbar-width:none;gap:6px;padding:0 0 12px;
+  }
+  .rinne::-webkit-scrollbar{display:none}
+  .rinne button{
+    border-right:0;border-bottom:2px solid var(--linie-schwach);
+    text-align:center;flex:none;
+  }
+  .rinne button[aria-current=true]{border-bottom-color:var(--text)}
+
+  .blattgriff{display:flex}
+  .werkzeugleiste{display:flex}
+  main.hauptspalte{padding-bottom:80px}
+
+  /* Der Apparat als Blatt */
+  .apparat{
+    /* `top:auto` ist nötig: Die Grundregel setzt `top:0` für die klebende
+       Spalte. Bliebe es stehen, spannte sich das Blatt von oben nach unten
+       statt 78 % von unten. */
+    position:fixed;left:0;right:0;bottom:0;top:auto;z-index:60;
+    width:auto;height:78vh;max-height:78vh;
+    background:var(--papier);
+    border:0;border-top:1px solid var(--linie);
+    border-radius:16px 16px 0 0;
+    box-shadow:var(--schatten-blatt);
+    transform:translateY(100%);
+    transition:transform 150ms ease-out;
+    overflow-y:auto;padding-bottom:24px;
+  }
+  body[data-blatt=offen] .apparat{transform:translateY(0)}
+  body[data-blatt=offen] .verdunkelung{
+    display:block;position:fixed;inset:0;z-index:55;background:rgba(20,22,26,.58);
+  }
+  /* Der Text hinter dem Blatt wird festgehalten. */
+  body[data-blatt=offen]{overflow:hidden}
+  .blatt-kopf{
+    position:sticky;top:0;z-index:2;background:var(--papier);
+    padding:8px 0 4px;display:flex;justify-content:center;
+  }
+  .blatt-kopf::before{
+    content:"";width:38px;height:4px;border-radius:999px;background:var(--linie-stark);
+  }
+  .register{justify-content:flex-start;gap:18px;padding:0 18px}
+  .registerinhalt{padding:16px 18px}
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Druckfassung
+
+   Gedruckt wird der Normtext, nicht die Anwendung. Die Struktur-Einfärbung
+   entfällt: Tonwerte sind auf Papier unzuverlässig, im Graustufendruck werden
+   aus drei Farben drei kaum unterscheidbare Graustufen — und eine Einfärbung,
+   die man nicht auseinanderhalten kann, ist schlimmer als keine.
+
+   Eigene Markierungen bleiben, aber als Kante statt als Fläche. Hinweise
+   werden zum Fußapparat.
+   ══════════════════════════════════════════════════════════════════════ */
+@media print{
+  @page{size:A4;margin:18mm 16mm 20mm}
+
+  header,.navspalte,.werkzeugleiste,.blattgriff,.auswahlleiste,.popover,
+  .verdunkelung,.blaettern,.rinne,.legende,.reiterleiste{display:none!important}
+
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .raster{display:block}
+  .hauptspalte{padding:0;width:auto}
+  .leseraum{display:block}
+  .lesespalte-huelle,.lesespalte{max-width:none}
+
+  /* Kopf der Druckseite */
+  .druckkopf{
+    display:flex!important;justify-content:space-between;align-items:baseline;
+    font-family:var(--mono);font-size:8pt;letter-spacing:.08em;text-transform:uppercase;
+    border-bottom:1px solid #14161A;padding-bottom:6pt;margin-bottom:14pt;
+  }
+  .brotkrume{display:none}
+  .hauptspalte h1{font-family:var(--serif);font-size:19pt;line-height:1.22;margin:0}
+  .meta{margin-top:6pt;font-size:8.5pt;color:#444}
+  .meta .etikett{border:0;padding:0;margin-right:10pt;font-size:8pt;background:none}
+
+  .lesespalte{font-size:11pt;line-height:1.62;color:#000}
+  .lesespalte p{margin:0 0 7pt}
+  .lesespalte .absatz{margin-bottom:7pt}
+
+  /* Struktur-Einfärbung wird NICHT ausgegeben. */
+  .lesespalte .s{background:transparent!important;box-shadow:none!important}
+
+  /* Eigene Markierung: Kante statt Fläche. */
+  .lesespalte .eigen{
+    background:transparent!important;
+    border-bottom:1pt solid #000!important;
+  }
+  /* Verwaltungsstelle bleibt als Punktlinie, der Chip als Kürzel. */
+  .lesespalte .vw{border-bottom:1pt dotted #000!important}
+  .vw-chip{border:0!important;background:none!important;color:#444!important;font-size:7.5pt}
+
+  /* Verweise: der Klick fehlt auf Papier, das Ziel wird ausgeschrieben. */
+  .lesespalte a.verweis{color:#000;border-bottom:0;text-decoration:none}
+
+  /* Der Apparat wird zum Fußapparat unter einer Linie. */
+  .apparat{
+    position:static!important;width:auto!important;max-height:none!important;
+    border:0!important;border-top:1px solid var(--linie-stark)!important;
+    border-radius:0!important;box-shadow:none!important;transform:none!important;
+    margin-top:16pt;padding:10pt 0 0!important;overflow:visible!important;
+    page-break-inside:avoid;
+  }
+  .register,.blatt-kopf{display:none!important}
+  .registerinhalt{padding:0!important}
+  .block{border-left:0;padding-left:0;margin-bottom:9pt}
+  .block p{font-size:9pt;line-height:1.5}
+  .fehlmeldung{border:0;padding:0;margin-bottom:9pt}
+  .fehlmeldung p{font-size:9pt}
+  .haftung{font-size:8pt;color:#444;border-top:1px solid var(--linie-stark);margin-top:10pt}
+
+  .druckfuss{
+    display:block!important;
+    font-family:var(--mono);font-size:7.5pt;color:#444;
+    border-top:1px solid var(--linie);margin-top:12pt;padding-top:5pt;
+  }
+
+  .karte,.zitat,.platzhalter{page-break-inside:avoid}
+}
+
+/* Nur im Druck sichtbar. */
+.druckkopf,.druckfuss{display:none}
+
 </style>
 </head>
 <body>
@@ -798,6 +954,8 @@ body[data-ansicht=start] .suchfeld{display:none}
     <button type="button" id="popover-weg">Entfernen</button>
   </div>
 </div>
+
+<div class="werkzeugleiste" id="werkzeugleiste" role="group" aria-label="Werkzeuge"></div>
 
 <div class="raster">
   <nav class="navspalte" id="navspalte" aria-label="Normen des Gesetzes"></nav>
@@ -1622,6 +1780,15 @@ function hauptZeichnen(){
   const norm = gesetz.normen.find(n => n.id === S.normId) || gesetz.normen[0];
   S.normId = norm.id;
 
+  /* Kopf- und Fußzeile der Druckfassung. Am Bildschirm unsichtbar. */
+  const druckkopf = document.createElement("div");
+  druckkopf.className = "druckkopf";
+  const dk1 = document.createElement("span"); dk1.textContent = "steuernorm";
+  const dk2 = document.createElement("span");
+  dk2.textContent = gesetz.abk + " · " + norm.enbez;
+  druckkopf.append(dk1, dk2);
+  haupt.appendChild(druckkopf);
+
   /* Brotkrume */
   const krume = document.createElement("div");
   krume.className = "brotkrume";
@@ -1828,8 +1995,23 @@ function hauptZeichnen(){
     apparatZeichnen();
   });
 
+  /* Auf schmalen Fenstern führt eine Zeile in den Apparat — mit den Zahlen,
+     die tatsächlich dahinter stehen. */
+  haupt.appendChild(blattgriffBauen());
+
   rinneMitlaufen(rinne, marken);
   haupt.appendChild(blaetternBauen(gesetz, norm));
+  const druckfuss = document.createElement("p");
+  druckfuss.className = "druckfuss";
+  const heute = new Date().toLocaleDateString("de-DE");
+  druckfuss.textContent = location.href
+    + " · abgerufen am " + heute
+    + " · Quelle: Gesetze im Internet (BMJ/BfJ)"
+    + " · Struktur maschinell erkannt, nicht redaktionell geprüft."
+    + " Maßgeblich ist die im Bundesgesetzblatt verkündete Fassung.";
+  haupt.appendChild(druckfuss);
+
+  werkzeugleisteBauen();
 
   document.title = norm.enbez + " " + gesetz.abk + (norm.titel ? " — " + norm.titel : "") + " · steuernorm";
 }
@@ -1893,6 +2075,76 @@ function legendeBauen(stand, segmente){
   d.appendChild(anmerkung);
 
   return d;
+}
+
+/**
+ * Die Zeile, die auf Mobil in den Apparat führt.
+ * Sie nennt, was dort steht — gezählt, nicht behauptet.
+ */
+function blattgriffBauen(){
+  const b = knopf("blattgriff");
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const belegDatei = S.belege[S.abk];
+  const beleg = belegDatei && belegDatei.normen ? belegDatei.normen[S.normId] : null;
+
+  const teile = [];
+  const verwaltung = (beleg && beleg.verwaltung ? beleg.verwaltung.length : 0)
+    + verwaltungDerNorm().length;
+  const markierungen = markierungenDerNorm().length;
+  const schema = anm && Array.isArray(anm.schema) ? anm.schema.length : 0;
+  if (schema) teile.push(schema + (schema === 1 ? " Schemablock" : " Schemablöcke"));
+  if (markierungen) teile.push(markierungen + (markierungen === 1 ? " Markierung" : " Markierungen"));
+  if (verwaltung) teile.push(verwaltung + " Verwaltung");
+
+  const text = document.createElement("span");
+  text.textContent = "Apparat" + (teile.length ? " — " + teile.join(" · ") : "");
+  const pfeil = document.createElement("span");
+  pfeil.className = "pfeil";
+  pfeil.textContent = "⌃";
+  b.append(text, pfeil);
+  b.setAttribute("aria-expanded", "false");
+  b.onclick = () => blattSetzen(true);
+  return b;
+}
+
+/** Öffnet und schließt das Blatt; hält den Text dahinter fest. */
+function blattSetzen(offen){
+  document.body.dataset.blatt = offen ? "offen" : "zu";
+  const griff = document.querySelector(".blattgriff");
+  if (griff) griff.setAttribute("aria-expanded", String(offen));
+  if (offen){
+    const ersterReiter = document.querySelector(".apparat .register button");
+    if (ersterReiter) ersterReiter.focus();
+  }
+}
+
+/**
+ * Werkzeugleiste am Fuß der Mobilansicht.
+ * Sie spiegelt die Kopfschalter, die dort keinen Platz haben.
+ */
+function werkzeugleisteBauen(){
+  const leiste = el("werkzeugleiste");
+  leiste.innerHTML = "";
+  if (document.body.dataset.ansicht !== "norm") return;
+
+  const stand = strukturSetzen(S.strukturModus, true);
+  const STUFEN = ["aus", "dezent", "voll"];
+  const einfaerben = knopf("pille", "Einfärben: " + stand.angezeigt);
+  einfaerben.disabled = !stand.moeglich;
+  if (!stand.moeglich) einfaerben.title = "Für diese Norm liegt kein Strukturdatensatz vor.";
+  einfaerben.onclick = () => {
+    const naechste = STUFEN[(STUFEN.indexOf(S.strukturModus) + 1) % STUFEN.length];
+    strukturSetzen(naechste);
+    hauptZeichnen();
+  };
+
+  const apparat = knopf("pille", "Apparat");
+  apparat.onclick = () => blattSetzen(true);
+
+  const start = knopf("pille", "Gesetze");
+  start.onclick = () => { location.hash = "#/"; };
+
+  leiste.append(einfaerben, apparat, start);
 }
 
 /** Genau eine Marke der Rinne ist die aktuelle. */
@@ -2503,6 +2755,10 @@ function apparatZeichnen(){
   const apparat = el("apparat");
   apparat.innerHTML = "";
 
+  const griff = document.createElement("div");
+  griff.className = "blatt-kopf";
+  apparat.appendChild(griff);
+
   const zeile = document.createElement("div");
   zeile.className = "register";
   zeile.setAttribute("role", "tablist");
@@ -2547,6 +2803,8 @@ function hauptStilZuruecksetzen(){
   const haupt = el("haupt");
   haupt.className = "hauptspalte";
   el("auswahlleiste").classList.remove("offen");
+  el("werkzeugleiste").innerHTML = "";
+  blattSetzen(false);
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -2996,6 +3254,7 @@ async function wegweiser(){
   S.aktiveMarkierung = null;
   S.aktiveVerwaltung = null;
   popoverSchliessen();
+  blattSetzen(false);
 
   /* Die aufgerufene Norm ist immer geöffnet. */
   reiterOeffnen(S.abk, S.normId, false);
@@ -3037,7 +3296,10 @@ async function start(){
     document.body.dataset.schublade =
       document.body.dataset.schublade === "offen" ? "zu" : "offen";
   };
-  el("verdunkelung").onclick = () => { document.body.dataset.schublade = "zu"; };
+  el("verdunkelung").onclick = () => {
+    document.body.dataset.schublade = "zu";
+    blattSetzen(false);
+  };
 
   document.addEventListener("keydown", (e) => {
     const imFeld = /^(INPUT|TEXTAREA)$/.test((document.activeElement || {}).tagName || "");
@@ -3065,6 +3327,7 @@ async function start(){
     }
     if (e.key === "Escape"){
       document.body.dataset.schublade = "zu";
+      blattSetzen(false);
       popoverSchliessen();
       el("auswahlleiste").classList.remove("offen");
       if (imFeld) document.activeElement.blur();
