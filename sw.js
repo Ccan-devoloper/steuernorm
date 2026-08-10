@@ -24,7 +24,7 @@
  * `activate` alle älteren Ablagen weg.
  */
 
-const FASSUNG = "steuernorm-v5";
+const FASSUNG = "steuernorm-v6-arbeitsplatz";
 const GERUEST = `${FASSUNG}-geruest`;
 const INHALTE = `${FASSUNG}-inhalte`;
 

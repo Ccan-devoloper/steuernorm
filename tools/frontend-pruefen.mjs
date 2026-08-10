@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 /**
- * frontend-pruefen.mjs — prüft das Frontend gegen die echten Daten.
+ * frontend-pruefen.mjs — schnelle Prüfung der Datenanbindung ohne Browser.
  *
  * Das Frontend ist eine einzelne HTML-Datei ohne Bauschritt; ein Tippfehler im
  * Skript fällt sonst erst im Browser auf. Der Lauf lädt index.html in jsdom,
- * bedient `fetch` aus dem Dateisystem und prüft, dass die Norm erscheint, die
- * Markierungen sitzen, Schema, Rück- und Vorwärtsverweise gebaut werden und die
- * eigenen Notizen ihre Textstelle wiederfinden.
+ * bedient `fetch` aus dem Dateisystem und prüft, dass die richtigen Daten an
+ * den richtigen Stellen ankommen.
+ *
+ * Was jsdom NICHT kann: Layout. Maße, Überlauf und Absturzfreiheit prüft
+ * `tools/browser-pruefen.mjs` in einem echten Browser.
  *
  *   npm install --no-save jsdom
  *   node tools/frontend-pruefen.mjs
@@ -16,15 +18,15 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { JSDOM } from "jsdom";
 
-import path2 from "node:path";
-const WURZEL = path2.resolve(import.meta.dirname, "..");
+const WURZEL = path.resolve(import.meta.dirname, "..");
 const html = await readFile(path.join(WURZEL, "index.html"), "utf8");
-
 const speicher = new Map();
+
 const dom = new JSDOM(html, {
-  url: "https://example.org/#/estg/15",
+  url: "https://example.org/#/solzg/3",
   runScripts: "dangerously",
   pretendToBeVisual: true,
+  resources: undefined,          // keine externen Schriften laden
   beforeParse(fenster) {
     fenster.fetch = async (pfad) => {
       const datei = String(pfad).replace(/^\.?\//, "");
@@ -38,77 +40,62 @@ const dom = new JSDOM(html, {
     fenster.localStorage.__proto__.setItem = function (k, v) { speicher.set(k, String(v)); };
     fenster.localStorage.__proto__.getItem = function (k) { return speicher.has(k) ? speicher.get(k) : null; };
     fenster.scrollTo = () => {};
-    fenster.print = () => {};
-    Object.defineProperty(fenster.navigator, "clipboard", { value: { writeText: async () => {} }, configurable: true });
   },
 });
+
 const { window } = dom;
 const warte = (ms) => new Promise((r) => setTimeout(r, ms));
-await warte(2500);
+await warte(2200);
 const d = window.document;
 
 const pruef = [];
 const ok = (name, bedingung, zusatz = "") => pruef.push({ name, bestanden: Boolean(bedingung), zusatz });
 
-// ── Grundgerüst
-ok("Norm geladen", d.querySelector("h1") && d.querySelector("h1").textContent.includes("§ 15"),
-   d.querySelector("h1")?.textContent.trim().slice(0, 50));
+/* ── Grundraster ── */
 ok("Kein Ladefehler", !d.querySelector(".melder"));
-const marken = [...d.querySelectorAll("#haupt mark")];
-ok("Markierungen erzeugt", marken.length > 20, marken.length + " Marken");
-const arten = new Set(marken.flatMap((m) => [...m.classList]));
-ok("Kategorien vorhanden", arten.has("tb") && arten.has("rf"), [...arten].join(","));
+ok("Kopfleiste vorhanden", d.querySelector(".kopf .wortmarke"));
+ok("Reiterleiste vorhanden", d.querySelectorAll(".reiter").length >= 1,
+  d.querySelectorAll(".reiter").length + " Reiter");
+ok("Drei Spalten vorhanden",
+  d.querySelector(".navspalte") && d.querySelector(".hauptspalte") && d.querySelector(".apparat"));
 
-// ── Der Fehler, der die Kategorien verschmierte: tb und rf auf denselben Zeichen
-const gemischt = marken.filter((m) => m.classList.contains("tb") && m.classList.contains("rf"));
-ok("Keine tb+rf-Mischmarken", gemischt.length === 0, gemischt.length + " gemischt");
+/* ── Daten aus data/, nicht aus dem Entwurf ── */
+const etikett = (d.querySelector(".navspalte .mono-etikett") || {}).textContent;
+ok("Normenzahl aus den Daten", etikett === "SolzG · 6 Normen", etikett);
+ok("Sechs Normzeilen", d.querySelectorAll(".normzeile").length === 6);
+ok("Überschrift aus den Daten",
+  (d.querySelector("h1") || {}).textContent === "§ 3 Bemessungsgrundlage und zeitliche Anwendung",
+  (d.querySelector("h1") || {}).textContent);
+const rinne = [...d.querySelectorAll(".rinne button")].map((b) => b.textContent).join(" ");
+ok("Absatzrinne aus den Daten", rinne === "(1) (2) (2a) (3) (4) (4a) (5)", rinne);
 
-// ── Statusband: erzeugt UND formatiert
-const band = d.querySelector(".statusband");
-ok("Statusband vorhanden", band, band ? band.textContent.slice(0, 60) : "fehlt");
-ok("Plakette vorhanden", d.querySelector(".plakette"));
+/* Die Fassungsangabe wird aus dem Standtext gelesen, nicht gesetzt. */
+const etiketten = [...d.querySelectorAll(".meta .etikett")].map((x) => x.textContent);
+ok("Fassung aus dem Standtext", etiketten.some((t) => t === "Fassung 23.12.2024"), etiketten.join(" · "));
+ok("Maschinelle Zutat gekennzeichnet",
+  (d.querySelector(".meta") || {}).textContent.includes("nicht redaktionell geprüft"));
 
-// ── Schema
-ok("Prüfungsschema", d.querySelectorAll("#schema-rechts ol.leiter li").length > 0,
-   d.querySelectorAll("#schema-rechts ol.leiter li").length + " Schritte");
+/* ── Der Wortlaut bleibt unangetastet ── */
+const wortlaut = (d.querySelector(".lesespalte") || {}).textContent || "";
+ok("Keine Kategorienamen im Wortlaut", !/\b(Tatbestand|Rechtsfolge)\b/.test(wortlaut));
+ok("Wortlaut beginnt wie im Gesetz",
+  wortlaut.trim().startsWith("Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5"),
+  wortlaut.trim().slice(0, 50));
 
-// ── Querverweise vorwärts
-const verweise = d.querySelectorAll("#haupt a.verweis");
-ok("Verweise verlinkt", verweise.length > 0, verweise.length + " Verweise");
-ok("Verweis trägt Druckziel", verweise[0] && verweise[0].dataset.ziel, verweise[0]?.dataset.ziel);
+/* ── Apparat ── */
+const register = [...d.querySelectorAll(".register button")].map((b) => b.textContent);
+ok("Fünf Register", register.length === 5, register.join(" · "));
+ok("Register in der vorgesehenen Reihenfolge",
+  register.join("|") === "Hinweise|Schema|Verwaltung|Zitate|Markierungen");
 
-// ── Rückverweise
-const zitiert = d.querySelector(".zitiert");
-ok("Zitiert-von vorhanden", zitiert, zitiert ? zitiert.querySelector(".schema-kappe").textContent : "fehlt");
-ok("Zitiert-von verlinkt", zitiert && zitiert.querySelectorAll(".wolke button").length > 0,
-   zitiert ? zitiert.querySelectorAll(".wolke button").length + " Ziele" : "");
-
-// ── Werkzeuge
-const werkzeuge = [...d.querySelectorAll(".werkzeuge button")].map((b) => b.textContent);
-ok("Werkzeugleiste", werkzeuge.length >= 5, werkzeuge.join(" · "));
-
-// ── Eigene Markierungen: anlegen und wiederfinden
-const text = d.querySelector("#haupt .text").textContent.replace(/\s+/g, " ").trim();
-const probe = text.slice(200, 250);
-speicher.set("eigene-markierungen-v1", JSON.stringify([{
-  id: "t1", gesetz: "EStG", norm: "15", text: probe,
-  praefix: "", suffix: "", notiz: "Meine Anmerkung", angelegt: new Date().toISOString(),
-}]));
-window.location.hash = "#/estg/15";
-window.dispatchEvent(new window.HashChangeEvent("hashchange"));
-await warte(700);
-const eigene = [...d.querySelectorAll("#haupt mark.eigen")];
-ok("Eigene Markierung im Text", eigene.length > 0, eigene.length + " Stellen");
-ok("Notizzeichen gesetzt", eigene.some((m) => m.dataset.notiz === "1"));
-const liste = d.querySelector(".eigene");
-ok("Notizenliste", liste && liste.textContent.includes("Meine Anmerkung"));
-
-// ── Gesetzesübergreifende Suche
-d.getElementById("suche").value = "Vorsteuer";
-d.getElementById("suche").dispatchEvent(new window.Event("input"));
-await warte(400);
-ok("Suchkopf für andere Gesetze", d.querySelector(".such-kopf"),
-   d.querySelector(".such-kopf")?.textContent.trim());
+/* ── Zugänglichkeit ── */
+ok("Schalter trägt den vollen Namen",
+  (d.getElementById("stufen") || {}).getAttribute
+  && d.getElementById("stufen").getAttribute("aria-label") === "Tatbestand und Rechtsfolge einfärben");
+ok("Reiter als tablist ausgezeichnet",
+  d.getElementById("reiterleiste").getAttribute("role") === "tablist");
+ok("Aktive Normzeile mit aria-current",
+  Boolean(d.querySelector('.normzeile[aria-current=true]')));
 
 console.log("");
 let fehler = 0;
