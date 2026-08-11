@@ -22,13 +22,6 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "Geldleistungen, die nicht eine Gegenleistung für eine besondere Leistung darstellen und vo",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "bezeichnet die Verordnung (EU) Nr. 952/2013 des Europäischen Parlaments und des Rates vom ",
@@ -78,6 +71,13 @@
   },
   {
     "norm": "§ 19",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "bei mehrfachem Wohnsitz eines",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 19",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "sind bei Anwendung des Satzes 1 nur dann zu berücksichtigen",
@@ -88,6 +88,13 @@
     "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "§ 25 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 29b",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "§ 22 Absatz 2 Satz 2 des Bundesdatenschutzgesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
@@ -161,6 +168,13 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
+    "norm": "§ 31c",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "§ 22 Absatz 2 Satz 2 des Bundesdatenschutzgesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 32a",
     "pfad": "Abs. 2 Satz 1 (Teil 3)",
     "art": "tb",
@@ -215,13 +229,6 @@
     "art": "tb",
     "text": "in dem Antrag auf Auskunft gemäß Artikel 15 der Verordnung (EU) 2016/679 die Art der perso",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 32e",
-    "pfad": "Satz 3",
-    "art": "tb",
-    "text": "§ 30 Absatz 4 Nummer 2",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 32i",
@@ -532,13 +539,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 87a",
-    "pfad": "Abs. 1 Satz 3",
-    "art": "tb",
-    "text": "zugegangen, sobald die für den Empfang bestimmte Einrichtung es in für den Empfänger bearb",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 87c",
     "pfad": "Abs. 3 Satz 4",
     "art": "tb",
@@ -581,13 +581,6 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 89",
-    "pfad": "Abs. 6 Satz 1",
-    "art": "tb",
-    "text": "Ist ein Gegenstandswert nicht bestimmbar und kann er auch nicht durch Schätzung bestimmt w",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
     "norm": "§ 89a",
     "pfad": "Abs. 1 Satz 1",
     "art": "rf",
@@ -613,6 +606,13 @@
     "pfad": "Abs. 7 Satz 6",
     "art": "tb",
     "text": "Sofern es sich bei dem Antrag nicht um einen Verrechnungspreisfall handelt",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 89a",
+    "pfad": "Abs. 7 Satz 6",
+    "art": "tb",
+    "text": "die die grenzüberschreitende Gewinnabgrenzung zwischen nahestehenden Personen und die Gewi",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -729,13 +729,6 @@
   },
   {
     "norm": "§ 93",
-    "pfad": "Abs. 7 Satz 1 (Teil 4)",
-    "art": "tb",
-    "text": "darf die Finanzbehörde oder in den Fällen des § 1 Absatz 2 die Gemeinde das Bundeszentrala",
-    "grund": "zu grob (53 Wörter)"
-  },
-  {
-    "norm": "§ 93",
     "pfad": "Abs. 8 Satz 1 (Teil 2)",
     "art": "tb",
     "text": "soweit dies zur Überprüfung des Vorliegens der Anspruchsvoraussetzungen erforderlich ist u",
@@ -764,13 +757,6 @@
   },
   {
     "norm": "§ 93a",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "auch bestimmt werden, inwieweit die Mitteilungen nach Maßgabe des § 93c zu übermitteln sin",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 93a",
     "pfad": "Abs. 1 Satz 3",
     "art": "tb",
     "text": "Die Verpflichtung der Behörden, anderer öffentlicher Stellen und der öffentlich-rechtliche",
@@ -789,20 +775,6 @@
     "art": "tb",
     "text": "für Kontenabrufersuchen nach § 93 Absatz 7 oder 8 zusätzlich zu den in § 24c Absatz 1 des ",
     "grund": "zu grob (46 Wörter)"
-  },
-  {
-    "norm": "§ 93c",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "die Daten nach Ablauf des Besteuerungszeitraums bis zum letzten Tag des Monats Februar des",
-    "grund": "zu grob (55 Wörter)"
-  },
-  {
-    "norm": "§ 93c",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "tb",
-    "text": "die übermittelten Daten aufzuzeichnen und diese Aufzeichnungen sowie die der Mitteilung zu",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 93c",
@@ -873,13 +845,6 @@
     "art": "tb",
     "text": "Soweit die zwischenstaatliche Rechts- und Amtshilfe Steuern betrifft, die von den Landesfi",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 117",
-    "pfad": "Abs. 6 Satz 1",
-    "art": "tb",
-    "text": "§ 2a Absatz 5 Nummer 2",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 117a",
@@ -994,6 +959,13 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 130",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "tb",
+    "text": "§ 26 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 131",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
@@ -1079,6 +1051,13 @@
   },
   {
     "norm": "§ 138b",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "anderweitige Erwerbe hinsichtlich der gleichen Drittstaat-Gesellschaft",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 138b",
     "pfad": "Abs. 3 Nr. 2",
     "art": "tb",
     "text": "die Wirtschafts-Identifikationsnummer nach § 139c oder, wenn noch keine Wirtschafts-Identi",
@@ -1160,6 +1139,13 @@
     "art": "tb",
     "text": "wenn die Übertragung nicht stattgefunden hätte",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 138e",
+    "pfad": "Abs. 2 Buchst. c (Teil 3)",
+    "art": "rf",
+    "text": "gelten sinngemäß auch für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 138e",
@@ -1296,6 +1282,13 @@
   },
   {
     "norm": "§ 139b",
+    "pfad": "Abs. 7 Satz 4",
+    "art": "rf",
+    "text": "übermittelten Daten mit den beim Bundeszentralamt für Steuern nach Absatz 3 gespeicherten ",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 139b",
     "pfad": "Abs. 8 Satz 1",
     "art": "rf",
     "text": "teilt dem Bundeszentralamt für Steuern Änderungen der in Absatz 6 Satz 1 Nummer 1 bis 12 b",
@@ -1335,13 +1328,6 @@
     "art": "tb",
     "text": "einen Gesamtumsatz im Sinne des § 19 Absatz 2 Satz 1 des Umsatzsteuergesetzes von mehr als",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 143",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "alle Waren einschließlich der Rohstoffe, unfertigen Erzeugnisse, Hilfsstoffe und Zutaten, ",
-    "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 146",
@@ -1405,6 +1391,13 @@
     "art": "tb",
     "text": "Datum der Außerbetriebnahme des",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 147",
+    "pfad": "Abs. 3 Satz 5",
+    "art": "tb",
+    "text": "§ 169 Absatz 2 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 147a",
@@ -1554,13 +1547,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 154",
-    "pfad": "Abs. 2c Satz 2",
-    "art": "tb",
-    "text": "das Kreditinstitut dem Bundeszentralamt für Steuern die betroffenen Konten sowie die hierz",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 155",
     "pfad": "Abs. 3 Satz 3",
     "art": "tb",
@@ -1587,13 +1573,6 @@
     "art": "tb",
     "text": "soweit die elektronischen Daten nicht nach der Vorgabe der einheitlichen digitalen Schnitt",
     "grund": "zu grob (47 Wörter)"
-  },
-  {
-    "norm": "§ 159",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "dass er Rechte, die auf seinen Namen lauten, oder Sachen, die er besitzt, nur als Treuhänd",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 162",
@@ -1673,6 +1652,20 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
+    "norm": "§ 171",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "§ 169 Absatz 1 Satz 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 171",
+    "pfad": "Abs. 6 Satz 2",
+    "art": "tb",
+    "text": "§ 169 Absatz 1 Satz 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 173",
     "pfad": "Abs. 1 Nr. 2",
     "art": "tb",
@@ -1723,13 +1716,6 @@
   },
   {
     "norm": "§ 181",
-    "pfad": "Abs. 5 Satz 1",
-    "art": "tb",
-    "text": "auch nach Ablauf der für sie geltenden Feststellungsfrist insoweit erfolgen, als die geson",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 181",
     "pfad": "Abs. 5 Satz 3",
     "art": "tb",
     "text": "§ 169 Absatz 1 Satz 3",
@@ -1758,13 +1744,6 @@
   },
   {
     "norm": "§ 191",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "durch Duldungsbescheid, soweit sie nicht im Wege der Einrede nach § 9 des Anfechtungsgeset",
-    "grund": "zu grob (49 Wörter)"
-  },
-  {
-    "norm": "§ 191",
     "pfad": "Abs. 5 Nr. 1",
     "art": "tb",
     "text": "soweit die Steuer gegen den Steuerschuldner nicht festgesetzt worden ist und wegen Ablaufs",
@@ -1778,11 +1757,11 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 200",
-    "pfad": "Abs. 1 Satz 4",
+    "norm": "§ 199",
+    "pfad": "Abs. 2 Satz 3",
     "art": "tb",
-    "text": "§ 93 Absatz 2 Satz 2",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+    "text": "werden die Rahmenbedingungen vom Steuerpflichtigen erfüllt",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 200a",
@@ -1838,13 +1817,6 @@
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
     "text": "bei Überweisung oder Einzahlung auf ein Konto der Finanzbehörde und bei Einzahlung mit Zah",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 229",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "jedoch nicht vor Ablauf des Kalenderjahrs, in dem die Festsetzung eines Anspruchs aus dem ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -1935,8 +1907,8 @@
     "norm": "§ 249",
     "pfad": "Abs. 1 Satz 3",
     "art": "tb",
-    "text": "die Finanzämter und die Hauptzollämter sowie die Landesfinanzbehörden, denen durch eine Re",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "§ 328 Absatz 1 Satz 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 250",
@@ -1951,13 +1923,6 @@
     "art": "tb",
     "text": "der Verwaltungsakt, aus dem",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 282",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "ihr im Verhältnis zu anderen Gläubigern dieselben Rechte wie ein Pfandrecht im Sinne des B",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 284",
@@ -2007,6 +1972,13 @@
     "art": "tb",
     "text": "ob innerhalb der",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 317",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "§ 315 Absatz 1",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 318",
@@ -2086,13 +2058,6 @@
     "grund": "zu grob (59 Wörter)"
   },
   {
-    "norm": "§ 347",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "alle mit der Verwaltung der Abgaben einschließlich der Abgabenvergütungen oder sonst mit d",
-    "grund": "zu grob (48 Wörter)"
-  },
-  {
     "norm": "§ 352",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
@@ -2104,6 +2069,13 @@
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "§ 110 Absatz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 361",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "§ 367 Absatz 1 Satz 2",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
@@ -2135,6 +2107,13 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 367",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "§ 26 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 369",
     "pfad": "Abs. 1 Nr. 2",
     "art": "tb",
@@ -2147,13 +2126,6 @@
     "art": "tb",
     "text": "und dadurch Steuern",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
-  },
-  {
-    "norm": "§ 370",
-    "pfad": "Abs. 4 Satz 1",
-    "art": "tb",
-    "text": "namentlich dann verkürzt, wenn sie nicht, nicht in voller Höhe oder nicht rechtzeitig fest",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 370",
@@ -2191,6 +2163,13 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
+    "norm": "§ 376",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "§ 78b Absatz 4 des Strafgesetzbuches",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
     "norm": "§ 378",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
@@ -2217,6 +2196,13 @@
     "art": "tb",
     "text": "und dadurch",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 379",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "§ 370 Absatz 7",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 382",
@@ -2301,6 +2287,13 @@
     "art": "tb",
     "text": "20 Prozent der hinterzogenen Steuer, wenn der Hinterziehungsbetrag 1 000 000 Euro überstei",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 400",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "ist dies nicht der Fall",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 407",

@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T06:51:29.468Z",
+  "aktualisiert": "2026-08-11T09:36:31.944Z",
   "quelle": "https://www.gesetze-im-internet.de/solzg_1995/",
   "stand": [
     {
@@ -25,7 +25,8 @@
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "verweisung"
+        "verweisung",
+        "aussage"
       ],
       "saetze": [
         {
@@ -223,18 +224,45 @@
           "pfad": "Abs. 4 Satz 1",
           "von": 883,
           "bis": 1112,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht",
-              "anzeige": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht … anzuwenden",
+              "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer",
+              "anzeige": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer … zu entrichten",
               "teile": [
                 {
-                  "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht",
+                  "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer",
                   "von": 932,
-                  "laenge": 168
+                  "laenge": 103
+                },
+                {
+                  "text": "zu entrichten",
+                  "von": 1036,
+                  "laenge": 13
+                }
+              ],
+              "pfad": "Abs. 4 Satz 1",
+              "von": 932,
+              "laenge": 103,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "rf",
+              "text": "ist nicht",
+              "anzeige": "ist nicht … anzuwenden",
+              "teile": [
+                {
+                  "text": "ist nicht",
+                  "von": 1091,
+                  "laenge": 9
                 },
                 {
                   "text": "anzuwenden",
@@ -243,9 +271,9 @@
                 }
               ],
               "pfad": "Abs. 4 Satz 1",
-              "von": 932,
-              "laenge": 168,
-              "konfidenz": 0.54,
+              "von": 1091,
+              "laenge": 9,
+              "konfidenz": 0.45,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -304,13 +332,29 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+              "art": "ausn",
+              "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
               "von": 1351,
-              "laenge": 38,
+              "laenge": 68,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Satzausnahme: „§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden\""
+            },
+            {
+              "art": "tb",
+              "text": "§ 254 Abs. 2 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 3",
+              "von": 1421,
+              "laenge": 31,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -321,13 +365,13 @@
             },
             {
               "art": "rf",
-              "text": "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+              "text": "gilt insoweit sinngemäß",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
-              "von": 1390,
-              "laenge": 86,
-              "konfidenz": 0.54,
+              "von": 1453,
+              "laenge": 23,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -568,8 +612,8 @@
         },
         {
           "absatz": "Abs. 4",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -587,7 +631,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+                  "t": "§ 254 Abs. 2 der Abgabenordnung",
                   "pfad": "Abs. 4 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -597,19 +641,42 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden",
+                  "pfad": "Abs. 4 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht … anzuwenden",
+                  "t": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer … zu entrichten",
                   "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "2.",
+                  "t": "ist nicht … anzuwenden",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
                   "pfad": "Abs. 4 Satz 2",
                   "konfidenz": 0.6,
@@ -617,10 +684,10 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
-                  "t": "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+                  "n": "4.",
+                  "t": "gilt insoweit sinngemäß",
                   "pfad": "Abs. 4 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -689,7 +756,7 @@
         "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben",
         "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten oder werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst",
         "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
-        "§ 240 Abs. 1 Satz 3 der Abgabenordnung",
+        "§ 254 Abs. 2 der Abgabenordnung",
         "Mit einem Rechtsbehelf",
         "Wird die Bemessungsgrundlage geändert"
       ],
@@ -698,19 +765,21 @@
         "sind die Vorschriften des Einkommensteuergesetzes",
         "dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
         "gilt dies für den Solidaritätszuschlag entsprechend",
-        "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht",
+        "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer",
+        "ist nicht",
         "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
-        "ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+        "gilt insoweit sinngemäß",
         "gegen den Solidaritätszuschlag kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
         "ändert sich der Solidaritätszuschlag entsprechend"
       ],
       "ausnahmen": [
-        "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden"
+        "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden",
+        "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.587,
+      "konfidenz": 0.586,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -720,7 +789,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.353Z"
+      "aktualisiert": "2026-08-11T09:36:31.935Z"
     },
     "2": {
       "typ": "gemischt",
@@ -908,7 +977,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedadfc31d59f0fd0989ac390758b6081daf85482b46b061e4e6ef1a94d281ba",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.353Z"
+      "aktualisiert": "2026-08-11T09:36:31.936Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1133,30 +1202,35 @@
             },
             {
               "art": "rf",
-              "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
-              "anzeige": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist … 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
-              "teile": [
-                {
-                  "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
-                  "von": 857,
-                  "laenge": 167
-                },
-                {
-                  "text": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
-                  "von": 1202,
-                  "laenge": 180
-                }
-              ],
+              "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
               "von": 857,
-              "laenge": 167,
-              "konfidenz": 0.54,
+              "laenge": 103,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 962,
+              "laenge": 58,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "ausn",
@@ -1173,6 +1247,38 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bedingungsausnahme mit „außer in den fällen\""
+            },
+            {
+              "art": "tb",
+              "text": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1202,
+              "laenge": 115,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 1318,
+              "laenge": 64,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -1242,13 +1348,45 @@
             },
             {
               "art": "rf",
-              "text": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
-              "anzeige": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt … für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
+              "text": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2a Satz 1",
+              "von": 1774,
+              "laenge": 71,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2a Satz 1",
+              "von": 1847,
+              "laenge": 67,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "ist die Lohnsteuer maßgebend, die sich ergibt",
+              "anzeige": "ist die Lohnsteuer maßgebend, die sich ergibt … für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
               "teile": [
                 {
-                  "text": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
-                  "von": 1774,
-                  "laenge": 186
+                  "text": "ist die Lohnsteuer maßgebend, die sich ergibt",
+                  "von": 1915,
+                  "laenge": 45
                 },
                 {
                   "text": "für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
@@ -1257,9 +1395,9 @@
                 }
               ],
               "pfad": "Abs. 2a Satz 1",
-              "von": 1774,
-              "laenge": 186,
-              "konfidenz": 0.54,
+              "von": 1915,
+              "laenge": 45,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -1960,6 +2098,22 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -2025,11 +2179,19 @@
                 },
                 {
                   "n": "5.",
-                  "t": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist … 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+                  "t": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -2086,6 +2248,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich",
+                  "pfad": "Abs. 2a Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
                   "pfad": "Abs. 2a Satz 2",
                   "konfidenz": 0.6,
@@ -2093,7 +2263,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
                   "pfad": "Abs. 2a Satz 3",
                   "konfidenz": 0.6,
@@ -2124,14 +2294,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt … für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
+                  "t": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer",
                   "pfad": "Abs. 2a Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "ist die Lohnsteuer maßgebend, die sich ergibt … für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
+                  "pfad": "Abs. 2a Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge … maßgebend",
                   "pfad": "Abs. 2a Satz 2",
                   "konfidenz": 0.6,
@@ -2139,7 +2317,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer … maßgebend",
                   "pfad": "Abs. 2a Satz 3",
                   "konfidenz": 0.6,
@@ -2436,7 +2614,10 @@
         "soweit Lohnsteuer zu erheben ist",
         "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
         "4. soweit ein Lohnsteuer-Jahresausgleich",
+        "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
+        "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
         "Bei der Veranlagung zur Einkommensteuer",
+        "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich",
         "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
         "Bei Anwendung des § 39f des Einkommensteuergesetzes",
         "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
@@ -2461,9 +2642,11 @@
         "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
         "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
         "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
-        "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+        "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+        "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
         "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
-        "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt",
+        "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer",
+        "ist die Lohnsteuer maßgebend, die sich ergibt",
         "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge",
         "ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer",
         "ist von einkommensteuerpflichtigen Personen nur zu erheben",
@@ -2482,7 +2665,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.58,
+      "konfidenz": 0.584,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2492,7 +2675,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "12161727c2ccb1e5213cdd02e6b2033958cba2092a019be75410e30bbbda4e4b",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.358Z"
+      "aktualisiert": "2026-08-11T09:36:31.941Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2704,7 +2887,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.359Z"
+      "aktualisiert": "2026-08-11T09:36:31.942Z"
     },
     "5": {
       "typ": "konditional",
@@ -2814,7 +2997,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.359Z"
+      "aktualisiert": "2026-08-11T09:36:31.942Z"
     },
     "6": {
       "typ": "anwendung",
@@ -3168,7 +3351,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "a8fe08f695a58fccada782cdf000e1ed2556620c2bcab652ef9e71960ed0ae53",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.361Z"
+      "aktualisiert": "2026-08-11T09:36:31.944Z"
     }
   }
 }

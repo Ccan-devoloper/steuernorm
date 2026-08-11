@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-10T09:19:26.340Z",
+  "aktualisiert": "2026-08-11T09:36:31.920Z",
   "quelle": "https://www.gesetze-im-internet.de/astg/",
   "stand": [
     {
@@ -114,17 +114,49 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
-              "text": "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft; eine Personengesellschaft oder Mitunternehmerschaft ist selbst nahestehende Person",
+              "text": "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
               "von": 623,
-              "laenge": 149,
-              "konfidenz": 0.54,
+              "laenge": 65,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "eine Personengesellschaft oder Mitunternehmerschaft",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 690,
+              "laenge": 51,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "ist selbst nahestehende Person",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 742,
+              "laenge": 30,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -612,7 +644,7 @@
           "pfad": "Abs. 3 Satz 3",
           "von": 3480,
           "bis": 3866,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
@@ -629,17 +661,49 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
-              "text": "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse); die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
+              "text": "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 3",
               "von": 3524,
-              "laenge": 316,
-              "konfidenz": 0.42,
+              "laenge": 192,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 3718,
+              "laenge": 61,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 3780,
+              "laenge": 60,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -768,19 +832,8 @@
             {
               "art": "tb",
               "text": "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen",
-              "anzeige": "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen … dies gilt nur, wenn dadurch die Vergleichbarkeit erhöht wird",
-              "teile": [
-                {
-                  "text": "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen",
-                  "von": 4231,
-                  "laenge": 318
-                },
-                {
-                  "text": "dies gilt nur, wenn dadurch die Vergleichbarkeit erhöht wird",
-                  "von": 4576,
-                  "laenge": 60
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 3 Satz 6",
               "von": 4231,
               "laenge": 318,
@@ -790,7 +843,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen (mehrteilig)"
+              "grund": "Nachfeld trägt die Voraussetzungen"
             },
             {
               "art": "tb",
@@ -807,6 +860,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „sofern\""
+            },
+            {
+              "art": "tb",
+              "text": "wenn dadurch die Vergleichbarkeit erhöht wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 6",
+              "von": 4591,
+              "laenge": 45,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -2087,13 +2156,13 @@
             },
             {
               "art": "rf",
-              "text": "liegt; eine gesellschaftsvertragliche Vereinbarung ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
+              "text": "ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Buchst. b",
-              "von": 11316,
-              "laenge": 152,
-              "konfidenz": 0.54,
+              "von": 11367,
+              "laenge": 101,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -2632,13 +2701,45 @@
             },
             {
               "art": "rf",
-              "text": "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht; für diese Geschäftsbeziehungen gilt Absatz 1",
+              "text": "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 4",
               "von": 13885,
-              "laenge": 372,
-              "konfidenz": 0.36,
+              "laenge": 326,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "für diese Geschäftsbeziehungen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 4",
+              "von": 14213,
+              "laenge": 30,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt Absatz 1",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 4",
+              "von": 14244,
+              "laenge": 13,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -2756,7 +2857,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "wenn sie die Voraussetzungen des Absatzes 2 erfüllt",
+                  "t": "eine Personengesellschaft oder Mitunternehmerschaft",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -2764,6 +2865,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "wenn sie die Voraussetzungen des Absatzes 2 erfüllt",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Für die Anwendung des Fremdvergleichsgrundsatzes",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -2802,14 +2911,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft; eine Personengesellschaft oder Mitunternehmerschaft ist selbst nahestehende Person",
+                  "t": "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "ist selbst nahestehende Person",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "ist davon … auszugehen",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.45,
@@ -2817,7 +2934,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Führt die Anwendung des Fremdvergleichsgrundsatzes zu weitergehenden Berichtigungen als die anderen Vorschriften, sind die weitergehenden Berichtigungen neben den Rechtsfolgen der anderen Vorschriften durchzuführen",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -3014,7 +3131,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "soweit dies möglich ist",
+                  "t": "die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -3022,6 +3139,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "soweit dies möglich ist",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "auf die Verhältnisse zum Zeitpunkt der Vereinbarung des Geschäftsvorfalls",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -3029,15 +3154,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
-                  "t": "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen … dies gilt nur, wenn dadurch die Vergleichbarkeit erhöht wird",
+                  "n": "6.",
+                  "t": "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen",
                   "pfad": "Abs. 3 Satz 6",
                   "konfidenz": 0.48,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "sofern dies möglich ist",
                   "pfad": "Abs. 3 Satz 6",
                   "konfidenz": 0.6,
@@ -3045,7 +3170,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
+                  "t": "wenn dadurch die Vergleichbarkeit erhöht wird",
+                  "pfad": "Abs. 3 Satz 6",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "Können keine Vergleichswerte festgestellt werden",
                   "pfad": "Abs. 3 Satz 7",
                   "konfidenz": 0.6,
@@ -3069,14 +3202,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse); die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
+                  "t": "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse)",
                   "pfad": "Abs. 3 Satz 3",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "ist grundsätzlich nach der im Hinblick auf die Vergleichbarkeitsanalyse und die Verfügbarkeit von Werten zu vergleichbaren Geschäftsvorfällen voneinander unabhängiger Dritter am besten geeigneten Verrechnungspreismethode … zu bestimmen",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -3084,7 +3225,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Unterschiede",
                   "pfad": "Abs. 3 Satz 6",
                   "konfidenz": 0.45,
@@ -3092,7 +3233,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "ist für die Bestimmung des Fremdvergleichspreises ein hypothetischer Fremdvergleich unter Beachtung des Absatzes 1 Satz 3 aus Sicht des Leistenden und des jeweiligen Leistungsempfängers anhand ökonomisch anerkannter Bewertungsmethoden durchzuführen",
                   "pfad": "Abs. 3 Satz 7",
                   "konfidenz": 0.6,
@@ -3735,9 +3876,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "liegt; eine gesellschaftsvertragliche Vereinbarung ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
+                  "t": "ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
                   "pfad": "Abs. 4 Buchst. b",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -3862,6 +4003,14 @@
                 },
                 {
                   "n": "12.",
+                  "t": "für diese Geschäftsbeziehungen",
+                  "pfad": "Abs. 5 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "13.",
                   "t": "Ist ein Abkommen zur Vermeidung der Doppelbesteuerung anzuwenden und macht der Steuerpflichtige geltend, dass dessen Regelungen den Sätzen 1 bis 7 widersprechen",
                   "pfad": "Abs. 5 Satz 5",
                   "konfidenz": 0.6,
@@ -3940,14 +4089,22 @@
                 },
                 {
                   "n": "7.",
-                  "t": "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht; für diese Geschäftsbeziehungen gilt Absatz 1",
+                  "t": "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht",
                   "pfad": "Abs. 5 Satz 4",
-                  "konfidenz": 0.36,
+                  "konfidenz": 0.42,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "8.",
+                  "t": "gilt Absatz 1",
+                  "pfad": "Abs. 5 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "hat das Abkommen nur Vorrang, soweit der Steuerpflichtige nachweist, dass der andere Staat sein Besteuerungsrecht entsprechend diesem Abkommen ausübt und deshalb die Anwendung der Sätze 1 bis 7 zu einer Doppelbesteuerung führen würde",
                   "pfad": "Abs. 5 Satz 5",
                   "konfidenz": 0.48,
@@ -3984,6 +4141,7 @@
       "tb": [
         "Werden Einkünfte eines Steuerpflichtigen aus einer Geschäftsbeziehung zum Ausland mit einer ihm nahestehenden Person dadurch gemindert, dass er seiner Einkünfteermittlung andere Bedingungen, insbesondere Preise (Verrechnungspreise), zugrunde legt, als sie voneinander unabhängige Dritte unter gleichen oder vergleichbaren Verhältnissen vereinbart hätten (Fremdvergleichsgrundsatz)",
         "Steuerpflichtiger im Sinne dieser Vorschrift sowie im Sinne des § 1a",
+        "eine Personengesellschaft oder Mitunternehmerschaft",
         "wenn sie die Voraussetzungen des Absatzes 2 erfüllt",
         "Für die Anwendung des Fremdvergleichsgrundsatzes",
         "eine Person nahestehend",
@@ -3997,10 +4155,12 @@
         "soweit im Verhältnis der dritten Person zu der Person und dem Steuerpflichtigen jeweils eines der in Satz 1 Nummer 3 Buchstabe a bis c genannten Merkmale erfüllt ist",
         "Für die Bestimmung der dem Fremdvergleichsgrundsatz entsprechenden Verrechnungspreise (Fremdvergleichspreise) für eine Geschäftsbeziehung im Sinne des Absatzes 1 Satz 1",
         "Die Verhältnisse im Sinne der Sätze 1 und 2",
+        "die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse",
         "soweit dies möglich ist",
         "auf die Verhältnisse zum Zeitpunkt der Vereinbarung des Geschäftsvorfalls",
         "zwischen den Verhältnissen der zum Vergleich herangezogenen Geschäftsvorfälle zwischen voneinander unabhängigen Dritten und den dem zu untersuchenden Geschäftsvorfall zugrunde liegenden Verhältnissen, die die Anwendung der Verrechnungspreismethode beeinflussen können, sind durch sachgerechte Anpassungen zu beseitigen",
         "sofern dies möglich ist",
+        "wenn dadurch die Vergleichbarkeit erhöht wird",
         "Können keine Vergleichswerte festgestellt werden",
         "wenn nach Anwendung von Absatz 3 Satz 6 Unterschiede in der Vergleichbarkeit verbleiben",
         "Bieten diese Werte selbst keine Anhaltspunkte für eine bestimmte Einengung, so",
@@ -4047,11 +4207,13 @@
         "Die Sätze 1 bis 4",
         "Die Möglichkeit, einen Ausgleichsposten nach § 4g des Einkommensteuergesetzes zu bilden",
         "Auf Geschäftsbeziehungen",
+        "für diese Geschäftsbeziehungen",
         "Ist ein Abkommen zur Vermeidung der Doppelbesteuerung anzuwenden und macht der Steuerpflichtige geltend, dass dessen Regelungen den Sätzen 1 bis 7 widersprechen"
       ],
       "rf": [
         "sind seine Einkünfte",
-        "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft; eine Personengesellschaft oder Mitunternehmerschaft ist selbst nahestehende Person",
+        "ist auch eine Personengesellschaft oder eine Mitunternehmerschaft",
+        "ist selbst nahestehende Person",
         "ist davon",
         "Führt die Anwendung des Fremdvergleichsgrundsatzes zu weitergehenden Berichtigungen als die anderen Vorschriften, sind die weitergehenden Berichtigungen neben den Rechtsfolgen der anderen Vorschriften durchzuführen",
         "Dem Steuerpflichtigen",
@@ -4060,7 +4222,8 @@
         "ausüben kann",
         "ist, bei der Vereinbarung der Bedingungen einer Geschäftsbeziehung auf den Steuerpflichtigen oder die Person einen außerhalb dieser Geschäftsbeziehung begründeten Einfluss auszuüben oder wenn einer von ihnen ein eigenes Interesse an der Erzielung der Einkünfte des anderen hat",
         "sind die tatsächlichen Verhältnisse",
-        "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse); die diesen Geschäftsvorfällen zugrunde liegenden Verhältnisse sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
+        "bilden den Maßstab für die Feststellung der Vergleichbarkeit des zu untersuchenden Geschäftsvorfalls mit Geschäftsvorfällen zwischen voneinander unabhängigen Dritten (Vergleichbarkeitsanalyse)",
+        "sind in entsprechender Anwendung der Sätze 1 und 2 maßgebend",
         "ist grundsätzlich nach der im Hinblick auf die Vergleichbarkeitsanalyse und die Verfügbarkeit von Werten zu vergleichbaren Geschäftsvorfällen voneinander unabhängiger Dritter am besten geeigneten Verrechnungspreismethode",
         "Unterschiede",
         "ist für die Bestimmung des Fremdvergleichspreises ein hypothetischer Fremdvergleich unter Beachtung des Absatzes 1 Satz 3 aus Sicht des Leistenden und des jeweiligen Leistungsempfängers anhand ökonomisch anerkannter Bewertungsmethoden durchzuführen",
@@ -4089,7 +4252,7 @@
         "weitergeleitet wird",
         "gelten nicht",
         "zwischen einem Steuerpflichtigen und einer ihm nahestehenden Person, a) die Teil einer Tätigkeit des Steuerpflichtigen oder der nahestehenden Person sind, auf die die §§ 13, 15, 18 oder 21 des Einkommensteuergesetzes anzuwenden sind oder anzuwenden wären",
-        "liegt; eine gesellschaftsvertragliche Vereinbarung ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
+        "ist eine Vereinbarung, die unmittelbar zu einer rechtlichen Änderung der Gesellschafterstellung führt",
         "Geschäftsvorfälle",
         "ist davon auszugehen, dass voneinander unabhängige ordentliche und gewissenhafte Geschäftsleiter eine schuldrechtliche Vereinbarung getroffen hätten oder eine bestehende Rechtsposition geltend machen würden, die der Besteuerung zugrunde zu legen ist",
         "sind entsprechend anzuwenden",
@@ -4098,7 +4261,8 @@
         "sind in einem zweiten Schritt die Art der Geschäftsbeziehungen zwischen dem Unternehmen und seiner Betriebsstätte und die Verrechnungspreise für diese Geschäftsbeziehungen",
         "sind entsprechend auf ständige Vertreter",
         "wird nicht",
-        "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht; für diese Geschäftsbeziehungen gilt Absatz 1",
+        "zwischen einem Gesellschafter und seiner Personengesellschaft oder zwischen einem Mitunternehmer und seiner Mitunternehmerschaft sind die Sätze 1 bis 4 nicht anzuwenden, unabhängig davon, ob die Beteiligung unmittelbar besteht oder ob sie nach § 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes mittelbar besteht",
+        "gilt Absatz 1",
         "hat das Abkommen nur Vorrang, soweit der Steuerpflichtige nachweist, dass der andere Staat sein Besteuerungsrecht entsprechend diesem Abkommen ausübt und deshalb die Anwendung der Sätze 1 bis 7 zu einer Doppelbesteuerung führen würde",
         "wird ermächtigt, mit Zustimmung des Bundesrates durch Rechtsverordnung Einzelheiten des Fremdvergleichsgrundsatzes im Sinne der Absätze 1, 3 bis 3e und 5 und Einzelheiten zu dessen einheitlicher Anwendung zu regeln sowie Grundsätze zur Bestimmung des Dotationskapitals im Sinne des Absatzes 5 Satz 3 Nummer 4"
       ],
@@ -4114,7 +4278,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.561,
+      "konfidenz": 0.566,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -4124,7 +4288,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b25b85c0d4ed179a6b8287b81055a2646a98d85ab1de760965aa34b41a1a50f7",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.290Z"
+      "aktualisiert": "2026-08-11T09:36:31.862Z"
     },
     "2": {
       "typ": "gemischt",
@@ -5098,7 +5262,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1c100336b3605ea952e84dadc5a5be824adefda922f91390d2ae817fa8ceef84",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.297Z"
+      "aktualisiert": "2026-08-11T09:36:31.869Z"
     },
     "3": {
       "typ": "aussage",
@@ -5175,7 +5339,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.297Z"
+      "aktualisiert": "2026-08-11T09:36:31.869Z"
     },
     "4": {
       "typ": "gemischt",
@@ -5294,7 +5458,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b16419a2b43ad7ad2cfb634788cb7c556e6964e2b64e3efa2f6096c4f39b1fe",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.298Z"
+      "aktualisiert": "2026-08-11T09:36:31.870Z"
     },
     "5": {
       "typ": "gemischt",
@@ -5568,7 +5732,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4cae677550013700fb24fdee55ff9c445b3205ce0c561044272de8929446093",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.299Z"
+      "aktualisiert": "2026-08-11T09:36:31.871Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5852,19 +6016,8 @@
             {
               "art": "rf",
               "text": "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben",
-              "anzeige": "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben … andernfalls gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten erworben",
-              "teile": [
-                {
-                  "text": "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben",
-                  "von": 1018,
-                  "laenge": 138
-                },
-                {
-                  "text": "andernfalls gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten erworben",
-                  "von": 1238,
-                  "laenge": 88
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 1 (Teil 3)",
               "von": 1018,
               "laenge": 138,
@@ -5874,7 +6027,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -5891,6 +6044,49 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „soweit\""
+            },
+            {
+              "art": "tb",
+              "text": "andernfalls",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 3)",
+              "von": 1238,
+              "laenge": 11,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten",
+              "anzeige": "gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten … erworben",
+              "teile": [
+                {
+                  "text": "gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten",
+                  "von": 1250,
+                  "laenge": 67
+                },
+                {
+                  "text": "erworben",
+                  "von": 1318,
+                  "laenge": 8
+                }
+              ],
+              "pfad": "Abs. 1 Satz 1 (Teil 3)",
+              "von": 1250,
+              "laenge": 67,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -6499,19 +6695,51 @@
             },
             {
               "art": "tb",
-              "text": "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten; die übrigen Jahresraten sind jeweils am 31. Juli der Folgejahre fällig",
+              "text": "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
               "von": 4752,
-              "laenge": 145,
-              "konfidenz": 0.54,
+              "laenge": 73,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
+            },
+            {
+              "art": "tb",
+              "text": "die übrigen Jahresraten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 3",
+              "von": 4827,
+              "laenge": 23,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind jeweils am 31. Juli der Folgejahre fällig",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 3",
+              "von": 4851,
+              "laenge": 46,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -6725,13 +6953,45 @@
             },
             {
               "art": "rf",
-              "text": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich; insofern ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
-              "anzeige": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich; insofern ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger … abzustellen",
+              "text": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5508,
+              "laenge": 119,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "insofern",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5629,
+              "laenge": 8,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
+              "anzeige": "ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger … abzustellen",
               "teile": [
                 {
-                  "text": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich; insofern ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
-                  "von": 5508,
-                  "laenge": 358
+                  "text": "ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
+                  "von": 5638,
+                  "laenge": 228
                 },
                 {
                   "text": "abzustellen",
@@ -6740,9 +7000,9 @@
                 }
               ],
               "pfad": "Abs. 4 Satz 1 (Teil 2)",
-              "von": 5508,
-              "laenge": 358,
-              "konfidenz": 0.42,
+              "von": 5638,
+              "laenge": 228,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -6777,13 +7037,93 @@
             },
             {
               "art": "rf",
-              "text": "gelten die vorstehenden Sätze entsprechend; der Stundungszeitraum richtet sich nach der vom Finanzamt eingeräumten Frist; die Erhebung von Jahresraten entfällt auf Antrag des Steuerpflichtigen; über Satz 5 hinaus wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
+              "text": "gelten die vorstehenden Sätze entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 2 (Teil 2)",
               "von": 5909,
-              "laenge": 460,
-              "konfidenz": 0.42,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "richtet sich nach der vom Finanzamt eingeräumten Frist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2 (Teil 2)",
+              "von": 5975,
+              "laenge": 54,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "tb",
+              "text": "die Erhebung von Jahresraten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2 (Teil 2)",
+              "von": 6031,
+              "laenge": 28,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "entfällt auf Antrag des Steuerpflichtigen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2 (Teil 2)",
+              "von": 6060,
+              "laenge": 41,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "über Satz 5 hinaus",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2 (Teil 2)",
+              "von": 6103,
+              "laenge": 18,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2 (Teil 2)",
+              "von": 6122,
+              "laenge": 247,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -6999,13 +7339,56 @@
             },
             {
               "art": "rf",
-              "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
-              "anzeige": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+              "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+              "anzeige": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
               "teile": [
                 {
-                  "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+                  "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
                   "von": 7449,
-                  "laenge": 224
+                  "laenge": 91
+                },
+                {
+                  "text": "verzichten",
+                  "von": 7541,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 5 Satz 4",
+              "von": 7449,
+              "laenge": 91,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 4",
+              "von": 7553,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+              "anzeige": "ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+              "teile": [
+                {
+                  "text": "ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+                  "von": 7568,
+                  "laenge": 105
                 },
                 {
                   "text": "zu unterschreiben",
@@ -7014,9 +7397,9 @@
                 }
               ],
               "pfad": "Abs. 5 Satz 4",
-              "von": 7449,
-              "laenge": 224,
-              "konfidenz": 0.54,
+              "von": 7568,
+              "laenge": 105,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -7110,6 +7493,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "10.",
+                  "t": "andernfalls",
+                  "pfad": "Abs. 1 Satz 1 (Teil 3)",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -7159,7 +7550,15 @@
                 },
                 {
                   "n": "4.",
-                  "t": "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben … andernfalls gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten erworben",
+                  "t": "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben",
+                  "pfad": "Abs. 1 Satz 1 (Teil 3)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten … erworben",
                   "pfad": "Abs. 1 Satz 1 (Teil 3)",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -7426,14 +7825,22 @@
                 },
                 {
                   "n": "3.",
-                  "t": "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten; die übrigen Jahresraten sind jeweils am 31. Juli der Folgejahre fällig",
+                  "t": "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten",
                   "pfad": "Abs. 4 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "4.",
+                  "t": "die übrigen Jahresraten",
+                  "pfad": "Abs. 4 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "entrichtete Steuer ist innerhalb eines Monats nach Eintritt der nachfolgenden Ereignisse fällig",
                   "pfad": "Abs. 4 Satz 5",
                   "konfidenz": 0.6,
@@ -7441,7 +7848,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "wenn die Jahresrate nicht fristgemäß entrichtet wird",
                   "pfad": "Abs. 4 Nr. 1",
                   "konfidenz": 0.6,
@@ -7449,7 +7856,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "wenn der Steuerpflichtige seine Mitwirkungspflichten nach Absatz 5 nicht erfüllt",
                   "pfad": "Abs. 4 Nr. 2",
                   "konfidenz": 0.6,
@@ -7457,7 +7864,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "wenn der Steuerpflichtige Insolvenz anmeldet",
                   "pfad": "Abs. 4 Nr. 3",
                   "konfidenz": 0.6,
@@ -7465,7 +7872,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "soweit die Anteile veräußert oder übertragen werden",
                   "pfad": "Abs. 4 Nr. 4",
                   "konfidenz": 0.6,
@@ -7473,7 +7880,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "10.",
                   "t": "Abweichend von Satz 5 Nummer 4",
                   "pfad": "Abs. 4 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -7481,7 +7888,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
+                  "t": "insofern",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "In den Fällen des Absatzes 3",
                   "pfad": "Abs. 4 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -7489,7 +7904,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "13.",
+                  "t": "die Erhebung von Jahresraten",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "14.",
+                  "t": "über Satz 5 hinaus",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "15.",
                   "t": "Soweit die Steuer nicht nach Absatz 3 entfällt und der Steuerpflichtige auf die Leistung von Jahresraten verzichtet hat",
                   "pfad": "Abs. 4 Satz 3 (Teil 2)",
                   "konfidenz": 0.6,
@@ -7529,6 +7960,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "sind jeweils am 31. Juli der Folgejahre fällig",
+                  "pfad": "Abs. 4 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "sind nicht … zu verzinsen",
                   "pfad": "Abs. 4 Satz 4",
                   "konfidenz": 0.45,
@@ -7536,7 +7975,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Die noch nicht",
                   "pfad": "Abs. 4 Satz 5",
                   "konfidenz": 0.6,
@@ -7544,23 +7983,55 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
-                  "t": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich; insofern ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger … abzustellen",
-                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
-                  "konfidenz": 0.42,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
                   "n": "7.",
-                  "t": "gelten die vorstehenden Sätze entsprechend; der Stundungszeitraum richtet sich nach der vom Finanzamt eingeräumten Frist; die Erhebung von Jahresraten entfällt auf Antrag des Steuerpflichtigen; über Satz 5 hinaus wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
-                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
-                  "konfidenz": 0.42,
+                  "t": "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "8.",
+                  "t": "ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger … abzustellen",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "9.",
+                  "t": "gelten die vorstehenden Sätze entsprechend",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
+                  "t": "richtet sich nach der vom Finanzamt eingeräumten Frist",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
+                  "t": "entfällt auf Antrag des Steuerpflichtigen",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
+                  "t": "wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
+                  "pfad": "Abs. 4 Satz 2 (Teil 2)",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "13.",
                   "t": "sind für die Dauer des gewährten Zahlungsaufschubs Zinsen in entsprechender Anwendung des § 234 der Abgabenordnung zu erheben",
                   "pfad": "Abs. 4 Satz 3 (Teil 2)",
                   "konfidenz": 0.6,
@@ -7605,6 +8076,14 @@
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "in diesem Fall",
+                  "pfad": "Abs. 5 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -7639,9 +8118,17 @@
                 },
                 {
                   "n": "4.",
-                  "t": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+                  "t": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
                   "pfad": "Abs. 5 Satz 4",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "5.",
+                  "t": "ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+                  "pfad": "Abs. 5 Satz 4",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -7660,6 +8147,7 @@
         "Satzes 1 Nummer 3 unmittelbar vor dem Zeitpunkt, zu dem der Ausschluss oder die Beschränkung des Besteuerungsrechts",
         "Im Fall des Satzes 1",
         "soweit die auf den Veräußerungsgewinn entfallende Steuer entrichtet worden ist",
+        "andernfalls",
         "Unbeschränkt Steuerpflichtige im Sinne des Absatzes 1",
         "Bei unentgeltlichem Erwerb von Anteilen",
         "sofern der betreffende Anteil nacheinander unentgeltlich übertragen wurde",
@@ -7673,24 +8161,30 @@
         "Wird im Fall der unentgeltlichen Übertragung im Sinne des Absatzes 1 Satz 1 Nummer 2 auf eine natürliche Person die betreffende Person innerhalb von sieben Jahren seit der Übertragung unbeschränkt steuerpflichtig",
         "Die festgesetzte Steuer, die auf die nach Absatz 1 realisierten Einkünfte entfällt",
         "in der Regel nur gegen Sicherheitsleistung stattzugeben",
-        "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten; die übrigen Jahresraten sind jeweils am 31. Juli der Folgejahre fällig",
+        "innerhalb eines Monats nach Bekanntgabe des Steuerbescheids zu entrichten",
+        "die übrigen Jahresraten",
         "entrichtete Steuer ist innerhalb eines Monats nach Eintritt der nachfolgenden Ereignisse fällig",
         "wenn die Jahresrate nicht fristgemäß entrichtet wird",
         "wenn der Steuerpflichtige seine Mitwirkungspflichten nach Absatz 5 nicht erfüllt",
         "wenn der Steuerpflichtige Insolvenz anmeldet",
         "soweit die Anteile veräußert oder übertragen werden",
         "Abweichend von Satz 5 Nummer 4",
+        "insofern",
         "In den Fällen des Absatzes 3",
+        "die Erhebung von Jahresraten",
+        "über Satz 5 hinaus",
         "Soweit die Steuer nicht nach Absatz 3 entfällt und der Steuerpflichtige auf die Leistung von Jahresraten verzichtet hat",
         "Der Steuerpflichtige oder sein Gesamtrechtsnachfolger",
         "Der Steuerpflichtige oder sein Gesamtrechtsnachfolger",
-        "Auf Antrag"
+        "Auf Antrag",
+        "in diesem Fall"
       ],
       "rf": [
         "Körperschaftsteuergesetzes und Umwandlungssteuergesetzes stehen",
         "unbeschränkt steuerpflichtige Person",
         "eintritt",
         "gelten die Anteile vom Steuerpflichtigen oder, bei unentgeltlicher Übertragung, von dessen Rechtsnachfolger als zum gemeinen Wert erworben",
+        "gelten diese weiterhin als zu den ursprünglichen Anschaffungskosten",
         "sind natürliche Personen, die innerhalb der letzten zwölf Jahre vor den in Absatz 1 Satz 1 Nummer 1 bis 3 genannten Tatbeständen insgesamt mindestens sieben Jahre unbeschränkt steuerpflichtig im Sinne des § 1 Absatz 1 des Einkommensteuergesetzes gewesen sind",
         "ist für die Berechnung der nach Satz 1 maßgebenden Dauer der Steuerpflicht auch die unbeschränkte Steuerpflicht des Rechtsvorgängers",
         "unbeschränkt steuerpflichtig waren, werden dabei nur einmal",
@@ -7706,15 +8200,21 @@
         "kann auf Antrag des Steuerpflichtigen in sieben gleichen Jahresraten entrichtet werden",
         "Dem Antrag",
         "Die erste Jahresrate",
+        "sind jeweils am 31. Juli der Folgejahre fällig",
         "sind nicht",
         "Die noch nicht",
-        "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich; insofern ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
-        "gelten die vorstehenden Sätze entsprechend; der Stundungszeitraum richtet sich nach der vom Finanzamt eingeräumten Frist; die Erhebung von Jahresraten entfällt auf Antrag des Steuerpflichtigen; über Satz 5 hinaus wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
+        "ist eine unentgeltliche Übertragung durch den Steuerpflichtigen auf eine natürliche Person von Todes wegen unbeachtlich",
+        "ist für Zwecke des Satzes 5 auf die betreffende Person oder, infolge aufeinanderfolgender unentgeltlicher Weiterübertragung zwischen natürlichen Personen von Todes wegen, auf deren unmittelbaren oder mittelbaren Rechtsnachfolger",
+        "gelten die vorstehenden Sätze entsprechend",
+        "richtet sich nach der vom Finanzamt eingeräumten Frist",
+        "entfällt auf Antrag des Steuerpflichtigen",
+        "wird die noch nicht entrichtete Steuer auch innerhalb eines Monats nach Eintritt des Ereignisses fällig, wonach der Steueranspruch nicht mehr nach Absatz 3 entfallen kann oder der Wegfall der Rückkehrabsicht gegenüber dem Finanzamt mitgeteilt wird",
         "sind für die Dauer des gewährten Zahlungsaufschubs Zinsen in entsprechender Anwendung des § 234 der Abgabenordnung zu erheben",
         "hat dem Finanzamt, das in den in Absatz 1 genannten Zeitpunkten nach § 19 der Abgabenordnung zuständig ist, nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch die Verwirklichung eines der Tatbestände des Absatzes 4 Satz 5 oder 7",
         "ist innerhalb eines Monats nach dem meldepflichtigen Ereignis",
         "hat dem nach Satz 1 zuständigen Finanzamt jährlich bis zum 31. Juli nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch seine aktuelle Anschrift mitzuteilen",
-        "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig"
+        "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+        "ist die Mitteilung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig"
       ],
       "ausnahmen": [
         "Vorbehaltlich der Vorschriften des Einkommensteuergesetzes"
@@ -7722,7 +8222,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.572,
+      "konfidenz": 0.578,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7732,7 +8232,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1dcf0a06e31520822a2ec779e357d0f19d6503f52aadd2db74248ae6cdb7ad98",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.306Z"
+      "aktualisiert": "2026-08-11T09:36:31.881Z"
     },
     "7": {
       "typ": "gemischt",
@@ -8608,7 +9108,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1ae069fd3fff8e400cd3f67dd068fd9cb4be33aebb5034fa09e14b76bcca9dc2",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.310Z"
+      "aktualisiert": "2026-08-11T09:36:31.884Z"
     },
     "8": {
       "typ": "gemischt",
@@ -9193,6 +9693,33 @@
               "grund": "Konditionalsatz mit „wenn\""
             },
             {
+              "art": "rf",
+              "text": "8. der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder der Herabsetzung ihres Kapitals",
+              "anzeige": "8. der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder der Herabsetzung ihres Kapitals … die bei der ausländischen Gesellschaft nach § 8b Absatz 7 des Körperschaftsteuergesetzes nicht steuerbefreit wären, wenn diese unbeschränkt körperschaftsteuerpflichtig wäre",
+              "teile": [
+                {
+                  "text": "8. der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder der Herabsetzung ihres Kapitals",
+                  "von": 5639,
+                  "laenge": 125
+                },
+                {
+                  "text": "die bei der ausländischen Gesellschaft nach § 8b Absatz 7 des Körperschaftsteuergesetzes nicht steuerbefreit wären, wenn diese unbeschränkt körperschaftsteuerpflichtig wäre",
+                  "von": 5799,
+                  "laenge": 172
+                }
+              ],
+              "pfad": "Abs. 1 Satz 1 (Teil 5)",
+              "von": 5639,
+              "laenge": 125,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig) (um Ausnahme gekürzt)"
+            },
+            {
               "art": "ausn",
               "text": "ausgenommen Veräußerungsgewinne",
               "anzeige": null,
@@ -9207,6 +9734,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bereichsausnahme mit „ausgenommen\""
+            },
+            {
+              "art": "tb",
+              "text": "wenn die ausländische Gesellschaft hinsichtlich dieser Veräußerungsgewinne gemäß Nummer 3 nicht Zwischengesellschaft ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 5)",
+              "von": 5994,
+              "laenge": 120,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -9731,6 +10274,14 @@
                   "konfidenz": 0.42,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "15.",
+                  "t": "wenn die ausländische Gesellschaft hinsichtlich dieser Veräußerungsgewinne gemäß Nummer 3 nicht Zwischengesellschaft ist",
+                  "pfad": "Abs. 1 Satz 1 (Teil 5)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -9841,6 +10392,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "9.",
+                  "t": "8. der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder der Herabsetzung ihres Kapitals … die bei der ausländischen Gesellschaft nach § 8b Absatz 7 des Körperschaftsteuergesetzes nicht steuerbefreit wären, wenn diese unbeschränkt körperschaftsteuerpflichtig wäre",
+                  "pfad": "Abs. 1 Satz 1 (Teil 5)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
                 }
               ]
             }
@@ -10093,6 +10652,7 @@
         "Bezügen im Sinne des § 8b Absatz 1 des Körperschaftsteuergesetzes",
         "eine verdeckte Gewinnausschüttung das Einkommen der ausländischen Gesellschaft oder einer ihr nahestehenden Person",
         "wenn diese unbeschränkt körperschaftsteuerpflichtig wäre; dies gilt auch dann, wenn die ausländische Gesellschaft hinsichtlich dieser Bezüge gemäß den Nummern 1 bis 6 oder 7 Buchstabe a Doppelbuchstabe aa und bb nicht Zwischengesellschaft ist",
+        "wenn die ausländische Gesellschaft hinsichtlich dieser Veräußerungsgewinne gemäß Nummer 3 nicht Zwischengesellschaft ist",
         "Der wesentlichen wirtschaftlichen Tätigkeit der Gesellschaft",
         "Die Sätze 1 bis 3",
         "wenn die Gesellschaft ihre wesentliche wirtschaftliche Tätigkeit überwiegend durch Dritte besorgen lässt",
@@ -10109,6 +10669,7 @@
         "ausgenommen",
         "ausgenommen",
         "erhöht hat und dieses Einkommen keiner niedrigen Besteuerung im Sinne des Absatzes 5 unterliegt",
+        "8. der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder der Herabsetzung ihres Kapitals",
         "ist eine ausländische Gesellschaft nicht Zwischengesellschaft für Einkünfte, für die nachgewiesen wird, dass die Gesellschaft in dem Staat, in dem sie ihren Sitz oder ihre Geschäftsleitung hat, insoweit einer wesentlichen wirtschaftlichen Tätigkeit nachgeht",
         "setzt insbesondere den Einsatz der für die Ausübung der Tätigkeit erforderlichen sachlichen und personellen Ausstattung in diesem Staat voraus",
         "muss durch hinreichend qualifiziertes Personal selbständig und eigenverantwortlich ausgeübt werden",
@@ -10131,7 +10692,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.55,
+      "konfidenz": 0.552,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -10141,7 +10702,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c78c7d24316ef4c4393e4a262884fbf3b86b11aaf508545424bbad5f87f5c841",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.318Z"
+      "aktualisiert": "2026-08-11T09:36:31.892Z"
     },
     "9": {
       "typ": "konditional",
@@ -10276,7 +10837,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6535cbaa94c6725ed62a6a804260fecdb5162e563f12bfd63239b9b44526a96f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.318Z"
+      "aktualisiert": "2026-08-11T09:36:31.892Z"
     },
     "10": {
       "typ": "gemischt",
@@ -10603,13 +11164,45 @@
             },
             {
               "art": "rf",
-              "text": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln; ihre Ermittlung hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
-              "anzeige": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln; ihre Ermittlung hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes … zu erfolgen",
+              "text": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1480,
+              "laenge": 55,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "ihre Ermittlung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1537,
+              "laenge": 15,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
+              "anzeige": "hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes … zu erfolgen",
               "teile": [
                 {
-                  "text": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln; ihre Ermittlung hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
-                  "von": 1480,
-                  "laenge": 123
+                  "text": "hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
+                  "von": 1553,
+                  "laenge": 50
                 },
                 {
                   "text": "zu erfolgen",
@@ -10618,9 +11211,9 @@
                 }
               ],
               "pfad": "Abs. 3 Satz 2",
-              "von": 1480,
-              "laenge": 123,
-              "konfidenz": 0.54,
+              "von": 1553,
+              "laenge": 50,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -11084,6 +11677,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "ihre Ermittlung",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "Verluste, die bei Einkünften entstanden sind, für die die ausländische Gesellschaft Zwischengesellschaft",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -11091,7 +11692,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "soweit sie die nach § 9 außer Ansatz zu lassenden Einkünfte übersteigen, abgezogen werden",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -11115,14 +11716,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln; ihre Ermittlung hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes … zu erfolgen",
+                  "t": "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes … zu erfolgen",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "ist auf eine von der ausländischen Gesellschaft zu entrichtende Vermögensteuer nicht … anzuwenden",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -11130,7 +11739,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "bleiben unberücksichtigt",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.45,
@@ -11138,7 +11747,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "ist, können in entsprechender Anwendung des § 10d des Einkommensteuergesetzes",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -11146,7 +11755,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "ist nicht zulässig",
                   "pfad": "Abs. 3 Satz 6",
                   "konfidenz": 0.6,
@@ -11280,6 +11889,7 @@
         "Auf den Hinzurechnungsbetrag",
         "Die dem Hinzurechnungsbetrag zugrunde liegenden Einkünfte",
         "Alle Einkünfte, für die die ausländische Gesellschaft Zwischengesellschaft",
+        "ihre Ermittlung",
         "Verluste, die bei Einkünften entstanden sind, für die die ausländische Gesellschaft Zwischengesellschaft",
         "soweit sie die nach § 9 außer Ansatz zu lassenden Einkünfte übersteigen, abgezogen werden",
         "Bei der Ermittlung der Einkünfte, für die die ausländische Gesellschaft Zwischengesellschaft",
@@ -11294,7 +11904,8 @@
         "gilt Satz 2 nur, soweit die Anteile an der unmittelbar gehaltenen vermittelnden Beteiligung zu einem Betriebsvermögen gehören",
         "sind § 3 Nummer 40 Satz 1 Buchstabe d, § 32d des Einkommensteuergesetzes, § 8b Absatz 1 des Körperschaftsteuergesetzes und § 9 Nummer 7 des Gewerbesteuergesetzes nicht",
         "sind in entsprechender Anwendung der Vorschriften des deutschen Steuerrechts zu ermitteln",
-        "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln; ihre Ermittlung hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
+        "ist, sind als Einkünfte aus Gewerbebetrieb zu behandeln",
+        "hat gemäß § 4 Absatz 1 des Einkommensteuergesetzes",
         "ist auf eine von der ausländischen Gesellschaft zu entrichtende Vermögensteuer nicht",
         "bleiben unberücksichtigt",
         "ist, können in entsprechender Anwendung des § 10d des Einkommensteuergesetzes",
@@ -11308,7 +11919,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.582,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11318,7 +11929,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "82dd30ef6318d865dd51b9039cad216043a4a878c1b5f508d3b3ad3cc0ca9b3d",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.321Z"
+      "aktualisiert": "2026-08-11T09:36:31.896Z"
     },
     "11": {
       "typ": "gemischt",
@@ -11420,13 +12031,56 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 abzuziehen; im Rahmen des § 32d des Einkommensteuergesetzes ist dieser bei der Ermittlung der Summe der Kapitalerträge",
-              "anzeige": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 abzuziehen; im Rahmen des § 32d des Einkommensteuergesetzes ist dieser bei der Ermittlung der Summe der Kapitalerträge … abzuziehen",
+              "text": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2",
+              "anzeige": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 … abzuziehen",
               "teile": [
                 {
-                  "text": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 abzuziehen; im Rahmen des § 32d des Einkommensteuergesetzes ist dieser bei der Ermittlung der Summe der Kapitalerträge",
+                  "text": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2",
                   "von": 529,
-                  "laenge": 198
+                  "laenge": 79
+                },
+                {
+                  "text": "abzuziehen",
+                  "von": 609,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 529,
+              "laenge": 79,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "im Rahmen des § 32d des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "von": 621,
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist dieser bei der Ermittlung der Summe der Kapitalerträge",
+              "anzeige": "ist dieser bei der Ermittlung der Summe der Kapitalerträge … abzuziehen",
+              "teile": [
+                {
+                  "text": "ist dieser bei der Ermittlung der Summe der Kapitalerträge",
+                  "von": 669,
+                  "laenge": 58
                 },
                 {
                   "text": "abzuziehen",
@@ -11435,9 +12089,9 @@
                 }
               ],
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 529,
-              "laenge": 198,
-              "konfidenz": 0.54,
+              "von": 669,
+              "laenge": 58,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -11777,6 +12431,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "im Rahmen des § 32d des Einkommensteuergesetzes",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -11787,14 +12449,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 abzuziehen; im Rahmen des § 32d des Einkommensteuergesetzes ist dieser bei der Ermittlung der Summe der Kapitalerträge … abzuziehen",
+                  "t": "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 … abzuziehen",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "2.",
+                  "t": "ist dieser bei der Ermittlung der Summe der Kapitalerträge … abzuziehen",
+                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "gilt für Bezüge des Steuerpflichtigen im Sinne des Satzes 1 von … Gesellschaften",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -11985,13 +12655,15 @@
         "Erhält der Steuerpflichtige aus der Beteiligung an einer ausländischen Gesellschaft",
         "§ 20 Absatz 1 Nummer 3 des Einkommensteuergesetzes in Verbindung mit § 16 Absatz 1 Nummer 1 des Investmentsteuergesetzes",
         "§ 20 Absatz 1 Nummer 3a des Einkommensteuergesetzes in Verbindung mit § 34 Absatz 1 Nummer 1 des Investmentsteuergesetzes",
+        "im Rahmen des § 32d des Einkommensteuergesetzes",
         "Das am Schluss eines Veranlagungszeitraums verbleibende Hinzurechnungskorrekturvolumen",
         "Der Bestand des verbleibenden Hinzurechnungskorrekturvolumens",
         "Die Absätze 1 bis 3",
         "Wenn Hinzurechnungsbeträge nach § 10 Absatz 2 der Gewerbesteuer unterlegen haben"
       ],
       "rf": [
-        "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2 abzuziehen; im Rahmen des § 32d des Einkommensteuergesetzes ist dieser bei der Ermittlung der Summe der Kapitalerträge",
+        "ist bei der Ermittlung der Summe der Einkünfte ein Kürzungsbetrag nach Absatz 2",
+        "ist dieser bei der Ermittlung der Summe der Kapitalerträge",
         "gilt für Bezüge des Steuerpflichtigen im Sinne des Satzes 1 von",
         "entspricht dem Betrag, der als Bezug im Sinne der unter Absatz 1 bezeichneten Vorschriften bei dem Steuerpflichtigen steuerpflichtig ist",
         "ist gemäß § 18 für jeden Steuerpflichtigen gesondert",
@@ -12006,7 +12678,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.568,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12016,7 +12688,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9af91334e938369ab5c7c7bca2de06008b8ebcf1c462a83f9892a35aa6672f10",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.325Z"
+      "aktualisiert": "2026-08-11T09:36:31.899Z"
     },
     "12": {
       "typ": "gemischt",
@@ -12392,7 +13064,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "515ce469624e891ef8fee7f5abf4733eb93ba65af6e309feb86a4a5c178afb4e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.326Z"
+      "aktualisiert": "2026-08-11T09:36:31.900Z"
     },
     "13": {
       "typ": "gemischt",
@@ -12672,47 +13344,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "gilt nicht",
-              "anzeige": "gilt nicht … im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt",
-              "teile": [
-                {
-                  "text": "gilt nicht",
-                  "von": 2372,
-                  "laenge": 10
-                },
-                {
-                  "text": "im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt",
-                  "von": 2467,
-                  "laenge": 79
-                }
-              ],
-              "pfad": "Abs. 4 Satz 2",
-              "von": 2372,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
-            },
-            {
-              "art": "tb",
-              "text": "wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat",
+              "art": "ausn",
+              "text": "§ 8 Absatz 2 gilt nicht, wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat, im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt, die zur Durchführung der Besteuerung erforderlich sind",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 2",
-              "von": 2384,
-              "laenge": 81,
-              "konfidenz": 0.6,
+              "von": 2359,
+              "laenge": 243,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Satzausnahme: „§ 8 Absatz 2 gilt nicht\""
             }
           ]
         },
@@ -12992,8 +13637,8 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
@@ -13002,19 +13647,26 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
-                },
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
                 {
-                  "n": "2.",
-                  "t": "wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat",
+                  "n": "1.",
+                  "t": "§ 8 Absatz 2 gilt nicht, wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat, im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt, die zur Durchführung der Besteuerung erforderlich sind",
                   "pfad": "Abs. 4 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 }
               ]
             },
             {
-              "n": "II.",
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -13025,14 +13677,6 @@
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gilt nicht … im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt",
-                  "pfad": "Abs. 4 Satz 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": true
                 }
               ]
             }
@@ -13106,7 +13750,6 @@
         "die aus dem Halten, der Verwaltung, der Werterhaltung oder der Werterhöhung von Zahlungsmitteln, Forderungen, Wertpapieren, Beteiligungen (",
         "Zu den Einkünften mit Kapitalanlagecharakter",
         "§ 8 Absatz 2 und 5 sowie die §§ 10 bis 12",
-        "wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat",
         "Die Absätze 1 bis 4",
         "wenn auf die Einkünfte mit Kapitalanlagecharakter, für die die ausländische Gesellschaft Zwischengesellschaft ist",
         "wenn er diese über einen Investmentfonds oder einen Spezial-Investmentfonds im Sinne des Investmentsteuergesetzes hält"
@@ -13118,19 +13761,19 @@
         "sind Einkünfte, einschließlich Veräußerungsgewinne",
         "gehören auch die Einkünfte aus einer Gesellschaft im Sinne des § 16 des REIT-Gesetzes vom 28. Mai 2007 (BGBl. I S. 914) in der jeweils geltenden Fassung",
         "gelten entsprechend",
-        "gilt nicht",
         "sind nicht anzuwenden",
         "Mittelbare Beteiligungen"
       ],
       "ausnahmen": [
         "Satz 1 ist nicht anzuwenden, wenn die Einkünfte mit Kapitalanlagecharakter nicht mehr als ein Drittel der gesamten Einkünfte, für die die ausländische Gesellschaft Zwischengesellschaft ist, betragen und die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
         "ausgenommen Einkünfte im Sinne des § 8 Absatz 1 Nummer 7 und 8) oder ähnlichen Vermögenswerten stammen",
-        "es sei denn, der Steuerpflichtige weist nach, dass sie aus einer Tätigkeit stammen, die einer unter § 8 Absatz 1 Nummer 1 bis 6 fallenden eigenen Tätigkeit der ausländischen Gesellschaft dient"
+        "es sei denn, der Steuerpflichtige weist nach, dass sie aus einer Tätigkeit stammen, die einer unter § 8 Absatz 1 Nummer 1 bis 6 fallenden eigenen Tätigkeit der ausländischen Gesellschaft dient",
+        "§ 8 Absatz 2 gilt nicht, wenn der Staat, in dem die Gesellschaft ihren Sitz oder ihre Geschäftsleitung hat, im Wege des zwischenstaatlichen Informationsaustausches keine Auskünfte erteilt, die zur Durchführung der Besteuerung erforderlich sind"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.549,
+      "konfidenz": 0.548,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13140,7 +13783,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7cea57fe64e07ff3828250d3d6e015265e2dafcfe4ba02d8aa211b4c6b5adb49",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.329Z"
+      "aktualisiert": "2026-08-11T09:36:31.902Z"
     },
     "14": {
       "typ": "gemischt",
@@ -13163,7 +13806,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.329Z"
+      "aktualisiert": "2026-08-11T09:36:31.903Z"
     },
     "15": {
       "typ": "gemischt",
@@ -13632,13 +14275,29 @@
             },
             {
               "art": "rf",
-              "text": "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend; § 8b des Körperschaftsteuergesetzes bleibt unberücksichtigt",
+              "text": "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 2",
               "von": 2552,
-              "laenge": 105,
-              "konfidenz": 0.54,
+              "laenge": 44,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "bleibt unberücksichtigt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 7 Satz 2",
+              "von": 2634,
+              "laenge": 23,
+              "konfidenz": 0.45,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -13739,13 +14398,45 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "bleibt unberührt; § 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+              "text": "unberührt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 2",
-              "von": 3039,
-              "laenge": 254,
-              "konfidenz": 0.42,
+              "von": 3046,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "§ 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 8 Satz 2",
+              "von": 3057,
+              "laenge": 70,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 8 Satz 2",
+              "von": 3128,
+              "laenge": 165,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -13764,13 +14455,13 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt; § 8b Absatz 1 und 2 des Körperschaftsteuergesetzes ist nur insoweit anzuwenden",
+              "text": "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 3",
               "von": 3295,
-              "laenge": 302,
-              "konfidenz": 0.42,
+              "laenge": 222,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -13780,19 +14471,35 @@
             },
             {
               "art": "tb",
-              "text": "als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden",
+              "text": "§ 8b Absatz 1 und 2 des Körperschaftsteuergesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 3",
-              "von": 3599,
-              "laenge": 127,
+              "von": 3519,
+              "laenge": 50,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld (um Ausnahme gekürzt)"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist nur insoweit anzuwenden, als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wäre",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 8 Satz 3",
+              "von": 3570,
+              "laenge": 161,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -14408,14 +15115,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend; § 8b des Körperschaftsteuergesetzes bleibt unberücksichtigt",
+                  "t": "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend",
                   "pfad": "Abs. 7 Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "bleibt unberücksichtigt",
+                  "pfad": "Abs. 7 Satz 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "entfällt die Zurechnung",
                   "pfad": "Abs. 7 Satz 3",
                   "konfidenz": 0.6,
@@ -14447,15 +15162,23 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt; § 8b Absatz 1 und 2 des Körperschaftsteuergesetzes ist nur insoweit anzuwenden",
-                  "pfad": "Abs. 8 Satz 3",
-                  "konfidenz": 0.42,
+                  "t": "§ 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes",
+                  "pfad": "Abs. 8 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden",
+                  "t": "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt",
+                  "pfad": "Abs. 8 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "§ 8b Absatz 1 und 2 des Körperschaftsteuergesetzes",
                   "pfad": "Abs. 8 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -14478,9 +15201,25 @@
                 },
                 {
                   "n": "2.",
-                  "t": "bleibt unberührt; § 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+                  "t": "unberührt",
                   "pfad": "Abs. 8 Satz 2",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+                  "pfad": "Abs. 8 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "ist nur insoweit anzuwenden, als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wäre",
+                  "pfad": "Abs. 8 Satz 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -14686,8 +15425,9 @@
         "Bei der Ermittlung der Einkünfte",
         "Ergibt sich ein negativer Betrag",
         "Die nach Absatz 1 dem Stifter oder der bezugs-",
-        "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt; § 8b Absatz 1 und 2 des Körperschaftsteuergesetzes ist nur insoweit anzuwenden",
-        "als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden",
+        "§ 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes",
+        "Soweit es sich beim Stifter oder der bezugs- oder anfallsberechtigten Person um Personen handelt, die ihre Einkünfte nach dem Körperschaftsteuergesetz ermitteln, bleibt § 8 Absatz 2 des Körperschaftsteuergesetzes unberührt",
+        "§ 8b Absatz 1 und 2 des Körperschaftsteuergesetzes",
         "Auf Gewinnausschüttungen der ausländischen Gesellschaft, denen nachweislich bereits nach Satz 1",
         "wenn sie allein oder zusammen mit den in den Absätzen 2 und 3 genannten Personen zu mehr als der Hälfte unmittelbar oder mittelbar bezugsberechtigt oder anfallsberechtigt ist",
         "Auf Zuwendungen der ausländischen Stiftung, denen nachweislich bereits nach Satz 1",
@@ -14704,10 +15444,13 @@
         "nachgewiesen wird, dass das Stiftungsvermögen der Verfügungsmacht der in den Absätzen 2 und 3 genannten Personen rechtlich und tatsächlich entzogen ist",
         "zwischen der Bundesrepublik Deutschland und dem Staat, in dem die Familienstiftung Geschäftsleitung oder Sitz hat, auf Grund der Amtshilferichtlinie gemäß § 2 Absatz 11 des EU-Amtshilfegesetzes oder einer vergleichbaren zwei- oder mehrseitigen Vereinbarung, Auskünfte erteilt werden, die erforderlich sind, um die Besteuerung durchzuführen",
         "werden in entsprechender Anwendung der Vorschriften des Körperschaftsteuergesetzes und des Einkommensteuergesetzes",
-        "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend; § 8b des Körperschaftsteuergesetzes bleibt unberücksichtigt",
+        "gilt § 10 Absatz 3 Satz 3 bis 6 entsprechend",
+        "bleibt unberücksichtigt",
         "entfällt die Zurechnung",
         "anfallsberechtigten Person zuzurechnenden Einkünfte gehören bei Personen, die ihre Einkünfte nicht nach dem Körperschaftsteuergesetz ermitteln, zu den Einkünften im Sinne des § 20 Absatz 1 Nummer 9 des Einkommensteuergesetzes",
-        "bleibt unberührt; § 3 Nummer 40 Satz 1 Buchstabe d und § 32d des Einkommensteuergesetzes sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+        "unberührt",
+        "sind nur insoweit anzuwenden, als diese Vorschriften bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wären",
+        "ist nur insoweit anzuwenden, als diese Vorschrift bei unmittelbarem Bezug der zuzurechnenden Einkünfte durch die Personen im Sinne des Absatzes 1 anzuwenden wäre",
         "gehören die Einkünfte dieser Gesellschaft in entsprechender Anwendung der §§ 7 bis 13 mit dem Teil zu den Einkünften der Familienstiftung, der auf die Beteiligung der Stiftung am Nennkapital der Gesellschaft entfällt",
         "gilt entsprechend",
         "zugerechnete Beträge zugrunde liegen, ist Absatz 1 nicht anzuwenden",
@@ -14725,7 +15468,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.56,
+      "konfidenz": 0.567,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -14735,7 +15478,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c4b6e3962f8a965c502e38acbadec1997acebc620e3c3e76f1d6c16b64a6c217",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.333Z"
+      "aktualisiert": "2026-08-11T09:36:31.907Z"
     },
     "16": {
       "typ": "konditional",
@@ -14904,7 +15647,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "968a035dc79c683387b7aed61db6c6e039d65931d68aceb8137ab9d2823b49dc",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.334Z"
+      "aktualisiert": "2026-08-11T09:36:31.908Z"
     },
     "17": {
       "typ": "gemischt",
@@ -15101,19 +15844,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen; Zinsen und Nutzungsentgelte, die die Gesellschaft für überlassene Wirtschaftsgüter an die unbeschränkt Steuerpflichtigen zahlt, sind abzuziehen",
+              "text": "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 1045,
-              "laenge": 342,
-              "konfidenz": 0.42,
+              "laenge": 197,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "rf",
+              "text": "abzuziehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 1377,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
             }
           ]
         }
@@ -15209,9 +15968,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen; Zinsen und Nutzungsentgelte, die die Gesellschaft für überlassene Wirtschaftsgüter an die unbeschränkt Steuerpflichtigen zahlt, sind abzuziehen",
+                  "t": "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "abzuziehen",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -15230,13 +15997,14 @@
         "sind insbesondere",
         "vorzulegen",
         "sind diese Unterlagen mit dem im Staat der Geschäftsleitung oder des Sitzes vorgeschriebenen oder üblichen Prüfungsvermerk einer behördlich anerkannten Wirtschaftsprüfungsstelle oder vergleichbaren Stelle",
-        "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen; Zinsen und Nutzungsentgelte, die die Gesellschaft für überlassene Wirtschaftsgüter an die unbeschränkt Steuerpflichtigen zahlt, sind abzuziehen"
+        "ist mangels anderer geeigneter Anhaltspunkte bei der Schätzung als Anhaltspunkt von mindestens 20 Prozent des gemeinen Werts der von den unbeschränkt Steuerpflichtigen gehaltenen Anteile auszugehen",
+        "abzuziehen"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.503,
+      "konfidenz": 0.517,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -15246,7 +16014,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2fb36d61e508817f5ff45dcd398e646e83a5d17ee6786e85cf05d4160b7d4ae0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.335Z"
+      "aktualisiert": "2026-08-11T09:36:31.910Z"
     },
     "18": {
       "typ": "gemischt",
@@ -15330,19 +16098,46 @@
             },
             {
               "art": "rf",
-              "text": "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen; dabei ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten verteilen",
+              "text": "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 3",
               "von": 608,
-              "laenge": 179,
-              "konfidenz": 0.54,
+              "laenge": 72,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "rf",
+              "text": "ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten",
+              "anzeige": "ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten … verteilen",
+              "teile": [
+                {
+                  "text": "ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten",
+                  "von": 688,
+                  "laenge": 89
+                },
+                {
+                  "text": "verteilen",
+                  "von": 778,
+                  "laenge": 9
+                }
+              ],
+              "pfad": "Abs. 1 Satz 3",
+              "von": 688,
+              "laenge": 89,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -15639,13 +16434,56 @@
             },
             {
               "art": "rf",
-              "text": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur anzuzeigen; für diese Anzeige gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
+              "text": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur",
+              "anzeige": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur … anzuzeigen",
+              "teile": [
+                {
+                  "text": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur",
+                  "von": 2097,
+                  "laenge": 179
+                },
+                {
+                  "text": "anzuzeigen",
+                  "von": 2277,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 3 Satz 2",
+              "von": 2097,
+              "laenge": 179,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "für diese Anzeige",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 2",
-              "von": 2097,
-              "laenge": 313,
-              "konfidenz": 0.42,
+              "von": 2289,
+              "laenge": 17,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 2307,
+              "laenge": 103,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -15782,13 +16620,56 @@
             },
             {
               "art": "rf",
-              "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
-              "anzeige": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+              "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+              "anzeige": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
               "teile": [
                 {
-                  "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+                  "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
                   "von": 2962,
-                  "laenge": 242
+                  "laenge": 91
+                },
+                {
+                  "text": "verzichten",
+                  "von": 3054,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 3 Satz 6",
+              "von": 2962,
+              "laenge": 91,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 6",
+              "von": 3066,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+              "anzeige": "sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+              "teile": [
+                {
+                  "text": "sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+                  "von": 3081,
+                  "laenge": 123
                 },
                 {
                   "text": "zu unterschreiben",
@@ -15797,9 +16678,9 @@
                 }
               ],
               "pfad": "Abs. 3 Satz 6",
-              "von": 2962,
-              "laenge": 242,
-              "konfidenz": 0.54,
+              "von": 3081,
+              "laenge": 123,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -15936,14 +16817,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen; dabei ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten verteilen",
+                  "t": "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen",
                   "pfad": "Abs. 1 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten … verteilen",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "4.",
                   "t": "sind entsprechend … anzuwenden",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.45,
@@ -16069,6 +16958,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "für diese Anzeige",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "in den Fällen des Satzes 2 die Abgabe einer Erklärung nach Satz 1 verlangen",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -16076,10 +16973,18 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Auf Antrag",
                   "pfad": "Abs. 3 Satz 6",
                   "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "in diesem Fall",
+                  "pfad": "Abs. 3 Satz 6",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -16100,14 +17005,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur anzuzeigen; für diese Anzeige gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
+                  "t": "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur … anzuzeigen",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
+                  "t": "gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "hat die Angaben zu enthalten, die für die Prüfung der Voraussetzungen nach § 8 Absatz 2 von Bedeutung sind; insbesondere Name, Anschrift, wirtschaftliche Tätigkeit der ausländischen Gesellschaft, Beteiligungsverhältnisse und Identifikationsmerkmale der an der ausländischen Gesellschaft … Beteiligten",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.42,
@@ -16115,7 +17028,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Das zuständige Finanzamt",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -16123,7 +17036,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "können durch die Abgabe einer gemeinsamen Erklärung oder Anzeige erfüllt werden",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -16131,10 +17044,18 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
-                  "t": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+                  "n": "7.",
+                  "t": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
                   "pfad": "Abs. 3 Satz 6",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "8.",
+                  "t": "sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig … zu unterschreiben",
+                  "pfad": "Abs. 3 Satz 6",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -16212,24 +17133,29 @@
         "Soweit in den Fällen des § 7 Absatz 1 Satz 2 mittelbare Beteiligungen für die Steuerpflicht unbeachtlich sind",
         "Jeder der an der ausländischen Gesellschaft unmittelbar oder mittelbar",
         "In den Fällen, in denen nach § 8 Absatz 2 geltend",
+        "für diese Anzeige",
         "in den Fällen des Satzes 2 die Abgabe einer Erklärung nach Satz 1 verlangen",
         "Auf Antrag",
+        "in diesem Fall",
         "Die Absätze 1 bis 3"
       ],
       "rf": [
         "ist auch festzustellen, wie sich das Hinzurechnungskorrekturvolumen für Zwecke des § 11 Absatz 1 Satz 2 auf die vermittelnden Gesellschaften aufteilt",
-        "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen; dabei ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten verteilen",
+        "wird die gesonderte Feststellung ihnen gegenüber einheitlich vorgenommen",
+        "ist auch festzustellen, wie sich die Besteuerungsgrundlagen auf die einzelnen Beteiligten",
         "sind entsprechend",
         "ist das Finanzamt zuständig, das bei dem Steuerpflichtigen für die Ermittlung der aus der unmittelbaren und mittelbaren Beteiligung bezogenen Einkünfte örtlich zuständig ist",
         "ist das Finanzamt zuständig, das nach Satz 1 für den Beteiligten zuständig ist, dem die höchste Beteiligung an der ausländischen Gesellschaft zuzurechnen ist",
         "ist das Finanzamt zuständig, das zuerst mit der Sache befasst wird",
         "sind diese auch für die Ermittlung der Zuständigkeit nach den Sätzen 1 und 2 unbeachtlich",
         "beteiligten Steuerpflichtigen hat eine Erklärung zur gesonderten Feststellung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch",
-        "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur anzuzeigen; für diese Anzeige gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
+        "gemacht wird, dass eine Hinzurechnung unterbleibt, ist dies abweichend von Satz 1 nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch nur",
+        "gelten die für die Erklärung zur gesonderten Feststellung nach Satz 1 maßgeblichen Fristen entsprechend",
         "hat die Angaben zu enthalten, die für die Prüfung der Voraussetzungen nach § 8 Absatz 2 von Bedeutung sind; insbesondere Name, Anschrift, wirtschaftliche Tätigkeit der ausländischen Gesellschaft, Beteiligungsverhältnisse und Identifikationsmerkmale der an der ausländischen Gesellschaft",
         "Das zuständige Finanzamt",
         "können durch die Abgabe einer gemeinsamen Erklärung oder Anzeige erfüllt werden",
-        "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
+        "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+        "sind die Erklärung sowie die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerpflichtigen eigenhändig",
         "gelten für Einkünfte und Vermögen im Sinne des § 15 entsprechend",
         "ist bei jedem Steuerpflichtigen zulässig"
       ],
@@ -16239,7 +17165,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.571,
+      "konfidenz": 0.585,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16249,7 +17175,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d91a3cd76ac729f3947fd7a41690569ca3f94384d878a22b8dbb677f32fc24ef",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.338Z"
+      "aktualisiert": "2026-08-11T09:36:31.916Z"
     },
     "19": {
       "typ": "gemischt",
@@ -16272,13 +17198,12 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.338Z"
+      "aktualisiert": "2026-08-11T09:36:31.916Z"
     },
     "20": {
       "typ": "gemischt",
       "typen": [
         "aussage",
-        "verweisung",
         "konditional"
       ],
       "saetze": [
@@ -16322,7 +17247,7 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 130,
           "bis": 738,
-          "typ": "verweisung",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -16370,19 +17295,51 @@
             },
             {
               "art": "rf",
-              "text": "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden; ein negativer Betrag ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend",
+              "text": "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 486,
-              "laenge": 251,
-              "konfidenz": 0.42,
+              "laenge": 154,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "tb",
+              "text": "ein negativer Betrag",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 642,
+              "laenge": 20,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 663,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -16462,14 +17419,14 @@
         },
         {
           "absatz": "Abs. 2",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
@@ -16478,6 +17435,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
+                },
+                {
+                  "n": "2.",
+                  "t": "ein negativer Betrag",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -16511,9 +17476,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden; ein negativer Betrag ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend",
+                  "t": "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -16547,11 +17520,13 @@
       ],
       "tb": [
         "Fallen Einkünfte in der ausländischen Betriebsstätte eines unbeschränkt Steuerpflichtigen an und sind sie auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung von der Besteuerung auszunehmen und wären die Einkünfte",
+        "ein negativer Betrag",
         "(weggefallen)"
       ],
       "rf": [
         "werden durch die Abkommen zur Vermeidung der Doppelbesteuerung nicht",
-        "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden; ein negativer Betrag ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend"
+        "ist insoweit die Doppelbesteuerung nicht durch Freistellung, sondern durch Anrechnung der auf diese Einkünfte erhobenen ausländischen Steuern zu vermeiden",
+        "ist nicht zu berücksichtigen, § 10 Absatz 3 Satz 5 und 6 gilt entsprechend"
       ],
       "ausnahmen": [
         "ungeachtet des § 8 Absatz 2 als Zwischeneinkünfte steuerpflichtig",
@@ -16560,7 +17535,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.545,
+      "konfidenz": 0.581,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16570,7 +17545,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b5fe2a06929272edf36e80539e49f84684d5a348924e9dead269a673f6ccba7c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.339Z"
+      "aktualisiert": "2026-08-11T09:36:31.917Z"
     },
     "21": {
       "typ": "anwendung",
@@ -16860,7 +17835,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "3a4bc013a818b5f2585d3d58aae5259ea19b1d23b022aef3c717557a972c255c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.340Z"
+      "aktualisiert": "2026-08-11T09:36:31.919Z"
     },
     "22": {
       "typ": "aussage",
@@ -16936,7 +17911,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "38f5729c46c1ec23b2fdf474e696548e72ab92930a0860aafb21591619931e8c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.340Z"
+      "aktualisiert": "2026-08-11T09:36:31.920Z"
     },
     "1a": {
       "typ": "gemischt",
@@ -17394,7 +18369,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ef6ef7ef076620b96c5399e032c8481f46d1bb482fbbc685af5e245bb5e24b29",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.292Z"
+      "aktualisiert": "2026-08-11T09:36:31.864Z"
     }
   }
 }

@@ -70,13 +70,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 96",
-    "pfad": "Satz 1",
-    "art": "tb",
-    "text": "die Ausübung eines freien Berufs im Sinne des § 18 Abs. 1 Nr. 1 des Einkommensteuergesetze",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 97",
     "pfad": "Abs. 1 Nr. 5",
     "art": "tb",
@@ -305,13 +298,6 @@
     "pfad": "Abs. 2 Nr. 2 Halbs. 2",
     "art": "tb",
     "text": "jedoch die Verstärkungen von Decken und die nicht ausschließlich zu einer Betriebsanlage g",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 178",
-    "pfad": "Abs. 1 Satz 3",
-    "art": "tb",
-    "text": "als bezugsfertig anzusehen, wenn den zukünftigen Bewohnern oder sonstigen Benutzern zugemu",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -903,6 +889,13 @@
     "grund": "zu lang (>600 Zeichen)"
   },
   {
+    "norm": "Anlage 21",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Restlaufzeit des Erbbaurechts bzw. des Nut- zungsrechts (in Jahren) Zinssatz 5,5 % 6,0 % 6",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
     "norm": "Anlage 22",
     "pfad": "Satz 1",
     "art": "rf",
@@ -962,7 +955,21 @@
     "norm": "Anlage 24",
     "pfad": "Satz 12",
     "art": "rf",
-    "text": "gemischt genutzte Grundstücke (Wohnhäuser mit Mischnutzung) Standardstufe Wägungsanteil 1 ",
+    "text": "gegliederte Dachlandschaft, sichtbare Bogendach-konstruktionen 15 Fenster und Außentüren E",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "Anlage 24",
+    "pfad": "Satz 12",
+    "art": "tb",
+    "text": "strukturierte Türblätter ➀ Wandvertäfelungen (Holzpaneele) gestaltete Wandabläufe (z. B. P",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "Anlage 24",
+    "pfad": "Satz 12",
+    "art": "rf",
+    "text": "breite Stahlbeton-, Metall- oder Hartholztreppenanlage mit hochwertigem Geländer 11 Fußböd",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -989,15 +996,22 @@
   {
     "norm": "Anlage 24",
     "pfad": "Satz 14",
+    "art": "tb",
+    "text": "Eingangstüren mit nicht zeitgemäßem Wärmeschutz (vor ca. 1995) Zweifachverglasung (nach ca",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "Anlage 24",
+    "pfad": "Satz 16",
     "art": "rf",
-    "text": "beschichtete Betondachsteine und Tondachziegel, Folienabdichtung; Dachdämmung (nach ca. 19",
+    "text": "abgehängte Decken ➄ ➆ Deckenverkleidung ➅ Betondecke ➂ höherwertige abgehängte Decken ➃ ➄ ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
     "pfad": "Satz 16",
-    "art": "tb",
-    "text": "rollstuhlgerechte Bedienung ➄ ➅ ➆ Akustikputz, raumhohe aufwendige Türelemente ➆ rollstuhl",
+    "art": "rf",
+    "text": "gesteuerte Fern- oder Zentralheizung, Niedertemperatur- oder Brennwertkessel Solarkollekto",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1012,6 +1026,13 @@
     "pfad": "Satz 18",
     "art": "rf",
     "text": "gehoben aufwendig Außenwände Holzfachwerkwand; Holzstützen, Vollholz; Brettschalung oder P",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "Anlage 24",
+    "pfad": "Satz 18",
+    "art": "rf",
+    "text": "geglättet, Anstrich baukonstruktive Einbauten ➉ ➉ Reithallenbande aus Nadelholz zur Abgren",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1033,6 +1054,13 @@
     "pfad": "Satz 1",
     "art": "tb",
     "text": "(Fundstelle: BGBl. 2024 I Nr. 387, S. 71 - 76) Restnut- zungsdauer; Restlaufzeit des Erbba",
+    "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "Anlage 26",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Restlaufzeit des Erbbaurechts bzw. des Nut- zungsrechts (in Jahren) Zinssatz 5,5 % 6,0 % 6",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -1120,13 +1148,6 @@
     "grund": "zu lang (>600 Zeichen)"
   },
   {
-    "norm": "Anlage 39",
-    "pfad": "II",
-    "art": "rf",
-    "text": "sind die Nettokaltmieten zu I. durch folgende Ab- oder Zuschläge anzupassen: Mietniveaustu",
-    "grund": "zu grob (81 Wörter)"
-  },
-  {
     "norm": "Anlage 41",
     "pfad": "Satz 1",
     "art": "tb",
@@ -1153,6 +1174,13 @@
     "art": "rf",
     "text": "genutzte Grundstücke (Wohnhäuser mit Mischnutzung) 695 886 1 118 2 Banken und ähnliche Ges",
     "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "Anlage 42",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "industrielle Produktionsgebäude, überwiegend Skelettbauweise 536 680 942 12.1 Lagergebäude",
+    "grund": "zu grob (78 Wörter)"
   },
   {
     "norm": "Anlage 43",

@@ -35,18 +35,18 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 33",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "alle mit der Verwaltung der Abgaben einschließlich der Abgabenvergütungen oder sonst mit d",
-    "grund": "zu grob (48 Wörter)"
-  },
-  {
     "norm": "§ 44",
     "pfad": "Abs. 2 Satz 1",
     "art": "rf",
     "text": "ist der ursprüngliche Verwaltungsakt in der",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 46",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "tb",
+    "text": "wird dem außergerichtlichen Rechtsbehelf innerhalb dieser Frist stattgegeben oder der bean",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 48",
@@ -138,6 +138,27 @@
     "art": "tb",
     "text": "den Beteiligten die Ergänzung oder Erläuterung ihrer vorbereitenden Schriftsätze, die Vorl",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 90a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "wird rechtzeitig mündliche Verhandlung beantragt",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 100",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "hebt das Gericht den Verwaltungsakt und die etwaige Entscheidung über den außergerichtlich",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 100",
+    "pfad": "Abs. 2 Satz 3",
+    "art": "rf",
+    "text": "teilt den Beteiligten das Ergebnis der Neuberechnung unverzüglich formlos mit",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 105",

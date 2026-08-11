@@ -64,6 +64,12 @@ const MODELLWUNSCH = (process.env.KI_MODELLE ?? "").split(",").map((s) => s.trim
    falschen Pfad, aber einer ganz anderen als bei einem ungültigen Schlüssel. */
 let MODELLE = MODELLWUNSCH;
 const aufwerten = hat("--aufwerten");
+/* Erzwingt Neuberechnung, auch wenn sich der Normtext nicht geändert hat.
+   Wird gebraucht, sobald sich eine REGEL ändert: Der Zwischenstand hängt am
+   Texthash, und der bleibt gleich — eine verbesserte Syntaxregel schlüge sonst
+   nirgends durch, und die Messung gegen den Goldstandard zeigte den alten
+   Stand. Höherwertige KI-Ergebnisse bleiben geschützt (siehe unten). */
+const neuRechnen = hat("--neu");
 const ohneKi = hat("--ohne-ki") || !TOKEN;
 
 if (!TOKEN && !hat("--ohne-ki")) {
@@ -324,6 +330,11 @@ if (belegBilanz.gestuetzt || belegBilanz.entfernt || belegBilanz.strittig) {
 
 function wiederverwendbar({ datei, annotation, th }) {
   if (!annotation || annotation.text_hash !== th || Number(datei?.format) !== FORMAT) return false;
+
+  /* --neu rechnet rein syntaktische Annotationen neu. Was aus Mehrfachläufen
+     stammt, bleibt unangetastet: Eine Regeländerung rechtfertigt es nicht,
+     geprüfte Modellergebnisse wegzuwerfen. */
+  if (neuRechnen && !String(annotation.verfahren || "").includes("mehrfachlauf")) return false;
 
   // --aufwerten: alles neu rechnen, was noch rein syntaktisch ist oder keinen Beleg trägt.
   if (aufwerten && !ohneKi) {

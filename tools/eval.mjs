@@ -53,12 +53,37 @@ function goldElemente(norm) {
   return raus;
 }
 
+/**
+ * Die erzeugten Spannen — MIT ihrem Rechtssatz.
+ *
+ * Die flachen Listen `norm.tb`, `norm.rf`, `norm.ausnahmen` tragen keine
+ * Pfadangabe. Ohne sie ordnet der Abgleich quer über die ganze Norm zu, und
+ * das geht in Normen mit gleichförmigen Absätzen schief: § 3 SolzG nennt
+ * dieselbe Freigrenze dreimal, einmal je Lohnzahlungszeitraum
+ * („ein Zwölftel", „sieben Dreihundertsechzigstel", „ein Dreihundertsechzigstel"
+ * des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages"). Deren Wortüberdeckung
+ * liegt weit über der Schwelle. Eine frühe Sollspanne griff sich dann die
+ * Fundstelle, die eine spätere gebraucht hätte — und beide zählten falsch: die
+ * eine als Fehltreffer, die andere als Auslassung.
+ *
+ * Aus `saetze[].elemente[]` kommt der Pfad mit, deshalb wird von dort gelesen.
+ * Die flachen Listen bleiben der Rückfall für ältere Dateien.
+ */
 function istElemente(norm) {
   if (!norm) return [];
+  if (Array.isArray(norm.saetze) && norm.saetze.length) {
+    const raus = [];
+    for (const satz of norm.saetze) {
+      for (const el of satz.elemente || []) {
+        raus.push({ art: el.art, text: el.text, pfad: el.pfad || satz.pfad || "" });
+      }
+    }
+    if (raus.length) return raus;
+  }
   return [
-    ...(norm.tb || []).map((t) => ({ art: "tb", text: t })),
-    ...(norm.rf || []).map((t) => ({ art: "rf", text: t })),
-    ...(norm.ausnahmen || []).map((t) => ({ art: "ausn", text: t })),
+    ...(norm.tb || []).map((t) => ({ art: "tb", text: t, pfad: "" })),
+    ...(norm.rf || []).map((t) => ({ art: "rf", text: t, pfad: "" })),
+    ...(norm.ausnahmen || []).map((t) => ({ art: "ausn", text: t, pfad: "" })),
   ];
 }
 
@@ -104,14 +129,28 @@ for (const datei of dateien) {
     const g = goldElemente(gnorm);
     const i = istElemente(inorm);
 
+    /* ZWEI DURCHGÄNGE, und die Reihenfolge ist der Punkt: erst im selben
+       Rechtssatz, dann normweit. Sonst greift eine frühe Sollspanne die
+       Fundstelle weg, die eine gleichlautende spätere gebraucht hätte. */
     const gTreffer = new Set();
     const iTreffer = new Set();
-    for (const [gi, ge] of g.entries()) {
-      for (const [ii, ie] of i.entries()) {
-        if (iTreffer.has(ii) || ie.art !== ge.art) continue;
-        if (deckung(ge.text, ie.text) >= TREFFER) { gTreffer.add(gi); iTreffer.add(ii); break; }
+    const zuordnen = (nurGleicherPfad) => {
+      for (const [gi, ge] of g.entries()) {
+        if (gTreffer.has(gi)) continue;
+        let beste = -1, besteDeckung = TREFFER;
+        for (const [ii, ie] of i.entries()) {
+          if (iTreffer.has(ii) || ie.art !== ge.art) continue;
+          if (nurGleicherPfad && ie.pfad && ge.pfad && ie.pfad !== ge.pfad) continue;
+          const d = deckung(ge.text, ie.text);
+          /* Die BESTE Überdeckung, nicht die erste: Zwei Spannen desselben
+             Rechtssatzes können beide über der Schwelle liegen. */
+          if (d >= besteDeckung) { besteDeckung = d; beste = ii; }
+        }
+        if (beste >= 0) { gTreffer.add(gi); iTreffer.add(beste); }
       }
-    }
+    };
+    zuordnen(true);
+    zuordnen(false);
 
     const zeile = { tb: [0, 0, 0], rf: [0, 0, 0], ausn: [0, 0, 0] };
     g.forEach((ge, gi) => { const k = zeile[ge.art]; if (k) gTreffer.has(gi) ? k[0]++ : k[2]++; });
@@ -132,6 +171,17 @@ for (const datei of dateien) {
       ` · übrig ${String(summe).padStart(2)} · fehlt ${String(fehlt).padStart(2)}` +
       `   Typ ${passt ? "ok " : "‼  "} (${gnorm.typ} / ${istTyp})`,
     );
+
+    /* Was das Soll verlangt und nicht gefunden wurde. Ohne diese Liste sagt
+       die Bilanz nur, DASS etwas fehlt — nicht, welcher Bauform es angehört,
+       und danach richtet sich, ob eine Regel oder ein Modell hilft. */
+    if (detail) {
+      g.forEach((ge, gi) => {
+        if (gTreffer.has(gi)) return;
+        console.log(`        ○ ${ge.art}  [fehlt]  ${ge.pfad ? ge.pfad + " · " : ""}`
+          + `${ge.text.slice(0, 66)}${ge.text.length > 66 ? "…" : ""}`);
+      });
+    }
 
     i.forEach((ie, ii) => {
       if (iTreffer.has(ii)) return;

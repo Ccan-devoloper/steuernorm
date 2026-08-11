@@ -470,7 +470,84 @@ const RANG = { ausn: 3, def: 2, tb: 1, rf: 0 };
  * Bestand betraf das 467 Spannen; das Frontend verodert die Klassen dann zu
  * `mark.tb.rf` und zeigt einen Farbverlauf, der nichts bedeutet.
  */
+/**
+ * Nebengeordnete Teilsätze am Semikolon.
+ *
+ * WOZU. Das Semikolon trennt im Gesetzestext zweierlei, und beides wurde
+ * bisher übersehen, weil die Einheit nur EINMAL analysiert wurde:
+ *
+ *   Nebengeordnete Hauptsätze
+ *     „… ist Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom
+ *      laufenden Arbeitslohn ist die Lohnsteuer maßgebend, die …"
+ *
+ *   Zusammengezogene Aufzählungsglieder
+ *     „4. soweit … ab 1998; 5. soweit … Zinsabschlag; 6. soweit …"
+ *
+ * Beide Fälle zusammen trugen 14 der 24 Auslassungen, die der Goldstandard
+ * für das SolzG ausweist — mehr als die Hälfte, und keiner davon ist eine
+ * Frage des Verständnisses, sondern eine der Segmentierung.
+ *
+ * VORSICHTIG GESCHNITTEN. Getrennt wird nur, wenn beide Seiten für sich
+ * stehen können: mindestens vier Wörter und ein finites Verb. Sonst bleibt
+ * die Einheit zusammen — ein Semikolon in einer Aufzählung von Stichwörtern
+ * trennt keine Sätze, und ein zerschnittener Rest ergäbe Spannen ohne Gehalt.
+ * Semikola in Klammern bleiben unangetastet.
+ */
+export function teilsaetze(satz) {
+  const grenzen = [];
+  let tiefe = 0;
+  for (let i = 0; i < satz.length; i++) {
+    const z = satz[i];
+    if (z === "(" || z === "[") tiefe++;
+    else if (z === ")" || z === "]") tiefe = Math.max(0, tiefe - 1);
+    else if (z === ";" && tiefe === 0) grenzen.push(i);
+  }
+  if (!grenzen.length) return [satz];
+
+  const stuecke = [];
+  let ab = 0;
+  for (const g of grenzen) { stuecke.push(satz.slice(ab, g)); ab = g + 1; }
+  stuecke.push(satz.slice(ab));
+
+  /* Ein Stück, das nicht für sich stehen kann, wird wieder angehängt. So
+     bleibt der Wortlaut lückenlos erhalten — es wird nur anders gruppiert. */
+  const traegt = (t) => {
+    const woerter = t.trim().split(/\s+/).filter(Boolean);
+    if (woerter.length < 4) return false;
+    return finitesVerb(t) !== null;
+  };
+
+  const raus = [];
+  for (const st of stuecke) {
+    if (raus.length && !traegt(st)) raus[raus.length - 1] += ";" + st;
+    else raus.push(st);
+  }
+  if (raus.length > 1 && !traegt(raus[0])) {
+    /* Auch das erste Stück muss tragen; sonst gehört es zum zweiten. */
+    const [erstes, ...rest] = raus;
+    rest[0] = erstes + ";" + rest[0];
+    return rest;
+  }
+  return raus;
+}
+
 export function zerlege(satz, kontext = {}) {
+  const teile = teilsaetze(satz);
+
+  if (teile.length > 1) {
+    /* Jeder Teilsatz für sich, die Ergebnisse zusammengeführt. `entflechte`
+       arbeitet danach auf dem VOLLEN Rechtssatz — die Spannen sind
+       Teilzeichenketten davon, die Zeichenpositionen stimmen also weiter. */
+    const zusammen = [];
+    let erster = null;
+    for (const teil of teile) {
+      const r = zerlegeRoh(teil, kontext);
+      if (!erster) erster = r;
+      for (const e of r.elemente || []) zusammen.push(e);
+    }
+    return { ...erster, elemente: entflechte(zusammen, satz) };
+  }
+
   const roh = zerlegeRoh(satz, kontext);
   return { ...roh, elemente: entflechte(roh.elemente || [], satz) };
 }

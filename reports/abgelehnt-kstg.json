@@ -1,10 +1,31 @@
 [
   {
     "norm": "§ 1a",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "§ 217 Absatz 1 des Umwandlungsgesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1a",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "§ 31 Absatz 1a Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1a",
     "pfad": "Abs. 1 Satz 6",
     "art": "rf",
     "text": "finden keine Anwendung auf",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 1a",
+    "pfad": "Abs. 2 Satz 3",
+    "art": "tb",
+    "text": "§ 9 Satz 3 des Umwandlungssteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 1a",
@@ -35,6 +56,13 @@
     "grund": "zu lang (>600 Zeichen)"
   },
   {
+    "norm": "§ 1a",
+    "pfad": "Abs. 4 Satz 6",
+    "art": "tb",
+    "text": "§ 11 des Körperschaftsteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 5",
     "pfad": "Abs. 1 Nr. 1",
     "art": "tb",
@@ -61,6 +89,13 @@
     "art": "tb",
     "text": "auf Arbeitnehmer sonstiger Körperschaften, Personenvereinigungen und Vermögensmassen im Si",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 1 Satz 4",
+    "art": "tb",
+    "text": "und e) wenn bei Unterstützungskassen am Schluss des Wirtschaftsjahrs das Vermögen ohne Ber",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 5",
@@ -117,13 +152,6 @@
     "art": "tb",
     "text": "wenn die Grenze des Satzes 2 nur durch diese Einnahmen überschritten wird",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 5",
-    "pfad": "Abs. 1 Satz 6 (Teil 3)",
-    "art": "tb",
-    "text": "dem Abschluss eines Vertrags im Sinne des Satzes 6 gleich; 11. (weggefallen) 12. die von d",
-    "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 5",
@@ -185,15 +213,8 @@
     "norm": "§ 5",
     "pfad": "Abs. 1 Satz 2 (Teil 8)",
     "art": "tb",
-    "text": "ist, dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung der in Satz 1 gena",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
-  },
-  {
-    "norm": "§ 5",
-    "pfad": "Abs. 1 Satz 3 (Teil 5)",
-    "art": "rf",
-    "text": "ist die Steuerbefreiung insoweit ausgeschlossen; 23. die Auftragsforschung öffentlich-rech",
-    "grund": "zu lang (>600 Zeichen)"
+    "text": "22. gemeinsame Einrichtungen der Tarifvertragsparteien im Sinne des § 4 Abs. 2 des Tarifve",
+    "grund": "zu grob (59 Wörter)"
   },
   {
     "norm": "§ 5",
@@ -229,6 +250,20 @@
     "art": "rf",
     "text": "Die Aufnahme einer",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 9 Satz 7",
+    "art": "tb",
+    "text": "§ 10d Absatz 4 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 9 Satz 8",
+    "art": "tb",
+    "text": "§ 3a Absatz 2 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 8a",
@@ -278,6 +313,20 @@
     "art": "tb",
     "text": "wenn die Beteiligung zu Beginn des Kalenderjahres unmittelbar weniger als 10 Prozent des G",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8b",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "tb",
+    "text": "ist ein Grund- oder Stammkapital nicht vorhanden",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 8b",
+    "pfad": "Abs. 4 Satz 4",
+    "art": "tb",
+    "text": "§ 15 Absatz 1 Satz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 8b",
@@ -344,6 +393,13 @@
   },
   {
     "norm": "§ 8c",
+    "pfad": "Abs. 1a Nr. 2",
+    "art": "tb",
+    "text": "§ 13a Absatz 1 Satz 3 und 4 und Absatz 4 des Erbschaftsteuer- und Schenkungsteuergesetzes ",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8c",
     "pfad": "Abs. 1a Nr. 3 Halbs. 2",
     "art": "tb",
     "text": "wenn der Körperschaft innerhalb von zwölf Monaten nach dem Beteiligungserwerb neues Betrie",
@@ -385,6 +441,13 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 8d",
+    "pfad": "Abs. 1 Satz 5",
+    "art": "tb",
+    "text": "§ 10d Absatz 4 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 9",
     "pfad": "Abs. 1 Nr. 1",
     "art": "tb",
@@ -421,10 +484,10 @@
   },
   {
     "norm": "§ 9",
-    "pfad": "Abs. 3 Satz 2",
+    "pfad": "Abs. 3 Satz 3",
     "art": "tb",
-    "text": "Wer vorsätzlich oder grob fahrlässig eine unrichtige Bestätigung",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+    "text": "§ 10b Absatz 4 Satz 5 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 14",
@@ -495,13 +558,6 @@
     "art": "tb",
     "text": "in den übrigen Versicherungsgeschäften auf Grund des versicherungstechnischen Überschusses",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 21",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "§ 6 Absatz 1 Nummer 3a des Einkommensteuergesetzes",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 21a",
@@ -595,13 +651,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 27",
-    "pfad": "Abs. 5 Satz 4",
-    "art": "tb",
-    "text": "die auf den überhöht ausgewiesenen Betrag der Einlagenrückgewähr entfallende Kapitalertrag",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 30",
     "pfad": "Nr. 3",
     "art": "tb",
@@ -620,13 +669,6 @@
     "pfad": "Abs. 1 Nr. 2",
     "art": "tb",
     "text": "wenn der Bezieher der Einkünfte beschränkt steuerpflichtig ist und die Einkünfte nicht in ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 32",
-    "pfad": "Abs. 2 Nr. 1",
-    "art": "tb",
-    "text": "wenn bei dem Steuerpflichtigen während eines Kalenderjahrs sowohl unbeschränkte Steuerpfli",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -652,6 +694,13 @@
   },
   {
     "norm": "§ 32",
+    "pfad": "Abs. 5 Nr. 5",
+    "art": "tb",
+    "text": "der Anrechnung",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 32",
     "pfad": "Abs. 6 Buchst. c Halbs. 2",
     "art": "tb",
     "text": "L 84 vom 31.3.2010, S. 1) oder gemäß einem dem Artikel 27 des OECD-Musterabkommens 2017 zu",
@@ -668,8 +717,8 @@
     "norm": "§ 32",
     "pfad": "Abs. 6 Nr. 3",
     "art": "tb",
-    "text": "oder von der Steuerbemessungsgrundlage abgezogen werden kann; die Möglichkeit eines Anrech",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+    "text": "der Anrechnung",
+    "grund": "bloßes Normsubjekt"
   },
   {
     "norm": "§ 33",

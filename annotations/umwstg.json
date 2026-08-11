@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-10T09:19:26.258Z",
+  "aktualisiert": "2026-08-11T09:36:31.825Z",
   "quelle": "https://www.gesetze-im-internet.de/umwstg_2006/",
   "stand": [
     {
@@ -1057,7 +1057,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "692301f68f8ced6d0fea4a955cc2645ee38647aa49ca92ec43bd6d93f6659762",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.195Z"
+      "aktualisiert": "2026-08-11T09:36:31.755Z"
     },
     "2": {
       "typ": "gemischt",
@@ -2209,14 +2209,13 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "28fbf5c9f1b825589c4757d1e654df9d6be5c8506faac049f1b124ef2893edb9",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.200Z"
+      "aktualisiert": "2026-08-11T09:36:31.759Z"
     },
     "3": {
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "aussage",
-        "verweisung"
+        "aussage"
       ],
       "saetze": [
         {
@@ -2500,7 +2499,7 @@
           "pfad": "Abs. 2a Satz 1",
           "von": 1347,
           "bis": 1720,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
@@ -2521,13 +2520,29 @@
             },
             {
               "art": "rf",
-              "text": "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln; § 5b des Einkommensteuergesetzes gilt entsprechend",
+              "text": "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2a Satz 1",
               "von": 1408,
-              "laenge": 311,
-              "konfidenz": 0.42,
+              "laenge": 259,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2a Satz 1",
+              "von": 1702,
+              "laenge": 17,
+              "konfidenz": 0.45,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -2730,8 +2745,8 @@
         },
         {
           "absatz": "Abs. 2a",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -2756,9 +2771,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln; § 5b des Einkommensteuergesetzes gilt entsprechend",
+                  "t": "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln",
                   "pfad": "Abs. 2a Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Abs. 2a Satz 1",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -2822,14 +2845,15 @@
         "beschränkt wird",
         "gewährt wird oder in Gesellschaftsrechten",
         "ist spätestens bis zur erstmaligen Abgabe der steuerlichen Schlussbilanz bei dem für die Besteuerung der übertragenden Körperschaft zuständigen Finanzamt",
-        "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln; § 5b des Einkommensteuergesetzes gilt entsprechend",
+        "ist dem zuständigen Finanzamt spätestens bis zum Ablauf der nach § 149 der Abgabenordnung maßgebenden Frist zur Abgabe der Körperschaftsteuererklärung für den Besteuerungszeitraum, in den der steuerliche Übertragungsstichtag fällt, elektronisch zu übermitteln",
+        "gilt entsprechend",
         "ist die Körperschaftsteuer auf den Übertragungsgewinn gemäß § 26 des Körperschaftsteuergesetzes um den Betrag ausländischer Steuer zu ermäßigen, der nach den Rechtsvorschriften eines anderen Mitgliedstaats der Europäischen Union erhoben worden wäre, wenn die übertragenen Wirtschaftsgüter zum gemeinen Wert veräußert worden wären"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.559,
+      "konfidenz": 0.556,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2839,14 +2863,15 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "804c88ca9a563a7bec1cd8d34092d9a79f72b10a685c7ec95b3c568c0b4a5816",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.202Z"
+      "aktualisiert": "2026-08-11T09:36:31.761Z"
     },
     "4": {
       "typ": "gemischt",
       "typen": [
         "aussage",
         "konditional",
-        "rechenregel"
+        "rechenregel",
+        "tarif"
       ],
       "saetze": [
         {
@@ -3131,19 +3156,35 @@
             },
             {
               "art": "rf",
-              "text": "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes; § 15 Abs. 1 Satz 1 Nr. 2 Satz 2 des Einkommensteuergesetzes gilt sinngemäß",
+              "text": "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 4",
               "von": 1596,
-              "laenge": 358,
-              "konfidenz": 0.42,
+              "laenge": 282,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "rf",
+              "text": "gilt sinngemäß",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 4",
+              "von": 1940,
+              "laenge": 14,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -3515,18 +3556,34 @@
           "pfad": "Abs. 6 Satz 4",
           "von": 4308,
           "bis": 4511,
-          "typ": "rechenregel",
+          "typ": "tarif",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen; ein danach verbleibender Übernahmeverlust bleibt außer Ansatz",
+              "text": "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 4",
               "von": 4330,
-              "laenge": 180,
-              "konfidenz": 0.54,
+              "laenge": 117,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Tarif — vollständig Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "bleibt außer Ansatz",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Satz 4",
+              "von": 4491,
+              "laenge": 19,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -3561,19 +3618,35 @@
             },
             {
               "art": "tb",
-              "text": "in diesen Fällen gilt Satz 3 entsprechend",
+              "text": "in diesen Fällen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 5",
               "von": 4667,
-              "laenge": 41,
+              "laenge": 16,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nebensatz trägt die Voraussetzungen (um Ausnahme gekürzt)"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt Satz 3 entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Satz 5",
+              "von": 4684,
+              "laenge": 24,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -3883,14 +3956,22 @@
                 },
                 {
                   "n": "5.",
-                  "t": "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes; § 15 Abs. 1 Satz 1 Nr. 2 Satz 2 des Einkommensteuergesetzes gilt sinngemäß",
+                  "t": "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes",
                   "pfad": "Abs. 2 Satz 4",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "6.",
+                  "t": "gilt sinngemäß",
+                  "pfad": "Abs. 2 Satz 4",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "hinzugerechneten Zuwendungen erhöht sich der Buchwert der Anteile an der Unterstützungskasse",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -4049,8 +4130,8 @@
         },
         {
           "absatz": "Abs. 6",
-          "typ": "rechenregel",
-          "rolle": "Rechenregel",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -4068,7 +4149,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "in diesen Fällen gilt Satz 3 entsprechend",
+                  "t": "in diesen Fällen",
                   "pfad": "Abs. 6 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -4130,14 +4211,30 @@
                 },
                 {
                   "n": "3.",
-                  "t": "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen; ein danach verbleibender Übernahmeverlust bleibt außer Ansatz",
+                  "t": "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen",
                   "pfad": "Abs. 6 Satz 4",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "4.",
+                  "t": "bleibt außer Ansatz",
+                  "pfad": "Abs. 6 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "gilt Satz 3 entsprechend",
+                  "pfad": "Abs. 6 Satz 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "bleibt abweichend von den Sätzen 2 bis 5 außer Ansatz",
                   "pfad": "Abs. 6 Satz 6",
                   "konfidenz": 0.6,
@@ -4226,7 +4323,7 @@
         "Bei der Ermittlung des Übernahmegewinns oder des Übernahmeverlusts",
         "soweit er auf Anteile an der übertragenden Körperschaft entfällt, die am steuerlichen Übertragungsstichtag nicht zum Betriebsvermögen des übernehmenden Rechtsträgers gehören",
         "In den Fällen des Satzes 2",
-        "in diesen Fällen gilt Satz 3 entsprechend",
+        "in diesen Fällen",
         "soweit bei Veräußerung der Anteile an der übertragenden Körperschaft ein Veräußerungsverlust nach § 17 Abs. 2 Satz 6 des Einkommensteuergesetzes nicht zu berücksichtigen wäre oder soweit die Anteile an der übertragenden Körperschaft innerhalb der letzten fünf Jahre vor dem steuerlichen Übertragungsstichtag entgeltlich erworben wurden",
         "Soweit der Übernahmegewinn auf eine Körperschaft",
         "Personenvereinigung oder Vermögensmasse als Mitunternehmerin der Personengesellschaft",
@@ -4240,7 +4337,8 @@
         "tritt in die steuerliche Rechtsstellung der übertragenden Körperschaft ein, insbesondere bezüglich der Bewertung der übernommenen Wirtschaftsgüter",
         "gehen nicht über",
         "ist der Zeitraum seiner Zugehörigkeit zum Betriebsvermögen der übertragenden Körperschaft dem übernehmenden Rechtsträger anzurechnen",
-        "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes; § 15 Abs. 1 Satz 1 Nr. 2 Satz 2 des Einkommensteuergesetzes gilt sinngemäß",
+        "erhöht sich der laufende Gewinn des übernehmenden Rechtsträgers in dem Wirtschaftsjahr, in das der Umwandlungsstichtag fällt, um die von ihm, seinen Gesellschaftern oder seinen Rechtsvorgängern an die Unterstützungskasse geleisteten Zuwendungen nach § 4d des Einkommensteuergesetzes",
+        "gilt sinngemäß",
         "hinzugerechneten Zuwendungen erhöht sich der Buchwert der Anteile an der Unterstützungskasse",
         "sind die Absetzungen für Abnutzung bei dem übernehmenden Rechtsträger in den Fällen des § 7 Abs. 4 Satz 1 und Abs. 5 des Einkommensteuergesetzes nach der bisherigen Bemessungsgrundlage, in allen anderen Fällen nach dem Buchwert, jeweils vermehrt um den Unterschiedsbetrag zwischen dem Buchwert der einzelnen Wirtschaftsgüter und dem Wert, mit dem die Körperschaft die Wirtschaftsgüter in der steuerlichen Schlussbilanz angesetzt hat, zu bemessen",
         "ergibt sich ein Übernahmegewinn oder Übernahmeverlust in Höhe des Unterschiedsbetrags zwischen dem Wert, mit dem die übergegangenen Wirtschaftsgüter zu übernehmen sind, abzüglich der Kosten für den Vermögensübergang und dem Wert der Anteile an der übertragenden Körperschaft (Absätze 1 und 2, § 5 Abs. 2 und 3)",
@@ -4249,7 +4347,9 @@
         "vermindert sich oder ein Übernahmeverlust erhöht sich um die Bezüge, die nach § 7 zu den Einkünften aus Kapitalvermögen im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes gehören",
         "bleibt außer Ansatz",
         "ist der Übernahmeverlust bis zur Höhe der Bezüge im Sinne des § 7",
-        "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen; ein danach verbleibender Übernahmeverlust bleibt außer Ansatz",
+        "ist er in Höhe von 60 Prozent, höchstens jedoch in Höhe von 60 Prozent der Bezüge im Sinne des § 7 zu berücksichtigen",
+        "bleibt außer Ansatz",
+        "gilt Satz 3 entsprechend",
         "bleibt abweichend von den Sätzen 2 bis 5 außer Ansatz",
         "entfällt, ist § 8b des Körperschaftsteuergesetzes anzuwenden",
         "ist § 3 Nr. 40 sowie § 3c des Einkommensteuergesetzes"
@@ -4271,7 +4371,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ccdd4c31abed0ba7c2f031d2a635d61930d6dd049c57f73893b2f693d5d8b89a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.207Z"
+      "aktualisiert": "2026-08-11T09:36:31.766Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4590,7 +4690,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d8e06422c2302540d8fa8eaf46a27dfe01d40d7c44b73062437e7b044d6e0975",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.209Z"
+      "aktualisiert": "2026-08-11T09:36:31.770Z"
     },
     "6": {
       "typ": "gemischt",
@@ -4993,7 +5093,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "610d6303078c8157a48737653e01afc4de6a75b664718722bfd1fafd5d993cbb",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.210Z"
+      "aktualisiert": "2026-08-11T09:36:31.772Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5163,7 +5263,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b19c12fad0c8657076fa12f0e54448e2e0aef801d03b97d893e37d1458d9d22",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.211Z"
+      "aktualisiert": "2026-08-11T09:36:31.772Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5400,7 +5500,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c7f59089f8505df5b208b517ea3f7051ddc9f6d1e1d1cc5b148095b371371298",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.211Z"
+      "aktualisiert": "2026-08-11T09:36:31.773Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5490,24 +5590,56 @@
           "pfad": "Satz 3",
           "von": 326,
           "bis": 574,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag); § 2 Absatz 3 bis 5 gilt entsprechend",
+              "text": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 3",
               "von": 351,
-              "laenge": 222,
-              "konfidenz": 0.42,
+              "laenge": 184,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "tb",
+              "text": "§ 2 Absatz 3 bis 5",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 3",
+              "von": 537,
+              "laenge": 18,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 3",
+              "von": 556,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         }
@@ -5515,19 +5647,27 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft",
                   "pfad": "Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "§ 2 Absatz 3 bis 5",
+                  "pfad": "Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -5557,9 +5697,17 @@
                 },
                 {
                   "n": "3.",
-                  "t": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag); § 2 Absatz 3 bis 5 gilt entsprechend",
+                  "t": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Satz 3",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5569,18 +5717,20 @@
         }
       ],
       "tb": [
-        "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft"
+        "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft",
+        "§ 2 Absatz 3 bis 5"
       ],
       "rf": [
         "sind die §§ 3 bis 8 und 10 entsprechend",
         "hat für steuerliche Zwecke auf den Zeitpunkt, in dem der Formwechsel wirksam wird, eine Übertragungsbilanz, die Personengesellschaft eine Eröffnungsbilanz aufzustellen",
-        "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag); § 2 Absatz 3 bis 5 gilt entsprechend"
+        "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
+        "gilt entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.555,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -5590,7 +5740,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f59fe61fae6b917a310d2b6a06756db2db2f09012ca3cd5ecd5576e23e82e75",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.212Z"
+      "aktualisiert": "2026-08-11T09:36:31.774Z"
     },
     "10": {
       "typ": "gemischt",
@@ -5613,7 +5763,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.212Z"
+      "aktualisiert": "2026-08-11T09:36:31.774Z"
     },
     "11": {
       "typ": "gemischt",
@@ -6213,7 +6363,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17007795c634f2056711c702aaec1b8a5614c878fc8ebd29e4e079df7ae46428",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.214Z"
+      "aktualisiert": "2026-08-11T09:36:31.776Z"
     },
     "12": {
       "typ": "gemischt",
@@ -6391,7 +6541,7 @@
           "pfad": "Abs. 3 Satz 1",
           "von": 834,
           "bis": 975,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
@@ -6412,19 +6562,35 @@
             },
             {
               "art": "tb",
-              "text": "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein; § 4 Abs. 2 und 3 gilt entsprechend",
+              "text": "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
               "von": 870,
-              "laenge": 104,
-              "konfidenz": 0.54,
+              "laenge": 68,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 957,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -6617,8 +6783,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -6628,9 +6794,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein; § 4 Abs. 2 und 3 gilt entsprechend",
+                  "t": "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -6646,6 +6812,14 @@
                   "t": "Die übernehmende Körperschaft",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -6719,7 +6893,7 @@
         "§ 4 Abs. 1 Satz 2 und 3",
         "Bei der übernehmenden Körperschaft",
         "soweit der Gewinn im Sinne des Satzes 1 abzüglich der anteilig darauf entfallenden Kosten für den Vermögensübergang, dem Anteil der übernehmenden Körperschaft an der übertragenden Körperschaft entspricht",
-        "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein; § 4 Abs. 2 und 3 gilt entsprechend",
+        "in die steuerliche Rechtsstellung der übertragenden Körperschaft ein",
         "Im Falle des Vermögensübergangs in den nicht steuerpflichtigen"
       ],
       "rf": [
@@ -6728,6 +6902,7 @@
         "bleibt ein Gewinn oder ein Verlust in Höhe des Unterschieds zwischen dem Buchwert der Anteile an der übertragenden Körperschaft und dem Wert, mit dem die übergegangenen Wirtschaftsgüter zu übernehmen sind, abzüglich der Kosten für den Vermögensübergang, außer Ansatz. § 8b des Körperschaftsteuergesetzes ist anzuwenden",
         "gilt entsprechend",
         "Die übernehmende Körperschaft",
+        "gilt entsprechend",
         "gilt sinngemäß für den Teil des Gewinns aus der Vereinigung von Forderungen",
         "steuerbefreiten Bereich der übernehmenden Körperschaft gilt das in der Steuerbilanz ausgewiesene Eigenkapital abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes, der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt, als Einnahme im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes"
       ],
@@ -6735,7 +6910,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.554,
+      "konfidenz": 0.551,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -6745,7 +6920,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e1ca6251d90130e25ebea592eaaeba7aaa3356458868254e416d62a8810d0121",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.216Z"
+      "aktualisiert": "2026-08-11T09:36:31.777Z"
     },
     "13": {
       "typ": "gemischt",
@@ -6909,14 +7084,30 @@
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 689,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
               "art": "rf",
-              "text": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
-              "anzeige": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+              "text": "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
+              "anzeige": "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
               "teile": [
                 {
-                  "text": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
-                  "von": 682,
-                  "laenge": 90
+                  "text": "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
+                  "von": 704,
+                  "laenge": 68
                 },
                 {
                   "text": "wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
@@ -6925,9 +7116,9 @@
                 }
               ],
               "pfad": "Abs. 2 Nr. 2",
-              "von": 682,
-              "laenge": 90,
-              "konfidenz": 0.54,
+              "von": 704,
+              "laenge": 68,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -7176,6 +7367,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "in diesem Fall",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "Die Anteile an der übernehmenden Körperschaft",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -7183,7 +7382,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Gehören die Anteile an der übertragenden Körperschaft nicht zu einem Betriebsvermögen",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -7230,9 +7429,9 @@
                 },
                 {
                   "n": "3.",
-                  "t": "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
+                  "t": "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
@@ -7277,6 +7476,7 @@
         "Die Anteile an der übertragenden Körperschaft",
         "Abweichend von Absatz 1",
         "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden",
+        "in diesem Fall",
         "Die Anteile an der übernehmenden Körperschaft",
         "Gehören die Anteile an der übertragenden Körperschaft nicht zu einem Betriebsvermögen"
       ],
@@ -7284,7 +7484,7 @@
         "gelten als zum gemeinen Wert veräußert und die an ihre Stelle tretenden Anteile an der übernehmenden Körperschaft gelten als mit diesem Wert",
         "sind auf Antrag die Anteile an der übernehmenden Körperschaft mit dem Buchwert der Anteile an der übertragenden Körperschaft",
         "beschränkt wird",
-        "haben; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
+        "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile",
         "ist entsprechend",
         "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Anteilseigners zuständigen Finanzamt",
         "treten steuerlich an die Stelle der Anteile an der übertragenden Körperschaft",
@@ -7296,7 +7496,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.574,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7306,7 +7506,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c5fc6e6b03505cda25e0345baae595203edb6257bd1e749ed30efbc9b28de5c4",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.217Z"
+      "aktualisiert": "2026-08-11T09:36:31.779Z"
     },
     "14": {
       "typ": "gemischt",
@@ -7329,14 +7529,13 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.217Z"
+      "aktualisiert": "2026-08-11T09:36:31.779Z"
     },
     "15": {
       "typ": "gemischt",
       "typen": [
         "konditional",
         "aussage",
-        "fiktion",
         "tarif"
       ],
       "saetze": [
@@ -7633,7 +7832,7 @@
           "pfad": "Abs. 2 Satz 4",
           "von": 1174,
           "bis": 1579,
-          "typ": "fiktion",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -7655,19 +7854,8 @@
             {
               "art": "rf",
               "text": "kommt Satz 2 nur zur Anwendung",
-              "anzeige": "kommt Satz 2 nur zur Anwendung … die Veräußerung des Anteils gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
-              "teile": [
-                {
-                  "text": "kommt Satz 2 nur zur Anwendung",
-                  "von": 1223,
-                  "laenge": 30
-                },
-                {
-                  "text": "die Veräußerung des Anteils gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
-                  "von": 1456,
-                  "laenge": 122
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 4",
               "von": 1223,
               "laenge": 30,
@@ -7677,7 +7865,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -7694,6 +7882,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 4",
+              "von": 1484,
+              "laenge": 94,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -7788,13 +7992,45 @@
             },
             {
               "art": "rf",
-              "text": "gelten nicht als außenstehende Personen im Sinne dieses Absatzes; als Veräußerung eines Anteils an einer an der Spaltung beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
+              "text": "gelten nicht als außenstehende Personen im Sinne dieses Absatzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 7",
               "von": 2310,
-              "laenge": 253,
-              "konfidenz": 0.42,
+              "laenge": 64,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "als Veräußerung eines Anteils an einer an der Spaltung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 7",
+              "von": 2376,
+              "laenge": 54,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 7",
+              "von": 2431,
+              "laenge": 132,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -8042,6 +8278,14 @@
                 },
                 {
                   "n": "8.",
+                  "t": "als Veräußerung eines Anteils an einer an der Spaltung",
+                  "pfad": "Abs. 2 Satz 7",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "Bei der Trennung von Gesellschafterstämmen",
                   "pfad": "Abs. 2 Satz 8",
                   "konfidenz": 0.6,
@@ -8089,14 +8333,22 @@
                 },
                 {
                   "n": "5.",
-                  "t": "kommt Satz 2 nur zur Anwendung … die Veräußerung des Anteils gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+                  "t": "kommt Satz 2 nur zur Anwendung",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "6.",
+                  "t": "gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+                  "pfad": "Abs. 2 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "ist unwiderlegbar zu vermuten, dass durch die Spaltung eine Veräußerung im Sinne des Satzes 2 vorbereitet wurde",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -8104,7 +8356,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "gilt die Spaltung nur dann als Veräußerung an außenstehende Personen im Sinne des Satzes 2, wenn die Spaltung zu einer Wertverschiebung zugunsten dieser Personen führt",
                   "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.6,
@@ -8112,15 +8364,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
-                  "t": "gelten nicht als außenstehende Personen im Sinne dieses Absatzes; als Veräußerung eines Anteils an einer an der Spaltung beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
+                  "n": "9.",
+                  "t": "gelten nicht als außenstehende Personen im Sinne dieses Absatzes",
                   "pfad": "Abs. 2 Satz 7",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "10.",
+                  "t": "beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
+                  "pfad": "Abs. 2 Satz 7",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
                   "t": "setzt die Anwendung des § 11 Abs. 2 außerdem voraus, dass die Beteiligungen an der übertragenden Körperschaft mindestens fünf Jahre vor dem steuerlichen Übertragungsstichtag bestanden haben",
                   "pfad": "Abs. 2 Satz 8",
                   "konfidenz": 0.6,
@@ -8181,6 +8441,7 @@
         "wenn innerhalb von fünf Jahren nach dem steuerlichen Übertragungsstichtag eine Veräußerung mindestens eines Anteils an einer an der Spaltung beteiligten Körperschaft an außenstehende Personen erfolgt",
         "Sind an der übertragenden Körperschaft außenstehende Personen beteiligt",
         "Verbundene Unternehmen im Sinne des § 271 Absatz 2 des Handelsgesetzbuchs",
+        "als Veräußerung eines Anteils an einer an der Spaltung",
         "Bei der Trennung von Gesellschafterstämmen",
         "Bei einer Abspaltung"
       ],
@@ -8193,9 +8454,11 @@
         "Als außenstehende Personen",
         "gelten Personen",
         "kommt Satz 2 nur zur Anwendung",
+        "gilt als rückwirkendes Ereignis im Sinne von § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
         "ist unwiderlegbar zu vermuten, dass durch die Spaltung eine Veräußerung im Sinne des Satzes 2 vorbereitet wurde",
         "gilt die Spaltung nur dann als Veräußerung an außenstehende Personen im Sinne des Satzes 2, wenn die Spaltung zu einer Wertverschiebung zugunsten dieser Personen führt",
-        "gelten nicht als außenstehende Personen im Sinne dieses Absatzes; als Veräußerung eines Anteils an einer an der Spaltung beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
+        "gelten nicht als außenstehende Personen im Sinne dieses Absatzes",
+        "beteiligten Körperschaft im Sinne des Satzes 4 gilt auch die mittelbare Veräußerung dieses Anteils durch ein verbundenes Unternehmen",
         "setzt die Anwendung des § 11 Abs. 2 außerdem voraus, dass die Beteiligungen an der übertragenden Körperschaft mindestens fünf Jahre vor dem steuerlichen Übertragungsstichtag bestanden haben",
         "mindern sich verrechenbare Verluste, verbleibende Verlustvorträge, nicht ausgeglichene negative Einkünfte, ein Zinsvortrag nach § 4h Absatz 1 Satz 5 des Einkommensteuergesetzes und ein EBITDA-Vortrag nach § 4h Absatz 1 Satz 3 des Einkommensteuergesetzes der übertragenden Körperschaft in dem Verhältnis, in dem bei Zugrundelegung des gemeinen Werts das Vermögen auf eine andere Körperschaft übergeht"
       ],
@@ -8205,7 +8468,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.575,
+      "konfidenz": 0.583,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -8215,7 +8478,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d72e47a513a8546e48723f6394773d94e5e7f14a1b5f1a07bdb604c92d807ad2",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.220Z"
+      "aktualisiert": "2026-08-11T09:36:31.782Z"
     },
     "16": {
       "typ": "konditional",
@@ -8325,7 +8588,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8f3e1ba807fde9d6d9232b325ec6891f7fe7f21090538c01cd5bad0ee3a660a8",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.220Z"
+      "aktualisiert": "2026-08-11T09:36:31.783Z"
     },
     "17": {
       "typ": "gemischt",
@@ -8348,7 +8611,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.220Z"
+      "aktualisiert": "2026-08-11T09:36:31.783Z"
     },
     "18": {
       "typ": "gemischt",
@@ -8924,7 +9187,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "992ec7fc49e542bda8c55d80a229fec9dae96838e0ed1a625fbc47fe5a6b340d",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.222Z"
+      "aktualisiert": "2026-08-11T09:36:31.784Z"
     },
     "19": {
       "typ": "konditional",
@@ -9115,7 +9378,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22ce9304e0af7106c9ee0c115d3eac01eeefaf2492521de2b2073abfe571ceac",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.222Z"
+      "aktualisiert": "2026-08-11T09:36:31.785Z"
     },
     "20": {
       "typ": "gemischt",
@@ -9192,19 +9455,51 @@
             },
             {
               "art": "tb",
-              "text": "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
+              "text": "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 396,
-              "laenge": 150,
-              "konfidenz": 0.54,
+              "laenge": 66,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
+            },
+            {
+              "art": "tb",
+              "text": "für die Bewertung von Pensionsrückstellungen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 464,
+              "laenge": 44,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt § 6a des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 509,
+              "laenge": 37,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -9299,13 +9594,29 @@
             },
             {
               "art": "rf",
-              "text": "übersteigen; dabei ist das Eigenkapital nicht",
-              "anzeige": "übersteigen; dabei ist das Eigenkapital nicht … zu berücksichtigen",
+              "text": "übersteigen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 953,
+              "laenge": 11,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "ist das Eigenkapital nicht",
+              "anzeige": "ist das Eigenkapital nicht … zu berücksichtigen",
               "teile": [
                 {
-                  "text": "übersteigen; dabei ist das Eigenkapital nicht",
-                  "von": 953,
-                  "laenge": 45
+                  "text": "ist das Eigenkapital nicht",
+                  "von": 972,
+                  "laenge": 26
                 },
                 {
                   "text": "zu berücksichtigen",
@@ -9314,9 +9625,9 @@
                 }
               ],
               "pfad": "Abs. 2 Nr. 2",
-              "von": 953,
-              "laenge": 45,
-              "konfidenz": 0.54,
+              "von": 972,
+              "laenge": 26,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -9894,19 +10205,35 @@
             },
             {
               "art": "rf",
-              "text": "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist; dieser Stichtag darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
+              "text": "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 1",
               "von": 4244,
-              "laenge": 378,
-              "konfidenz": 0.42,
+              "laenge": 253,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Satz 1",
+              "von": 4515,
+              "laenge": 107,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -10171,14 +10498,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
+                  "t": "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "für die Bewertung von Pensionsrückstellungen",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Abweichend von Satz 1",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -10186,7 +10521,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -10194,7 +10529,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -10202,7 +10537,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -10226,6 +10561,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "gilt § 6a des Einkommensteuergesetzes",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "kann das übernommene Betriebsvermögen auf Antrag einheitlich mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -10233,7 +10576,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "sichergestellt ist, dass es später bei der übernehmenden Körperschaft der Besteuerung mit Körperschaftsteuer unterliegt",
                   "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.6,
@@ -10241,15 +10584,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
-                  "t": "übersteigen; dabei ist das Eigenkapital nicht … zu berücksichtigen",
+                  "n": "5.",
+                  "t": "übersteigen",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "ist das Eigenkapital nicht … zu berücksichtigen",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "beschränkt wird",
                   "pfad": "Abs. 2 Nr. 3",
                   "konfidenz": 0.45,
@@ -10257,7 +10608,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
                   "pfad": "Abs. 2 Nr. 4",
                   "konfidenz": 0.6,
@@ -10265,7 +10616,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
                   "pfad": "Abs. 2 Buchst. b",
                   "konfidenz": 0.6,
@@ -10273,7 +10624,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der steuerlichen Schlussbilanz bei dem für die Besteuerung der übernehmenden Gesellschaft zuständigen Finanzamt … zu stellen",
                   "pfad": "Abs. 2 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -10281,7 +10632,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
                   "t": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -10289,7 +10640,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "12.",
                   "t": "ermittelt sich unter Berücksichtigung der Entnahmen und Einlagen im Sinne des Absatzes 5 Satz 2",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -10538,14 +10889,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist; dieser Stichtag darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
+                  "t": "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist",
                   "pfad": "Abs. 6 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
+                  "pfad": "Abs. 6 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "darf die Einbringung auf einen Tag zurückbezogen werden, der höchstens acht Monate vor dem Tag des Abschlusses des Einbringungsvertrags liegt und höchstens acht Monate vor dem Zeitpunkt liegt, an dem das eingebrachte Betriebsvermögen auf die übernehmende Gesellschaft übergeht",
                   "pfad": "Abs. 6 Satz 3",
                   "konfidenz": 0.48,
@@ -10553,7 +10912,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 6 Satz 4",
                   "konfidenz": 0.45,
@@ -10665,7 +11024,8 @@
       ],
       "tb": [
         "Wird ein Betrieb oder Teilbetrieb oder ein Mitunternehmeranteil in eine Kapitalgesellschaft oder eine Genossenschaft (übernehmende Gesellschaft) eingebracht und erhält der Einbringende dafür neue Anteile an der Gesellschaft (Sacheinlage)",
-        "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
+        "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen",
+        "für die Bewertung von Pensionsrückstellungen",
         "Abweichend von Satz 1",
         "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
@@ -10687,9 +11047,11 @@
       "rf": [
         "gelten für die Bewertung des eingebrachten Betriebsvermögens und der neuen Gesellschaftsanteile die nachfolgenden Absätze",
         "Die übernehmende Gesellschaft",
+        "gilt § 6a des Einkommensteuergesetzes",
         "kann das übernommene Betriebsvermögen auf Antrag einheitlich mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
         "sichergestellt ist, dass es später bei der übernehmenden Körperschaft der Besteuerung mit Körperschaftsteuer unterliegt",
-        "übersteigen; dabei ist das Eigenkapital nicht",
+        "übersteigen",
+        "ist das Eigenkapital nicht",
         "beschränkt wird",
         "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
         "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
@@ -10704,7 +11066,8 @@
         "sind auf Antrag so zu ermitteln, als ob das eingebrachte Betriebsvermögen mit Ablauf des steuerlichen Übertragungsstichtags (Absatz 6) auf die Übernehmerin übergegangen wäre",
         "gilt hinsichtlich des Einkommens und des Gewerbeertrags nicht für Entnahmen und Einlagen, die nach dem steuerlichen Übertragungsstichtag erfolgen",
         "sind um den Buchwert der Entnahmen zu vermindern und um den sich nach § 6 Abs. 1 Nr. 5 des Einkommensteuergesetzes ergebenden Wert der Einlagen",
-        "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist; dieser Stichtag darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
+        "darf in den Fällen der Sacheinlage durch Verschmelzung im Sinne des § 2 des Umwandlungsgesetzes der Stichtag angesehen werden, für den die Schlussbilanz jedes der übertragenden Unternehmen im Sinne des § 17 Abs. 2 des Umwandlungsgesetzes aufgestellt ist",
+        "darf höchstens acht Monate vor der Anmeldung der Verschmelzung zur Eintragung in das Handelsregister liegen",
         "darf die Einbringung auf einen Tag zurückbezogen werden, der höchstens acht Monate vor dem Tag des Abschlusses des Einbringungsvertrags liegt und höchstens acht Monate vor dem Zeitpunkt liegt, an dem das eingebrachte Betriebsvermögen auf die übernehmende Gesellschaft übergeht",
         "gilt entsprechend",
         "ist entsprechend",
@@ -10715,7 +11078,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.575,
+      "konfidenz": 0.578,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -10725,7 +11088,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ea36c720801a0634a5f8ba2d6ffb545ae9518f4f976568ecec48956827b0293a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.230Z"
+      "aktualisiert": "2026-08-11T09:36:31.790Z"
     },
     "21": {
       "typ": "gemischt",
@@ -11042,19 +11405,8 @@
             {
               "art": "rf",
               "text": "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile",
-              "anzeige": "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile … dies gilt auch, wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
-              "teile": [
-                {
-                  "text": "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile",
-                  "von": 1587,
-                  "laenge": 141
-                },
-                {
-                  "text": "dies gilt auch, wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
-                  "von": 1939,
-                  "laenge": 180
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 2",
               "von": 1587,
               "laenge": 141,
@@ -11064,7 +11416,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -11074,6 +11426,22 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 1730,
               "laenge": 207,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "tb",
+              "text": "wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 2",
+              "von": 1955,
+              "laenge": 164,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -11170,7 +11538,7 @@
           "pfad": "Abs. 2 Nr. 2",
           "von": 2557,
           "bis": 3041,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
@@ -11191,30 +11559,62 @@
             },
             {
               "art": "rf",
-              "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
-              "anzeige": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
-              "teile": [
-                {
-                  "text": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
-                  "von": 2643,
-                  "laenge": 106
-                },
-                {
-                  "text": "wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
-                  "von": 2875,
-                  "laenge": 154
-                }
-              ],
+              "text": "besteuert werden darf",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 2643,
-              "laenge": 106,
-              "konfidenz": 0.54,
+              "laenge": 21,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 2666,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
+              "anzeige": "ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre",
+              "teile": [
+                {
+                  "text": "ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
+                  "von": 2681,
+                  "laenge": 68
+                },
+                {
+                  "text": "wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre",
+                  "von": 2875,
+                  "laenge": 88
+                }
+              ],
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 2681,
+              "laenge": 68,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -11231,6 +11631,33 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Vorbehalt mit „ungeachtet\""
+            },
+            {
+              "art": "rf",
+              "text": "ist entsprechend",
+              "anzeige": "ist entsprechend … anzuwenden",
+              "teile": [
+                {
+                  "text": "ist entsprechend",
+                  "von": 3013,
+                  "laenge": 16
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 3030,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 3013,
+              "laenge": 16,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -11374,6 +11801,38 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "wenn der Einbringende eine natürliche Person ist und die übernehmende Gesellschaft die eingebrachten Anteile nach Absatz 1 Satz 1 oder in den Fällen des Absatzes 2 Satz 2 der Einbringende mit dem gemeinen Wert ansetzt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 3502,
+              "laenge": 217,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "gilt für die Anwendung von § 16 Abs. 4 des Einkommensteuergesetzes unter der Voraussetzung, dass eine im Betriebsvermögen gehaltene Beteiligung an einer Kapitalgesellschaft eingebracht wird, die das gesamte Nennkapital der Kapitalgesellschaft umfasst",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 3726,
+              "laenge": 250,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -11385,20 +11844,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "findet keine Anwendung",
+              "art": "ausn",
+              "text": "§ 34 Abs. 1 des Einkommensteuergesetzes findet keine Anwendung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 2",
-              "von": 4018,
-              "laenge": 22,
+              "von": 3978,
+              "laenge": 62,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Satzausnahme: „§ 34 Abs. 1 des Einkommensteuergesetzes findet keine Anwendung\""
             }
           ]
         }
@@ -11551,6 +12010,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Auf Antrag",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.45,
@@ -11558,7 +12025,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile nicht ausgeschlossen",
                   "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.6,
@@ -11566,7 +12033,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "der Gewinn aus dem Anteilstausch auf Grund Artikel 8 der Richtlinie 2009/133/EG nicht",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -11574,7 +12041,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
+                  "t": "in diesem Fall",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "Haben die eingebrachten Anteile beim Einbringenden nicht zu einem Betriebsvermögen gehört",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11613,11 +12088,11 @@
                 },
                 {
                   "n": "2.",
-                  "t": "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile … dies gilt auch, wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
+                  "t": "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "3.",
@@ -11637,14 +12112,30 @@
                 },
                 {
                   "n": "5.",
-                  "t": "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre; § 15 Abs. 1a Satz 2 des Einkommensteuergesetzes ist entsprechend",
+                  "t": "besteuert werden darf",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile … wie die Veräußerung der Anteile an der erworbenen Gesellschaft zu besteuern gewesen wäre",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
+                  "t": "ist entsprechend … anzuwenden",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "8.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Einbringenden zuständigen Finanzamt … zu stellen",
                   "pfad": "Abs. 2 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11652,7 +12143,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "treten an die Stelle des Buchwerts die Anschaffungskosten",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11660,7 +12151,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 2 Satz 3 (Teil 2)",
                   "konfidenz": 0.45,
@@ -11679,8 +12170,8 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
@@ -11689,11 +12180,34 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "wenn der Einbringende eine natürliche Person ist und die übernehmende Gesellschaft die eingebrachten Anteile nach Absatz 1 Satz 1 oder in den Fällen des Absatzes 2 Satz 2 der Einbringende mit dem gemeinen Wert ansetzt",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "§ 34 Abs. 1 des Einkommensteuergesetzes findet keine Anwendung",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -11707,9 +12221,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "findet keine Anwendung",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
+                  "t": "gilt für die Anwendung von § 16 Abs. 4 des Einkommensteuergesetzes unter der Voraussetzung, dass eine im Betriebsvermögen gehaltene Beteiligung an einer Kapitalgesellschaft eingebracht wird, die das gesamte Nennkapital der Kapitalgesellschaft umfasst",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -11726,11 +12240,14 @@
         "Der Wert, mit dem die übernehmende Gesellschaft die eingebrachten Anteile",
         "Abweichend von Satz 1",
         "wenn für die eingebrachten Anteile nach der Einbringung das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung dieser Anteile ausgeschlossen oder beschränkt ist",
+        "wenn das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt ist",
         "Auf Antrag",
         "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile nicht ausgeschlossen",
         "der Gewinn aus dem Anteilstausch auf Grund Artikel 8 der Richtlinie 2009/133/EG nicht",
+        "in diesem Fall",
         "Haben die eingebrachten Anteile beim Einbringenden nicht zu einem Betriebsvermögen gehört",
-        "Auf den beim Anteilstausch entstehenden Veräußerungsgewinn"
+        "Auf den beim Anteilstausch entstehenden Veräußerungsgewinn",
+        "wenn der Einbringende eine natürliche Person ist und die übernehmende Gesellschaft die eingebrachten Anteile nach Absatz 1 Satz 1 oder in den Fällen des Absatzes 2 Satz 2 der Einbringende mit dem gemeinen Wert ansetzt"
       ],
       "rf": [
         "hat die übernehmende Gesellschaft die eingebrachten Anteile mit dem gemeinen Wert anzusetzen",
@@ -11744,20 +12261,23 @@
         "gilt für den Einbringenden der gemeine Wert der eingebrachten Anteile als Veräußerungspreis und als Anschaffungskosten der erhaltenen Anteile",
         "gilt in den Fällen des Satzes 2 unter den Voraussetzungen des Absatzes 1 Satz 2 der Buchwert oder ein höherer Wert, höchstens der gemeine Wert, als Veräußerungspreis der eingebrachten Anteile und als Anschaffungskosten der erhaltenen Anteile",
         "beschränkt ist",
-        "besteuert werden darf; in diesem Fall ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
+        "besteuert werden darf",
+        "ist der Gewinn aus einer späteren Veräußerung der erhaltenen Anteile",
+        "ist entsprechend",
         "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Einbringenden zuständigen Finanzamt",
         "treten an die Stelle des Buchwerts die Anschaffungskosten",
         "gilt entsprechend",
         "ist § 17 Abs. 3 des Einkommensteuergesetzes nur anzuwenden",
-        "findet keine Anwendung"
+        "gilt für die Anwendung von § 16 Abs. 4 des Einkommensteuergesetzes unter der Voraussetzung, dass eine im Betriebsvermögen gehaltene Beteiligung an einer Kapitalgesellschaft eingebracht wird, die das gesamte Nennkapital der Kapitalgesellschaft umfasst"
       ],
       "ausnahmen": [
-        "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern"
+        "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
+        "§ 34 Abs. 1 des Einkommensteuergesetzes findet keine Anwendung"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.574,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11767,7 +12287,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8983bf2950f1f99d8fb4eb46088bde704057131ad7aaf6a9580118deabdcfde5",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.233Z"
+      "aktualisiert": "2026-08-11T09:36:31.795Z"
     },
     "22": {
       "typ": "gemischt",
@@ -11803,19 +12323,62 @@
             },
             {
               "art": "rf",
-              "text": "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+              "text": "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 210,
-              "laenge": 265,
-              "konfidenz": 0.42,
+              "laenge": 193,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 405,
+              "laenge": 48,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind nicht",
+              "anzeige": "sind nicht … anzuwenden",
+              "teile": [
+                {
+                  "text": "sind nicht",
+                  "von": 454,
+                  "laenge": 10
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 465,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 1 Satz 1",
+              "von": 454,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -11919,19 +12482,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden; ist in diesen Fällen das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt, sind daneben auch die Sätze 1 bis 4 anzuwenden",
+              "text": "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 5",
               "von": 1086,
-              "laenge": 364,
-              "konfidenz": 0.42,
+              "laenge": 138,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "rf",
+              "text": "sind daneben auch die Sätze 1 bis 4 anzuwenden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 5",
+              "von": 1404,
+              "laenge": 46,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfolgender Hauptsatz"
             }
           ]
         },
@@ -12256,19 +12835,62 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+              "text": "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 4629,
-              "laenge": 253,
-              "konfidenz": 0.42,
+              "laenge": 181,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 4812,
+              "laenge": 48,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind nicht",
+              "anzeige": "sind nicht … anzuwenden",
+              "teile": [
+                {
+                  "text": "sind nicht",
+                  "von": 4861,
+                  "laenge": 10
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 4872,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 2 Satz 1",
+              "von": 4861,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -12403,36 +13025,36 @@
               "grund": "Satzausnahme: „Sätze 1 bis 4 sind nicht anzuwenden\""
             },
             {
-              "art": "tb",
-              "text": "dies gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist",
+              "art": "rf",
+              "text": "gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist, in der jeweils geltenden Fassung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 5",
-              "von": 5491,
-              "laenge": 201,
+              "von": 5496,
+              "laenge": 230,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\" (um Ausnahme gekürzt)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
-              "art": "rf",
-              "text": "in der jeweils geltenden Fassung, wenn und soweit die Steuer nicht gestundet wird",
+              "art": "tb",
+              "text": "wenn und soweit die Steuer nicht gestundet wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 5",
-              "von": 5694,
-              "laenge": 81,
+              "von": 5728,
+              "laenge": 47,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -12797,13 +13419,45 @@
             },
             {
               "art": "rf",
-              "text": "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag; nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
+              "text": "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
               "von": 7259,
-              "laenge": 427,
-              "konfidenz": 0.42,
+              "laenge": 188,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 1",
+              "von": 7449,
+              "laenge": 91,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 1",
+              "von": 7541,
+              "laenge": 145,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -12990,6 +13644,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -12997,7 +13659,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Die Sätze 1 bis 5",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -13005,7 +13667,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
@@ -13013,7 +13675,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "der Einbringende die erhaltenen Anteile entgeltlich",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -13021,7 +13683,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "die Kapitalgesellschaft, an der die Anteile",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -13029,7 +13691,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "der Einbringende die erhaltenen Anteile durch einen Vorgang im Sinne des § 21 Absatz 1 oder einen Vorgang im Sinne des § 20 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zum Buchwert in eine Kapitalgesellschaft oder eine Genossenschaft",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.48,
@@ -13037,7 +13699,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "der Einbringende die erhaltenen Anteile in eine Kapitalgesellschaft oder eine Genossenschaft durch einen Vorgang im Sinne des § 20 Absatz 1 oder einen Vorgang im Sinne des § 21 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zu Buchwerten",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.48,
@@ -13076,14 +13738,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+                  "t": "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I)",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "sind nicht … anzuwenden",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "gilt insoweit als rückwirkendes Ereignis im Sinne von § 175 Abs. 1 Satz 1 Nr. 2 der Abgabenordnung",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -13091,7 +13761,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Einbringungsgewinn I",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.45,
@@ -13099,7 +13769,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Der Einbringungsgewinn I",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -13107,15 +13777,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
-                  "t": "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden; ist in diesen Fällen das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt, sind daneben auch die Sätze 1 bis 4 anzuwenden",
+                  "n": "6.",
+                  "t": "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden",
                   "pfad": "Abs. 1 Satz 5",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
+                  "t": "sind daneben auch die Sätze 1 bis 4 anzuwenden",
+                  "pfad": "Abs. 1 Satz 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
                   "t": "gelten entsprechend",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.45,
@@ -13123,7 +13801,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "überträgt",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.45,
@@ -13131,7 +13809,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "bestehen, aufgelöst und abgewickelt wird oder das Kapital dieser Gesellschaft herabgesetzt und an die Anteilseigner zurückgezahlt wird oder Beträge aus dem steuerlichen Einlagekonto im Sinne des § 27 des Körperschaftsteuergesetzes ausgeschüttet oder zurückgezahlt werden",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.42,
@@ -13139,7 +13817,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
                   "t": "eingebracht hat und diese Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.54,
@@ -13147,7 +13825,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "12.",
                   "t": "einbringt und die aus dieser Einbringung erhaltenen Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.54,
@@ -13155,7 +13833,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "13.",
                   "t": "erfüllt sind",
                   "pfad": "Abs. 1 Nr. 6",
                   "konfidenz": 0.45,
@@ -13163,7 +13841,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "14.",
                   "t": "Satz 4",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -13187,6 +13865,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Absatz 1 Satz 2",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -13194,7 +13880,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -13202,15 +13888,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
-                  "t": "dies gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist",
+                  "n": "4.",
+                  "t": "wenn und soweit die Steuer nicht gestundet wird",
                   "pfad": "Abs. 2 Satz 5",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Sätze 1 bis 5",
                   "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.6,
@@ -13218,7 +13904,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Absatz 1 Satz 7",
                   "pfad": "Abs. 2 Satz 7",
                   "konfidenz": 0.6,
@@ -13249,14 +13935,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+                  "t": "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II)",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "sind nicht … anzuwenden",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.45,
@@ -13264,7 +13958,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Einbringungsgewinn II",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.45,
@@ -13272,7 +13966,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Der Einbringungsgewinn II",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -13280,15 +13974,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
-                  "t": "in der jeweils geltenden Fassung, wenn und soweit die Steuer nicht gestundet wird",
+                  "n": "6.",
+                  "t": "gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist, in der jeweils geltenden Fassung",
                   "pfad": "Abs. 2 Satz 5",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "gelten entsprechend",
                   "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.45,
@@ -13296,7 +13990,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "ist entsprechend … anzuwenden",
                   "pfad": "Abs. 2 Satz 7",
                   "konfidenz": 0.45,
@@ -13439,12 +14133,20 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Das für den Einbringenden zuständige Finanzamt",
+                  "pfad": "Abs. 5 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende",
                   "pfad": "Abs. 5 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -13459,9 +14161,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag; nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
+                  "t": "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag",
                   "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
+                  "pfad": "Abs. 5 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13578,6 +14288,7 @@
       ],
       "tb": [
         "Soweit in den Fällen einer Sacheinlage unter dem gemeinen Wert (§ 20 Abs. 2 Satz 2) der Einbringende die erhaltenen Anteile innerhalb eines Zeitraums von sieben Jahren nach dem Einbringungszeitpunkt veräußert",
+        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
         "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
         "Die Sätze 1 bis 5",
         "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft",
@@ -13585,9 +14296,10 @@
         "die Kapitalgesellschaft, an der die Anteile",
         "der Einbringende die erhaltenen Anteile durch einen Vorgang im Sinne des § 21 Absatz 1 oder einen Vorgang im Sinne des § 20 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zum Buchwert in eine Kapitalgesellschaft oder eine Genossenschaft",
         "der Einbringende die erhaltenen Anteile in eine Kapitalgesellschaft oder eine Genossenschaft durch einen Vorgang im Sinne des § 20 Absatz 1 oder einen Vorgang im Sinne des § 21 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zu Buchwerten",
+        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
         "Absatz 1 Satz 2",
         "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
-        "dies gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist",
+        "wenn und soweit die Steuer nicht gestundet wird",
         "Sätze 1 bis 5",
         "Absatz 1 Satz 7",
         "in den Fällen des Absatzes 1 die erhaltenen Anteile und die auf diesen Anteilen beruhenden Anteile",
@@ -13595,15 +14307,18 @@
         "eine juristische Person des öffentlichen Rechts",
         "von der Körperschaftsteuer",
         "Das für den Einbringenden zuständige Finanzamt",
+        "nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende",
         "In den Fällen der unentgeltlichen Rechtsnachfolge",
         "Absatz 1 Satz 6 Nummer 6 und Absatz 2 Satz 6"
       ],
       "rf": [
-        "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+        "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I)",
+        "sind nicht",
         "gilt insoweit als rückwirkendes Ereignis im Sinne von § 175 Abs. 1 Satz 1 Nr. 2 der Abgabenordnung",
         "Einbringungsgewinn I",
         "Der Einbringungsgewinn I",
-        "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden; ist in diesen Fällen das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile ausgeschlossen oder beschränkt, sind daneben auch die Sätze 1 bis 4 anzuwenden",
+        "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden",
+        "sind daneben auch die Sätze 1 bis 4 anzuwenden",
         "gelten entsprechend",
         "überträgt",
         "bestehen, aufgelöst und abgewickelt wird oder das Kapital dieser Gesellschaft herabgesetzt und an die Anteilseigner zurückgezahlt wird oder Beträge aus dem steuerlichen Einlagekonto im Sinne des § 27 des Körperschaftsteuergesetzes ausgeschüttet oder zurückgezahlt werden",
@@ -13611,11 +14326,12 @@
         "einbringt und die aus dieser Einbringung erhaltenen Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
         "erfüllt sind",
         "Satz 4",
-        "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II); § 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+        "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II)",
+        "sind nicht",
         "gilt entsprechend",
         "Einbringungsgewinn II",
         "Der Einbringungsgewinn II",
-        "in der jeweils geltenden Fassung, wenn und soweit die Steuer nicht gestundet wird",
+        "gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist, in der jeweils geltenden Fassung",
         "gelten entsprechend",
         "ist entsprechend",
         "hat in den dem Einbringungszeitpunkt folgenden sieben Jahren jährlich spätestens bis zum 31. Mai den Nachweis darüber zu erbringen, wem mit Ablauf des Tages, der dem maßgebenden Einbringungszeitpunkt entspricht",
@@ -13624,7 +14340,8 @@
         "Ist der Veräußerer von Anteilen nach Absatz 1",
         "gilt in den Fällen des Absatzes 1 der Gewinn aus der Veräußerung der erhaltenen Anteile als in einem Betrieb gewerblicher Art dieser Körperschaft",
         "befreit, gilt in den Fällen des Absatzes 1 der Gewinn aus der Veräußerung der erhaltenen Anteile als in einem wirtschaftlichen Geschäftsbetrieb dieser Körperschaft",
-        "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag; nachträgliche Minderungen des versteuerten Einbringungsgewinns sowie die darauf entfallende festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
+        "bescheinigt der übernehmenden Gesellschaft auf deren Antrag die Höhe des zu versteuernden Einbringungsgewinns, die darauf entfallende festgesetzte Steuer und den darauf entrichteten Betrag",
+        "festgesetzte Steuer und der darauf entrichtete Betrag sind dem für die übernehmende Gesellschaft zuständigen Finanzamt von Amts wegen mitzuteilen",
         "gilt der Rechtsnachfolger des Einbringenden als Einbringender im Sinne der Absätze 1 bis 5 und der Rechtsnachfolger der übernehmenden Gesellschaft als übernehmende Gesellschaft im Sinne des Absatzes 2",
         "gelten diese Anteile insoweit auch als erhaltene oder eingebrachte Anteile oder als auf diesen Anteilen beruhende Anteile im Sinne des Absatzes 1 oder 2 (Mitverstrickung von Anteilen)",
         "sind mit der Maßgabe",
@@ -13638,7 +14355,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.531,
+      "konfidenz": 0.546,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13648,7 +14365,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "889d713fa7c495e7bb74409ae1d23557e6429e8a1b4a818870c0af07f16aa78f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.241Z"
+      "aktualisiert": "2026-08-11T09:36:31.803Z"
     },
     "23": {
       "typ": "gemischt",
@@ -13706,6 +14423,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Gleichstellungsanordnung"
+            },
+            {
+              "art": "rf",
+              "text": "bleibt ohne Auswirkung auf den Gewinn",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 744,
+              "laenge": 37,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -13791,19 +14524,51 @@
             },
             {
               "art": "rf",
-              "text": "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat; Satz 1 und § 22 Abs. 1 Satz 7 gelten entsprechend",
+              "text": "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 3",
               "von": 1132,
-              "laenge": 247,
-              "konfidenz": 0.42,
+              "laenge": 196,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "tb",
+              "text": "Satz 1 und § 22 Abs. 1 Satz 7",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 3",
+              "von": 1330,
+              "laenge": 29,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gelten entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 3",
+              "von": 1360,
+              "laenge": 19,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -13965,19 +14730,8 @@
             {
               "art": "rf",
               "text": "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft",
-              "anzeige": "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft … erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
-              "teile": [
-                {
-                  "text": "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft",
-                  "von": 2579,
-                  "laenge": 210
-                },
-                {
-                  "text": "erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
-                  "von": 2877,
-                  "laenge": 153
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 4 Satz 1",
               "von": 2579,
               "laenge": 210,
@@ -13987,7 +14741,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
               "art": "tb",
@@ -14004,6 +14758,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1",
+              "von": 2877,
+              "laenge": 153,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -14123,6 +14893,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Satz 1 und § 22 Abs. 1 Satz 7",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -14156,6 +14934,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "bleibt ohne Auswirkung auf den Gewinn",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "ist nur anzuwenden",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -14163,10 +14949,18 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
-                  "t": "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat; Satz 1 und § 22 Abs. 1 Satz 7 gelten entsprechend",
+                  "n": "4.",
+                  "t": "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat",
                   "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "gelten entsprechend",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -14280,11 +15074,19 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft … erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
+                  "t": "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft",
                   "pfad": "Abs. 4 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -14354,6 +15156,7 @@
       "tb": [
         "soweit das eingebrachte Betriebsvermögen in den Fällen des § 22 Abs. 1 noch zum Betriebsvermögen der übernehmenden Gesellschaft gehört",
         "Wurden die veräußerten Anteile auf Grund einer Einbringung von Anteilen nach § 20 Abs. 1 oder § 21 Abs. 1 (§ 22 Abs. 2) erworben",
+        "Satz 1 und § 22 Abs. 1 Satz 7",
         "Die Absetzungen für Abnutzung oder Substanzverringerung nach § 7 Abs. 1, 4, 5 und 6 des Einkommensteuergesetzes",
         "Bei den Absetzungen für Abnutzung nach § 7 Abs. 2 des Einkommensteuergesetzes",
         "Bei einer Erhöhung der Anschaffungskosten oder Herstellungskosten auf Grund rückwirkender Besteuerung des Einbringungsgewinns (Absatz 2)",
@@ -14363,13 +15166,16 @@
       "rf": [
         "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit einem unter dem gemeinen Wert liegenden Wert (§ 20 Abs. 2 Satz 2, § 21 Abs. 1 Satz 2) an, gelten § 4 Abs. 2 Satz 3 und § 12 Abs. 3 erster Halbsatz entsprechend",
         "In den Fällen des § 22 Abs. 1 kann",
+        "bleibt ohne Auswirkung auf den Gewinn",
         "ist nur anzuwenden",
-        "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat; Satz 1 und § 22 Abs. 1 Satz 7 gelten entsprechend",
+        "erhöhen sich die Anschaffungskosten der eingebrachten Anteile in Höhe des versteuerten Einbringungsgewinns, soweit der Einbringende die auf den Einbringungsgewinn entfallende Steuer entrichtet hat",
+        "gelten entsprechend",
         "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit einem über dem Buchwert, aber unter dem gemeinen Wert liegenden Wert an, gilt § 12 Abs. 3 erster Halbsatz entsprechend mit der folgenden Maßgabe",
         "sind vom Zeitpunkt der Einbringung an nach den Anschaffungs- oder Herstellungskosten des Einbringenden, vermehrt um den Unterschiedsbetrag zwischen dem Buchwert der einzelnen Wirtschaftsgüter und dem Wert, mit dem die Kapitalgesellschaft die Wirtschaftsgüter ansetzt",
         "tritt im Zeitpunkt der Einbringung an die Stelle des Buchwerts der einzelnen Wirtschaftsgüter der Wert, mit dem die Kapitalgesellschaft die Wirtschaftsgüter ansetzt",
         "gilt dies mit der Maßgabe, dass an die Stelle des Zeitpunkts der Einbringung der Beginn des Wirtschaftsjahrs tritt, in welches das die Besteuerung des Einbringungsgewinns auslösende Ereignis fällt",
         "Setzt die übernehmende Gesellschaft das eingebrachte Betriebsvermögen mit dem gemeinen Wert an, gelten die eingebrachten Wirtschaftsgüter als im Zeitpunkt der Einbringung von der Kapitalgesellschaft angeschafft",
+        "erfolgt die Einbringung des Betriebsvermögens im Wege der Gesamtrechtsnachfolge nach den Vorschriften des Umwandlungsgesetzes, gilt Absatz 3 entsprechend",
         "kann nicht um die vortragsfähigen Fehlbeträge des Einbringenden im Sinne des § 10a des Gewerbesteuergesetzes gekürzt werden",
         "gilt entsprechend"
       ],
@@ -14379,7 +15185,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.564,
+      "konfidenz": 0.571,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -14389,7 +15195,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74de4b817bc70550532ec38d63bdc8cde46401aa684f90c4cedc5dc161484fa3",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.244Z"
+      "aktualisiert": "2026-08-11T09:36:31.810Z"
     },
     "24": {
       "typ": "gemischt",
@@ -14450,19 +15256,62 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
-              "anzeige": null,
-              "teile": null,
+              "text": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert",
+              "anzeige": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert … anzusetzen",
+              "teile": [
+                {
+                  "text": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert",
+                  "von": 271,
+                  "laenge": 137
+                },
+                {
+                  "text": "anzusetzen",
+                  "von": 409,
+                  "laenge": 10
+                }
+              ],
               "pfad": "Abs. 2 Satz 1",
               "von": 271,
-              "laenge": 232,
-              "konfidenz": 0.54,
+              "laenge": 137,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "für die Bewertung von Pensionsrückstellungen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 421,
+              "laenge": 44,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt § 6a des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 466,
+              "laenge": 37,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -14715,19 +15564,8 @@
             {
               "art": "rf",
               "text": "ist nur anzuwenden",
-              "anzeige": "ist nur anzuwenden … in diesen Fällen ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
-              "teile": [
-                {
-                  "text": "ist nur anzuwenden",
-                  "von": 1722,
-                  "laenge": 18
-                },
-                {
-                  "text": "in diesen Fällen ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
-                  "von": 1903,
-                  "laenge": 77
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 3 Satz 2",
               "von": 1722,
               "laenge": 18,
@@ -14737,7 +15575,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -14754,6 +15592,54 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "tb",
+              "text": "in diesen Fällen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1903,
+              "laenge": 16,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1920,
+              "laenge": 60,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "soweit der Veräußerungsgewinn nicht nach § 3 Nr. 40 Satz 1 Buchstabe b in Verbindung mit § 3c Abs. 2 des Einkommensteuergesetzes teilweise steuerbefreit ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1982,
+              "laenge": 156,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -14807,13 +15693,45 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "gilt entsprechend; in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge gilt auch § 20 Abs. 5 und 6 entsprechend",
+              "text": "gilt entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
               "von": 2257,
-              "laenge": 152,
-              "konfidenz": 0.54,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1",
+              "von": 2276,
+              "laenge": 92,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt auch § 20 Abs. 5 und 6 entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1",
+              "von": 2369,
+              "laenge": 40,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -14942,6 +15860,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "für die Bewertung von Pensionsrückstellungen",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Abweichend von Satz 1",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -14949,7 +15875,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des eingebrachten Betriebsvermögens nicht ausgeschlossen",
                   "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.6,
@@ -14957,7 +15883,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -14973,14 +15899,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
+                  "t": "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert … anzusetzen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt § 6a des Einkommensteuergesetzes",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "kann das übernommene Betriebsvermögen auf Antrag mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -14988,7 +15922,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "beschränkt wird",
                   "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.45,
@@ -14996,7 +15930,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -15004,7 +15938,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
                   "pfad": "Abs. 2 Buchst. b",
                   "konfidenz": 0.6,
@@ -15012,7 +15946,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 2 Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -15020,7 +15954,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -15060,6 +15994,22 @@
                 },
                 {
                   "n": "3.",
+                  "t": "in diesen Fällen",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "soweit der Veräußerungsgewinn nicht nach § 3 Nr. 40 Satz 1 Buchstabe b in Verbindung mit § 3c Abs. 2 des Einkommensteuergesetzes teilweise steuerbefreit ist",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "In den Fällen des Satzes 2",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -15083,14 +16033,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ist nur anzuwenden … in diesen Fällen ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
+                  "t": "ist nur anzuwenden",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "gilt § 16 Abs. 2 Satz 3 des Einkommensteuergesetzes entsprechend",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -15108,14 +16066,38 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gilt entsprechend; in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge gilt auch § 20 Abs. 5 und 6 entsprechend",
+                  "t": "gilt entsprechend",
                   "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt auch § 20 Abs. 5 und 6 entsprechend",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -15179,18 +16161,23 @@
       ],
       "tb": [
         "Wird ein Betrieb oder Teilbetrieb oder ein Mitunternehmeranteil in eine Personengesellschaft eingebracht und wird der Einbringende Mitunternehmer der Gesellschaft",
+        "für die Bewertung von Pensionsrückstellungen",
         "Abweichend von Satz 1",
         "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des eingebrachten Betriebsvermögens nicht ausgeschlossen",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
         "Der Wert, mit dem das eingebrachte Betriebsvermögen in der Bilanz der Personengesellschaft einschließlich der Ergänzungsbilanzen für ihre Gesellschafter",
         "wenn das eingebrachte Betriebsvermögen mit dem gemeinen Wert angesetzt wird und es sich nicht um die Einbringung von Teilen eines Mitunternehmeranteils handelt",
+        "in diesen Fällen",
+        "soweit der Veräußerungsgewinn nicht nach § 3 Nr. 40 Satz 1 Buchstabe b in Verbindung mit § 3c Abs. 2 des Einkommensteuergesetzes teilweise steuerbefreit ist",
         "In den Fällen des Satzes 2",
+        "in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge",
         "Soweit im Rahmen einer Einbringung nach Absatz 1 unter dem gemeinen Wert eingebrachte Anteile an einer Körperschaft",
         "Personenvereinigung oder Vermögensmasse innerhalb eines Zeitraums von sieben Jahren nach dem Einbringungszeitpunkt durch die übernehmende Personengesellschaft"
       ],
       "rf": [
         "gelten für die Bewertung des eingebrachten Betriebsvermögens die Absätze 2 bis 4",
-        "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert anzusetzen; für die Bewertung von Pensionsrückstellungen gilt § 6a des Einkommensteuergesetzes",
+        "hat das eingebrachte Betriebsvermögen in ihrer Bilanz einschließlich der Ergänzungsbilanzen für ihre Gesellschafter mit dem gemeinen Wert",
+        "gilt § 6a des Einkommensteuergesetzes",
         "kann das übernommene Betriebsvermögen auf Antrag mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
         "beschränkt wird",
         "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
@@ -15199,15 +16186,17 @@
         "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
         "angesetzt wird, gilt für den Einbringenden als Veräußerungspreis",
         "ist nur anzuwenden",
+        "ist § 34 Abs. 1 und 3 des Einkommensteuergesetzes anzuwenden",
         "gilt § 16 Abs. 2 Satz 3 des Einkommensteuergesetzes entsprechend",
-        "gilt entsprechend; in den Fällen der Einbringung in eine Personengesellschaft im Wege der Gesamtrechtsnachfolge gilt auch § 20 Abs. 5 und 6 entsprechend",
+        "gilt entsprechend",
+        "gilt auch § 20 Abs. 5 und 6 entsprechend",
         "gilt entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.574,
+      "konfidenz": 0.579,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -15217,7 +16206,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9816ac1f9eec71e329f86ed7d09a45d2b9f80e4962551aef37fe23746772cbb0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.248Z"
+      "aktualisiert": "2026-08-11T09:36:31.814Z"
     },
     "25": {
       "typ": "gemischt",
@@ -15373,7 +16362,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dd8c0fbb4374cc097779aadb9f34b48ecdb0c1b019e8385526dc18ad460aa0b7",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.249Z"
+      "aktualisiert": "2026-08-11T09:36:31.814Z"
     },
     "26": {
       "typ": "gemischt",
@@ -15396,7 +16385,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.255Z"
+      "aktualisiert": "2026-08-11T09:36:31.821Z"
     },
     "27": {
       "typ": "anwendung",
@@ -15702,7 +16691,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "546aff936ab9687b671a466b9f5b411687bef794d3ef671f5282d1ba6372695e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.258Z"
+      "aktualisiert": "2026-08-11T09:36:31.824Z"
     },
     "28": {
       "typ": "aussage",
@@ -15778,7 +16767,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab5470b11d877e1d750db81377c7ff533d57ac69ecc1f6c9a9991a25aed63d9c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.258Z"
+      "aktualisiert": "2026-08-11T09:36:31.825Z"
     }
   }
 }

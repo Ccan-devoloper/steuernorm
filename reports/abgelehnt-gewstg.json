@@ -129,7 +129,7 @@
     "norm": "§ 3",
     "pfad": "Satz 7",
     "art": "tb",
-    "text": "Grundlagenbescheide im Sinne der Abgabenordnung; die Bekanntmachung der Aberkennung der Ei",
+    "text": "einem Grundlagenbescheid gleich; 24. die folgenden Kapitalbeteiligungsgesellschaften für d",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -219,6 +219,13 @@
   {
     "norm": "§ 9",
     "pfad": "Satz 1 (Teil 2)",
+    "art": "tb",
+    "text": "die Einnahmen im Sinne von Doppelbuchstabe aa",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 1 (Teil 2)",
     "art": "ausn",
     "text": "es sei denn, diese sind Mieter des Anlagenbetreibers, oder c) Einnahmen aus unmittelbaren ",
     "grund": "zu grob (51 Wörter)"
@@ -232,16 +239,16 @@
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 5",
+    "pfad": "Satz 11",
     "art": "tb",
-    "text": "wenn die Beteiligung zu Beginn des Erhebungszeitraums mindestens 15 Prozent des Grund- ode",
+    "text": "Ist Gegenstand eines Betriebs nicht",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
     "pfad": "Satz 11",
     "art": "tb",
-    "text": "Ist Gegenstand eines Betriebs nicht",
+    "text": "in diesem Fall",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -274,6 +281,13 @@
   },
   {
     "norm": "§ 9",
+    "pfad": "Satz 3 (Teil 4)",
+    "art": "tb",
+    "text": "§ 10b Absatz 4 Satz 5 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 9",
     "pfad": "Satz 7 (Teil 3)",
     "art": "tb",
     "text": "wenn die Beteiligung zu Beginn des Erhebungszeitraums mindestens 15 Prozent des Nennkapita",
@@ -292,6 +306,13 @@
     "art": "tb",
     "text": "wenn die Beteiligung mindestens 15 Prozent beträgt und die Gewinnanteile bei der Ermittlun",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 8 (Teil 3)",
+    "art": "tb",
+    "text": "ist in einem Abkommen zur Vermeidung der Doppelbesteuerung eine niedrigere Mindestbeteilig",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 9",
@@ -383,13 +404,6 @@
     "art": "tb",
     "text": "Anlagen, die nach dem 30. Juni 2013 zur Erzeugung von Strom und anderen Energieträgern sow",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 29",
-    "pfad": "Abs. 1 Satz 3",
-    "art": "tb",
-    "text": "die nicht unter Satz 3 fallen; 3. bei Betrieben, die ausschließlich Energiespeicheranlagen",
-    "grund": "zu grob (57 Wörter)"
   },
   {
     "norm": "§ 29",

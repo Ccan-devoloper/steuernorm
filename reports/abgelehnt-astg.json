@@ -302,17 +302,17 @@
   },
   {
     "norm": "§ 13",
-    "pfad": "Abs. 4 Satz 2",
-    "art": "tb",
-    "text": "§ 8 Absatz 2",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
-  },
-  {
-    "norm": "§ 13",
     "pfad": "Abs. 5 Satz 2",
     "art": "tb",
     "text": "sind für den unbeschränkt Steuerpflichtigen nach Absatz 1 Satz 1 unbeachtlich",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 7 Satz 2",
+    "art": "tb",
+    "text": "§ 8b des Körperschaftsteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 15",
@@ -361,6 +361,13 @@
     "pfad": "Abs. 2 Satz 1",
     "art": "tb",
     "text": "Ist für die Ermittlung der Einkünfte, für die eine ausländische Gesellschaft Zwischengesel",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 17",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Zinsen und Nutzungsentgelte, die die Gesellschaft für überlassene Wirtschaftsgüter an die ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {

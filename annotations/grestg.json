@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-10T09:19:26.175Z",
+  "aktualisiert": "2026-08-11T09:36:31.731Z",
   "quelle": "https://www.gesetze-im-internet.de/grestg_1983/",
   "stand": [
     {
@@ -30,6 +30,7 @@
       "typen": [
         "konditional",
         "aussage",
+        "definition",
         "tarif",
         "gleichstellung",
         "fiktion"
@@ -155,11 +156,11 @@
           "pfad": "Abs. 1 Nr. 3 Halbs. 2",
           "von": 477,
           "bis": 1323,
-          "typ": "tarif",
+          "typ": "definition",
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "def",
               "text": "Ausgenommen",
               "anzeige": null,
               "teile": null,
@@ -172,7 +173,39 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Prädikativ im Vorfeld"
+              "grund": "Definiendum vor dem Kopulaverb"
+            },
+            {
+              "art": "tb",
+              "text": "in diesen Fällen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+              "von": 1000,
+              "laenge": 16,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "ist auch der den Sollanspruch auf Zuteilung übersteigende Teil der Zuteilung (Mehrzuteilung)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+              "von": 1017,
+              "laenge": 92,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -255,6 +288,81 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Gleichstellungsanordnung"
+            },
+            {
+              "art": "tb",
+              "text": "ein Angebot zum Abschluß eines anderen Vertrags gleich, kraft dessen die Übereignung verlangt werden kann",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 2283,
+              "laenge": 105,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Gleichgestellter Gegenstand"
+            },
+            {
+              "art": "tb",
+              "text": "7. die Abtretung eines der in den Nummern 5 und 6",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 2390,
+              "laenge": 49,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "bezeichneten Rechte",
+              "anzeige": "bezeichneten Rechte … das den Anspruch auf Abtretung der Rechte begründet",
+              "teile": [
+                {
+                  "text": "bezeichneten Rechte",
+                  "von": 2440,
+                  "laenge": 19
+                },
+                {
+                  "text": "das den Anspruch auf Abtretung der Rechte begründet",
+                  "von": 2506,
+                  "laenge": 51
+                }
+              ],
+              "pfad": "Abs. 1 Satz 2",
+              "von": 2440,
+              "laenge": 19,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "wenn kein Rechtsgeschäft vorausgegangen ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 2461,
+              "laenge": 43,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -1261,19 +1369,8 @@
             {
               "art": "rf",
               "text": "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden",
-              "anzeige": "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden … die Rückgängigmachung und der Rückerwerb gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
-              "teile": [
-                {
-                  "text": "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden",
-                  "von": 9204,
-                  "laenge": 158
-                },
-                {
-                  "text": "die Rückgängigmachung und der Rückerwerb gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
-                  "von": 9454,
-                  "laenge": 201
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 4a Satz 3",
               "von": 9204,
               "laenge": 158,
@@ -1283,7 +1380,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -1300,6 +1397,38 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „soweit\""
+            },
+            {
+              "art": "tb",
+              "text": "die Rückgängigmachung und der Rückerwerb",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4a Satz 3",
+              "von": 9454,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4a Satz 3",
+              "von": 9495,
+              "laenge": 160,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -1542,9 +1671,24 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "def",
+              "t": "Begriffsbestimmung",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Ausgenommen",
+                  "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "tb",
-              "t": "Voraussetzungen (eine genügt)",
-              "junktor": "oder",
+              "t": "Merkmale des Begriffs",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
@@ -1580,8 +1724,40 @@
                 },
                 {
                   "n": "5.",
+                  "t": "in diesen Fällen",
+                  "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "der Übergang des Eigentums im Zwangsversteigerungsverfahren",
                   "pfad": "Abs. 1 Buchst. c",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "ein Angebot zum Abschluß eines anderen Vertrags gleich, kraft dessen die Übereignung verlangt werden kann",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
+                  "t": "7. die Abtretung eines der in den Nummern 5 und 6",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
+                  "t": "wenn kein Rechtsgeschäft vorausgegangen ist",
+                  "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1589,7 +1765,7 @@
               ]
             },
             {
-              "n": "II.",
+              "n": "III.",
               "art": "ausn",
               "t": "Ausnahmen und Rückausnahmen",
               "sub": [
@@ -1604,7 +1780,7 @@
               ]
             },
             {
-              "n": "III.",
+              "n": "IV.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -1618,9 +1794,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Ausgenommen",
+                  "t": "ist auch der den Sollanspruch auf Zuteilung übersteigende Teil der Zuteilung (Mehrzuteilung)",
                   "pfad": "Abs. 1 Nr. 3 Halbs. 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -1631,6 +1807,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "bezeichneten Rechte … das den Anspruch auf Abtretung der Rechte begründet",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
                 }
               ]
             }
@@ -2161,6 +2345,14 @@
                 },
                 {
                   "n": "5.",
+                  "t": "die Rückgängigmachung und der Rückerwerb",
+                  "pfad": "Abs. 4a Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "wenn diese an dem Grundstück die Verwertungsbefugnis nach § 1 Absatz 2 innehat",
                   "pfad": "Abs. 4a Satz 4",
                   "konfidenz": 0.6,
@@ -2168,7 +2360,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "wenn die Voraussetzungen nicht mehr vorliegen, die zur Zugehörigkeit nach Satz 4 geführt haben",
                   "pfad": "Abs. 4a Satz 5",
                   "konfidenz": 0.6,
@@ -2200,14 +2392,22 @@
                 },
                 {
                   "n": "3.",
-                  "t": "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden … die Rückgängigmachung und der Rückerwerb gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+                  "t": "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden",
                   "pfad": "Abs. 4a Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "4.",
+                  "t": "gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
+                  "pfad": "Abs. 4a Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "gehört auch zum Vermögen einer Gesellschaft",
                   "pfad": "Abs. 4a Satz 4",
                   "konfidenz": 0.6,
@@ -2215,7 +2415,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "endet",
                   "pfad": "Abs. 4a Satz 5",
                   "konfidenz": 0.45,
@@ -2347,7 +2547,11 @@
         "ein Kaufvertrag oder ein anderes Rechtsgeschäft, das den Anspruch auf Übereignung begründet",
         "die Auflassung, wenn kein Rechtsgeschäft vorausgegangen ist, das den Anspruch auf Übereignung begründet",
         "der Übergang des Eigentums, wenn kein den Anspruch auf Übereignung begründendes Rechtsgeschäft vorausgegangen ist und es auch keiner Auflassung bedarf",
+        "in diesen Fällen",
         "der Übergang des Eigentums im Zwangsversteigerungsverfahren",
+        "ein Angebot zum Abschluß eines anderen Vertrags gleich, kraft dessen die Übereignung verlangt werden kann",
+        "7. die Abtretung eines der in den Nummern 5 und 6",
+        "wenn kein Rechtsgeschäft vorausgegangen ist",
         "Mittelbare Änderungen im Gesellschafterbestand von den an einer Personengesellschaft",
         "Ist eine Kapitalgesellschaft an einer Personengesellschaft unmittelbar oder mittelbar beteiligt",
         "Bei mehrstufigen Beteiligungen",
@@ -2369,6 +2573,7 @@
         "wenn ein anderer Rechtsträger das Grundstück auf Grund eines Rechtsvorgangs nach § 1 Absatz 1 erworben hat oder wenn die Voraussetzungen nicht mehr vorliegen, die zur Zugehörigkeit nach Satz 1 geführt haben",
         "Die Sätze 1 und 2",
         "soweit dies dazu führt, dass ein Erwerbsvorgang nach § 1 Absatz 2a bis 3a vermieden wird",
+        "die Rückgängigmachung und der Rückerwerb",
         "wenn diese an dem Grundstück die Verwertungsbefugnis nach § 1 Absatz 2 innehat",
         "wenn die Voraussetzungen nicht mehr vorliegen, die zur Zugehörigkeit nach Satz 4 geführt haben",
         "Bei einem Tauschvertrag, der für beide Vertragsteile den Anspruch auf Übereignung eines Grundstücks begründet",
@@ -2378,8 +2583,9 @@
       ],
       "rf": [
         "unterliegen die folgenden Rechtsvorgänge",
-        "Ausgenommen",
+        "ist auch der den Sollanspruch auf Zuteilung übersteigende Teil der Zuteilung (Mehrzuteilung)",
         "Dem Kaufangebot steht",
+        "bezeichneten Rechte",
         "unterliegen auch Rechtsvorgänge, die es ohne Begründung eines Anspruchs auf Übereignung einem anderen rechtlich oder wirtschaftlich ermöglichen, ein inländisches Grundstück auf eigene Rechnung zu verwerten",
         "gilt dies als ein auf die Übereignung eines Grundstücks auf eine neue Personengesellschaft gerichtetes Rechtsgeschäft",
         "beteiligten Personengesellschaften werden durch Multiplikation der Vomhundertsätze der Anteile am Gesellschaftsvermögen anteilig berücksichtigt",
@@ -2405,6 +2611,7 @@
         "gehört zum Vermögen einer Gesellschaft im Sinne des § 1 Absatz 2a bis 3a",
         "endet",
         "finden keine Anwendung auf Rechtsvorgänge, die nach § 16 Absatz 1 rückgängig gemacht wurden, und auf Grundstücke, die nach § 16 Absatz 2 zurückerworben wurden",
+        "gelten für die Zugehörigkeit eines Grundstücks nach den Sätzen 1 und 2 als rückwirkendes Ereignis im Sinne des § 175 Absatz 1 Satz 1 Nummer 2 der Abgabenordnung",
         "gehört auch zum Vermögen einer Gesellschaft",
         "endet",
         "unterliegt der Steuer sowohl die Vereinbarung über die Leistung des einen als auch die Vereinbarung über die Leistung des anderen Vertragsteils",
@@ -2414,10 +2621,12 @@
       "ausnahmen": [
         "ausgenommen, wenn der Wert des dem neuen Eigentümer zugeteilten Grundstücks seinen sich aus dem Wert des eingebrachten Grundstücks ergebenden Sollanspruch auf Zuteilung nicht um mehr als 20 vom Hundert übersteigt"
       ],
-      "definitionen": [],
+      "definitionen": [
+        "Ausgenommen"
+      ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.576,
+      "konfidenz": 0.577,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2427,7 +2636,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "80bbd068a17a797698ef03a3031784576276df234d53138af50e122c6fa7eb02",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.124Z"
+      "aktualisiert": "2026-08-11T09:36:31.679Z"
     },
     "2": {
       "typ": "gemischt",
@@ -3035,7 +3244,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "83634c3b68cedd75692613ea55e6638963d9f8e82b3c71c4e3b1fe2b86dac218",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.125Z"
+      "aktualisiert": "2026-08-11T09:36:31.680Z"
     },
     "3": {
       "typ": "gemischt",
@@ -3894,7 +4103,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d9100cc707691292eee54ade89380a6cba967867d01d11c54cd8cfe9660bcb8",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.128Z"
+      "aktualisiert": "2026-08-11T09:36:31.683Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4197,7 +4406,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db5743e4ce533ba514ad78971debd5b71eccd08413b1e27d14c59d6e39a89cb9",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.132Z"
+      "aktualisiert": "2026-08-11T09:36:31.685Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4775,7 +4984,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3c8f7619a8084185f67030722fed1d2f47e66c14ad76f4182493ec78968e0b9a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.134Z"
+      "aktualisiert": "2026-08-11T09:36:31.687Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5627,7 +5836,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a4c9913652d425d8880b72361649db0f40d2f163cc93aee133d7a78362f9d874",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.137Z"
+      "aktualisiert": "2026-08-11T09:36:31.690Z"
     },
     "7": {
       "typ": "konditional",
@@ -5959,7 +6168,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b008432f8b3a3f26b502cb06f814a0747de96cc69371744c8d69af67304338bb",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.139Z"
+      "aktualisiert": "2026-08-11T09:36:31.692Z"
     },
     "8": {
       "typ": "gemischt",
@@ -6347,7 +6556,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78fb31726a2bb49c202056cdf9d4d3e58d76c4bff9a7139f34b4149ea5bcbf5a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.141Z"
+      "aktualisiert": "2026-08-11T09:36:31.694Z"
     },
     "9": {
       "typ": "gemischt",
@@ -6730,19 +6939,51 @@
             },
             {
               "art": "rf",
-              "text": "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung; dies gilt auch dann, wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
+              "text": "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 7 Halbs. 2",
               "von": 1367,
-              "laenge": 213,
-              "konfidenz": 0.54,
+              "laenge": 115,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
+            },
+            {
+              "art": "rf",
+              "text": "gilt auch dann",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 7 Halbs. 2",
+              "von": 1489,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+            },
+            {
+              "art": "tb",
+              "text": "wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 7 Halbs. 2",
+              "von": 1505,
+              "laenge": 75,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -7075,6 +7316,14 @@
                 },
                 {
                   "n": "11.",
+                  "t": "wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
+                  "pfad": "Abs. 1 Nr. 7 Halbs. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "(weggefallen)",
                   "pfad": "Abs. 1 Nr. 8",
                   "konfidenz": 0.45,
@@ -7138,9 +7387,17 @@
                 },
                 {
                   "n": "7.",
-                  "t": "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung; dies gilt auch dann, wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
+                  "t": "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung",
                   "pfad": "Abs. 1 Nr. 7 Halbs. 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
+                  "t": "gilt auch dann",
+                  "pfad": "Abs. 1 Nr. 7 Halbs. 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -7268,6 +7525,7 @@
         "Leistungen, die der Abtretende dem Übernehmer gegenüber übernimmt",
         "bei der Enteignung: die Entschädigung",
         "Wird ein Grundstück enteignet, das zusammen mit anderen Grundstücken eine wirtschaftliche Einheit bildet",
+        "wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
         "(weggefallen)",
         "Zur Gegenleistung",
         "Leistungen, die der Erwerber des Grundstücks dem Veräußerer neben der beim Erwerbsvorgang vereinbarten Gegenleistung zusätzlich gewährt",
@@ -7282,7 +7540,8 @@
         "sind dem Meistgebot",
         "abzusetzen",
         "abzusetzen",
-        "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung; dies gilt auch dann, wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
+        "gehört die besondere Entschädigung für eine Wertminderung der nicht enteigneten Grundstücke nicht zur Gegenleistung",
+        "gilt auch dann",
         "gehören jedoch nicht die auf dem Grundstück ruhenden dauernden Lasten",
         "gilt nicht als dauernde Last",
         "wird der Gegenleistung weder hinzugerechnet noch von ihr"
@@ -7291,7 +7550,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.563,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7301,7 +7560,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0ee8d45dcff4fbed7fd58591304712cfde5f3948bde9284af3c376d7640bb424",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.143Z"
+      "aktualisiert": "2026-08-11T09:36:31.697Z"
     },
     "10": {
       "typ": "aussage",
@@ -7378,7 +7637,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.144Z"
+      "aktualisiert": "2026-08-11T09:36:31.697Z"
     },
     "11": {
       "typ": "gemischt",
@@ -7503,7 +7762,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3ad487f20ed4f6ee7a626dee53282416b1ac9e56879ba06e5a4f001f9b473df8",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.144Z"
+      "aktualisiert": "2026-08-11T09:36:31.697Z"
     },
     "12": {
       "typ": "konditional",
@@ -7613,7 +7872,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf8547ecf0f8e69612a1b29e94f436e711501da660185151d59577b582dae0b4",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.144Z"
+      "aktualisiert": "2026-08-11T09:36:31.698Z"
     },
     "13": {
       "typ": "gemischt",
@@ -7936,7 +8195,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "46c5458f52a4482314113dfbb965af8814039ea97871e95b1f07e2588b1d50fc",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.145Z"
+      "aktualisiert": "2026-08-11T09:36:31.699Z"
     },
     "14": {
       "typ": "gemischt",
@@ -8056,7 +8315,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24c525156c1ca1fe3d83a8793737da83d566827bf06247e0058a266207c1da0b",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.146Z"
+      "aktualisiert": "2026-08-11T09:36:31.699Z"
     },
     "15": {
       "typ": "aussage",
@@ -8166,7 +8425,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "39b1f0995e316ef4b70dfffc3c69b6a0a74e274b22d72bd639312d0c2c98a080",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.146Z"
+      "aktualisiert": "2026-08-11T09:36:31.699Z"
     },
     "16": {
       "typ": "gemischt",
@@ -8924,7 +9183,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "42da45a0690cd164ec1b6c48c32990f3263beeca4ac3a288775bbc7025a12d66",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.148Z"
+      "aktualisiert": "2026-08-11T09:36:31.702Z"
     },
     "17": {
       "typ": "gemischt",
@@ -9705,7 +9964,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f3e0628da5fcba4dfa239a523c62628fb15acaf2bd9004871719752ac6d59d25",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.151Z"
+      "aktualisiert": "2026-08-11T09:36:31.704Z"
     },
     "18": {
       "typ": "gemischt",
@@ -10402,7 +10661,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "04d0b19f648927575e836296e891bd128961477072acc65de45d59bc6dd9ced3",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.153Z"
+      "aktualisiert": "2026-08-11T09:36:31.708Z"
     },
     "19": {
       "typ": "gemischt",
@@ -10410,8 +10669,7 @@
         "aussage",
         "tarif",
         "konditional",
-        "definition",
-        "verweisung"
+        "definition"
       ],
       "saetze": [
         {
@@ -11107,24 +11365,67 @@
           "pfad": "Abs. 6 Satz 1",
           "von": 4439,
           "bis": 4589,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung; § 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden",
+              "text": "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 1",
               "von": 4473,
-              "laenge": 115,
-              "konfidenz": 0.54,
+              "laenge": 59,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "tb",
+              "text": "§ 152 Absatz 6 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Satz 1",
+              "von": 4534,
+              "laenge": 33,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist nicht",
+              "anzeige": "ist nicht … anzuwenden",
+              "teile": [
+                {
+                  "text": "ist nicht",
+                  "von": 4568,
+                  "laenge": 9
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 4578,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 6 Satz 1",
+              "von": 4568,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -11540,17 +11841,25 @@
         },
         {
           "absatz": "Abs. 6",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "§ 152 Absatz 6 der Abgabenordnung",
+                  "pfad": "Abs. 6 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Die Begrenzung der Höhe des Verspätungszuschlags nach § 152 Absatz 10 der Abgabenordnung",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -11566,14 +11875,22 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung; § 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden",
+                  "t": "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung",
                   "pfad": "Abs. 6 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "ist nicht … anzuwenden",
+                  "pfad": "Abs. 6 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "findet keine Anwendung",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -11631,6 +11948,7 @@
         "wenn der Vorgang von der Besteuerung ausgenommen ist",
         "Ist über den anzeigepflichtigen Vorgang eine privatschriftliche Urkunde aufgenommen worden",
         "schriftlich abzugeben",
+        "§ 152 Absatz 6 der Abgabenordnung",
         "Die Begrenzung der Höhe des Verspätungszuschlags nach § 152 Absatz 10 der Abgabenordnung",
         "In den Fällen des Absatzes 2 Nummer 4"
       ],
@@ -11655,7 +11973,8 @@
         "ist der Anzeige eine Abschrift der Urkunde beizufügen",
         "sind Steuererklärungen im Sinne der Abgabenordnung",
         "können gemäß § 87a der Abgabenordnung in elektronischer Form übermittelt werden",
-        "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung; § 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden",
+        "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung",
+        "ist nicht",
         "findet keine Anwendung",
         "beginnt die Festsetzungsfrist mit Ablauf des Kalenderjahres, in dem das in Absatz 4 Satz 1 genannte Finanzamt von der anzeigepflichtigen Änderung Kenntnis erlangt hat, spätestens jedoch zehn Jahre nach Ablauf des Kalenderjahres, in dem die anzeigepflichtige Änderung eingetreten ist"
       ],
@@ -11663,7 +11982,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.574,
+      "konfidenz": 0.573,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11673,7 +11992,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "421d817066a188cd162b3564fc5eb6bf82f8e737705a627af9a55f6805af07d8",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.158Z"
+      "aktualisiert": "2026-08-11T09:36:31.713Z"
     },
     "20": {
       "typ": "gemischt",
@@ -12111,7 +12430,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eb7dfc4c9ebbaf600ba951a3e74b55598e3274002f9498732d94e702ca6dab94",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.159Z"
+      "aktualisiert": "2026-08-11T09:36:31.715Z"
     },
     "21": {
       "typ": "konditional",
@@ -12246,7 +12565,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5d53e5f83f013210c384d8303c904bf28c4878565fb5802d303a8bb08baee626",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.160Z"
+      "aktualisiert": "2026-08-11T09:36:31.716Z"
     },
     "22": {
       "typ": "gemischt",
@@ -12696,7 +13015,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "64b5839d9cd43878dda1933c5e60c6302ac30f840e5cfe5095a6b34d084b055a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.161Z"
+      "aktualisiert": "2026-08-11T09:36:31.717Z"
     },
     "23": {
       "typ": "gemischt",
@@ -13491,19 +13810,35 @@
             },
             {
               "art": "rf",
-              "text": "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026; die Anwendung des § 16 Absatz 4a ist ausgeschlossen",
+              "text": "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 29 Satz 1",
               "von": 10630,
-              "laenge": 160,
-              "konfidenz": 0.54,
+              "laenge": 107,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "ausgeschlossen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 29 Satz 1",
+              "von": 10776,
+              "laenge": 14,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
             }
           ]
         }
@@ -13907,9 +14242,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026; die Anwendung des § 16 Absatz 4a ist ausgeschlossen",
+                  "t": "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026",
                   "pfad": "Abs. 29 Satz 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "ausgeschlossen",
+                  "pfad": "Abs. 29 Satz 1",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13942,7 +14285,8 @@
         "ist erstmals auf Erwerbsvorgänge nach § 1 Absatz 2a bis 3a",
         "sind auch Erwerbsvorgänge nach § 1 Absatz 1 und 2",
         "sind bis zum Ablauf der in § 5 Absatz 3 Satz 1 und § 6 Absatz 3 Satz 2 genannten Fristen für verwirklichte Übergänge nach § 5 Absatz 1 und 2 und § 6 Absatz 3 Satz 1 in der bis zum 31. Dezember 2026 geltenden Fassung mit der Maßgabe weiter",
-        "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026; die Anwendung des § 16 Absatz 4a ist ausgeschlossen"
+        "übergehen, erfolgt eine Besteuerung ausschließlich nach § 1 Absatz 3 und 3a in der Fassung vom 2. Juli 2026",
+        "ausgeschlossen"
       ],
       "ausnahmen": [
         "vorbehaltlich des Absatzes 1 Satz 2 die bis zum Inkrafttreten dieses Gesetzes geltenden Vorschriften anzuwenden",
@@ -13951,7 +14295,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.556,
+      "konfidenz": 0.554,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13961,7 +14305,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "978f2a77f0eda2694000ef77420195b7a8347a2eec758549b18a6a195cb748c0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.167Z"
+      "aktualisiert": "2026-08-11T09:36:31.724Z"
     },
     "24": {
       "typ": "aussage",
@@ -14082,7 +14426,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d449cd3a7730d619fee009b4a534856e153a835e709ff511d1ff759f911b5327",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.175Z"
+      "aktualisiert": "2026-08-11T09:36:31.731Z"
     },
     "28": {
       "typ": "aussage",
@@ -14159,7 +14503,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "844df424a9c5cb55f23b7ad11f00abcc40f560f2daea33c41ef135da0c5fbab4",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.175Z"
+      "aktualisiert": "2026-08-11T09:36:31.731Z"
     },
     "6a": {
       "typ": "gemischt",
@@ -14332,7 +14676,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "790c81c7c333c044ecda5c9f80420a3e8bd01eb4c0c27f5564a97df5266dbe98",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.139Z"
+      "aktualisiert": "2026-08-11T09:36:31.691Z"
     },
     "22a": {
       "typ": "gemischt",
@@ -14485,7 +14829,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "566d78d42a80084f58de1154ed8c752ec22d886603349dee47e870f3fe77d465",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.162Z"
+      "aktualisiert": "2026-08-11T09:36:31.718Z"
     },
     "(xxxx)-§§-25-bis-27": {
       "typ": "gemischt",
@@ -14508,7 +14852,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:26.175Z"
+      "aktualisiert": "2026-08-11T09:36:31.731Z"
     }
   }
 }

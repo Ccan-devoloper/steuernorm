@@ -85,6 +85,13 @@
   },
   {
     "norm": "§ 3",
+    "pfad": "Abs. 2a Satz 1",
+    "art": "tb",
+    "text": "§ 5b des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 3",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "soweit die übertragenen Wirtschaftsgüter einer Betriebsstätte der übertragenden Körperscha",
@@ -99,6 +106,13 @@
   },
   {
     "norm": "§ 4",
+    "pfad": "Abs. 2 Satz 4",
+    "art": "tb",
+    "text": "§ 15 Abs. 1 Satz 1 Nr. 2 Satz 2 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 4",
     "pfad": "Abs. 6 Satz 1",
     "art": "tb",
     "text": "soweit er auf eine Körperschaft, Personenvereinigung oder Vermögensmasse als Mitunternehme",
@@ -109,7 +123,14 @@
     "pfad": "Abs. 6 Satz 4",
     "art": "tb",
     "text": "In den übrigen Fällen",
-    "grund": "Rechenregel ist vollständig Rechtsfolge"
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Abs. 6 Satz 4",
+    "art": "tb",
+    "text": "ein danach verbleibender Übernahmeverlust",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 5",
@@ -197,23 +218,16 @@
   },
   {
     "norm": "§ 21",
-    "pfad": "Abs. 2 Satz 3 (Teil 2)",
+    "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
-    "text": "§ 20 Abs. 3 Satz 3",
+    "text": "§ 15 Abs. 1a Satz 2 des Einkommensteuergesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 21",
-    "pfad": "Abs. 3 Satz 1",
+    "pfad": "Abs. 2 Satz 3 (Teil 2)",
     "art": "tb",
-    "text": "wenn der Einbringende eine natürliche Person ist und die übernehmende Gesellschaft die ein",
-    "grund": "zu grob (61 Wörter)"
-  },
-  {
-    "norm": "§ 21",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "§ 34 Abs. 1 des Einkommensteuergesetzes",
+    "text": "§ 20 Abs. 3 Satz 3",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
@@ -222,6 +236,13 @@
     "art": "tb",
     "text": "der Betrag, um den der gemeine Wert des eingebrachten Betriebsvermögens im Einbringungszei",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 1 Satz 5",
+    "art": "tb",
+    "text": "ist in diesen Fällen das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 22",
@@ -277,7 +298,7 @@
     "pfad": "Abs. 2 Satz 1",
     "art": "tb",
     "text": "die übernehmende Gesellschaft auf Antrag den versteuerten Einbringungsgewinn im Wirtschaft",
-    "grund": "zu grob (73 Wörter)"
+    "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 24",

@@ -220,8 +220,8 @@
     "norm": "§ 4",
     "pfad": "Satz 1 (Teil 11)",
     "art": "tb",
-    "text": "befreit sind die Vermietung von Wohn- und Schlafräumen, die ein Unternehmer zur kurzfristi",
-    "grund": "zu lang (>600 Zeichen)"
+    "text": "die ein Unternehmer zur kurzfristigen Beherbergung von Fremden bereithält, die Vermietung ",
+    "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 4",
@@ -241,22 +241,8 @@
     "norm": "§ 4",
     "pfad": "Buchst. b Halbs. 2 (Teil 3)",
     "art": "tb",
-    "text": "Die in Satz 1",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Buchst. b Halbs. 2 (Teil 3)",
-    "art": "rf",
-    "text": "bezeichneten Leistungen sind auch steuerfrei",
+    "text": "wenn das Leistungsangebot des Krankenhauses den von Krankenhäusern in öffentlich-rechtlich",
     "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Buchst. b Halbs. 2 (Teil 3)",
-    "art": "tb",
-    "text": "wenn sie von aa) zugelassenen Krankenhäusern nach § 108 des Fünften Buches Sozialgesetzbuc",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 4",
@@ -285,13 +271,6 @@
     "art": "tb",
     "text": "c) Leistungen nach den Buchstaben a und b, die im Rahmen der hausarztzentrierten Versorgun",
     "grund": "zu grob (54 Wörter)"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 13)",
-    "art": "rf",
-    "text": "erbracht werden, mit denen Verträge nach § 119b des Fünften Buches Sozialgesetzbuch besteh",
-    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 4",
@@ -469,13 +448,6 @@
     "grund": "zu grob (56 Wörter)"
   },
   {
-    "norm": "§ 5",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "rf",
-    "text": "erteilte individuelle Identifikationsnummer des Lieferers oder die dem in seinem Auftrag h",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
     "norm": "§ 6b",
     "pfad": "Abs. 1 Nr. 4",
     "art": "rf",
@@ -595,13 +567,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 10",
-    "pfad": "Abs. 5 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "wenn die Bemessungsgrundlage nach Absatz 4 das Entgelt nach Absatz 1 übersteigt; der Umsat",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 11",
     "pfad": "Abs. 3 Nr. 2",
     "art": "tb",
@@ -693,13 +658,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 13",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "rf",
-    "text": "ausgeführt worden sind; 3. in den Fällen des § 14c im Zeitpunkt der Ausgabe der Rechnung; ",
-    "grund": "zu grob (99 Wörter)"
-  },
-  {
     "norm": "§ 13b",
     "pfad": "Abs. 2 Satz 5",
     "art": "tb",
@@ -722,6 +680,13 @@
   },
   {
     "norm": "§ 13b",
+    "pfad": "Abs. 2 Satz 6",
+    "art": "tb",
+    "text": "nachträgliche Minderungen des Entgelts",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13b",
     "pfad": "Abs. 2 Satz 7",
     "art": "tb",
     "text": "Lieferungen der in der Anlage 4",
@@ -732,6 +697,13 @@
     "pfad": "Abs. 2 Satz 7",
     "art": "tb",
     "text": "wenn die Summe der für sie in Rechnung zu stellenden Entgelte im Rahmen eines wirtschaftli",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13b",
+    "pfad": "Abs. 2 Satz 7",
+    "art": "tb",
+    "text": "nachträgliche Minderungen des Entgelts",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -754,13 +726,6 @@
     "art": "tb",
     "text": "die Bundesregierung einen Antrag auf eine Ermächtigung durch den Rat entsprechend Artikel ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 13c",
-    "pfad": "Abs. 1 Satz 5",
-    "art": "tb",
-    "text": "ist, dass dieser Geldbetrag tatsächlich in den Verfügungsbereich des leistenden Unternehme",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 13c",
@@ -890,13 +855,6 @@
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 4e Satz 3",
-    "art": "rf",
-    "text": "ist der zuständigen Steuerbehörde des Mitgliedstaates der Europäischen Union zu übermittel",
-    "grund": "zu grob (76 Wörter)"
-  },
-  {
-    "norm": "§ 18",
     "pfad": "Abs. 4f Satz 3",
     "art": "tb",
     "text": "§ 2 Absatz 1 Satz 2",
@@ -949,7 +907,14 @@
     "pfad": "Abs. 9 Satz 7",
     "art": "tb",
     "text": "soweit sie im Besteuerungszeitraum (§ 16 Absatz 1 Satz 2) nach dem 30. Juni 2021 als Steue",
-    "grund": "zu grob (86 Wörter)"
+    "grund": "zu grob (84 Wörter)"
+  },
+  {
+    "norm": "§ 18",
+    "pfad": "Abs. 9 Satz 7",
+    "art": "tb",
+    "text": "dass die Vorsteuerbeträge mit Lieferungen nach § 3 Absatz 3a Satz 1 innerhalb eines Mitgli",
+    "grund": "zu grob (57 Wörter)"
   },
   {
     "norm": "§ 18",
@@ -1003,9 +968,9 @@
   {
     "norm": "§ 18",
     "pfad": "Abs. 12 Satz 1",
-    "art": "ausn",
-    "text": "dies gilt nicht, soweit diese Umsätze der Beförderungseinzelbesteuerung nach § 16 Absatz 5",
-    "grund": "zu grob (81 Wörter)"
+    "art": "tb",
+    "text": "soweit diese Umsätze der Beförderungseinzelbesteuerung nach § 16 Absatz 5 unterliegen oder",
+    "grund": "zu grob (78 Wörter)"
   },
   {
     "norm": "§ 18a",
@@ -1128,6 +1093,13 @@
   },
   {
     "norm": "§ 18i",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "ist der Ausschluss jedoch auf eine Änderung des Ortes des Sitzes oder der Betriebsstätte z",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 18i",
     "pfad": "Abs. 6 Satz 1",
     "art": "tb",
     "text": "soweit die Anzeige nach Absatz 1 Satz 1 gegenüber dem Bundeszentralamt für Steuern erfolgt",
@@ -1170,6 +1142,13 @@
   },
   {
     "norm": "§ 18j",
+    "pfad": "Abs. 6 Satz 2",
+    "art": "tb",
+    "text": "ist der Ausschluss jedoch auf eine Änderung des Ortes des Sitzes oder der Betriebsstätte o",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 18j",
     "pfad": "Abs. 7 Satz 1",
     "art": "tb",
     "text": "soweit die Anzeige nach Absatz 1 Satz 1 gegenüber dem Bundeszentralamt für Steuern erfolgt",
@@ -1206,9 +1185,9 @@
   {
     "norm": "§ 18k",
     "pfad": "Abs. 6 Satz 3",
-    "art": "rf",
-    "text": "gegen die in Satz 1 genannten Verpflichtungen gilt ab dem Tag, der auf den Zeitpunkt der B",
-    "grund": "zu grob (82 Wörter)"
+    "art": "tb",
+    "text": "ist der Ausschluss jedoch auf eine Änderung des Ortes des Sitzes oder der Betriebsstätte z",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 18k",
@@ -1307,13 +1286,6 @@
     "art": "tb",
     "text": "soweit zulässig, einem Dritten entsprechend Artikel 109 Absatz 2 des Zollkodex der Union f",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 22",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "rf",
-    "text": "sind die erforderlichen Aufzeichnungen vom Ende des Jahres an, in dem der Umsatz bewirkt w",
-    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 22",
@@ -1591,15 +1563,8 @@
   {
     "norm": "Anlage 2",
     "pfad": "Satz 1 (Teil 36)",
-    "art": "tb",
-    "text": "aus Position 1517 27 (weggefallen) 28 Zubereitungen von Fleisch, Fischen oder von Krebstie",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "Anlage 2",
-    "pfad": "Satz 1 (Teil 36)",
     "art": "rf",
-    "text": "zubereitete oder haltbar gemachte Langusten, Hummer, Austern und Schnecken aus Kapitel 16 ",
+    "text": "einschließlich Quellwasser und Tafelwasser, das in zur Abgabe an den Verbraucher bestimmte",
     "grund": "zu grob (76 Wörter)"
   },
   {
@@ -1627,8 +1592,8 @@
     "norm": "Anlage 3",
     "pfad": "Satz 2",
     "art": "rf",
-    "text": "enthalten Position 2620 4 Abfälle, Schnitzel und Bruch von Kunststoffen Position 3915 5 Ab",
-    "grund": "zu lang (>600 Zeichen)"
+    "text": "Waren der Position 8549 Position 7112 8 Abfälle und Schrott, aus Eisen oder Stahl; Abfallb",
+    "grund": "zu grob (92 Wörter)"
   },
   {
     "norm": "Anlage 4",

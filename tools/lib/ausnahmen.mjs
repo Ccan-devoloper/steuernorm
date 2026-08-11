@@ -57,7 +57,31 @@ const BEREICH = /\b(mit Ausnahme(?:\s+(?:der|des|von|dem|den))?|hiervon ausgenom
  *   „SATZ 1 IST NICHT ANZUWENDEN, soweit …"
  *   „ABSATZ 1 FINDET KEINE ANWENDUNG auf Erwerbe von Todes wegen."
  */
-const SATZAUSNAHME = /(?:^|;\s*)((?:dies|das|die(?:se)?s?|satz\s?\d+[a-z]?|sätze\s?\d+|absatz\s?\d+[a-z]?|absätze\s?\d+|nummer\s?\d+|buchstabe\s?[a-z]|§\s?\d+[a-z]?)(?:\s+(?:und|bis|sowie)\s+(?:satz|absatz|nummer)?\s?\d+[a-z]?)?)\s+(gilt nicht|gelten nicht|ist nicht anzuwenden|sind nicht anzuwenden|findet keine Anwendung|finden keine Anwendung|bleibt außer Betracht|bleiben außer Betracht|entfällt|gilt nicht für|gelten nicht für)\b/i;
+/* Eine Fundstelle, wie sie vor „ist nicht anzuwenden" steht. Bewusst aus
+   Bausteinen gebaut und nicht als offener Ausdruck: Jeder Baustein ist selbst
+   ein Zitatteil, deshalb kann die Kette keinen halben Satz verschlucken.
+
+   Trägt die Formen, die im Bestand tatsächlich vorkommen —
+     „§ 334"
+     „§ 37 Abs. 5 des Einkommensteuergesetzes"
+     „§ 240 Abs. 1 Satz 3 der Abgabenordnung"
+     „§ 169 Absatz 2 Satz 2, § 170 Absatz 6 und § 171 Absatz 7, 8 und 10"
+   — und war der Grund, warum 41 Derogationen im Bestand unerkannt blieben:
+   Die alte Fassung ließ hinter der Paragrafenzahl nur noch ein „und 5" zu. */
+const ZITATTEIL = "(?:§+\\s?\\d+[a-z]?|Abs(?:atz|\\.)\\s?\\d+[a-z]?|S(?:atz|\\.)\\s?\\d+|Nr\\.?\\s?\\d+[a-z]?"
+  + "|Nummer\\s?\\d+[a-z]?|Buchstabe\\s?[a-z]\\b|Halbsatz\\s?\\d"
+  + "|(?:des|der)\\s+[A-ZÄÖÜ][\\wäöüß-]*(?:gesetz(?:es|buchs)?|ordnung|verordnung)"
+  + "|\\d+[a-z]?)";
+const FUNDSTELLE = "(?:dies|das|die(?:se)?s?|satz\\s?\\d+[a-z]?|sätze\\s?\\d+|absatz\\s?\\d+[a-z]?"
+  + "|absätze\\s?\\d+|nummer\\s?\\d+|buchstabe\\s?[a-z]|§+\\s?\\d+[a-z]?)"
+  + "(?:\\s*(?:,|und|bis|sowie)?\\s*" + ZITATTEIL + "){0,8}";
+
+const SATZAUSNAHME = new RegExp(
+  "(?:^|;\\s*)(" + FUNDSTELLE + ")\\s+"
+  + "(gilt nicht|gelten nicht|ist(?:\\s+insoweit)? nicht anzuwenden|sind(?:\\s+insoweit)? nicht anzuwenden"
+  + "|ist nicht anwendbar|sind nicht anwendbar"
+  + "|findet keine Anwendung|finden keine Anwendung|bleibt außer Betracht|bleiben außer Betracht"
+  + "|entfällt|gilt nicht für|gelten nicht für)\\b", "i");
 
 /* ─────────────────────── Rückausnahme ─────────────────────── */
 
@@ -198,7 +222,15 @@ export function ausnahmeSpannen(satz, kontext = {}) {
     const von = satzM.index === 0 ? 0 : satzM.index + satzM[0].indexOf(satzM[1]);
     const bis = klauselEnde(satz, von + satzM[0].length);
     const text = satz.slice(von, bis).replace(/^[\s;]+|[.,;]\s*$/g, "").trim();
-    if (hatGehalt(text)) {
+    /* `hatGehalt` ist hier das falsche Maß. Es blendet „satz", „absatz" und
+       „nummer" aus, damit ein nacktes Signalwort keine Ausnahme wird — bei der
+       Satzausnahme IST die Fundstelle aber der Inhalt. „§ 334 ist nicht
+       anzuwenden" schrumpfte damit auf „§ 334" und fiel durch, weil kein Wort
+       mit drei Buchstaben übrig blieb. Genannt ist eine Fundstelle; damit
+       steht fest, was abgeschaltet wird. */
+    const nenntFundstelle = /(?:§\s?\d|\b(?:satz|sätze|absatz|absätze|nummer|buchstabe|halbsatz)\s?\d)/i
+      .test(satzM[1]);
+    if (nenntFundstelle || hatGehalt(text)) {
       raus.push({
         von, bis, text, klasse: "satz",
         rueck: RUECKAUSNAHME.test(satz),

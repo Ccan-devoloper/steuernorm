@@ -5,6 +5,7 @@
  "quelle": "von Hand geprüft",
  "grundlage": "data/solzg.json, Stand 23.12.2024",
  "hinweis": "Referenz zur Messung der automatischen Erkennung, nicht Bestandteil der Anzeige. Zugeordnet nach der Satzgliedlehre: Was im Vorfeld steht, entscheidet über Tatbestand oder Rechtsfolge. Das bloße Satzsubjekt, das den Normgegenstand nennt (»Der Solidaritätszuschlag«), ist kein Merkmal und wird nicht erfasst. Anwendungsvorschriften tragen weder Tatbestand noch Rechtsfolge.",
+ "abgrenzung": "Der einleitende Derogationsverweis (»abweichend von § 2 Abs. 6 des Einkommensteuergesetzes«) ist NICHT als Ausnahme geführt. Er war es im ersten Entwurf dieser Referenz, widerspricht aber einer begründeten Entscheidung in tools/lib/ausnahmen.mjs: Die Wendung ist ein reiner Verweis ohne Merkmalsgehalt und läge mitten in der Rechtsfolge, in der sie steht — zwei Kategorien auf denselben Zeichen. Ein eigenständiger Satz »§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden« ist etwas anderes: Er nennt, was abgeschaltet wird, und bleibt als Ausnahme geführt.",
  "normen": {
   "1": {
    "enbez": "§ 1",
@@ -187,8 +188,7 @@
      "text": "Bei der Veranlagung zur Einkommensteuer ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre.",
      "elemente": [
       { "art": "tb", "text": "Bei der Veranlagung zur Einkommensteuer", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre", "rolle": "Bemessungsgrundlage" },
-      { "art": "ausn", "text": "abweichend von § 2 Abs. 6 des Einkommensteuergesetzes", "rolle": "Derogation" }
+      { "art": "rf", "text": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre", "rolle": "Bemessungsgrundlage" }
      ]
     },
     {

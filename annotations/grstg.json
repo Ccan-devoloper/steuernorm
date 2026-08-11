@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-10T09:19:25.860Z",
+  "aktualisiert": "2026-08-11T09:36:31.380Z",
   "quelle": "https://www.gesetze-im-internet.de/grstg_1973/",
   "stand": [
     {
@@ -254,7 +254,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bf9ba9942f6721a92612e76cd6583b5da68befdfab2c978584b9414d0ee1c71",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.818Z"
+      "aktualisiert": "2026-08-11T09:36:31.335Z"
     },
     "2": {
       "typ": "gemischt",
@@ -513,7 +513,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "37c6379c0d4e6b6d1bfe5af833e583f52122f097b18fec1f95b3aba8a034d647",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.819Z"
+      "aktualisiert": "2026-08-11T09:36:31.336Z"
     },
     "3": {
       "typ": "gemischt",
@@ -957,31 +957,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "sind insoweit nicht",
-              "anzeige": "sind insoweit nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind insoweit nicht",
-                  "von": 2287,
-                  "laenge": 19
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 2307,
-                  "laenge": 10
-                }
-              ],
+              "art": "ausn",
+              "text": "Die §§ 5 und 6 sind insoweit nicht anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 7",
-              "von": 2287,
-              "laenge": 19,
+              "von": 2272,
+              "laenge": 45,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Satzausnahme: „Die §§ 5 und 6 sind insoweit nicht anzuwenden\""
             }
           ]
         },
@@ -1291,6 +1280,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Die §§ 5 und 6 sind insoweit nicht anzuwenden",
+                  "pfad": "Abs. 1 Satz 7",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Satz 2 gilt nicht, wenn der Grundbesitz von einem nicht begünstigten Rechtsträger im Rahmen einer Öffentlich Privaten Partnerschaft einer juristischen Person des öffentlichen Rechts für einen öffentlichen Dienst oder Gebrauch überlassen wird und die Übertragung auf den Nutzer am Ende des Vertragszeitraums vereinbart ist",
                   "pfad": "Abs. 1 Satz 9",
                   "konfidenz": 0.48,
@@ -1354,14 +1351,6 @@
                 },
                 {
                   "n": "7.",
-                  "t": "sind insoweit nicht … anzuwenden",
-                  "pfad": "Abs. 1 Satz 7",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "8.",
                   "t": "begünstigten Rechtsträger zuzurechnen sein",
                   "pfad": "Abs. 1 Satz 8",
                   "konfidenz": 0.6,
@@ -1480,13 +1469,13 @@
         "ist insoweit nicht",
         "gehört, dessen Erträge ausschließlich für die Besoldung und Versorgung der Geistlichen und Kirchendiener sowie ihrer Hinterbliebenen bestimmt sind",
         "reicht es insoweit aus, daß der Grundbesitz zu einem Zeitpunkt vor dem 1. Januar 1987 zu einem gesonderten Vermögen im Sinne des Satzes 1 gehörte",
-        "sind insoweit nicht",
         "begünstigten Rechtsträger zuzurechnen sein",
         "ist die hoheitliche Tätigkeit oder der bestimmungsgemäße Gebrauch durch die Allgemeinheit",
         "darf nicht in der Absicht, Gewinn zu erzielen, gefordert werden",
         "ist nicht anzunehmen bei Betrieben gewerblicher Art von juristische Personen des öffentlichen Rechts im Sinne des Körperschaftsteuergesetzes"
       ],
       "ausnahmen": [
+        "Die §§ 5 und 6 sind insoweit nicht anzuwenden",
         "Satz 2 gilt nicht, wenn der Grundbesitz von einem nicht begünstigten Rechtsträger im Rahmen einer Öffentlich Privaten Partnerschaft einer juristischen Person des öffentlichen Rechts für einen öffentlichen Dienst oder Gebrauch überlassen wird und die Übertragung auf den Nutzer am Ende des Vertragszeitraums vereinbart ist"
       ],
       "definitionen": [
@@ -1504,7 +1493,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf7476b2978f26c237cc3b6ff6c3f36c37e9c99383f482a4dcbe8445fe661b3",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.822Z"
+      "aktualisiert": "2026-08-11T09:36:31.339Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1978,7 +1967,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e9c7b2a9bddb1a3b709d0bcfcab09ba1ebca33a4897a1a83b179d21ad81a1a7a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.824Z"
+      "aktualisiert": "2026-08-11T09:36:31.341Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2314,7 +2303,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6cbb4367adf752036679227aa5934b7afffc3c216e8f307ad56864a819866af7",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.825Z"
+      "aktualisiert": "2026-08-11T09:36:31.342Z"
     },
     "6": {
       "typ": "gemischt",
@@ -2468,7 +2457,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "264157584796d9e3617c61b5bfc56512893d31be536ad46156323d323a115b6f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.826Z"
+      "aktualisiert": "2026-08-11T09:36:31.343Z"
     },
     "7": {
       "typ": "konditional",
@@ -2612,7 +2601,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdcd579bbb462e1dc74e74078d00ab202662f020268bb0c37a75d9e306a059ea",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.826Z"
+      "aktualisiert": "2026-08-11T09:36:31.346Z"
     },
     "8": {
       "typ": "konditional",
@@ -2803,7 +2792,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa9fbc6f2f77539a0cb05f1ad49b2bb1066cc876e6f379607a0d535ac4d06f82",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.827Z"
+      "aktualisiert": "2026-08-11T09:36:31.346Z"
     },
     "9": {
       "typ": "aussage",
@@ -2927,7 +2916,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "caf0e52999418e76d7dec6e8947a30ebeaaf28e4e39db52e054e5ee23cd94773",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.827Z"
+      "aktualisiert": "2026-08-11T09:36:31.347Z"
     },
     "10": {
       "typ": "gemischt",
@@ -3144,7 +3133,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16a76da4021ee34c3646a011ff16b6503cae2fb6e477ad133f6eeddb01eb532c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.829Z"
+      "aktualisiert": "2026-08-11T09:36:31.347Z"
     },
     "11": {
       "typ": "gemischt",
@@ -3378,7 +3367,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b4da73c3f07132a591bd520c7fe9766d3c368965343036b5e20443a5699b36a0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.830Z"
+      "aktualisiert": "2026-08-11T09:36:31.348Z"
     },
     "12": {
       "typ": "aussage",
@@ -3454,7 +3443,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae83092d9e669f83a9557af0ffb3606f1aa239cdaeada08bb00e1c608579bdd1",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.830Z"
+      "aktualisiert": "2026-08-11T09:36:31.348Z"
     },
     "13": {
       "typ": "gemischt",
@@ -3584,7 +3573,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fce85cded2154ad807e1d74d97ecc57372013c4a132184f72f45f9704592658a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.831Z"
+      "aktualisiert": "2026-08-11T09:36:31.348Z"
     },
     "14": {
       "typ": "tarif",
@@ -3694,7 +3683,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b558c2ddabfa10afb5370acac3448475de42b3f9e1193ed5609ff0c517d5db2",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.831Z"
+      "aktualisiert": "2026-08-11T09:36:31.348Z"
     },
     "15": {
       "typ": "gemischt",
@@ -4735,7 +4724,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ee5866c36a2de6b129d7d54b198bd9da45abe3e919a0eab680d1663d0dc16567",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.834Z"
+      "aktualisiert": "2026-08-11T09:36:31.352Z"
     },
     "16": {
       "typ": "gemischt",
@@ -5113,7 +5102,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4251053215e47cd9ab4c45a2687344be9d603dea5a67ade028dba7189f30af8f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.835Z"
+      "aktualisiert": "2026-08-11T09:36:31.353Z"
     },
     "17": {
       "typ": "gemischt",
@@ -5250,7 +5239,7 @@
           "pfad": "Abs. 2 Nr. 2",
           "von": 571,
           "bis": 815,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
@@ -5271,28 +5260,71 @@
             },
             {
               "art": "rf",
-              "text": "fehlerhaft ist; § 176 der Abgabenordnung ist hierbei entsprechend anzuwenden",
+              "text": "fehlerhaft ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 594,
-              "laenge": 76,
-              "konfidenz": 0.54,
+              "laenge": 14,
+              "konfidenz": 0.45,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             },
             {
-              "art": "ausn",
-              "text": "das gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen",
+              "art": "tb",
+              "text": "§ 176 der Abgabenordnung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
-              "von": 672,
-              "laenge": 142,
+              "von": 610,
+              "laenge": 24,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist hierbei entsprechend",
+              "anzeige": "ist hierbei entsprechend … anzuwenden",
+              "teile": [
+                {
+                  "text": "ist hierbei entsprechend",
+                  "von": 635,
+                  "laenge": 24
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 660,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 635,
+              "laenge": 24,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "ausn",
+              "text": "gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 676,
+              "laenge": 138,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -5590,8 +5622,8 @@
         },
         {
           "absatz": "Abs. 2",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -5622,6 +5654,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "§ 176 der Abgabenordnung",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -5632,7 +5672,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "das gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen",
+                  "t": "gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -5663,11 +5703,19 @@
                 },
                 {
                   "n": "3.",
-                  "t": "fehlerhaft ist; § 176 der Abgabenordnung ist hierbei entsprechend anzuwenden",
+                  "t": "fehlerhaft ist",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "ist hierbei entsprechend … anzuwenden",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
                 }
               ]
             }
@@ -5803,6 +5851,7 @@
         "wenn dem Finanzamt bekannt wird",
         "Gründe, die im Feststellungsverfahren über den Grundsteuerwert nicht zu berücksichtigen sind, zu einem anderen als dem für den letzten Veranlagungszeitpunkt",
         "die letzte Veranlagung",
+        "§ 176 der Abgabenordnung",
         "in den Fällen des Absatzes 1 der Beginn des Kalenderjahres, auf den die Fortschreibung",
         "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag",
         "in den Fällen des Absatzes 2 Nr. 2 der Beginn des Kalenderjahres, in dem der Fehler dem Finanzamt",
@@ -5812,7 +5861,8 @@
         "wird der Steuermeßbetrag auf den Fortschreibungszeitpunkt neu festgesetzt (Neuveranlagung)",
         "wird auch dann neu festgesetzt",
         "festgesetzten Steuermeßbetrag führen",
-        "fehlerhaft ist; § 176 der Abgabenordnung ist hierbei entsprechend anzuwenden",
+        "fehlerhaft ist",
+        "ist hierbei entsprechend",
         "werden die Verhältnisse im Neuveranlagungszeitpunkt zugrunde",
         "Neuveranlagungszeitpunkt",
         "durchgeführt wird",
@@ -5821,12 +5871,12 @@
         "wird die Neuveranlagung auf den Zeitpunkt des Wirksamwerdens der Steuermeßbeträge vorgenommen"
       ],
       "ausnahmen": [
-        "das gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen"
+        "gilt jedoch nur für Veranlagungszeitpunkte, die vor der Verkündung der maßgeblichen Entscheidung eines obersten Gerichts des Bundes liegen"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.571,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -5836,7 +5886,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6a6584441ea7ed057a3aadc93fbc4f36593d2273927667d96650087b6b1769c8",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.837Z"
+      "aktualisiert": "2026-08-11T09:36:31.355Z"
     },
     "18": {
       "typ": "gemischt",
@@ -6349,7 +6399,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e53441336dc7d71fd10d96c626cd9e1a110504748657b722d318f14ab015bbc1",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.838Z"
+      "aktualisiert": "2026-08-11T09:36:31.356Z"
     },
     "19": {
       "typ": "gemischt",
@@ -6537,13 +6587,56 @@
             },
             {
               "art": "rf",
-              "text": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
-              "anzeige": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig … zu unterschreiben",
+              "text": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+              "anzeige": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
               "teile": [
                 {
-                  "text": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
+                  "text": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
                   "von": 960,
-                  "laenge": 210
+                  "laenge": 102
+                },
+                {
+                  "text": "verzichten",
+                  "von": 1063,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 3 Satz 3",
+              "von": 960,
+              "laenge": 102,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 1075,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
+              "anzeige": "ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig … zu unterschreiben",
+              "teile": [
+                {
+                  "text": "ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
+                  "von": 1090,
+                  "laenge": 80
                 },
                 {
                   "text": "zu unterschreiben",
@@ -6552,9 +6645,9 @@
                 }
               ],
               "pfad": "Abs. 3 Satz 3",
-              "von": 960,
-              "laenge": 210,
-              "konfidenz": 0.54,
+              "von": 1090,
+              "laenge": 80,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -6704,6 +6797,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "in diesem Fall",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Für die Entscheidung über den Antrag",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -6735,14 +6836,22 @@
                 },
                 {
                   "n": "3.",
-                  "t": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig … zu unterschreiben",
+                  "t": "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
                   "pfad": "Abs. 3 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "4.",
+                  "t": "ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig … zu unterschreiben",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "5.",
                   "t": "gilt § 150 Absatz 8 der Abgabenordnung",
                   "pfad": "Abs. 3 Satz 4",
                   "konfidenz": 0.6,
@@ -6758,6 +6867,7 @@
         "Jede Änderung in der Nutzung oder in den Eigentumsverhältnissen eines ganz oder teilweise von der Grundsteuer",
         "Den Wegfall der Voraussetzungen für die ermäßigte Steuermesszahl nach § 15 Absatz 2 bis 5",
         "Auf Antrag",
+        "in diesem Fall",
         "Für die Entscheidung über den Antrag"
       ],
       "rf": [
@@ -6765,14 +6875,15 @@
         "hat derjenige",
         "sind Steuererklärungen im Sinne der Abgabenordnung, die den Finanzbehörden nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln sind",
         "sind bei dem für die Festsetzung des Steuermessbetrags zuständigen Finanzamt bis zum 31. März des Jahres",
-        "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten; in diesem Fall ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
+        "kann die zuständige Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
+        "ist die Anzeige nach amtlich vorgeschriebenem Vordruck abzugeben und eigenhändig",
         "gilt § 150 Absatz 8 der Abgabenordnung"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.564,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -6782,7 +6893,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf5a48afdc0ea8253c9d03d95b00c268938a894943b9bb14075fc130c7e09e69",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.839Z"
+      "aktualisiert": "2026-08-11T09:36:31.358Z"
     },
     "20": {
       "typ": "gemischt",
@@ -7229,7 +7340,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9684318000b78577cb8170673df1ba182678a68572ea41178c2537335218bf9b",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.841Z"
+      "aktualisiert": "2026-08-11T09:36:31.359Z"
     },
     "21": {
       "typ": "gemischt",
@@ -7374,7 +7485,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "594182bacc9c66f39b00abf575994fe357f2b56bc20c12d398fd5bd4eb4c2149",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.841Z"
+      "aktualisiert": "2026-08-11T09:36:31.360Z"
     },
     "22": {
       "typ": "gemischt",
@@ -7748,7 +7859,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9c16d77dec30838a13d83447e40db66f953be0e0ec6a36f34791c3b189686ab",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.842Z"
+      "aktualisiert": "2026-08-11T09:36:31.361Z"
     },
     "23": {
       "typ": "gemischt",
@@ -7932,7 +8043,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79172c45be3a65d36bbf30d7ed1e174fa31e19a0b6590e4c302831ba1fadf123",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.842Z"
+      "aktualisiert": "2026-08-11T09:36:31.361Z"
     },
     "24": {
       "typ": "gemischt",
@@ -7991,13 +8102,45 @@
             },
             {
               "art": "rf",
-              "text": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde); an dem Steueraufkommen der Sitzgemeinde werden die übrigen Gemeinden",
-              "anzeige": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde); an dem Steueraufkommen der Sitzgemeinde werden die übrigen Gemeinden … beteiligt",
+              "text": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 256,
+              "laenge": 128,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "an dem Steueraufkommen der Sitzgemeinde",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 386,
+              "laenge": 39,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "werden die übrigen Gemeinden",
+              "anzeige": "werden die übrigen Gemeinden … beteiligt",
               "teile": [
                 {
-                  "text": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde); an dem Steueraufkommen der Sitzgemeinde werden die übrigen Gemeinden",
-                  "von": 256,
-                  "laenge": 198
+                  "text": "werden die übrigen Gemeinden",
+                  "von": 426,
+                  "laenge": 28
                 },
                 {
                   "text": "beteiligt",
@@ -8006,9 +8149,9 @@
                 }
               ],
               "pfad": "Satz 2",
-              "von": 256,
-              "laenge": 198,
-              "konfidenz": 0.54,
+              "von": 426,
+              "laenge": 28,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -8053,14 +8196,22 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Beim Steuerausgleich",
                   "pfad": "Satz 2",
                   "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "an dem Steueraufkommen der Sitzgemeinde",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -8081,14 +8232,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde); an dem Steueraufkommen der Sitzgemeinde werden die übrigen Gemeinden … beteiligt",
+                  "t": "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde)",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "werden die übrigen Gemeinden … beteiligt",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "soll annähernd zu dem Ergebnis führen, das bei einer Zerlegung einträte",
                   "pfad": "Satz 3",
                   "konfidenz": 0.6,
@@ -8101,18 +8260,20 @@
         }
       ],
       "tb": [
-        "Beim Steuerausgleich"
+        "Beim Steuerausgleich",
+        "an dem Steueraufkommen der Sitzgemeinde"
       ],
       "rf": [
         "kann durch Rechtsverordnung bestimmen, daß bei Betrieben der Land- und Forstwirtschaft, die sich über mehrere Gemeinden erstrecken, aus Vereinfachungsgründen an Stelle der Zerlegung ein Steuerausgleich stattfindet",
-        "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde); an dem Steueraufkommen der Sitzgemeinde werden die übrigen Gemeinden",
+        "wird der gesamte Steuermeßbetrag der Gemeinde zugeteilt, in der der wertvollste Teil des Steuergegenstandes liegt (Sitzgemeinde)",
+        "werden die übrigen Gemeinden",
         "soll annähernd zu dem Ergebnis führen, das bei einer Zerlegung einträte"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.547,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -8122,7 +8283,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "51066c3f20699499aaa67b46d2b5cea88be66d6fff6a2254a63537ffb1d5a25f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.843Z"
+      "aktualisiert": "2026-08-11T09:36:31.362Z"
     },
     "25": {
       "typ": "gemischt",
@@ -9037,7 +9198,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c887609139a05e170d87e1a33e3faa61bd37e0bf97fec14f711d20cb8dcd998",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.846Z"
+      "aktualisiert": "2026-08-11T09:36:31.365Z"
     },
     "26": {
       "typ": "aussage",
@@ -9147,7 +9308,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a80903e2e57d1b8b7ef3bc5d4cf3411a59f5df6d6b38906544e9521955caa842",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.850Z"
+      "aktualisiert": "2026-08-11T09:36:31.370Z"
     },
     "27": {
       "typ": "gemischt",
@@ -9513,7 +9674,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "897f0904b6d893b4c6fe51a47a7f44fe77eac7c82e4e0ff336f541a06228b32c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.851Z"
+      "aktualisiert": "2026-08-11T09:36:31.370Z"
     },
     "28": {
       "typ": "gemischt",
@@ -9729,19 +9890,51 @@
             },
             {
               "art": "tb",
-              "text": "lange maßgebend, bis ihre Änderung beantragt wird; die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres beantragt werden",
+              "text": "lange maßgebend, bis ihre Änderung beantragt wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 3",
               "von": 683,
-              "laenge": 142,
-              "konfidenz": 0.54,
+              "laenge": 49,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
+            },
+            {
+              "art": "tb",
+              "text": "die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 734,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "beantragt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 809,
+              "laenge": 16,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         }
@@ -9836,9 +10029,17 @@
                 },
                 {
                   "n": "3.",
-                  "t": "lange maßgebend, bis ihre Änderung beantragt wird; die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres beantragt werden",
+                  "t": "lange maßgebend, bis ihre Änderung beantragt wird",
                   "pfad": "Abs. 3 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9872,6 +10073,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "beantragt werden",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -9881,7 +10090,8 @@
       "tb": [
         "Auf Antrag des Steuerschuldners",
         "Der Antrag muß spätestens bis zum 30. September des vorangehenden Kalenderjahres",
-        "lange maßgebend, bis ihre Änderung beantragt wird; die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres beantragt werden"
+        "lange maßgebend, bis ihre Änderung beantragt wird",
+        "die Änderung muß spätestens bis zum 30. September des vorangehenden Jahres"
       ],
       "rf": [
         "wird zu je einem Viertel ihres Jahresbetrags am 15. Februar, 15. Mai, 15. August und 15. November fällig",
@@ -9890,13 +10100,14 @@
         "am 15. Februar und 15. August zu je einer Hälfte ihres Jahresbetrags, wenn dieser dreißig Euro nicht übersteigt",
         "kann die Grundsteuer abweichend vom Absatz 1 oder Absatz 2 Nr. 2 am 1. Juli in einem Jahresbetrag entrichtet werden",
         "gestellt werden",
-        "Die beantragte Zahlungsweise"
+        "Die beantragte Zahlungsweise",
+        "beantragt werden"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.564,
+      "konfidenz": 0.562,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -9906,7 +10117,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a69fbd6d3d8bacdc28a6b903036e5ce078ab530759ae021b29e54a9b1ef1359",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.852Z"
+      "aktualisiert": "2026-08-11T09:36:31.372Z"
     },
     "29": {
       "typ": "aussage",
@@ -9993,7 +10204,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2a150f54ecd134be88554e94f7b97de8e84949f3edaf46383a5ce41e2d574ddd",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.852Z"
+      "aktualisiert": "2026-08-11T09:36:31.372Z"
     },
     "30": {
       "typ": "gemischt",
@@ -10361,7 +10572,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f65ef67bbaaf69800803af67180f401ebae71c33e2a226582c9c6f865da06597",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.853Z"
+      "aktualisiert": "2026-08-11T09:36:31.373Z"
     },
     "31": {
       "typ": "konditional",
@@ -10471,7 +10682,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c7eee80c34b15b7377e7b80282888d97bf542b200b8406064ea389d40037da6",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.854Z"
+      "aktualisiert": "2026-08-11T09:36:31.373Z"
     },
     "32": {
       "typ": "gemischt",
@@ -10798,7 +11009,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "60da591d3e4e2a025f76728efd9f58c479b7a7adb23fa413220ef4c5ac3977c6",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.855Z"
+      "aktualisiert": "2026-08-11T09:36:31.375Z"
     },
     "33": {
       "typ": "gemischt",
@@ -11234,7 +11445,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a3359e18fd567cb4534945a5ad05cc32430fcb60cede87110323f24e622837fc",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.856Z"
+      "aktualisiert": "2026-08-11T09:36:31.376Z"
     },
     "34": {
       "typ": "gemischt",
@@ -11903,7 +12114,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c46b652bd20f5cf969b1f54ead4c919436432865a9c4d4ac8ee3dfcdb5ca8d3",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.857Z"
+      "aktualisiert": "2026-08-11T09:36:31.378Z"
     },
     "35": {
       "typ": "gemischt",
@@ -12289,7 +12500,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b3174e49e56707c47dfca6873090d51cb4e819ca5999b2d9d81ef0c1a2e900fa",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.858Z"
+      "aktualisiert": "2026-08-11T09:36:31.378Z"
     },
     "36": {
       "typ": "gemischt",
@@ -12726,7 +12937,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "099113b0fceabc36aaafdfa704f5e42ef9c46d215647a487e128595ba313a98a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.859Z"
+      "aktualisiert": "2026-08-11T09:36:31.379Z"
     },
     "37": {
       "typ": "gemischt",
@@ -12894,7 +13105,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6010fb8f794ad90a4535deb883206507ba17b36c72bcf9f730ac78487d875721",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.860Z"
+      "aktualisiert": "2026-08-11T09:36:31.380Z"
     },
     "38": {
       "typ": "aussage",
@@ -12970,7 +13181,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "65388219925d862aa54454120d49ec0413c06e22da7d72a1790c607d61674a95",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.860Z"
+      "aktualisiert": "2026-08-11T09:36:31.380Z"
     }
   }
 }

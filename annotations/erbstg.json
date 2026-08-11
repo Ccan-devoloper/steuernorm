@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-10T09:19:25.794Z",
+  "aktualisiert": "2026-08-11T09:36:31.307Z",
   "quelle": "https://www.gesetze-im-internet.de/erbstg_1974/",
   "stand": [
     {
@@ -321,7 +321,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2142da7ac2176ff102419b1e4ed1f85f9d70ef4c608cf83970470eb80c90997b",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.662Z"
+      "aktualisiert": "2026-08-11T09:36:31.154Z"
     },
     "2": {
       "typ": "gemischt",
@@ -901,7 +901,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "300446e719a2870d532539a65970da5945a6351965f14139174622e91be37c0a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.664Z"
+      "aktualisiert": "2026-08-11T09:36:31.158Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1838,7 +1838,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c2b14f9031e1d979b68d2b736ce332826d82e7a6b5fb25e7875c5d01d86397e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.668Z"
+      "aktualisiert": "2026-08-11T09:36:31.164Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2090,7 +2090,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9cfc0f51f141dfd0f6a4ada4a20a6685836431b1e9b8e4bb0fcada5ea2b090c9",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.669Z"
+      "aktualisiert": "2026-08-11T09:36:31.165Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2660,7 +2660,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "30ae833eed4fa9cbfedcada0b98e6aee0d836d62c3b112f3c0f4393de36e9d51",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.670Z"
+      "aktualisiert": "2026-08-11T09:36:31.168Z"
     },
     "6": {
       "typ": "gemischt",
@@ -3336,7 +3336,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "936e756ef314add29a615154c3cc9623bd1cf1562e91cbaba5a904c18d0df9c1",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.672Z"
+      "aktualisiert": "2026-08-11T09:36:31.170Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5269,7 +5269,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "29714ed1c4b50e13a488ec5eec8cc9d07aee171cc7eb1d4d772523328ebb444a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.676Z"
+      "aktualisiert": "2026-08-11T09:36:31.175Z"
     },
     "8": {
       "typ": "definition",
@@ -5345,7 +5345,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "838f692b28be3161f2b44950cce26cecef3ba226a0a9d362e5e563a3d65e3a1e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.677Z"
+      "aktualisiert": "2026-08-11T09:36:31.175Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5924,7 +5924,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fd286ad2f6e5598846bcf4f9d0ddf4aa001c2b3d4aa0c2384e81f959b5ed3ea6",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.679Z"
+      "aktualisiert": "2026-08-11T09:36:31.178Z"
     },
     "10": {
       "typ": "gemischt",
@@ -6144,13 +6144,45 @@
             },
             {
               "art": "rf",
-              "text": "gilt als Erwerb der anteiligen Wirtschaftsgüter; die dabei übergehenden Schulden und Lasten der Gesellschaft sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
+              "text": "gilt als Erwerb der anteiligen Wirtschaftsgüter",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 4",
               "von": 848,
-              "laenge": 199,
-              "konfidenz": 0.54,
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "die dabei übergehenden Schulden und Lasten der Gesellschaft",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 4",
+              "von": 897,
+              "laenge": 59,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 4",
+              "von": 957,
+              "laenge": 90,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -7398,6 +7430,14 @@
                 },
                 {
                   "n": "7.",
+                  "t": "die dabei übergehenden Schulden und Lasten der Gesellschaft",
+                  "pfad": "Abs. 1 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
                   "t": "Bei der Zweckzuwendung",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -7405,7 +7445,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "In den Fällen des § 1 Abs. 1 Nr. 4",
                   "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.6,
@@ -7460,14 +7500,22 @@
                 },
                 {
                   "n": "4.",
-                  "t": "gilt als Erwerb der anteiligen Wirtschaftsgüter; die dabei übergehenden Schulden und Lasten der Gesellschaft sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
+                  "t": "gilt als Erwerb der anteiligen Wirtschaftsgüter",
                   "pfad": "Abs. 1 Satz 4",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
+                  "t": "sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
+                  "pfad": "Abs. 1 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "tritt an die Stelle des Vermögensanfalls die Verpflichtung des Beschwerten",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -7475,7 +7523,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "wird auf volle 100 Euro nach unten abgerundet",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -7483,7 +7531,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "tritt an die Stelle des Vermögensanfalls das Vermögen der Stiftung oder des Vereins",
                   "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.6,
@@ -8134,6 +8182,7 @@
         "wenn von dem nach § 12 zu ermittelnden Wert des gesamten Vermögensanfalls, soweit er der Besteuerung nach diesem Gesetz unterliegt",
         "Die vom Erblasser herrührenden Steuererstattungsansprüche",
         "Der unmittelbare oder mittelbare Erwerb einer Beteiligung an einer Personenvereinigung, die nicht unter § 97 Abs. 1 Satz 1 Nr. 5 des Bewertungsgesetzes fällt",
+        "die dabei übergehenden Schulden und Lasten der Gesellschaft",
         "Bei der Zweckzuwendung",
         "In den Fällen des § 1 Abs. 1 Nr. 4",
         "Hat der Erblasser die Entrichtung der von dem Erwerber geschuldeten Steuer einem anderen auferlegt oder hat der Schenker die Entrichtung der vom Beschenkten geschuldeten Steuer selbst übernommen oder einem anderen auferlegt",
@@ -8162,7 +8211,8 @@
         "Als steuerpflichtiger Erwerb",
         "der sich ergibt",
         "sind bei der Ermittlung der Bereicherung zu berücksichtigen, auch wenn sie rechtlich erst nach dem Tod des Erblassers entstanden sind",
-        "gilt als Erwerb der anteiligen Wirtschaftsgüter; die dabei übergehenden Schulden und Lasten der Gesellschaft sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
+        "gilt als Erwerb der anteiligen Wirtschaftsgüter",
+        "sind bei der Ermittlung der Bereicherung des Erwerbers wie eine Gegenleistung zu behandeln",
         "tritt an die Stelle des Vermögensanfalls die Verpflichtung des Beschwerten",
         "wird auf volle 100 Euro nach unten abgerundet",
         "tritt an die Stelle des Vermögensanfalls das Vermögen der Stiftung oder des Vereins",
@@ -8201,7 +8251,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.586,
+      "konfidenz": 0.587,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -8211,7 +8261,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5574bf273aadb44251a62aeac62b0603f4a072dd3dbb552e204c15b0e8e55414",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.686Z"
+      "aktualisiert": "2026-08-11T09:36:31.185Z"
     },
     "11": {
       "typ": "konditional",
@@ -8346,7 +8396,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c1951c250e9298b4f453fb55a6150a39c7c6dd2c0bf45cbccd374e76e52293a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.686Z"
+      "aktualisiert": "2026-08-11T09:36:31.185Z"
     },
     "12": {
       "typ": "gemischt",
@@ -8510,19 +8560,8 @@
             {
               "art": "rf",
               "text": "werden angesetzt",
-              "anzeige": "werden angesetzt … sie werden mit ihren ertragsteuerlichen Werten angesetzt",
-              "teile": [
-                {
-                  "text": "werden angesetzt",
-                  "von": 832,
-                  "laenge": 16
-                },
-                {
-                  "text": "sie werden mit ihren ertragsteuerlichen Werten angesetzt",
-                  "von": 946,
-                  "laenge": 56
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 4 Satz 1",
               "von": 832,
               "laenge": 16,
@@ -8532,7 +8571,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -8549,6 +8588,33 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "werden mit ihren ertragsteuerlichen Werten",
+              "anzeige": "werden mit ihren ertragsteuerlichen Werten … angesetzt",
+              "teile": [
+                {
+                  "text": "werden mit ihren ertragsteuerlichen Werten",
+                  "von": 950,
+                  "laenge": 42
+                },
+                {
+                  "text": "angesetzt",
+                  "von": 993,
+                  "laenge": 9
+                }
+              ],
+              "pfad": "Abs. 4 Satz 1",
+              "von": 950,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -8833,9 +8899,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "werden angesetzt … sie werden mit ihren ertragsteuerlichen Werten angesetzt",
+                  "t": "werden angesetzt",
                   "pfad": "Abs. 4 Satz 1",
                   "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "werden mit ihren ertragsteuerlichen Werten … angesetzt",
+                  "pfad": "Abs. 4 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -8972,6 +9046,7 @@
         "festzustellen ist, sind mit dem auf den Bewertungsstichtag (§ 11) festgestellten Wert",
         "ist mit dem nach § 151 Abs. 1 Satz 1 Nr. 1 des Bewertungsgesetzes auf den Bewertungsstichtag (§ 11) festgestellten Wert",
         "werden angesetzt",
+        "werden mit ihren ertragsteuerlichen Werten",
         "festzustellen ist, ist mit dem auf den Bewertungsstichtag (§ 11) festgestellten Wert",
         "ist der darauf entfallende Teilbetrag des auf den Bewertungsstichtag (§ 11) festgestellten Werts anzusetzen",
         "werden nach § 31 des Bewertungsgesetzes"
@@ -8980,7 +9055,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -8990,7 +9065,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16c6c1d70dfff675aa205bedbdc3e8e8fff5439f969222e5191c3695d9c4a713",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.688Z"
+      "aktualisiert": "2026-08-11T09:36:31.187Z"
     },
     "13": {
       "typ": "gemischt",
@@ -9215,6 +9290,33 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "fällt mit Wirkung für die Vergangenheit weg",
+              "anzeige": "fällt mit Wirkung für die Vergangenheit weg … 4. ein Erwerb nach § 1969 des Bürgerlichen Gesetzbuchs",
+              "teile": [
+                {
+                  "text": "fällt mit Wirkung für die Vergangenheit weg",
+                  "von": 2451,
+                  "laenge": 43
+                },
+                {
+                  "text": "4. ein Erwerb nach § 1969 des Bürgerlichen Gesetzbuchs",
+                  "von": 2692,
+                  "laenge": 54
+                }
+              ],
+              "pfad": "Abs. 1 Satz 3",
+              "von": 2451,
+              "laenge": 43,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+            },
+            {
               "art": "tb",
               "text": "wenn der Grundbesitz oder Teile des Grundbesitzes innerhalb von zehn Jahren nach dem Erwerb veräußert werden oder die Voraussetzungen für die Steuerbefreiung innerhalb dieses Zeitraums entfallen",
               "anzeige": null,
@@ -9229,6 +9331,54 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "tb",
+              "text": "4a. Zuwendungen unter Lebenden, mit denen ein Ehegatte dem anderen Ehegatten Eigentum oder Miteigentum an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 3",
+              "von": 2748,
+              "laenge": 233,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes verschafft",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 3",
+              "von": 2982,
+              "laenge": 91,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "soweit darin eine Wohnung zu eigenen Wohnzwecken genutzt wird (Familienheim), oder den anderen Ehegatten von eingegangenen Verpflichtungen im Zusammenhang mit der Anschaffung oder der Herstellung des Familienheims freistellt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 3",
+              "von": 3075,
+              "laenge": 224,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -9277,7 +9427,7 @@
           "pfad": "Abs. 1 Satz 5",
           "von": 3508,
           "bis": 4226,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
@@ -9294,17 +9444,49 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
-              "text": "gelten für Zuwendungen zwischen Lebenspartnern entsprechend; 4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
+              "text": "gelten für Zuwendungen zwischen Lebenspartnern entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 5",
               "von": 3526,
-              "laenge": 404,
-              "konfidenz": 0.42,
+              "laenge": 59,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 5",
+              "von": 3587,
+              "laenge": 193,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 5",
+              "von": 3781,
+              "laenge": 149,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -9431,19 +9613,8 @@
             {
               "art": "rf",
               "text": "fällt mit Wirkung für die Vergangenheit weg",
-              "anzeige": "fällt mit Wirkung für die Vergangenheit weg … die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
-              "teile": [
-                {
-                  "text": "fällt mit Wirkung für die Vergangenheit weg",
-                  "von": 4994,
-                  "laenge": 43
-                },
-                {
-                  "text": "die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
-                  "von": 5839,
-                  "laenge": 171
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 9",
               "von": 4994,
               "laenge": 43,
@@ -9453,7 +9624,23 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+            },
+            {
+              "art": "tb",
+              "text": "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu Wohnzwecken selbst nutzt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 9",
+              "von": 5039,
+              "laenge": 115,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\" (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -9470,6 +9657,65 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bedingungsausnahme mit „es sei denn\""
+            },
+            {
+              "art": "tb",
+              "text": "4c. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 9",
+              "von": 5256,
+              "laenge": 193,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2",
+              "anzeige": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2 … die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
+              "teile": [
+                {
+                  "text": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2",
+                  "von": 5450,
+                  "laenge": 196
+                },
+                {
+                  "text": "die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
+                  "von": 5839,
+                  "laenge": 171
+                }
+              ],
+              "pfad": "Abs. 1 Satz 9",
+              "von": 5450,
+              "laenge": 196,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "soweit der Erblasser darin bis zum Erbfall eine Wohnung zu eigenen Wohnzwecken genutzt hat oder bei der er aus zwingenden Gründen an einer Selbstnutzung zu eigenen Wohnzwecken gehindert war",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 9",
+              "von": 5648,
+              "laenge": 189,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -9642,19 +9888,8 @@
             {
               "art": "rf",
               "text": "entfällt",
-              "anzeige": "entfällt … 6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers anfällt, sofern der Erwerb zusammen mit dem übrigen Vermögen des Erwerbers 41 000 Euro nicht übersteigt und der Erwerber infolge körperlicher oder geistiger Gebrechen und unter Berücksichtigung seiner bisherigen Lebensstellung als erwerbsunfähig anzusehen ist oder durch die Führung eines gemeinsamen Hausstands mit erwerbsunfähigen oder in der Ausbildung befindlichen Abkömmlingen an der Ausübung einer Erwerbstätigkeit gehindert ist",
-              "teile": [
-                {
-                  "text": "entfällt",
-                  "von": 7409,
-                  "laenge": 8
-                },
-                {
-                  "text": "6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers anfällt, sofern der Erwerb zusammen mit dem übrigen Vermögen des Erwerbers 41 000 Euro nicht übersteigt und der Erwerber infolge körperlicher oder geistiger Gebrechen und unter Berücksichtigung seiner bisherigen Lebensstellung als erwerbsunfähig anzusehen ist oder durch die Führung eines gemeinsamen Hausstands mit erwerbsunfähigen oder in der Ausbildung befindlichen Abkömmlingen an der Ausübung einer Erwerbstätigkeit gehindert ist",
-                  "von": 7543,
-                  "laenge": 519
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 1 Satz 14",
               "von": 7409,
               "laenge": 8,
@@ -9664,7 +9899,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
               "art": "tb",
@@ -9681,6 +9916,38 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „soweit\""
+            },
+            {
+              "art": "tb",
+              "text": "6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 14",
+              "von": 7543,
+              "laenge": 84,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "anfällt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 14",
+              "von": 7628,
+              "laenge": 7,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
             }
           ]
         },
@@ -11266,6 +11533,22 @@
                 },
                 {
                   "n": "5.",
+                  "t": "4a. Zuwendungen unter Lebenden, mit denen ein Ehegatte dem anderen Ehegatten Eigentum oder Miteigentum an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "soweit darin eine Wohnung zu eigenen Wohnzwecken genutzt wird (Familienheim), oder den anderen Ehegatten von eingegangenen Verpflichtungen im Zusammenhang mit der Anschaffung oder der Herstellung des Familienheims freistellt",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "wenn ein Ehegatte nachträglichen Herstellungs- oder Erhaltungsaufwand für ein Familienheim trägt",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -11273,7 +11556,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "Die Sätze 1 und 2",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -11281,7 +11564,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
+                  "t": "4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+                  "pfad": "Abs. 1 Satz 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
                   "t": "soweit der Erblasser darin bis zum Erbfall eine Wohnung zu eigenen Wohnzwecken genutzt hat oder bei der er aus zwingenden Gründen an einer Selbstnutzung zu eigenen Wohnzwecken gehindert war und die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim)",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.48,
@@ -11289,7 +11580,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "11.",
                   "t": "soweit er das begünstigte Vermögen auf Grund einer letztwilligen Verfügung des Erblassers oder einer rechtsgeschäftlichen Verfügung des Erblassers auf einen Dritten übertragen muss",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -11297,7 +11588,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "12.",
                   "t": "wenn ein Erbe im Rahmen der Teilung des Nachlasses begünstigtes Vermögen auf einen Miterben überträgt",
                   "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.6,
@@ -11305,7 +11596,31 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "13.",
+                  "t": "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu Wohnzwecken selbst nutzt",
+                  "pfad": "Abs. 1 Satz 9",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "14.",
+                  "t": "4c. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+                  "pfad": "Abs. 1 Satz 9",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "15.",
+                  "t": "soweit der Erblasser darin bis zum Erbfall eine Wohnung zu eigenen Wohnzwecken genutzt hat oder bei der er aus zwingenden Gründen an einer Selbstnutzung zu eigenen Wohnzwecken gehindert war",
+                  "pfad": "Abs. 1 Satz 9",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "16.",
                   "t": "soweit er das begünstigte Vermögen auf Grund einer letztwilligen Verfügung des Erblassers oder einer rechtsgeschäftlichen Verfügung des Erblassers auf einen Dritten übertragen muss",
                   "pfad": "Abs. 1 Satz 10",
                   "konfidenz": 0.6,
@@ -11313,7 +11628,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "17.",
                   "t": "wenn ein Erbe im Rahmen der Teilung des Nachlasses begünstigtes Vermögen auf einen Miterben überträgt",
                   "pfad": "Abs. 1 Satz 11",
                   "konfidenz": 0.6,
@@ -11321,7 +11636,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "18.",
                   "t": "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu Wohnzwecken selbst nutzt",
                   "pfad": "Abs. 1 Satz 13",
                   "konfidenz": 0.6,
@@ -11329,7 +11644,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "19.",
                   "t": "soweit die Steuer aus der Hälfte einer neben der erlassenen Schuld dem Bedachten anfallenden Zuwendung gedeckt werden kann",
                   "pfad": "Abs. 1 Satz 14",
                   "konfidenz": 0.6,
@@ -11337,7 +11652,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "20.",
+                  "t": "6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers",
+                  "pfad": "Abs. 1 Satz 14",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "21.",
                   "t": "Ansprüche nach den folgenden Gesetzen in der jeweils geltenden Fassung",
                   "pfad": "Abs. 1 Satz 16",
                   "konfidenz": 0.6,
@@ -11345,7 +11668,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "22.",
                   "t": "Lastenausgleichsgesetz",
                   "pfad": "Abs. 1 Buchst. a (Teil 2)",
                   "konfidenz": 0.45,
@@ -11353,7 +11676,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "16.",
+                  "n": "23.",
                   "t": "Flüchtlingshilfegesetz in der Fassung der Bekanntmachung vom 15. Mai 1971 (BGBl. I S. 681), zuletzt",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.6,
@@ -11361,7 +11684,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "17.",
+                  "n": "24.",
                   "t": "Allgemeines Kriegsfolgengesetz in der im Bundesgesetzblatt Teil III, Gliederungsnummer 653-1",
                   "pfad": "Abs. 1 Buchst. c (Teil 2)",
                   "konfidenz": 0.6,
@@ -11369,7 +11692,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "18.",
+                  "n": "25.",
                   "t": "Gesetz zur Regelung der Verbindlichkeiten nationalsozialistischer Einrichtungen und der Rechtsverhältnisse an deren Vermögen vom 17. März 1965 (BGBl. I S. 79), zuletzt",
                   "pfad": "Abs. 1 Buchst. d",
                   "konfidenz": 0.6,
@@ -11377,7 +11700,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "19.",
+                  "n": "26.",
                   "t": "Häftlingshilfegesetz, Strafrechtliches Rehabilitierungsgesetz sowie Bundesvertriebenengesetz",
                   "pfad": "Abs. 1 Buchst. e",
                   "konfidenz": 0.6,
@@ -11385,7 +11708,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "20.",
+                  "n": "27.",
                   "t": "Verwaltungsrechtliches Rehabilitierungsgesetz in der Fassung der Bekanntmachung vom 1. Juli 1997 (BGBl. I S. 1620), zuletzt",
                   "pfad": "Abs. 1 Buchst. g",
                   "konfidenz": 0.6,
@@ -11393,7 +11716,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "21.",
+                  "n": "28.",
                   "t": "Berufliches Rehabilitierungsgesetz in der Fassung der Bekanntmachung vom 1. Juli 1997 (BGBl. I S. 1625), zuletzt",
                   "pfad": "Abs. 1 Buchst. h",
                   "konfidenz": 0.6,
@@ -11401,7 +11724,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "22.",
+                  "n": "29.",
                   "t": "Ansprüche auf Entschädigungsleistungen nach den folgenden Gesetzen in der jeweils geltenden Fassung",
                   "pfad": "Abs. 1 Satz 1 (Teil 4)",
                   "konfidenz": 0.6,
@@ -11409,7 +11732,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "23.",
+                  "n": "30.",
                   "t": "Bundesentschädigungsgesetz in der im Bundesgesetzblatt Teil III, Gliederungsnummer 251-1",
                   "pfad": "Abs. 1 Buchst. a (Teil 3)",
                   "konfidenz": 0.6,
@@ -11417,7 +11740,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "24.",
+                  "n": "31.",
                   "t": "Gesetz über Entschädigungen für Opfer des Nationalsozialismus im Beitrittsgebiet vom 22. April 1992 (BGBl. I S. 906)",
                   "pfad": "Abs. 1 Buchst. b (Teil 4)",
                   "konfidenz": 0.6,
@@ -11425,7 +11748,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "25.",
+                  "n": "32.",
                   "t": "9. ein steuerpflichtiger Erwerb bis zu 20 000 Euro, der Personen anfällt, die dem Erblasser unentgeltlich oder gegen unzureichendes Entgelt Pflege oder Unterhalt gewährt haben … bis zur Höhe des nach § 37 des Elften Buches Sozialgesetzbuch",
                   "pfad": "Abs. 1 Satz 1 (Teil 5)",
                   "konfidenz": 0.6,
@@ -11433,7 +11756,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "26.",
+                  "n": "33.",
                   "t": "soweit das Zugewendete als angemessenes Entgelt anzusehen ist; 9a. Geldzuwendungen unter Lebenden, die eine Pflegeperson für Leistungen für körperbezogene Pflegemaßnahmen und pflegerische Betreuungsmaßnahmen sowie Hilfen bei der Haushaltsführung vom Pflegebedürftigen erhält",
                   "pfad": "Abs. 1 Satz 1 (Teil 5)",
                   "konfidenz": 0.42,
@@ -11441,7 +11764,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "27.",
+                  "n": "34.",
                   "t": "Zuwendungen unter Lebenden zum Zwecke des angemessenen Unterhalts oder zur Ausbildung des Bedachten; 13",
                   "pfad": "Abs. 1 Satz 3 (Teil 2)",
                   "konfidenz": 0.54,
@@ -11449,7 +11772,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "28.",
+                  "n": "35.",
                   "t": "wenn sie die für eine Befreiung von der Körperschaftsteuer erforderlichen Voraussetzungen erfüllen",
                   "pfad": "Abs. 1 Satz 4 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11457,7 +11780,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "29.",
+                  "n": "36.",
                   "t": "Ist eine Kasse nach § 6 des Körperschaftsteuergesetzes teilweise steuerpflichtig",
                   "pfad": "Abs. 1 Satz 5 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11465,7 +11788,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "30.",
+                  "n": "37.",
                   "t": "wenn die Voraussetzungen des § 5 Abs. 1 Nr. 3 des Körperschaftsteuergesetzes innerhalb von zehn Jahren nach der Zuwendung entfallen",
                   "pfad": "Abs. 1 Satz 6 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11473,7 +11796,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "31.",
+                  "n": "38.",
                   "t": "Zuwendungen",
                   "pfad": "Abs. 1 Satz 8 (Teil 2)",
                   "konfidenz": 0.45,
@@ -11481,7 +11804,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "32.",
+                  "n": "39.",
                   "t": "an inländische Religionsgesellschaften des öffentlichen Rechts oder an inländische jüdische Kultusgemeinden",
                   "pfad": "Abs. 1 Buchst. a (Teil 4)",
                   "konfidenz": 0.6,
@@ -11489,7 +11812,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "33.",
+                  "n": "40.",
                   "t": "wenn die Voraussetzungen für die Anerkennung der Körperschaft, Personenvereinigung oder Vermögensmasse als kirchliche, gemeinnützige oder mildtätige Institution innerhalb von zehn Jahren nach der Zuwendung entfallen und das Vermögen nicht begünstigten Zwecken zugeführt wird",
                   "pfad": "Abs. 1 Buchst. b Halbs. 2",
                   "konfidenz": 0.48,
@@ -11497,7 +11820,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "34.",
+                  "n": "41.",
                   "t": "an ausländische Religionsgesellschaften, Körperschaften, Personenvereinigungen und Vermögensmassen der in den Buchstaben a und b",
                   "pfad": "Abs. 1 Buchst. c (Teil 3)",
                   "konfidenz": 0.6,
@@ -11505,7 +11828,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "35.",
+                  "n": "42.",
                   "t": "wenn sie inländische Einkünfte erzielen würden",
                   "pfad": "Abs. 1 Buchst. c (Teil 3)",
                   "konfidenz": 0.6,
@@ -11513,7 +11836,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "36.",
+                  "n": "43.",
                   "t": "Werden die steuerbegünstigten Zwecke des Zuwendungsempfängers im Sinne des Satzes 1 nur im Ausland verwirklicht",
                   "pfad": "Abs. 1 Satz 2 (Teil 4)",
                   "konfidenz": 0.6,
@@ -11521,7 +11844,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "37.",
+                  "n": "44.",
                   "t": "Buchstabe b Satz 2",
                   "pfad": "Abs. 1 Satz 3 (Teil 3)",
                   "konfidenz": 0.6,
@@ -11529,7 +11852,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "38.",
+                  "n": "45.",
                   "t": "Zuwendungen, die ausschließlich kirchlichen, gemeinnützigen oder mildtätigen Zwecken",
                   "pfad": "Abs. 1 Satz 4 (Teil 3)",
                   "konfidenz": 0.6,
@@ -11537,7 +11860,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "39.",
+                  "n": "46.",
                   "t": "sofern die Verwendung zu dem bestimmten Zweck gesichert ist",
                   "pfad": "Abs. 1 Satz 4 (Teil 3)",
                   "konfidenz": 0.6,
@@ -11545,7 +11868,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "40.",
+                  "n": "47.",
                   "t": "Zuwendungen an",
                   "pfad": "Abs. 1 Satz 5 (Teil 3)",
                   "konfidenz": 0.45,
@@ -11553,7 +11876,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "41.",
+                  "n": "48.",
                   "t": "Vereine ohne Parteicharakter … durch Teilnahme mit eigenen Wahlvorschlägen an Wahlen auf Bundes-, Landes- oder Kommunalebene bei der politischen Willensbildung",
                   "pfad": "Abs. 1 Buchst. b (Teil 6)",
                   "konfidenz": 0.6,
@@ -11561,7 +11884,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "42.",
+                  "n": "49.",
                   "t": "wenn aa) der Zweck des Vereins ausschließlich darauf gerichtet ist",
                   "pfad": "Abs. 1 Buchst. b (Teil 6)",
                   "konfidenz": 0.6,
@@ -11569,7 +11892,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "43.",
+                  "n": "50.",
                   "t": "der Verein auf Bundes-, Landes- oder Kommunalebene bei der jeweils",
                   "pfad": "Abs. 1 bb) (Teil 3)",
                   "konfidenz": 0.6,
@@ -11577,7 +11900,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "44.",
+                  "n": "51.",
                   "t": "wenn der Verein an der jeweils nächsten Wahl nach der Zuwendung nicht teilnimmt",
                   "pfad": "Abs. 1 Satz 1 (Teil 7)",
                   "konfidenz": 0.6,
@@ -11585,7 +11908,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "45.",
+                  "n": "52.",
                   "t": "wenn die Leistungen in einem geordneten Verfahren gewährt werden",
                   "pfad": "Abs. 1 Satz 2 (Teil 5)",
                   "konfidenz": 0.6,
@@ -11593,7 +11916,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "46.",
+                  "n": "53.",
                   "t": "§ 30 Absatz 1 und 2",
                   "pfad": "Abs. 1 Satz 3 (Teil 4)",
                   "konfidenz": 0.6,
@@ -11672,6 +11995,22 @@
                 },
                 {
                   "n": "4.",
+                  "t": "fällt mit Wirkung für die Vergangenheit weg … 4. ein Erwerb nach § 1969 des Bürgerlichen Gesetzbuchs",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "5.",
+                  "t": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes verschafft",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "das im gemeinsamen Eigentum der Ehegatten oder im Eigentum des anderen Ehegatten steht",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -11679,15 +12018,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
-                  "t": "gelten für Zuwendungen zwischen Lebenspartnern entsprechend; 4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
+                  "n": "7.",
+                  "t": "gelten für Zuwendungen zwischen Lebenspartnern entsprechend",
                   "pfad": "Abs. 1 Satz 5",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
+                  "t": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
+                  "pfad": "Abs. 1 Satz 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "kann die Steuerbefreiung nicht in Anspruch nehmen",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -11695,7 +12042,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "10.",
                   "t": "Überträgt ein Erbe erworbenes begünstigtes Vermögen im Rahmen der Teilung des Nachlasses auf einen Dritten und gibt der Dritte dabei diesem Erwerber nicht begünstigtes Vermögen hin, das er vom Erblasser erworben hat, erhöht sich insoweit der Wert des begünstigten Vermögens des Dritten um den Wert des hingegebenen Vermögens, höchstens jedoch um den Wert des übertragenen Vermögens",
                   "pfad": "Abs. 1 Satz 8",
                   "konfidenz": 0.48,
@@ -11703,15 +12050,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
-                  "t": "fällt mit Wirkung für die Vergangenheit weg … die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
+                  "n": "11.",
+                  "t": "fällt mit Wirkung für die Vergangenheit weg",
                   "pfad": "Abs. 1 Satz 9",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
+                  "t": "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2 … die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim) und soweit die Wohnfläche der Wohnung 200 Quadratmeter nicht übersteigt",
+                  "pfad": "Abs. 1 Satz 9",
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "9.",
+                  "n": "13.",
                   "t": "kann die Steuerbefreiung nicht in Anspruch nehmen",
                   "pfad": "Abs. 1 Satz 10",
                   "konfidenz": 0.6,
@@ -11719,7 +12074,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "14.",
                   "t": "Überträgt ein Erbe erworbenes begünstigtes Vermögen im Rahmen der Teilung des Nachlasses auf einen Dritten und gibt der Dritte dabei diesem Erwerber nicht begünstigtes Vermögen hin, das er vom Erblasser erworben hat, erhöht sich insoweit der Wert des begünstigten Vermögens des Dritten um den Wert des hingegebenen Vermögens, höchstens jedoch um den Wert des übertragenen Vermögens",
                   "pfad": "Abs. 1 Satz 12",
                   "konfidenz": 0.48,
@@ -11727,7 +12082,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "15.",
                   "t": "fällt mit Wirkung für die Vergangenheit weg … 5. die Befreiung von einer Schuld gegenüber dem Erblasser, sofern die Schuld durch Gewährung von Mitteln zum Zweck des angemessenen Unterhalts oder zur Ausbildung des Bedachten begründet worden ist oder der Erblasser die Befreiung mit Rücksicht auf die Notlage des Schuldners angeordnet hat und diese auch durch die Zuwendung nicht beseitigt wird",
                   "pfad": "Abs. 1 Satz 13",
                   "konfidenz": 0.6,
@@ -11735,15 +12090,23 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "12.",
-                  "t": "entfällt … 6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers anfällt, sofern der Erwerb zusammen mit dem übrigen Vermögen des Erwerbers 41 000 Euro nicht übersteigt und der Erwerber infolge körperlicher oder geistiger Gebrechen und unter Berücksichtigung seiner bisherigen Lebensstellung als erwerbsunfähig anzusehen ist oder durch die Führung eines gemeinsamen Hausstands mit erwerbsunfähigen oder in der Ausbildung befindlichen Abkömmlingen an der Ausübung einer Erwerbstätigkeit gehindert ist",
+                  "n": "16.",
+                  "t": "entfällt",
                   "pfad": "Abs. 1 Satz 14",
                   "konfidenz": 0.45,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "17.",
+                  "t": "anfällt",
+                  "pfad": "Abs. 1 Satz 14",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "18.",
                   "t": "Übersteigt der Wert des Erwerbs zusammen mit dem übrigen Vermögen des Erwerbers den Betrag von 41 000 Euro, wird die Steuer nur insoweit erhoben, als sie aus der Hälfte des die Wertgrenze übersteigenden Betrags gedeckt werden kann; 7",
                   "pfad": "Abs. 1 Satz 15",
                   "konfidenz": 0.42,
@@ -11751,7 +12114,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "19.",
                   "t": "geändert durch Artikel 6a des Gesetzes vom 21. Juli 2004 (BGBl. I S. 1742)",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.6,
@@ -11759,7 +12122,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "20.",
                   "t": "veröffentlichten bereinigten Fassung, zuletzt geändert durch Artikel 127 der Verordnung vom 31. Oktober 2006 (BGBl. I S. 2407)",
                   "pfad": "Abs. 1 Buchst. c (Teil 2)",
                   "konfidenz": 0.6,
@@ -11767,7 +12130,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "16.",
+                  "n": "21.",
                   "t": "geändert durch Artikel 2 Abs. 17 des Gesetzes vom 12. August 2005 (BGBl. I S. 2354)",
                   "pfad": "Abs. 1 Buchst. d",
                   "konfidenz": 0.6,
@@ -11775,7 +12138,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "17.",
+                  "n": "22.",
                   "t": "geändert durch Artikel 4 Abs. 43 des Gesetzes vom 22. September 2005 (BGBl. I S. 2809)",
                   "pfad": "Abs. 1 Buchst. f",
                   "konfidenz": 0.6,
@@ -11783,7 +12146,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "18.",
+                  "n": "23.",
                   "t": "geändert durch Artikel 2 des Gesetzes vom 21. August 2007 (BGBl. I S. 2118)",
                   "pfad": "Abs. 1 Buchst. g",
                   "konfidenz": 0.6,
@@ -11791,7 +12154,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "19.",
+                  "n": "24.",
                   "t": "geändert durch Artikel 3 des Gesetzes vom 21. August 2007 (BGBl. I S. 2118)",
                   "pfad": "Abs. 1 Buchst. h",
                   "konfidenz": 0.6,
@@ -11799,7 +12162,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "20.",
+                  "n": "25.",
                   "t": "veröffentlichten bereinigten Fassung, zuletzt geändert durch Artikel 7 Abs. 4 des Gesetzes vom 26. März 2007 (BGBl. I S. 358)",
                   "pfad": "Abs. 1 Buchst. a (Teil 3)",
                   "konfidenz": 0.6,
@@ -11807,7 +12170,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "21.",
+                  "n": "26.",
                   "t": "gewährten Pflegegeldes oder eines entsprechenden Pflegegeldes aus privaten Versicherungsverträgen nach den Vorgaben des Elften Buches Sozialgesetzbuch (private Pflegepflichtversicherung) oder einer Pauschalbeihilfe nach den Beihilfevorschriften für häusliche Pflege; 10",
                   "pfad": "Abs. 1 Satz 1 (Teil 5)",
                   "konfidenz": 0.54,
@@ -11815,7 +12178,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "22.",
+                  "n": "27.",
                   "t": "ist auch die Zuwendung im gleichen Verhältnis steuerpflichtig",
                   "pfad": "Abs. 1 Satz 5 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11823,7 +12186,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "23.",
+                  "n": "28.",
                   "t": "fällt mit Wirkung für die Vergangenheit weg … 14. die üblichen Gelegenheitsgeschenke; 15",
                   "pfad": "Abs. 1 Satz 6 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11831,7 +12194,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "24.",
+                  "n": "29.",
                   "t": "dienen; 16",
                   "pfad": "Abs. 1 Satz 7 (Teil 2)",
                   "konfidenz": 0.39,
@@ -11839,7 +12202,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "25.",
+                  "n": "30.",
                   "t": "dienen",
                   "pfad": "Abs. 1 Buchst. b (Teil 5)",
                   "konfidenz": 0.45,
@@ -11847,7 +12210,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "26.",
+                  "n": "31.",
                   "t": "fällt mit Wirkung für die Vergangenheit weg",
                   "pfad": "Abs. 1 Buchst. b Halbs. 2",
                   "konfidenz": 0.6,
@@ -11855,7 +12218,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "27.",
+                  "n": "32.",
                   "t": "bezeichneten Art, die nach § 5 Absatz 1 Nummer 9 in Verbindung mit Absatz 2 Nummer 2 zweiter Halbsatz des Körperschaftsteuergesetzes steuerbefreit wären … und wenn die Staaten, in den die Zuwendungsempfänger belegen sind, auf Grund völkervertraglicher Abkommen oder Übereinkommen verpflichtet sind, der Bundesrepublik Deutschland aa) entsprechend dem OECD-Standard für Transparenz und effektiven Informationsaustausch auf Ersuchen im Sinne des § 4 Absatz 2 Nummer 2 in Verbindung mit Absatz 4 Satz 1 des Steueroasen-Abwehrgesetzes in Bezug auf die Erbschaftsteuer Amtshilfe zu leisten",
                   "pfad": "Abs. 1 Buchst. c (Teil 3)",
                   "konfidenz": 0.6,
@@ -11863,7 +12226,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "28.",
+                  "n": "33.",
                   "t": "veröffentlicht im Bundessteuerblatt Teil I eine Liste der Drittstaaten, die die Voraussetzungen nach Satz 1 zweiter Halbsatz erfüllen",
                   "pfad": "Abs. 1 Satz 1 (Teil 6)",
                   "konfidenz": 0.6,
@@ -11871,7 +12234,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "29.",
+                  "n": "34.",
                   "t": "ist für die Steuerbefreiung Voraussetzung, dass natürliche Personen, die ihren Wohnsitz oder ihren gewöhnlichen Aufenthalt im Geltungsbereich dieses Gesetzes haben, gefördert werden oder dass die Tätigkeit dieses Zuwendungsempfängers neben der Verwirklichung der steuerbegünstigten Zwecke auch zum Ansehen der Bundesrepublik Deutschland beitragen kann",
                   "pfad": "Abs. 1 Satz 2 (Teil 4)",
                   "konfidenz": 0.48,
@@ -11879,7 +12242,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "30.",
+                  "n": "35.",
                   "t": "gilt entsprechend; 17",
                   "pfad": "Abs. 1 Satz 3 (Teil 3)",
                   "konfidenz": 0.54,
@@ -11887,7 +12250,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "31.",
+                  "n": "36.",
                   "t": "gewidmet sind",
                   "pfad": "Abs. 1 Satz 4 (Teil 3)",
                   "konfidenz": 0.45,
@@ -11895,7 +12258,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "32.",
+                  "n": "37.",
                   "t": "mitzuwirken",
                   "pfad": "Abs. 1 Buchst. b (Teil 6)",
                   "konfidenz": 0.45,
@@ -11903,7 +12266,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "33.",
+                  "n": "38.",
                   "t": "letzten Wahl wenigstens ein Mandat errungen oder der zuständigen Wahlbehörde oder dem zuständigen Wahlorgan angezeigt hat, dass er mit eigenen Wahlvorschlägen auf Bundes-, Landes- oder Kommunalebene an der jeweils nächsten Wahl teilnehmen will",
                   "pfad": "Abs. 1 bb) (Teil 3)",
                   "konfidenz": 0.48,
@@ -11911,7 +12274,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "34.",
+                  "n": "39.",
                   "t": "fällt mit Wirkung für die Vergangenheit weg",
                   "pfad": "Abs. 1 Satz 1 (Teil 7)",
                   "konfidenz": 0.6,
@@ -11919,7 +12282,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "35.",
+                  "n": "40.",
                   "t": "nachgeordnete Einrichtung tätig sind oder waren … das allen betroffenen Personen offensteht",
                   "pfad": "Abs. 1 Satz 2 (Teil 5)",
                   "konfidenz": 0.6,
@@ -11927,7 +12290,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "36.",
+                  "n": "41.",
                   "t": "sind mit der Maßgabe … anzuwenden",
                   "pfad": "Abs. 1 Satz 3 (Teil 4)",
                   "konfidenz": 0.6,
@@ -11935,7 +12298,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "37.",
+                  "n": "42.",
                   "t": "ist mit einer Bestätigung des Leistenden über das Vorliegen der Voraussetzungen nach Satz 1 … zu verbinden",
                   "pfad": "Abs. 1 Satz 4 (Teil 4)",
                   "konfidenz": 0.6,
@@ -12060,15 +12423,22 @@
         "wenn die Gegenstände innerhalb von zehn Jahren nach dem Erwerb veräußert werden oder die Voraussetzungen für die Steuerbefreiung innerhalb dieses Zeitraums entfallen",
         "wenn die jährlichen Kosten in der Regel die erzielten Einnahmen übersteigen",
         "wenn der Grundbesitz oder Teile des Grundbesitzes innerhalb von zehn Jahren nach dem Erwerb veräußert werden oder die Voraussetzungen für die Steuerbefreiung innerhalb dieses Zeitraums entfallen",
+        "4a. Zuwendungen unter Lebenden, mit denen ein Ehegatte dem anderen Ehegatten Eigentum oder Miteigentum an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+        "soweit darin eine Wohnung zu eigenen Wohnzwecken genutzt wird (Familienheim), oder den anderen Ehegatten von eingegangenen Verpflichtungen im Zusammenhang mit der Anschaffung oder der Herstellung des Familienheims freistellt",
         "wenn ein Ehegatte nachträglichen Herstellungs- oder Erhaltungsaufwand für ein Familienheim trägt",
         "Die Sätze 1 und 2",
+        "4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
         "soweit der Erblasser darin bis zum Erbfall eine Wohnung zu eigenen Wohnzwecken genutzt hat oder bei der er aus zwingenden Gründen an einer Selbstnutzung zu eigenen Wohnzwecken gehindert war und die beim Erwerber unverzüglich zur Selbstnutzung zu eigenen Wohnzwecken bestimmt ist (Familienheim)",
         "soweit er das begünstigte Vermögen auf Grund einer letztwilligen Verfügung des Erblassers oder einer rechtsgeschäftlichen Verfügung des Erblassers auf einen Dritten übertragen muss",
         "wenn ein Erbe im Rahmen der Teilung des Nachlasses begünstigtes Vermögen auf einen Miterben überträgt",
+        "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu Wohnzwecken selbst nutzt",
+        "4c. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen",
+        "soweit der Erblasser darin bis zum Erbfall eine Wohnung zu eigenen Wohnzwecken genutzt hat oder bei der er aus zwingenden Gründen an einer Selbstnutzung zu eigenen Wohnzwecken gehindert war",
         "soweit er das begünstigte Vermögen auf Grund einer letztwilligen Verfügung des Erblassers oder einer rechtsgeschäftlichen Verfügung des Erblassers auf einen Dritten übertragen muss",
         "wenn ein Erbe im Rahmen der Teilung des Nachlasses begünstigtes Vermögen auf einen Miterben überträgt",
         "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu Wohnzwecken selbst nutzt",
         "soweit die Steuer aus der Hälfte einer neben der erlassenen Schuld dem Bedachten anfallenden Zuwendung gedeckt werden kann",
+        "6. ein Erwerb, der Eltern, Adoptiveltern, Stiefeltern oder Großeltern des Erblassers",
         "Ansprüche nach den folgenden Gesetzen in der jeweils geltenden Fassung",
         "Lastenausgleichsgesetz",
         "Flüchtlingshilfegesetz in der Fassung der Bekanntmachung vom 15. Mai 1971 (BGBl. I S. 681), zuletzt",
@@ -12111,15 +12481,20 @@
         "Steuerfrei",
         "eingetragen sind",
         "fällt mit Wirkung für die Vergangenheit weg",
+        "fällt mit Wirkung für die Vergangenheit weg",
+        "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes verschafft",
         "das im gemeinsamen Eigentum der Ehegatten oder im Eigentum des anderen Ehegatten steht",
-        "gelten für Zuwendungen zwischen Lebenspartnern entsprechend; 4b. der Erwerb von Todes wegen des Eigentums oder Miteigentums an einem im Inland oder in einem Mitgliedstaat der Europäischen Union oder einem Staat des Europäischen Wirtschaftsraums belegenen bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
+        "gelten für Zuwendungen zwischen Lebenspartnern entsprechend",
+        "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch den überlebenden Ehegatten oder den überlebenden Lebenspartner",
         "kann die Steuerbefreiung nicht in Anspruch nehmen",
         "Überträgt ein Erbe erworbenes begünstigtes Vermögen im Rahmen der Teilung des Nachlasses auf einen Dritten und gibt der Dritte dabei diesem Erwerber nicht begünstigtes Vermögen hin, das er vom Erblasser erworben hat, erhöht sich insoweit der Wert des begünstigten Vermögens des Dritten um den Wert des hingegebenen Vermögens, höchstens jedoch um den Wert des übertragenen Vermögens",
         "fällt mit Wirkung für die Vergangenheit weg",
+        "bebauten Grundstück im Sinne des § 181 Abs. 1 Nr. 1 bis 5 des Bewertungsgesetzes durch Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2",
         "kann die Steuerbefreiung nicht in Anspruch nehmen",
         "Überträgt ein Erbe erworbenes begünstigtes Vermögen im Rahmen der Teilung des Nachlasses auf einen Dritten und gibt der Dritte dabei diesem Erwerber nicht begünstigtes Vermögen hin, das er vom Erblasser erworben hat, erhöht sich insoweit der Wert des begünstigten Vermögens des Dritten um den Wert des hingegebenen Vermögens, höchstens jedoch um den Wert des übertragenen Vermögens",
         "fällt mit Wirkung für die Vergangenheit weg",
         "entfällt",
+        "anfällt",
         "Übersteigt der Wert des Erwerbs zusammen mit dem übrigen Vermögen des Erwerbers den Betrag von 41 000 Euro, wird die Steuer nur insoweit erhoben, als sie aus der Hälfte des die Wertgrenze übersteigenden Betrags gedeckt werden kann; 7",
         "geändert durch Artikel 6a des Gesetzes vom 21. Juli 2004 (BGBl. I S. 1742)",
         "veröffentlichten bereinigten Fassung, zuletzt geändert durch Artikel 127 der Verordnung vom 31. Oktober 2006 (BGBl. I S. 2407)",
@@ -12159,7 +12534,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.566,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12169,7 +12544,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24a6ee8c672557d6297f2fd93f4245253eb5560d2387a4b0ffc7d461b794661f",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.704Z"
+      "aktualisiert": "2026-08-11T09:36:31.206Z"
     },
     "14": {
       "typ": "gemischt",
@@ -12750,7 +13125,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "88f86d798a76d9158b7cbf1097ed2f40199da5765709845cca6c2e67c10893a4",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.738Z"
+      "aktualisiert": "2026-08-11T09:36:31.248Z"
     },
     "15": {
       "typ": "gemischt",
@@ -13239,13 +13614,40 @@
             },
             {
               "art": "rf",
-              "text": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 gewährt; die Steuer ist nach dem Prozentsatz der Steuerklasse I",
-              "anzeige": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 gewährt; die Steuer ist nach dem Prozentsatz der Steuerklasse I … zu berechnen",
+              "text": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2",
+              "anzeige": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 … gewährt",
               "teile": [
                 {
-                  "text": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 gewährt; die Steuer ist nach dem Prozentsatz der Steuerklasse I",
+                  "text": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2",
                   "von": 1536,
-                  "laenge": 115
+                  "laenge": 51
+                },
+                {
+                  "text": "gewährt",
+                  "von": 1588,
+                  "laenge": 7
+                }
+              ],
+              "pfad": "Abs. 2 Satz 3",
+              "von": 1536,
+              "laenge": 51,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "rf",
+              "text": "ist nach dem Prozentsatz der Steuerklasse I",
+              "anzeige": "ist nach dem Prozentsatz der Steuerklasse I … zu berechnen",
+              "teile": [
+                {
+                  "text": "ist nach dem Prozentsatz der Steuerklasse I",
+                  "von": 1608,
+                  "laenge": 43
                 },
                 {
                   "text": "zu berechnen",
@@ -13254,9 +13656,9 @@
                 }
               ],
               "pfad": "Abs. 2 Satz 3",
-              "von": 1536,
-              "laenge": 115,
-              "konfidenz": 0.54,
+              "von": 1608,
+              "laenge": 43,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -13688,9 +14090,17 @@
                 },
                 {
                   "n": "3.",
-                  "t": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 gewährt; die Steuer ist nach dem Prozentsatz der Steuerklasse I … zu berechnen",
+                  "t": "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 … gewährt",
                   "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "4.",
+                  "t": "ist nach dem Prozentsatz der Steuerklasse I … zu berechnen",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -13851,7 +14261,8 @@
         "gelten auch dann",
         "ist der Besteuerung das Verwandtschaftsverhältnis des nach der Stiftungsurkunde entferntest Berechtigten zu dem Erblasser oder Schenker zugrunde zu legen",
         "gilt als Schenker der Stifter oder derjenige, der das Vermögen auf den Verein übertragen hat, und in den Fällen des § 7 Abs. 1 Nr. 9 Satz 2 derjenige, der die Vermögensmasse im Sinne des § 3 Abs. 2 Nr. 1 Satz 2 oder § 7 Abs. 1 Nr. 8 Satz 2 gebildet oder ausgestattet hat",
-        "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2 gewährt; die Steuer ist nach dem Prozentsatz der Steuerklasse I",
+        "wird der doppelte Freibetrag nach § 16 Abs. 1 Nr. 2",
+        "ist nach dem Prozentsatz der Steuerklasse I",
         "gebunden ist, ist auf Antrag der Versteuerung das Verhältnis des Schlusserben oder Vermächtnisnehmers zum zuerst verstorbenen Ehegatten oder dem zuerst verstorbenen Lebenspartner zugrunde zu legen",
         "gilt entsprechend",
         "ist der Besteuerung das persönliche Verhältnis des Erwerbers zu derjenigen unmittelbar oder mittelbar beteiligten natürlichen Person oder Stiftung zugrunde zu legen, durch die sie veranlasst ist",
@@ -13862,7 +14273,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.581,
+      "konfidenz": 0.583,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13872,7 +14283,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74ff3f91e3bb1bf43f37d65a5239cc45a4c69ac7c18185cc8890183ac882d9d0",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.741Z"
+      "aktualisiert": "2026-08-11T09:36:31.252Z"
     },
     "16": {
       "typ": "gemischt",
@@ -14380,7 +14791,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdaafa1ae7f172273de571ad1b87cf2a8003efc8e0ee3428c15fcd56bb61a4de",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.743Z"
+      "aktualisiert": "2026-08-11T09:36:31.253Z"
     },
     "17": {
       "typ": "gemischt",
@@ -15112,7 +15523,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2879162f8fd285ca64c78ca67dc5ba24c9e97cbb3aae05c59b80c82532526545",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.745Z"
+      "aktualisiert": "2026-08-11T09:36:31.255Z"
     },
     "18": {
       "typ": "gemischt",
@@ -15282,7 +15693,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2e3f7fde7915028bc88da41874398d9faae5a0d8cec438dcd47687dcb1f8770c",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.745Z"
+      "aktualisiert": "2026-08-11T09:36:31.256Z"
     },
     "19": {
       "typ": "gemischt",
@@ -15628,7 +16039,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c311b0ac60024b9a3a171fdb646a57cfe708253f42cef349fc2921154c260532",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.746Z"
+      "aktualisiert": "2026-08-11T09:36:31.257Z"
     },
     "20": {
       "typ": "gemischt",
@@ -16272,7 +16683,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "32c7de36fd09578a4fd973e83630671d389e36ea8456090c3eaf13ee365c622d",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.760Z"
+      "aktualisiert": "2026-08-11T09:36:31.270Z"
     },
     "21": {
       "typ": "gemischt",
@@ -17007,7 +17418,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f646dcdb314147089aae5955e88030b6a6ca16b15fbdea7b67e61ad2965037a",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.762Z"
+      "aktualisiert": "2026-08-11T09:36:31.273Z"
     },
     "22": {
       "typ": "konditional",
@@ -17142,7 +17553,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8252b7d4f2ac6010fb528d7ffb616d3f997e1fbbb74f3c959054c866658a374e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.763Z"
+      "aktualisiert": "2026-08-11T09:36:31.273Z"
     },
     "23": {
       "typ": "gemischt",
@@ -17448,13 +17859,13 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebbc70f3d7cb9ef0615c88bbb90235b3a1133cfa75a8db96ff66b767c8a90b43",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.764Z"
+      "aktualisiert": "2026-08-11T09:36:31.274Z"
     },
     "24": {
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "tarif"
+        "aussage"
       ],
       "saetze": [
         {
@@ -17513,18 +17924,34 @@
           "pfad": "Satz 2",
           "von": 162,
           "bis": 296,
-          "typ": "tarif",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "umfaßt die Tilgung und die Verzinsung der Steuer; dabei ist von einem Zinssatz von 5,5 Prozent auszugehen",
+              "text": "umfaßt die Tilgung und die Verzinsung der Steuer",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 2",
               "von": 190,
-              "laenge": 105,
-              "konfidenz": 0.54,
+              "laenge": 48,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "rf",
+              "text": "ist von einem Zinssatz von 5,5 Prozent auszugehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 246,
+              "laenge": 49,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -17572,9 +17999,17 @@
                 },
                 {
                   "n": "2.",
-                  "t": "umfaßt die Tilgung und die Verzinsung der Steuer; dabei ist von einem Zinssatz von 5,5 Prozent auszugehen",
+                  "t": "umfaßt die Tilgung und die Verzinsung der Steuer",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "ist von einem Zinssatz von 5,5 Prozent auszugehen",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -17588,13 +18023,14 @@
       ],
       "rf": [
         "kann der Steuerpflichtige",
-        "umfaßt die Tilgung und die Verzinsung der Steuer; dabei ist von einem Zinssatz von 5,5 Prozent auszugehen"
+        "umfaßt die Tilgung und die Verzinsung der Steuer",
+        "ist von einem Zinssatz von 5,5 Prozent auszugehen"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.58,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -17604,7 +18040,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71545daa216ad81ef94785e8493a88adb6f631e4308c378c1192198668056b04",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.764Z"
+      "aktualisiert": "2026-08-11T09:36:31.274Z"
     },
     "25": {
       "typ": "gemischt",
@@ -17627,7 +18063,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.764Z"
+      "aktualisiert": "2026-08-11T09:36:31.274Z"
     },
     "26": {
       "typ": "gemischt",
@@ -17765,7 +18201,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bfbbc0332f8622948a20ce7216922654ee53843380be768742b5aca827465578",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.765Z"
+      "aktualisiert": "2026-08-11T09:36:31.275Z"
     },
     "27": {
       "typ": "gemischt",
@@ -18040,7 +18476,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "62ab571ed9d0a004f69c91b7751483825f7d0566d3561ff5a7f3d84e77089d18",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.766Z"
+      "aktualisiert": "2026-08-11T09:36:31.276Z"
     },
     "28": {
       "typ": "gemischt",
@@ -18817,7 +19253,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b68ba12b3a3368ef24160947cb0e9623f72237f3bfbb71763650140d7b154244",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.768Z"
+      "aktualisiert": "2026-08-11T09:36:31.280Z"
     },
     "29": {
       "typ": "gemischt",
@@ -19290,7 +19726,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a323dfb3bcbdf6b85fce1cf6e3cfb40956f7e3d0b54d4e8f235e858ba3271ba2",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.777Z"
+      "aktualisiert": "2026-08-11T09:36:31.289Z"
     },
     "30": {
       "typ": "gemischt",
@@ -19413,7 +19849,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen (mehrteilig) (um Ausnahme gekürzt)"
+              "grund": "Nachfeld trägt die Voraussetzungen"
             },
             {
               "art": "tb",
@@ -19429,23 +19865,50 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\" (um Ausnahme gekürzt)"
+              "grund": "Konditionalsatz mit „wenn\""
             },
             {
-              "art": "ausn",
-              "text": "das gilt nicht, wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen, oder Auslandsvermögen gehört",
+              "art": "rf",
+              "text": "gilt nicht",
+              "anzeige": "gilt nicht … oder Auslandsvermögen gehört",
+              "teile": [
+                {
+                  "text": "gilt nicht",
+                  "von": 753,
+                  "laenge": 10
+                },
+                {
+                  "text": "oder Auslandsvermögen gehört",
+                  "von": 898,
+                  "laenge": 28
+                }
+              ],
+              "pfad": "Abs. 3 Satz 1",
+              "von": 753,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 749,
-              "laenge": 177,
+              "von": 765,
+              "laenge": 131,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Satzausnahme: „das gilt nicht\""
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -19974,6 +20437,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "bedarf es auch nicht",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -19981,7 +20452,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "wenn eine Schenkung unter Lebenden oder eine Zweckzuwendung gerichtlich oder notariell beurkundet ist",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -19992,21 +20463,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "das gilt nicht, wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen, oder Auslandsvermögen gehört",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -20020,6 +20476,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "gilt nicht … oder Auslandsvermögen gehört",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "3.",
                   "t": "Einer Anzeige",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.45,
@@ -20191,6 +20655,7 @@
         "Jeder der Erbschaftsteuer unterliegende Erwerb (§ 1)",
         "bedarf es nicht",
         "wenn der Erwerb auf einer von einem deutschen Gericht, einem deutschen Notar oder einem deutschen Konsul eröffneten Verfügung von Todes wegen beruht und sich aus der Verfügung das Verhältnis des Erwerbers zum Erblasser unzweifelhaft ergibt",
+        "wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen",
         "bedarf es auch nicht",
         "wenn eine Schenkung unter Lebenden oder eine Zweckzuwendung gerichtlich oder notariell beurkundet ist",
         "In den Fällen des § 1 Absatz 1 Nummer 4"
@@ -20199,6 +20664,7 @@
         "ist vom Erwerber, bei einer Zweckzuwendung vom Beschwerten binnen einer Frist von drei Monaten nach erlangter Kenntnis von dem Anfall oder von dem Eintritt der Verpflichtung dem für die Verwaltung der Erbschaftsteuer zuständigen Finanzamt schriftlich",
         "Erfolgt der steuerpflichtige Erwerb durch ein Rechtsgeschäft unter Lebenden, ist zur Anzeige auch derjenige verpflichtet, aus dessen Vermögen der Erwerb stammt",
         "Einer Anzeige",
+        "gilt nicht",
         "Einer Anzeige",
         "soll folgende Angaben enthalten",
         "Vorname und Familienname, Identifikationsnummer (§ 139b der Abgabenordnung), Beruf, Wohnung des Erblassers oder Schenkers und des Erwerbers",
@@ -20215,13 +20681,11 @@
         "Zeitpunkt des ersten Vermögensübergangs auf die Stiftung oder den Verein",
         "Wert und Zusammensetzung des Vermögens"
       ],
-      "ausnahmen": [
-        "das gilt nicht, wenn zum Erwerb Grundbesitz, Betriebsvermögen, Anteile an Kapitalgesellschaften, die nicht der Anzeigepflicht nach § 33 unterliegen, oder Auslandsvermögen gehört"
-      ],
+      "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.564,
+      "konfidenz": 0.56,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -20231,7 +20695,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "39804987ccaff3319ba669a819a2885d2703fcb0dbbdf4e337c759e41ef5a413",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.780Z"
+      "aktualisiert": "2026-08-11T09:36:31.292Z"
     },
     "31": {
       "typ": "gemischt",
@@ -21109,7 +21573,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e2a74f7505bf4dc6135212d9313d19e0368bf77d2f0b965ff1fca0363eaf13bb",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.782Z"
+      "aktualisiert": "2026-08-11T09:36:31.293Z"
     },
     "32": {
       "typ": "gemischt",
@@ -21509,7 +21973,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "67b557f0f8000c5d817d043577f2a0dd0d2c2ba7cb072a765d69b11c00f35785",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.782Z"
+      "aktualisiert": "2026-08-11T09:36:31.294Z"
     },
     "33": {
       "typ": "gemischt",
@@ -21993,7 +22457,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa4044a3cc3fb37aec4bfd3bc86b6ee312eb94e4994d568fd9c346995d6674ae",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.784Z"
+      "aktualisiert": "2026-08-11T09:36:31.296Z"
     },
     "34": {
       "typ": "aussage",
@@ -22234,7 +22698,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a587c992a2c8988b713f8d67abd7b93e33c7eabd71d27583bd4121d94963b52",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.784Z"
+      "aktualisiert": "2026-08-11T09:36:31.297Z"
     },
     "35": {
       "typ": "gemischt",
@@ -22864,7 +23328,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "27c544d96f56dbc88b8149d347b0cb30f7917b6f190259cbb66c444914125ac7",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.786Z"
+      "aktualisiert": "2026-08-11T09:36:31.299Z"
     },
     "36": {
       "typ": "gemischt",
@@ -23202,7 +23666,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f5faedc19c64c9dad556af31ef276b239ec5f68bce809963d196becc72ae9431",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.788Z"
+      "aktualisiert": "2026-08-11T09:36:31.300Z"
     },
     "37": {
       "typ": "gemischt",
@@ -23884,7 +24348,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "54a44d508034057e7db5a2afb6853d67505636827f45e0f5d5af769a7ccccca6",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.791Z"
+      "aktualisiert": "2026-08-11T09:36:31.305Z"
     },
     "38": {
       "typ": "gemischt",
@@ -23907,7 +24371,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.794Z"
+      "aktualisiert": "2026-08-11T09:36:31.307Z"
     },
     "39": {
       "typ": "gemischt",
@@ -23930,7 +24394,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.794Z"
+      "aktualisiert": "2026-08-11T09:36:31.307Z"
     },
     "2a": {
       "typ": "gemischt",
@@ -24170,7 +24634,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ea58db00845cb63c2b3c87ac3ad241aad5413a67e82562243e5362f0ef1a303e",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.665Z"
+      "aktualisiert": "2026-08-11T09:36:31.159Z"
     },
     "13a": {
       "typ": "gemischt",
@@ -24180,8 +24644,7 @@
         "rechenregel",
         "aussage",
         "definition",
-        "verweisung",
-        "gleichstellung"
+        "verweisung"
       ],
       "saetze": [
         {
@@ -25367,13 +25830,45 @@
             },
             {
               "art": "rf",
-              "text": "veräußert; als Veräußerung gilt auch die Aufgabe des Gewerbebetriebs",
+              "text": "veräußert",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 1",
               "von": 8214,
-              "laenge": 68,
-              "konfidenz": 0.54,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "als Veräußerung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 1",
+              "von": 8225,
+              "laenge": 15,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt auch die Aufgabe des Gewerbebetriebs",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 1",
+              "von": 8241,
+              "laenge": 41,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -25563,33 +26058,76 @@
           "pfad": "Abs. 6 Nr. 4",
           "von": 10484,
           "bis": 10689,
-          "typ": "gleichstellung",
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise veräußert",
+              "art": "tb",
+              "text": "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 4",
               "von": 10484,
-              "laenge": 99,
+              "laenge": 89,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Gleichstellungsanordnung"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "tb",
-              "text": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht der Veräußerung der Anteile gleich",
+              "art": "rf",
+              "text": "veräußert",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 4",
+              "von": 10574,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht",
+              "anzeige": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht … gleich",
+              "teile": [
+                {
+                  "text": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht",
+                  "von": 10585,
+                  "laenge": 68
+                },
+                {
+                  "text": "gleich",
+                  "von": 10682,
+                  "laenge": 6
+                }
+              ],
+              "pfad": "Abs. 6 Nr. 4",
               "von": 10585,
-              "laenge": 103,
+              "laenge": 68,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Gleichstellungsanordnung (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "der Veräußerung der Anteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 4",
+              "von": 10654,
+              "laenge": 27,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -25625,19 +26163,51 @@
             },
             {
               "art": "rf",
-              "text": "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird; Satz 1 Nummer 1 Satz 2 gilt entsprechend",
+              "text": "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 4 Halbs. 2",
               "von": 10804,
-              "laenge": 146,
-              "konfidenz": 0.54,
+              "laenge": 104,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+            },
+            {
+              "art": "tb",
+              "text": "Satz 1 Nummer 1 Satz 2",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 4 Halbs. 2",
+              "von": 10910,
+              "laenge": 22,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 4 Halbs. 2",
+              "von": 10933,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -26113,19 +26683,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "gekürzten Betrages des steuerrechtlichen Gewinns beschränken; Entnahmen zur Begleichung der auf den Gewinnanteil oder die Ausschüttungen aus der Gesellschaft entfallenden Steuern vom Einkommen bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
+              "text": "gekürzten Betrages des steuerrechtlichen Gewinns beschränken",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Nr. 1",
               "von": 13557,
-              "laenge": 269,
-              "konfidenz": 0.42,
+              "laenge": 60,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Tarif — vollständig Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 9 Nr. 1",
+              "von": 13750,
+              "laenge": 76,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -26321,19 +26907,8 @@
             {
               "art": "rf",
               "text": "entfällt mit Wirkung für die Vergangenheit",
-              "anzeige": "entfällt mit Wirkung für die Vergangenheit … die §§ 13c und 28a bleiben unberührt",
-              "teile": [
-                {
-                  "text": "entfällt mit Wirkung für die Vergangenheit",
-                  "von": 14899,
-                  "laenge": 42
-                },
-                {
-                  "text": "die §§ 13c und 28a bleiben unberührt",
-                  "von": 15092,
-                  "laenge": 36
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 9 Satz 5",
               "von": 14899,
               "laenge": 42,
@@ -26343,7 +26918,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
               "art": "tb",
@@ -26360,6 +26935,22 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "unberührt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 9 Satz 5",
+              "von": 15119,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
             }
           ]
         },
@@ -27469,6 +28060,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "als Veräußerung",
+                  "pfad": "Abs. 6 Nr. 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "wenn wesentliche Betriebsgrundlagen eines Gewerbebetriebs veräußert oder in das Privatvermögen überführt oder anderen betriebsfremden Zwecken zugeführt werden oder wenn Anteile an einer Kapitalgesellschaft veräußert werden",
                   "pfad": "Abs. 6 Nr. 1 Halbs. 2",
                   "konfidenz": 0.6,
@@ -27476,7 +28075,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "das land- und forstwirtschaftliche Vermögen im Sinne des § 168 Absatz 1 Nummer 1 des Bewertungsgesetzes und selbst",
                   "pfad": "Abs. 6 Nr. 2",
                   "konfidenz": 0.6,
@@ -27484,7 +28083,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "Bei Ausschüttungen an Gesellschafter einer Kapitalgesellschaft",
                   "pfad": "Abs. 6 Nr. 3 Halbs. 3",
                   "konfidenz": 0.6,
@@ -27492,15 +28091,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
-                  "t": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht der Veräußerung der Anteile gleich",
+                  "n": "8.",
+                  "t": "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise",
                   "pfad": "Abs. 6 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
+                  "t": "der Veräußerung der Anteile",
+                  "pfad": "Abs. 6 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
                   "t": "wenn die Kapitalgesellschaft innerhalb der Frist aufgelöst oder ihr Nennkapital herabgesetzt wird",
                   "pfad": "Abs. 6 Nr. 4 Halbs. 2",
                   "konfidenz": 0.6,
@@ -27508,7 +28115,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
+                  "t": "Satz 1 Nummer 1 Satz 2",
+                  "pfad": "Abs. 6 Nr. 4 Halbs. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "In den Fällen einer insolvenzbedingten Auflösung",
                   "pfad": "Abs. 6 Nr. 4 Halbs. 3",
                   "konfidenz": 0.6,
@@ -27516,7 +28131,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "13.",
                   "t": "im Fall des § 13b Absatz 1 Nummer 3 Satz 2 die Verfügungsbeschränkung oder die Stimmrechtsbündelung",
                   "pfad": "Abs. 6 Nr. 5",
                   "konfidenz": 0.6,
@@ -27524,7 +28139,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "14.",
                   "t": "Der rückwirkende Wegfall des Verschonungsabschlags",
                   "pfad": "Abs. 6 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -27532,7 +28147,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "15.",
                   "t": "In den Fällen des Satzes 1 Nummer 1, 2 und 4",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -27540,7 +28155,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "16.",
                   "t": "wenn der Veräußerungserlös innerhalb der jeweils nach § 13b Absatz 1 begünstigungsfähigen Vermögensart verbleibt",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -27564,14 +28179,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "veräußert; als Veräußerung gilt auch die Aufgabe des Gewerbebetriebs",
+                  "t": "veräußert",
                   "pfad": "Abs. 6 Nr. 1",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "gilt auch die Aufgabe des Gewerbebetriebs",
+                  "pfad": "Abs. 6 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "bewirtschaftete Grundstücke im Sinne des § 159 des Bewertungsgesetzes veräußert",
                   "pfad": "Abs. 6 Nr. 2",
                   "konfidenz": 0.6,
@@ -27579,7 +28202,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "letzten in die Fünfjahresfrist fallenden Wirtschaftsjahres Entnahmen tätigt, die die Summe seiner Einlagen und der ihm zuzurechnenden Gewinne oder Gewinnanteile seit dem Erwerb um mehr als 150 000 Euro übersteigen; Verluste bleiben unberücksichtigt",
                   "pfad": "Abs. 6 Nr. 3",
                   "konfidenz": 0.36,
@@ -27587,7 +28210,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "gilt für Inhaber eines begünstigten Betriebs der Land- und Forstwirtschaft oder eines Teilbetriebs oder eines Anteils an einem Betrieb der Land- und Forstwirtschaft",
                   "pfad": "Abs. 6 Nr. 3 Halbs. 2",
                   "konfidenz": 0.54,
@@ -27595,7 +28218,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "ist sinngemäß … zu verfahren",
                   "pfad": "Abs. 6 Nr. 3 Halbs. 3",
                   "konfidenz": 0.45,
@@ -27603,23 +28226,39 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "7.",
-                  "t": "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise veräußert",
-                  "pfad": "Abs. 6 Nr. 4",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
                   "n": "8.",
-                  "t": "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird; Satz 1 Nummer 1 Satz 2 gilt entsprechend",
-                  "pfad": "Abs. 6 Nr. 4 Halbs. 2",
-                  "konfidenz": 0.54,
+                  "t": "veräußert",
+                  "pfad": "Abs. 6 Nr. 4",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "9.",
+                  "t": "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht … gleich",
+                  "pfad": "Abs. 6 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "10.",
+                  "t": "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird",
+                  "pfad": "Abs. 6 Nr. 4 Halbs. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Abs. 6 Nr. 4 Halbs. 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "gilt Satz 2 erste Alternative erst mit der Aufgabe des Betriebs oder soweit wesentliche Betriebsgrundlagen veräußert werden",
                   "pfad": "Abs. 6 Nr. 4 Halbs. 3",
                   "konfidenz": 0.6,
@@ -27627,7 +28266,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "13.",
                   "t": "aufgehoben wird",
                   "pfad": "Abs. 6 Nr. 5",
                   "konfidenz": 0.45,
@@ -27635,7 +28274,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "14.",
                   "t": "beschränkt sich in den Fällen des Satzes 1 Nummer 1, 2, 4 und 5 auf den Teil, der dem Verhältnis der im Zeitpunkt der schädlichen Verfügung verbleibenden Behaltensfrist einschließlich des Jahres, in dem die Verfügung erfolgt, zur gesamten Behaltensfrist entspricht",
                   "pfad": "Abs. 6 Satz 1 (Teil 2)",
                   "konfidenz": 0.48,
@@ -27643,7 +28282,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "15.",
                   "t": "ist von einer rückwirkenden Besteuerung abzusehen",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -27816,14 +28455,22 @@
                 },
                 {
                   "n": "2.",
-                  "t": "gekürzten Betrages des steuerrechtlichen Gewinns beschränken; Entnahmen zur Begleichung der auf den Gewinnanteil oder die Ausschüttungen aus der Gesellschaft entfallenden Steuern vom Einkommen bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
+                  "t": "gekürzten Betrages des steuerrechtlichen Gewinns beschränken",
                   "pfad": "Abs. 9 Nr. 1",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
+                  "pfad": "Abs. 9 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "beschränken",
                   "pfad": "Abs. 9 Nr. 2",
                   "konfidenz": 0.45,
@@ -27831,7 +28478,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "vorsehen, die unter dem gemeinen Wert der Beteiligung an der Personengesellschaft oder des Anteils an der Kapitalgesellschaft liegt",
                   "pfad": "Abs. 9 Nr. 3",
                   "konfidenz": 0.6,
@@ -27839,7 +28486,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "entsprechen",
                   "pfad": "Abs. 9 Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -27847,7 +28494,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "ist der Abschlag nur für diesen Teil des begünstigten Vermögens zu gewähren",
                   "pfad": "Abs. 9 Satz 2",
                   "konfidenz": 0.6,
@@ -27855,7 +28502,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "entspricht der im Gesellschaftsvertrag oder in der Satzung vorgesehenen prozentualen Minderung der Abfindung gegenüber dem gemeinen Wert (Satz 1 Nummer 3) und darf 30 Prozent nicht übersteigen",
                   "pfad": "Abs. 9 Satz 3",
                   "konfidenz": 0.6,
@@ -27863,7 +28510,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "müssen zwei Jahre vor dem Zeitpunkt der Entstehung der Steuer (§ 9) vorliegen",
                   "pfad": "Abs. 9 Satz 4",
                   "konfidenz": 0.6,
@@ -27871,15 +28518,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
-                  "t": "entfällt mit Wirkung für die Vergangenheit … die §§ 13c und 28a bleiben unberührt",
+                  "n": "10.",
+                  "t": "entfällt mit Wirkung für die Vergangenheit",
                   "pfad": "Abs. 9 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
+                  "t": "unberührt",
+                  "pfad": "Abs. 9 Satz 5",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "ist der Erwerber … verpflichtet",
                   "pfad": "Abs. 9 Nr. 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -27887,7 +28542,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "11.",
+                  "n": "13.",
                   "t": "endet die Festsetzungsfrist für die Steuer nicht vor dem Ablauf des vierten Jahres, nachdem das für die Erbschaftsteuer zuständige Finanzamt von der Änderung einer der in Satz 1 genannten Bestimmungen oder der tatsächlichen Verhältnisse Kenntnis erlangt",
                   "pfad": "Abs. 9 Nr. 2 (Teil 2)",
                   "konfidenz": 0.48,
@@ -28147,11 +28802,14 @@
         "Der Verschonungsabschlag (Absatz 1) und der Abzugsbetrag (Absatz 2)",
         "soweit der Erwerber innerhalb von fünf Jahren (Behaltensfrist)",
         "einen Gewerbebetrieb oder einen Teilbetrieb, eine Beteiligung an einer Gesellschaft im Sinne des § 97 Absatz 1 Satz 1 Nummer 5 Satz 1 des Bewertungsgesetzes, einen Anteil eines persönlich haftenden Gesellschafters einer Kommanditgesellschaft auf Aktien oder einen Anteil daran",
+        "als Veräußerung",
         "wenn wesentliche Betriebsgrundlagen eines Gewerbebetriebs veräußert oder in das Privatvermögen überführt oder anderen betriebsfremden Zwecken zugeführt werden oder wenn Anteile an einer Kapitalgesellschaft veräußert werden",
         "das land- und forstwirtschaftliche Vermögen im Sinne des § 168 Absatz 1 Nummer 1 des Bewertungsgesetzes und selbst",
         "Bei Ausschüttungen an Gesellschafter einer Kapitalgesellschaft",
-        "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht der Veräußerung der Anteile gleich",
+        "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise",
+        "der Veräußerung der Anteile",
         "wenn die Kapitalgesellschaft innerhalb der Frist aufgelöst oder ihr Nennkapital herabgesetzt wird",
+        "Satz 1 Nummer 1 Satz 2",
         "In den Fällen einer insolvenzbedingten Auflösung",
         "im Fall des § 13b Absatz 1 Nummer 3 Satz 2 die Verfügungsbeschränkung oder die Stimmrechtsbündelung",
         "Der rückwirkende Wegfall des Verschonungsabschlags",
@@ -28202,13 +28860,16 @@
         "kann den Verschonungsabschlag (Absatz 1) und den Abzugsbetrag (Absatz 2) nicht in Anspruch nehmen",
         "Überträgt ein Erbe erworbenes begünstigtes Vermögen im Sinne des § 13b Absatz 2 im Rahmen der Teilung des Nachlasses auf einen Dritten und gibt der Dritte dabei diesem Erwerber nicht begünstigtes Vermögen hin, das er vom Erblasser erworben hat, erhöht sich insoweit der Wert des begünstigten Vermögens des Dritten um den Wert des hingegebenen Vermögens, höchstens jedoch um den Wert des übertragenen Vermögens",
         "fallen nach Maßgabe des Satzes 2 mit Wirkung für die Vergangenheit weg",
-        "veräußert; als Veräußerung gilt auch die Aufgabe des Gewerbebetriebs",
+        "veräußert",
+        "gilt auch die Aufgabe des Gewerbebetriebs",
         "bewirtschaftete Grundstücke im Sinne des § 159 des Bewertungsgesetzes veräußert",
         "letzten in die Fünfjahresfrist fallenden Wirtschaftsjahres Entnahmen tätigt, die die Summe seiner Einlagen und der ihm zuzurechnenden Gewinne oder Gewinnanteile seit dem Erwerb um mehr als 150 000 Euro übersteigen; Verluste bleiben unberücksichtigt",
         "gilt für Inhaber eines begünstigten Betriebs der Land- und Forstwirtschaft oder eines Teilbetriebs oder eines Anteils an einem Betrieb der Land- und Forstwirtschaft",
         "ist sinngemäß",
-        "Anteile an Kapitalgesellschaften im Sinne des § 13b Absatz 1 Nummer 3 ganz oder teilweise veräußert",
-        "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird; Satz 1 Nummer 1 Satz 2 gilt entsprechend",
+        "veräußert",
+        "eine verdeckte Einlage der Anteile in eine Kapitalgesellschaft steht",
+        "wenn diese wesentliche Betriebsgrundlagen veräußert und das Vermögen an die Gesellschafter verteilt wird",
+        "gilt entsprechend",
         "gilt Satz 2 erste Alternative erst mit der Aufgabe des Betriebs oder soweit wesentliche Betriebsgrundlagen veräußert werden",
         "aufgehoben wird",
         "beschränkt sich in den Fällen des Satzes 1 Nummer 1, 2, 4 und 5 auf den Teil, der dem Verhältnis der im Zeitpunkt der schädlichen Verfügung verbleibenden Behaltensfrist einschließlich des Jahres, in dem die Verfügung erfolgt, zur gesamten Behaltensfrist entspricht",
@@ -28219,7 +28880,8 @@
         "ist eine Steuererklärung im Sinne der Abgabenordnung",
         "hat auch dann zu erfolgen",
         "wird vor Anwendung des Absatzes 1 ein Abschlag gewährt",
-        "gekürzten Betrages des steuerrechtlichen Gewinns beschränken; Entnahmen zur Begleichung der auf den Gewinnanteil oder die Ausschüttungen aus der Gesellschaft entfallenden Steuern vom Einkommen bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
+        "gekürzten Betrages des steuerrechtlichen Gewinns beschränken",
+        "bleiben von der Beschränkung der Entnahme oder Ausschüttung unberücksichtigt",
         "beschränken",
         "vorsehen, die unter dem gemeinen Wert der Beteiligung an der Personengesellschaft oder des Anteils an der Kapitalgesellschaft liegt",
         "entsprechen",
@@ -28227,6 +28889,7 @@
         "entspricht der im Gesellschaftsvertrag oder in der Satzung vorgesehenen prozentualen Minderung der Abfindung gegenüber dem gemeinen Wert (Satz 1 Nummer 3) und darf 30 Prozent nicht übersteigen",
         "müssen zwei Jahre vor dem Zeitpunkt der Entstehung der Steuer (§ 9) vorliegen",
         "entfällt mit Wirkung für die Vergangenheit",
+        "unberührt",
         "ist der Erwerber",
         "endet die Festsetzungsfrist für die Steuer nicht vor dem Ablauf des vierten Jahres, nachdem das für die Erbschaftsteuer zuständige Finanzamt von der Änderung einer der in Satz 1 genannten Bestimmungen oder der tatsächlichen Verhältnisse Kenntnis erlangt",
         "stellt das Vorliegen der Voraussetzungen für den Abschlag nach Absatz 9 und dessen Höhe auf den Zeitpunkt der Entstehung der Steuer (§ 9) gesondert fest",
@@ -28253,7 +28916,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -28263,7 +28926,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "44615e3bf612d7c087a3d25eba1142cd10fd370bade8fb995e0d001b604c2062",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.718Z"
+      "aktualisiert": "2026-08-11T09:36:31.222Z"
     },
     "13b": {
       "typ": "gemischt",
@@ -28768,19 +29431,35 @@
             },
             {
               "art": "rf",
-              "text": "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist; hat der Beschenkte das 18",
+              "text": "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 bb)",
               "von": 4710,
-              "laenge": 195,
-              "konfidenz": 0.42,
+              "laenge": 168,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "rf",
+              "text": "hat der Beschenkte das 18",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 bb)",
+              "von": 4880,
+              "laenge": 25,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -28856,7 +29535,131 @@
           "bis": 6411,
           "typ": "konditional",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "c) sowohl der überlassende Betrieb als auch der nutzende Betrieb zu einem Konzern im Sinne des § 4h des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5363,
+              "laenge": 127,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "tb",
+              "text": "soweit keine Nutzungsüberlassung an einen weiteren Dritten erfolgt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5500,
+              "laenge": 66,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „soweit\""
+            },
+            {
+              "art": "tb",
+              "text": "d) die überlassenen Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten zum Betriebsvermögen, zum Betriebsvermögen im Sinne des § 97 Absatz 1a Nummer 1 des Bewertungsgesetzes einer Personengesellschaft oder zum Vermögen einer Kapitalgesellschaft",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5568,
+              "laenge": 262,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gehören und der Hauptzweck des Betriebs in der Vermietung von Wohnungen im Sinne des § 181 Absatz 9 des Bewertungsgesetzes besteht, dessen Erfüllung einen wirtschaftlichen Geschäftsbetrieb (§ 14 der Abgabenordnung) erfordert",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 5831,
+              "laenge": 224,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            },
+            {
+              "art": "tb",
+              "text": "e) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten vorrangig überlassen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 6057,
+              "laenge": 96,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "werden, um im Rahmen von Lieferungsverträgen dem Absatz von eigenen Erzeugnissen und Produkten",
+              "anzeige": "werden, um im Rahmen von Lieferungsverträgen dem Absatz von eigenen Erzeugnissen und Produkten … zu dienen",
+              "teile": [
+                {
+                  "text": "werden, um im Rahmen von Lieferungsverträgen dem Absatz von eigenen Erzeugnissen und Produkten",
+                  "von": 6154,
+                  "laenge": 94
+                },
+                {
+                  "text": "zu dienen",
+                  "von": 6249,
+                  "laenge": 9
+                }
+              ],
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 6154,
+              "laenge": 94,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "f) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten an Dritte zur land- und forstwirtschaftlichen Nutzung überlassen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "von": 6260,
+              "laenge": 140,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            }
+          ]
         },
         {
           "pfad": "Abs. 4 Satz 2",
@@ -29026,19 +29829,51 @@
             },
             {
               "art": "rf",
-              "text": "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (junge Finanzmittel); junge Finanzmittel sind Verwaltungsvermögen",
+              "text": "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 6",
               "von": 9305,
-              "laenge": 261,
-              "konfidenz": 0.42,
+              "laenge": 197,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
+            },
+            {
+              "art": "tb",
+              "text": "junge Finanzmittel",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 6",
+              "von": 9502,
+              "laenge": 18,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "Verwaltungsvermögen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 6",
+              "von": 9547,
+              "laenge": 19,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
             }
           ]
         },
@@ -29085,19 +29920,8 @@
             {
               "art": "rf",
               "text": "sind auch erfüllt",
-              "anzeige": "sind auch erfüllt … und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
-              "teile": [
-                {
-                  "text": "sind auch erfüllt",
-                  "von": 10743,
-                  "laenge": 17
-                },
-                {
-                  "text": "und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
-                  "von": 11348,
-                  "laenge": 87
-                }
-              ],
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 4 Satz 9",
               "von": 10743,
               "laenge": 17,
@@ -29107,7 +29931,39 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+            },
+            {
+              "art": "tb",
+              "text": "wenn die Tätigkeit durch Gesellschaften im Sinne des § 13 Absatz 7, des § 15 Absatz 1 Satz 1 Nummer 2 oder des § 18 Absatz 4 Satz 2 des Einkommensteuergesetzes ausgeübt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 9",
+              "von": 10762,
+              "laenge": 173,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            },
+            {
+              "art": "rf",
+              "text": "und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 9",
+              "von": 11348,
+              "laenge": 87,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             }
           ]
         },
@@ -29575,7 +30431,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -29594,20 +30450,36 @@
               "grund": "Konditionalsatz mit „soweit\""
             },
             {
-              "art": "ausn",
-              "text": "dies gilt nicht, soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist",
+              "art": "rf",
+              "text": "gilt nicht",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 2",
-              "von": 14385,
-              "laenge": 98,
+              "von": 14390,
+              "laenge": 10,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+            },
+            {
+              "art": "tb",
+              "text": "soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 8 Satz 2",
+              "von": 14402,
+              "laenge": 81,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Satzausnahme: „dies gilt nicht\""
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -29798,13 +30670,40 @@
             },
             {
               "art": "rf",
-              "text": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht anzuwenden; diese Anteile sind als Verwaltungsvermögen",
-              "anzeige": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht anzuwenden; diese Anteile sind als Verwaltungsvermögen … anzusetzen",
+              "text": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht",
+              "anzeige": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht … anzuwenden",
               "teile": [
                 {
-                  "text": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht anzuwenden; diese Anteile sind als Verwaltungsvermögen",
+                  "text": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht",
                   "von": 15997,
-                  "laenge": 159
+                  "laenge": 104
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 16102,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 9 Satz 5",
+              "von": 15997,
+              "laenge": 104,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "rf",
+              "text": "sind als Verwaltungsvermögen",
+              "anzeige": "sind als Verwaltungsvermögen … anzusetzen",
+              "teile": [
+                {
+                  "text": "sind als Verwaltungsvermögen",
+                  "von": 16128,
+                  "laenge": 28
                 },
                 {
                   "text": "anzusetzen",
@@ -29813,9 +30712,9 @@
                 }
               ],
               "pfad": "Abs. 9 Satz 5",
-              "von": 15997,
-              "laenge": 159,
-              "konfidenz": 0.54,
+              "von": 16128,
+              "laenge": 28,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -30297,6 +31196,46 @@
                 },
                 {
                   "n": "8.",
+                  "t": "c) sowohl der überlassende Betrieb als auch der nutzende Betrieb zu einem Konzern im Sinne des § 4h des Einkommensteuergesetzes",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
+                  "t": "soweit keine Nutzungsüberlassung an einen weiteren Dritten erfolgt",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
+                  "t": "d) die überlassenen Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten zum Betriebsvermögen, zum Betriebsvermögen im Sinne des § 97 Absatz 1a Nummer 1 des Bewertungsgesetzes einer Personengesellschaft oder zum Vermögen einer Kapitalgesellschaft",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
+                  "t": "e) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten vorrangig überlassen",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
+                  "t": "f) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten an Dritte zur land- und forstwirtschaftlichen Nutzung überlassen",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "13.",
                   "t": "unterschritten wird, ist nach der Summe der dem Betrieb unmittelbar zuzurechnenden Anteile und der Anteile weiterer Gesellschafter zu bestimmen … über die Anteile nur einheitlich zu verfügen oder sie ausschließlich auf andere derselben Verpflichtung unterliegende Anteilseigner zu übertragen und das Stimmrecht gegenüber nichtgebundenen Gesellschaftern nur einheitlich auszuüben; 3",
                   "pfad": "Abs. 4 Satz 3",
                   "konfidenz": 0.6,
@@ -30304,7 +31243,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "9.",
+                  "n": "14.",
                   "t": "wenn die Gesellschafter untereinander verpflichtet sind",
                   "pfad": "Abs. 4 Satz 3",
                   "konfidenz": 0.6,
@@ -30312,7 +31251,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "15.",
                   "t": "wenn der Handel mit diesen Gegenständen, deren Herstellung oder Verarbeitung oder die entgeltliche Nutzungsüberlassung an Dritte nicht der Hauptzweck des Betriebs ist",
                   "pfad": "Abs. 4 Satz 4",
                   "konfidenz": 0.6,
@@ -30320,10 +31259,26 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "16.",
                   "t": "Der gemeine Wert der Finanzmittel",
                   "pfad": "Abs. 4 Satz 6",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "17.",
+                  "t": "junge Finanzmittel",
+                  "pfad": "Abs. 4 Satz 6",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "18.",
+                  "t": "wenn die Tätigkeit durch Gesellschaften im Sinne des § 13 Absatz 7, des § 15 Absatz 1 Satz 1 Nummer 2 oder des § 18 Absatz 4 Satz 2 des Einkommensteuergesetzes ausgeübt wird",
+                  "pfad": "Abs. 4 Satz 9",
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -30352,14 +31307,22 @@
                 },
                 {
                   "n": "3.",
-                  "t": "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist; hat der Beschenkte das 18",
+                  "t": "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist",
                   "pfad": "Abs. 4 bb)",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "4.",
+                  "t": "hat der Beschenkte das 18",
+                  "pfad": "Abs. 4 bb)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Lebensjahr noch nicht",
                   "pfad": "Abs. 4 bb) Halbs. 2",
                   "konfidenz": 0.6,
@@ -30367,7 +31330,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
+                  "t": "gehören und der Hauptzweck des Betriebs in der Vermietung von Wohnungen im Sinne des § 181 Absatz 9 des Bewertungsgesetzes besteht, dessen Erfüllung einen wirtschaftlichen Geschäftsbetrieb (§ 14 der Abgabenordnung) erfordert",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "werden, um im Rahmen von Lieferungsverträgen dem Absatz von eigenen Erzeugnissen und Produkten … zu dienen",
+                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "8.",
                   "t": "unterliegt, zuzurechnen sind",
                   "pfad": "Abs. 4 Satz 2",
                   "konfidenz": 0.6,
@@ -30375,7 +31354,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "9.",
                   "t": "Ob diese Grenze",
                   "pfad": "Abs. 4 Satz 3",
                   "konfidenz": 0.6,
@@ -30383,7 +31362,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "10.",
                   "t": "unterliegt, zuzurechnen sind; 5. der gemeine Wert des nach Abzug des gemeinen Werts der Schulden verbleibenden Bestands an Zahlungsmitteln, Geschäftsguthaben, Geldforderungen und anderen Forderungen (Finanzmittel), soweit er 15 Prozent des anzusetzenden Werts des Betriebsvermögens des Betriebs oder der Gesellschaft übersteigt",
                   "pfad": "Abs. 4 Satz 5",
                   "konfidenz": 0.36,
@@ -30391,15 +31370,23 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
-                  "t": "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (junge Finanzmittel); junge Finanzmittel sind Verwaltungsvermögen",
+                  "n": "11.",
+                  "t": "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (",
                   "pfad": "Abs. 4 Satz 6",
-                  "konfidenz": 0.42,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "12.",
+                  "t": "Verwaltungsvermögen",
+                  "pfad": "Abs. 4 Satz 6",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "13.",
                   "t": "ist, dass das nach Absatz 1 begünstigungsfähige Vermögen des Betriebs oder der nachgeordneten Gesellschaften nach seinem Hauptzweck einer Tätigkeit im Sinne des § 13 Absatz 1, des § 15 Absatz 1 Satz 1 Nummer 1, des § 18 Absatz 1 Nummer 1 und 2 des Einkommensteuergesetzes dient",
                   "pfad": "Abs. 4 Satz 8",
                   "konfidenz": 0.48,
@@ -30407,12 +31394,20 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
-                  "t": "sind auch erfüllt … und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
+                  "n": "14.",
+                  "t": "sind auch erfüllt",
                   "pfad": "Abs. 4 Satz 9",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
+                },
+                {
+                  "n": "15.",
+                  "t": "und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
+                  "pfad": "Abs. 4 Satz 9",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -30664,6 +31659,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist",
+                  "pfad": "Abs. 8 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Als Nettowert des Verwaltungsvermögens",
                   "pfad": "Abs. 8 Satz 3",
                   "konfidenz": 0.6,
@@ -30674,21 +31677,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "dies gilt nicht, soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist",
-                  "pfad": "Abs. 8 Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -30710,6 +31698,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "gilt nicht",
+                  "pfad": "Abs. 8 Satz 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "ist mindestens der gemeine Wert des jungen Verwaltungsvermögens und der jungen Finanzmittel … anzusetzen",
                   "pfad": "Abs. 8 Satz 3",
                   "konfidenz": 0.6,
@@ -30780,9 +31776,17 @@
                 },
                 {
                   "n": "4.",
-                  "t": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht anzuwenden; diese Anteile sind als Verwaltungsvermögen … anzusetzen",
+                  "t": "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht … anzuwenden",
                   "pfad": "Abs. 9 Satz 5",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "5.",
+                  "t": "sind als Verwaltungsvermögen … anzusetzen",
+                  "pfad": "Abs. 9 Satz 5",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -30908,10 +31912,17 @@
         "die Verpachtung an einen Dritten",
         "vollendet, beginnt die Frist mit der Vollendung des 18",
         "Lebensjahres",
+        "c) sowohl der überlassende Betrieb als auch der nutzende Betrieb zu einem Konzern im Sinne des § 4h des Einkommensteuergesetzes",
+        "soweit keine Nutzungsüberlassung an einen weiteren Dritten erfolgt",
+        "d) die überlassenen Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten zum Betriebsvermögen, zum Betriebsvermögen im Sinne des § 97 Absatz 1a Nummer 1 des Bewertungsgesetzes einer Personengesellschaft oder zum Vermögen einer Kapitalgesellschaft",
+        "e) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten vorrangig überlassen",
+        "f) die Grundstücke, Grundstücksteile, grundstücksgleichen Rechte und Bauten an Dritte zur land- und forstwirtschaftlichen Nutzung überlassen",
         "unterschritten wird, ist nach der Summe der dem Betrieb unmittelbar zuzurechnenden Anteile und der Anteile weiterer Gesellschafter zu bestimmen",
         "wenn die Gesellschafter untereinander verpflichtet sind",
         "wenn der Handel mit diesen Gegenständen, deren Herstellung oder Verarbeitung oder die entgeltliche Nutzungsüberlassung an Dritte nicht der Hauptzweck des Betriebs ist",
         "Der gemeine Wert der Finanzmittel",
+        "junge Finanzmittel",
+        "wenn die Tätigkeit durch Gesellschaften im Sinne des § 13 Absatz 7, des § 15 Absatz 1 Satz 1 Nummer 2 oder des § 18 Absatz 4 Satz 2 des Einkommensteuergesetzes ausgeübt wird",
         "Beim Erwerb von Todes wegen",
         "wenn der Erwerber innerhalb von zwei Jahren ab dem Zeitpunkt der Entstehung der Steuer (§ 9) diese Vermögensgegenstände in Vermögensgegenstände innerhalb des vom Erblasser erworbenen, begünstigungsfähigen Vermögens im Sinne des Absatzes 1 investiert hat",
         "Beim Erwerb von Todes wegen",
@@ -30923,6 +31934,7 @@
         "Eine Saldierung mit Schulden nach Absatz 6",
         "Eine Verrechnung von Schulden mit Verwaltungsvermögen",
         "soweit die Summe der Schulden den durchschnittlichen Schuldenstand der letzten drei Jahre vor dem Zeitpunkt der Entstehung der Steuer (§ 9) übersteigt",
+        "soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist",
         "Als Nettowert des Verwaltungsvermögens",
         "Absatz 4 Nummer 5 und die Absätze 6 bis 8",
         "Die Sätze 1 bis 4",
@@ -30942,14 +31954,19 @@
         "bleiben sie bei der Anwendung des Absatzes 4 Nummer 5 und des Absatzes 6 außer Betracht",
         "ist nicht anzunehmen",
         "erfolgt, welche beim Verpächter zu Einkünften nach § 2 Absatz 1 Satz 1 Nummer 2 und 3 des Einkommensteuergesetzes führt und aa) der Verpächter des Betriebs im Zusammenhang mit einer unbefristeten Verpachtung den Pächter durch eine letztwillige Verfügung oder eine rechtsgeschäftliche Verfügung als Erben eingesetzt hat",
-        "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist; hat der Beschenkte das 18",
+        "erfolgt, weil der Beschenkte im Zeitpunkt der Entstehung der Steuer (§ 9) den Betrieb noch nicht führen kann, und die Verpachtung auf höchstens zehn Jahre befristet ist",
+        "hat der Beschenkte das 18",
         "Lebensjahr noch nicht",
+        "gehören und der Hauptzweck des Betriebs in der Vermietung von Wohnungen im Sinne des § 181 Absatz 9 des Bewertungsgesetzes besteht, dessen Erfüllung einen wirtschaftlichen Geschäftsbetrieb (§ 14 der Abgabenordnung) erfordert",
+        "werden, um im Rahmen von Lieferungsverträgen dem Absatz von eigenen Erzeugnissen und Produkten",
         "unterliegt, zuzurechnen sind",
         "Ob diese Grenze",
         "unterliegt, zuzurechnen sind; 5. der gemeine Wert des nach Abzug des gemeinen Werts der Schulden verbleibenden Bestands an Zahlungsmitteln, Geschäftsguthaben, Geldforderungen und anderen Forderungen (Finanzmittel), soweit er 15 Prozent des anzusetzenden Werts des Betriebsvermögens des Betriebs oder der Gesellschaft übersteigt",
-        "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (junge Finanzmittel); junge Finanzmittel sind Verwaltungsvermögen",
+        "ist um den positiven Saldo der eingelegten und der entnommenen Finanzmittel zu verringern, welche dem Betrieb im Zeitpunkt der Entstehung der Steuer (§ 9) weniger als zwei Jahre zuzurechnen waren (",
+        "Verwaltungsvermögen",
         "ist, dass das nach Absatz 1 begünstigungsfähige Vermögen des Betriebs oder der nachgeordneten Gesellschaften nach seinem Hauptzweck einer Tätigkeit im Sinne des § 13 Absatz 1, des § 15 Absatz 1 Satz 1 Nummer 1, des § 18 Absatz 1 Nummer 1 und 2 des Einkommensteuergesetzes dient",
         "sind auch erfüllt",
+        "und die nach inländischem Gesellschaftsrecht als Personengesellschaft zu behandeln sind",
         "entfällt die Zurechnung von Vermögensgegenständen zum Verwaltungsvermögen im Sinne des Absatzes 4 Nummer 1 bis 5 rückwirkend zum Zeitpunkt der Entstehung der Steuer (§ 9)",
         "Voraussetzung hierfür",
         "entfällt die Zurechnung von Finanzmitteln zum Verwaltungsvermögen im Sinne des Absatzes 4 Nummer 5 Satz 1 rückwirkend zum Zeitpunkt der Entstehung der Steuer (§ 9)",
@@ -30960,11 +31977,13 @@
         "sind kein unschädliches",
         "findet für junge Finanzmittel im Sinne des Absatzes 4 Nummer 5 Satz 2 und junges Verwaltungsvermögen im Sinne des Absatzes 7 Satz 2 nicht statt",
         "ist bei wirtschaftlich nicht belastenden Schulden und darüber hinaus ausgeschlossen",
+        "gilt nicht",
         "ist mindestens der gemeine Wert des jungen Verwaltungsvermögens und der jungen Finanzmittel",
         "sind bei der Anwendung der Absätze 2 bis 8 anstelle der Beteiligungen oder Anteile die gemeinen Werte der diesen Gesellschaften zuzurechnenden Vermögensgegenstände nach Maßgabe der Sätze 2 bis 5 mit dem Anteil einzubeziehen, zu dem die unmittelbare oder mittelbare Beteiligung besteht",
         "sind diese nicht anzusetzen",
         "sind auf die Werte in der Verbundvermögensaufstellung",
-        "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht anzuwenden; diese Anteile sind als Verwaltungsvermögen",
+        "sind auf Anteile im Sinne von Absatz 4 Nummer 2 sowie auf wirtschaftlich nicht belastende Schulden nicht",
+        "sind als Verwaltungsvermögen",
         "gilt entsprechend",
         "trifft das für die Festsetzung der Erbschaftsteuer oder für die Feststellung nach § 151 Absatz 1 Satz 1 Nummer 1 bis 3 des Bewertungsgesetzes zuständige Finanzamt",
         "trifft die Feststellungen des Satzes 1 das örtlich zuständige Finanzamt entsprechend § 152 Nummer 3 des Bewertungsgesetzes",
@@ -30972,8 +31991,7 @@
       ],
       "ausnahmen": [
         "mit Ausnahme der Stückländereien (§ 160 Absatz 7 des Bewertungsgesetzes) und selbst",
-        "vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt",
-        "dies gilt nicht, soweit die Erhöhung des Schuldenstands durch die Betriebstätigkeit veranlasst ist"
+        "vorbehaltlich des Satzes 2 wie begünstigtes Vermögen behandelt"
       ],
       "definitionen": [],
       "status": "syntaktisch",
@@ -30988,7 +32006,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab23a303ba5a8550a6779aa6bcf75286b284411b43af7b9a0260fdcb52856fec",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.734Z"
+      "aktualisiert": "2026-08-11T09:36:31.243Z"
     },
     "13c": {
       "typ": "gemischt",
@@ -31551,7 +32569,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fe98c40118ee964924adbe1a164eb5a2f3a72a7aa99409e9ce501b136b0679d3",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.735Z"
+      "aktualisiert": "2026-08-11T09:36:31.245Z"
     },
     "13d": {
       "typ": "gemischt",
@@ -32042,7 +33060,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a73d702f232fd5b539e3895bcc2af4a5d80e29b70542280d139aa7dcb741fe8b",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.737Z"
+      "aktualisiert": "2026-08-11T09:36:31.247Z"
     },
     "19a": {
       "typ": "gemischt",
@@ -32682,7 +33700,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8c9c9f1cfde03c82171c0baf529f0e3d5f329d8690f6bcfe5dfee80659ddb59",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.748Z"
+      "aktualisiert": "2026-08-11T09:36:31.259Z"
     },
     "28a": {
       "typ": "gemischt",
@@ -33529,24 +34547,67 @@
           "pfad": "Abs. 4 Satz 2",
           "von": 4480,
           "bis": 4712,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise zu widerrufen; § 131 Absatz 4 der Abgabenordnung gilt entsprechend",
-              "anzeige": null,
-              "teile": null,
+              "text": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise",
+              "anzeige": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise … zu widerrufen",
+              "teile": [
+                {
+                  "text": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise",
+                  "von": 4536,
+                  "laenge": 108
+                },
+                {
+                  "text": "zu widerrufen",
+                  "von": 4645,
+                  "laenge": 13
+                }
+              ],
               "pfad": "Abs. 4 Satz 2",
               "von": 4536,
-              "laenge": 175,
-              "konfidenz": 0.54,
+              "laenge": 108,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "§ 131 Absatz 4 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2",
+              "von": 4660,
+              "laenge": 33,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2",
+              "von": 4694,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -34130,6 +35191,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "§ 131 Absatz 4 der Abgabenordnung",
+                  "pfad": "Abs. 4 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -34252,9 +35321,17 @@
                 },
                 {
                   "n": "15.",
-                  "t": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise zu widerrufen; § 131 Absatz 4 der Abgabenordnung gilt entsprechend",
+                  "t": "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise … zu widerrufen",
                   "pfad": "Abs. 4 Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "16.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Abs. 4 Satz 2",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -34495,6 +35572,7 @@
         "die den Erwerb oder Teile des Erwerbs oder das in Nummer 3 oder Absatz 2 Nummer 2",
         "die dem Erlass zugrunde liegende Steuerfestsetzung",
         "der Erlass gemäß Absatz 1 Satz 2 oder 3 ganz oder teilweise nicht mehr in Anspruch genommen",
+        "§ 131 Absatz 4 der Abgabenordnung",
         "In den Fällen des Absatzes 4 Satz 1 Nummer 2 und 3",
         "schriftlich abzugeben",
         "wenn der Vorgang nur teilweise zum Widerruf des Verwaltungsaktes nach Absatz 4 führt",
@@ -34526,7 +35604,8 @@
         "kann erneut einen Antrag nach Absatz 1 stellen",
         "kann erneut einen Antrag nach Absatz 1 stellen",
         "steht unter dem Vorbehalt des Widerrufs (§ 120 Absatz 2 Nummer 3 der Abgabenordnung)",
-        "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise zu widerrufen; § 131 Absatz 4 der Abgabenordnung gilt entsprechend",
+        "ist bei Eintritt der auflösenden Bedingung nach Satz 1 mit Wirkung für die Vergangenheit ganz oder teilweise",
+        "gilt entsprechend",
         "verpflichtet",
         "ist der Erwerber verpflichtet, dem für die Erbschaftsteuer zuständigen Finanzamt den entsprechenden Sachverhalt innerhalb einer Frist von einem Monat, nachdem der jeweilige Tatbestand verwirklicht wurde",
         "ist eine Steuererklärung im Sinne der Abgabenordnung",
@@ -34540,7 +35619,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -34550,7 +35629,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2783e7658c2b494e50e70db22a956b92295c3c1506deca327026c2609e7ef315",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.775Z"
+      "aktualisiert": "2026-08-11T09:36:31.286Z"
     },
     "37a": {
       "typ": "gemischt",
@@ -35327,7 +36406,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "335e291385549af9e5fd45ae8783b050ebaca0796bb1f2afa43d8aec9eeca040",
       "format": 5,
-      "aktualisiert": "2026-08-10T09:19:25.793Z"
+      "aktualisiert": "2026-08-11T09:36:31.307Z"
     }
   }
 }

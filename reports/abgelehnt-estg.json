@@ -43,13 +43,6 @@
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 5 Satz 1",
-    "art": "tb",
-    "text": "vermindert um die Freibeträge nach § 32 Absatz 6 und um die sonstigen vom Einkommen abzuzi",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 2",
     "pfad": "Abs. 6 Satz 1",
     "art": "tb",
     "text": "die anzurechnenden ausländischen Steuern und die Steuerermäßigungen, vermehrt um die Steue",
@@ -71,10 +64,24 @@
   },
   {
     "norm": "§ 2a",
+    "pfad": "Abs. 1 Satz 5",
+    "art": "tb",
+    "text": "§ 10d Absatz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 2a",
     "pfad": "Abs. 2 Satz 1",
-    "art": "rf",
-    "text": "ist nicht anzuwenden",
+    "art": "ausn",
+    "text": "Absatz 1 Satz 1 Nummer 2 ist nicht anzuwenden, wenn der Steuerpflichtige nachweist, dass d",
     "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "ausn",
+    "text": "Absatz 1 Satz 1 Nummer 3 und 4 ist nicht anzuwenden, wenn der Steuerpflichtige nachweist, ",
+    "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "§ 2a",
@@ -165,21 +172,35 @@
     "pfad": "Satz 14",
     "art": "tb",
     "text": "sind Beitragsermäßigungen und Prämienrückzahlungen eines Trägers der gesetzlichen Krankenv",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 14",
+    "art": "tb",
+    "text": "11a. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 14",
+    "art": "tb",
+    "text": "11b. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 18",
+    "art": "tb",
+    "text": "11c. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
     "pfad": "Satz 18",
     "art": "rf",
-    "text": "gilt die Steuerbefreiung für Leistungen nach § 150c des Elften Buches Sozialgesetzbuch in ",
+    "text": "gezahlte Bezüge, die zum einen",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Satz 3 (Teil 2)",
-    "art": "tb",
-    "text": "gezahlten Vergütungen für Verpflegung sind nur insoweit steuerfrei, als sie die Pauschbetr",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 3",
@@ -219,9 +240,9 @@
   {
     "norm": "§ 3",
     "pfad": "Satz 5 (Teil 4)",
-    "art": "rf",
-    "text": "bezeichneten Tätigkeiten den steuerfreien Betrag, dürfen die mit den nebenberuflichen Täti",
-    "grund": "zu lang (>600 Zeichen)"
+    "art": "tb",
+    "text": "26a. Einnahmen aus nebenberuflichen Tätigkeiten zur Förderung gemeinnütziger, mildtätiger ",
+    "grund": "zu grob (47 Wörter)"
   },
   {
     "norm": "§ 3",
@@ -241,8 +262,29 @@
     "norm": "§ 3",
     "pfad": "Satz 2 (Teil 5)",
     "art": "tb",
-    "text": "Entschädigungen für die betriebliche Benutzung von Werkzeugen eines Arbeitnehmers (Werkzeu",
-    "grund": "zu lang (>600 Zeichen)"
+    "text": "33. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 2 (Teil 5)",
+    "art": "tb",
+    "text": "34. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 2 (Teil 5)",
+    "art": "tb",
+    "text": "34a. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 3 (Teil 5)",
+    "art": "tb",
+    "text": "37. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
@@ -256,13 +298,6 @@
     "pfad": "Buchst. d (Teil 7)",
     "art": "tb",
     "text": "der Bezüge im Sinne des § 20 Absatz 1 Nummer 1 und der Einnahmen im Sinne des § 20 Absatz ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Buchst. d Halbs. 4",
-    "art": "tb",
-    "text": "soweit eine verdeckte Gewinnausschüttung das Einkommen einer dem Steuerpflichtigen nahe st",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -288,13 +323,6 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Satz 2 (Teil 7)",
-    "art": "tb",
-    "text": "Satz 1 Buchstabe a, b und d bis h",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 3",
     "pfad": "Satz 3 (Teil 6)",
     "art": "tb",
     "text": "wenn es sich um Bezüge aus öffentlichen Mitteln handelt, die wegen der Bedürftigkeit des K",
@@ -317,16 +345,16 @@
   {
     "norm": "§ 3",
     "pfad": "Satz 2 (Teil 8)",
-    "art": "rf",
-    "text": "gilt entsprechend für Steuerpflichtige, denen die Vorteile im Rahmen einer Tätigkeit zugew",
-    "grund": "zu lang (>600 Zeichen)"
+    "art": "tb",
+    "text": "46. zusätzlich zum",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
     "pfad": "Satz 9 (Teil 5)",
-    "art": "rf",
-    "text": "gilt für die Zinsen aus Schuldverschreibungen und Schuldbuchforderungen, die nach den §§ 9",
-    "grund": "zu lang (>600 Zeichen)"
+    "art": "tb",
+    "text": "55. der in den Fällen des § 4 Absatz 2 Nummer 2 und Absatz 3 des Betriebsrentengesetzes vo",
+    "grund": "zu grob (48 Wörter)"
   },
   {
     "norm": "§ 3",
@@ -340,7 +368,7 @@
     "pfad": "Buchst. c (Teil 9)",
     "art": "tb",
     "text": "wenn im Fall des Todes des Steuerpflichtigen das Altersvorsorgevermögen auf einen auf den ",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "zu grob (64 Wörter)"
   },
   {
     "norm": "§ 3",
@@ -359,16 +387,23 @@
   {
     "norm": "§ 3",
     "pfad": "Satz 5 (Teil 8)",
-    "art": "rf",
-    "text": "sind jeweils um die nach § 3 Nummer 63 Satz 1, 3 oder Satz 4 steuerfreien Beträge zu minde",
-    "grund": "zu lang (>600 Zeichen)"
+    "art": "tb",
+    "text": "58. das Wohngeld nach dem Wohngeldgesetz, die sonstigen Leistungen aus öffentlichen Hausha",
+    "grund": "zu grob (53 Wörter)"
   },
   {
     "norm": "§ 3",
     "pfad": "Satz 5 (Teil 8)",
     "art": "tb",
     "text": "soweit die Zuschüsse und Zinsvorteile die Vorteile aus einer entsprechenden Förderung mit ",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "zu grob (65 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 5 (Teil 8)",
+    "art": "tb",
+    "text": "59. die Zusatzförderung nach § 88e des Zweiten Wohnungsbaugesetzes und nach § 51f des Wohn",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 3",
@@ -402,8 +437,8 @@
     "norm": "§ 3",
     "pfad": "Satz 6 (Teil 9)",
     "art": "tb",
-    "text": "soweit sie 8 Prozent der Beitragsbemessungsgrenze in der allgemeinen Rentenversicherung, v",
-    "grund": "zu grob (69 Wörter)"
+    "text": "64. bei Arbeitnehmern, die zu einer inländischen juristischen Person des öffentlichen Rech",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 3",
@@ -432,6 +467,13 @@
     "art": "tb",
     "text": "Zuschläge, die nach den §§ 50a bis 50e des Beamtenversorgungsgesetzes oder nach den §§ 96 ",
     "grund": "zu grob (90 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Satz 1 (Teil 14)",
+    "art": "rf",
+    "text": "infizierte Personen vom 2. August 2000 (BGBl. I S. 1270)",
+    "grund": "Fundstelle statt Merkmal"
   },
   {
     "norm": "§ 3",
@@ -497,13 +539,6 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 3b",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "tb",
-    "text": "der laufende Arbeitslohn, der dem Arbeitnehmer bei der für ihn maßgebenden regelmäßigen Ar",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 3c",
     "pfad": "Abs. 2 Satz 1",
     "art": "tb",
@@ -554,13 +589,6 @@
   },
   {
     "norm": "§ 4",
-    "pfad": "Abs. 1 Satz 3 (Teil 2)",
-    "art": "tb",
-    "text": "alle Wirtschaftsgüter (Bareinzahlungen und sonstige Wirtschaftsgüter), die der Steuerpflic",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 4",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "ist eine Änderung der Vermögensübersicht (Bilanz) nur zulässig",
@@ -589,6 +617,13 @@
   },
   {
     "norm": "§ 4",
+    "pfad": "Abs. 5 Nr. 6 Halbs. 3",
+    "art": "tb",
+    "text": "§ 6 Absatz 1 Nummer 4 Satz 3 zweiter Halbsatz",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 4",
     "pfad": "Abs. 5 Nr. 10 Halbs. 3",
     "art": "rf",
     "text": "teilt Tatsachen, die den Verdacht einer Straftat oder einer Ordnungswidrigkeit im Sinne de",
@@ -607,13 +642,6 @@
     "art": "tb",
     "text": "§ 9 Absatz 1 Satz 3 Nummer 5b",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
-  },
-  {
-    "norm": "§ 4d",
-    "pfad": "Abs. 1 Nr. 1 Halbs. 2",
-    "art": "tb",
-    "text": "jeder ehemalige Arbeitnehmer des Trägerunternehmens, der von der Unterstützungskasse Leist",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 4d",
@@ -638,13 +666,6 @@
   },
   {
     "norm": "§ 4d",
-    "pfad": "Abs. 1 Satz 5",
-    "art": "tb",
-    "text": "andere Personen gleich, denen schriftlich Leistungen der Alters-, Invaliditäts- oder Hinte",
-    "grund": "zu grob (61 Wörter)"
-  },
-  {
-    "norm": "§ 4d",
     "pfad": "Abs. 1 Satz 10",
     "art": "rf",
     "text": "sind die Zuwendungen nach den Buchstaben a und b in dem Verhältnis zu vermindern, in dem d",
@@ -659,10 +680,10 @@
   },
   {
     "norm": "§ 4d",
-    "pfad": "Abs. 2 Satz 4",
+    "pfad": "Abs. 1 Satz 16",
     "art": "tb",
-    "text": "§ 5 Absatz 1 Satz 2",
-    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+    "text": "2. bei Kassen, die keine lebenslänglich laufenden Leistungen gewähren, für jedes Wirtschaf",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 4g",
@@ -687,13 +708,6 @@
   },
   {
     "norm": "§ 4h",
-    "pfad": "Abs. 2 Buchst. c Halbs. 4",
-    "art": "tb",
-    "text": "im Konzernabschluss und im Jahresabschluss oder Einzelabschluss einheitlich auszuüben; bei",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 4h",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "Vergütungen für Fremdkapital, wirtschaftlich gleichwertige Aufwendungen und sonstige Aufwe",
@@ -705,6 +719,13 @@
     "art": "tb",
     "text": "das für die gesonderte Feststellung des Gewinns und Verlusts der Gesellschaft zuständige F",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 4h",
+    "pfad": "Abs. 5 Satz 3",
+    "art": "tb",
+    "text": "§ 15 Absatz 3 des Umwandlungssteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 4h",
@@ -737,8 +758,8 @@
   {
     "norm": "§ 4k",
     "pfad": "Abs. 4 Satz 2",
-    "art": "ausn",
-    "text": "dies gilt nicht, wenn der Abzug der Aufwendungen in einem anderen Staat auf Grund einer di",
+    "art": "tb",
+    "text": "wenn der Abzug der Aufwendungen in einem anderen Staat auf Grund einer diesem Absatz entsp",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
@@ -778,13 +799,6 @@
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 1 Nr. 1 Halbs. 3",
-    "art": "tb",
-    "text": "der Betrag, den ein Erwerber des ganzen Betriebs im Rahmen des Gesamtkaufpreises für das e",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 6",
     "pfad": "Abs. 1 1a",
     "art": "tb",
     "text": "Zu den Herstellungskosten eines Gebäudes",
@@ -806,10 +820,10 @@
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 1 Buchst. d Halbs. 3",
-    "art": "tb",
-    "text": "Rückstellungen für die Verpflichtung, ein Kernkraftwerk",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+    "pfad": "Abs. 1 Buchst. e",
+    "art": "rf",
+    "text": "deren Laufzeit am Bilanzstichtag weniger als zwölf Monate beträgt, und Rückstellungen für",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 6",
@@ -817,13 +831,6 @@
     "art": "tb",
     "text": "Die private Nutzung eines Kraftfahrzeugs, das zu mehr als 50 Prozent betrieblich genutzt w",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 6",
-    "pfad": "Abs. 1 Nr. 2 (Teil 2)",
-    "art": "tb",
-    "text": "soweit Nummer 3 nicht anzuwenden ist und bei Anschaffung nach dem 31. Dezember 2018 und vo",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 6",
@@ -852,13 +859,6 @@
     "art": "tb",
     "text": "die Reichweite des Fahrzeugs unter ausschließlicher Nutzung der elektrischen Antriebsmasch",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 6",
-    "pfad": "Abs. 1 Nr. 2 (Teil 3)",
-    "art": "tb",
-    "text": "soweit Nummer 3 nicht anzuwenden ist und bei Anschaffung nach dem 31. Dezember 2018 und vo",
-    "grund": "zu grob (61 Wörter)"
   },
   {
     "norm": "§ 6",
@@ -911,13 +911,6 @@
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 1 Satz 5",
-    "art": "tb",
-    "text": "mit dem Teilwert für den Zeitpunkt der Zuführung anzusetzen; sie sind jedoch höchstens mit",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 6",
     "pfad": "Abs. 1 Buchst. a (Teil 3)",
     "art": "tb",
     "text": "innerhalb der",
@@ -925,10 +918,17 @@
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 1 Satz 2 (Teil 4)",
-    "art": "rf",
-    "text": "tritt an die Stelle der Anschaffungs- oder Herstellungskosten der Wert, mit dem die Entnah",
-    "grund": "zu lang (>600 Zeichen)"
+    "pfad": "Abs. 1 Buchst. b (Teil 6)",
+    "art": "tb",
+    "text": "§ 17 Absatz 2 Satz 5",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "§ 4 Absatz 1 Satz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 6",
@@ -964,6 +964,13 @@
     "art": "tb",
     "text": "die Jahresbeträge zugrunde zu legen, die vom Beginn des Wirtschaftsjahres, in dem das Dien",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 6a",
+    "pfad": "Abs. 3 Nr. 1 Halbs. 6",
+    "art": "tb",
+    "text": "bei nach dem 31. Dezember 2000",
+    "grund": "reine Zeitangabe"
   },
   {
     "norm": "§ 6a",
@@ -1041,6 +1048,13 @@
     "art": "tb",
     "text": "alle auf Grund des vorformulierten Vertragswerks neben den Anschaffungskosten im Sinne von",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 1 Satz 5",
+    "art": "tb",
+    "text": "ist der Einlagewert niedriger als dieser Wert",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 7",
@@ -1141,6 +1155,13 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
+    "norm": "§ 7b",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "tb",
+    "text": "die Festsetzungsfristen für das Jahr der Anschaffung oder Herstellung und für die",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
     "norm": "§ 7g",
     "pfad": "Abs. 1 Satz 1 (Teil 2)",
     "art": "tb",
@@ -1159,6 +1180,13 @@
     "pfad": "Abs. 2 Satz 3",
     "art": "tb",
     "text": "Die Anschaffungs- oder Herstellungskosten des Wirtschaftsguts",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 7g",
+    "pfad": "Abs. 2 Satz 3",
+    "art": "tb",
+    "text": "die Bemessungsgrundlage für die Absetzungen für Abnutzung",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -1205,6 +1233,20 @@
   },
   {
     "norm": "§ 8",
+    "pfad": "Abs. 2 Satz 5",
+    "art": "tb",
+    "text": "wenn für diese Fahrt ein Abzug von Werbungskosten nach § 9 Absatz 1 Satz 3 Nummer 5 Satz 5",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 2 Satz 5",
+    "art": "tb",
+    "text": "sinngemäß anzuwenden",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8",
     "pfad": "Abs. 2 Satz 11",
     "art": "tb",
     "text": "Sachbezüge, die nach Satz 1 zu bewerten sind, bleiben außer Ansatz",
@@ -1230,6 +1272,20 @@
     "art": "tb",
     "text": "Steuern vom Grundbesitz, sonstige öffentliche Abgaben und Versicherungsbeiträge, soweit so",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Nr. 4 Halbs. 5",
+    "art": "tb",
+    "text": "ist der Arbeitgeber selbst der Verkehrsträger",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Abs. 1 Nr. 4 Halbs. 7",
+    "art": "tb",
+    "text": "§ 3c Absatz 1",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 9",
@@ -1317,6 +1373,13 @@
   },
   {
     "norm": "§ 10",
+    "pfad": "Abs. 1 Buchst. a Halbs. 3",
+    "art": "tb",
+    "text": "§ 158 Absatz 2 des Versicherungsaufsichtsgesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 10",
     "pfad": "Abs. 1 Buchst. a Halbs. 4",
     "art": "tb",
     "text": "Wenn sich aus den Krankenversicherungsbeiträgen nach Satz 2 ein Anspruch auf Krankengeld o",
@@ -1352,6 +1415,13 @@
   },
   {
     "norm": "§ 10",
+    "pfad": "Abs. 1a Satz 5",
+    "art": "rf",
+    "text": "ist die Angabe der erteilten Identifikationsnummer (§ 139b der Abgabenordnung) des Berecht",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 10",
     "pfad": "Abs. 2 Satz 1 (Teil 3)",
     "art": "tb",
     "text": "werden Beiträge nur berücksichtigt",
@@ -1370,6 +1440,13 @@
     "art": "rf",
     "text": "hat das Versicherungsunternehmen, der Träger der gesetzlichen Kranken- und Pflegeversicher",
     "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 2b Satz 1",
+    "art": "tb",
+    "text": "sind Versicherungsnehmer und versicherte Person nicht identisch",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 10",
@@ -1401,13 +1478,6 @@
   },
   {
     "norm": "§ 10",
-    "pfad": "Abs. 3 Satz 4",
-    "art": "tb",
-    "text": "Der Prozentsatz in Satz 4",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 10",
     "pfad": "Abs. 4a Satz 1",
     "art": "tb",
     "text": "Ist in den Kalenderjahren 2013 bis 2019 der Abzug der Vorsorgeaufwendungen nach Absatz 1 N",
@@ -1415,17 +1485,10 @@
   },
   {
     "norm": "§ 10",
-    "pfad": "Abs. 4a Satz 2",
-    "art": "tb",
-    "text": "bei Anwendung des Satzes 1 der Betrag anzusetzen, der sich ergeben würde, wenn zusätzlich ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 10",
     "pfad": "Abs. 4a Satz 3",
     "art": "tb",
     "text": "die Beiträge nach Absatz 1 Nummer 2 Buchstabe b, soweit sie nicht den um die Beiträge nach",
-    "grund": "zu grob (59 Wörter)"
+    "grund": "zu grob (51 Wörter)"
   },
   {
     "norm": "§ 10",
@@ -1433,13 +1496,6 @@
     "art": "rf",
     "text": "haben Behörden im Sinne des § 6 Absatz 1 der Abgabenordnung und andere öffentliche Stellen",
     "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 10a",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "rf",
-    "text": "können Altersvorsorgebeiträge (§ 82) zuzüglich der dafür nach Abschnitt XI zustehenden Zul",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 10a",
@@ -1471,10 +1527,10 @@
   },
   {
     "norm": "§ 10a",
-    "pfad": "Abs. 4 Satz 3",
-    "art": "tb",
-    "text": "der nach Satz 1 festzustellende Betrag auch im Fall der Zusammenveranlagung jeweils getren",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "stellt das Finanzamt die über den Zulageanspruch nach Abschnitt XI hinausgehende Steuererm",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 10a",
@@ -1527,24 +1583,10 @@
   },
   {
     "norm": "§ 10e",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "rf",
-    "text": "sind die Sätze 1 bis 3 mit der Maßgabe anzuwenden, dass an die Stelle des Jahres der Ferti",
-    "grund": "zu grob (88 Wörter)"
-  },
-  {
-    "norm": "§ 10e",
     "pfad": "Abs. 4 Satz 3",
     "art": "tb",
     "text": "die erhöhten Absetzungen nach § 7b in der jeweiligen Fassung ab Inkrafttreten des Gesetzes",
     "grund": "zu grob (48 Wörter)"
-  },
-  {
-    "norm": "§ 10e",
-    "pfad": "Abs. 4 Satz 5",
-    "art": "rf",
-    "text": "ist der Abzugszeitraum für das Folgeobjekt um die Anzahl der Veranlagungszeiträume zu kürz",
-    "grund": "zu grob (80 Wörter)"
   },
   {
     "norm": "§ 10f",
@@ -1573,13 +1615,6 @@
     "art": "tb",
     "text": "soweit der Steuerpflichtige das Gebäude in dem jeweiligen Kalenderjahr zu eigenen Wohnzwec",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 10f",
-    "pfad": "Abs. 3 Satz 3",
-    "art": "tb",
-    "text": "sind; Entsprechendes gilt für Abzugsbeträge nach § 52 Absatz 21 Satz 7",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 10g",
@@ -1750,25 +1785,11 @@
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
-    "norm": "§ 14a",
-    "pfad": "Abs. 5 Satz 1 (Teil 2)",
-    "art": "rf",
-    "text": "Übersteigt das Einkommen den Betrag von 35 000 Deutsche Mark, so vermindert sich der Betra",
-    "grund": "zu grob (88 Wörter)"
-  },
-  {
     "norm": "§ 15",
     "pfad": "Abs. 1 Nr. 2",
     "art": "rf",
     "text": "anzusehen ist, und die",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 15",
-    "pfad": "Abs. 1 Nr. 2 Halbs. 2",
-    "art": "tb",
-    "text": "Gesellschafter steht dem unmittelbar beteiligten Gesellschafter gleich; er ist als Mitunte",
-    "grund": "zu grob (46 Wörter)"
   },
   {
     "norm": "§ 15",
@@ -1793,10 +1814,24 @@
   },
   {
     "norm": "§ 15",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "tb",
+    "text": "§ 10d Absatz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 15",
     "pfad": "Abs. 4 Satz 5",
     "art": "ausn",
     "text": "Satz 4 gilt nicht, wenn es sich um Geschäfte handelt, die der Absicherung von Aktiengeschä",
     "grund": "zu grob (58 Wörter)"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 4 Satz 7",
+    "art": "tb",
+    "text": "§ 10d Absatz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 15a",
@@ -1835,13 +1870,6 @@
   },
   {
     "norm": "§ 16",
-    "pfad": "Abs. 1 Nr. 1 Halbs. 2",
-    "art": "tb",
-    "text": "auch die das gesamte Nennkapital umfassende Beteiligung an einer Kapitalgesellschaft; im F",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 16",
     "pfad": "Abs. 1 Nr. 2",
     "art": "tb",
     "text": "des gesamten Anteils eines Gesellschafters, der als Unternehmer (Mitunternehmer) des Betri",
@@ -1849,10 +1877,10 @@
   },
   {
     "norm": "§ 16",
-    "pfad": "Abs. 3 Satz 3",
+    "pfad": "Abs. 3 Satz 2",
     "art": "tb",
-    "text": "für den jeweiligen Übertragungsvorgang rückwirkend der gemeine Wert anzusetzen, soweit bei",
-    "grund": "zu grob (59 Wörter)"
+    "text": "§ 4 Absatz 1 Satz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 16",
@@ -1870,10 +1898,24 @@
   },
   {
     "norm": "§ 16",
+    "pfad": "Abs. 3a Satz 1",
+    "art": "tb",
+    "text": "§ 4 Absatz 1 Satz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 16",
     "pfad": "Abs. 5 Satz 1",
     "art": "tb",
     "text": "Werden bei einer Realteilung, bei der Teilbetriebe auf einzelne Mitunternehmer übertragen ",
     "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "§ 22 Absatz 2 Satz 3 des Umwandlungssteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 17",
@@ -1940,6 +1982,13 @@
   },
   {
     "norm": "§ 18",
+    "pfad": "Abs. 1 Nr. 4",
+    "art": "tb",
+    "text": "§ 15 Absatz 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 18",
     "pfad": "Abs. 4 Satz 1",
     "art": "tb",
     "text": "§ 13 Absatz 5",
@@ -1965,13 +2014,6 @@
     "art": "tb",
     "text": "zur Wiederherstellung einer angemessenen Kapitalausstattung nach unvorhersehbaren Verluste",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 19",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "Sonderzahlungen des Arbeitgebers an eine Pensionskasse anlässlich der Systemumstellung ein",
-    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 19",
@@ -2002,13 +2044,6 @@
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
-    "norm": "§ 19",
-    "pfad": "Abs. 2 Satz 8",
-    "art": "tb",
-    "text": "die Sätze 3 bis 7 mit dem geänderten Versorgungsbezug als Bemessungsgrundlage im Sinne des",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 19a",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
@@ -2032,9 +2067,9 @@
   {
     "norm": "§ 19a",
     "pfad": "Abs. 4a Satz 1",
-    "art": "tb",
-    "text": "wenn der Arbeitgeber spätestens mit der dem betreffenden Ereignis folgenden Lohnsteuer-Anm",
-    "grund": "zu grob (57 Wörter)"
+    "art": "ausn",
+    "text": "Absatz 4 Satz 1 Nummer 2 und 3 ist nicht anzuwenden, wenn der Arbeitgeber spätestens mit d",
+    "grund": "zu grob (68 Wörter)"
   },
   {
     "norm": "§ 20",
@@ -2080,6 +2115,13 @@
   },
   {
     "norm": "§ 20",
+    "pfad": "Abs. 4 Satz 4",
+    "art": "tb",
+    "text": "ist ein entgeltlicher Erwerb vorausgegangen",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 20",
     "pfad": "Abs. 4 Satz 7",
     "art": "tb",
     "text": "Bei vertretbaren Wertpapieren, die einem Verwahrer zur Sammelverwahrung im Sinne des § 5 d",
@@ -2103,8 +2145,8 @@
     "norm": "§ 20",
     "pfad": "Abs. 9 Satz 3",
     "art": "tb",
-    "text": "bei der Einkunftsermittlung bei jedem Ehegatten je zur Hälfte abzuziehen; sind die Kapital",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "sind die Kapitalerträge eines Ehegatten niedriger als 1 000 Euro",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 21",
@@ -2171,6 +2213,13 @@
   },
   {
     "norm": "§ 22",
+    "pfad": "Satz 6",
+    "art": "tb",
+    "text": "§ 10d Absatz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 22",
     "pfad": "Satz 7",
     "art": "tb",
     "text": "Entschädigungen, Amtszulagen, Zuschüsse zu Kranken- und Pflegeversicherungsbeiträgen, Über",
@@ -2189,6 +2238,27 @@
     "art": "rf",
     "text": "angewendet wurden, nicht auf Zulagen im Sinne des Abschnitts XI, nicht auf Zahlungen im Si",
     "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Buchst. c (Teil 2)",
+    "art": "tb",
+    "text": "§ 20 Absatz 1 Nummer 6 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Satz 1 (Teil 6)",
+    "art": "tb",
+    "text": "§ 92a Absatz 3 Satz 9",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Satz 6 (Teil 2)",
+    "art": "tb",
+    "text": "§ 9a Satz 1 Nummer 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 22a",
@@ -2215,7 +2285,7 @@
     "norm": "§ 22a",
     "pfad": "Abs. 2 Satz 9",
     "art": "rf",
-    "text": "gelten ab dem 1. Januar 2027 für die mitteilungspflichtige Stelle nach Absatz 1 mit der Ma",
+    "text": "teilt das Bundeszentralamt für Steuern der mitteilungspflichtigen Stelle auf deren Anfrage",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
@@ -2234,13 +2304,6 @@
   },
   {
     "norm": "§ 23",
-    "pfad": "Abs. 1 Nr. 1 Halbs. 2",
-    "art": "tb",
-    "text": "einzubeziehen, soweit sie innerhalb dieses Zeitraums errichtet, ausgebaut oder erweitert w",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 23",
     "pfad": "Abs. 1 Nr. 1 Halbs. 3",
     "art": "tb",
     "text": "Wirtschaftsgüter, die im Zeitraum zwischen Anschaffung oder Fertigstellung und Veräußerung",
@@ -2252,6 +2315,13 @@
     "art": "tb",
     "text": "die Einlage eines Wirtschaftsguts in das Betriebsvermögen, wenn die Veräußerung aus dem Be",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 3 Satz 8",
+    "art": "tb",
+    "text": "§ 10d Absatz 4",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 24",
@@ -2514,6 +2584,13 @@
   },
   {
     "norm": "§ 32c",
+    "pfad": "Abs. 5 Satz 4",
+    "art": "ausn",
+    "text": "Satz 1 Nummer 3 und 4 findet keine Anwendung auf Einkünfte als Landwirt im Sinne des Artik",
+    "grund": "zu grob (61 Wörter)"
+  },
+  {
+    "norm": "§ 32c",
     "pfad": "Abs. 5 Satz 5",
     "art": "tb",
     "text": "L 347 vom 20.12.2013, S. 671; L 189 vom 27.6.2014, S. 261; L 130 vom 19.5.2016, S. 18; L 3",
@@ -2609,20 +2686,6 @@
     "art": "rf",
     "text": "beträgt bei einem Gesamtbetrag der Einkünfte bis 15 340 EUR über 15 340 EUR bis 51 130 EUR",
     "grund": "zu grob (84 Wörter)"
-  },
-  {
-    "norm": "§ 33a",
-    "pfad": "Abs. 1 Satz 4",
-    "art": "tb",
-    "text": "dass weder der Steuerpflichtige noch eine andere Person Anspruch auf einen Freibetrag nach",
-    "grund": "zu grob (54 Wörter)"
-  },
-  {
-    "norm": "§ 33a",
-    "pfad": "Abs. 1 Satz 5",
-    "art": "rf",
-    "text": "vermindert sich die Summe der nach Satz 1 und Satz 2 ermittelten Beträge um den Betrag, um",
-    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 33b",
@@ -2856,27 +2919,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 35c",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "dass das begünstigte Objekt bei der Durchführung der energetischen Maßnahme älter als zehn",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 35c",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "Zu den Aufwendungen für energetische Maßnahmen",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 35c",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "wenn der Energieberater durch den Steuerpflichtigen mit der planerischen Begleitung oder B",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
     "norm": "§ 36",
     "pfad": "Abs. 2 Buchst. b",
     "art": "tb",
@@ -2961,25 +3003,11 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 38a",
-    "pfad": "Abs. 1 Satz 2",
-    "art": "tb",
-    "text": "in dem Kalenderjahr als bezogen, in dem der Lohnzahlungszeitraum endet; in den Fällen des ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 38b",
     "pfad": "Abs. 1 Buchst. a",
     "art": "tb",
     "text": "wenn beide Ehegatten unbeschränkt einkommensteuerpflichtig sind und nicht dauernd getrennt",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 38b",
-    "pfad": "Abs. 1 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "wenn beide Ehegatten unbeschränkt einkommensteuerpflichtig sind und nicht dauernd getrennt",
-    "grund": "zu grob (73 Wörter)"
   },
   {
     "norm": "§ 38b",
@@ -3056,7 +3084,21 @@
     "pfad": "Abs. 1 Satz 3",
     "art": "rf",
     "text": "ist verpflichtet, den nach Satz 1 ermittelten Freibetrag ändern zu lassen",
-    "grund": "zu lang (>600 Zeichen)"
+    "grund": "zu grob (76 Wörter)"
+  },
+  {
+    "norm": "§ 39a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "tb",
+    "text": "ist im ersten Dienstverhältnis die Steuerklasse III maßgeblich",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 39a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "tb",
+    "text": "ist im ersten Dienstverhältnis die Steuerklasse V maßgeblich",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 39a",
@@ -3127,20 +3169,6 @@
     "art": "tb",
     "text": "für die Versicherung gegen Arbeitslosigkeit bei Arbeitnehmern, die in der Arbeitslosenvers",
     "grund": "zu grob (74 Wörter)"
-  },
-  {
-    "norm": "§ 39b",
-    "pfad": "Abs. 2 Satz 3 (Teil 2)",
-    "art": "tb",
-    "text": "In den Steuerklassen V und VI",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 39b",
-    "pfad": "Abs. 2 Satz 3 (Teil 2)",
-    "art": "rf",
-    "text": "ist die Jahreslohnsteuer zu berechnen, die sich aus dem Zweifachen des Unterschiedsbetrags",
-    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 39b",
@@ -3276,13 +3304,6 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 40",
-    "pfad": "Abs. 2 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "soweit die Bezüge den Betrag nicht übersteigen, den der Arbeitnehmer nach § 9 Absatz 1 Sat",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
     "norm": "§ 40a",
     "pfad": "Abs. 2 Satz 1",
     "art": "rf",
@@ -3312,20 +3333,6 @@
   },
   {
     "norm": "§ 40a",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "Aushilfskräfte im Sinne dieser Vorschrift",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 40a",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "wenn deren Dauer 25 Prozent der Gesamtbeschäftigungsdauer nicht überschreitet",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 40a",
     "pfad": "Abs. 3 Satz 3",
     "art": "tb",
     "text": "nicht Arbeitnehmer, die zu den land- und forstwirtschaftlichen Fachkräften gehören oder di",
@@ -3337,13 +3344,6 @@
     "art": "tb",
     "text": "bei Arbeitnehmern, die für eine andere Beschäftigung von demselben Arbeitgeber Arbeitslohn",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 40a",
-    "pfad": "Abs. 6 Satz 4",
-    "art": "tb",
-    "text": "Die Deutsche Rentenversicherung Knappschaft-Bahn-See",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 40b",
@@ -3384,8 +3384,8 @@
     "norm": "§ 41a",
     "pfad": "Abs. 2 Satz 2",
     "art": "tb",
-    "text": "das Kalendervierteljahr, wenn die abzuführende Lohnsteuer für das vorangegangene Kalenderj",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "ist das Kalenderjahr",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 41a",
@@ -3454,8 +3454,8 @@
     "norm": "§ 41c",
     "pfad": "Abs. 3 Satz 5",
     "art": "tb",
-    "text": "der Arbeitgeber die bereits übermittelte oder ausgestellte Lohnsteuerbescheinigung zu beri",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "§ 41b Absatz 1",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 42b",

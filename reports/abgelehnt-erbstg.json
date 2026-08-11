@@ -204,17 +204,10 @@
   },
   {
     "norm": "§ 13",
-    "pfad": "Abs. 1 Satz 3",
-    "art": "rf",
-    "text": "fällt mit Wirkung für die Vergangenheit weg",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 13",
-    "pfad": "Abs. 1 Satz 9",
+    "pfad": "Abs. 1 Satz 14",
     "art": "tb",
-    "text": "wenn der Erwerber das Familienheim innerhalb von zehn Jahren nach dem Erwerb nicht mehr zu",
-    "grund": "zu grob (93 Wörter)"
+    "text": "sofern der Erwerb zusammen mit dem übrigen Vermögen des Erwerbers 41 000 Euro nicht überst",
+    "grund": "zu grob (55 Wörter)"
   },
   {
     "norm": "§ 13",
@@ -435,6 +428,13 @@
   },
   {
     "norm": "§ 13a",
+    "pfad": "Abs. 9 Nr. 1",
+    "art": "tb",
+    "text": "Entnahmen zur Begleichung der auf den Gewinnanteil oder die Ausschüttungen aus der Gesells",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 13a",
     "pfad": "Abs. 9 Nr. 2",
     "art": "tb",
     "text": "die Verfügung über die Beteiligung an der Personengesellschaft oder den Anteil an der Kapi",
@@ -533,13 +533,6 @@
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 4 Satz 1 (Teil 2)",
-    "art": "rf",
-    "text": "c) sowohl der überlassende Betrieb als auch der nutzende Betrieb zu einem Konzern im Sinne",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 13b",
     "pfad": "Abs. 4 Satz 2",
     "art": "tb",
     "text": "Anteile an Kapitalgesellschaften",
@@ -584,8 +577,8 @@
     "norm": "§ 13b",
     "pfad": "Abs. 4 Satz 9",
     "art": "tb",
-    "text": "wenn die Tätigkeit durch Gesellschaften im Sinne des § 13 Absatz 7, des § 15 Absatz 1 Satz",
-    "grund": "zu grob (100 Wörter)"
+    "text": "wenn sie ihrer Tätigkeit nach einer Gesellschaft im Sinne des § 15 Absatz 1 Satz 1 Nummer ",
+    "grund": "zu grob (64 Wörter)"
   },
   {
     "norm": "§ 13b",
