@@ -32,7 +32,75 @@
  */
 
 const ENDPUNKT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
+const MODELLLISTE = "https://generativelanguage.googleapis.com/v1beta/openai/models";
 const TIMEOUT_MS = 90_000;
+
+/**
+ * Welche Modelle dieser Schlüssel wirklich benutzen darf.
+ *
+ * WARUM DAS SEIN MUSS. Ein fest eingetragener Modellname überlebt keinen
+ * Zeitraum: Google zieht Modelle zurück und benennt sie um, ohne Ankündigung.
+ * Die API antwortet dann mit HTTP 404 („models/… is not found for API version
+ * v1beta") — derselben Zahl, die auch ein falscher Pfad liefert, und einer
+ * ganz anderen als bei einem ungültigen Schlüssel (400 oder 403). Wer das
+ * nicht auseinanderhält, sucht den Fehler beim Schlüssel und findet ihn nie.
+ *
+ * Der Aufruf ist billig und zählt nicht gegen das Tageskontingent für
+ * Generierungen.
+ *
+ * @returns {Promise<string[]>} Modellkennungen, kürzeste zuerst
+ */
+export async function verfuegbareModelle(token) {
+  const antwort = await fetch(MODELLLISTE, {
+    headers: { Authorization: `Bearer ${token}` },
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!antwort.ok) {
+    const text = (await antwort.text().catch(() => "")).slice(0, 300);
+    throw new Error(`Modellliste nicht abrufbar (HTTP ${antwort.status}). ${text}`);
+  }
+  const daten = await antwort.json();
+  return (daten.data || [])
+    .map((m) => String(m.id || "").replace(/^models\//, ""))
+    .filter(Boolean)
+    .sort();
+}
+
+/**
+ * Gewünschte Modelle gegen die tatsächlich verfügbaren abgleichen.
+ *
+ * Fehlt ein gewünschtes Modell, wird NICHT stillschweigend etwas anderes
+ * genommen — der Ersatz wird zurückgegeben und vom Aufrufer protokolliert.
+ * Gesucht wird ein Modell derselben Familie (`flash` bleibt `flash`), weil
+ * Kosten, Tempo und Kontingent daran hängen.
+ *
+ * @returns {{ modelle: string[], ersetzt: Array<{ gewuenscht: string, statt: string|null }> }}
+ */
+export function modelleAbgleichen(gewuenscht, verfuegbar) {
+  const da = new Set(verfuegbar);
+  const modelle = [];
+  const ersetzt = [];
+
+  for (const wunsch of gewuenscht) {
+    if (da.has(wunsch)) { modelle.push(wunsch); continue; }
+
+    /* Ersatz aus derselben Familie: „gemini-2.5-flash" → irgendein anderes
+       Flash-Modell, aber kein Pro (anderes Kontingent) und keine Vorschau
+       oder Bildvariante (anderer Zweck, anderes Antwortformat). */
+    const familie = /pro/.test(wunsch) ? "pro" : "flash";
+    const kandidaten = verfuegbar.filter((m) =>
+      m.startsWith("gemini-")
+      && m.includes(familie)
+      && !/embedding|image|vision|tts|audio|live|thinking/.test(m));
+    /* Neueste zuerst: Die Kennungen tragen die Fassung im Namen. */
+    kandidaten.sort((a, b) => b.localeCompare(a, "en", { numeric: true }));
+    const statt = kandidaten.find((m) => !modelle.includes(m)) || null;
+    ersetzt.push({ gewuenscht: wunsch, statt });
+    if (statt) modelle.push(statt);
+  }
+  return { modelle, ersetzt };
+}
+
 
 /**
  * Mindestabstand zwischen zwei Anfragen. Gemini begrenzt die Freistufe je nach
@@ -56,6 +124,10 @@ export class ModellBudgetErschoepft extends Error {}
  *  damit jede Stelle, die auf einen kontrollierten Gesamtabbruch reagiert, das
  *  automatisch mit erfasst — auch ohne dort eigens geändert zu werden. */
 export class ModellTageslimitErschoepft extends ModellBudgetErschoepft {}
+/** Das angeforderte Modell gibt es nicht (mehr). Erbt aus demselben Grund von
+ *  ModellBudgetErschoepft: Weiterlaufen hat keinen Zweck, jeder weitere Aufruf
+ *  scheiterte identisch. */
+export class ModellNichtVorhanden extends ModellBudgetErschoepft {}
 
 /* ─────────────────────────── Systemvorgaben ─────────────────────────── */
 
@@ -241,6 +313,19 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
       if (versuch >= 4) throw new ModellTageslimitErschoepft("Gemini-Freistufe: Kontingent wiederholt erschöpft (HTTP 429)");
       await warte(warten);
       continue;
+    }
+    /* 404 ist NICHT „Kontingent erschöpft" und NICHT „Schlüssel falsch".
+       Ein ungültiger Schlüssel antwortet mit 400 oder 403. 404 heißt: Diesen
+       Modellnamen gibt es unter dieser API-Fassung nicht — meist, weil Google
+       ihn zurückgezogen hat. Die alte Meldung sprach von Kontingent und
+       schickte damit in die falsche Richtung. */
+    if (antwort.status === 404) {
+      throw new ModellNichtVorhanden(
+        `Modell „${modell}" gibt es unter dieser API-Fassung nicht (HTTP 404). `
+        + "Das liegt nicht am Schlüssel — ein ungültiger antwortet mit 400 oder 403. "
+        + "Verfügbare Modelle zeigt: node tools/modelle-zeigen.mjs. "
+        + text.slice(0, 150),
+      );
     }
     if ((antwort.status === 400 || antwort.status === 422) && body.response_format) {
       body.response_format = { type: "json_object" };

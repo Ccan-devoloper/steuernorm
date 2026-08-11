@@ -75,6 +75,24 @@ jobs:
           set -euo pipefail
           find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
           node -e 'JSON.parse(require("fs").readFileSync("config/handbuecher.json","utf8"))'
+          # Der Modellabgleich muss ohne Netz prüfbar sein: Er entscheidet, ob
+          # ein Lauf überhaupt startet, und ein Fehler darin fällt sonst erst
+          # nach zwanzig Minuten verbranntem Kontingent auf.
+          node -e '
+            const m = await import("./tools/lib/modell.mjs");
+            const da = ["gemini-2.0-flash","gemini-3-flash","gemini-3-pro","gemini-3-flash-image"];
+            const gleich = (a,b,was) => {
+              if (JSON.stringify(a) !== JSON.stringify(b)) {
+                console.error("Modellabgleich falsch bei " + was + ": " + JSON.stringify(a));
+                process.exit(1);
+              }
+            };
+            gleich(m.modelleAbgleichen(["gemini-3-flash"], da).modelle, ["gemini-3-flash"], "vorhanden");
+            gleich(m.modelleAbgleichen(["gemini-2.5-flash"], da).modelle, ["gemini-3-flash"], "Ersatz aus der Familie");
+            gleich(m.modelleAbgleichen(["gemini-9-pro"], da).modelle, ["gemini-3-pro"], "pro bleibt pro");
+            gleich(m.modelleAbgleichen(["gemini-2.5-flash"], []).modelle, [], "kein Ersatz");
+            console.log("Modellabgleich ok");
+          ' --input-type=module
           node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
           node tools/pruefen.mjs --nur solzg --streng
           node tools/konsistenz.mjs --nur solzg
@@ -123,15 +141,64 @@ jobs:
             echo "::warning::GEMINI_API_KEY ist nicht gesetzt — der Lauf bleibt rein syntaktisch (--ohne-ki)."
             echo "GEMINI_API_KEY nicht gesetzt. Kostenlosen Schlüssel holen: aistudio.google.com/app/apikey" >> "$GITHUB_STEP_SUMMARY"
           else
-            code="$(curl -s -o /dev/null -w '%{http_code}' \
+            # Gefragt wird nach der MODELLLISTE, nicht nach einem einzelnen
+            # Modell. Ein fest eingetragener Name überlebt keinen Zeitraum:
+            # Google zieht Modelle zurück, und die API antwortet dann mit 404 —
+            # derselben Zahl wie bei einem falschen Pfad, aber einer ganz
+            # anderen als bei einem ungültigen Schlüssel (400 oder 403). Wer
+            # das nicht auseinanderhält, sucht den Fehler beim Schlüssel.
+            antwort="$(mktemp)"
+            code="$(curl -s -o "$antwort" -w '%{http_code}' \
               -H "Authorization: Bearer $GEMINI_API_KEY" \
-              -H "Content-Type: application/json" \
-              -d '{"model":"gemini-2.5-flash","max_tokens":4,"messages":[{"role":"user","content":"ping"}]}' \
-              https://generativelanguage.googleapis.com/v1beta/openai/chat/completions || echo 000)"
-            echo "Gemini-API antwortet mit HTTP $code" | tee -a "$GITHUB_STEP_SUMMARY"
-            if [ "$code" != "200" ]; then
-              echo "::warning::Kein Modellzugang (HTTP $code). Schlüssel auf aistudio.google.com/app/apikey prüfen."
-            fi
+              https://generativelanguage.googleapis.com/v1beta/openai/models || echo 000)"
+
+            {
+              echo "### Modellzugang"
+              echo ""
+              echo "Modellliste: HTTP $code"
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            case "$code" in
+              200)
+                # Verfügbare Gemini-Modelle in die Zusammenfassung, damit bei
+                # der nächsten Rückziehung sofort dasteht, was es stattdessen
+                # gibt — statt nur, dass etwas fehlt.
+                modelle="$(node -e '
+                  const fs = require("fs");
+                  const d = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+                  const ids = (d.data || []).map((m) => String(m.id).replace(/^models\//, ""))
+                    .filter((m) => m.startsWith("gemini-")).sort();
+                  console.log(ids.join("\n"));
+                ' "$antwort")"
+                anzahl="$(printf "%s" "$modelle" | grep -c . || true)"
+                {
+                  echo ""
+                  echo "$anzahl Gemini-Modelle verfügbar:"
+                  echo ""
+                  echo '```'
+                  printf "%s\n" "$modelle"
+                  echo '```'
+                } >> "$GITHUB_STEP_SUMMARY"
+                echo "Modellzugang steht: $anzahl Gemini-Modelle."
+                ;;
+              400|401|403)
+                echo "::error::Der Schlüssel wird abgelehnt (HTTP $code). GEMINI_API_KEY neu erzeugen: aistudio.google.com/app/apikey"
+                echo "" >> "$GITHUB_STEP_SUMMARY"
+                echo "**Der Schlüssel wird abgelehnt.** Neu erzeugen auf aistudio.google.com/app/apikey und das Secret ersetzen." >> "$GITHUB_STEP_SUMMARY"
+                head -c 400 "$antwort" >> "$GITHUB_STEP_SUMMARY" || true
+                ;;
+              404)
+                echo "::error::Der Endpunkt antwortet mit 404 — nicht der Schlüssel ist das Problem, sondern Pfad oder API-Fassung."
+                echo "" >> "$GITHUB_STEP_SUMMARY"
+                echo "**HTTP 404 auf der Modellliste.** Das betrifft den Endpunkt, nicht den Schlüssel." >> "$GITHUB_STEP_SUMMARY"
+                head -c 400 "$antwort" >> "$GITHUB_STEP_SUMMARY" || true
+                ;;
+              *)
+                echo "::warning::Modellliste nicht abrufbar (HTTP $code)."
+                head -c 400 "$antwort" >> "$GITHUB_STEP_SUMMARY" || true
+                ;;
+            esac
+            rm -f "$antwort"
           fi
 
       - name: Annotationen erzeugen oder aufwerten

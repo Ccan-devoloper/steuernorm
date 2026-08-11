@@ -26,6 +26,7 @@ import { zerlege as syntaxZerlege, NICHT_MARKIEREN } from "./lib/syntax.mjs";
 import { baueSchema, fuehreZusammen, normText } from "./lib/konsens.mjs";
 import {
   einAufruf, extrahiereMehrfach, gegenprobe,
+  verfuegbareModelle, modelleAbgleichen,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
 // ModellTageslimitErschoepft wird nicht eigens importiert — sie erbt von
@@ -51,7 +52,12 @@ const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
 // Zwei unterschiedliche Gemini-Modelle für die Mehrfachläufe — dieselbe Überlegung
 // wie zuvor bei zwei OpenAI-Modellen: getrennte Modelle irren seltener übereinstimmend
 // als zwei Temperaturen desselben Modells. Beide liegen auf der kostenlosen Freistufe.
-const MODELLE = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash").split(",").map((s) => s.trim()).filter(Boolean);
+const MODELLWUNSCH = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash").split(",").map((s) => s.trim()).filter(Boolean);
+/* Wird gleich gegen die tatsächlich verfügbaren Modelle abgeglichen. Ein fest
+   eingetragener Name überlebt keinen Zeitraum: Google zieht Modelle zurück,
+   und die API antwortet dann mit HTTP 404 — derselben Zahl wie bei einem
+   falschen Pfad, aber einer ganz anderen als bei einem ungültigen Schlüssel. */
+let MODELLE = MODELLWUNSCH;
 const aufwerten = hat("--aufwerten");
 const ohneKi = hat("--ohne-ki") || !TOKEN;
 
@@ -84,6 +90,43 @@ const nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null
 const hash = (s) => createHash("sha256").update(s).digest("hex");
 
 /* ─────────────────────────── Lauf ─────────────────────────── */
+
+/* ── Modelle gegen den Schlüssel abgleichen ──────────────────────────
+   Vor dem ersten Normlauf, nicht mittendrin: Ein Lauf, der nach zwanzig
+   Minuten an einem zurückgezogenen Modellnamen scheitert, hat zwanzig Minuten
+   Kontingent verbrannt. Der Aufruf ist billig und zählt nicht gegen das
+   Tageskontingent für Generierungen. */
+if (!ohneKi) {
+  try {
+    const verfuegbar = await verfuegbareModelle(TOKEN);
+    const { modelle, ersetzt } = modelleAbgleichen(MODELLWUNSCH, verfuegbar);
+
+    for (const { gewuenscht, statt } of ersetzt) {
+      if (statt) console.error(`  ⚠  Modell ${gewuenscht} gibt es nicht mehr — es läuft ${statt}.`);
+      else console.error(`  ⚠  Modell ${gewuenscht} gibt es nicht mehr, und kein Ersatz derselben Familie ist verfügbar.`);
+    }
+    if (!modelle.length) {
+      console.error("");
+      console.error("  ⚠  Keines der gewünschten Modelle ist mit diesem Schlüssel erreichbar.");
+      console.error("     Verfügbar wären:");
+      for (const m of verfuegbar.filter((m) => m.startsWith("gemini-")).slice(0, 25)) {
+        console.error("       " + m);
+      }
+      console.error("");
+      console.error("     Gewünscht war: " + MODELLWUNSCH.join(", "));
+      console.error("     Setzen über KI_MODELLE, etwa: KI_MODELLE=" + (verfuegbar[0] || "…"));
+      process.exit(3);
+    }
+    MODELLE = modelle;
+    console.error(`  Modelle: ${MODELLE.join(", ")}  (von ${verfuegbar.length} verfügbaren)`);
+  } catch (fehler) {
+    /* Die Liste ist eine Hilfe, kein Muss. Ist sie nicht abrufbar, wird mit
+       dem Wunsch weitergearbeitet — scheitert der dann, sagt der Fehler des
+       ersten Aufrufs, woran es lag. */
+    console.error("  ⚠  Modellliste nicht abrufbar: " + fehler.message);
+    console.error("     Es wird mit " + MODELLWUNSCH.join(", ") + " weitergearbeitet.");
+  }
+}
 
 const register = JSON.parse(await readFile(path.join(DATEN, "index.json"), "utf8"));
 const gesetze = register.gesetze.filter((m) => !nur || [m.abk, m.slug, m.datei].some((k) => nur.has(kurz(k))));

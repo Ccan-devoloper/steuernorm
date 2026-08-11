@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-10T09:19:19.679Z",
+  "erzeugt": "2026-08-11T06:13:40.988Z",
   "format": 5,
   "modelle": [
     "nur-syntax"
@@ -7,129 +7,12 @@
   "laeufe": 0,
   "gesetze": [
     {
-      "abk": "AO",
-      "normen": 503,
-      "bearbeitet": 503,
-      "uebernommen": 0,
-      "markierbar": 495,
-      "abgelehnt": 335,
-      "vollstaendig": true
-    },
-    {
-      "abk": "BewG",
-      "normen": 204,
-      "bearbeitet": 204,
-      "uebernommen": 0,
-      "markierbar": 151,
-      "abgelehnt": 166,
-      "vollstaendig": true
-    },
-    {
-      "abk": "EStG",
-      "normen": 247,
-      "bearbeitet": 247,
-      "uebernommen": 0,
-      "markierbar": 221,
-      "abgelehnt": 732,
-      "vollstaendig": true
-    },
-    {
-      "abk": "KStG",
-      "normen": 48,
-      "bearbeitet": 48,
-      "uebernommen": 0,
-      "markierbar": 44,
-      "abgelehnt": 115,
-      "vollstaendig": true
-    },
-    {
-      "abk": "UStG",
-      "normen": 93,
-      "bearbeitet": 93,
-      "uebernommen": 0,
-      "markierbar": 86,
-      "abgelehnt": 237,
-      "vollstaendig": true
-    },
-    {
-      "abk": "GewStG",
-      "normen": 41,
-      "bearbeitet": 41,
-      "uebernommen": 0,
-      "markierbar": 38,
-      "abgelehnt": 64,
-      "vollstaendig": true
-    },
-    {
-      "abk": "ErbStG",
-      "normen": 47,
-      "bearbeitet": 47,
-      "uebernommen": 0,
-      "markierbar": 44,
-      "abgelehnt": 124,
-      "vollstaendig": true
-    },
-    {
-      "abk": "GrStG",
-      "normen": 38,
-      "bearbeitet": 38,
-      "uebernommen": 0,
-      "markierbar": 38,
-      "abgelehnt": 29,
-      "vollstaendig": true
-    },
-    {
-      "abk": "FGO",
-      "normen": 173,
-      "bearbeitet": 173,
-      "uebernommen": 0,
-      "markierbar": 166,
-      "abgelehnt": 36,
-      "vollstaendig": true
-    },
-    {
-      "abk": "GrEStG",
-      "normen": 28,
-      "bearbeitet": 28,
-      "uebernommen": 0,
-      "markierbar": 27,
-      "abgelehnt": 65,
-      "vollstaendig": true
-    },
-    {
-      "abk": "UmwStG",
-      "normen": 28,
-      "bearbeitet": 28,
-      "uebernommen": 0,
-      "markierbar": 23,
-      "abgelehnt": 45,
-      "vollstaendig": true
-    },
-    {
-      "abk": "AStG",
-      "normen": 23,
-      "bearbeitet": 23,
-      "uebernommen": 0,
-      "markierbar": 20,
-      "abgelehnt": 54,
-      "vollstaendig": true
-    },
-    {
       "abk": "SolzG",
       "normen": 6,
-      "bearbeitet": 6,
-      "uebernommen": 0,
+      "bearbeitet": 0,
+      "uebernommen": 6,
       "markierbar": 5,
-      "abgelehnt": 7,
-      "vollstaendig": true
-    },
-    {
-      "abk": "InvStG",
-      "normen": 58,
-      "bearbeitet": 58,
-      "uebernommen": 0,
-      "markierbar": 57,
-      "abgelehnt": 117,
+      "abgelehnt": 0,
       "vollstaendig": true
     }
   ],

@@ -19,6 +19,7 @@
     "browser": "node tools/browser-pruefen.mjs",
     "struktur": "node tools/struktur.mjs",
     "fassungen": "node tools/fassungen.mjs",
+    "modelle": "node tools/modelle-zeigen.mjs",
     "schriften": "node tools/schriften-holen.mjs",
     "pruefen:alle": "node tools/pruefen.mjs && node tools/frontend-pruefen.mjs && node tools/browser-pruefen.mjs"
   },
