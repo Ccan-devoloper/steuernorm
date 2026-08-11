@@ -51,6 +51,11 @@ const d = window.document;
 const pruef = [];
 const ok = (name, bedingung, zusatz = "") => pruef.push({ name, bestanden: Boolean(bedingung), zusatz });
 
+/* `S` und die Funktionen des Frontends sind `const` im Skriptkopf und liegen
+   damit im lexikalischen Globalbereich, nicht am `window`. Erreichbar sind sie
+   über `eval` im selben Bereich. */
+const js = (ausdruck) => window.eval(ausdruck);
+
 /* ── Grundraster ── */
 ok("Kein Ladefehler", !d.querySelector(".melder"));
 ok("Kopfleiste vorhanden", d.querySelector(".kopf .wortmarke"));
@@ -75,12 +80,26 @@ ok("Fassung aus dem Standtext", etiketten.some((t) => t === "Fassung 23.12.2024"
 ok("Maschinelle Zutat gekennzeichnet",
   (d.querySelector(".meta") || {}).textContent.includes("nicht redaktionell geprüft"));
 
-/* ── Der Wortlaut bleibt unangetastet ── */
-const wortlaut = (d.querySelector(".lesespalte") || {}).textContent || "";
-ok("Keine Kategorienamen im Wortlaut", !/\b(Tatbestand|Rechtsfolge)\b/.test(wortlaut));
+/* ── Der Wortlaut bleibt unangetastet ──
+   Maßgeblich ist der KANONISCHE Volltext, den `textindex` bildet — auf ihm
+   rechnen Struktur-Einfärbung, Markierungen und Verwaltungsstellen. Die
+   Anzeige darf Adressen tragen (Absatz- und Satznummern), der kanonische Text
+   nicht: Jedes zusätzliche Zeichen dort verschöbe die Farben. */
+const angezeigt = (d.querySelector(".lesespalte") || {}).textContent || "";
+const kanonisch = js("textindex(document.querySelector('.lesespalte')).text");
+ok("Keine Kategorienamen im Wortlaut", !/\b(Tatbestand|Rechtsfolge)\b/.test(angezeigt));
 ok("Wortlaut beginnt wie im Gesetz",
-  wortlaut.trim().startsWith("Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5"),
-  wortlaut.trim().slice(0, 50));
+  kanonisch.trim().startsWith("Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5"),
+  kanonisch.trim().slice(0, 50));
+
+/* ── Absatzbezeichnung steht im Text ── */
+const absatzmarken = [...d.querySelectorAll(".lesespalte .an")].map((x) => x.textContent);
+ok("Jeder Absatz trägt seine Bezeichnung",
+  absatzmarken.join(" ") === "(1) (2) (2a) (3) (4) (4a) (5)", absatzmarken.join(" "));
+ok("Die Bezeichnung steht vor dem Wortlaut",
+  angezeigt.trim().startsWith("(1)"), angezeigt.trim().slice(0, 20));
+ok("Die Bezeichnung bleibt aus dem kanonischen Text heraus",
+  !kanonisch.includes("(2a)"), kanonisch.slice(0, 0));
 
 /* ── Apparat ── */
 const register = [...d.querySelectorAll(".register button")].map((b) => b.textContent);
@@ -103,12 +122,7 @@ ok("Mappe hat einen Namen", Boolean(mappen[0] && mappen[0].name), mappen[0] && m
 ok("Fuß nennt den Speicherort",
   (d.querySelector(".mappe-fuss") || {}).textContent.includes("nur in diesem Browser"));
 
-/* Eine Markierung anlegen und nachsehen, wo sie liegt.
-   `S` ist eine `const` im Skriptkopf und liegt damit im lexikalischen
-   Globalbereich, nicht am `window`. Erreichbar ist sie über `eval` im selben
-   Bereich — deshalb hier `js()` statt `window.S`. */
-const js = (ausdruck) => window.eval(ausdruck);
-
+/* Eine Markierung anlegen und nachsehen, wo sie liegt. */
 const vorher = js("S.markierungen.length");
 js('auswahlMarkieren("Der Solidaritätszuschlag")');
 const neueId = js("S.markierungen[S.markierungen.length - 1].id");

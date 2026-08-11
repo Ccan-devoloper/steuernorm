@@ -31,7 +31,14 @@ permissions:
 
 concurrency:
   group: steuernorm-pages
-  cancel-in-progress: true
+  # NICHT abbrechen. Der Lauf wird von drei Ereignissen ausgelöst, und zwei
+  # davon treffen bei jedem Push zusammen: der Push selbst und der Abschluss
+  # von „Annotationen erzeugen“, das derselbe Push angestoßen hat. Mit
+  # `cancel-in-progress: true` räumte der zweite den ersten regelmäßig ab —
+  # dreimal in Folge stand „cancelled“ im Verlauf, und ob überhaupt
+  # veröffentlicht wurde, hing daran, dass der Nachzügler durchlief.
+  # Eine abgebrochene Veröffentlichung ist schlimmer als eine wartende.
+  cancel-in-progress: false
 
 jobs:
   deploy:

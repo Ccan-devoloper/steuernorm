@@ -149,9 +149,156 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   const wortlaut = (await seite.textContent(".lesespalte")) || "";
   ok("Keine Kategorienamen im Wortlaut",
     !/\b(Tatbestand|Rechtsfolge)\b/.test(wortlaut));
+
+  /* Maßgeblich ist der KANONISCHE Volltext — auf ihm rechnen Einfärbung,
+     Markierungen und Verwaltungsstellen. Die Anzeige trägt zusätzlich die
+     Absatzbezeichnung; sie darf im kanonischen Text NICHT auftauchen, sonst
+     verschöbe sich jede Zeichenposition um drei Stellen je Absatz. */
+  const kanonisch = await seite.evaluate(() =>
+    textindex(document.querySelector(".lesespalte")).text);
   ok("Wortlaut beginnt wie im Gesetz",
-    wortlaut.trim().startsWith("Der Solidaritätszuschlag bemisst sich"),
-    wortlaut.trim().slice(0, 46));
+    kanonisch.trim().startsWith("Der Solidaritätszuschlag bemisst sich"),
+    kanonisch.trim().slice(0, 46));
+  ok("Absatzbezeichnung steht in der Anzeige",
+    wortlaut.trim().startsWith("(1)"), wortlaut.trim().slice(0, 16));
+  ok("Absatzbezeichnung bleibt aus dem kanonischen Text heraus",
+    !/^\(1\)/.test(kanonisch.trim()) && !kanonisch.includes("(2a)"));
+
+  /* Kopieren darf die Bezeichnung nicht mitnehmen: Sie ist Adresse, nicht
+     Wortlaut. `user-select:none` sorgt dafür. */
+  const auswahl = await seite.evaluate(() => {
+    const bereich = document.createRange();
+    bereich.selectNodeContents(document.querySelector(".lesespalte .absatz"));
+    const s = window.getSelection();
+    s.removeAllRanges(); s.addRange(bereich);
+    const text = s.toString();
+    s.removeAllRanges();
+    return text;
+  });
+  ok("Kopierter Text trägt die Bezeichnung nicht", !auswahl.trim().startsWith("(1)"),
+    auswahl.trim().slice(0, 24));
+  await ctx.close();
+}
+
+/* ── 4a. Ein Reiter je Gesetz, nicht je Norm ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  const reiter = () => seite.evaluate(() =>
+    [...document.querySelectorAll(".reiter")].map((r) =>
+      r.querySelector(".reiter-abk").textContent + " " + r.querySelector(".nr").textContent));
+
+  await seite.goto(WURZEL + "/#/estg/6", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  ok("Ein Gesetz, ein Reiter", (await reiter()).join("|") === "EStG § 6", (await reiter()).join("|"));
+
+  /* Zweite Norm DESSELBEN Gesetzes: derselbe Reiter, neuer Stand.
+     Gewartet wird auf den Zustand, nicht auf die Uhr — sonst misst die
+     Prüfung die Ladezeit von 9 MB Annotationen statt des Verhaltens. */
+  await seite.evaluate(() => { location.hash = "#/estg/7"; });
+  await seite.waitForFunction(() =>
+    (document.querySelector("h1") || {}).textContent.startsWith("§ 7"), null, { timeout: 15000 });
+  ok("Norm desselben Gesetzes öffnet keinen zweiten Reiter",
+    (await reiter()).join("|") === "EStG § 7", (await reiter()).join("|"));
+
+  /* Anderes Gesetz: neuer Reiter. */
+  await seite.evaluate(() => { location.hash = "#/ustg/4"; });
+  await seite.waitForFunction(() =>
+    document.querySelectorAll(".reiter").length === 2, null, { timeout: 20000 });
+  ok("Ein anderes Gesetz bekommt einen eigenen Reiter",
+    (await reiter()).join("|") === "EStG § 7|UStG § 4", (await reiter()).join("|"));
+  ok("Die Zählung spricht von Gesetzen",
+    ((await seite.textContent(".reiter-zahl")) || "").includes("2 geöffnete Gesetze"),
+    await seite.textContent(".reiter-zahl"));
+
+  /* Der Reiter merkt sich seinen Stand. */
+  await seite.click(".reiter:first-child");
+  await seite.waitForFunction(() =>
+    (document.querySelector("h1") || {}).textContent.startsWith("§ 7"), null, { timeout: 20000 });
+  ok("Der Reiter kehrt zur zuletzt gelesenen Norm zurück",
+    ((await seite.textContent("h1")) || "").startsWith("§ 7"), await seite.textContent("h1"));
+
+  /* Schließen entfernt das Gesetz, nicht die Norm. */
+  await seite.click(".reiter:first-child .zu");
+  await seite.waitForFunction(() =>
+    document.querySelectorAll(".reiter").length === 1, null, { timeout: 20000 });
+  ok("Schließen nimmt das ganze Gesetz",
+    (await reiter()).join("|") === "UStG § 4", (await reiter()).join("|"));
+  await ctx.close();
+}
+
+/* ── 4a2. Der Normtext steht in der Mitte und ist skalierbar ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const mitte = await seite.evaluate(() => {
+    const haupt = document.querySelector(".hauptspalte");
+    const raum = document.querySelector(".leseraum");
+    const h = haupt.getBoundingClientRect();
+    const r = raum.getBoundingClientRect();
+    return {
+      linksLuft: Math.round(r.left - h.left),
+      rechtsLuft: Math.round(h.right - r.right),
+      kopfLinks: Math.round(document.querySelector("h1").getBoundingClientRect().left),
+      raumLinks: Math.round(r.left),
+    };
+  });
+  ok("Normtext ist waagerecht zentriert",
+    Math.abs(mitte.linksLuft - mitte.rechtsLuft) < 40, JSON.stringify(mitte));
+  ok("Überschrift steht über dem Text, nicht daneben",
+    Math.abs(mitte.kopfLinks - mitte.raumLinks) < 2,
+    mitte.kopfLinks + " / " + mitte.raumLinks);
+
+  /* Die Rinne läuft mit, statt die Bezeichnungen oben zu stapeln. */
+  ok("Absatzrinne klebt",
+    (await seite.evaluate(() => getComputedStyle(document.querySelector(".rinne")).position))
+      === "sticky");
+
+  /* Schriftgrad */
+  const grad = () => seite.evaluate(() =>
+    Math.round(parseFloat(getComputedStyle(document.querySelector(".lesespalte")).fontSize) * 10) / 10);
+  const start = await grad();
+  ok("Voreinstellung 17,5 px", start === 17.5, String(start));
+  await seite.click("#schrift-groesser");
+  await seite.waitForTimeout(250);
+  const groesser = await grad();
+  ok("Plus vergrößert den Normtext", groesser > start, start + " → " + groesser);
+  await seite.click("#schrift-kleiner");
+  await seite.click("#schrift-kleiner");
+  await seite.waitForTimeout(250);
+  ok("Minus verkleinert ihn wieder", (await grad()) < start, String(await grad()));
+  ok("Der Wert steht am Schalter",
+    ((await seite.textContent("#schrift-wert")) || "").includes("px"),
+    await seite.textContent("#schrift-wert"));
+
+  /* Bis an die Enden, dann gesperrt statt ins Leere. */
+  for (let i = 0; i < 8; i++) await seite.click("#schrift-kleiner").catch(() => {});
+  await seite.waitForTimeout(250);
+  ok("Am unteren Ende gesperrt", await seite.isDisabled("#schrift-kleiner"));
+  for (let i = 0; i < 10; i++) await seite.click("#schrift-groesser").catch(() => {});
+  await seite.waitForTimeout(250);
+  ok("Am oberen Ende gesperrt", await seite.isDisabled("#schrift-groesser"));
+
+  /* Und der Grad übersteht den Neustart. */
+  const vorher = await grad();
+  await seite.reload({ waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  ok("Schriftgrad wird gemerkt", (await grad()) === vorher, vorher + " → " + (await grad()));
+  ok("Kein waagerechter Überlauf bei größter Schrift", !(await ueberlauf(seite)));
+
+  /* Die Darstellungswahl war bisher mit der Einfärbung ausgeblendet. */
+  await seite.goto(WURZEL + "/", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1400);
+  const aufStart = await seite.evaluate(() => ({
+    darstellung: getComputedStyle(document.getElementById("darstellung").parentElement).display,
+    einfaerben: getComputedStyle(document.querySelector(".einfaerben")).display,
+  }));
+  ok("Farbwahl bleibt auf der Startseite erreichbar",
+    aufStart.darstellung !== "none", aufStart.darstellung);
+  ok("Einfärben bleibt dort ausgeblendet", aufStart.einfaerben === "none", aufStart.einfaerben);
   await ctx.close();
 }
 
