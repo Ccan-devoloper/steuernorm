@@ -108,32 +108,47 @@ export async function modellAntwortet(token, modell) {
    Bild, Sprache, Robotik, Rechnersteuerung, Übersetzung, Werkzeugvarianten. */
 const SONDERZWECK = /embedding|image|vision|tts|audio|live|robotics|computer-use|omni|translate|customtools|thinking/;
 
-/** „gemini-3.6-flash" → 3.6; Aliasse ohne Zahl gelten als jüngste Fassung. */
+/** „gemini-3.6-flash" → 3.6. Aliasse tragen keine Zahl. */
 function fassung(kennung) {
   const treffer = /^gemini-(\d+(?:\.\d+)?)-/.exec(kennung);
-  if (treffer) return Number(treffer[1]);
-  return /-latest$/.test(kennung) ? Number.POSITIVE_INFINITY : -1;
+  return treffer ? Number(treffer[1]) : -1;
 }
 
 /**
  * Modelle nach Eignung ordnen — beste zuerst.
  *
- * Nach Familie (flash bleibt flash, pro bleibt pro, weil Tempo und Kontingent
- * daran hängen), dann nach Fassung absteigend, dann Vollfassung vor `-lite`
- * und Endfassung vor `-preview`. Ohne diese Ordnung gewann die reine
- * Zeichenkettensortierung — und lieferte `gemini-omni-flash-preview` als
- * Ersatz für ein Flash-Modell.
+ * DREI GRUPPEN, in dieser Reihenfolge:
+ *
+ *   1. Feste Endfassungen (gemini-3.6-flash)
+ *   2. Aliasse (gemini-flash-latest)
+ *   3. Vorschauen (…-preview)
+ *
+ * Warum der Alias NICHT vorn steht, obwohl er immer aktuell ist: Er wandert.
+ * Der Annotationsbericht hält fest, mit welchem Modell eine Zuordnung
+ * entstanden ist — bei `gemini-flash-latest` sagt dieser Eintrag nichts, weil
+ * dahinter heute ein anderes Modell steht als morgen. Für einen Bestand, der
+ * seine Herkunft belegen soll, ist ein wandernder Name wertlos. Der Alias
+ * bleibt als Auffangnetz, wenn keine feste Fassung antwortet.
+ *
+ * Innerhalb der Gruppen: Fassung absteigend, Vollfassung vor `-lite`. Ohne
+ * diese Ordnung gewann die reine Zeichenkettensortierung — und lieferte
+ * `gemini-omni-flash-preview` als Ersatz für ein Flash-Modell.
  */
 export function modelleOrdnen(verfuegbar, familie = "flash") {
+  const rang = (m) => [
+    /preview/.test(m) ? 2 : (fassung(m) < 0 ? 1 : 0),   // Endfassung, Alias, Vorschau
+    -fassung(m),                                        // jüngste zuerst
+    /-lite/.test(m) ? 1 : 0,                            // voll vor lite
+  ];
   return verfuegbar
     .filter((m) => m.startsWith("gemini-") && !SONDERZWECK.test(m)
       && (m.includes(familie) || /-latest$/.test(m)))
     .filter((m) => (familie === "pro" ? /pro/.test(m) : !/pro/.test(m)))
-    .sort((a, b) =>
-      fassung(b) - fassung(a)
-      || (/-lite/.test(a) ? 1 : 0) - (/-lite/.test(b) ? 1 : 0)
-      || (/preview/.test(a) ? 1 : 0) - (/preview/.test(b) ? 1 : 0)
-      || a.localeCompare(b));
+    .sort((a, b) => {
+      const ra = rang(a), rb = rang(b);
+      for (let i = 0; i < ra.length; i++) if (ra[i] !== rb[i]) return ra[i] - rb[i];
+      return a.localeCompare(b);
+    });
 }
 
 /**
@@ -199,6 +214,21 @@ export class ModellTageslimitErschoepft extends ModellBudgetErschoepft {}
  *  ModellBudgetErschoepft: Weiterlaufen hat keinen Zweck, jeder weitere Aufruf
  *  scheiterte identisch. */
 export class ModellNichtVorhanden extends ModellBudgetErschoepft {}
+/**
+ * DIESES Modell ist am Kontingent — andere sind es womöglich nicht.
+ *
+ * Erbt bewusst NICHT von ModellBudgetErschoepft: Die Freistufe zählt je Modell
+ * getrennt. Ein erschöpftes gemini-3.6-flash sagt nichts über
+ * gemini-2.5-flash-lite. Der Aufrufer wechselt deshalb das Modell, statt den
+ * ganzen Lauf zu beenden; erst wenn alle stehen, ist der Tag vorbei.
+ */
+export class ModellPauseNoetig extends Error {
+  constructor(modell, meldung){ super(meldung); this.modell = modell; }
+}
+
+/** Modelle, die in diesem Lauf am Kontingent sind. */
+const ERSCHOEPFT = new Set();
+export const erschoepfteModelle = () => [...ERSCHOEPFT];
 
 /* ─────────────────────────── Systemvorgaben ─────────────────────────── */
 
@@ -372,16 +402,25 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
 
     if (antwort.status === 429) {
       folge429++;
-      // Zwei 429-Antworten TROTZ eingehaltener Mindestpause sind kein kurzer
-      // Ausreißer mehr, sondern deuten auf das Tageskontingent der Freistufe hin.
-      // Weiterversuchen brächte nichts — es bräuchte Stunden, keine Sekunden.
-      if (folge429 >= 2) {
-        throw new ModellTageslimitErschoepft(
-          `Gemini-Freistufe: Tages- oder Minutenkontingent erreicht (HTTP 429). ${text.slice(0, 150)}`,
-        );
+      /* WAS 429 HIER WIRKLICH HEISST. Die Freistufe begrenzt zweierlei:
+         Anfragen pro Minute und pro Tag. Beides antwortet mit 429 und
+         derselben Meldung („You exceeded your current quota"). Die bisherige
+         Regel — zwei 429 hintereinander gelten als Tagesende — hielt die
+         MINUTENgrenze für das Tagesende und beendete den Lauf nach 24
+         Aufrufen, obwohl eine Minute Warten gereicht hätte.
+
+         Gewartet wird jetzt ansteigend: 30 s, 90 s, 240 s. Erst wenn auch vier
+         Minuten nichts ändern, ist es keine Minutengrenze mehr — dann gilt
+         DIESES Modell als erschöpft und der Aufrufer nimmt das nächste. Die
+         Freistufe zählt je Modell getrennt. */
+      const stufen = [30_000, 90_000, 240_000];
+      const warten = Number(antwort.headers.get("retry-after") || 0) * 1_000
+        || stufen[folge429 - 1];
+      if (!warten) {
+        ERSCHOEPFT.add(modell);
+        throw new ModellPauseNoetig(modell,
+          `${modell}: Kontingent erschöpft, auch nach vier Minuten Pause (HTTP 429). ${text.slice(0, 120)}`);
       }
-      const warten = Number(antwort.headers.get("retry-after") || 0) * 1_000 || 15_000 * versuch;
-      if (versuch >= 4) throw new ModellTageslimitErschoepft("Gemini-Freistufe: Kontingent wiederholt erschöpft (HTTP 429)");
       await warte(warten);
       continue;
     }
@@ -439,8 +478,17 @@ export async function extrahiereMehrfach({ gesetz, norm, einheiten, vorschlag, b
   });
 
   const antworten = [];
+  /* Reihum über die Modelle, erschöpfte übersprungen. Steht eines am
+     Kontingent, ist der Tag nicht vorbei — die Freistufe zählt je Modell. */
+  const offen = () => modelle.filter((m) => !ERSCHOEPFT.has(m));
   for (let i = 0; i < laeufe; i++) {
-    const modell = modelle[i % modelle.length];
+    const verfuegbar = offen();
+    if (!verfuegbar.length) {
+      if (antworten.length) break;
+      throw new ModellTageslimitErschoepft(
+        `Alle Modelle am Kontingent: ${modelle.join(", ")}. Der Lauf setzt am nächsten Tag fort.`);
+    }
+    const modell = verfuegbar[i % verfuegbar.length];
     const temperatur = i === 0 ? 0 : 0.35;
     try {
       antworten.push(await einAufruf({
@@ -448,6 +496,10 @@ export async function extrahiereMehrfach({ gesetz, norm, einheiten, vorschlag, b
         modell, temperatur, token, budget,
       }));
     } catch (fehler) {
+      /* Ein erschöpftes Modell kostet einen Durchgang, nicht den Lauf: Der
+         Zähler geht zurück, damit derselbe Durchgang mit dem nächsten Modell
+         wiederholt wird. */
+      if (fehler instanceof ModellPauseNoetig){ i--; continue; }
       if (fehler instanceof ModellBudgetErschoepft) throw fehler;
       if (antworten.length === 0) throw fehler;
       break; // mit weniger Läufen weiterarbeiten, Konfidenz sinkt entsprechend
@@ -460,15 +512,31 @@ export async function extrahiereMehrfach({ gesetz, norm, einheiten, vorschlag, b
  * Gegenprobe: kategorisiert vorgelegte Spannen ohne Kenntnis der ersten Begründung.
  * @returns {Map<number,string>} Index → art
  */
-export async function gegenprobe({ satztext, spannen, modell, token, budget }) {
+export async function gegenprobe({ satztext, spannen, modell, modelle, token, budget }) {
   if (!spannen.length) return new Map();
   const nutzer = JSON.stringify({
     rechtssatz: satztext,
     ausschnitte: spannen.map((s, i) => ({ i, text: s.text })),
   });
-  const antwort = await einAufruf({
-    system: SYSTEM_GEGENPROBE, nutzer, schema: SCHEMA_GEGENPROBE,
-    modell, temperatur: 0, token, budget,
-  });
-  return new Map((antwort.urteile || []).map((u) => [u.i, u.art]));
+
+  /* Dieselbe Rotation wie im Mehrfachlauf: Ein Modell am Kontingent kostet die
+     Gegenprobe nicht, solange ein anderes antwortet. */
+  const kette = (modelle && modelle.length ? modelle : [modell])
+    .filter((m) => m && !ERSCHOEPFT.has(m));
+  if (!kette.length) throw new ModellTageslimitErschoepft("Alle Modelle am Kontingent.");
+
+  let letzter = null;
+  for (const m of kette) {
+    try {
+      const antwort = await einAufruf({
+        system: SYSTEM_GEGENPROBE, nutzer, schema: SCHEMA_GEGENPROBE,
+        modell: m, temperatur: 0, token, budget,
+      });
+      return new Map((antwort.urteile || []).map((u) => [u.i, u.art]));
+    } catch (fehler) {
+      if (!(fehler instanceof ModellPauseNoetig)) throw fehler;
+      letzter = fehler;
+    }
+  }
+  throw letzter || new ModellTageslimitErschoepft("Alle Modelle am Kontingent.");
 }

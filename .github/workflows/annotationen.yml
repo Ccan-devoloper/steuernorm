@@ -94,6 +94,15 @@ jobs:
             // die reine Zeichenkettensortierung wählte hier omni-flash-preview.
             gleich(m.modelleOrdnen(da, "flash"), ["gemini-3-flash","gemini-2.0-flash"], "Ordnung nach Fassung, kein Sonderzweck");
             gleich(m.modelleAbgleichen([], da).modelle, ["gemini-3-flash","gemini-2.0-flash"], "automatische Wahl");
+            // Feste Fassung vor wanderndem Alias vor Vorschau: Der Bericht hält
+            // fest, womit annotiert wurde, und ein Alias sagt darin nichts.
+            gleich(
+              m.modelleOrdnen(["gemini-flash-latest","gemini-2.0-flash","gemini-3-flash-preview"], "flash"),
+              ["gemini-2.0-flash","gemini-flash-latest","gemini-3-flash-preview"],
+              "Endfassung vor Alias vor Vorschau");
+            // Und der Fehler, der den Lauf zweimal angehalten hat: KI_MODELLE=""
+            // muss „automatisch wählen" heißen, nicht „nimm die Voreinstellung".
+            gleich(("" ?? "fallback").split(",").filter(Boolean), [], "leeres KI_MODELLE heißt automatisch");
             gleich(m.modelleAbgleichen(["gemini-2.5-flash"], da).modelle, ["gemini-3-flash"], "Ersatz aus der Familie");
             console.log("Modellabgleich ok");
           ' --input-type=module

@@ -27,6 +27,7 @@ import { baueSchema, fuehreZusammen, normText } from "./lib/konsens.mjs";
 import {
   einAufruf, extrahiereMehrfach, gegenprobe,
   verfuegbareModelle, modelleAbgleichen, modelleOrdnen, modellAntwortet,
+  erschoepfteModelle,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
 // ModellTageslimitErschoepft wird nicht eigens importiert — sie erbt von
@@ -52,7 +53,11 @@ const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
 // Zwei unterschiedliche Gemini-Modelle für die Mehrfachläufe — dieselbe Überlegung
 // wie zuvor bei zwei OpenAI-Modellen: getrennte Modelle irren seltener übereinstimmend
 // als zwei Temperaturen desselben Modells. Beide liegen auf der kostenlosen Freistufe.
-const MODELLWUNSCH = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash").split(",").map((s) => s.trim()).filter(Boolean);
+/* `?? ""` statt `|| "…"`: KI_MODELLE="" heißt AUSDRÜCKLICH „automatisch
+   wählen". Mit `||` war der leere String falsch und fiel auf zwei fest
+   eingetragene Namen zurück — genau die beiden, die nicht mehr gehen. Der
+   Workflow setzte die Automatik damit still wieder ab. */
+const MODELLWUNSCH = (process.env.KI_MODELLE ?? "").split(",").map((s) => s.trim()).filter(Boolean);
 /* Wird gleich gegen die tatsächlich verfügbaren Modelle abgeglichen. Ein fest
    eingetragener Name überlebt keinen Zeitraum: Google zieht Modelle zurück,
    und die API antwortet dann mit HTTP 404 — derselben Zahl wie bei einem
@@ -114,13 +119,20 @@ if (!ohneKi) {
     }
 
     /* Stufe zwei: Wer antwortet wirklich? Reihum durch die geordneten
-       Kandidaten, bis zwei stehen. */
+       Kandidaten.
+
+       GESUCHT WERDEN VIER, nicht zwei. Gearbeitet wird mit den ersten beiden;
+       die anderen sind Ausweichgleis. Die Freistufe zählt je Modell getrennt,
+       und ein Lauf über 1 537 Normen läuft zuverlässig in eine
+       Kontingentgrenze — dann wird das Modell gewechselt statt der Lauf
+       abgebrochen. Vier Probeaufrufe kosten vier Token. */
+    const RESERVE = 4;
     const kandidaten = [...gewaehlt,
       ...modelleOrdnen(verfuegbar, "flash").filter((m) => !gewaehlt.includes(m))];
     const tauglich = [];
     const abgelehnt = [];
     for (const modell of kandidaten) {
-      if (tauglich.length >= Math.max(1, gewaehlt.length || 2)) break;
+      if (tauglich.length >= RESERVE) break;
       const probe = await modellAntwortet(TOKEN, modell);
       if (probe.ok) { tauglich.push(modell); continue; }
       abgelehnt.push(`${modell} (HTTP ${probe.status}: ${probe.meldung.slice(0, 90)})`);
@@ -139,7 +151,9 @@ if (!ohneKi) {
     }
 
     MODELLE = tauglich;
-    console.error(`  Modelle: ${MODELLE.join(", ")}  (${verfuegbar.length} gelistet, ${abgelehnt.length} abgelehnt)`);
+    console.error(`  Modelle: ${MODELLE.slice(0, 2).join(", ")}`
+      + (MODELLE.length > 2 ? `  ·  Ausweich: ${MODELLE.slice(2).join(", ")}` : "")
+      + `  (${verfuegbar.length} gelistet, ${abgelehnt.length} abgelehnt)`);
   } catch (fehler) {
     /* Die Prüfung ist eine Hilfe, kein Muss. Fällt sie aus, wird mit dem Wunsch
        weitergearbeitet — scheitert der, sagt der Fehler des ersten Aufrufs,
@@ -295,6 +309,13 @@ bericht.belegprobe = belegBilanz;
 bericht.abgebrochen = abbruch;
 if (!trocken) await schreibe(path.join(BERICHTE, "annotation.json"), bericht);
 console.log(`\nModellaufrufe: ${budget.verbraucht}${abbruch ? ` — abgebrochen: ${abbruch}` : ""}`);
+/* Welche Modelle unterwegs ans Kontingent gestoßen sind. Ohne diese Zeile
+   sieht ein halber Lauf wie ein Fehler aus, obwohl er die Freistufe schlicht
+   ausgeschöpft hat — und am nächsten Tag fortsetzt. */
+const gebremst = erschoepfteModelle();
+if (gebremst.length) {
+  console.log(`Am Kontingent: ${gebremst.join(", ")} — die Freistufe zählt je Modell und setzt täglich zurück.`);
+}
 if (belegBilanz.gestuetzt || belegBilanz.entfernt || belegBilanz.strittig) {
   console.log(`Belegprobe: ${belegBilanz.gestuetzt} gestützt, ${belegBilanz.entfernt} nicht tragfähig entfernt, ${belegBilanz.strittig} strittig.`);
 }
@@ -422,7 +443,7 @@ async function macheGegenproben({ einheiten, syntax, laeufe, kontext }) {
     try {
       raus.set(e.pfad, await gegenprobe({
         satztext: e.text, spannen: kandidaten,
-        modell: MODELLE[0], token: TOKEN, budget,
+        modell: MODELLE[0], modelle: MODELLE, token: TOKEN, budget,
       }));
     } catch (fehler) {
       if (fehler instanceof ModellBudgetErschoepft) throw fehler;
