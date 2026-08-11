@@ -16,7 +16,9 @@
  *   node tools/modelle-zeigen.mjs
  */
 
-import { verfuegbareModelle, modelleAbgleichen } from "./lib/modell.mjs";
+import {
+  verfuegbareModelle, modelleAbgleichen, modelleOrdnen, modellAntwortet,
+} from "./lib/modell.mjs";
 
 const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
 const WUNSCH = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash")
@@ -64,18 +66,34 @@ if (gemini.length !== verfuegbar.length) {
 }
 
 console.log("");
-console.log("  Eingestellt ist:  " + WUNSCH.join(", "));
+console.log("  Eingestellt ist:  " + (WUNSCH.length ? WUNSCH.join(", ") : "(nichts — automatische Wahl)"));
 const { modelle, ersetzt } = modelleAbgleichen(WUNSCH, verfuegbar);
-if (!ersetzt.length) {
-  console.log("  Alle eingestellten Modelle sind verfügbar. Der Lauf kann starten.");
+for (const { gewuenscht, statt } of ersetzt) {
+  console.log(statt
+    ? `  ✗ ${gewuenscht} steht nicht in der Liste — gewählt würde ${statt}.`
+    : `  ✗ ${gewuenscht} steht nicht in der Liste, und kein Ersatz derselben Familie ist da.`);
+}
+
+/* Die eigentliche Probe. Die Liste sagt, was EXISTIERT — nicht, was dieser
+   Schlüssel aufrufen darf. `gemini-2.5-flash` steht dort und antwortet
+   trotzdem mit „404 no longer available to new users". */
+console.log("");
+console.log("  Probeaufruf (ein Token je Modell):");
+console.log("");
+let taugt = 0;
+for (const modell of modelle) {
+  const probe = await modellAntwortet(TOKEN, modell);
+  if (probe.ok) { taugt++; console.log(`    ✓ ${modell}`); }
+  else console.log(`    ✗ ${modell} — HTTP ${probe.status}: ${probe.meldung.slice(0, 110)}`);
+}
+
+console.log("");
+if (taugt === modelle.length && taugt > 0) {
+  console.log("  Der Lauf kann starten.");
 } else {
-  for (const { gewuenscht, statt } of ersetzt) {
-    console.log(statt
-      ? `  ✗ ${gewuenscht} gibt es nicht — der Lauf nähme automatisch ${statt}.`
-      : `  ✗ ${gewuenscht} gibt es nicht, und kein Ersatz derselben Familie ist verfügbar.`);
-  }
+  console.log("  Nicht jedes gewählte Modell antwortet. Der Lauf geht dann die");
+  console.log("  geordnete Liste weiter durch — nachsehen lässt sich das hier:");
   console.log("");
-  console.log("  Dauerhaft eintragen in .github/workflows/annotationen.yml:");
-  console.log("      KI_MODELLE: " + (modelle.length ? modelle.join(",") : gemini.slice(0, 2).join(",")));
+  for (const m of modelleOrdnen(verfuegbar, "flash").slice(0, 8)) console.log("    " + m);
 }
 console.log("");

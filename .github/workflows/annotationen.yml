@@ -88,9 +88,13 @@ jobs:
               }
             };
             gleich(m.modelleAbgleichen(["gemini-3-flash"], da).modelle, ["gemini-3-flash"], "vorhanden");
-            gleich(m.modelleAbgleichen(["gemini-2.5-flash"], da).modelle, ["gemini-3-flash"], "Ersatz aus der Familie");
             gleich(m.modelleAbgleichen(["gemini-9-pro"], da).modelle, ["gemini-3-pro"], "pro bleibt pro");
             gleich(m.modelleAbgleichen(["gemini-2.5-flash"], []).modelle, [], "kein Ersatz");
+            // Sonderzwecke dürfen nie als Ersatz für ein Flash-Modell gelten:
+            // die reine Zeichenkettensortierung wählte hier omni-flash-preview.
+            gleich(m.modelleOrdnen(da, "flash"), ["gemini-3-flash","gemini-2.0-flash"], "Ordnung nach Fassung, kein Sonderzweck");
+            gleich(m.modelleAbgleichen([], da).modelle, ["gemini-3-flash","gemini-2.0-flash"], "automatische Wahl");
+            gleich(m.modelleAbgleichen(["gemini-2.5-flash"], da).modelle, ["gemini-3-flash"], "Ersatz aus der Familie");
             console.log("Modellabgleich ok");
           ' --input-type=module
           node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
@@ -180,6 +184,13 @@ jobs:
                   echo '```'
                 } >> "$GITHUB_STEP_SUMMARY"
                 echo "Modellzugang steht: $anzahl Gemini-Modelle."
+                {
+                  echo ""
+                  echo "Die Liste sagt, was *existiert* — nicht, was dieser Schlüssel"
+                  echo "aufrufen darf. Ein Modell kann gelistet und zugleich für neue"
+                  echo "Schlüssel gesperrt sein (HTTP 404 beim Aufruf). Der Lauf pingt"
+                  echo "deshalb jedes Modell an, bevor er es benutzt."
+                } >> "$GITHUB_STEP_SUMMARY"
                 ;;
               400|401|403)
                 echo "::error::Der Schlüssel wird abgelehnt (HTTP $code). GEMINI_API_KEY neu erzeugen: aistudio.google.com/app/apikey"
@@ -204,7 +215,13 @@ jobs:
       - name: Annotationen erzeugen oder aufwerten
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          KI_MODELLE: gemini-2.5-flash,gemini-2.0-flash
+          # LEER = automatisch wählen. Ein fest eingetragener Modellname
+          # überlebt keinen längeren Zeitraum: gemini-2.0-flash wurde
+          # zurückgezogen, gemini-2.5-flash für neue Schlüssel gesperrt — beide
+          # standen hier und brachten den Lauf zum Stehen. Das Werkzeug holt
+          # jetzt die Liste, ordnet nach Familie und Fassung und pingt jedes
+          # Modell an, bevor es damit arbeitet. Ein Name hier überschreibt das.
+          KI_MODELLE: ""
           MAX_MODELLAUFRUFE: "180"
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_LAEUFE: ${{ inputs.laeufe }}

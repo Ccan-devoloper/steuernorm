@@ -67,34 +67,105 @@ export async function verfuegbareModelle(token) {
 }
 
 /**
+ * Antwortet dieses Modell wirklich?
+ *
+ * WARUM DAS NICHT AUS DER LISTE HERVORGEHT. Die Modellliste sagt, was
+ * existiert — nicht, was dieser Schlüssel aufrufen darf. `gemini-2.5-flash`
+ * steht dort und antwortet trotzdem mit
+ *
+ *     404 This model models/gemini-2.5-flash is no longer available to new users.
+ *
+ * Ein Modell kann also gelistet und zugleich für neue Schlüssel gesperrt sein.
+ * Diese Unterscheidung kennt nur der Aufruf selbst, deshalb wird gefragt:
+ * ein Token, einmal je Modell, vor dem ersten Normlauf.
+ *
+ * @returns {Promise<{ ok: boolean, status: number, meldung: string }>}
+ */
+export async function modellAntwortet(token, modell) {
+  try {
+    const antwort = await fetch(ENDPUNKT, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: modell,
+        max_tokens: 1,
+        messages: [{ role: "user", content: "ping" }],
+      }),
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (antwort.ok) return { ok: true, status: 200, meldung: "" };
+    const text = (await antwort.text().catch(() => "")).slice(0, 200);
+    /* Die eigentliche Auskunft steckt im Text, nicht in der Zahl: „no longer
+       available to new users" ist etwas anderes als ein Tippfehler im Namen. */
+    const grund = /"message":\s*"([^"]+)"/.exec(text)?.[1] || text;
+    return { ok: false, status: antwort.status, meldung: grund };
+  } catch (fehler) {
+    return { ok: false, status: 0, meldung: fehler.message };
+  }
+}
+
+/* Sonderzwecke, die für die Normanalyse nicht in Frage kommen: Einbettung,
+   Bild, Sprache, Robotik, Rechnersteuerung, Übersetzung, Werkzeugvarianten. */
+const SONDERZWECK = /embedding|image|vision|tts|audio|live|robotics|computer-use|omni|translate|customtools|thinking/;
+
+/** „gemini-3.6-flash" → 3.6; Aliasse ohne Zahl gelten als jüngste Fassung. */
+function fassung(kennung) {
+  const treffer = /^gemini-(\d+(?:\.\d+)?)-/.exec(kennung);
+  if (treffer) return Number(treffer[1]);
+  return /-latest$/.test(kennung) ? Number.POSITIVE_INFINITY : -1;
+}
+
+/**
+ * Modelle nach Eignung ordnen — beste zuerst.
+ *
+ * Nach Familie (flash bleibt flash, pro bleibt pro, weil Tempo und Kontingent
+ * daran hängen), dann nach Fassung absteigend, dann Vollfassung vor `-lite`
+ * und Endfassung vor `-preview`. Ohne diese Ordnung gewann die reine
+ * Zeichenkettensortierung — und lieferte `gemini-omni-flash-preview` als
+ * Ersatz für ein Flash-Modell.
+ */
+export function modelleOrdnen(verfuegbar, familie = "flash") {
+  return verfuegbar
+    .filter((m) => m.startsWith("gemini-") && !SONDERZWECK.test(m)
+      && (m.includes(familie) || /-latest$/.test(m)))
+    .filter((m) => (familie === "pro" ? /pro/.test(m) : !/pro/.test(m)))
+    .sort((a, b) =>
+      fassung(b) - fassung(a)
+      || (/-lite/.test(a) ? 1 : 0) - (/-lite/.test(b) ? 1 : 0)
+      || (/preview/.test(a) ? 1 : 0) - (/preview/.test(b) ? 1 : 0)
+      || a.localeCompare(b));
+}
+
+/**
  * Gewünschte Modelle gegen die tatsächlich verfügbaren abgleichen.
  *
- * Fehlt ein gewünschtes Modell, wird NICHT stillschweigend etwas anderes
- * genommen — der Ersatz wird zurückgegeben und vom Aufrufer protokolliert.
- * Gesucht wird ein Modell derselben Familie (`flash` bleibt `flash`), weil
- * Kosten, Tempo und Kontingent daran hängen.
+ * Ohne Wunsch werden die zwei bestgeeigneten Flash-Modelle gewählt. Das ist
+ * die wartungsfreie Voreinstellung: Ein fest eingetragener Name überlebt
+ * keinen längeren Zeitraum, und genau daran ist der Lauf gescheitert.
+ *
+ * Ersetzt wird nie stillschweigend — jeder Tausch steht im Ergebnis.
  *
  * @returns {{ modelle: string[], ersetzt: Array<{ gewuenscht: string, statt: string|null }> }}
  */
 export function modelleAbgleichen(gewuenscht, verfuegbar) {
+  const flash = modelleOrdnen(verfuegbar, "flash");
+  if (!gewuenscht.length) {
+    /* Ohne Wunsch die zwei besten VOLLEN Flash-Modelle: `-lite` ist schwächer,
+       und zwei Modelle sind hier nicht Redundanz, sondern Messinstrument —
+       zwei getrennte Modelle irren seltener übereinstimmend als eines zweimal.
+       Reicht es nicht für zwei, wird mit `-lite` aufgefüllt. */
+    const voll = flash.filter((m) => !/-lite/.test(m));
+    return { modelle: [...voll, ...flash.filter((m) => /-lite/.test(m))].slice(0, 2), ersetzt: [] };
+  }
+
   const da = new Set(verfuegbar);
   const modelle = [];
   const ersetzt = [];
 
   for (const wunsch of gewuenscht) {
     if (da.has(wunsch)) { modelle.push(wunsch); continue; }
-
-    /* Ersatz aus derselben Familie: „gemini-2.5-flash" → irgendein anderes
-       Flash-Modell, aber kein Pro (anderes Kontingent) und keine Vorschau
-       oder Bildvariante (anderer Zweck, anderes Antwortformat). */
-    const familie = /pro/.test(wunsch) ? "pro" : "flash";
-    const kandidaten = verfuegbar.filter((m) =>
-      m.startsWith("gemini-")
-      && m.includes(familie)
-      && !/embedding|image|vision|tts|audio|live|thinking/.test(m));
-    /* Neueste zuerst: Die Kennungen tragen die Fassung im Namen. */
-    kandidaten.sort((a, b) => b.localeCompare(a, "en", { numeric: true }));
-    const statt = kandidaten.find((m) => !modelle.includes(m)) || null;
+    const geordnet = /pro/.test(wunsch) ? modelleOrdnen(verfuegbar, "pro") : flash;
+    const statt = geordnet.find((m) => !modelle.includes(m)) || null;
     ersetzt.push({ gewuenscht: wunsch, statt });
     if (statt) modelle.push(statt);
   }

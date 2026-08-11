@@ -26,7 +26,7 @@ import { zerlege as syntaxZerlege, NICHT_MARKIEREN } from "./lib/syntax.mjs";
 import { baueSchema, fuehreZusammen, normText } from "./lib/konsens.mjs";
 import {
   einAufruf, extrahiereMehrfach, gegenprobe,
-  verfuegbareModelle, modelleAbgleichen,
+  verfuegbareModelle, modelleAbgleichen, modelleOrdnen, modellAntwortet,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
 // ModellTageslimitErschoepft wird nicht eigens importiert — sie erbt von
@@ -92,38 +92,59 @@ const hash = (s) => createHash("sha256").update(s).digest("hex");
 /* ─────────────────────────── Lauf ─────────────────────────── */
 
 /* ── Modelle gegen den Schlüssel abgleichen ──────────────────────────
-   Vor dem ersten Normlauf, nicht mittendrin: Ein Lauf, der nach zwanzig
-   Minuten an einem zurückgezogenen Modellnamen scheitert, hat zwanzig Minuten
-   Kontingent verbrannt. Der Aufruf ist billig und zählt nicht gegen das
-   Tageskontingent für Generierungen. */
+   Vor der ersten Norm, nicht mittendrin: Ein Lauf, der nach zwanzig Minuten
+   an einem gesperrten Modell scheitert, hat zwanzig Minuten Kontingent
+   verbrannt.
+
+   ZWEI STUFEN, und die zweite ist die wichtige. Die Modellliste sagt, was
+   EXISTIERT — nicht, was dieser Schlüssel aufrufen darf. `gemini-2.5-flash`
+   steht dort und antwortet trotzdem mit „404 This model is no longer
+   available to new users". Gelistet und gesperrt zugleich. Diese
+   Unterscheidung kennt nur der Aufruf selbst, also wird jedes Modell einmal
+   mit einem Token angepingt, bevor es zum Einsatz kommt. */
 if (!ohneKi) {
   try {
     const verfuegbar = await verfuegbareModelle(TOKEN);
-    const { modelle, ersetzt } = modelleAbgleichen(MODELLWUNSCH, verfuegbar);
+    const { modelle: gewaehlt, ersetzt } = modelleAbgleichen(MODELLWUNSCH, verfuegbar);
 
     for (const { gewuenscht, statt } of ersetzt) {
-      if (statt) console.error(`  ⚠  Modell ${gewuenscht} gibt es nicht mehr — es läuft ${statt}.`);
-      else console.error(`  ⚠  Modell ${gewuenscht} gibt es nicht mehr, und kein Ersatz derselben Familie ist verfügbar.`);
+      console.error(statt
+        ? `  ⚠  Modell ${gewuenscht} steht nicht in der Liste — es läuft ${statt}.`
+        : `  ⚠  Modell ${gewuenscht} steht nicht in der Liste, und kein Ersatz derselben Familie ist da.`);
     }
-    if (!modelle.length) {
+
+    /* Stufe zwei: Wer antwortet wirklich? Reihum durch die geordneten
+       Kandidaten, bis zwei stehen. */
+    const kandidaten = [...gewaehlt,
+      ...modelleOrdnen(verfuegbar, "flash").filter((m) => !gewaehlt.includes(m))];
+    const tauglich = [];
+    const abgelehnt = [];
+    for (const modell of kandidaten) {
+      if (tauglich.length >= Math.max(1, gewaehlt.length || 2)) break;
+      const probe = await modellAntwortet(TOKEN, modell);
+      if (probe.ok) { tauglich.push(modell); continue; }
+      abgelehnt.push(`${modell} (HTTP ${probe.status}: ${probe.meldung.slice(0, 90)})`);
+    }
+
+    for (const zeile of abgelehnt) console.error("  ⚠  Antwortet nicht: " + zeile);
+
+    if (!tauglich.length) {
       console.error("");
-      console.error("  ⚠  Keines der gewünschten Modelle ist mit diesem Schlüssel erreichbar.");
-      console.error("     Verfügbar wären:");
-      for (const m of verfuegbar.filter((m) => m.startsWith("gemini-")).slice(0, 25)) {
-        console.error("       " + m);
-      }
+      console.error("  ⚠  Kein einziges Modell antwortet auf diesen Schlüssel.");
+      console.error("     Gelistet sind:");
+      for (const m of modelleOrdnen(verfuegbar, "flash").slice(0, 12)) console.error("       " + m);
       console.error("");
-      console.error("     Gewünscht war: " + MODELLWUNSCH.join(", "));
-      console.error("     Setzen über KI_MODELLE, etwa: KI_MODELLE=" + (verfuegbar[0] || "…"));
+      console.error("     Genaueres zeigt: node tools/modelle-zeigen.mjs");
       process.exit(3);
     }
-    MODELLE = modelle;
-    console.error(`  Modelle: ${MODELLE.join(", ")}  (von ${verfuegbar.length} verfügbaren)`);
+
+    MODELLE = tauglich;
+    console.error(`  Modelle: ${MODELLE.join(", ")}  (${verfuegbar.length} gelistet, ${abgelehnt.length} abgelehnt)`);
   } catch (fehler) {
-    /* Die Liste ist eine Hilfe, kein Muss. Ist sie nicht abrufbar, wird mit
-       dem Wunsch weitergearbeitet — scheitert der dann, sagt der Fehler des
-       ersten Aufrufs, woran es lag. */
-    console.error("  ⚠  Modellliste nicht abrufbar: " + fehler.message);
+    /* Die Prüfung ist eine Hilfe, kein Muss. Fällt sie aus, wird mit dem Wunsch
+       weitergearbeitet — scheitert der, sagt der Fehler des ersten Aufrufs,
+       woran es lag. */
+    console.error("  ⚠  Modellprüfung nicht möglich: " + fehler.message);
     console.error("     Es wird mit " + MODELLWUNSCH.join(", ") + " weitergearbeitet.");
   }
 }
