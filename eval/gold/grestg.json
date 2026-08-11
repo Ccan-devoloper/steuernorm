@@ -1,0 +1,266 @@
+{
+ "abk": "GrEStG",
+ "titel": "Grunderwerbsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 2 Abs. 1 Satz 2 leitet eine Bereichsausnahme ein (»Jedoch werden nicht zu den Grundstücken gerechnet«); die Nummern tragen die ausgenommenen Gegenstände.",
+ "normen": {
+  "2": {
+   "enbez": "§ 2",
+   "titel": "Grundstücke",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Unter Grundstücken im Sinne dieses Gesetzes sind Grundstücke im Sinne des bürgerlichen Rechts zu verstehen",
+       "rolle": "Begriffsbestimmung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 2",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Jedoch werden nicht zu den Grundstücken gerechnet",
+       "rolle": "Bereichsausnahme"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 1",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Maschinen und sonstige Vorrichtungen aller Art, die zu einer Betriebsanlage gehören",
+       "rolle": "ausgenommener Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 2",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Mineralgewinnungsrechte und sonstige Gewerbeberechtigungen",
+       "rolle": "ausgenommener Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 3",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "das Recht des Grundstückseigentümers auf den Erbbauzins",
+       "rolle": "ausgenommener Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Den Grundstücken stehen gleich",
+       "rolle": "Gleichstellung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Erbbaurechte",
+       "rolle": "gleichgestellter Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Gebäude auf fremdem Boden",
+       "rolle": "gleichgestellter Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 3",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "dinglich gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetzes und des § 1010 des Bürgerlichen Gesetzbuchs",
+       "rolle": "gleichgestellter Gegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Bezieht sich ein Rechtsvorgang auf mehrere Grundstücke, die zu einer wirtschaftlichen Einheit gehören",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so werden diese Grundstücke als ein Grundstück behandelt",
+       "rolle": "Zusammenfassung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Bezieht sich ein Rechtsvorgang auf einen oder mehrere Teile eines Grundstücks",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so werden diese Teile als ein Grundstück behandelt",
+       "rolle": "Zusammenfassung"
+      }
+     ]
+    }
+   ],
+   "hinweis": "Nicht reine Definition: Abs. 1 bestimmt den Begriff, Abs. 1 Satz 2 nimmt aus, Abs. 2 stellt gleich, Abs. 3 fingiert. Im Soll deshalb „gemischt“."
+  },
+  "14": {
+   "enbez": "§ 14",
+   "titel": "Entstehung der Steuer in besonderen Fällen",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Die Steuer entsteht",
+       "rolle": "Entstehung"
+      }
+     ]
+    },
+    {
+     "pfad": "Nr. 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "wenn die Wirksamkeit eines Erwerbsvorgangs von dem Eintritt einer Bedingung abhängig ist",
+       "rolle": "aufschiebende Bedingung"
+      },
+      {
+       "art": "rf",
+       "text": "mit dem Eintritt der Bedingung",
+       "rolle": "Entstehungszeitpunkt"
+      }
+     ]
+    },
+    {
+     "pfad": "Nr. 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "wenn ein Erwerbsvorgang einer Genehmigung bedarf",
+       "rolle": "Genehmigungsbedürftigkeit"
+      },
+      {
+       "art": "rf",
+       "text": "mit der Genehmigung",
+       "rolle": "Entstehungszeitpunkt"
+      }
+     ]
+    }
+   ]
+  },
+  "22": {
+   "enbez": "§ 22",
+   "titel": "Unbedenklichkeitsbescheinigung",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "darf in das Grundbuch erst dann eingetragen werden",
+       "rolle": "Eintragungssperre"
+      },
+      {
+       "art": "tb",
+       "text": "wenn eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird (§ 17 Abs. 1 Satz 1) oder Bescheinigungen der für die Besteuerung zuständigen Finanzämter (§ 17 Abs. 1 Satz 2) vorgelegt werden, daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
+       "rolle": "Vorlage der Bescheinigung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 2",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Die obersten Finanzbehörden der Länder können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
+       "rolle": "Ausnahmeermächtigung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "hat die Bescheinigung zu erteilen",
+       "rolle": "Erteilungspflicht"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist oder wenn Steuerfreiheit gegeben ist",
+       "rolle": "Erteilungsvoraussetzung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "darf die Bescheinigung auch in anderen Fällen erteilen",
+       "rolle": "Ermessenserteilung"
+      },
+      {
+       "art": "tb",
+       "text": "wenn nach seinem Ermessen die Steuerforderung nicht gefährdet ist",
+       "rolle": "Nichtgefährdung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 3",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "hat die Bescheinigung schriftlich zu erteilen",
+       "rolle": "Schriftform"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 4",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Eine elektronische Übermittlung der Bescheinigung ist ausgeschlossen",
+       "rolle": "Formausschluss"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "abk": "GrStG",
+ "titel": "Grundsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 13 Satz 2 knüpft mit »Dieser« an den Steuermessbetrag des Vorsatzes an — ein Rückverweis, kein Merkmal.",
+ "normen": {
+  "1": {
+   "enbez": "§ 1",
+   "titel": "Heberecht",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "bestimmt, ob von dem in ihrem Gebiet liegenden Grundbesitz Grundsteuer zu erheben ist",
+       "rolle": "Hebeberechtigung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Bestehen in einem Land keine Gemeinden",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so stehen das Recht des Absatzes 1 und die in diesem Gesetz bestimmten weiteren Rechte dem Land zu",
+       "rolle": "Rechtsübergang auf das Land"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Für den in gemeindefreien Gebieten liegenden Grundbesitz",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "bestimmt die Landesregierung durch Rechtsverordnung, wer die nach diesem Gesetz den Gemeinden zustehenden Befugnisse ausübt",
+       "rolle": "Verordnungsermächtigung"
+      }
+     ]
+    }
+   ]
+  },
+  "13": {
+   "enbez": "§ 13",
+   "titel": "Steuermesszahl und Steuermessbetrag",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Bei der Berechnung der Grundsteuer",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist von einem Steuermessbetrag auszugehen",
+       "rolle": "Berechnungsgrundlage"
+      }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "ist durch Anwendung eines Promillesatzes (Steuermesszahl) auf den Grundsteuerwert oder seinen steuerpflichtigen Teil zu ermitteln, der nach dem Bewertungsgesetz im Veranlagungszeitpunkt (§ 16 Absatz 1, § 17 Absatz 3, § 18 Absatz 3) für den Steuergegenstand maßgebend ist",
+       "rolle": "Ermittlung des Messbetrags"
+      }
+     ]
+    }
+   ]
+  },
+  "27": {
+   "enbez": "§ 27",
+   "titel": "Festsetzung der Grundsteuer",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "wird für das Kalenderjahr festgesetzt",
+       "rolle": "Festsetzungszeitraum"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Ist der Hebesatz für mehr als ein Kalenderjahr festgesetzt",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "kann auch die jährlich zu erhebende Grundsteuer für die einzelnen Kalenderjahre dieses Zeitraums festgesetzt werden",
+       "rolle": "mehrjährige Festsetzung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Wird der Hebesatz geändert (§ 25 Abs. 3)",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so ist die Festsetzung nach Absatz 1 zu ändern",
+       "rolle": "Folgeänderung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Für diejenigen Steuerschuldner, die für das Kalenderjahr die gleiche Grundsteuer wie im Vorjahr zu entrichten haben",
+       "rolle": "unveränderte Steuer"
+      },
+      {
+       "art": "rf",
+       "text": "kann die Grundsteuer durch öffentliche Bekanntmachung festgesetzt werden",
+       "rolle": "Bekanntmachung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "mit dem Tage der öffentlichen Bekanntmachung",
+       "rolle": "Zeitpunkt"
+      },
+      {
+       "art": "rf",
+       "text": "treten mit dem Tage der öffentlichen Bekanntmachung die gleichen Rechtswirkungen ein, wie wenn ihnen an diesem Tage ein schriftlicher Steuerbescheid zugegangen wäre",
+       "rolle": "Wirkungsgleichstellung"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

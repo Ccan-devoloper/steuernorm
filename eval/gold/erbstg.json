@@ -1,0 +1,79 @@
+{
+ "abk": "ErbStG",
+ "titel": "Erbschaftsteuer- und Schenkungsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 1 Abs. 1: Der Einleitungssatz trägt die Rechtsfolge (»unterliegen«), die Nummern zählen die steuerpflichtigen Vorgänge auf — Merkmalsvarianten.",
+ "normen": {
+  "1": {
+   "enbez": "§ 1",
+   "titel": "Steuerpflichtige Vorgänge",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "Der Erbschaftsteuer (Schenkungsteuer) unterliegen", "rolle": "Steuerbarkeit" }
+     ]
+    },
+    { "pfad": "Abs. 1 Nr. 1", "elemente": [
+      { "art": "tb", "text": "der Erwerb von Todes wegen", "rolle": "steuerpflichtiger Vorgang" } ] },
+    { "pfad": "Abs. 1 Nr. 2", "elemente": [
+      { "art": "tb", "text": "die Schenkungen unter Lebenden", "rolle": "steuerpflichtiger Vorgang" } ] },
+    { "pfad": "Abs. 1 Nr. 3", "elemente": [
+      { "art": "tb", "text": "die Zweckzuwendungen", "rolle": "steuerpflichtiger Vorgang" } ] },
+    { "pfad": "Abs. 1 Nr. 4", "elemente": [
+      { "art": "tb", "text": "das Vermögen einer Stiftung, sofern sie wesentlich im Interesse einer Familie oder bestimmter Familien errichtet ist, und eines Vereins, dessen Zweck wesentlich im Interesse einer Familie oder bestimmter Familien auf die Bindung von Vermögen gerichtet ist, in Zeitabständen von je 30 Jahren seit dem in § 9 Abs. 1 Nr. 4 bestimmten Zeitpunkt", "rolle": "Erbersatzsteuer" } ] },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Soweit nichts anderes bestimmt ist", "rolle": "Subsidiarität" },
+      { "art": "rf", "text": "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen auch für Schenkungen und Zweckzuwendungen, die Vorschriften über Schenkungen auch für Zweckzuwendungen unter Lebenden", "rolle": "Erstreckung" }
+     ]
+    }
+   ]
+  },
+  "18": {
+   "enbez": "§ 18",
+   "titel": "Mitgliederbeiträge",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Beiträge an Personenvereinigungen und rechtsfähige Vereine, die nicht lediglich die Förderung ihrer Mitglieder zum Zweck haben", "rolle": "Beitragsart" },
+      { "art": "rf", "text": "sind steuerfrei", "rolle": "Steuerbefreiung" },
+      { "art": "tb", "text": "soweit die von einem Mitglied im Kalenderjahr der Vereinigung geleisteten Beiträge 300 Euro nicht übersteigen", "rolle": "Höchstbetrag" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "§ 13 Abs. 1 Nr. 16 und 18 bleibt unberührt", "rolle": "Vorrangregel" }
+     ]
+    }
+   ]
+  },
+  "24": {
+   "enbez": "§ 24",
+   "titel": "Verrentung der Steuerschuld in den Fällen des § 1 Abs. 1 Nr. 4",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "In den Fällen des § 1 Abs. 1 Nr. 4", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "kann der Steuerpflichtige verlangen, daß die Steuer in 30 gleichen jährlichen Teilbeträgen (Jahresbeträgen) zu entrichten ist", "rolle": "Verrentungsrecht" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "umfaßt die Tilgung und die Verzinsung der Steuer", "rolle": "Inhalt der Jahresbeträge" },
+      { "art": "rf", "text": "dabei ist von einem Zinssatz von 5,5 Prozent auszugehen", "rolle": "Zinssatz" }
+     ]
+    }
+   ]
+  }
+ }
+}

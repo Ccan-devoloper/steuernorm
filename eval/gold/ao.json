@@ -1,0 +1,79 @@
+{
+ "abk": "AO",
+ "titel": "Abgabenordnung",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. Der Normadressat („Die Finanzbehörde\") ist kein Tatbestandsmerkmal, sondern das Satzsubjekt; erfasst wird, woran die Vorschrift anknüpft. Einleitende Derogationsverweise („abweichend von …\") bleiben unmarkiert — siehe eval/gold/solzg.json.",
+ "normen": {
+  "5": {
+   "enbez": "§ 5",
+   "titel": "Ermessen",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Ist die Finanzbehörde ermächtigt, nach ihrem Ermessen zu handeln", "rolle": "uneingeleiteter Bedingungssatz" },
+      { "art": "rf", "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten", "rolle": "Ermessensbindung" }
+     ]
+    }
+   ]
+  },
+  "129": {
+   "enbez": "§ 129",
+   "titel": "Offenbare Unrichtigkeiten beim Erlass eines Verwaltungsakts",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind", "rolle": "berichtigungsfähiger Fehler" },
+      { "art": "rf", "text": "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit berichtigen", "rolle": "Berichtigungsbefugnis" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "tb", "text": "Bei berechtigtem Interesse des Beteiligten", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "ist zu berichtigen", "rolle": "Berichtigungspflicht" }
+     ]
+    },
+    {
+     "pfad": "Satz 3",
+     "elemente": [
+      { "art": "tb", "text": "Wird zu einem schriftlich ergangenen Verwaltungsakt die Berichtigung begehrt", "rolle": "uneingeleiteter Bedingungssatz" },
+      { "art": "rf", "text": "ist die Finanzbehörde berechtigt, die Vorlage des Schriftstücks zu verlangen, das berichtigt werden soll", "rolle": "Vorlagerecht" }
+     ]
+    }
+   ]
+  },
+  "281": {
+   "enbez": "§ 281",
+   "titel": "Pfändung",
+   "typ": "konditional",
+   "hinweis": "Abs. 1: »Die Vollstreckung in das bewegliche Vermögen« ist das Satzsubjekt und benennt den Normgegenstand; nach der hier durchgehaltenen Regel kein Merkmal.",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "erfolgt durch Pfändung", "rolle": "Vollstreckungsart" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "darf nicht weiter ausgedehnt werden", "rolle": "Übermaßverbot" },
+      { "art": "tb", "text": "als es zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist", "rolle": "Maßstab" }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "Die Pfändung unterbleibt", "rolle": "Unterlassungsanordnung" },
+      { "art": "tb", "text": "wenn die Verwertung der pfändbaren Gegenstände einen Überschuss über die Kosten der Vollstreckung nicht erwarten lässt", "rolle": "Bedingung" }
+     ]
+    }
+   ]
+  }
+ }
+}

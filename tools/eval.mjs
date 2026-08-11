@@ -192,10 +192,20 @@ for (const datei of dateien) {
   }
 }
 
+/**
+ * Passt der erkannte Normtyp zum Soll?
+ *
+ * Die Tabelle stammt aus Fassung 4 und kannte `fiktion` und `aussage` nicht —
+ * beide gehören seit Fassung 5 zur Typologie in syntax.mjs. Die Folge war
+ * absurd: Ein Rechtssatz, den beide Seiten als „aussage" führten, galt als
+ * Fehlklassifikation, weil der Schlüssel in der Tabelle fehlte. Ergänzt sind
+ * nur die fehlenden Schlüssel; die Zuordnungen selbst bleiben eng, damit die
+ * Messung nicht durch Nachsicht besser aussieht.
+ */
 function typPasst(gtyp, ityp) {
   const karte = {
     konditional: ["rule", "konditional", "gemischt"],
-    berechnung: ["calculation", "rule", "tarif", "gemischt", "konditional"],
+    berechnung: ["calculation", "rule", "tarif", "gemischt", "konditional", "rechenregel"],
     tarif: ["calculation", "tarif", "gemischt"],
     verweisung: ["reference_only", "verweisung"],
     anwendung: ["no_classic_rule", "reference_only", "anwendung", "ohne_merkmale"],
@@ -203,6 +213,11 @@ function typPasst(gtyp, ityp) {
     gemischt: ["rule", "gemischt", "konditional"],
     definition: ["definition"],
     gegennorm: ["rule", "konditional"],
+    // Seit Fassung 5 in der Typologie, in dieser Tabelle bisher nicht.
+    fiktion: ["fiktion", "gleichstellung", "konditional", "gemischt", "rule"],
+    aussage: ["aussage", "gemischt"],
+    rechenregel: ["rechenregel", "calculation", "tarif", "gemischt"],
+    gleichstellung: ["gleichstellung", "fiktion", "gemischt"],
   };
   return (karte[gtyp] || []).includes(ityp);
 }

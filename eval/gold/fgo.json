@@ -1,0 +1,220 @@
+{
+ "abk": "FGO",
+ "titel": "Finanzgerichtsordnung",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 2 ist eine reine Organisationsnorm ohne Tatbestand; § 65 Abs. 1 zählt Anforderungen an die Klage auf — vollständig Rechtsfolge.",
+ "normen": {
+  "2": {
+   "enbez": "§ 2",
+   "titel": "",
+   "typ": "aussage",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Gerichte der Finanzgerichtsbarkeit sind in den Ländern die Finanzgerichte als obere Landesgerichte, im Bund der Bundesfinanzhof mit dem Sitz in München",
+       "rolle": "Gerichtsaufbau"
+      }
+     ]
+    }
+   ]
+  },
+  "65": {
+   "enbez": "§ 65",
+   "titel": "",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf bezeichnen",
+       "rolle": "Mussinhalt"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "soll einen bestimmten Antrag enthalten",
+       "rolle": "Sollinhalt"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 3",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Die zur Begründung dienenden Tatsachen und Beweismittel sollen angegeben werden",
+       "rolle": "Sollinhalt"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 4",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Der Klage soll eine Abschrift des angefochtenen Verwaltungsakts und der Einspruchsentscheidung beigefügt werden",
+       "rolle": "Sollinhalt"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 5",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung gilt entsprechend",
+       "rolle": "Verweisung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Entspricht die Klage diesen Anforderungen nicht",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "hat der Vorsitzende oder der nach § 21g des Gerichtsverfassungsgesetzes zuständige Berufsrichter (Berichterstatter) den Kläger zu der erforderlichen Ergänzung innerhalb einer bestimmten Frist aufzufordern",
+       "rolle": "Aufforderungspflicht"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "kann dem Kläger für die Ergänzung eine Frist mit ausschließender Wirkung setzen",
+       "rolle": "Ausschlussfrist"
+      },
+      {
+       "art": "tb",
+       "text": "wenn es an einem der in Absatz 1 Satz 1 genannten Erfordernisse fehlt",
+       "rolle": "Fehlen eines Musserfordernisses"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 3",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Für die Wiedereinsetzung in den vorigen Stand wegen Versäumung der Frist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "gilt § 56 entsprechend",
+       "rolle": "Verweisung"
+      }
+     ]
+    }
+   ]
+  },
+  "108": {
+   "enbez": "§ 108",
+   "titel": "",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Enthält der Tatbestand des Urteils andere Unrichtigkeiten oder Unklarheiten",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so kann die Berichtigung binnen zwei Wochen nach Zustellung des Urteils beantragt werden",
+       "rolle": "Berichtigungsantrag"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Das Gericht entscheidet ohne Beweisaufnahme durch Beschluss",
+       "rolle": "Entscheidungsform"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Der Beschluss ist unanfechtbar",
+       "rolle": "Unanfechtbarkeit"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 3",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Bei der Entscheidung wirken nur die Richter mit, die beim Urteil mitgewirkt haben",
+       "rolle": "Besetzung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 4",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Ist ein Richter verhindert",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so gibt bei Stimmengleichheit die Stimme des Vorsitzenden den Ausschlag",
+       "rolle": "Stichentscheid"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 5",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Der Berichtigungsbeschluss wird auf dem Urteil und den Ausfertigungen vermerkt",
+       "rolle": "Vermerk"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 6",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Ist das Urteil elektronisch abgefasst",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "ist auch der Beschluss elektronisch abzufassen und mit dem Urteil untrennbar zu verbinden",
+       "rolle": "Form"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

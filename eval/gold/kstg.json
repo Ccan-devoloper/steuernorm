@@ -1,0 +1,112 @@
+{
+ "abk": "KStG",
+ "titel": "Körperschaftsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 23 ist Tarifnorm: Die Nummern nennen Zeitraum und Satz zusammen und sind vollständig Rechtsfolge — ein Tarif hat keinen eigenen Tatbestand.",
+ "normen": {
+  "3": {
+   "enbez": "§ 3",
+   "titel": "Abgrenzung der Steuerpflicht bei Personenvereinigungen und nicht rechtsfähigen Vermögensmassen sowie bei Realgemeinden",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen", "rolle": "Steuersubjekt" },
+      { "art": "rf", "text": "sind körperschaftsteuerpflichtig", "rolle": "Steuerpflicht" },
+      { "art": "tb", "text": "wenn ihr Einkommen weder nach diesem Gesetz noch nach dem Einkommensteuergesetz unmittelbar bei einem anderen Steuerpflichtigen zu versteuern ist", "rolle": "Subsidiarität" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Hauberg-, Wald-, Forst- und Laubgenossenschaften und ähnliche Realgemeinden, die zu den in § 1 bezeichneten Steuerpflichtigen gehören", "rolle": "Steuersubjekt" },
+      { "art": "rf", "text": "sind nur insoweit körperschaftsteuerpflichtig", "rolle": "beschränkte Steuerpflicht" },
+      { "art": "tb", "text": "als sie einen Gewerbebetrieb unterhalten oder verpachten, der über den Rahmen eines Nebenbetriebs hinausgeht", "rolle": "Umfang" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      { "art": "tb", "text": "Im Übrigen", "rolle": "Auffangfall" },
+      { "art": "rf", "text": "sind ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern", "rolle": "Durchgriff" }
+     ]
+    }
+   ]
+  },
+  "23": {
+   "enbez": "§ 23",
+   "titel": "Steuersatz",
+   "typ": "tarif",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "beträgt für", "rolle": "Tarifanordnung" }
+     ]
+    },
+    { "pfad": "Abs. 1 Nr. 1", "elemente": [
+      { "art": "rf", "text": "Veranlagungszeiträume bis 2027 15 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Nr. 2", "elemente": [
+      { "art": "rf", "text": "den Veranlagungszeitraum 2028 14 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Nr. 3", "elemente": [
+      { "art": "rf", "text": "den Veranlagungszeitraum 2029 13 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Nr. 4", "elemente": [
+      { "art": "rf", "text": "den Veranlagungszeitraum 2030 12 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Nr. 5", "elemente": [
+      { "art": "rf", "text": "den Veranlagungszeitraum 2031 11 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Nr. 6", "elemente": [
+      { "art": "rf", "text": "Veranlagungszeiträume ab 2032 10 Prozent", "rolle": "Steuersatz" } ] },
+    { "pfad": "Abs. 1 Satz 1 (Teil 2)", "elemente": [
+      { "art": "rf", "text": "des zu versteuernden Einkommens", "rolle": "Bemessungsgrundlage" } ] },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Wird die Einkommensteuer auf Grund der Ermächtigung des § 51 Abs. 3 des Einkommensteuergesetzes herabgesetzt oder erhöht", "rolle": "uneingeleiteter Bedingungssatz" },
+      { "art": "rf", "text": "so ermäßigt oder erhöht sich die Körperschaftsteuer entsprechend", "rolle": "Gleichlauf" }
+     ]
+    }
+   ]
+  },
+  "32a": {
+   "enbez": "§ 32a",
+   "titel": "Erlass, Aufhebung oder Änderung von Steuerbescheiden bei verdeckter Gewinnausschüttung oder verdeckter Einlage",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen, aufgehoben oder geändert wird", "rolle": "Anknüpfungsbescheid" },
+      { "art": "rf", "text": "kann ein Steuerbescheid oder ein Feststellungsbescheid gegenüber dem Gesellschafter, dem die verdeckte Gewinnausschüttung zuzurechnen ist, oder einer diesem nahe stehenden Person erlassen, aufgehoben oder geändert werden", "rolle": "Korrekturbefugnis" }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "Die Festsetzungsfrist endet insoweit nicht vor Ablauf eines Jahres nach Unanfechtbarkeit des Steuerbescheides der Körperschaft", "rolle": "Ablaufhemmung" }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Satz 3",
+     "elemente": [
+      { "art": "rf", "text": "Die Sätze 1 und 2 gelten auch für verdeckte Gewinnausschüttungen an Empfänger von Bezügen im Sinne des § 20 Abs. 1 Nr. 9 und 10 Buchstabe a des Einkommensteuergesetzes", "rolle": "Erstreckung" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen, aufgehoben oder geändert wird", "rolle": "Anknüpfungsbescheid" },
+      { "art": "rf", "text": "kann ein Steuerbescheid gegenüber der Körperschaft, welcher der Vermögensvorteil zugewendet wurde, aufgehoben, erlassen oder geändert werden", "rolle": "Korrekturbefugnis" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "Absatz 1 Satz 2 gilt entsprechend", "rolle": "Verweisung" }
+     ]
+    }
+   ]
+  }
+ }
+}

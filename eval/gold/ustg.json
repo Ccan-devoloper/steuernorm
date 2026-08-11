@@ -1,0 +1,79 @@
+{
+ "abk": "UStG",
+ "titel": "Umsatzsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung.",
+ "befund": "§ 18d Satz 1 endet in den amtlichen Daten mitten in einer Fundstelle: Die Abkürzung „(ABl.\" wird als Satzende gelesen, der Rest der Fundstelle („L 268 vom 12.10.2010, S. 1)\") eröffnet Satz 2. Satz 1 ist deshalb kein vollständiger Rechtssatz und bleibt ohne Element; die Anordnung steht im Soll bei Satz 2, wo sie tatsächlich beginnt. Das ist ein Befund am Bestand, keine Auslegung.",
+ "normen": {
+  "2a": {
+   "enbez": "§ 2a",
+   "titel": "Fahrzeuglieferer",
+   "typ": "fiktion",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Wer im Inland ein neues Fahrzeug liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt", "rolle": "Lieferung" },
+      { "art": "tb", "text": "wenn er nicht Unternehmer im Sinne des § 2 ist", "rolle": "Nichtunternehmer" },
+      { "art": "rf", "text": "für diese Lieferung wie ein Unternehmer behandelt", "rolle": "Unternehmerfiktion" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "Dasselbe gilt", "rolle": "Erstreckung" },
+      { "art": "tb", "text": "wenn der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist und die Lieferung nicht im Rahmen des Unternehmens ausführt", "rolle": "Lieferung außerhalb des Unternehmens" }
+     ]
+    }
+   ]
+  },
+  "18d": {
+   "enbez": "§ 18d",
+   "titel": "Vorlage von Urkunden",
+   "typ": "gemischt",
+   "saetze": [
+    { "pfad": "Satz 1", "elemente": [] },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "berechtigt, von Unternehmern die Vorlage der jeweils erforderlichen Bücher, Aufzeichnungen, Geschäftspapiere und anderen Urkunden zur Einsicht und Prüfung zu verlangen", "rolle": "Vorlageverlangen" }
+     ]
+    },
+    {
+     "pfad": "Satz 3",
+     "elemente": [
+      { "art": "rf", "text": "§ 97 Absatz 2 der Abgabenordnung gilt entsprechend", "rolle": "Verweisung" }
+     ]
+    },
+    {
+     "pfad": "Satz 4",
+     "elemente": [
+      { "art": "tb", "text": "auf Verlangen der Finanzbehörde", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "hat auf Verlangen der Finanzbehörde die in Satz 1 bezeichneten Unterlagen vorzulegen", "rolle": "Vorlagepflicht" }
+     ]
+    }
+   ]
+  },
+  "22c": {
+   "enbez": "§ 22c",
+   "titel": "Ausstellung von Rechnungen im Falle der Fiskalvertretung",
+   "typ": "gemischt",
+   "hinweis": "Der Einleitungssatz ordnet an („hat … zu enthalten\"); die Nummern sind damit Anordnungsvarianten, nicht Merkmale.",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "Die Rechnung hat folgende Angaben zu enthalten", "rolle": "Rechnungspflicht" }
+     ]
+    },
+    { "pfad": "Nr. 1", "elemente": [
+      { "art": "rf", "text": "den Hinweis auf die Fiskalvertretung", "rolle": "Pflichtangabe" } ] },
+    { "pfad": "Nr. 2", "elemente": [
+      { "art": "rf", "text": "den Namen und die Anschrift des Fiskalvertreters", "rolle": "Pflichtangabe" } ] },
+    { "pfad": "Nr. 3", "elemente": [
+      { "art": "rf", "text": "die dem Fiskalvertreter nach § 22d Abs. 1 erteilte Umsatzsteuer-Identifikationsnummer", "rolle": "Pflichtangabe" } ] }
+   ]
+  }
+ }
+}

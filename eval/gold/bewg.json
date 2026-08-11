@@ -1,0 +1,66 @@
+{
+ "abk": "BewG",
+ "titel": "Bewertungsgesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. »Bei der forstwirtschaftlichen Nutzung« und »Für die Größe des Betriebs« sind konditionale Vorfelder und damit Tatbestand; der einleitende Derogationsverweis »abweichend von § 161 Abs. 1« bleibt unmarkiert.",
+ "normen": {
+  "1": {
+   "enbez": "§ 1",
+   "titel": "Geltungsbereich",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "gelten für alle öffentlich-rechtlichen Abgaben", "rolle": "Geltungsanordnung" },
+      { "art": "tb", "text": "die durch Bundesrecht geregelt sind", "rolle": "Abgabenart" },
+      { "art": "tb", "text": "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden", "rolle": "Verwaltungszuständigkeit" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "ausn", "text": "Die allgemeinen Bewertungsvorschriften gelten nicht, soweit im Zweiten Teil dieses Gesetzes oder in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind", "rolle": "Vorrang der besonderen Vorschriften" }
+     ]
+    }
+   ]
+  },
+  "172": {
+   "enbez": "§ 172",
+   "titel": "Abweichender Bewertungsstichtag",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Bei der forstwirtschaftlichen Nutzung", "rolle": "Anwendungsfall" },
+      { "art": "tb", "text": "für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz", "rolle": "Bewertungsgegenstand" },
+      { "art": "rf", "text": "die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde zu legen, das dem Bewertungsstichtag vorangegangen ist", "rolle": "maßgeblicher Zeitpunkt" }
+     ]
+    }
+   ]
+  },
+  "235": {
+   "enbez": "§ 235",
+   "titel": "Feststellungszeitpunkt",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Für die Größe des Betriebs sowie für den Umfang und den Zustand der Gebäude", "rolle": "Bewertungsgegenstand" },
+      { "art": "rf", "text": "sind die Verhältnisse im Feststellungszeitpunkt maßgebend", "rolle": "maßgeblicher Zeitpunkt" }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "Für die stehenden und umlaufenden Betriebsmittel", "rolle": "Bewertungsgegenstand" },
+      { "art": "rf", "text": "ist der Stand am Ende des Wirtschaftsjahres maßgebend, das dem Feststellungszeitpunkt vorangegangen ist", "rolle": "maßgeblicher Zeitpunkt" }
+     ]
+    }
+   ]
+  }
+ }
+}

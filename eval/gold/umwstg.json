@@ -1,0 +1,125 @@
+{
+ "abk": "UmwStG",
+ "titel": "Umwandlungssteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 9 Satz 1 ist eine Verweisungsnorm mit konditionalem Vorfeld.",
+ "normen": {
+  "7": {
+   "enbez": "§ 7",
+   "titel": "Besteuerung offener Rücklagen",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Dem Anteilseigner",
+       "rolle": "Zurechnungsadressat"
+      },
+      {
+       "art": "rf",
+       "text": "ist der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes, der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt, in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft als Einnahmen aus Kapitalvermögen im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes zuzurechnen",
+       "rolle": "Zurechnung als Kapitaleinkünfte"
+      }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Dies gilt unabhängig davon, ob für den Anteilseigner ein Übernahmegewinn oder Übernahmeverlust nach § 4 oder § 5 ermittelt wird",
+       "rolle": "Unabhängigkeit"
+      }
+     ]
+    }
+   ]
+  },
+  "9": {
+   "enbez": "§ 9",
+   "titel": "Formwechsel in eine Personengesellschaft",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "sind die §§ 3 bis 8 und 10 entsprechend anzuwenden",
+       "rolle": "Verweisung"
+      }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "hat für steuerliche Zwecke auf den Zeitpunkt, in dem der Formwechsel wirksam wird, eine Übertragungsbilanz, die Personengesellschaft eine Eröffnungsbilanz aufzustellen",
+       "rolle": "Bilanzierungspflicht"
+      }
+     ]
+    },
+    {
+     "pfad": "Satz 3",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
+       "rolle": "Rückbeziehung"
+      },
+      {
+       "art": "rf",
+       "text": "§ 2 Absatz 3 bis 5 gilt entsprechend",
+       "rolle": "Verweisung"
+      }
+     ]
+    }
+   ]
+  },
+  "19": {
+   "enbez": "§ 19",
+   "titel": "Gewerbesteuer bei Vermögensübergang auf eine andere Körperschaft",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Geht das Vermögen der übertragenden Körperschaft auf eine andere Körperschaft über",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "gelten die §§ 11 bis 15 auch für die Ermittlung des Gewerbeertrags",
+       "rolle": "Verweisung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Für die vortragsfähigen Fehlbeträge der übertragenden Körperschaft im Sinne des § 10a des Gewerbesteuergesetzes",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "gelten § 12 Abs. 3 und § 15 Abs. 3 entsprechend",
+       "rolle": "Verweisung"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

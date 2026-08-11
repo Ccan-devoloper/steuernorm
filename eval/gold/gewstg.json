@@ -1,0 +1,67 @@
+{
+ "abk": "GewStG",
+ "titel": "Gewerbesteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 2a ist eine negative Fiktion: »Als Gewerbebetrieb gilt nicht …« ordnet die Rechtsfolge an, der Relativsatz trägt das Merkmal.",
+ "normen": {
+  "2a": {
+   "enbez": "§ 2a",
+   "titel": "Arbeitsgemeinschaften",
+   "typ": "fiktion",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "Als Gewerbebetrieb gilt nicht die Tätigkeit der Arbeitsgemeinschaften", "rolle": "negative Fiktion" },
+      { "art": "tb", "text": "deren alleiniger Zweck in der Erfüllung eines einzigen Werkvertrags oder Werklieferungsvertrags besteht", "rolle": "Zweckbindung" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "rf", "text": "gelten insoweit anteilig als Betriebsstätten der Beteiligten", "rolle": "Zurechnung der Betriebsstätten" }
+     ]
+    }
+   ]
+  },
+  "14a": {
+   "enbez": "§ 14a",
+   "titel": "Steuererklärungspflicht",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "tb", "text": "für steuerpflichtige Gewerbebetriebe", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "hat für steuerpflichtige Gewerbebetriebe eine Erklärung zur Festsetzung des Steuermessbetrags und in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln", "rolle": "Erklärungspflicht" }
+     ]
+    },
+    {
+     "pfad": "Satz 2",
+     "elemente": [
+      { "art": "tb", "text": "Auf Antrag", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung verzichten", "rolle": "Härtefallverzicht" },
+      { "art": "tb", "text": "in diesem Fall", "rolle": "Anwendungsfall" },
+      { "art": "rf", "text": "ist die Erklärung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerschuldner oder von den in § 34 der Abgabenordnung bezeichneten Personen eigenhändig zu unterschreiben", "rolle": "Ersatzform" }
+     ]
+    }
+   ]
+  },
+  "21": {
+   "enbez": "§ 21",
+   "titel": "Entstehung der Vorauszahlungen",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      { "art": "rf", "text": "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind", "rolle": "Entstehungszeitpunkt" },
+      { "art": "tb", "text": "wenn die Steuerpflicht erst im Laufe des Kalendervierteljahrs begründet wird", "rolle": "unterjähriger Beginn" },
+      { "art": "rf", "text": "mit Begründung der Steuerpflicht", "rolle": "Entstehungszeitpunkt" }
+     ]
+    }
+   ]
+  }
+ }
+}

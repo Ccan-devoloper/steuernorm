@@ -1,0 +1,195 @@
+{
+ "abk": "InvStG",
+ "titel": "Investmentsteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 25 und § 34 Abs. 2 enthalten Derogationen (»sind … nicht anzuwenden«) — eigenständige Ausnahmen, deren Inhalt die Fundstelle ist.",
+ "normen": {
+  "5": {
+   "enbez": "§ 5",
+   "titel": "Prüfung der steuerlichen Verhältnisse",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "ist zur Überprüfung der steuerlichen Verhältnisse befugt",
+       "rolle": "Prüfungsbefugnis"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "bei Investmentfonds",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "Eine Prüfung nach Absatz 1 ist zulässig bei Investmentfonds zur Ermittlung",
+       "rolle": "Zulässigkeit"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "der steuerlichen Verhältnisse des Investmentfonds",
+       "rolle": "Prüfungsgegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "der Voraussetzungen für eine Besteuerung als Spezial-Investmentfonds",
+       "rolle": "Prüfungsgegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Nr. 3",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "der Besteuerungsgrundlagen der Anleger",
+       "rolle": "Prüfungsgegenstand"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1 (Teil 2)",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Die §§ 194 bis 203 der Abgabenordnung sind entsprechend anzuwenden",
+       "rolle": "Verweisung"
+      }
+     ]
+    }
+   ]
+  },
+  "25": {
+   "enbez": "§ 25",
+   "titel": "Getrennte Besteuerungsregelungen",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Die Vorschriften des Kapitels 2 sind auf Spezial-Investmentfonds und deren Anleger nicht anzuwenden",
+       "rolle": "Derogation"
+      },
+      {
+       "art": "ausn",
+       "text": "es sei denn, in Kapitel 3 werden abweichende Bestimmungen getroffen",
+       "rolle": "Rückausnahme"
+      }
+     ]
+    }
+   ]
+  },
+  "34": {
+   "enbez": "§ 34",
+   "titel": "Spezial-Investmenterträge",
+   "typ": "gemischt",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Erträge aus Spezial-Investmentfonds (Spezial- Investmenterträge) sind",
+       "rolle": "Begriffsbestimmung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "ausgeschüttete Erträge nach § 35",
+       "rolle": "Ertragsart"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 2",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
+       "rolle": "Ertragsart"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 1 Nr. 3",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
+       "rolle": "Ertragsart"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Auf Spezial-Investmenterträge sind § 2 Absatz 5b, § 20 Absatz 6 und 9, die §§ 32d und 43 Absatz 5 Satz 1 des Einkommensteuergesetzes nicht anzuwenden",
+       "rolle": "Derogation"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 2",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes sind vorbehaltlich des § 42 nicht anzuwenden",
+       "rolle": "Derogation"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "Die Freistellung von ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1",
+       "rolle": "Verweisung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 3 Satz 2",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4 gewährt",
+       "rolle": "Freistellung"
+      },
+      {
+       "art": "ausn",
+       "text": "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung",
+       "rolle": "Vorrangregel"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

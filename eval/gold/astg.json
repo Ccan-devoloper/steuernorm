@@ -1,0 +1,120 @@
+{
+ "abk": "AStG",
+ "titel": "Außensteuergesetz",
+ "format": 3,
+ "quelle": "von Hand geprüft",
+ "hinweis": "Referenz zur Messung. § 9 trägt eine Freigrenze mit zwei kumulativen Bedingungen; § 16 Abs. 1 ist ein vorangestellter Bedingungssatz über sechs Zeilen.",
+ "normen": {
+  "4": {
+   "enbez": "§ 4",
+   "titel": "Erbschaftsteuer",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "War bei einem Erblasser oder Schenker zur Zeit der Entstehung der Steuerschuld § 2 Abs. 1 Satz 1 anzuwenden",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein",
+       "rolle": "erweiterte Steuerpflicht"
+      },
+      {
+       "art": "tb",
+       "text": "deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+       "rolle": "Inlandsbezug der Erträge"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "ausn",
+       "text": "Absatz 1 findet keine Anwendung",
+       "rolle": "Derogation"
+      },
+      {
+       "art": "tb",
+       "text": "wenn nachgewiesen wird, daß für die Teile des Erwerbs, die nach dieser Vorschrift über § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes hinaus steuerpflichtig wären, im Ausland eine der deutschen Erbschaftsteuer entsprechende Steuer zu entrichten ist, die mindestens 30 Prozent der deutschen Erbschaftsteuer beträgt, die bei Anwendung des Absatzes 1 auf diese Teile des Erwerbs entfallen würde",
+       "rolle": "Nachweis ausländischer Steuer"
+      }
+     ]
+    }
+   ]
+  },
+  "9": {
+   "enbez": "§ 9",
+   "titel": "Freigrenze bei gemischten Einkünften",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Für die Anwendung des § 7 Absatz 1",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "sind Einkünfte eines maßgebenden Wirtschaftsjahres im Sinne des § 7 Absatz 2, für die eine ausländische Gesellschaft Zwischengesellschaft ist, außer Ansatz zu lassen",
+       "rolle": "Nichtansatz"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen und die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
+       "rolle": "Freigrenze"
+      }
+     ]
+    }
+   ]
+  },
+  "16": {
+   "enbez": "§ 16",
+   "titel": "Mitwirkungspflicht des Steuerpflichtigen",
+   "typ": "konditional",
+   "saetze": [
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "Beantragt ein Steuerpflichtiger unter Berufung auf Geschäftsbeziehungen mit einer ausländischen Gesellschaft oder einer im Ausland ansässigen Person oder Personengesellschaft, die mit ihren Einkünften, die in Zusammenhang mit den Geschäftsbeziehungen zu dem Steuerpflichtigen stehen, nicht oder nur unwesentlich besteuert wird, die Absetzung von Schulden oder anderen Lasten oder von Betriebsausgaben oder Werbungskosten",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet",
+       "rolle": "Bezeichnungserfordernis"
+      },
+      {
+       "art": "tb",
+       "text": "wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
+       "rolle": "Offenlegung"
+      }
+     ]
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "auf Verlangen des Finanzamts",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "hat über die Richtigkeit und Vollständigkeit seiner Angaben und über die Behauptung, daß ihm Tatsachen nicht bekannt sind, auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung eine Versicherung an Eides Statt abzugeben",
+       "rolle": "eidesstattliche Versicherung"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
