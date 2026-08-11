@@ -304,7 +304,29 @@ function zerlegeRoh(satz, kontext = {}) {
   // …"), im Glied selbst fehlt es. Ohne eigenen Zweig landeten diese 1 937 Glieder
   // in der Auffangregel „Kein finites Verb erkannt" — richtig markiert, aber mit
   // einer Begründung, die den Sachverhalt verfehlt.
-  if (kontext.ebene === "nr" && !finitesVerb(satz)) {
+  /* Auch das SCHLIESSENDE Glied gehört hierher. Das letzte Glied einer
+     Aufzählung trägt regelmäßig das Verb, das die Satzklammer des
+     Einleitungssatzes schließt:
+
+       „… wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum
+         1. bei monatlicher Lohnzahlung …,
+         2. …,
+         3. … mehr als ein Dreihundertsechzigstel … BETRÄGT."
+
+     Dieses „beträgt" gehört dem Einleitungssatz, nicht dem Glied. Wer es als
+     eigenes Prädikat liest, hält das Glied für einen vollständigen Satz und
+     verwirft es anschließend als „deckt praktisch den ganzen Rechtssatz ab".
+     Genau daran ist der Schlusspunkt jeder Aufzählung in § 3 SolzG
+     gescheitert. Maßgeblich ist die Stellung: Steht das finite Verb ganz am
+     Ende, schließt es die Klammer und eröffnet keine neue. */
+  const verbSchliesst = () => {
+    const v = finitesVerb(satz);
+    if (!v) return false;
+    const danach = satz.slice(v.index + (v.form ? v.form.length : 0));
+    return /^[\s.,;:]*$/.test(danach);
+  };
+
+  if (kontext.ebene === "nr" && (!finitesVerb(satz) || verbSchliesst())) {
     const rolle = katalogRolle(kontext.einleitung || "");
     merk(rolle, satz, `Aufzählungsglied ${kontext.nr || ""}`.trim()
       + ` — ${rolle === "rf" ? "Anordnungsvariante" : "Merkmalsvariante"} des Einleitungssatzes`);
@@ -526,9 +548,14 @@ export function teilsaetze(satz) {
     /* Auch das erste Stück muss tragen; sonst gehört es zum zweiten. */
     const [erstes, ...rest] = raus;
     rest[0] = erstes + ";" + rest[0];
-    return rest;
+    return rest.map((t) => t.trim());
   }
-  return raus;
+  /* GETRIMMT. Hinter dem Semikolon steht ein Leerzeichen, und mehrere Muster
+     verlangen einen Satzanfang: `SATZAUSNAHME` beginnt mit `(?:^|;\s*)`, und
+     „ § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden" fiel
+     allein daran durch — die Derogation wurde als Subjekt plus Prädikat
+     gelesen statt als Ausnahme. */
+  return raus.map((t) => t.trim());
 }
 
 export function zerlege(satz, kontext = {}) {

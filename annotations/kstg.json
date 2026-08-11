@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T09:36:30.365Z",
+  "aktualisiert": "2026-08-11T11:31:25.003Z",
   "quelle": "https://www.gesetze-im-internet.de/kstg_1977/",
   "stand": [
     {
@@ -91,6 +91,7 @@
           "von": 181,
           "bis": 404,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -116,6 +117,7 @@
           "von": 408,
           "bis": 474,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -141,6 +143,7 @@
           "von": 478,
           "bis": 538,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -166,6 +169,7 @@
           "von": 542,
           "bis": 592,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -191,6 +195,7 @@
           "von": 596,
           "bis": 717,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -216,6 +221,7 @@
           "von": 721,
           "bis": 797,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -876,7 +882,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79e9bff3f597217332e5cf1eebdbbdce4360f7219fa2f09aafe025654cb9dd84",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.154Z"
+      "aktualisiert": "2026-08-11T11:31:24.785Z"
     },
     "2": {
       "typ": "gemischt",
@@ -915,6 +921,7 @@
           "von": 47,
           "bis": 205,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -1198,7 +1205,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7095009d300ccde317da077f8947919dca619376d30d2c0f39b795480c263798",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.163Z"
+      "aktualisiert": "2026-08-11T11:31:24.797Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1485,7 +1492,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "14b619b4e3fa7cfde960174b5afbba14bb602ce706268be8aeb84dd338d99f00",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.164Z"
+      "aktualisiert": "2026-08-11T11:31:24.798Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1843,23 +1850,24 @@
           "von": 1244,
           "bis": 1265,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "sie gleichartig",
+              "art": "rf",
+              "text": "sie gleichartig sind",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 1",
               "von": 1244,
-              "laenge": 15,
-              "konfidenz": 0.45,
+              "laenge": 20,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 1 — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -1893,39 +1901,24 @@
           "von": 1444,
           "bis": 1504,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "Betriebe gewerblicher Art im Sinne des Absatzes 3",
+              "art": "rf",
+              "text": "Betriebe gewerblicher Art im Sinne des Absatzes 3 vorliegen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Nr. 3",
               "von": 1444,
-              "laenge": 49,
+              "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "vorliegen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 6 Nr. 3",
-              "von": 1494,
-              "laenge": 9,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 3 — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -2230,22 +2223,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "sie gleichartig",
-                  "pfad": "Abs. 6 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Betriebe gewerblicher Art im Sinne des Absatzes 3",
-                  "pfad": "Abs. 6 Nr. 3",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
                   "t": "Ein Betrieb gewerblicher Art",
                   "pfad": "Abs. 6 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -2269,6 +2246,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "sie gleichartig sind",
+                  "pfad": "Abs. 6 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "zwischen ihnen nach dem Gesamtbild der tatsächlichen Verhältnisse objektiv eine enge wechselseitige technisch-wirtschaftliche Verflechtung von einigem Gewicht besteht",
                   "pfad": "Abs. 6 Nr. 2",
                   "konfidenz": 0.6,
@@ -2276,15 +2261,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
-                  "t": "vorliegen",
+                  "n": "4.",
+                  "t": "Betriebe gewerblicher Art im Sinne des Absatzes 3 vorliegen",
                   "pfad": "Abs. 6 Nr. 3",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "kann nicht mit einem Hoheitsbetrieb zusammengefasst werden",
                   "pfad": "Abs. 6 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -2306,8 +2291,6 @@
         "Zu den Betrieben gewerblicher Art",
         "Für die Annahme eines Hoheitsbetriebs reichen Zwangs- oder Monopolrechte nicht aus",
         "Ein Betrieb gewerblicher Art",
-        "sie gleichartig",
-        "Betriebe gewerblicher Art im Sinne des Absatzes 3",
         "Ein Betrieb gewerblicher Art"
       ],
       "rf": [
@@ -2318,8 +2301,9 @@
         "gilt die Verpachtung eines solchen Betriebs",
         "gehören nicht Betriebe, die überwiegend der Ausübung der öffentlichen Gewalt dienen (Hoheitsbetriebe)",
         "kann mit einem oder mehreren anderen Betrieben gewerblicher Art zusammengefasst werden",
+        "sie gleichartig sind",
         "zwischen ihnen nach dem Gesamtbild der tatsächlichen Verhältnisse objektiv eine enge wechselseitige technisch-wirtschaftliche Verflechtung von einigem Gewicht besteht",
-        "vorliegen",
+        "Betriebe gewerblicher Art im Sinne des Absatzes 3 vorliegen",
         "kann nicht mit einem Hoheitsbetrieb zusammengefasst werden"
       ],
       "ausnahmen": [
@@ -2328,7 +2312,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.587,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2338,7 +2322,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "122af1175305714eab14e9be066a03ccd1ab90a9a3905eb724c83854af4cc65b",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.166Z"
+      "aktualisiert": "2026-08-11T11:31:24.802Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2396,14 +2380,33 @@
           "von": 43,
           "bis": 258,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "das Bundeseisenbahnvermögen, die staatlichen Lotterieunternehmen und der Erdölbevorratungsverband nach § 2 Absatz 1 des Erdölbevorratungsgesetzes vom 16. Januar 2012 (BGBl. I S. 74) in der jeweils geltenden Fassung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 43,
+              "laenge": 214,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 262,
           "bis": 1356,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -2412,6 +2415,7 @@
           "von": 1361,
           "bis": 1419,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2478,6 +2482,7 @@
           "von": 1861,
           "bis": 2359,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -2486,8 +2491,26 @@
           "von": 2364,
           "bis": 2577,
           "typ": "gleichstellung",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "auf Arbeitnehmer sonstiger Körperschaften, Personenvereinigungen und Vermögensmassen im Sinne der §§ 1 und 2; den Arbeitnehmern stehen Personen, die sich in einem arbeitnehmerähnlichen Verhältnis befinden, gleich",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 cc)",
+              "von": 2364,
+              "laenge": 212,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied cc) — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 1 (Teil 2)",
@@ -2945,8 +2968,26 @@
           "von": 5601,
           "bis": 5767,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "wenn die Berufsverbände Mittel von mehr als 10 Prozent der Einnahmen für die unmittelbare oder mittelbare Unterstützung oder Förderung politischer Parteien verwenden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. b (Teil 2)",
+              "von": 5601,
+              "laenge": 165,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 1 (Teil 4)",
@@ -3674,6 +3715,7 @@
           "von": 11186,
           "bis": 11301,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3699,8 +3741,26 @@
           "von": 11305,
           "bis": 11655,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "auf Leistungen im Rahmen von Dienst- oder Werkverträgen für die Produktion land- und forstwirtschaftlicher Erzeugnisse für die Betriebe der Mitglieder, wenn die Leistungen im Bereich der Land- und Forstwirtschaft liegen; dazu gehören auch Leistungen zur Erstellung und Unterhaltung von Betriebsvorrichtungen, Wirtschaftswegen und Bodenverbesserungen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. b (Teil 4)",
+              "von": 11305,
+              "laenge": 349,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Buchst. c",
@@ -3764,6 +3824,7 @@
           "von": 11883,
           "bis": 12007,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3937,8 +3998,26 @@
           "von": 13129,
           "bis": 13345,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "als Einlagensicherungssysteme im Sinne des § 2 Absatz 1 des Einlagensicherungsgesetzes sowie als Entschädigungseinrichtungen im Sinne des Anlegerentschädigungsgesetzes ihre gesetz­lichen Pflichtaufgaben erfüllen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. a (Teil 6)",
+              "von": 13129,
+              "laenge": 211,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Buchst. b (Teil 6)",
@@ -4661,8 +4740,26 @@
           "von": 19203,
           "bis": 19377,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "für inländische Einkünfte, die dem Steuerabzug vollständig oder teilweise unterliegen; Entsprechendes gilt für die in § 32 Abs. 3 Satz 1 zweiter Halbsatz genannten Einkünfte",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 19203,
+              "laenge": 173,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 2",
@@ -4835,6 +4932,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "das Bundeseisenbahnvermögen, die staatlichen Lotterieunternehmen und der Erdölbevorratungsverband nach § 2 Absatz 1 des Erdölbevorratungsgesetzes vom 16. Januar 2012 (BGBl. I S. 74) in der jeweils geltenden Fassung",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "die Bundesanstalt für vereinigungsbedingte Sonderaufgaben",
                   "pfad": "Abs. 1 2a",
                   "konfidenz": 0.6,
@@ -4842,7 +4947,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "rechtsfähige Pensions-, Sterbe- und Krankenkassen, die den Personen, denen die Leistungen der Kasse",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -4850,7 +4955,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
+                  "t": "auf Arbeitnehmer sonstiger Körperschaften, Personenvereinigungen und Vermögensmassen im Sinne der §§ 1 und 2; den Arbeitnehmern stehen Personen, die sich in einem arbeitnehmerähnlichen Verhältnis befinden, gleich",
+                  "pfad": "Abs. 1 cc)",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "zu den Zugehörigen oder Arbeitnehmern",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4858,7 +4971,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "wenn sich diese Leistungen",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -4866,7 +4979,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "d) wenn bei Pensions-, Sterbe- und Krankenkassen am Schluss des Wirtschaftsjahrs, zu dem der Wert der Deckungsrückstellung versicherungsmathematisch zu berechnen",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -4874,7 +4987,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "Bei der Ermittlung des Vermögens",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -4882,7 +4995,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "sich ihr Geschäftsbetrieb auf die Sterbegeldversicherung",
                   "pfad": "Abs. 1 Buchst. b",
                   "konfidenz": 0.6,
@@ -4890,7 +5003,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
                   "t": "wenn der Zweck dieser Verbände nicht auf einen wirtschaftlichen Geschäftsbetrieb gerichtet ist",
                   "pfad": "Abs. 1 Satz 1 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4898,7 +5011,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "12.",
                   "t": "soweit die Körperschaften oder Personenvereinigungen einen wirtschaftlichen Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Buchst. a (Teil 2)",
                   "konfidenz": 0.6,
@@ -4906,7 +5019,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "13.",
+                  "t": "wenn die Berufsverbände Mittel von mehr als 10 Prozent der Einnahmen für die unmittelbare oder mittelbare Unterstützung oder Förderung politischer Parteien verwenden",
+                  "pfad": "Abs. 1 Buchst. b (Teil 2)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "14.",
                   "t": "Die Sätze 1 und 2",
                   "pfad": "Abs. 1 Satz 1 (Teil 4)",
                   "konfidenz": 0.6,
@@ -4914,7 +5035,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "15.",
                   "t": "sofern ihre Erträge im Wesentlichen aus dieser Vermögensverwaltung herrühren und ausschließlich dem Berufsverband zufließen; 7. politische Parteien im Sinne des § 2 des Parteiengesetzes und ihre Gebietsverbände, sofern die jeweilige Partei nicht gemäß § 18 Absatz 7 des Parteiengesetzes von der staatlichen Teilfinanzierung ausgeschlossen ist",
                   "pfad": "Abs. 1 Satz 3 (Teil 2)",
                   "konfidenz": 0.42,
@@ -4922,7 +5043,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "16.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Satz 4 (Teil 2)",
                   "konfidenz": 0.6,
@@ -4930,7 +5051,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "17.",
                   "t": "wenn die Satzung die Zahlung keiner höheren jährlichen Beiträge zulässt als das Fünfzehnfache der Beiträge, die sich bei einer Beitragsbemessungsgrundlage in Höhe der doppelten monatlichen Beitragsbemessungsgrenze in der allgemeinen Rentenversicherung ergeben würden",
                   "pfad": "Abs. 1 Satz 5 (Teil 2)",
                   "konfidenz": 0.48,
@@ -4938,7 +5059,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "18.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten",
                   "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.6,
@@ -4946,7 +5067,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "16.",
+                  "n": "19.",
                   "t": "soweit sie",
                   "pfad": "Abs. 1 Satz 9",
                   "konfidenz": 0.45,
@@ -4954,7 +5075,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "17.",
+                  "n": "20.",
                   "t": "im Zusammenhang mit einer Tätigkeit im Sinne des Buchstabens a Gemeinschaftsanlagen oder Folgeeinrichtungen herstellen",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.6,
@@ -4962,7 +5083,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "18.",
+                  "n": "21.",
                   "t": "wenn sie überwiegend für Mitglieder bestimmt sind und der Betrieb durch die Genossenschaft oder den Verein notwendig ist",
                   "pfad": "Abs. 1 Buchst. b (Teil 3)",
                   "konfidenz": 0.54,
@@ -4970,7 +5091,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "19.",
+                  "n": "22.",
                   "t": "Zu den Einnahmen nach Satz 3",
                   "pfad": "Abs. 1 Satz 3 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4978,7 +5099,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "20.",
+                  "n": "23.",
                   "t": "Investierende Mitglieder im Sinne des § 8 Absatz 2 des Genossenschaftsgesetzes",
                   "pfad": "Abs. 1 Satz 4 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4986,7 +5107,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "21.",
+                  "n": "24.",
                   "t": "dem Abschluss eines Vertrags im Sinne des Satzes 6",
                   "pfad": "Abs. 1 Satz 6 (Teil 3)",
                   "konfidenz": 0.6,
@@ -4994,7 +5115,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "22.",
+                  "n": "25.",
                   "t": "11. (weggefallen) 12. die von den zuständigen Landesbehörden",
                   "pfad": "Abs. 1 Satz 6 (Teil 3)",
                   "konfidenz": 0.6,
@@ -5002,7 +5123,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "23.",
+                  "n": "26.",
                   "t": "soweit diese Landesgesetze nicht wesentlich von den Bestimmungen des Reichssiedlungsgesetzes abweichen, und im Sinne der Bodenreformgesetze der Länder, soweit die Unternehmen im ländlichen Raum Siedlungs-, Agrarstrukturverbesserungs- und Landentwicklungsmaßnahmen",
                   "pfad": "Abs. 1 Satz 6 (Teil 3)",
                   "konfidenz": 0.6,
@@ -5010,7 +5131,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "24.",
+                  "n": "27.",
                   "t": "wenn die Einnahmen des Unternehmens aus den in Satz 1 nicht bezeichneten Tätigkeiten die Einnahmen aus den in Satz 1 bezeichneten Tätigkeiten übersteigen",
                   "pfad": "Abs. 1 Satz 7 (Teil 2)",
                   "konfidenz": 0.6,
@@ -5018,7 +5139,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "25.",
+                  "n": "28.",
                   "t": "soweit sich ihr Geschäftsbetrieb beschränkt",
                   "pfad": "Abs. 1 Satz 8 (Teil 2)",
                   "konfidenz": 0.6,
@@ -5026,7 +5147,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "26.",
+                  "n": "29.",
                   "t": "auf die gemeinschaftliche Benutzung land- und forstwirtschaftlicher Betriebseinrichtungen oder Betriebsgegenstände",
                   "pfad": "Abs. 1 Buchst. a (Teil 4)",
                   "konfidenz": 0.54,
@@ -5034,7 +5155,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "27.",
+                  "n": "30.",
+                  "t": "auf Leistungen im Rahmen von Dienst- oder Werkverträgen für die Produktion land- und forstwirtschaftlicher Erzeugnisse für die Betriebe der Mitglieder, wenn die Leistungen im Bereich der Land- und Forstwirtschaft liegen; dazu gehören auch Leistungen zur Erstellung und Unterhaltung von Betriebsvorrichtungen, Wirtschaftswegen und Bodenverbesserungen",
+                  "pfad": "Abs. 1 Buchst. b (Teil 4)",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "31.",
                   "t": "auf die Bearbeitung oder die Verwertung der von den Mitgliedern selbst",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -5042,7 +5171,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "28.",
+                  "n": "32.",
                   "t": "wenn die Bearbeitung oder die Verwertung im Bereich der Land- und Forstwirtschaft liegt",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -5050,7 +5179,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "29.",
+                  "n": "33.",
                   "t": "auf die Beratung für die Produktion oder Verwertung land- und forstwirtschaftlicher Erzeugnisse der Betriebe der Mitglieder",
                   "pfad": "Abs. 1 Buchst. d",
                   "konfidenz": 0.6,
@@ -5058,7 +5187,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "30.",
+                  "n": "34.",
                   "t": "Bei Genossenschaften und Vereinen, deren Geschäftsbetrieb sich überwiegend auf die Durchführung von Milchqualitäts- und Milchleistungsprüfungen oder auf die Tierbesamung beschränkt",
                   "pfad": "Abs. 1 Satz 2 (Teil 5)",
                   "konfidenz": 0.54,
@@ -5066,7 +5195,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "31.",
+                  "n": "35.",
                   "t": "wenn seine Leistungen nach dem Kreis der Empfänger sowie nach Art und Höhe den in den §§ 7 bis 9",
                   "pfad": "Abs. 1 Buchst. b (Teil 5)",
                   "konfidenz": 0.6,
@@ -5074,7 +5203,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "32.",
+                  "n": "36.",
                   "t": "17 und 30 des Gesetzes zur Verbesserung der betrieblichen Altersversorgung",
                   "pfad": "Abs. 1 Buchst. b (Teil 5)",
                   "konfidenz": 0.6,
@@ -5082,7 +5211,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "33.",
+                  "n": "37.",
                   "t": "soweit sie",
                   "pfad": "Abs. 1 Satz 2 (Teil 6)",
                   "konfidenz": 0.45,
@@ -5090,7 +5219,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "34.",
+                  "n": "38.",
+                  "t": "als Einlagensicherungssysteme im Sinne des § 2 Absatz 1 des Einlagensicherungsgesetzes sowie als Entschädigungseinrichtungen im Sinne des Anlegerentschädigungsgesetzes ihre gesetz­lichen Pflichtaufgaben erfüllen",
+                  "pfad": "Abs. 1 Buchst. a (Teil 6)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "39.",
                   "t": "als nicht als Einlagensicherungssysteme",
                   "pfad": "Abs. 1 Buchst. b (Teil 6)",
                   "konfidenz": 0.6,
@@ -5098,7 +5235,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "35.",
+                  "n": "40.",
                   "t": "Voraussetzung für die Steuerbefreiung nach Satz 1",
                   "pfad": "Abs. 1 Satz 1 (Teil 8)",
                   "konfidenz": 0.6,
@@ -5106,7 +5243,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "36.",
+                  "n": "41.",
                   "t": "Die Sätze 1 und 2",
                   "pfad": "Abs. 1 Satz 2 (Teil 7)",
                   "konfidenz": 0.6,
@@ -5114,7 +5251,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "37.",
+                  "n": "42.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung des in Satz 1 genannten Zwecks verwendet werden; 18",
                   "pfad": "Abs. 1 Satz 5 (Teil 4)",
                   "konfidenz": 0.54,
@@ -5122,7 +5259,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "38.",
+                  "n": "43.",
                   "t": "Wirtschaftsförderungsgesellschaften, deren Tätigkeit sich auf die Verbesserung der sozialen und wirtschaftlichen Struktur einer bestimmten Region durch Förderung der Wirtschaft, insbesondere durch Industrieansiedlung, Beschaffung neuer Arbeitsplätze und der Sanierung von Altlasten",
                   "pfad": "Abs. 1 Satz 6 (Teil 4)",
                   "konfidenz": 0.6,
@@ -5130,7 +5267,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "39.",
+                  "n": "44.",
                   "t": "wenn an ihnen überwiegend Gebietskörperschaften beteiligt sind",
                   "pfad": "Abs. 1 Satz 6 (Teil 4)",
                   "konfidenz": 0.6,
@@ -5138,7 +5275,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "40.",
+                  "n": "45.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung des in Satz 1 genannten Zwecks verwendet werden; 19",
                   "pfad": "Abs. 1 Satz 7 (Teil 3)",
                   "konfidenz": 0.54,
@@ -5146,7 +5283,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "41.",
+                  "n": "46.",
                   "t": "soweit sie Tätigkeiten ausüben, die in § 2 Abs. 1 dieses Gesetzes bestimmt und nach § 2 Abs. 2 dieses Gesetzes genehmigt worden sind",
                   "pfad": "Abs. 1 Satz 8 (Teil 3)",
                   "konfidenz": 0.6,
@@ -5154,7 +5291,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "42.",
+                  "n": "47.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erfüllung der begünstigten Tätigkeiten verwendet werden",
                   "pfad": "Abs. 1 Satz 9 (Teil 2)",
                   "konfidenz": 0.6,
@@ -5162,7 +5299,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "43.",
+                  "n": "48.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten, dessen Tätigkeit nicht ausschließlich auf die Erfüllung der begünstigten Tätigkeiten gerichtet ist",
                   "pfad": "Abs. 1 Satz 10",
                   "konfidenz": 0.6,
@@ -5170,7 +5307,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "44.",
+                  "n": "49.",
                   "t": "Zusammenschlüsse von juristischen Personen des öffentlichen Rechts, von steuerbefreiten Körperschaften oder von steuerbefreiten Personenvereinigungen",
                   "pfad": "Abs. 1 Satz 11",
                   "konfidenz": 0.6,
@@ -5178,7 +5315,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "45.",
+                  "n": "50.",
                   "t": "deren Tätigkeit sich auf den Zweck",
                   "pfad": "Abs. 1 Buchst. a (Teil 7)",
                   "konfidenz": 0.6,
@@ -5186,7 +5323,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "46.",
+                  "n": "51.",
                   "t": "21. die nicht in der Rechtsform einer Körperschaft des öffentlichen Rechts",
                   "pfad": "Abs. 1 Satz 1 (Teil 9)",
                   "konfidenz": 0.6,
@@ -5194,7 +5331,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "47.",
+                  "n": "52.",
                   "t": "soweit sie die ihnen durch Gesetz zugewiesenen Aufgaben wahrnehmen",
                   "pfad": "Abs. 1 Satz 1 (Teil 9)",
                   "konfidenz": 0.6,
@@ -5202,7 +5339,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "48.",
+                  "n": "53.",
                   "t": "dass das Vermögen und etwa erzielte Überschüsse nur zur Erreichung der in Satz 1 genannten Zwecke verwendet werden",
                   "pfad": "Abs. 1 Satz 2 (Teil 8)",
                   "konfidenz": 0.6,
@@ -5210,7 +5347,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "49.",
+                  "n": "54.",
                   "t": "wenn sie dabei zu nicht steuerbegünstigten Betrieben derselben oder ähnlicher Art nicht in größerem Umfang in Wettbewerb treten",
                   "pfad": "Abs. 1 Satz 2 (Teil 8)",
                   "konfidenz": 0.6,
@@ -5218,7 +5355,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "50.",
+                  "n": "55.",
                   "t": "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten, dessen Tätigkeit nicht ausschließlich auf die Erfüllung der begünstigten Tätigkeiten gerichtet ist",
                   "pfad": "Abs. 1 Satz 3 (Teil 5)",
                   "konfidenz": 0.6,
@@ -5226,7 +5363,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "51.",
+                  "n": "56.",
                   "t": "ist die Tätigkeit auf die Anwendung gesicherter wissenschaftlicher Erkenntnisse, die Übernahme von Projektträgerschaften sowie wirtschaftliche Tätigkeiten ohne Forschungsbezug gerichtet",
                   "pfad": "Abs. 1 Satz 3 (Teil 5)",
                   "konfidenz": 0.6,
@@ -5688,6 +5825,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "für inländische Einkünfte, die dem Steuerabzug vollständig oder teilweise unterliegen; Entsprechendes gilt für die in § 32 Abs. 3 Satz 1 zweiter Halbsatz genannten Einkünfte",
+                  "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "für beschränkt Steuerpflichtige im Sinne des § 2 Nr. 1",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -5695,7 +5840,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "EG Nr. L 1 S. 3), zuletzt",
                   "pfad": "Abs. 2 Nr. 2 Halbs. 2",
                   "konfidenz": 0.6,
@@ -5703,7 +5848,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "EU Nr. L 328 S. 40), in der jeweiligen Fassung Anwendung",
                   "pfad": "Abs. 2 Nr. 2 Halbs. 3",
                   "konfidenz": 0.6,
@@ -5711,7 +5856,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "soweit § 38 Abs. 2 anzuwenden ist",
                   "pfad": "Abs. 2 Nr. 3",
                   "konfidenz": 0.6,
@@ -5771,8 +5916,10 @@
       ],
       "tb": [
         "Von der Körperschaftsteuer",
+        "das Bundeseisenbahnvermögen, die staatlichen Lotterieunternehmen und der Erdölbevorratungsverband nach § 2 Absatz 1 des Erdölbevorratungsgesetzes vom 16. Januar 2012 (BGBl. I S. 74) in der jeweils geltenden Fassung",
         "die Bundesanstalt für vereinigungsbedingte Sonderaufgaben",
         "rechtsfähige Pensions-, Sterbe- und Krankenkassen, die den Personen, denen die Leistungen der Kasse",
+        "auf Arbeitnehmer sonstiger Körperschaften, Personenvereinigungen und Vermögensmassen im Sinne der §§ 1 und 2; den Arbeitnehmern stehen Personen, die sich in einem arbeitnehmerähnlichen Verhältnis befinden, gleich",
         "zu den Zugehörigen oder Arbeitnehmern",
         "wenn sich diese Leistungen",
         "d) wenn bei Pensions-, Sterbe- und Krankenkassen am Schluss des Wirtschaftsjahrs, zu dem der Wert der Deckungsrückstellung versicherungsmathematisch zu berechnen",
@@ -5780,6 +5927,7 @@
         "sich ihr Geschäftsbetrieb auf die Sterbegeldversicherung",
         "wenn der Zweck dieser Verbände nicht auf einen wirtschaftlichen Geschäftsbetrieb gerichtet ist",
         "soweit die Körperschaften oder Personenvereinigungen einen wirtschaftlichen Geschäftsbetrieb unterhalten",
+        "wenn die Berufsverbände Mittel von mehr als 10 Prozent der Einnahmen für die unmittelbare oder mittelbare Unterstützung oder Förderung politischer Parteien verwenden",
         "Die Sätze 1 und 2",
         "sofern ihre Erträge im Wesentlichen aus dieser Vermögensverwaltung herrühren und ausschließlich dem Berufsverband zufließen; 7. politische Parteien im Sinne des § 2 des Parteiengesetzes und ihre Gebietsverbände, sofern die jeweilige Partei nicht gemäß § 18 Absatz 7 des Parteiengesetzes von der staatlichen Teilfinanzierung ausgeschlossen ist",
         "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten",
@@ -5796,6 +5944,7 @@
         "wenn die Einnahmen des Unternehmens aus den in Satz 1 nicht bezeichneten Tätigkeiten die Einnahmen aus den in Satz 1 bezeichneten Tätigkeiten übersteigen",
         "soweit sich ihr Geschäftsbetrieb beschränkt",
         "auf die gemeinschaftliche Benutzung land- und forstwirtschaftlicher Betriebseinrichtungen oder Betriebsgegenstände",
+        "auf Leistungen im Rahmen von Dienst- oder Werkverträgen für die Produktion land- und forstwirtschaftlicher Erzeugnisse für die Betriebe der Mitglieder, wenn die Leistungen im Bereich der Land- und Forstwirtschaft liegen; dazu gehören auch Leistungen zur Erstellung und Unterhaltung von Betriebsvorrichtungen, Wirtschaftswegen und Bodenverbesserungen",
         "auf die Bearbeitung oder die Verwertung der von den Mitgliedern selbst",
         "wenn die Bearbeitung oder die Verwertung im Bereich der Land- und Forstwirtschaft liegt",
         "auf die Beratung für die Produktion oder Verwertung land- und forstwirtschaftlicher Erzeugnisse der Betriebe der Mitglieder",
@@ -5803,6 +5952,7 @@
         "wenn seine Leistungen nach dem Kreis der Empfänger sowie nach Art und Höhe den in den §§ 7 bis 9",
         "17 und 30 des Gesetzes zur Verbesserung der betrieblichen Altersversorgung",
         "soweit sie",
+        "als Einlagensicherungssysteme im Sinne des § 2 Absatz 1 des Einlagensicherungsgesetzes sowie als Entschädigungseinrichtungen im Sinne des Anlegerentschädigungsgesetzes ihre gesetz­lichen Pflichtaufgaben erfüllen",
         "als nicht als Einlagensicherungssysteme",
         "Voraussetzung für die Steuerbefreiung nach Satz 1",
         "Die Sätze 1 und 2",
@@ -5822,6 +5972,7 @@
         "Wird ein wirtschaftlicher Geschäftsbetrieb unterhalten, dessen Tätigkeit nicht ausschließlich auf die Erfüllung der begünstigten Tätigkeiten gerichtet ist",
         "ist die Tätigkeit auf die Anwendung gesicherter wissenschaftlicher Erkenntnisse, die Übernahme von Projektträgerschaften sowie wirtschaftliche Tätigkeiten ohne Forschungsbezug gerichtet",
         "Die Befreiungen nach Absatz 1 und nach anderen Gesetzen als dem Körperschaftsteuergesetz",
+        "für inländische Einkünfte, die dem Steuerabzug vollständig oder teilweise unterliegen; Entsprechendes gilt für die in § 32 Abs. 3 Satz 1 zweiter Halbsatz genannten Einkünfte",
         "für beschränkt Steuerpflichtige im Sinne des § 2 Nr. 1",
         "EG Nr. L 1 S. 3), zuletzt",
         "EU Nr. L 328 S. 40), in der jeweiligen Fassung Anwendung",
@@ -5900,7 +6051,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cfe696693fefdde61bc05414029d0c3b18fcb00953eaf34e784d780599555309",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.193Z"
+      "aktualisiert": "2026-08-11T11:31:24.827Z"
     },
     "6": {
       "typ": "gemischt",
@@ -6523,6 +6674,7 @@
           "von": 3035,
           "bis": 3085,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -7236,7 +7388,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f15729a3d946e238e9e4eb8b7f6d1ada527526d2576e0144b85d527c642473f9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.198Z"
+      "aktualisiert": "2026-08-11T11:31:24.832Z"
     },
     "7": {
       "typ": "gemischt",
@@ -7768,7 +7920,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9bd2baaa87141d5e933accfbbd4bd90ec670cbbf88745f4b6cb206333926720",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.200Z"
+      "aktualisiert": "2026-08-11T11:31:24.834Z"
     },
     "8": {
       "typ": "gemischt",
@@ -8361,6 +8513,7 @@
           "von": 2682,
           "bis": 2805,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8386,6 +8539,7 @@
           "von": 2809,
           "bis": 2910,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10411,7 +10565,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "69c060674657d48163f28853c7c9ee99e622eb4021a937fa9fdc41c4978bae31",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.208Z"
+      "aktualisiert": "2026-08-11T11:31:24.842Z"
     },
     "9": {
       "typ": "gemischt",
@@ -10453,16 +10607,52 @@
           "von": 38,
           "bis": 310,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "bei Kommanditgesellschaften auf Aktien und bei vergleichbaren Kapitalgesellschaften der Teil des Gewinns, der an persönlich haftende Gesellschafter auf ihre nicht auf das Grundkapital gemachten Einlagen oder als Vergütung (Tantieme) für die Geschäftsführung verteilt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 38,
+              "laenge": 271,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 314,
           "bis": 534,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "vorbehaltlich des § 8 Absatz 3 Zuwendungen (Spenden und Mitgliedsbeiträge) zur Förderung steuerbegünstigter Zwecke im Sinne der §§ 52 bis 54 der Abgabenordnung bis zur Höhe von insgesamt a) 20 Prozent des Einkommens",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 314,
+              "laenge": 215,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Buchst. b",
@@ -10872,6 +11062,7 @@
           "von": 2981,
           "bis": 3047,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10897,6 +11088,7 @@
           "von": 3051,
           "bis": 3130,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10922,6 +11114,7 @@
           "von": 3134,
           "bis": 3223,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10947,6 +11140,7 @@
           "von": 3227,
           "bis": 3300,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -11528,6 +11722,22 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "bei Kommanditgesellschaften auf Aktien und bei vergleichbaren Kapitalgesellschaften der Teil des Gewinns, der an persönlich haftende Gesellschafter auf ihre nicht auf das Grundkapital gemachten Einlagen oder als Vergütung (Tantieme) für die Geschäftsführung verteilt wird",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "vorbehaltlich des § 8 Absatz 3 Zuwendungen (Spenden und Mitgliedsbeiträge) zur Förderung steuerbegünstigter Zwecke im Sinne der §§ 52 bis 54 der Abgabenordnung bis zur Höhe von insgesamt a) 20 Prozent des Einkommens",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "4 Promille der Summe der gesamten Umsätze und der im Kalenderjahr",
                   "pfad": "Abs. 1 Buchst. b",
                   "konfidenz": 0.6,
@@ -11535,7 +11745,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "4.",
                   "t": "Voraussetzung für den Abzug",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11543,7 +11753,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "5.",
                   "t": "an eine nach § 5 Absatz 1 Nummer 9",
                   "pfad": "Abs. 1 Buchst. b (Teil 2)",
                   "konfidenz": 0.6,
@@ -11551,7 +11761,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "6.",
                   "t": "an eine Körperschaft, Personenvereinigung oder Vermögensmasse, die in einem Mitgliedstaat der Europäischen Union oder in einem Staat belegen ist, auf den das Abkommen über den Europäischen Wirtschaftsraum (EWR-Abkommen) Anwendung",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -11559,7 +11769,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "wenn sie inländische Einkünfte erzielen würde",
                   "pfad": "Abs. 1 Buchst. c",
                   "konfidenz": 0.6,
@@ -11567,7 +11777,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "Für nicht im Inland ansässige Zuwendungsempfänger nach Satz 2",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -11575,7 +11785,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "der Auskunftsaustausch im Sinne oder entsprechend der Amtshilferichtlinie gemäß § 2 Absatz 2 des EU-Amtshilfegesetzes",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -11583,7 +11793,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "Werden die steuerbegünstigten Zwecke des Zuwendungsempfängers im Sinne von Satz 2 Buchstabe a nur im Ausland verwirklicht",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -11591,7 +11801,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
                   "t": "die den Sport (§ 52 Absatz 2 Satz 1 Nummer 21 der Abgabenordnung)",
                   "pfad": "Abs. 1 Nr. 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11599,7 +11809,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "12.",
                   "t": "die kulturelle Betätigungen, die in erster Linie der Freizeitgestaltung dienen",
                   "pfad": "Abs. 1 Nr. 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -11607,7 +11817,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "13.",
                   "t": "die die Heimatpflege und Heimatkunde (§ 52 Absatz 2 Satz 1 Nummer 22 der Abgabenordnung)",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -11615,7 +11825,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "14.",
                   "t": "die Zwecke im Sinne des § 52 Absatz 2 Satz 1 Nummer 23 der Abgabenordnung",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
@@ -11623,7 +11833,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "15.",
                   "t": "deren Zweck nach § 52 Absatz 2 Satz 2 der Abgabenordnung für gemeinnützig",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.6,
@@ -11631,7 +11841,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "16.",
                   "t": "Abziehbare Zuwendungen, die die Höchstbeträge nach Satz 1 überschreiten",
                   "pfad": "Abs. 1 Satz 1 (Teil 5)",
                   "konfidenz": 0.6,
@@ -11973,6 +12183,8 @@
         }
       ],
       "tb": [
+        "bei Kommanditgesellschaften auf Aktien und bei vergleichbaren Kapitalgesellschaften der Teil des Gewinns, der an persönlich haftende Gesellschafter auf ihre nicht auf das Grundkapital gemachten Einlagen oder als Vergütung (Tantieme) für die Geschäftsführung verteilt wird",
+        "vorbehaltlich des § 8 Absatz 3 Zuwendungen (Spenden und Mitgliedsbeiträge) zur Förderung steuerbegünstigter Zwecke im Sinne der §§ 52 bis 54 der Abgabenordnung bis zur Höhe von insgesamt a) 20 Prozent des Einkommens",
         "4 Promille der Summe der gesamten Umsätze und der im Kalenderjahr",
         "Voraussetzung für den Abzug",
         "an eine nach § 5 Absatz 1 Nummer 9",
@@ -12032,7 +12244,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.572,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12042,7 +12254,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "25b0223e9b6f12947e375a745fb1966b12e3d39f290c0f023171f38ef3290b3c",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.237Z"
+      "aktualisiert": "2026-08-11T11:31:24.877Z"
     },
     "10": {
       "typ": "gemischt",
@@ -12148,24 +12360,9 @@
           "von": 220,
           "bis": 590,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
-            {
-              "art": "tb",
-              "text": "die Steuern vom Einkommen und sonstige Personensteuern sowie die Umsatzsteuer für Umsätze, die Entnahmen oder verdeckte Gewinnausschüttungen sind, und die Vorsteuerbeträge auf Aufwendungen, für die das Abzugsverbot des § 4 Abs. 5 Satz 1 Nr. 1 bis 4 und 7 oder Abs. 7 des Einkommensteuergesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Nr. 2",
-              "von": 220,
-              "laenge": 294,
-              "konfidenz": 0.42,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
             {
               "art": "rf",
               "text": "gilt auch für die auf diese Steuern entfallenden Nebenleistungen",
@@ -12305,14 +12502,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "die Steuern vom Einkommen und sonstige Personensteuern sowie die Umsatzsteuer für Umsätze, die Entnahmen oder verdeckte Gewinnausschüttungen sind, und die Vorsteuerbeträge auf Aufwendungen, für die das Abzugsverbot des § 4 Abs. 5 Satz 1 Nr. 1 bis 4 und 7 oder Abs. 7 des Einkommensteuergesetzes",
-                  "pfad": "Nr. 2",
-                  "konfidenz": 0.42,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "in einem Strafverfahren",
                   "pfad": "Nr. 3",
                   "konfidenz": 0.6,
@@ -12320,7 +12509,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "soweit die Auflagen oder Weisungen nicht lediglich der Wiedergutmachung des durch die Tat verursachten Schadens dienen, sowie damit zusammenhängende Aufwendungen",
                   "pfad": "Nr. 3",
                   "konfidenz": 0.6,
@@ -12328,7 +12517,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "die Hälfte der Vergütungen jeder Art, die an Mitglieder des Aufsichtsrats, Verwaltungsrats oder andere mit der Überwachung der Geschäftsführung",
                   "pfad": "Nr. 4",
                   "konfidenz": 0.6,
@@ -12397,7 +12586,6 @@
       ],
       "tb": [
         "die Aufwendungen für die Erfüllung von Zwecken des Steuerpflichtigen, die durch Stiftungsgeschäft, Satzung oder sonstige Verfassung",
-        "die Steuern vom Einkommen und sonstige Personensteuern sowie die Umsatzsteuer für Umsätze, die Entnahmen oder verdeckte Gewinnausschüttungen sind, und die Vorsteuerbeträge auf Aufwendungen, für die das Abzugsverbot des § 4 Abs. 5 Satz 1 Nr. 1 bis 4 und 7 oder Abs. 7 des Einkommensteuergesetzes",
         "in einem Strafverfahren",
         "soweit die Auflagen oder Weisungen nicht lediglich der Wiedergutmachung des durch die Tat verursachten Schadens dienen, sowie damit zusammenhängende Aufwendungen",
         "die Hälfte der Vergütungen jeder Art, die an Mitglieder des Aufsichtsrats, Verwaltungsrats oder andere mit der Überwachung der Geschäftsführung"
@@ -12414,7 +12602,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.537,
+      "konfidenz": 0.549,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -12424,7 +12612,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eb9259dbb1ba0c7d16369402754d43c9d4bc655c06336daaa0653881f9e5a15f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.239Z"
+      "aktualisiert": "2026-08-11T11:31:24.880Z"
     },
     "11": {
       "typ": "gemischt",
@@ -13191,7 +13379,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f8279329c35028528457f331818c88c7941128bd9f301032d6c0bd47e53d31fa",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.241Z"
+      "aktualisiert": "2026-08-11T11:31:24.883Z"
     },
     "12": {
       "typ": "gemischt",
@@ -13698,7 +13886,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5fa009f8a03e2d7944bfeae12753502dec8a048430b2bf28c4ac0b27f8f06f05",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.243Z"
+      "aktualisiert": "2026-08-11T11:31:24.885Z"
     },
     "13": {
       "typ": "gemischt",
@@ -14458,7 +14646,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbb49d6630379d00b25fef08a857580a9d33385952fa39e3f5361c16f472441b",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.245Z"
+      "aktualisiert": "2026-08-11T11:31:24.887Z"
     },
     "14": {
       "typ": "gemischt",
@@ -16824,7 +17012,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e3305ab81d7f0b12b5878e38c1998bbb57b829222dae00e166b8dc99dfbc39ad",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.253Z"
+      "aktualisiert": "2026-08-11T11:31:24.896Z"
     },
     "15": {
       "typ": "gemischt",
@@ -18539,7 +18727,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ece99741ab0530e678e1af5a47133c5cd3ad963cc08c6c06353840d08e832bd1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.260Z"
+      "aktualisiert": "2026-08-11T11:31:24.903Z"
     },
     "16": {
       "typ": "gemischt",
@@ -18684,7 +18872,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7f9bb4b3d8e9d9694d24604829a98f32053979a8e25f8d8eebf1b444272171a8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.261Z"
+      "aktualisiert": "2026-08-11T11:31:24.904Z"
     },
     "17": {
       "typ": "gemischt",
@@ -19003,7 +19191,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4dbfb97eda7d0e7f743bf7d321f9c1668e5b8cc26e099f8aaad38a0642af5391",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.263Z"
+      "aktualisiert": "2026-08-11T11:31:24.905Z"
     },
     "18": {
       "typ": "gemischt",
@@ -19026,7 +19214,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.263Z"
+      "aktualisiert": "2026-08-11T11:31:24.905Z"
     },
     "19": {
       "typ": "konditional",
@@ -19530,7 +19718,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ba1a5ac603f1614e4acc3454aa2c3b622f11b42604349144088d25f049e54bee",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.265Z"
+      "aktualisiert": "2026-08-11T11:31:24.907Z"
     },
     "20": {
       "typ": "gemischt",
@@ -19962,7 +20150,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "93c3b91ecd8f0eed33fe93b22ba22c0eeadec310a1f493d466ad85fc885686b1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.282Z"
+      "aktualisiert": "2026-08-11T11:31:24.923Z"
     },
     "21": {
       "typ": "gemischt",
@@ -20020,8 +20208,26 @@
           "von": 143,
           "bis": 427,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "in dem nach Art der Lebensversicherung betriebenen Geschäft bis zu einem Höchstbetrag, der sich auf Grundlage des nach handelsrechtlichen Vorschriften ermittelten Jahresergebnisses für das selbst abgeschlossene Geschäft ohne Berücksichtigung eines Gewinnabführungsvertrages ermittelt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 143,
+              "laenge": 283,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 1 Halbs. 2",
@@ -20262,8 +20468,26 @@
           "von": 1437,
           "bis": 1769,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "in den übrigen Versicherungsgeschäften auf Grund des versicherungstechnischen Überschusses bis zur Höhe des Überschusses, der sich aus den Beitragseinnahmen nach Abzug aller anteiligen abziehbaren und nichtabziehbaren Betriebsausgaben einschließlich der Versicherungsleistungen, Rückstellungen und Rechnungsabgrenzungsposten ergibt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 1437,
+              "laenge": 331,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2 Halbs. 2",
@@ -20431,6 +20655,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "in dem nach Art der Lebensversicherung betriebenen Geschäft bis zu einem Höchstbetrag, der sich auf Grundlage des nach handelsrechtlichen Vorschriften ermittelten Jahresergebnisses für das selbst abgeschlossene Geschäft ohne Berücksichtigung eines Gewinnabführungsvertrages ermittelt",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "soweit die Beträge das Jahresergebnis gemindert haben",
                   "pfad": "Abs. 1 Nr. 1 Halbs. 2",
                   "konfidenz": 0.6,
@@ -20438,7 +20670,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "die Kapitalanlagen auszusondern, bei denen das Anlagerisiko nicht vom Versicherungsunternehmen getragen wird",
                   "pfad": "Abs. 1 Nr. 1 Halbs. 6",
                   "konfidenz": 0.6,
@@ -20446,7 +20678,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Als Höchstbetrag mindestens abziehbar",
                   "pfad": "Abs. 1 Nr. 1 Halbs. 7",
                   "konfidenz": 0.6,
@@ -20454,7 +20686,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Die Sätze 1 bis 7",
                   "pfad": "Abs. 1 Nr. 1 Halbs. 8",
                   "konfidenz": 0.6,
@@ -20462,7 +20694,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
+                  "t": "in den übrigen Versicherungsgeschäften auf Grund des versicherungstechnischen Überschusses bis zur Höhe des Überschusses, der sich aus den Beitragseinnahmen nach Abzug aller anteiligen abziehbaren und nichtabziehbaren Betriebsausgaben einschließlich der Versicherungsleistungen, Rückstellungen und Rechnungsabgrenzungsposten ergibt",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
                   "t": "Der nach Satz 1 Nummer 1 für den Abzug maßgebliche Betrag",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -20470,7 +20710,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "Ist maßgeblicher Betrag der sich nach Satz 1 Nummer 1 Satz 7 ergebende Betrag",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -20593,10 +20833,12 @@
       ],
       "tb": [
         "Aufwendungen für Beitragsrückerstattungen und Direktgutschriften, die für das selbst abgeschlossene Geschäft gewährt werden",
+        "in dem nach Art der Lebensversicherung betriebenen Geschäft bis zu einem Höchstbetrag, der sich auf Grundlage des nach handelsrechtlichen Vorschriften ermittelten Jahresergebnisses für das selbst abgeschlossene Geschäft ohne Berücksichtigung eines Gewinnabführungsvertrages ermittelt",
         "soweit die Beträge das Jahresergebnis gemindert haben",
         "die Kapitalanlagen auszusondern, bei denen das Anlagerisiko nicht vom Versicherungsunternehmen getragen wird",
         "Als Höchstbetrag mindestens abziehbar",
         "Die Sätze 1 bis 7",
+        "in den übrigen Versicherungsgeschäften auf Grund des versicherungstechnischen Überschusses bis zur Höhe des Überschusses, der sich aus den Beitragseinnahmen nach Abzug aller anteiligen abziehbaren und nichtabziehbaren Betriebsausgaben einschließlich der Versicherungsleistungen, Rückstellungen und Rechnungsabgrenzungsposten ergibt",
         "Der nach Satz 1 Nummer 1 für den Abzug maßgebliche Betrag",
         "Ist maßgeblicher Betrag der sich nach Satz 1 Nummer 1 Satz 7 ergebende Betrag"
       ],
@@ -20618,7 +20860,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.585,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -20628,7 +20870,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a1804ca849a12ba8ca162a1d9a2951e8501fe4c8aa175e220900c035da79832",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.286Z"
+      "aktualisiert": "2026-08-11T11:31:24.926Z"
     },
     "22": {
       "typ": "gemischt",
@@ -20724,6 +20966,7 @@
           "von": 244,
           "bis": 362,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -20749,6 +20992,7 @@
           "von": 366,
           "bis": 452,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -21335,7 +21579,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "217ef567c6ad208a2f94923885bf233970a15de4cf70bfaad1d67b086d5b199e",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.290Z"
+      "aktualisiert": "2026-08-11T11:31:24.929Z"
     },
     "23": {
       "typ": "gemischt",
@@ -21358,48 +21602,156 @@
           "von": 38,
           "bis": 80,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Veranlagungszeiträume bis 2027 15 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 38,
+              "laenge": 41,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 84,
           "bis": 125,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "den Veranlagungszeitraum 2028 14 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 84,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 3",
           "von": 129,
           "bis": 170,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "den Veranlagungszeitraum 2029 13 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 3",
+              "von": 129,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 4",
           "von": 174,
           "bis": 215,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "den Veranlagungszeitraum 2030 12 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 4",
+              "von": 174,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 5",
           "von": 219,
           "bis": 263,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "den Veranlagungszeitraum 2031 11 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 5",
+              "von": 219,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 6",
           "von": 267,
           "bis": 307,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Veranlagungszeiträume ab 2032 10 Prozent",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 6",
+              "von": 267,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 6 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 1 (Teil 2)",
@@ -21471,17 +21823,65 @@
       "schema": [
         {
           "absatz": "Abs. 1",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "tarif",
+          "rolle": "Bemessung und Satz",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Veranlagungszeiträume bis 2027 15 Prozent",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "den Veranlagungszeitraum 2028 14 Prozent",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "den Veranlagungszeitraum 2029 13 Prozent",
+                  "pfad": "Abs. 1 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "den Veranlagungszeitraum 2030 12 Prozent",
+                  "pfad": "Abs. 1 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "den Veranlagungszeitraum 2031 11 Prozent",
+                  "pfad": "Abs. 1 Nr. 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "Veranlagungszeiträume ab 2032 10 Prozent",
+                  "pfad": "Abs. 1 Nr. 6",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "des zu versteuernden Einkommens",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -21532,6 +21932,12 @@
         }
       ],
       "tb": [
+        "Veranlagungszeiträume bis 2027 15 Prozent",
+        "den Veranlagungszeitraum 2028 14 Prozent",
+        "den Veranlagungszeitraum 2029 13 Prozent",
+        "den Veranlagungszeitraum 2030 12 Prozent",
+        "den Veranlagungszeitraum 2031 11 Prozent",
+        "Veranlagungszeiträume ab 2032 10 Prozent",
         "des zu versteuernden Einkommens",
         "Wird die Einkommensteuer auf Grund der Ermächtigung des § 51 Abs. 3 des Einkommensteuergesetzes herabgesetzt oder erhöht"
       ],
@@ -21552,7 +21958,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1899a904c17341006f47192339ff5a1575a0c8b9b104ad10ebb1ac7a59ccdab9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.292Z"
+      "aktualisiert": "2026-08-11T11:31:24.931Z"
     },
     "24": {
       "typ": "aussage",
@@ -21642,14 +22048,33 @@
           "von": 204,
           "bis": 377,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "für Körperschaften und Personenvereinigungen, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Abs. 1 Nr. 1 oder 2 des Einkommensteuergesetzes gehören",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 1",
+              "von": 204,
+              "laenge": 172,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Nr. 2",
           "von": 381,
           "bis": 411,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -21675,8 +22100,26 @@
           "von": 415,
           "bis": 690,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "für Investmentfonds im Sinne des § 1 des Investmentsteuergesetzes und Spezial-Investmentfonds im Sinne des § 26 des Investmentsteuergesetzes, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 3 oder 3a des Einkommensteuergesetzes gehören",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 3",
+              "von": 415,
+              "laenge": 274,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         }
       ],
       "schema": [
@@ -21701,9 +22144,25 @@
                 },
                 {
                   "n": "2.",
+                  "t": "für Körperschaften und Personenvereinigungen, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Abs. 1 Nr. 1 oder 2 des Einkommensteuergesetzes gehören",
+                  "pfad": "Nr. 1",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "für Vereine im Sinne des § 25",
                   "pfad": "Nr. 2",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "für Investmentfonds im Sinne des § 1 des Investmentsteuergesetzes und Spezial-Investmentfonds im Sinne des § 26 des Investmentsteuergesetzes, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 3 oder 3a des Einkommensteuergesetzes gehören",
+                  "pfad": "Nr. 3",
+                  "konfidenz": 0.42,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -21744,7 +22203,9 @@
       ],
       "tb": [
         "Vom Einkommen der steuerpflichtigen Körperschaften, Personenvereinigungen oder Vermögensmassen",
-        "für Vereine im Sinne des § 25"
+        "für Körperschaften und Personenvereinigungen, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Abs. 1 Nr. 1 oder 2 des Einkommensteuergesetzes gehören",
+        "für Vereine im Sinne des § 25",
+        "für Investmentfonds im Sinne des § 1 des Investmentsteuergesetzes und Spezial-Investmentfonds im Sinne des § 26 des Investmentsteuergesetzes, deren Leistungen bei den Empfängern zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 3 oder 3a des Einkommensteuergesetzes gehören"
       ],
       "rf": [
         "ist ein Freibetrag von 5 000 Euro, höchstens jedoch in Höhe des Einkommens"
@@ -21755,7 +22216,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.56,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -21765,7 +22226,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d194a6564888d76beaef4839cb22d7eb0285e6bc3389a758b9a0769a81385050",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.293Z"
+      "aktualisiert": "2026-08-11T11:31:24.933Z"
     },
     "25": {
       "typ": "gemischt",
@@ -21897,16 +22358,52 @@
           "von": 530,
           "bis": 680,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "a) bei Genossenschaften das Verhältnis der Summe der Werte der Geschäftsanteile des einzelnen Mitglieds zu der Summe der Werte aller Geschäftsanteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 530,
+              "laenge": 149,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Buchst. b",
           "von": 684,
           "bis": 867,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "bei Vereinen das Verhältnis des Werts des Anteils an dem Vereinsvermögen, der im Fall der Auflösung des Vereins an das einzelne Mitglied fallen würde, zu dem Wert des Vereinsvermögens",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. b",
+              "von": 684,
+              "laenge": 183,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 1 (Teil 2)",
@@ -22021,6 +22518,22 @@
                 },
                 {
                   "n": "3.",
+                  "t": "a) bei Genossenschaften das Verhältnis der Summe der Werte der Geschäftsanteile des einzelnen Mitglieds zu der Summe der Werte aller Geschäftsanteile",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "bei Vereinen das Verhältnis des Werts des Anteils an dem Vereinsvermögen, der im Fall der Auflösung des Vereins an das einzelne Mitglied fallen würde, zu dem Wert des Vereinsvermögens",
+                  "pfad": "Abs. 1 Buchst. b",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "nicht wesentlich von dem Verhältnis",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -22112,6 +22625,8 @@
       "tb": [
         "Vom Einkommen der steuerpflichtigen Genossenschaften sowie der steuerpflichtigen Vereine, deren Tätigkeit sich auf den Betrieb der Land- und Forstwirtschaft beschränkt",
         "die Mitglieder der Genossenschaft oder dem Verein Flächen zur Nutzung oder für die Bewirtschaftung der Flächen erforderliche Gebäude",
+        "a) bei Genossenschaften das Verhältnis der Summe der Werte der Geschäftsanteile des einzelnen Mitglieds zu der Summe der Werte aller Geschäftsanteile",
+        "bei Vereinen das Verhältnis des Werts des Anteils an dem Vereinsvermögen, der im Fall der Auflösung des Vereins an das einzelne Mitglied fallen würde, zu dem Wert des Vereinsvermögens",
         "nicht wesentlich von dem Verhältnis",
         "Absatz 1 Satz 1"
       ],
@@ -22126,7 +22641,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.567,
+      "konfidenz": 0.573,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -22136,7 +22651,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "702f4b4501d77c2a94010934a5127524c69a5ad0e520d66e17d42280564f2f0f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.295Z"
+      "aktualisiert": "2026-08-11T11:31:24.935Z"
     },
     "26": {
       "typ": "gemischt",
@@ -22192,6 +22707,7 @@
           "von": 312,
           "bis": 433,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -22217,6 +22733,7 @@
           "von": 437,
           "bis": 532,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -22523,7 +23040,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0138db314758c388c04cedcbecb3ae2afaaf1dd179ab4f805a856bbd908aa792",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.297Z"
+      "aktualisiert": "2026-08-11T11:31:24.937Z"
     },
     "27": {
       "typ": "gemischt",
@@ -22974,6 +23491,7 @@
           "von": 2176,
           "bis": 2223,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -22999,6 +23517,7 @@
           "von": 2227,
           "bis": 2304,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -23024,6 +23543,7 @@
           "von": 2308,
           "bis": 2324,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -24937,7 +25457,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17c1e7ddb9d43a6f867723f3e060a89c73d98bcca2b788e3b21ca15bc636d593",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.306Z"
+      "aktualisiert": "2026-08-11T11:31:24.947Z"
     },
     "28": {
       "typ": "gemischt",
@@ -25662,7 +26182,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "307b90782d9125773eaa5503b97e7a2bc25e7e11db9b71bb63ed2a2559ade9e7",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.309Z"
+      "aktualisiert": "2026-08-11T11:31:24.950Z"
     },
     "29": {
       "typ": "gemischt",
@@ -26459,7 +26979,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d3240ee8e92f6603411416b20dbd3196dd2d9d79f741395ccec3c0c9e794173",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.312Z"
+      "aktualisiert": "2026-08-11T11:31:24.953Z"
     },
     "30": {
       "typ": "gemischt",
@@ -26481,39 +27001,24 @@
           "von": 35,
           "bis": 126,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte",
+              "text": "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte zufließen",
               "anzeige": null,
               "teile": null,
               "pfad": "Nr. 1",
               "von": 35,
-              "laenge": 80,
+              "laenge": 90,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "zufließen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Nr. 1",
-              "von": 116,
-              "laenge": 9,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -26579,8 +27084,26 @@
           "von": 348,
           "bis": 485,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "für die veranlagte Steuer mit Ablauf des Veranlagungszeitraums, soweit nicht die Steuer nach Nummer 1 oder 2 schon früher entstanden ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 3",
+              "von": 348,
+              "laenge": 136,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         }
       ],
       "schema": [
@@ -26597,7 +27120,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte",
+                  "t": "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte zufließen",
                   "pfad": "Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -26618,6 +27141,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "für die veranlagte Steuer mit Ablauf des Veranlagungszeitraums, soweit nicht die Steuer nach Nummer 1 oder 2 schon früher entstanden ist",
+                  "pfad": "Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -26628,14 +27159,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "zufließen",
-                  "pfad": "Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "mit Begründung der Steuerpflicht",
                   "pfad": "Nr. 2",
                   "konfidenz": 0.6,
@@ -26648,19 +27171,19 @@
         }
       ],
       "tb": [
-        "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte",
+        "für Steuerabzugsbeträge in dem Zeitpunkt, in dem die steuerpflichtigen Einkünfte zufließen",
         "für Vorauszahlungen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten",
-        "wenn die Steuerpflicht erst im Laufe des Kalenderjahrs begründet wird"
+        "wenn die Steuerpflicht erst im Laufe des Kalenderjahrs begründet wird",
+        "für die veranlagte Steuer mit Ablauf des Veranlagungszeitraums, soweit nicht die Steuer nach Nummer 1 oder 2 schon früher entstanden ist"
       ],
       "rf": [
-        "zufließen",
         "mit Begründung der Steuerpflicht"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -26670,7 +27193,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6382c8b0934a41e55ee5b31dbea0ba1b63b887b45f895532eb47dba202ed1a08",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.314Z"
+      "aktualisiert": "2026-08-11T11:31:24.954Z"
     },
     "31": {
       "typ": "gemischt",
@@ -27134,7 +27657,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b1c77d766917f13e5ca916cc1acebb83fb99a74f599f2a8901778e3bc25525a8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.316Z"
+      "aktualisiert": "2026-08-11T11:31:24.956Z"
     },
     "32": {
       "typ": "gemischt",
@@ -28103,23 +28626,24 @@
           "von": 4657,
           "bis": 4752,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben",
+              "text": "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben würden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Nr. 2",
               "von": 4657,
-              "laenge": 87,
+              "laenge": 94,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -29217,7 +29741,7 @@
                 },
                 {
                   "n": "5.",
-                  "t": "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben",
+                  "t": "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben würden",
                   "pfad": "Abs. 5 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -29566,7 +30090,7 @@
         "im Staat des Orts ihrer Geschäftsleitung ohne Wahlmöglichkeit einer mit § 1 vergleichbaren",
         "2. der Gläubiger unmittelbar am Grund- oder Stammkapital der Schuldnerin der Kapitalerträge",
         "keine Erstattung der betreffenden Kapitalertragsteuer nach anderen Vorschriften",
-        "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben",
+        "die Kapitalerträge nach § 8b Absatz 1 bei der Einkommensermittlung außer Ansatz bleiben würden",
         "die Kapitalerträge aufgrund ausländischer Vorschriften keiner Person",
         "wenn sie die Kapitalerträge unmittelbar erzielte",
         "die Kapitalertragsteuer nicht beim Gläubiger oder einem unmittelbar oder mittelbar am Gläubiger",
@@ -29635,7 +30159,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c026719e7a722a9987dd0ed68d0664761b0beafae5b241be868cd25952df3d9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.330Z"
+      "aktualisiert": "2026-08-11T11:31:24.968Z"
     },
     "33": {
       "typ": "gemischt",
@@ -29676,8 +30200,26 @@
           "von": 127,
           "bis": 359,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "zur Wahrung der Gleichmäßigkeit bei der Besteuerung, zur Beseitigung von Unbilligkeiten in Härtefällen und zur Vereinfachung des Besteuerungsverfahrens den Umfang der Steuerbefreiungen nach § 5 Abs. 1 Nr. 3 und 4 näher zu bestimmen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 127,
+              "laenge": 231,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 1 Halbs. 2",
@@ -29742,39 +30284,24 @@
           "von": 1057,
           "bis": 1150,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "wenn rechtsfähige Pensions-",
+              "text": "wenn rechtsfähige Pensions-, Sterbe- und Krankenkassen der Versicherungsaufsicht unterliegen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 dd)",
               "von": 1057,
-              "laenge": 27,
+              "laenge": 92,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
-            },
-            {
-              "art": "tb",
-              "text": "Sterbe- und Krankenkassen der Versicherungsaufsicht",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 dd)",
-              "von": 1086,
-              "laenge": 51,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld (um Ausnahme gekürzt)"
+              "grund": "Aufzählungsglied dd) — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -29816,6 +30343,7 @@
           "von": 1538,
           "bis": 1629,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -29841,6 +30369,7 @@
           "von": 1634,
           "bis": 2041,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -29874,6 +30403,7 @@
           "von": 2073,
           "bis": 2086,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -29899,6 +30429,7 @@
           "von": 2090,
           "bis": 2166,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -29990,8 +30521,26 @@
           "von": 2640,
           "bis": 2990,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "nach denen Versicherungsvereine auf Gegenseitigkeit von geringerer wirtschaftlicher Bedeutung, die eine Schwankungsrückstellung nach § 20 Abs. 1 nicht gebildet haben, zum Ausgleich des schwankenden Jahresbedarfs zu Lasten des steuerlichen Gewinns Beträge der nach § 193 des Versicherungsaufsichtsgesetzes zu bildenden Verlustrücklage zuführen können",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. d",
+              "von": 2640,
+              "laenge": 349,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. d — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Satz 1",
@@ -30023,6 +30572,7 @@
           "von": 3046,
           "bis": 3182,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -30099,6 +30649,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "zur Wahrung der Gleichmäßigkeit bei der Besteuerung, zur Beseitigung von Unbilligkeiten in Härtefällen und zur Vereinfachung des Besteuerungsverfahrens den Umfang der Steuerbefreiungen nach § 5 Abs. 1 Nr. 3 und 4 näher zu bestimmen",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "wenn bei Auflösung der Kasse ihr Vermögen satzungsmäßig nur für soziale Zwecke verwendet werden darf",
                   "pfad": "Abs. 1 cc)",
                   "konfidenz": 0.6,
@@ -30106,16 +30664,8 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
-                  "t": "wenn rechtsfähige Pensions-",
-                  "pfad": "Abs. 1 dd)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
                   "n": "3.",
-                  "t": "Sterbe- und Krankenkassen der Versicherungsaufsicht",
+                  "t": "wenn rechtsfähige Pensions-, Sterbe- und Krankenkassen der Versicherungsaufsicht unterliegen",
                   "pfad": "Abs. 1 dd)",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -30166,6 +30716,14 @@
                   "t": "§ 51 Abs. 1 Nr. 2 Buchstabe s des Einkommensteuergesetzes",
                   "pfad": "Abs. 1 Buchst. c Halbs. 2",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
+                  "t": "nach denen Versicherungsvereine auf Gegenseitigkeit von geringerer wirtschaftlicher Bedeutung, die eine Schwankungsrückstellung nach § 20 Abs. 1 nicht gebildet haben, zum Ausgleich des schwankenden Jahresbedarfs zu Lasten des steuerlichen Gewinns Beträge der nach § 193 des Versicherungsaufsichtsgesetzes zu bildenden Verlustrücklage zuführen können",
+                  "pfad": "Abs. 1 Buchst. d",
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -30268,15 +30826,16 @@
         }
       ],
       "tb": [
+        "zur Wahrung der Gleichmäßigkeit bei der Besteuerung, zur Beseitigung von Unbilligkeiten in Härtefällen und zur Vereinfachung des Besteuerungsverfahrens den Umfang der Steuerbefreiungen nach § 5 Abs. 1 Nr. 3 und 4 näher zu bestimmen",
         "wenn bei Auflösung der Kasse ihr Vermögen satzungsmäßig nur für soziale Zwecke verwendet werden darf",
-        "wenn rechtsfähige Pensions-",
-        "Sterbe- und Krankenkassen der Versicherungsaufsicht",
+        "wenn rechtsfähige Pensions-, Sterbe- und Krankenkassen der Versicherungsaufsicht unterliegen",
         "b) zur Durchführung des § 5 Abs. 1 Nr. 4 Vorschriften erlassen",
         "über die Höhe der für die Inanspruchnahme der Steuerbefreiung zulässigen Beitragseinnahmen",
         "Vorschriften zu erlassen",
         "(weggefallen)",
         "über die Herabsetzung oder Erhöhung der Körperschaftsteuer nach § 23 Abs. 2",
         "§ 51 Abs. 1 Nr. 2 Buchstabe s des Einkommensteuergesetzes",
+        "nach denen Versicherungsvereine auf Gegenseitigkeit von geringerer wirtschaftlicher Bedeutung, die eine Schwankungsrückstellung nach § 20 Abs. 1 nicht gebildet haben, zum Ausgleich des schwankenden Jahresbedarfs zu Lasten des steuerlichen Gewinns Beträge der nach § 193 des Versicherungsaufsichtsgesetzes zu bildenden Verlustrücklage zuführen können",
         "im Einvernehmen mit den obersten Finanzbehörden der Länder Muster der in den §§ 27 und 37 vorgeschriebenen Bescheinigungen zu bestimmen",
         "den Wortlaut dieses Gesetzes und der zu diesem Gesetz erlassenen Durchführungsverordnungen in der jeweils geltenden Fassung mit neuem Datum, unter neuer Überschrift und in neuer Paragrafenfolge"
       ],
@@ -30292,7 +30851,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.556,
+      "konfidenz": 0.545,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -30302,7 +30861,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1505bb2049194f03d242a1cc49d9b4db017e3d7e782c4973918ea9a12a6503e4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.339Z"
+      "aktualisiert": "2026-08-11T11:31:24.976Z"
     },
     "34": {
       "typ": "anwendung",
@@ -31104,7 +31663,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "96c424c80bcf0da2814201c63381cd09bbd74199a02a403f495cb9d8fade0991",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.344Z"
+      "aktualisiert": "2026-08-11T11:31:24.983Z"
     },
     "35": {
       "typ": "anwendung",
@@ -31138,7 +31697,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "71ee4f52ea58bb8400ef450878d41c7b5b3899cc39c641d4a8cdd14fd54da583",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.344Z"
+      "aktualisiert": "2026-08-11T11:31:24.983Z"
     },
     "36": {
       "typ": "gemischt",
@@ -31959,7 +32518,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "86295463c873a304a74a018f1d5b7864870aa2ca9a76d0ec0e90f07880dd9968",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.350Z"
+      "aktualisiert": "2026-08-11T11:31:24.987Z"
     },
     "37": {
       "typ": "gemischt",
@@ -32370,6 +32929,7 @@
           "von": 1384,
           "bis": 1494,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -32395,68 +32955,9 @@
           "von": 1498,
           "bis": 1949,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "für Gewinnausschüttungen, die nach dem 31. Dezember 2005 erfolgen auf den Betrag, der auf das Wirtschaftsjahr der Gewinnausschüttung entfällt",
-              "anzeige": "für Gewinnausschüttungen, die nach dem 31. Dezember 2005 erfolgen auf den Betrag, der auf das Wirtschaftsjahr der Gewinnausschüttung entfällt … für die nach Absatz 2 Satz 3 eine Körperschaftsteuerminderung in Betracht",
-              "teile": [
-                {
-                  "text": "für Gewinnausschüttungen, die nach dem 31. Dezember 2005 erfolgen auf den Betrag, der auf das Wirtschaftsjahr der Gewinnausschüttung entfällt",
-                  "von": 1498,
-                  "laenge": 141
-                },
-                {
-                  "text": "für die nach Absatz 2 Satz 3 eine Körperschaftsteuerminderung in Betracht",
-                  "von": 1869,
-                  "laenge": 73
-                }
-              ],
-              "pfad": "Abs. 2a Nr. 2",
-              "von": 1498,
-              "laenge": 141,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld (um Ausnahme gekürzt)"
-            },
-            {
-              "art": "tb",
-              "text": "wenn das auf den Schluss des vorangegangenen Wirtschaftsjahrs festgestellte Körperschaftsteuerguthaben gleichmäßig auf die einschließlich des Wirtschaftsjahrs der Gewinnausschüttung verbleibenden Wirtschaftsjahre verteilt wird",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2a Nr. 2",
-              "von": 1641,
-              "laenge": 226,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
-            },
-            {
-              "art": "rf",
-              "text": "kommt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2a Nr. 2",
-              "von": 1943,
-              "laenge": 5,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Abs. 3 Satz 1",
@@ -32622,6 +33123,7 @@
           "von": 3041,
           "bis": 3088,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -32647,6 +33149,7 @@
           "von": 3092,
           "bis": 3164,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -32672,6 +33175,7 @@
           "von": 3168,
           "bis": 3184,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -33612,29 +34116,13 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (eine genügt)",
+              "t": "Voraussetzung",
               "junktor": "oder",
               "sub": [
                 {
                   "n": "1.",
                   "t": "für Gewinnausschüttungen, die nach dem 11. April 2003 und vor dem 1. Januar 2006 erfolgen, jeweils auf 0 Euro",
                   "pfad": "Abs. 2a Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "für Gewinnausschüttungen, die nach dem 31. Dezember 2005 erfolgen auf den Betrag, der auf das Wirtschaftsjahr der Gewinnausschüttung entfällt … für die nach Absatz 2 Satz 3 eine Körperschaftsteuerminderung in Betracht",
-                  "pfad": "Abs. 2a Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
-                  "t": "wenn das auf den Schluss des vorangegangenen Wirtschaftsjahrs festgestellte Körperschaftsteuerguthaben gleichmäßig auf die einschließlich des Wirtschaftsjahrs der Gewinnausschüttung verbleibenden Wirtschaftsjahre verteilt wird",
-                  "pfad": "Abs. 2a Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -33650,14 +34138,6 @@
                   "n": "1.",
                   "t": "begrenzt",
                   "pfad": "Abs. 2a Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "kommt",
-                  "pfad": "Abs. 2a Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -34119,8 +34599,6 @@
         "auf den Schluss der jeweiligen Wirtschaftsjahre, letztmals auf den Schluss des 17",
         "Wirtschaftsjahrs, das auf das Wirtschaftsjahr folgt, auf dessen Schluss nach Absatz 1 das Körperschaftsteuerguthaben",
         "für Gewinnausschüttungen, die nach dem 11. April 2003 und vor dem 1. Januar 2006 erfolgen, jeweils auf 0 Euro",
-        "für Gewinnausschüttungen, die nach dem 31. Dezember 2005 erfolgen auf den Betrag, der auf das Wirtschaftsjahr der Gewinnausschüttung entfällt",
-        "wenn das auf den Schluss des vorangegangenen Wirtschaftsjahrs festgestellte Körperschaftsteuerguthaben gleichmäßig auf die einschließlich des Wirtschaftsjahrs der Gewinnausschüttung verbleibenden Wirtschaftsjahre verteilt wird",
         "wenn der Körperschaft oder Personenvereinigung die entsprechenden Bezüge einer Organgesellschaft zugerechnet werden",
         "Im Fall des § 4 des Umwandlungssteuergesetzes",
         "der Empfängerin die folgenden Angaben nach amtlich vorgeschriebenem Muster zu bescheinigen",
@@ -34151,7 +34629,6 @@
         "ermittelt wird, fortzuschreiben und gesondert",
         "gilt entsprechend",
         "begrenzt",
-        "kommt",
         "erhöht sich bei ihr die Körperschaftsteuer und das Körperschaftsteuerguthaben um den Betrag der Minderung der Körperschaftsteuer bei der leistenden Körperschaft",
         "weil sie entweder Organträger ist oder an einer Personengesellschaft beteiligt ist, die Organträger ist",
         "sind die Sätze 1 und 2 entsprechend",
@@ -34183,7 +34660,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.578,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -34193,7 +34670,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9b4c79c49c17ba97c6c1b1c5a10c627a5d01b52eafadd6091496adb808c2bbaf",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.358Z"
+      "aktualisiert": "2026-08-11T11:31:24.995Z"
     },
     "38": {
       "typ": "gemischt",
@@ -36420,7 +36897,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "18fd23789bdda490be67508b8e408625f96638af61b5defdb5e44f1366f91227",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.364Z"
+      "aktualisiert": "2026-08-11T11:31:25.002Z"
     },
     "39": {
       "typ": "aussage",
@@ -36589,7 +37066,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d906ecfc0c8df241fc7c45290a56a226b6f11f223000e1dcc1b6229aee19efda",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.365Z"
+      "aktualisiert": "2026-08-11T11:31:25.003Z"
     },
     "40": {
       "typ": "gemischt",
@@ -36612,7 +37089,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.365Z"
+      "aktualisiert": "2026-08-11T11:31:25.003Z"
     },
     "1a": {
       "typ": "gemischt",
@@ -36858,6 +37335,7 @@
           "von": 1955,
           "bis": 2012,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -36965,6 +37443,7 @@
           "von": 2272,
           "bis": 2359,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -36990,6 +37469,7 @@
           "von": 2363,
           "bis": 2566,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -37200,31 +37680,20 @@
               "grund": "Nebensatz trägt die Voraussetzungen"
             },
             {
-              "art": "rf",
-              "text": "ist nicht",
-              "anzeige": "ist nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "ist nicht",
-                  "von": 3207,
-                  "laenge": 9
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 3217,
-                  "laenge": 10
-                }
-              ],
+              "art": "ausn",
+              "text": "§ 9 Satz 3 des Umwandlungssteuergesetzes ist nicht anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 3",
-              "von": 3207,
-              "laenge": 9,
-              "konfidenz": 0.45,
+              "von": 3166,
+              "laenge": 61,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Satzausnahme: „§ 9 Satz 3 des Umwandlungssteuergesetzes ist nicht anzuwenden\""
             }
           ]
         },
@@ -37444,22 +37913,59 @@
           "von": 3906,
           "bis": 4061,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Einnahmen, die er von der Gesellschaft für seine Tätigkeit im Dienst der Gesellschaft bezieht, zu Einkünften im Sinne des § 19 des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 2",
+              "von": 3906,
+              "laenge": 154,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 3",
           "von": 4065,
           "bis": 4215,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Einnahmen aus der Hingabe von Darlehen zu Einkünften im Sinne des § 20 Absatz 1 Nummer 7 oder Absatz 2 Satz 1 Nummer 7 des Einkommensteuergesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 3",
+              "von": 4065,
+              "laenge": 146,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 4",
           "von": 4219,
           "bis": 4341,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38252,6 +38758,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "§ 9 Satz 3 des Umwandlungssteuergesetzes ist nicht anzuwenden",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -38297,14 +38818,6 @@
                 },
                 {
                   "n": "6.",
-                  "t": "ist nicht … anzuwenden",
-                  "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "7.",
                   "t": "wird auf dem steuerlichen Einlagekonto der optierenden Gesellschaft … erfasst",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -38312,7 +38825,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "8.",
+                  "n": "7.",
                   "t": "ermächtigten Personen gelten als gesetzliche Vertreter der optierenden … Gesellschaft",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -38325,8 +38838,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -38360,6 +38873,22 @@
                 },
                 {
                   "n": "4.",
+                  "t": "Einnahmen, die er von der Gesellschaft für seine Tätigkeit im Dienst der Gesellschaft bezieht, zu Einkünften im Sinne des § 19 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 3 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "Einnahmen aus der Hingabe von Darlehen zu Einkünften im Sinne des § 20 Absatz 1 Nummer 7 oder Absatz 2 Satz 1 Nummer 7 des Einkommensteuergesetzes",
+                  "pfad": "Abs. 3 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "Einnahmen aus der Überlassung von Wirtschaftsgütern zu Einkünften im Sinne des § 21 oder § 22 des Einkommensteuergesetzes",
                   "pfad": "Abs. 3 Nr. 4",
                   "konfidenz": 0.6,
@@ -38367,7 +38896,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "Die §§ 13 bis 16, 18 und 35 des Einkommensteuergesetzes",
                   "pfad": "Abs. 3 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -38375,7 +38904,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "Soweit entsprechende Einnahmen bei einem Gesellschafter einer Kapitalgesellschaft anderen Einkunftsarten zuzurechnen wären",
                   "pfad": "Abs. 3 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -38383,7 +38912,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "gelten erst dann als ausgeschüttet",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -38391,7 +38920,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "10.",
                   "t": "wenn sie entnommen werden",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -38399,7 +38928,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "11.",
                   "t": "In den Fällen des Satzes 2 Nummer 2",
                   "pfad": "Abs. 3 Satz 5",
                   "konfidenz": 0.6,
@@ -38639,6 +39168,8 @@
         "Aufgrund der Option",
         "Beim Gesellschafter führen daher insbesondere",
         "durch das Gesellschaftsverhältnis",
+        "Einnahmen, die er von der Gesellschaft für seine Tätigkeit im Dienst der Gesellschaft bezieht, zu Einkünften im Sinne des § 19 des Einkommensteuergesetzes",
+        "Einnahmen aus der Hingabe von Darlehen zu Einkünften im Sinne des § 20 Absatz 1 Nummer 7 oder Absatz 2 Satz 1 Nummer 7 des Einkommensteuergesetzes",
         "Einnahmen aus der Überlassung von Wirtschaftsgütern zu Einkünften im Sinne des § 21 oder § 22 des Einkommensteuergesetzes",
         "Die §§ 13 bis 16, 18 und 35 des Einkommensteuergesetzes",
         "Soweit entsprechende Einnahmen bei einem Gesellschafter einer Kapitalgesellschaft anderen Einkunftsarten zuzurechnen wären",
@@ -38670,7 +39201,6 @@
         "schließt allein die Zurückbehaltung der Beteiligung an einer Komplementärin der optierenden Gesellschaft die Anwendung des § 20 Absatz 2 des Umwandlungssteuergesetzes nicht aus",
         "Als Einbringungszeitpunkt",
         "gilt das Ende des Wirtschaftsjahrs",
-        "ist nicht",
         "wird auf dem steuerlichen Einlagekonto der optierenden Gesellschaft",
         "ermächtigten Personen gelten als gesetzliche Vertreter der optierenden",
         "gilt die Beteiligung an einer optierenden Gesellschaft für Zwecke der Besteuerung nach dem Einkommen als Beteiligung eines nicht persönlich haftenden Gesellschafters an einer Kapitalgesellschaft",
@@ -38690,12 +39220,13 @@
         "gilt die Umwandlung der optierenden Gesellschaft in eine Körperschaft im Sinne des Umwandlungssteuergesetzes als Umwandlung einer Kapitalgesellschaft in eine Körperschaft"
       ],
       "ausnahmen": [
+        "§ 9 Satz 3 des Umwandlungssteuergesetzes ist nicht anzuwenden",
         "vorbehaltlich des Satzes 4 nicht anzuwenden"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.571,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -38705,7 +39236,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "628964109d76fbef94b03595759dd535b2921c47089d2bda8eb4208f7f969097",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.161Z"
+      "aktualisiert": "2026-08-11T11:31:24.795Z"
     },
     "6a": {
       "typ": "verweisung",
@@ -38826,7 +39357,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f934e64c63d0066278de9a15625f0e9c90b5dd4283d5be5745f46b2b35221db1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.198Z"
+      "aktualisiert": "2026-08-11T11:31:24.832Z"
     },
     "8a": {
       "typ": "gemischt",
@@ -39299,7 +39830,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d1912797214a4b37a46324b0de9b4c9d46fc988723aa499557cca44ded9cd3ca",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.210Z"
+      "aktualisiert": "2026-08-11T11:31:24.844Z"
     },
     "8b": {
       "typ": "gemischt",
@@ -42670,7 +43201,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e88f70833b99e0a623740d8bc1efc6ccaa42e982e232b4d701c27d0e3cb5957e",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.221Z"
+      "aktualisiert": "2026-08-11T11:31:24.857Z"
     },
     "8c": {
       "typ": "gemischt",
@@ -43233,23 +43764,40 @@
           "von": 3059,
           "bis": 3412,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "unterschreitet",
+              "art": "tb",
+              "text": "die Summe der maßgebenden jährlichen Lohnsummen der Körperschaft innerhalb von fünf Jahren nach dem Beteiligungserwerb 400 Prozent der Ausgangslohnsumme nicht unterschreitet",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1a Nr. 2",
-              "von": 3218,
-              "laenge": 14,
-              "konfidenz": 0.45,
+              "von": 3059,
+              "laenge": 173,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            },
+            {
+              "art": "tb",
+              "text": "§ 13a Absatz 1 Satz 3 und 4 und Absatz 4 des Erbschaftsteuer- und Schenkungsteuergesetzes in der Fassung des Gesetzes vom 24. Dezember 2008 (BGBl. I S. 3018)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1a Nr. 2",
+              "von": 3234,
+              "laenge": 157,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -43791,6 +44339,22 @@
                 },
                 {
                   "n": "3.",
+                  "t": "die Summe der maßgebenden jährlichen Lohnsummen der Körperschaft innerhalb von fünf Jahren nach dem Beteiligungserwerb 400 Prozent der Ausgangslohnsumme nicht unterschreitet",
+                  "pfad": "Abs. 1a Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "§ 13a Absatz 1 Satz 3 und 4 und Absatz 4 des Erbschaftsteuer- und Schenkungsteuergesetzes in der Fassung des Gesetzes vom 24. Dezember 2008 (BGBl. I S. 3018)",
+                  "pfad": "Abs. 1a Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "der Körperschaft durch Einlagen wesentliches Betriebsvermögen",
                   "pfad": "Abs. 1a Nr. 3",
                   "konfidenz": 0.6,
@@ -43798,7 +44362,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "6.",
                   "t": "Wird nur ein Anteil an der Körperschaft erworben",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 3",
                   "konfidenz": 0.6,
@@ -43806,7 +44370,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "der Zuführung neuen Betriebsvermögens",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 4",
                   "konfidenz": 0.6,
@@ -43814,7 +44378,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "8.",
                   "t": "Leistungen der Kapitalgesellschaft, die innerhalb von drei Jahren nach der Zuführung des neuen Betriebsvermögens erfolgen",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 5",
                   "konfidenz": 0.6,
@@ -43822,7 +44386,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "9.",
                   "t": "Wird dadurch die erforderliche Zuführung nicht mehr erreicht",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 6",
                   "konfidenz": 0.6,
@@ -43862,14 +44426,6 @@
                 },
                 {
                   "n": "4.",
-                  "t": "unterschreitet",
-                  "pfad": "Abs. 1a Nr. 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
                   "t": "gilt sinngemäß",
                   "pfad": "Abs. 1a Nr. 2",
                   "konfidenz": 0.45,
@@ -43877,7 +44433,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "zugeführt wird",
                   "pfad": "Abs. 1a Nr. 3",
                   "konfidenz": 0.45,
@@ -43885,7 +44441,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "Eine wesentliche Betriebsvermögenszuführung",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 2",
                   "konfidenz": 0.6,
@@ -43893,7 +44449,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "7.",
                   "t": "ist nur der entsprechende Anteil des Aktivvermögens zuzuführen",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 3",
                   "konfidenz": 0.6,
@@ -43901,7 +44457,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "8.",
                   "t": "Der Erlass von Verbindlichkeiten durch den Erwerber oder eine diesem nahestehende Person steht … gleich",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 4",
                   "konfidenz": 0.6,
@@ -43909,7 +44465,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "10.",
+                  "n": "9.",
                   "t": "mindern den Wert des zugeführten Betriebsvermögens",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 5",
                   "konfidenz": 0.6,
@@ -43917,7 +44473,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "10.",
                   "t": "ist Satz 1 nicht mehr anzuwenden",
                   "pfad": "Abs. 1a Nr. 3 Halbs. 6",
                   "konfidenz": 0.6,
@@ -43925,7 +44481,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "11.",
                   "t": "Keine Sanierung",
                   "pfad": "Abs. 1a Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -43970,6 +44526,8 @@
         "Bei der Ermittlung der stillen Reserven",
         "Für die Anwendung des Absatzes 1",
         "die Körperschaft eine geschlossene Betriebsvereinbarung mit einer Arbeitsplatzregelung",
+        "die Summe der maßgebenden jährlichen Lohnsummen der Körperschaft innerhalb von fünf Jahren nach dem Beteiligungserwerb 400 Prozent der Ausgangslohnsumme nicht unterschreitet",
+        "§ 13a Absatz 1 Satz 3 und 4 und Absatz 4 des Erbschaftsteuer- und Schenkungsteuergesetzes in der Fassung des Gesetzes vom 24. Dezember 2008 (BGBl. I S. 3018)",
         "der Körperschaft durch Einlagen wesentliches Betriebsvermögen",
         "Wird nur ein Anteil an der Körperschaft erworben",
         "der Zuführung neuen Betriebsvermögens",
@@ -43991,7 +44549,6 @@
         "ist ein Beteiligungserwerb zum Zweck der Sanierung des Geschäftsbetriebs der Körperschaft unbeachtlich",
         "setzt voraus",
         "befolgt",
-        "unterschreitet",
         "gilt sinngemäß",
         "zugeführt wird",
         "Eine wesentliche Betriebsvermögenszuführung",
@@ -44008,7 +44565,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -44018,7 +44575,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e582d7dcde72e48baf458ccc02d4181546f03ce301ad6af62e38182784cefd0b",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.229Z"
+      "aktualisiert": "2026-08-11T11:31:24.866Z"
     },
     "8d": {
       "typ": "gemischt",
@@ -44083,6 +44640,7 @@
           "von": 471,
           "bis": 565,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -44561,39 +45119,24 @@
           "von": 2319,
           "bis": 2381,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "die Körperschaft einen zusätzlichen Geschäftsbetrieb",
+              "text": "die Körperschaft einen zusätzlichen Geschäftsbetrieb aufnimmt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 3",
               "von": 2319,
-              "laenge": 52,
+              "laenge": 61,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "aufnimmt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 3",
-              "von": 2372,
-              "laenge": 8,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -44602,39 +45145,24 @@
           "von": 2385,
           "bis": 2447,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "die Körperschaft sich an einer Mitunternehmerschaft",
+              "text": "die Körperschaft sich an einer Mitunternehmerschaft beteiligt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 4",
               "von": 2385,
-              "laenge": 51,
+              "laenge": 61,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "beteiligt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 4",
-              "von": 2437,
-              "laenge": 9,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -44924,7 +45452,7 @@
                 },
                 {
                   "n": "5.",
-                  "t": "die Körperschaft einen zusätzlichen Geschäftsbetrieb",
+                  "t": "die Körperschaft einen zusätzlichen Geschäftsbetrieb aufnimmt",
                   "pfad": "Abs. 2 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -44932,7 +45460,7 @@
                 },
                 {
                   "n": "6.",
-                  "t": "die Körperschaft sich an einer Mitunternehmerschaft",
+                  "t": "die Körperschaft sich an einer Mitunternehmerschaft beteiligt",
                   "pfad": "Abs. 2 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -44995,22 +45523,6 @@
                 },
                 {
                   "n": "5.",
-                  "t": "aufnimmt",
-                  "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "beteiligt",
-                  "pfad": "Abs. 2 Nr. 4",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
                   "t": "einnimmt",
                   "pfad": "Abs. 2 Nr. 5",
                   "konfidenz": 0.45,
@@ -45018,7 +45530,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "6.",
                   "t": "werden, die sie zu einem geringeren als dem gemeinen Wert ansetzt",
                   "pfad": "Abs. 2 Nr. 6",
                   "konfidenz": 0.6,
@@ -45041,8 +45553,8 @@
         "§ 8c Absatz 1 Satz 5 bis 8",
         "der Geschäftsbetrieb ruhend",
         "der Geschäftsbetrieb einer andersartigen Zweckbestimmung",
-        "die Körperschaft einen zusätzlichen Geschäftsbetrieb",
-        "die Körperschaft sich an einer Mitunternehmerschaft",
+        "die Körperschaft einen zusätzlichen Geschäftsbetrieb aufnimmt",
+        "die Körperschaft sich an einer Mitunternehmerschaft beteiligt",
         "die Körperschaft die Stellung eines Organträgers im Sinne des § 14 Absatz 1",
         "auf die Körperschaft Wirtschaftsgüter übertragen"
       ],
@@ -45060,8 +45572,6 @@
         "gilt bezogen auf die zum Schluss des vorangegangenen Veranlagungszeitraums vorhandenen stillen Reserven entsprechend",
         "gestellt wird",
         "zugeführt wird",
-        "aufnimmt",
-        "beteiligt",
         "einnimmt",
         "werden, die sie zu einem geringeren als dem gemeinen Wert ansetzt"
       ],
@@ -45071,7 +45581,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.562,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -45081,7 +45591,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d90c50a95a16a1250ff7cc734dd4ed4b36f4b889739040a67c99060c2d259ce",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.232Z"
+      "aktualisiert": "2026-08-11T11:31:24.869Z"
     },
     "21a": {
       "typ": "konditional",
@@ -45309,7 +45819,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1cd8c1a7c893d753ca623605447011339fcc92ee215102551c807d07b32c5a25",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.288Z"
+      "aktualisiert": "2026-08-11T11:31:24.927Z"
     },
     "32a": {
       "typ": "gemischt",
@@ -45654,7 +46164,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f5eb11d4837d540ea3174d10ec0461ca5c083502961fbc362d175d0722444df",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:30.332Z"
+      "aktualisiert": "2026-08-11T11:31:24.969Z"
     }
   }
 }

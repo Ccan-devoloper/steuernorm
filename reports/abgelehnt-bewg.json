@@ -91,18 +91,18 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
+    "norm": "§ 97",
+    "pfad": "Abs. 1a Buchst. b",
+    "art": "def",
+    "text": "Vorabgewinnanteile",
+    "grund": "Definiendum nur in Definitionen"
+  },
+  {
     "norm": "§ 121",
     "pfad": "Nr. 4",
     "art": "tb",
     "text": "wenn die Gesellschaft Sitz oder Geschäftsleitung im Inland hat und der Gesellschafter entw",
     "grund": "zu grob (50 Wörter)"
-  },
-  {
-    "norm": "§ 151",
-    "pfad": "Abs. 2 Nr. 2",
-    "art": "tb",
-    "text": "über die Zurechnung der wirtschaftlichen Einheit und bei mehreren Beteiligten über die Höh",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 152",
@@ -124,13 +124,6 @@
     "art": "tb",
     "text": "die Wirtschaftsgebäude",
     "grund": "bloßes Normsubjekt"
-  },
-  {
-    "norm": "§ 158",
-    "pfad": "Abs. 4 Nr. 5",
-    "art": "tb",
-    "text": "Tierbestände oder Zweige des Tierbestands und die hiermit zusammenhängenden Wirtschaftsgüt",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 159",
@@ -201,13 +194,6 @@
     "art": "tb",
     "text": "Zur Berücksichtigung von Besonderheiten, die sich im Falle einer engen räumlichen Verbindu",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 168",
-    "pfad": "Abs. 4 Nr. 1",
-    "art": "tb",
-    "text": "der Wert des Grund und Bodens und der Wirtschaftsgebäude oder ein Anteil daran (§ 158 Abs.",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 169",
@@ -351,13 +337,6 @@
   },
   {
     "norm": "§ 188",
-    "pfad": "Abs. 2 Nr. 1",
-    "art": "tb",
-    "text": "3,5 Prozent für Mietwohngrundstücke",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 188",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
     "text": "4,5 Prozent für",
@@ -369,13 +348,6 @@
     "art": "tb",
     "text": "5,0 Prozent für",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 188",
-    "pfad": "Abs. 2 Nr. 4",
-    "art": "tb",
-    "text": "6,0 Prozent für Geschäftsgrundstücke",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 190",
@@ -407,27 +379,6 @@
   },
   {
     "norm": "§ 193",
-    "pfad": "Abs. 3 Nr. 1",
-    "art": "tb",
-    "text": "dem Wert des unbelasteten Grundstücks im Sinne des Absatzes 1 Satz 3 abzüglich des Bodenwe",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 193",
-    "pfad": "Abs. 4 Nr. 1",
-    "art": "tb",
-    "text": "2,5 Prozent für Ein- und Zweifamilienhäuser und Wohnungseigentum, das wie Ein- und Zweifam",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 193",
-    "pfad": "Abs. 4 Nr. 2",
-    "art": "tb",
-    "text": "3,5 Prozent für Mietwohngrundstücke und Wohnungseigentum, das nicht unter Nummer 1 fällt",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 193",
     "pfad": "Abs. 4 Nr. 3",
     "art": "tb",
     "text": "4,5 Prozent für",
@@ -441,31 +392,10 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 193",
-    "pfad": "Abs. 4 Nr. 5",
-    "art": "tb",
-    "text": "6,0 Prozent für Geschäftsgrundstücke und Teileigentum",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
     "norm": "§ 194",
     "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "die von den Gutachterausschüssen im Sinne der §§ 192 ff. des Baugesetzbuchs ermittelten Er",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 202",
-    "pfad": "Abs. 1 Buchst. f",
-    "art": "tb",
-    "text": "Aufwendungen, die im Zusammenhang stehen mit Vermögen im Sinne des § 200 Abs. 2 und 4, und",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 202",
-    "pfad": "Abs. 1 Buchst. a",
-    "art": "tb",
-    "text": "gewinnerhöhende Auflösungsbeträge steuerfreier Rücklagen sowie Gewinne aus der Anwendung d",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -508,13 +438,6 @@
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
     "text": "in den Fällen des Absatzes 1 Nummer 2 der Beginn des Kalenderjahres, in dem der Grundsteue",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 228",
-    "pfad": "Abs. 3 Nr. 3",
-    "art": "tb",
-    "text": "bei einem Gebäude auf fremdem Grund und Boden vom Eigentümer des Grund und Bodens unter Mi",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -565,20 +488,6 @@
     "art": "rf",
     "text": "Der Reinertrag einer",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 238",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "bei der landwirtschaftlichen Nutzung gemäß Anlage 27, wenn der tatsächliche Tierbestand am",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 238",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "bei der gärtnerischen Nutzung gemäß Anlage 30, wenn in einem Nutzungsteil Flächen unter Gl",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 238",
@@ -739,34 +648,6 @@
     "pfad": "Abs. 2 Satz 5",
     "art": "tb",
     "text": "Die Restnutzungsdauer eines noch nutzbaren Gebäudes",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 256",
-    "pfad": "Abs. 1 Nr. 1",
-    "art": "tb",
-    "text": "2,5 Prozent für Ein- und Zweifamilienhäuser",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 256",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "3,0 Prozent für Wohnungseigentum",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 256",
-    "pfad": "Abs. 1 Nr. 3",
-    "art": "tb",
-    "text": "4,0 Prozent für Mietwohngrundstücke mit bis zu sechs Wohnungen",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 256",
-    "pfad": "Abs. 1 Nr. 4",
-    "art": "tb",
-    "text": "4,5 Prozent für Mietwohngrundstücke mit mehr als sechs Wohnungen",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {

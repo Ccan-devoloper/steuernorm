@@ -65,6 +65,10 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
       typ,
       gegenstand: kontext.gegenstand,
       verberst: syn?.vorfeldrolle === "v1-bedingung" || verberst(einheit.text),
+      /* Aufzählungsglied: Das Prädikat steht im Einleitungssatz, das Glied
+         besteht vollständig aus dem Merkmal. Der Wächter gegen „ganzer Satz
+         als ein Merkmal" darf hier nicht greifen — siehe validatoren.mjs. */
+      katalog: syn?.vorfeldrolle === "katalog",
     };
 
     // 1. Kandidaten sammeln: Modell (je Lauf) + Syntaxanalyse als ein weiterer Stimmgeber
@@ -186,6 +190,13 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
       von: einheit.von ?? null,
       bis: einheit.bis ?? null,
       typ,
+      /* Wird mitgeschrieben, weil die Nachprüfung (tools/pruefen.mjs) dieselben
+         Spannen ein zweites Mal durch `pruefeSpanne` schickt. Sie hat die
+         Syntaxanalyse nicht zur Hand und wüsste sonst nicht, dass dieser
+         Rechtssatz ein Aufzählungsglied ist — zwei Wächter greifen dort
+         berechtigterweise nicht. Ohne diesen Eintrag meldete die strenge
+         Prüfung 405 Fehler für Spannen, die richtig sind. */
+      ...(ctx.katalog ? { katalog: true } : {}),
       junktor: einheit.nr ? junktor(einheiten.filter((e) => e.nr), einheit.text) : null,
       elemente: elemente.sort((a, b) => a.von - b.von),
     });

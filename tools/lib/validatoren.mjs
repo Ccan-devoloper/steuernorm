@@ -61,7 +61,18 @@ export function pruefeSpanne(span, ctx) {
   if (woerter > grenze) return `zu grob (${woerter} Wörter)`;
   // Nur für Tatbestandsmerkmale: Eine Rechtsfolge DARF der ganze Rest des
   // Satzes sein — bei Definitionen und Verweisungen ist das der Regelfall.
-  if (span.art === "tb" && t.length > 0.85 * ctx.satztext.length && woerter > 20) {
+  //
+  // AUSGENOMMEN das Aufzählungsglied. Es ist elliptisch: Sein Prädikat steht
+  // im Einleitungssatz („… ist der Solidaritätszuschlag nur zu erheben, wenn
+  // die Bemessungsgrundlage …"), im Glied selbst steht ausschließlich die
+  // Merkmalsvariante („in den Steuerklassen I, II, IV bis VI mehr als ein
+  // Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages"). Dass die
+  // Spanne den ganzen Rechtssatz abdeckt, ist dort die richtige Antwort und
+  // kein Zeichen für eine faule Analyse. Der Wächter hat vier Glieder allein
+  // in § 3 SolzG verworfen — und zwar unregelmäßig: Glieder, die auf „und"
+  // endeten, wurden vorher gekürzt und rutschten dadurch unter die Schwelle.
+  if (span.art === "tb" && !ctx.katalog
+      && t.length > 0.85 * ctx.satztext.length && woerter > 20) {
     return "deckt praktisch den ganzen Rechtssatz ab";
   }
 
@@ -70,8 +81,12 @@ export function pruefeSpanne(span, ctx) {
   if (span.art === "tb" && istNormsubjekt(t, ctx.gegenstand)) return "bloßes Normsubjekt";
   if (span.art === "def" && t.split(/\s+/).length > 8) return "Definiendum zu lang";
 
-  // Tarifnormen haben keinen eigenen Tatbestand.
-  if (ctx.typ === "tarif" && span.art === "tb" && !/^(bei|beim|in den Fällen|für|soweit|auf)/i.test(t)) {
+  // Tarifnormen haben keinen eigenen Tatbestand — außer im Aufzählungsglied,
+  // dessen Merkmal vollständig aus der Variante besteht („in den Steuerklassen
+  // I, II, IV bis VI mehr als ein Dreihundertsechzigstel …"). Dort steht der
+  // Tarif im Einleitungssatz, nicht im Glied.
+  if (ctx.typ === "tarif" && span.art === "tb" && !ctx.katalog
+      && !/^(bei|beim|in den Fällen|für|soweit|auf)/i.test(t)) {
     return "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal";
   }
 

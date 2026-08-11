@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T09:36:31.380Z",
+  "aktualisiert": "2026-08-11T11:31:26.145Z",
   "quelle": "https://www.gesetze-im-internet.de/grstg_1973/",
   "stand": [
     {
@@ -254,7 +254,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bf9ba9942f6721a92612e76cd6583b5da68befdfab2c978584b9414d0ee1c71",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.335Z"
+      "aktualisiert": "2026-08-11T11:31:26.091Z"
     },
     "2": {
       "typ": "gemischt",
@@ -513,7 +513,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "37c6379c0d4e6b6d1bfe5af833e583f52122f097b18fec1f95b3aba8a034d647",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.336Z"
+      "aktualisiert": "2026-08-11T11:31:26.092Z"
     },
     "3": {
       "typ": "gemischt",
@@ -570,6 +570,7 @@
           "von": 36,
           "bis": 177,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -636,6 +637,7 @@
           "von": 358,
           "bis": 371,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -661,6 +663,7 @@
           "von": 375,
           "bis": 455,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -686,6 +689,7 @@
           "von": 459,
           "bis": 546,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -711,8 +715,26 @@
           "von": 550,
           "bis": 821,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "einer inländischen Körperschaft, Personenvereinigung oder Vermögensmasse, die nach der Satzung, dem Stiftungsgeschäft oder der sonstigen Verfassung und nach ihrer tatsächlichen Geschäftsführung ausschließlich und unmittelbar gemeinnützigen oder mildtätigen Zwecken dient",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Buchst. b",
+              "von": 550,
+              "laenge": 270,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 1 (Teil 2)",
@@ -1151,8 +1173,8 @@
       "schema": [
         {
           "absatz": "Abs. 1",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -1225,6 +1247,14 @@
                 },
                 {
                   "n": "7.",
+                  "t": "einer inländischen Körperschaft, Personenvereinigung oder Vermögensmasse, die nach der Satzung, dem Stiftungsgeschäft oder der sonstigen Verfassung und nach ihrer tatsächlichen Geschäftsführung ausschließlich und unmittelbar gemeinnützigen oder mildtätigen Zwecken dient",
+                  "pfad": "Abs. 1 Buchst. b",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
                   "t": "für gemeinnützige oder mildtätige Zwecke",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -1232,7 +1262,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "die jüdischen Kultusgemeinden",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
@@ -1240,7 +1270,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "10.",
                   "t": "Dienstwohnungen der Geistlichen und Kirchendiener der Religionsgesellschaften, die Körperschaften des öffentlichen Rechts sind, und der jüdischen Kultusgemeinden. § 5",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -1248,7 +1278,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
                   "t": "Grundbesitz der Religionsgesellschaften, die Körperschaften des öffentlichen Rechts sind, und der jüdischen Kultusgemeinden, der am 1. Januar 1987 und im Veranlagungszeitpunkt zu einem nach Kirchenrecht gesonderten Vermögen, insbesondere einem Stellenfonds",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -1256,7 +1286,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "12.",
                   "t": "Ist in dem in Artikel 3 des Einigungsvertrages genannten Gebiet die Zugehörigkeit des Grundbesitzes zu einem gesonderten Vermögen im Sinne des Satzes 1 am 1. Januar 1987 nicht gegeben",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -1264,7 +1294,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "13.",
                   "t": "Der Grundbesitz muß ausschließlich demjenigen, der ihn für die begünstigten Zwecke benutzt, oder einem anderen nach den Nummern 1 bis 6",
                   "pfad": "Abs. 1 Satz 8",
                   "konfidenz": 0.6,
@@ -1453,6 +1483,7 @@
         "(weggefallen)",
         "Grundbesitz, der vom Bundeseisenbahnvermögen für Verwaltungszwecke benutzt wird",
         "Grundbesitz, der von a) einer inländischen juristischen Person des öffentlichen Rechts",
+        "einer inländischen Körperschaft, Personenvereinigung oder Vermögensmasse, die nach der Satzung, dem Stiftungsgeschäft oder der sonstigen Verfassung und nach ihrer tatsächlichen Geschäftsführung ausschließlich und unmittelbar gemeinnützigen oder mildtätigen Zwecken dient",
         "für gemeinnützige oder mildtätige Zwecke",
         "die jüdischen Kultusgemeinden",
         "Dienstwohnungen der Geistlichen und Kirchendiener der Religionsgesellschaften, die Körperschaften des öffentlichen Rechts sind, und der jüdischen Kultusgemeinden. § 5",
@@ -1483,7 +1514,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -1493,7 +1524,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf7476b2978f26c237cc3b6ff6c3f36c37e9c99383f482a4dcbe8445fe661b3",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.339Z"
+      "aktualisiert": "2026-08-11T11:31:26.096Z"
     },
     "4": {
       "typ": "gemischt",
@@ -1589,6 +1620,7 @@
           "von": 256,
           "bis": 274,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -1614,14 +1646,33 @@
           "von": 278,
           "bis": 566,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "a) die dem öffentlichen Verkehr dienenden Straßen, Wege, Plätze, Wasserstraßen, Häfen und Schienenwege sowie die Grundflächen mit den diesem Verkehr unmittelbar dienenden Bauwerken und Einrichtungen, zum Beispiel Brücken, Schleuseneinrichtungen, Signalstationen, Stellwerke, Blockstellen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 3",
+              "von": 278,
+              "laenge": 287,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Buchst. b",
           "von": 570,
           "bis": 1046,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -1630,6 +1681,7 @@
           "von": 1050,
           "bis": 1161,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -1846,6 +1898,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "a) die dem öffentlichen Verkehr dienenden Straßen, Wege, Plätze, Wasserstraßen, Häfen und Schienenwege sowie die Grundflächen mit den diesem Verkehr unmittelbar dienenden Bauwerken und Einrichtungen, zum Beispiel Brücken, Schleuseneinrichtungen, Signalstationen, Stellwerke, Blockstellen",
+                  "pfad": "Nr. 3",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "die fließenden Gewässer und die ihren Abfluß regelnden Sammelbecken, soweit sie nicht unter Buchstabe a fallen",
                   "pfad": "Buchst. c",
                   "konfidenz": 0.6,
@@ -1853,7 +1913,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "wenn durch die Landesregierung oder die von ihr beauftragte Stelle anerkannt ist",
                   "pfad": "Satz 2",
                   "konfidenz": 0.6,
@@ -1861,7 +1921,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "Der Grundbesitz muß ausschließlich demjenigen, der ihn benutzt, oder einer juristischen Person des öffentlichen Rechts",
                   "pfad": "Satz 3",
                   "konfidenz": 0.6,
@@ -1869,7 +1929,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "wenn das Krankenhaus in dem Kalenderjahr, das dem Veranlagungszeitpunkt (§ 16 Absatz 1, § 17 Absatz 3, § 18 Absatz 3) vorangeht, die Voraussetzungen des § 67 Abs. 1 oder 2 der Abgabenordnung erfüllt hat",
                   "pfad": "Satz 4",
                   "konfidenz": 0.48,
@@ -1877,7 +1937,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "Der Grundbesitz muß ausschließlich demjenigen, der ihn benutzt, oder einer juristischen Person des öffentlichen Rechts",
                   "pfad": "Satz 5",
                   "konfidenz": 0.6,
@@ -1940,6 +2000,7 @@
         "Soweit sich nicht bereits eine Befreiung nach § 3 ergibt",
         "Grundbesitz, der dem Gottesdienst einer Religionsgesellschaft, die Körperschaft des öffentlichen Rechts ist, oder einer jüdischen Kultusgemeinde",
         "Bestattungsplätze",
+        "a) die dem öffentlichen Verkehr dienenden Straßen, Wege, Plätze, Wasserstraßen, Häfen und Schienenwege sowie die Grundflächen mit den diesem Verkehr unmittelbar dienenden Bauwerken und Einrichtungen, zum Beispiel Brücken, Schleuseneinrichtungen, Signalstationen, Stellwerke, Blockstellen",
         "die fließenden Gewässer und die ihren Abfluß regelnden Sammelbecken, soweit sie nicht unter Buchstabe a fallen",
         "wenn durch die Landesregierung oder die von ihr beauftragte Stelle anerkannt ist",
         "Der Grundbesitz muß ausschließlich demjenigen, der ihn benutzt, oder einer juristischen Person des öffentlichen Rechts",
@@ -1957,7 +2018,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.547,
+      "konfidenz": 0.542,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -1967,7 +2028,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e9c7b2a9bddb1a3b709d0bcfcab09ba1ebca33a4897a1a83b179d21ad81a1a7a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.341Z"
+      "aktualisiert": "2026-08-11T11:31:26.098Z"
     },
     "5": {
       "typ": "gemischt",
@@ -2007,16 +2068,52 @@
           "von": 131,
           "bis": 388,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Gemeinschaftsunterkünfte der Bundeswehr, der ausländischen Streitkräfte, der internationalen militärischen Hauptquartiere, der Bundespolizei, der Polizei und des sonstigen Schutzdienstes des Bundes und der Gebietskörperschaften sowie ihrer Zusammenschlüsse",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 131,
+              "laenge": 256,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 392,
           "bis": 608,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Wohnräume in Schülerheimen, Ausbildungs- und Erziehungsheimen sowie Prediger- und Priesterseminaren, wenn die Unterbringung in ihnen für die Zwecke des Unterrichts, der Ausbildung oder der Erziehung erforderlich ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 392,
+              "laenge": 215,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2 Halbs. 2",
@@ -2188,6 +2285,22 @@
                 },
                 {
                   "n": "2.",
+                  "t": "Gemeinschaftsunterkünfte der Bundeswehr, der ausländischen Streitkräfte, der internationalen militärischen Hauptquartiere, der Bundespolizei, der Polizei und des sonstigen Schutzdienstes des Bundes und der Gebietskörperschaften sowie ihrer Zusammenschlüsse",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Wohnräume in Schülerheimen, Ausbildungs- und Erziehungsheimen sowie Prediger- und Priesterseminaren, wenn die Unterbringung in ihnen für die Zwecke des Unterrichts, der Ausbildung oder der Erziehung erforderlich ist",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "Wird das Heim oder Seminar nicht von einem der nach § 3 Abs. 1 Nr. 1, 3 oder 4 begünstigten Rechtsträger unterhalten",
                   "pfad": "Abs. 1 Nr. 2 Halbs. 2",
                   "konfidenz": 0.6,
@@ -2195,7 +2308,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "5.",
                   "t": "Räume, in denen sich Personen für die Erfüllung der steuerbegünstigten Zwecke ständig",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
@@ -2203,7 +2316,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "6.",
                   "t": "wenn sie nicht zugleich die Wohnung des Inhabers darstellen",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
@@ -2278,6 +2391,8 @@
       ],
       "tb": [
         "Dient Grundbesitz, der für steuerbegünstigte Zwecke (§§ 3 und 4) benutzt wird, zugleich Wohnzwecken",
+        "Gemeinschaftsunterkünfte der Bundeswehr, der ausländischen Streitkräfte, der internationalen militärischen Hauptquartiere, der Bundespolizei, der Polizei und des sonstigen Schutzdienstes des Bundes und der Gebietskörperschaften sowie ihrer Zusammenschlüsse",
+        "Wohnräume in Schülerheimen, Ausbildungs- und Erziehungsheimen sowie Prediger- und Priesterseminaren, wenn die Unterbringung in ihnen für die Zwecke des Unterrichts, der Ausbildung oder der Erziehung erforderlich ist",
         "Wird das Heim oder Seminar nicht von einem der nach § 3 Abs. 1 Nr. 1, 3 oder 4 begünstigten Rechtsträger unterhalten",
         "Räume, in denen sich Personen für die Erfüllung der steuerbegünstigten Zwecke ständig",
         "wenn sie nicht zugleich die Wohnung des Inhabers darstellen",
@@ -2293,7 +2408,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.581,
+      "konfidenz": 0.579,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2303,7 +2418,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6cbb4367adf752036679227aa5934b7afffc3c216e8f307ad56864a819866af7",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.342Z"
+      "aktualisiert": "2026-08-11T11:31:26.100Z"
     },
     "6": {
       "typ": "gemischt",
@@ -2342,6 +2457,7 @@
           "von": 159,
           "bis": 209,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2367,14 +2483,33 @@
           "von": 213,
           "bis": 434,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Grundbesitz, der von der Bundeswehr, den ausländischen Streitkräften, den internationalen militärischen Hauptquartieren oder den in § 5 Abs. 1 Nr. 1 bezeichneten Schutzdiensten als Übungsplatz oder Flugplatz benutzt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 2",
+              "von": 213,
+              "laenge": 220,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Nr. 3",
           "von": 438,
           "bis": 483,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2426,6 +2561,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "Grundbesitz, der von der Bundeswehr, den ausländischen Streitkräften, den internationalen militärischen Hauptquartieren oder den in § 5 Abs. 1 Nr. 1 bezeichneten Schutzdiensten als Übungsplatz oder Flugplatz benutzt wird",
+                  "pfad": "Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "Grundbesitz, der unter § 4 Nr. 1 bis 4 fällt",
                   "pfad": "Nr. 3",
                   "konfidenz": 0.6,
@@ -2440,6 +2583,7 @@
       "tb": [
         "Wird Grundbesitz, der für steuerbegünstigte Zwecke (§§ 3 und 4) benutzt wird, zugleich land- und forstwirtschaftlich genutzt",
         "Grundbesitz, der Lehr- oder Versuchszwecken dient",
+        "Grundbesitz, der von der Bundeswehr, den ausländischen Streitkräften, den internationalen militärischen Hauptquartieren oder den in § 5 Abs. 1 Nr. 1 bezeichneten Schutzdiensten als Übungsplatz oder Flugplatz benutzt wird",
         "Grundbesitz, der unter § 4 Nr. 1 bis 4 fällt"
       ],
       "rf": [],
@@ -2457,7 +2601,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "264157584796d9e3617c61b5bfc56512893d31be536ad46156323d323a115b6f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.343Z"
+      "aktualisiert": "2026-08-11T11:31:26.101Z"
     },
     "7": {
       "typ": "konditional",
@@ -2601,7 +2745,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "cdcd579bbb462e1dc74e74078d00ab202662f020268bb0c37a75d9e306a059ea",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.346Z"
+      "aktualisiert": "2026-08-11T11:31:26.101Z"
     },
     "8": {
       "typ": "konditional",
@@ -2792,7 +2936,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fa9fbc6f2f77539a0cb05f1ad49b2bb1066cc876e6f379607a0d535ac4d06f82",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.346Z"
+      "aktualisiert": "2026-08-11T11:31:26.102Z"
     },
     "9": {
       "typ": "aussage",
@@ -2916,7 +3060,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "caf0e52999418e76d7dec6e8947a30ebeaaf28e4e39db52e054e5ee23cd94773",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.347Z"
+      "aktualisiert": "2026-08-11T11:31:26.102Z"
     },
     "10": {
       "typ": "gemischt",
@@ -3133,7 +3277,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "16a76da4021ee34c3646a011ff16b6503cae2fb6e477ad133f6eeddb01eb532c",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.347Z"
+      "aktualisiert": "2026-08-11T11:31:26.103Z"
     },
     "11": {
       "typ": "gemischt",
@@ -3367,7 +3511,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b4da73c3f07132a591bd520c7fe9766d3c368965343036b5e20443a5699b36a0",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.348Z"
+      "aktualisiert": "2026-08-11T11:31:26.104Z"
     },
     "12": {
       "typ": "aussage",
@@ -3443,7 +3587,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ae83092d9e669f83a9557af0ffb3606f1aa239cdaeada08bb00e1c608579bdd1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.348Z"
+      "aktualisiert": "2026-08-11T11:31:26.104Z"
     },
     "13": {
       "typ": "gemischt",
@@ -3573,7 +3717,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fce85cded2154ad807e1d74d97ecc57372013c4a132184f72f45f9704592658a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.348Z"
+      "aktualisiert": "2026-08-11T11:31:26.104Z"
     },
     "14": {
       "typ": "tarif",
@@ -3683,7 +3827,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b558c2ddabfa10afb5370acac3448475de42b3f9e1193ed5609ff0c517d5db2",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.348Z"
+      "aktualisiert": "2026-08-11T11:31:26.105Z"
     },
     "15": {
       "typ": "gemischt",
@@ -3707,6 +3851,7 @@
           "von": 30,
           "bis": 112,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3732,6 +3877,7 @@
           "von": 116,
           "bis": 223,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3757,6 +3903,7 @@
           "von": 227,
           "bis": 307,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3843,23 +3990,24 @@
           "von": 649,
           "bis": 796,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum",
+              "text": "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum bestehen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 649,
-              "laenge": 137,
+              "laenge": 146,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -4388,7 +4536,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum",
+                  "t": "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum bestehen",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -4682,7 +4830,7 @@
         "für unbebaute Grundstücke im Sinne des § 246 des Bewertungsgesetzes 0,34 Promille",
         "für bebaute Grundstücke a) im Sinne des § 249 Absatz 1 Nummer 1 bis 4 des Bewertungsgesetzes 0,31 Promille",
         "im Sinne des § 249 Absatz 1 Nummer 5 bis 8 des Bewertungsgesetzes 0,34 Promille",
-        "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum",
+        "die sich aus der Förderzusage im Sinne des § 13 Absatz 2 des Wohnraumförderungsgesetzes ergebenden Bindungen im Hauptveranlagungszeitraum bestehen",
         "Liegen die Voraussetzungen des Satzes 1 für einen Teil der Gebäude oder für Teile eines Gebäudes vor",
         "einer Wohnungsbaugesellschaft",
         "einer Wohnungsbaugesellschaft",
@@ -4724,7 +4872,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ee5866c36a2de6b129d7d54b198bd9da45abe3e919a0eab680d1663d0dc16567",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.352Z"
+      "aktualisiert": "2026-08-11T11:31:26.109Z"
     },
     "16": {
       "typ": "gemischt",
@@ -5102,7 +5250,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4251053215e47cd9ab4c45a2687344be9d603dea5a67ade028dba7189f30af8f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.353Z"
+      "aktualisiert": "2026-08-11T11:31:26.110Z"
     },
     "17": {
       "typ": "gemischt",
@@ -5442,23 +5590,24 @@
           "von": 1045,
           "bis": 1173,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag",
+              "text": "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag ergibt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 2",
               "von": 1045,
-              "laenge": 120,
+              "laenge": 127,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -5742,7 +5891,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag",
+                  "t": "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag ergibt",
                   "pfad": "Abs. 3 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -5853,7 +6002,7 @@
         "die letzte Veranlagung",
         "§ 176 der Abgabenordnung",
         "in den Fällen des Absatzes 1 der Beginn des Kalenderjahres, auf den die Fortschreibung",
-        "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag",
+        "in den Fällen des Absatzes 2 Nr. 1 der Beginn des Kalenderjahres, auf den sich erstmals ein abweichender Steuermeßbetrag ergibt",
         "in den Fällen des Absatzes 2 Nr. 2 der Beginn des Kalenderjahres, in dem der Fehler dem Finanzamt",
         "Treten die Voraussetzungen für eine Neuveranlagung während des Zeitraums zwischen dem Hauptveranlagungszeitpunkt und dem Zeitpunkt des Wirksamwerdens der Steuermeßbeträge (§ 16 Abs. 2) ein"
       ],
@@ -5886,7 +6035,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6a6584441ea7ed057a3aadc93fbc4f36593d2273927667d96650087b6b1769c8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.355Z"
+      "aktualisiert": "2026-08-11T11:31:26.113Z"
     },
     "18": {
       "typ": "gemischt",
@@ -6085,6 +6234,7 @@
           "von": 692,
           "bis": 800,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6399,7 +6549,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e53441336dc7d71fd10d96c626cd9e1a110504748657b722d318f14ab015bbc1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.356Z"
+      "aktualisiert": "2026-08-11T11:31:26.114Z"
     },
     "19": {
       "typ": "gemischt",
@@ -6893,7 +7043,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf5a48afdc0ea8253c9d03d95b00c268938a894943b9bb14075fc130c7e09e69",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.358Z"
+      "aktualisiert": "2026-08-11T11:31:26.116Z"
     },
     "20": {
       "typ": "gemischt",
@@ -7033,6 +7183,7 @@
           "von": 299,
           "bis": 413,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -7058,8 +7209,26 @@
           "von": 417,
           "bis": 559,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "in den Fällen des Absatzes 1 Nr. 2 Buchstabe a mit Wirkung vom Beginn des Kalenderjahres an, der auf den Eintritt des Befreiungsgrundes folgt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 417,
+              "laenge": 141,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 2 Halbs. 2",
@@ -7227,13 +7396,21 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
+              "t": "Voraussetzungen (eine genügt)",
               "junktor": "oder",
               "sub": [
                 {
                   "n": "1.",
                   "t": "in den Fällen des Absatzes 1 Nr. 1 mit Wirkung vom Aufhebungszeitpunkt (§ 224 Absatz 2 des Bewertungsgesetzes) an",
                   "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "in den Fällen des Absatzes 1 Nr. 2 Buchstabe a mit Wirkung vom Beginn des Kalenderjahres an, der auf den Eintritt des Befreiungsgrundes folgt",
+                  "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7316,6 +7493,7 @@
         "wenn der Grundsteuerwert aufgehoben wird",
         "wenn dem Finanzamt bekannt wird, daß a) für den ganzen Steuergegenstand ein Befreiungsgrund eingetreten ist",
         "in den Fällen des Absatzes 1 Nr. 1 mit Wirkung vom Aufhebungszeitpunkt (§ 224 Absatz 2 des Bewertungsgesetzes) an",
+        "in den Fällen des Absatzes 1 Nr. 2 Buchstabe a mit Wirkung vom Beginn des Kalenderjahres an, der auf den Eintritt des Befreiungsgrundes folgt",
         "Treten die Voraussetzungen für eine Aufhebung während des Zeitraums zwischen dem Hauptveranlagungszeitpunkt und dem Zeitpunkt des Wirksamwerdens der Steuermeßbeträge (§ 16 Abs. 2) ein"
       ],
       "rf": [
@@ -7330,7 +7508,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.54,
+      "konfidenz": 0.545,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7340,7 +7518,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9684318000b78577cb8170673df1ba182678a68572ea41178c2537335218bf9b",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.359Z"
+      "aktualisiert": "2026-08-11T11:31:26.118Z"
     },
     "21": {
       "typ": "gemischt",
@@ -7485,7 +7663,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "594182bacc9c66f39b00abf575994fe357f2b56bc20c12d398fd5bd4eb4c2149",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.360Z"
+      "aktualisiert": "2026-08-11T11:31:26.119Z"
     },
     "22": {
       "typ": "gemischt",
@@ -7859,7 +8037,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c9c16d77dec30838a13d83447e40db66f953be0e0ec6a36f34791c3b189686ab",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.361Z"
+      "aktualisiert": "2026-08-11T11:31:26.120Z"
     },
     "23": {
       "typ": "gemischt",
@@ -8043,7 +8221,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79172c45be3a65d36bbf30d7ed1e174fa31e19a0b6590e4c302831ba1fadf123",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.361Z"
+      "aktualisiert": "2026-08-11T11:31:26.121Z"
     },
     "24": {
       "typ": "gemischt",
@@ -8283,7 +8461,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "51066c3f20699499aaa67b46d2b5cea88be66d6fff6a2254a63537ffb1d5a25f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.362Z"
+      "aktualisiert": "2026-08-11T11:31:26.121Z"
     },
     "25": {
       "typ": "gemischt",
@@ -8493,6 +8671,7 @@
           "von": 676,
           "bis": 754,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -8518,6 +8697,7 @@
           "von": 758,
           "bis": 806,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -9198,7 +9378,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c887609139a05e170d87e1a33e3faa61bd37e0bf97fec14f711d20cb8dcd998",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.365Z"
+      "aktualisiert": "2026-08-11T11:31:26.125Z"
     },
     "26": {
       "typ": "aussage",
@@ -9308,7 +9488,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a80903e2e57d1b8b7ef3bc5d4cf3411a59f5df6d6b38906544e9521955caa842",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.370Z"
+      "aktualisiert": "2026-08-11T11:31:26.130Z"
     },
     "27": {
       "typ": "gemischt",
@@ -9674,7 +9854,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "897f0904b6d893b4c6fe51a47a7f44fe77eac7c82e4e0ff336f541a06228b32c",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.370Z"
+      "aktualisiert": "2026-08-11T11:31:26.131Z"
     },
     "28": {
       "typ": "gemischt",
@@ -9738,6 +9918,7 @@
           "von": 199,
           "bis": 280,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -9763,6 +9944,7 @@
           "von": 284,
           "bis": 396,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10117,7 +10299,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a69fbd6d3d8bacdc28a6b903036e5ce078ab530759ae021b29e54a9b1ef1359",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.372Z"
+      "aktualisiert": "2026-08-11T11:31:26.132Z"
     },
     "29": {
       "typ": "aussage",
@@ -10204,7 +10386,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2a150f54ecd134be88554e94f7b97de8e84949f3edaf46383a5ce41e2d574ddd",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.372Z"
+      "aktualisiert": "2026-08-11T11:31:26.133Z"
     },
     "30": {
       "typ": "gemischt",
@@ -10572,7 +10754,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f65ef67bbaaf69800803af67180f401ebae71c33e2a226582c9c6f865da06597",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.373Z"
+      "aktualisiert": "2026-08-11T11:31:26.134Z"
     },
     "31": {
       "typ": "konditional",
@@ -10682,7 +10864,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c7eee80c34b15b7377e7b80282888d97bf542b200b8406064ea389d40037da6",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.373Z"
+      "aktualisiert": "2026-08-11T11:31:26.134Z"
     },
     "32": {
       "typ": "gemischt",
@@ -10803,6 +10985,7 @@
           "von": 527,
           "bis": 646,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -11009,7 +11192,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "60da591d3e4e2a025f76728efd9f58c479b7a7adb23fa413220ef4c5ac3977c6",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.375Z"
+      "aktualisiert": "2026-08-11T11:31:26.136Z"
     },
     "33": {
       "typ": "gemischt",
@@ -11445,7 +11628,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a3359e18fd567cb4534945a5ad05cc32430fcb60cede87110323f24e622837fc",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.376Z"
+      "aktualisiert": "2026-08-11T11:31:26.137Z"
     },
     "34": {
       "typ": "gemischt",
@@ -12114,7 +12297,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8c46b652bd20f5cf969b1f54ead4c919436432865a9c4d4ac8ee3dfcdb5ca8d3",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.378Z"
+      "aktualisiert": "2026-08-11T11:31:26.139Z"
     },
     "35": {
       "typ": "gemischt",
@@ -12500,7 +12683,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b3174e49e56707c47dfca6873090d51cb4e819ca5999b2d9d81ef0c1a2e900fa",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.378Z"
+      "aktualisiert": "2026-08-11T11:31:26.140Z"
     },
     "36": {
       "typ": "gemischt",
@@ -12937,7 +13120,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "099113b0fceabc36aaafdfa704f5e42ef9c46d215647a487e128595ba313a98a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.379Z"
+      "aktualisiert": "2026-08-11T11:31:26.144Z"
     },
     "37": {
       "typ": "gemischt",
@@ -13105,7 +13288,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6010fb8f794ad90a4535deb883206507ba17b36c72bcf9f730ac78487d875721",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.380Z"
+      "aktualisiert": "2026-08-11T11:31:26.145Z"
     },
     "38": {
       "typ": "aussage",
@@ -13181,7 +13364,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "65388219925d862aa54454120d49ec0413c06e22da7d72a1790c607d61674a95",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.380Z"
+      "aktualisiert": "2026-08-11T11:31:26.145Z"
     }
   }
 }

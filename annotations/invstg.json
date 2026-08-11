@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T09:36:32.146Z",
+  "aktualisiert": "2026-08-11T11:31:26.973Z",
   "quelle": "https://www.gesetze-im-internet.de/invstg_2018/",
   "stand": [
     {
@@ -372,6 +372,7 @@
           "von": 1309,
           "bis": 1411,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -438,6 +439,7 @@
           "von": 1710,
           "bis": 1825,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -463,6 +465,7 @@
           "von": 1829,
           "bis": 1965,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -488,8 +491,26 @@
           "von": 1969,
           "bis": 2145,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "REIT-Aktiengesellschaften nach § 1 Absatz 1 des REIT-Gesetzes und andere REIT-Körperschaften, -Personenvereinigungen oder -Vermögensmassen nach § 19 Absatz 5 des REIT-Gesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 5",
+              "von": 1969,
+              "laenge": 175,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 1 (Teil 2)",
@@ -848,6 +869,14 @@
                 },
                 {
                   "n": "6.",
+                  "t": "REIT-Aktiengesellschaften nach § 1 Absatz 1 des REIT-Gesetzes und andere REIT-Körperschaften, -Personenvereinigungen oder -Vermögensmassen nach § 19 Absatz 5 des REIT-Gesetzes",
+                  "pfad": "Abs. 3 Nr. 5",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "Sondervermögen und vergleichbare ausländische Rechtsformen",
                   "pfad": "Abs. 3 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -855,7 +884,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "Investmentvermögen in der Rechtsform einer Personengesellschaft",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -863,7 +892,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "wenn sie nach § 1a des Körperschaftsteuergesetzes zur Körperschaftsbesteuerung optiert haben",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -965,6 +994,7 @@
         "Investmentvermögen in der Rechtsform einer Personengesellschaft oder einer vergleichbaren ausländischen Rechtsform",
         "Unternehmensbeteiligungsgesellschaften nach § 1a Absatz 1 des Gesetzes über Unternehmensbeteiligungsgesellschaften",
         "Kapitalbeteiligungsgesellschaften, die im öffentlichen Interesse mit Eigenmitteln oder mit staatlicher Hilfe Beteiligungen erwerben",
+        "REIT-Aktiengesellschaften nach § 1 Absatz 1 des REIT-Gesetzes und andere REIT-Körperschaften, -Personenvereinigungen oder -Vermögensmassen nach § 19 Absatz 5 des REIT-Gesetzes",
         "Sondervermögen und vergleichbare ausländische Rechtsformen",
         "Investmentvermögen in der Rechtsform einer Personengesellschaft",
         "wenn sie nach § 1a des Körperschaftsteuergesetzes zur Körperschaftsbesteuerung optiert haben",
@@ -989,7 +1019,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.582,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -999,7 +1029,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f02be1c6474d157175923cd2718d53182ecfc815c7e633d147477f31b775873",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.978Z"
+      "aktualisiert": "2026-08-11T11:31:26.782Z"
     },
     "2": {
       "typ": "gemischt",
@@ -1730,8 +1760,26 @@
           "von": 2929,
           "bis": 3267,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Anteile an einer Kapitalgesellschaft, die keine Immobilien-Gesellschaft ist und die a) in einem Mitgliedstaat der Europäischen Union oder in einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum ansässig ist und dort der Ertragsbesteuerung für Kapitalgesellschaften unterliegt und nicht von ihr befreit ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 8 Nr. 2",
+              "von": 2929,
+              "laenge": 332,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 8 Buchst. b",
@@ -1970,6 +2018,7 @@
           "von": 4573,
           "bis": 4654,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -2776,23 +2825,24 @@
           "von": 9847,
           "bis": 10072,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
-              "text": "unterstützt",
+              "art": "tb",
+              "text": "die Bundesrepublik Deutschland bei der Beitreibung von Forderungen gemäß der Beitreibungsrichtlinie im Sinne des § 2 Absatz 2 des EU-Beitreibungsgesetzes oder gemäß vergleichbaren völkerrechtlichen Vereinbarungen unterstützt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 15 Nr. 2",
-              "von": 10060,
-              "laenge": 11,
-              "konfidenz": 0.45,
+              "von": 9847,
+              "laenge": 224,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -3257,6 +3307,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "Anteile an einer Kapitalgesellschaft, die keine Immobilien-Gesellschaft ist und die a) in einem Mitgliedstaat der Europäischen Union oder in einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum ansässig ist und dort der Ertragsbesteuerung für Kapitalgesellschaften unterliegt und nicht von ihr befreit ist",
+                  "pfad": "Abs. 8 Nr. 2",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Investmentanteile nicht als Kapitalbeteiligungen",
                   "pfad": "Abs. 8 Satz 5",
                   "konfidenz": 0.6,
@@ -3264,7 +3322,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Auch nicht als Kapitalbeteiligungen",
                   "pfad": "Abs. 8 Satz 6",
                   "konfidenz": 0.6,
@@ -3272,7 +3330,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "Anteile an Personengesellschaften, auch wenn die Personengesellschaften Anteile an Kapitalgesellschaften",
                   "pfad": "Abs. 8 Nr. 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -3280,7 +3338,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Anteile an Kapitalgesellschaften, die nach Absatz 9 Satz 6 als Immobilien gelten",
                   "pfad": "Abs. 8 Nr. 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -3288,7 +3346,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "soweit sie Ausschüttungen vornehmen",
                   "pfad": "Abs. 8 Nr. 3",
                   "konfidenz": 0.6,
@@ -3808,13 +3866,21 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
+              "t": "Voraussetzungen (kumulativ)",
               "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Ein Amts- und Beitreibungshilfe leistender ausländischer Staat",
                   "pfad": "Abs. 15 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "die Bundesrepublik Deutschland bei der Beitreibung von Forderungen gemäß der Beitreibungsrichtlinie im Sinne des § 2 Absatz 2 des EU-Beitreibungsgesetzes oder gemäß vergleichbaren völkerrechtlichen Vereinbarungen unterstützt",
+                  "pfad": "Abs. 15 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -3830,14 +3896,6 @@
                   "n": "1.",
                   "t": "leistet",
                   "pfad": "Abs. 15 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "unterstützt",
-                  "pfad": "Abs. 15 Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -3898,6 +3956,7 @@
         "die mindestens einmal pro Woche eine Bewertung vornehmen",
         "Absatz 6 Satz 4",
         "zum amtlichen Handel an einer Börse zugelassene oder auf einem organisierten Markt",
+        "Anteile an einer Kapitalgesellschaft, die keine Immobilien-Gesellschaft ist und die a) in einem Mitgliedstaat der Europäischen Union oder in einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum ansässig ist und dort der Ertragsbesteuerung für Kapitalgesellschaften unterliegt und nicht von ihr befreit ist",
         "Investmentanteile nicht als Kapitalbeteiligungen",
         "Auch nicht als Kapitalbeteiligungen",
         "Anteile an Personengesellschaften, auch wenn die Personengesellschaften Anteile an Kapitalgesellschaften",
@@ -3913,6 +3972,7 @@
         "der Gesellschaftsvertrag oder vergleichbare konstituierende Rechtsakte eines Investmentfonds",
         "Als Veräußerung von Investmentanteilen und Spezial-Investmentanteilen",
         "Ein Amts- und Beitreibungshilfe leistender ausländischer Staat",
+        "die Bundesrepublik Deutschland bei der Beitreibung von Forderungen gemäß der Beitreibungsrichtlinie im Sinne des § 2 Absatz 2 des EU-Beitreibungsgesetzes oder gemäß vergleichbaren völkerrechtlichen Vereinbarungen unterstützt",
         "Anteile an Personengesellschaften, die nach § 1a des Körperschaftsteuergesetzes zur Körperschaftsbesteuerung optiert haben"
       ],
       "rf": [
@@ -3961,7 +4021,6 @@
         "gilt auch deren Rückgabe, Abtretung, Entnahme oder verdeckte Einlage in eine Kapitalgesellschaft sowie eine beendete Abwicklung oder Liquidation des Investmentfonds oder Spezial-Investmentfonds",
         "umfasst auch Verluste aus einem Rechtsgeschäft",
         "leistet",
-        "unterstützt",
         "gelten für die Zwecke der §§ 26, 28 und 48 nicht als Beteiligung an einer Kapitalgesellschaft, sondern es sind weiterhin die für Personengesellschaften geltenden Regelungen"
       ],
       "ausnahmen": [
@@ -3986,7 +4045,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0b499cbf860ff878268ed8b3d3c0257ee955cfe1bad03876b8ee0814319a5903",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.986Z"
+      "aktualisiert": "2026-08-11T11:31:26.791Z"
     },
     "3": {
       "typ": "gemischt",
@@ -4517,7 +4576,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "03397224999090dfda847e28fd040730b5983e00ae1dd4a4adc980f8d48206fd",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.987Z"
+      "aktualisiert": "2026-08-11T11:31:26.793Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4633,6 +4692,7 @@
           "von": 644,
           "bis": 960,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -4682,6 +4742,7 @@
           "von": 1088,
           "bis": 1145,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -4878,7 +4939,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "79322484ca452b156ff8deb8ef07092606e2b4d47119a7eb377160a4308aaae8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.989Z"
+      "aktualisiert": "2026-08-11T11:31:26.794Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4958,6 +5019,7 @@
           "von": 165,
           "bis": 215,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -4983,6 +5045,7 @@
           "von": 219,
           "bis": 291,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -5008,6 +5071,7 @@
           "von": 295,
           "bis": 334,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -5217,7 +5281,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "10606fba09617c1c0d677a5e1554ffc9791823006e1e4267b9507f9cc4ae4fd8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.989Z"
+      "aktualisiert": "2026-08-11T11:31:26.798Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5449,6 +5513,7 @@
           "von": 677,
           "bis": 757,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5474,6 +5539,7 @@
           "von": 761,
           "bis": 862,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5499,6 +5565,7 @@
           "von": 866,
           "bis": 952,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5601,6 +5668,7 @@
           "von": 1102,
           "bis": 1217,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5626,6 +5694,7 @@
           "von": 1221,
           "bis": 1319,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5651,6 +5720,7 @@
           "von": 1323,
           "bis": 1429,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5676,14 +5746,33 @@
           "von": 1433,
           "bis": 1632,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e Doppelbuchstabe cc des Einkommensteuergesetzes, unabhängig davon, ob die Kapitalgesellschaft ihren Sitz oder ihre Geschäftsleitung im Inland hat",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 4",
+              "von": 1433,
+              "laenge": 194,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 4 Nr. 5",
           "von": 1636,
           "bis": 1722,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -5811,30 +5900,85 @@
           "von": 2069,
           "bis": 2268,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Einkünfte nach § 49 Absatz 1 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes, soweit sie nicht von den Absätzen 3 oder 4 erfasst werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 1",
+              "von": 2069,
+              "laenge": 198,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Nr. 2",
           "von": 2272,
           "bis": 2529,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e des Einkommensteuergesetzes, soweit der Investmentfonds seine Vermögensgegenstände aktiv unternehmerisch bewirtschaftet",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 2",
+              "von": 2272,
+              "laenge": 252,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Nr. 3",
           "von": 2533,
           "bis": 2768,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "bei inländischen Investmentfonds in der Rechtsform einer Investmentaktiengesellschaft auch Einkünfte, welche die Investmentaktiengesellschaft oder eines ihrer Teilgesellschaftsvermögen erzielt aus a) der Verwaltung ihres Vermögens",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 3",
+              "von": 2533,
+              "laenge": 230,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Buchst. b",
           "von": 2772,
           "bis": 2874,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6699,6 +6843,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e Doppelbuchstabe cc des Einkommensteuergesetzes, unabhängig davon, ob die Kapitalgesellschaft ihren Sitz oder ihre Geschäftsleitung im Inland hat",
+                  "pfad": "Abs. 4 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Einkünfte nach den Nummern 1 bis 4, die über eine Personengesellschaft erzielt werden",
                   "pfad": "Abs. 4 Nr. 5",
                   "konfidenz": 0.6,
@@ -6706,7 +6858,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Zur Ermittlung des Gewinns nach Satz 1 Nummer 2",
                   "pfad": "Abs. 4 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -6750,8 +6902,8 @@
         },
         {
           "absatz": "Abs. 5",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
           "schritte": [
             {
               "n": "I.",
@@ -6761,6 +6913,30 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Einkünfte nach § 49 Absatz 1 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes, soweit sie nicht von den Absätzen 3 oder 4 erfasst werden",
+                  "pfad": "Abs. 5 Nr. 1",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e des Einkommensteuergesetzes, soweit der Investmentfonds seine Vermögensgegenstände aktiv unternehmerisch bewirtschaftet",
+                  "pfad": "Abs. 5 Nr. 2",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "bei inländischen Investmentfonds in der Rechtsform einer Investmentaktiengesellschaft auch Einkünfte, welche die Investmentaktiengesellschaft oder eines ihrer Teilgesellschaftsvermögen erzielt aus a) der Verwaltung ihres Vermögens",
+                  "pfad": "Abs. 5 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "der Nutzung ihres Investmentbetriebsvermögens nach § 112 Absatz 2 Satz 1 des Kapitalanlagegesetzbuchs",
                   "pfad": "Abs. 5 Buchst. b",
                   "konfidenz": 0.6,
@@ -6768,7 +6944,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "5.",
                   "t": "Soweit in den Einkünften nach Satz 1 Nummer 2 inländische Beteiligungseinnahmen und inländische Immobilienerträge enthalten sind",
                   "pfad": "Abs. 5 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -6776,7 +6952,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "6.",
                   "t": "Bei der Beteiligung an einer Mitunternehmerschaft",
                   "pfad": "Abs. 5 Satz 2",
                   "konfidenz": 0.6,
@@ -7146,8 +7322,12 @@
         "Einkünfte aus der Vermietung und Verpachtung von im Inland belegenen Grundstücken oder grundstücksgleichen Rechten",
         "Gewinne aus der Veräußerung von im Inland belegenen Grundstücken oder grundstücksgleichen Rechten",
         "sonstige Einkünfte aus Vermietung und Verpachtung nach § 49 Absatz 1 Nummer 6 des Einkommensteuergesetzes",
+        "Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e Doppelbuchstabe cc des Einkommensteuergesetzes, unabhängig davon, ob die Kapitalgesellschaft ihren Sitz oder ihre Geschäftsleitung im Inland hat",
         "Einkünfte nach den Nummern 1 bis 4, die über eine Personengesellschaft erzielt werden",
         "Zur Ermittlung des Gewinns nach Satz 1 Nummer 2",
+        "Einkünfte nach § 49 Absatz 1 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes, soweit sie nicht von den Absätzen 3 oder 4 erfasst werden",
+        "Einkünfte nach § 49 Absatz 1 Nummer 2 des Einkommensteuergesetzes mit Ausnahme der Einkünfte nach § 49 Absatz 1 Nummer 2 Buchstabe e des Einkommensteuergesetzes, soweit der Investmentfonds seine Vermögensgegenstände aktiv unternehmerisch bewirtschaftet",
+        "bei inländischen Investmentfonds in der Rechtsform einer Investmentaktiengesellschaft auch Einkünfte, welche die Investmentaktiengesellschaft oder eines ihrer Teilgesellschaftsvermögen erzielt aus a) der Verwaltung ihres Vermögens",
         "der Nutzung ihres Investmentbetriebsvermögens nach § 112 Absatz 2 Satz 1 des Kapitalanlagegesetzbuchs",
         "Soweit in den Einkünften nach Satz 1 Nummer 2 inländische Beteiligungseinnahmen und inländische Immobilienerträge enthalten sind",
         "Bei der Beteiligung an einer Mitunternehmerschaft",
@@ -7197,7 +7377,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.575,
+      "konfidenz": 0.572,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7207,7 +7387,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "539944b6cfacdf5304c217fbb6ac354345c0ecf8053cc48861f38030b10f8564",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.999Z"
+      "aktualisiert": "2026-08-11T11:31:26.806Z"
     },
     "7": {
       "typ": "gemischt",
@@ -8194,7 +8374,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c97fba45a9da4274aee5e09d0ffb416d8989ca7647a760763bcc8514ff82734c",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.001Z"
+      "aktualisiert": "2026-08-11T11:31:26.810Z"
     },
     "8": {
       "typ": "gemischt",
@@ -8372,8 +8552,26 @@
           "von": 797,
           "bis": 986,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "inländische juristische Personen des öffentlichen Rechts, soweit die Investmentanteile nicht einem nicht von der Körperschaftsteuer befreiten Betrieb gewerblicher Art zuzurechnen sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 797,
+              "laenge": 183,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 2",
@@ -8648,23 +8846,24 @@
           "von": 2376,
           "bis": 2492,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile",
+              "text": "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1",
               "von": 2376,
-              "laenge": 111,
+              "laenge": 115,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -8845,6 +9044,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "inländische juristische Personen des öffentlichen Rechts, soweit die Investmentanteile nicht einem nicht von der Körperschaftsteuer befreiten Betrieb gewerblicher Art zuzurechnen sind",
+                  "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "von der Körperschaftsteuer",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -8852,7 +9059,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "soweit sie nicht unter Nummer 1 fallen",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
@@ -8984,7 +9191,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile",
+                  "t": "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile ist",
                   "pfad": "Abs. 4 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -9046,12 +9253,13 @@
         "Einkünfte nach § 6 Absatz 2",
         "die Anteile an dem Investmentfonds im Rahmen von Altersvorsorge- oder Basisrentenverträgen",
         "soweit an dem Investmentfonds beteiligt sind",
+        "inländische juristische Personen des öffentlichen Rechts, soweit die Investmentanteile nicht einem nicht von der Körperschaftsteuer befreiten Betrieb gewerblicher Art zuzurechnen sind",
         "von der Körperschaftsteuer",
         "soweit sie nicht unter Nummer 1 fallen",
         "Bei Einkünften, die einem Steuerabzug unterliegen",
         "Bei zu veranlagenden Einkünften",
         "Die Steuerbefreiung bei inländischen Beteiligungseinnahmen",
-        "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile",
+        "der Anleger seit mindestens drei Monaten zivilrechtlicher und wirtschaftlicher Eigentümer der Investmentanteile ist",
         "keine Verpflichtung zur Übertragung der Anteile auf eine andere Person",
         "kein Nießbrauch an den Investmenterträgen"
       ],
@@ -9075,7 +9283,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -9085,7 +9293,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9b1f311eac8900ca37eb644301bd18fef6bbc0b2a414722e70c1bf0f08a7b415",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.004Z"
+      "aktualisiert": "2026-08-11T11:31:26.813Z"
     },
     "9": {
       "typ": "gemischt",
@@ -9125,6 +9333,7 @@
           "von": 73,
           "bis": 151,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -9150,8 +9359,26 @@
           "von": 155,
           "bis": 372,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "eine vom Bundeszentralamt für Steuern auszustellende Bescheinigung über die Vergleichbarkeit des ausländischen Anlegers mit Anlegern nach § 44a Absatz 7 Satz 1 des Einkommensteuergesetzes (Befreiungsbescheinigung)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 155,
+              "laenge": 213,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 3",
@@ -9344,6 +9571,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "eine vom Bundeszentralamt für Steuern auszustellende Bescheinigung über die Vergleichbarkeit des ausländischen Anlegers mit Anlegern nach § 44a Absatz 7 Satz 1 des Einkommensteuergesetzes (Befreiungsbescheinigung)",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "eine von der depotführenden Stelle des Anlegers nach Ablauf des Kalenderjahres nach amtlichem Muster",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -9456,6 +9691,7 @@
       ],
       "tb": [
         "eine Bescheinigung nach § 44a Absatz 7 Satz 2 des Einkommensteuergesetzes",
+        "eine vom Bundeszentralamt für Steuern auszustellende Bescheinigung über die Vergleichbarkeit des ausländischen Anlegers mit Anlegern nach § 44a Absatz 7 Satz 1 des Einkommensteuergesetzes (Befreiungsbescheinigung)",
         "eine von der depotführenden Stelle des Anlegers nach Ablauf des Kalenderjahres nach amtlichem Muster",
         "wenn der ausländische Anleger die Vergleichbarkeit nachweist"
       ],
@@ -9471,7 +9707,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.567,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -9481,7 +9717,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a913468c0c97e05192f6a4de85b0f4cad1d69c360d281b87a050fc58036125cc",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.006Z"
+      "aktualisiert": "2026-08-11T11:31:26.816Z"
     },
     "10": {
       "typ": "gemischt",
@@ -10350,7 +10586,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c3522895e04a5410564cc970007a87281b38bb556c78203e0d04a5b40ff4d324",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.008Z"
+      "aktualisiert": "2026-08-11T11:31:26.819Z"
     },
     "11": {
       "typ": "gemischt",
@@ -10473,23 +10709,24 @@
           "von": 530,
           "bis": 604,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen",
+              "text": "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen wurde",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 3",
               "von": 530,
-              "laenge": 68,
+              "laenge": 74,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -10783,7 +11020,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen",
+                  "t": "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen wurde",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10938,7 +11175,7 @@
       "tb": [
         "auf nicht nach § 6 Absatz 2 steuerpflichtige Kapitalerträge Kapitalertragsteuer und Solidaritätszuschlag",
         "in über § 7 hinausgehender Höhe Kapitalertragsteuer und Solidaritätszuschlag",
-        "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen",
+        "in den Fällen der §§ 8 und 10 nicht vom Steuerabzug Abstand genommen wurde",
         "soweit bei beschränkt körperschaftsteuerpflichtigen Investmentfonds Angaben nach § 45a Absatz 2a des Einkommensteuergesetzes übermittelt wurden",
         "die Antragsfrist nicht verlängert werden",
         "wenn die Unterlagen nach Absatz 1 Satz 1 oder 2 nicht innerhalb der Antragsfrist eingereicht werden"
@@ -10970,7 +11207,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0dbc1d1127782663bc7f18e19e43678ed43813d513cbea6dd28a1736ec37e9c9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.010Z"
+      "aktualisiert": "2026-08-11T11:31:26.821Z"
     },
     "12": {
       "typ": "gemischt",
@@ -11219,7 +11456,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ac27f861b9ac6582694b9b433194ebf493d27dc7364223ff16dd533b77672401",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.011Z"
+      "aktualisiert": "2026-08-11T11:31:26.822Z"
     },
     "13": {
       "typ": "gemischt",
@@ -11630,7 +11867,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "795ab9ca2af9780e89a5476143adf749e9cd656ece62e7889c1d13d50024bdf4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.012Z"
+      "aktualisiert": "2026-08-11T11:31:26.823Z"
     },
     "14": {
       "typ": "gemischt",
@@ -12711,7 +12948,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f20378512833f546edd2d9193fe89e18adc11517caf89150297e54e130063909",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.015Z"
+      "aktualisiert": "2026-08-11T11:31:26.826Z"
     },
     "15": {
       "typ": "gemischt",
@@ -12845,39 +13082,24 @@
           "von": 325,
           "bis": 421,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch",
+              "text": "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch bewirtschaftet",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 325,
-              "laenge": 80,
+              "laenge": 95,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "bewirtschaftet",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
-              "von": 406,
-              "laenge": 14,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -12911,6 +13133,7 @@
           "von": 483,
           "bis": 650,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -12936,6 +13159,7 @@
           "von": 654,
           "bis": 738,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -12961,6 +13185,7 @@
           "von": 742,
           "bis": 840,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -12986,6 +13211,7 @@
           "von": 844,
           "bis": 928,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13199,7 +13425,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch",
+                  "t": "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch bewirtschaftet",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -13271,14 +13497,6 @@
                   "n": "2.",
                   "t": "beschränkt ist",
                   "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "bewirtschaftet",
-                  "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -13383,7 +13601,7 @@
       "tb": [
         "als sonstige juristische Personen des privaten Rechts nach § 2 Absatz 3 des Gewerbesteuergesetzes",
         "sein objektiver Geschäftszweck auf die Anlage und Verwaltung seiner Mittel für gemeinschaftliche Rechnung der Anleger",
-        "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch",
+        "er seine Vermögensgegenstände nicht in wesentlichem Umfang aktiv unternehmerisch bewirtschaftet",
         "Gesellschaften, deren Unternehmensgegenstand auf die Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs gerichtet ist",
         "Immobilien-Gesellschaften nach § 1 Absatz 19 Nummer 22 des Kapitalanlagegesetzbuchs",
         "Infrastruktur-Projektgesellschaften nach § 1 Absatz 19 Nummer 23a des Kapitalanlagegesetzbuchs",
@@ -13395,7 +13613,6 @@
         "Investmentfonds",
         "ist von der Gewerbesteuer",
         "beschränkt ist",
-        "bewirtschaftet",
         "gelten als erfüllt",
         "bildet einen wirtschaftlichen Geschäftsbetrieb",
         "ist als Überschuss der Betriebseinnahmen über die Betriebsausgaben zu ermitteln",
@@ -13407,7 +13624,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.568,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -13417,7 +13634,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ef0b34a520fc859d50704cd5d12894eb959e3009c29d1a4be6cfc622fd5b66c9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.017Z"
+      "aktualisiert": "2026-08-11T11:31:26.828Z"
     },
     "16": {
       "typ": "gemischt",
@@ -13458,6 +13675,7 @@
           "von": 56,
           "bis": 110,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13483,6 +13701,7 @@
           "von": 114,
           "bis": 143,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13508,6 +13727,7 @@
           "von": 147,
           "bis": 208,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13599,6 +13819,7 @@
           "von": 530,
           "bis": 603,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13624,6 +13845,7 @@
           "von": 607,
           "bis": 746,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13649,6 +13871,7 @@
           "von": 750,
           "bis": 840,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -13783,6 +14006,7 @@
           "von": 1235,
           "bis": 1371,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -14160,7 +14384,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b004d946519b0e8ae4564d2386088c1ae48a899133696febec6584235d510b0d",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.019Z"
+      "aktualisiert": "2026-08-11T11:31:26.830Z"
     },
     "17": {
       "typ": "gemischt",
@@ -14655,7 +14879,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b205379aea619a7db452ce419d055903133d9a121287a3fc4bb8db6ab4bf23d",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.020Z"
+      "aktualisiert": "2026-08-11T11:31:26.832Z"
     },
     "18": {
       "typ": "gemischt",
@@ -15156,7 +15380,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "455c94747ae118970b4315ed09778aee0fcdb15af1cadf1096f908c27a12cf82",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.021Z"
+      "aktualisiert": "2026-08-11T11:31:26.833Z"
     },
     "19": {
       "typ": "gemischt",
@@ -15450,6 +15674,7 @@
           "von": 914,
           "bis": 1044,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -15516,8 +15741,26 @@
           "von": 1141,
           "bis": 1334,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Investmentanteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 3",
+              "von": 1141,
+              "laenge": 192,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 1 (Teil 2)",
@@ -15966,6 +16209,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Investmentanteile",
+                  "pfad": "Abs. 3 Nr. 3",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "die Summe der nach Absatz 1, § 22 und § 56",
                   "pfad": "Abs. 3 Nr. 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -15973,7 +16224,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "im Zeitpunkt der Veräußerung im Sinne des Satzes 1 unmittelbar oder mittelbar Investmentanteile an dem Investmentfonds",
                   "pfad": "Abs. 3 Buchst. b",
                   "konfidenz": 0.6,
@@ -15981,7 +16232,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "§ 6 Absatz 1 Satz 2 und 3 sowie Absatz 2 bis 5 des Außensteuergesetzes und § 17 Absatz 1 Satz 4 sowie Absatz 2 Satz 3 bis 5 des Einkommensteuergesetzes",
                   "pfad": "Abs. 3 Satz 1 (Teil 3)",
                   "konfidenz": 0.48,
@@ -15989,7 +16240,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "Bei der entsprechenden Anwendung des § 6 Absatz 3 Satz 1 Nummer 2 und Absatz 4 Satz 5 Nummer 5 des Außensteuergesetzes",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
@@ -15997,7 +16248,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "Im Fall des Satzes 1",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -16095,6 +16346,7 @@
         "stehen der Veräußerung von Investmentanteilen zum gemeinen Wert",
         "die Beendigung der unbeschränkten Steuerpflicht des Anlegers infolge der Aufgabe des Wohnsitzes oder des gewöhnlichen Aufenthalts",
         "die unentgeltliche Übertragung auf eine nicht",
+        "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Investmentanteile",
         "die Summe der nach Absatz 1, § 22 und § 56",
         "im Zeitpunkt der Veräußerung im Sinne des Satzes 1 unmittelbar oder mittelbar Investmentanteile an dem Investmentfonds",
         "§ 6 Absatz 1 Satz 2 und 3 sowie Absatz 2 bis 5 des Außensteuergesetzes und § 17 Absatz 1 Satz 4 sowie Absatz 2 Satz 3 bis 5 des Einkommensteuergesetzes",
@@ -16124,7 +16376,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.577,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16134,7 +16386,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "636576029e9c758f0bb47b6da6fd340cb8533c4f4bfbbbba6b02212368f69323",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.024Z"
+      "aktualisiert": "2026-08-11T11:31:26.836Z"
     },
     "20": {
       "typ": "gemischt",
@@ -17464,7 +17716,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "62c5960f73814f92b1e541d7e6cba7967bee06b70acc4ee6c59047dfacedadb6",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.028Z"
+      "aktualisiert": "2026-08-11T11:31:26.845Z"
     },
     "21": {
       "typ": "gemischt",
@@ -17642,7 +17894,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b21f65704ba589501410bed3ba9fcacdf8708054461340a36b8717e4ed439239",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.029Z"
+      "aktualisiert": "2026-08-11T11:31:26.846Z"
     },
     "22": {
       "typ": "gemischt",
@@ -18397,7 +18649,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b77ecbaf580691b5e2405cd87af9f0458704ee08f51afc5839c410d7973f9c01",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.032Z"
+      "aktualisiert": "2026-08-11T11:31:26.849Z"
     },
     "23": {
       "typ": "gemischt",
@@ -18462,39 +18714,24 @@
           "von": 454,
           "bis": 654,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages",
+              "text": "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages anzusetzen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
               "von": 454,
-              "laenge": 188,
+              "laenge": 199,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "anzusetzen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 2",
-              "von": 643,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -18767,7 +19004,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages",
+                  "t": "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages anzusetzen",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -18798,14 +19035,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "anzusetzen",
-                  "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "gilt als Geschäftsjahresende des übertragenden Investmentfonds",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -18965,7 +19194,7 @@
       ],
       "tb": [
         "Werden inländische Investmentfonds nach den §§ 181 bis 191 des Kapitalanlagegesetzbuchs miteinander verschmolzen",
-        "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages",
+        "der übernehmende Investmentfonds die übernommenen Vermögensgegenstände und Verbindlichkeiten mit den fortgeführten Anschaffungskosten zu Beginn des dem Übertragungsstichtag folgenden Tages anzusetzen",
         "Ein nach § 189 Absatz 2 Satz 1 des Kapitalanlagegesetzbuchs bestimmter Übertragungsstichtag",
         "in die steuerliche Rechtsstellung des übertragenden Investmentfonds ein",
         "Die Ausgabe der Anteile am übernehmenden Investmentfonds an die Anleger des übertragenden Investmentfonds",
@@ -18974,7 +19203,6 @@
         "Die Absätze 1 bis 3"
       ],
       "rf": [
-        "anzusetzen",
         "anzusetzen",
         "gilt als Geschäftsjahresende des übertragenden Investmentfonds",
         "Der übernehmende Investmentfonds",
@@ -18987,7 +19215,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.581,
+      "konfidenz": 0.59,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -18997,7 +19225,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "00228f08d384bde850a5dc0922239eddf26369d1914c532b47e77fb795b46f57",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.037Z"
+      "aktualisiert": "2026-08-11T11:31:26.850Z"
     },
     "24": {
       "typ": "konditional",
@@ -19107,7 +19335,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "530089afd5fdd262178da40f52ffe3d79d507dfaa978c9e2cfacc0e354aff074",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.038Z"
+      "aktualisiert": "2026-08-11T11:31:26.851Z"
     },
     "25": {
       "typ": "aussage",
@@ -19216,7 +19444,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4f99fb7e3d4d62e26704f8f1aed121c60cfceb4213b1b01b56b3447a22c67551",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.045Z"
+      "aktualisiert": "2026-08-11T11:31:26.859Z"
     },
     "26": {
       "typ": "gemischt",
@@ -19502,6 +19730,7 @@
           "von": 1386,
           "bis": 1407,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19527,6 +19756,7 @@
           "von": 1411,
           "bis": 1420,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19552,6 +19782,7 @@
           "von": 1424,
           "bis": 1437,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19577,6 +19808,7 @@
           "von": 1441,
           "bis": 1536,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19602,6 +19834,7 @@
           "von": 1540,
           "bis": 1641,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19627,6 +19860,7 @@
           "von": 1645,
           "bis": 1739,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19652,14 +19886,33 @@
           "von": 1743,
           "bis": 1959,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Investmentanteile an inländischen oder ausländischen Investmentfonds sowie Anteile an inländischen oder ausländischen Investmentvermögen nach § 1 Absatz 1 des Kapitalanlagegesetzbuchs, die keine Investmentfonds sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Buchst. h",
+              "von": 1743,
+              "laenge": 215,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. h — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Buchst. i",
           "von": 1963,
           "bis": 1989,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19685,6 +19938,7 @@
           "von": 1993,
           "bis": 2431,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -19693,6 +19947,7 @@
           "von": 2435,
           "bis": 2447,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19743,6 +19998,7 @@
           "von": 2489,
           "bis": 2594,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19768,8 +20024,26 @@
           "von": 2598,
           "bis": 2804,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Kryptowerte im Sinne von § 1 Absatz 11 Satz 4 des Kreditwesengesetzes, wenn deren Verkehrswert ermittelt werden kann und es sich nicht um Wertpapiere im Sinne des § 193 des Kapitalanlagegesetzbuchs handelt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Buchst. n",
+              "von": 2598,
+              "laenge": 205,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. n — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Satz 1 (Teil 2)",
@@ -19942,6 +20216,7 @@
           "von": 3940,
           "bis": 4107,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19967,6 +20242,7 @@
           "von": 4111,
           "bis": 4137,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -19992,6 +20268,7 @@
           "von": 4141,
           "bis": 4180,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -20017,6 +20294,7 @@
           "von": 4184,
           "bis": 4210,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -20117,14 +20395,33 @@
           "von": 4951,
           "bis": 5210,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs sowie aus der Bewirtschaftung von Ladestationen für Elektromobilität, die jeweils im Zusammenhang mit der Vermietung und Verpachtung von Immobilien stehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Buchst. a (Teil 2)",
+              "von": 4951,
+              "laenge": 258,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Buchst. b (Teil 3)",
           "von": 5214,
           "bis": 5283,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -20150,6 +20447,7 @@
           "von": 5287,
           "bis": 5345,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -20257,23 +20555,24 @@
           "von": 5542,
           "bis": 5625,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen",
+              "art": "rf",
+              "text": "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen halten",
               "anzeige": null,
               "teile": null,
               "pfad": "Buchst. a (Teil 3)",
               "von": 5542,
-              "laenge": 75,
+              "laenge": 82,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Buchst. a — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -20307,23 +20606,24 @@
           "von": 5732,
           "bis": 5853,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben",
+              "art": "rf",
+              "text": "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben wurde",
               "anzeige": null,
               "teile": null,
               "pfad": "Buchst. c (Teil 4)",
               "von": 5732,
-              "laenge": 114,
+              "laenge": 120,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Buchst. c — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -20571,6 +20871,14 @@
                 },
                 {
                   "n": "10.",
+                  "t": "Investmentanteile an inländischen oder ausländischen Investmentfonds sowie Anteile an inländischen oder ausländischen Investmentvermögen nach § 1 Absatz 1 des Kapitalanlagegesetzbuchs, die keine Investmentfonds sind",
+                  "pfad": "Buchst. h",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
                   "t": "Spezial-Investmentanteile",
                   "pfad": "Buchst. i",
                   "konfidenz": 0.45,
@@ -20578,7 +20886,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "12.",
                   "t": "Edelmetalle",
                   "pfad": "Buchst. k",
                   "konfidenz": 0.45,
@@ -20586,7 +20894,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "13.",
                   "t": "Beteiligungen an Kapitalgesellschaften, wenn der Verkehrswert dieser Beteiligungen ermittelt werden kann",
                   "pfad": "Buchst. m",
                   "konfidenz": 0.6,
@@ -20594,7 +20902,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "14.",
+                  "t": "Kryptowerte im Sinne von § 1 Absatz 11 Satz 4 des Kreditwesengesetzes, wenn deren Verkehrswert ermittelt werden kann und es sich nicht um Wertpapiere im Sinne des § 193 des Kapitalanlagegesetzbuchs handelt",
+                  "pfad": "Buchst. n",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "15.",
                   "t": "Innerhalb der Grenzen des Satzes 1",
                   "pfad": "Satz 3",
                   "konfidenz": 0.6,
@@ -20602,7 +20918,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "16.",
                   "t": "Gesellschaften, deren Unternehmensgegenstand auf die Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs gerichtet ist",
                   "pfad": "Buchst. a",
                   "konfidenz": 0.6,
@@ -20610,7 +20926,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "17.",
                   "t": "Immobilien-Gesellschaften",
                   "pfad": "Buchst. b (Teil 2)",
                   "konfidenz": 0.45,
@@ -20618,7 +20934,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "16.",
+                  "n": "18.",
                   "t": "Infrastruktur-Projektgesellschaften",
                   "pfad": "Buchst. c (Teil 2)",
                   "konfidenz": 0.45,
@@ -20626,7 +20942,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "17.",
+                  "n": "19.",
                   "t": "ÖPP-Projektgesellschaften",
                   "pfad": "Buchst. d (Teil 2)",
                   "konfidenz": 0.45,
@@ -20634,7 +20950,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "18.",
+                  "n": "20.",
                   "t": "Unberücksichtigt für die Zwecke des Satzes 1 bleiben Einnahmen aus",
                   "pfad": "Satz 3 (Teil 2)",
                   "konfidenz": 0.6,
@@ -20642,7 +20958,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "19.",
+                  "n": "21.",
+                  "t": "der Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs sowie aus der Bewirtschaftung von Ladestationen für Elektromobilität, die jeweils im Zusammenhang mit der Vermietung und Verpachtung von Immobilien stehen",
+                  "pfad": "Buchst. a (Teil 2)",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "22.",
                   "t": "Beteiligungen an Gesellschaften im Sinne des § 15 Absatz 2 Satz 2",
                   "pfad": "Buchst. b (Teil 3)",
                   "konfidenz": 0.6,
@@ -20650,7 +20974,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "20.",
+                  "n": "23.",
                   "t": "Investmentanteilen und Anteilen nach Nummer 4 Buchstabe h",
                   "pfad": "Buchst. c (Teil 3)",
                   "konfidenz": 0.6,
@@ -20658,7 +20982,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "21.",
+                  "n": "24.",
                   "t": "sich unmittelbar und mittelbar über Personengesellschaften insgesamt nicht mehr als 100 Anleger beteiligen",
                   "pfad": "Satz 1 (Teil 4)",
                   "konfidenz": 0.6,
@@ -20666,7 +20990,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "22.",
+                  "n": "25.",
                   "t": "nur beteiligt sein",
                   "pfad": "Satz 2 (Teil 3)",
                   "konfidenz": 0.6,
@@ -20674,15 +20998,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "23.",
-                  "t": "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen",
-                  "pfad": "Buchst. a (Teil 3)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "24.",
+                  "n": "26.",
                   "t": "die Beteiligung natürlicher Personen aufgrund aufsichtsrechtlicher Regelungen erforderlich",
                   "pfad": "Buchst. b (Teil 4)",
                   "konfidenz": 0.6,
@@ -20690,15 +21006,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "25.",
-                  "t": "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben",
-                  "pfad": "Buchst. c (Teil 4)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "26.",
+                  "n": "27.",
                   "t": "wenn die zulässige Anlegerzahl überschritten wird oder Personen beteiligt sind",
                   "pfad": "Satz 1 (Teil 5)",
                   "konfidenz": 0.6,
@@ -20881,6 +21189,22 @@
                 },
                 {
                   "n": "19.",
+                  "t": "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen halten",
+                  "pfad": "Buchst. a (Teil 3)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "20.",
+                  "t": "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben wurde",
+                  "pfad": "Buchst. c (Teil 4)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "21.",
                   "t": "ist bei Beteiligungen, die ab dem 24. Februar 2016 erworben wurden, bis zum 1. Januar 2020 und bei Beteiligungen, die vor dem 24. Februar 2016 erworben wurden, bis zum 1. Januar 2030 … anzuwenden",
                   "pfad": "Buchst. c Halbs. 2",
                   "konfidenz": 0.48,
@@ -20888,7 +21212,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "20.",
+                  "n": "22.",
                   "t": "ist auch auf die Gesamtrechtsnachfolger von natürlichen Personen … anzuwenden",
                   "pfad": "Buchst. c Halbs. 3",
                   "konfidenz": 0.6,
@@ -20896,7 +21220,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "21.",
+                  "n": "23.",
                   "t": "hat ein Sonderkündigungsrecht … die nicht die Voraussetzungen der Nummer 8 Satz 2 erfüllen",
                   "pfad": "Satz 1 (Teil 5)",
                   "konfidenz": 0.6,
@@ -20918,22 +21242,23 @@
         "Grundstücke, grundstücksgleiche Rechte und vergleichbare Rechte nach dem Recht anderer Staaten",
         "Beteiligungen an Immobilien-Gesellschaften nach § 1 Absatz 19 Nummer 22 des Kapitalanlagegesetzbuchs",
         "Betriebsvorrichtungen und andere Gegenstände nach § 231 Absatz 3 des Kapitalanlagegesetzbuchs",
+        "Investmentanteile an inländischen oder ausländischen Investmentfonds sowie Anteile an inländischen oder ausländischen Investmentvermögen nach § 1 Absatz 1 des Kapitalanlagegesetzbuchs, die keine Investmentfonds sind",
         "Spezial-Investmentanteile",
         "Edelmetalle",
         "Beteiligungen an Kapitalgesellschaften, wenn der Verkehrswert dieser Beteiligungen ermittelt werden kann",
+        "Kryptowerte im Sinne von § 1 Absatz 11 Satz 4 des Kreditwesengesetzes, wenn deren Verkehrswert ermittelt werden kann und es sich nicht um Wertpapiere im Sinne des § 193 des Kapitalanlagegesetzbuchs handelt",
         "Innerhalb der Grenzen des Satzes 1",
         "Gesellschaften, deren Unternehmensgegenstand auf die Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs gerichtet ist",
         "Immobilien-Gesellschaften",
         "Infrastruktur-Projektgesellschaften",
         "ÖPP-Projektgesellschaften",
         "Unberücksichtigt für die Zwecke des Satzes 1 bleiben Einnahmen aus",
+        "der Bewirtschaftung von erneuerbaren Energien nach § 1 Absatz 19 Nummer 6a des Kapitalanlagegesetzbuchs sowie aus der Bewirtschaftung von Ladestationen für Elektromobilität, die jeweils im Zusammenhang mit der Vermietung und Verpachtung von Immobilien stehen",
         "Beteiligungen an Gesellschaften im Sinne des § 15 Absatz 2 Satz 2",
         "Investmentanteilen und Anteilen nach Nummer 4 Buchstabe h",
         "sich unmittelbar und mittelbar über Personengesellschaften insgesamt nicht mehr als 100 Anleger beteiligen",
         "nur beteiligt sein",
-        "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen",
         "die Beteiligung natürlicher Personen aufgrund aufsichtsrechtlicher Regelungen erforderlich",
-        "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben",
         "wenn die zulässige Anlegerzahl überschritten wird oder Personen beteiligt sind"
       ],
       "rf": [
@@ -20955,6 +21280,8 @@
         "dürfen kurzfristige Kredite bis zu einer Höhe von 30 Prozent des Wertes des Investmentfonds und im Übrigen Kredite bis zu einer Höhe von 60 Prozent des Verkehrswertes der unmittelbar oder mittelbar gehaltenen Immobilien aufnehmen. 7a. Die Einnahmen aus einer aktiven unternehmerischen Bewirtschaftung im Sinne des § 15 Absatz 2 Satz 1 Nummer 2 betragen in einem Geschäftsjahr weniger als 5 Prozent der gesamten Einnahmen des Investmentfonds",
         "An dem Investmentfonds",
         "Natürliche Personen",
+        "die natürlichen Personen ihre Spezial-Investmentanteile im Betriebsvermögen halten",
+        "die mittelbare Beteiligung von natürlichen Personen an einem Spezial-Investmentfonds vor dem 9. Juni 2016 erworben wurde",
         "ist bei Beteiligungen, die ab dem 24. Februar 2016 erworben wurden, bis zum 1. Januar 2020 und bei Beteiligungen, die vor dem 24. Februar 2016 erworben wurden, bis zum 1. Januar 2030",
         "ist auch auf die Gesamtrechtsnachfolger von natürlichen Personen",
         "hat ein Sonderkündigungsrecht"
@@ -20966,7 +21293,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.56,
+      "konfidenz": 0.557,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -20976,7 +21303,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "49dc02ffa2ad5bd001eb7cbdb5ef130eb2816cf7adfbf9966c772a7049550711",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.052Z"
+      "aktualisiert": "2026-08-11T11:31:26.867Z"
     },
     "27": {
       "typ": "aussage",
@@ -21030,6 +21357,7 @@
           "von": 62,
           "bis": 144,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -21055,6 +21383,7 @@
           "von": 148,
           "bis": 258,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -21154,7 +21483,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "00370369b51412d60e6fb686da7c4289c3be48fbe071ffaf78cf0d436299f0f4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.053Z"
+      "aktualisiert": "2026-08-11T11:31:26.868Z"
     },
     "28": {
       "typ": "aussage",
@@ -21460,7 +21789,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "817829d7de84946f4b8025b9bb82f7e057a8643cd833a680d83646fbf5909b70",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.054Z"
+      "aktualisiert": "2026-08-11T11:31:26.869Z"
     },
     "29": {
       "typ": "gemischt",
@@ -21929,7 +22258,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "43a63c4991a86901e9ecf156dee98cfc3c2042c3dca96ac88466fcd3c4633f91",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.055Z"
+      "aktualisiert": "2026-08-11T11:31:26.870Z"
     },
     "30": {
       "typ": "gemischt",
@@ -22092,23 +22421,24 @@
           "von": 748,
           "bis": 954,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "erfüllt",
+              "art": "tb",
+              "text": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach § 8b des Körperschaftsteuergesetzes erfüllt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
-              "von": 946,
-              "laenge": 7,
-              "konfidenz": 0.45,
+              "von": 748,
+              "laenge": 205,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -22256,23 +22586,24 @@
           "von": 1588,
           "bis": 1672,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen",
+              "text": "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen wären",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Buchst. b",
               "von": 1588,
-              "laenge": 77,
+              "laenge": 83,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -22554,13 +22885,21 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
+              "t": "Voraussetzungen (eine genügt)",
               "junktor": "oder",
               "sub": [
                 {
                   "n": "1.",
                   "t": "es sich um Gewinnausschüttungen einer Gesellschaft im Sinne des § 26 Nummer 6 Satz 2",
                   "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach § 8b des Körperschaftsteuergesetzes erfüllt",
+                  "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -22591,14 +22930,6 @@
                   "n": "1.",
                   "t": "handelt",
                   "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "erfüllt",
-                  "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -22652,7 +22983,7 @@
                 },
                 {
                   "n": "5.",
-                  "t": "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen",
+                  "t": "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen wären",
                   "pfad": "Abs. 3 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -22836,11 +23167,12 @@
         "Die Körperschaftsteuerpflicht für die inländischen Beteiligungseinnahmen eines Spezial-Investmentfonds",
         "wenn der Spezial-Investmentfonds gegenüber dem Entrichtungspflichtigen unwiderruflich erklärt, dass den Anlegern des Spezial-Investmentfonds Steuerbescheinigungen gemäß § 45a Absatz 2 des Einkommensteuergesetzes ausgestellt werden sollen (Transparenzoption)",
         "es sich um Gewinnausschüttungen einer Gesellschaft im Sinne des § 26 Nummer 6 Satz 2",
+        "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach § 8b des Körperschaftsteuergesetzes erfüllt",
         "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
         "wenn der Anleger",
         "ein Lebens- oder Krankenversicherungsunternehmen",
         "ein Institut oder Unternehmen nach § 3 Nummer 40 Satz 3 des Einkommensteuergesetzes oder § 8b Absatz 7 des Körperschaftsteuergesetzes",
-        "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen",
+        "zum Zeitpunkt des Zugangs zum Betriebsvermögen als Umlaufvermögen auszuweisen wären",
         "wenn sie von dem Institut oder Unternehmen unmittelbar erworben worden wären",
         "Satz 1 Nummer 1",
         "wenn der Anleger ein Pensionsfonds ist",
@@ -22851,7 +23183,6 @@
         "entfällt",
         "gelten in diesem Fall als Gläubiger der inländischen Beteiligungseinnahmen und als Schuldner der Kapitalertragsteuer",
         "handelt",
-        "erfüllt",
         "sind auf die dem Anleger zugerechneten inländischen Beteiligungseinnahmen nicht anzuwenden",
         "ist und der Spezial-Investmentanteil den Kapitalanlagen zuzurechnen ist",
         "ist und der Spezial-Investmentfonds in wesentlichem Umfang Anteile hält, die a) dem Handelsbestand im Sinne des § 340e Absatz 3 des Handelsgesetzbuchs zuzuordnen wären",
@@ -22867,7 +23198,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.583,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -22877,7 +23208,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a224fd08b89c4279c40c5e2b92d6155eea31e91e350fa31640e90bc0b0baa1fd",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.057Z"
+      "aktualisiert": "2026-08-11T11:31:26.872Z"
     },
     "31": {
       "typ": "gemischt",
@@ -22976,6 +23307,7 @@
           "von": 442,
           "bis": 511,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -23067,6 +23399,7 @@
           "von": 666,
           "bis": 800,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -23092,6 +23425,7 @@
           "von": 804,
           "bis": 861,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -23453,8 +23787,26 @@
           "von": 2538,
           "bis": 2736,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Kapitalerträge des Anlegers im Sinne des § 43 Absatz 1 Satz 1 Nummer 1a und des § 36a Absatz 1 Satz 4 des Einkommensteuergesetzes im Veranlagungszeitraum nicht mehr als 20 000 Euro betragen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 1 (Teil 2)",
+              "von": 2538,
+              "laenge": 193,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 2 (Teil 2)",
@@ -23584,39 +23936,24 @@
           "von": 3429,
           "bis": 3484,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "dies gegenüber seinem zuständigen Finanzamt",
+              "text": "dies gegenüber seinem zuständigen Finanzamt anzuzeigen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 1 (Teil 3)",
               "von": 3429,
-              "laenge": 43,
+              "laenge": 54,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "anzuzeigen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Nr. 1 (Teil 3)",
-              "von": 3473,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -23650,6 +23987,7 @@
           "von": 3732,
           "bis": 3769,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -23897,8 +24235,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -23948,6 +24286,14 @@
                 },
                 {
                   "n": "6.",
+                  "t": "die Kapitalerträge des Anlegers im Sinne des § 43 Absatz 1 Satz 1 Nummer 1a und des § 36a Absatz 1 Satz 4 des Einkommensteuergesetzes im Veranlagungszeitraum nicht mehr als 20 000 Euro betragen",
+                  "pfad": "Abs. 3 Nr. 1 (Teil 2)",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "der Spezial-Investmentfonds im Zurechnungszeitpunkt seit mindestens einem Jahr ununterbrochen wirtschaftlicher Eigentümer der Aktien oder Genussscheine",
                   "pfad": "Abs. 3 Nr. 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -23955,7 +24301,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "Ein Spezial-Investmentfonds und der an ihm",
                   "pfad": "Abs. 3 Satz 1 (Teil 3)",
                   "konfidenz": 0.6,
@@ -23963,7 +24309,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "9.",
                   "t": "Wurde für einen Anleger kein Steuerabzug vorgenommen oder ein Steuerabzug erstattet und liegen die Voraussetzungen des Satzes 1 nicht vor",
                   "pfad": "Abs. 3 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -23971,15 +24317,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
-                  "t": "dies gegenüber seinem zuständigen Finanzamt",
+                  "n": "10.",
+                  "t": "dies gegenüber seinem zuständigen Finanzamt anzuzeigen",
                   "pfad": "Abs. 3 Nr. 1 (Teil 3)",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
                   "t": "die angemeldete Steuer zu entrichten",
                   "pfad": "Abs. 3 Nr. 3",
                   "konfidenz": 0.6,
@@ -23987,7 +24333,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "12.",
                   "t": "Die Anzeige, Anmeldung und Entrichtung",
                   "pfad": "Abs. 3 Satz 1 (Teil 4)",
                   "konfidenz": 0.6,
@@ -24067,14 +24413,6 @@
                 },
                 {
                   "n": "9.",
-                  "t": "anzuzeigen",
-                  "pfad": "Abs. 3 Nr. 1 (Teil 3)",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "10.",
                   "t": "anzumelden",
                   "pfad": "Abs. 3 Nr. 2 (Teil 3)",
                   "konfidenz": 0.45,
@@ -24082,7 +24420,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "10.",
                   "t": "hat bei Steuerpflichtigen, die ihren Gewinn durch Bestandsvergleich ermitteln, nach Ablauf des Wirtschaftsjahres, bei Investmentfonds nach Ablauf des Geschäftsjahres und bei anderen Steuerpflichtigen nach Ablauf des Kalenderjahres bis zum Zehnten des folgenden Monats zu erfolgen. § 42 der Abgabenordnung bleibt … unberührt",
                   "pfad": "Abs. 3 Satz 1 (Teil 4)",
                   "konfidenz": 0.48,
@@ -24108,10 +24446,11 @@
         "der Anleger innerhalb eines Zeitraums von 45 Tagen vor und 45 Tagen nach dem Zurechnungszeitpunkt mindestens 45 Tage ununterbrochen wirtschaftlicher Eigentümer der Spezial-Investmentanteile",
         "Fehlen die Voraussetzungen des Satzes 1",
         "Die Sätze 1 und 2",
+        "die Kapitalerträge des Anlegers im Sinne des § 43 Absatz 1 Satz 1 Nummer 1a und des § 36a Absatz 1 Satz 4 des Einkommensteuergesetzes im Veranlagungszeitraum nicht mehr als 20 000 Euro betragen",
         "der Spezial-Investmentfonds im Zurechnungszeitpunkt seit mindestens einem Jahr ununterbrochen wirtschaftlicher Eigentümer der Aktien oder Genussscheine",
         "Ein Spezial-Investmentfonds und der an ihm",
         "Wurde für einen Anleger kein Steuerabzug vorgenommen oder ein Steuerabzug erstattet und liegen die Voraussetzungen des Satzes 1 nicht vor",
-        "dies gegenüber seinem zuständigen Finanzamt",
+        "dies gegenüber seinem zuständigen Finanzamt anzuzeigen",
         "die angemeldete Steuer zu entrichten",
         "Die Anzeige, Anmeldung und Entrichtung"
       ],
@@ -24130,7 +24469,6 @@
         "ist und der Anleger im Zurechnungszeitpunkt seit mindestens einem Jahr ununterbrochen wirtschaftlicher Eigentümer der Spezial-Investmentanteile ist",
         "beteiligte Anleger gelten unabhängig von dem Beteiligungsumfang als einander nahestehende Personen im Sinne des Satzes 1 und des § 36a Absatz 3 des Einkommensteuergesetzes",
         "ist der Anleger verpflichtet",
-        "anzuzeigen",
         "anzumelden",
         "hat bei Steuerpflichtigen, die ihren Gewinn durch Bestandsvergleich ermitteln, nach Ablauf des Wirtschaftsjahres, bei Investmentfonds nach Ablauf des Geschäftsjahres und bei anderen Steuerpflichtigen nach Ablauf des Kalenderjahres bis zum Zehnten des folgenden Monats zu erfolgen. § 42 der Abgabenordnung bleibt"
       ],
@@ -24150,7 +24488,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fbb53fb71aae2e2fcb24fb0e2fbac95db90932812c26b737020dc793c597618f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.061Z"
+      "aktualisiert": "2026-08-11T11:31:26.876Z"
     },
     "32": {
       "typ": "gemischt",
@@ -24516,7 +24854,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "61157ca44a041f44d00a7441b66b01d54cd841bcc4351f965bb4a0f5c37ea401",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.062Z"
+      "aktualisiert": "2026-08-11T11:31:26.878Z"
     },
     "33": {
       "typ": "gemischt",
@@ -24786,6 +25124,7 @@
           "von": 1352,
           "bis": 1483,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -24811,6 +25150,7 @@
           "von": 1487,
           "bis": 1531,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -25577,7 +25917,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "539ea6d6bb15648c3be66573e1e52a41b196a2431e32b1201154c4119a32d157",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.065Z"
+      "aktualisiert": "2026-08-11T11:31:26.881Z"
     },
     "34": {
       "typ": "gemischt",
@@ -25641,6 +25981,7 @@
           "von": 110,
           "bis": 161,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -25666,6 +26007,7 @@
           "von": 165,
           "bis": 234,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -26071,7 +26413,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "867eb79e5a1aa4ffffe3fe5317c310838b0d1eac1629960fcd87b185d4f7b4ff",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.066Z"
+      "aktualisiert": "2026-08-11T11:31:26.882Z"
     },
     "35": {
       "typ": "gemischt",
@@ -26767,7 +27109,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "21813ab698f24d180f4aff0a41110e9e4b00a4015adb01aa44ea344fcf2b2748",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.068Z"
+      "aktualisiert": "2026-08-11T11:31:26.883Z"
     },
     "36": {
       "typ": "gemischt",
@@ -26840,6 +27182,7 @@
           "von": 185,
           "bis": 297,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -26865,14 +27208,33 @@
           "von": 301,
           "bis": 472,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Erträge aus Vermietung und Verpachtung im Sinne des § 21 des Einkommensteuergesetzes sowie Gewinne aus der Veräußerung von Grundstücken und grundstücksgleichen Rechten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 301,
+              "laenge": 167,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 3",
           "von": 476,
           "bis": 555,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -26964,6 +27326,7 @@
           "von": 800,
           "bis": 888,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -27046,6 +27409,7 @@
           "von": 1178,
           "bis": 1260,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -27684,6 +28048,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "Erträge aus Vermietung und Verpachtung im Sinne des § 21 des Einkommensteuergesetzes sowie Gewinne aus der Veräußerung von Grundstücken und grundstücksgleichen Rechten",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "sonstige Erträge mit Ausnahme der steuerfrei thesaurierbaren sonstigen Erträge",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -27691,7 +28063,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "wenn die Transparenzoption nach § 30 wahrgenommen wurde",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -28126,6 +28498,7 @@
       "tb": [
         "die von einem Spezial-Investmentfonds nicht zur Ausschüttung verwendet werden",
         "Kapitalerträge nach § 20 des Einkommensteuergesetzes mit Ausnahme der steuerfrei thesaurierbaren Kapitalerträge",
+        "Erträge aus Vermietung und Verpachtung im Sinne des § 21 des Einkommensteuergesetzes sowie Gewinne aus der Veräußerung von Grundstücken und grundstücksgleichen Rechten",
         "sonstige Erträge mit Ausnahme der steuerfrei thesaurierbaren sonstigen Erträge",
         "wenn die Transparenzoption nach § 30 wahrgenommen wurde",
         "Erträge aus Stillhalterprämien nach § 20 Absatz 1 Nummer 11 des Einkommensteuergesetzes",
@@ -28173,7 +28546,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.574,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -28183,7 +28556,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5983121665fcb4a3f862e04876c5a9635de0935b701fe731b694b97a09aa759e",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.072Z"
+      "aktualisiert": "2026-08-11T11:31:26.887Z"
     },
     "37": {
       "typ": "gemischt",
@@ -28690,7 +29063,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ff4958443305424afd0e2d2b88db5c7d04f272d221347b095a09563958ba25ae",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.073Z"
+      "aktualisiert": "2026-08-11T11:31:26.889Z"
     },
     "38": {
       "typ": "gemischt",
@@ -28825,14 +29198,33 @@
           "von": 194,
           "bis": 433,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Zinsen und angewachsene Ansprüche einer sonstigen Kapitalforderung nach § 20 Absatz 1 Nummer 7 des Einkommensteuergesetzes, wenn die Kapitalforderung eine Emissionsrendite hat oder bei ihr das Stammrecht und der Zinsschein getrennt wurden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 1",
+              "von": 194,
+              "laenge": 238,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 2",
           "von": 437,
           "bis": 502,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -28858,6 +29250,7 @@
           "von": 506,
           "bis": 513,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -29499,6 +29892,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "Zinsen und angewachsene Ansprüche einer sonstigen Kapitalforderung nach § 20 Absatz 1 Nummer 7 des Einkommensteuergesetzes, wenn die Kapitalforderung eine Emissionsrendite hat oder bei ihr das Stammrecht und der Zinsschein getrennt wurden",
+                  "pfad": "Abs. 3 Nr. 1",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "angewachsene Ansprüche aus einem Emissions-Agio oder -Disagio",
                   "pfad": "Abs. 3 Nr. 2",
                   "konfidenz": 0.6,
@@ -29506,7 +29907,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "Mieten",
                   "pfad": "Abs. 3 Nr. 3",
                   "konfidenz": 0.45,
@@ -29514,7 +29915,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "sofern diese leicht und eindeutig ermittelbar ist",
                   "pfad": "Abs. 3 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -29522,7 +29923,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Die abgegrenzten Zinsen, angewachsenen Ansprüche und Mieten",
                   "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
@@ -29837,6 +30238,7 @@
       "tb": [
         "bereits am Tag des Dividendenabschlags als zugeflossen",
         "abzugrenzen sind",
+        "Zinsen und angewachsene Ansprüche einer sonstigen Kapitalforderung nach § 20 Absatz 1 Nummer 7 des Einkommensteuergesetzes, wenn die Kapitalforderung eine Emissionsrendite hat oder bei ihr das Stammrecht und der Zinsschein getrennt wurden",
         "angewachsene Ansprüche aus einem Emissions-Agio oder -Disagio",
         "Mieten",
         "sofern diese leicht und eindeutig ermittelbar ist",
@@ -29875,7 +30277,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.566,
+      "konfidenz": 0.562,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -29885,7 +30287,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ebb55165b73490e290c477baf0a3c978dddc432c595edbac41dc74886b118472",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.075Z"
+      "aktualisiert": "2026-08-11T11:31:26.891Z"
     },
     "39": {
       "typ": "gemischt",
@@ -30438,7 +30840,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8729beacd0d310713e4c21d330f33f779e05216f57cd390a4ed5785647c6e3a8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.077Z"
+      "aktualisiert": "2026-08-11T11:31:26.895Z"
     },
     "40": {
       "typ": "gemischt",
@@ -31392,7 +31794,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "351eb84ea52a69918a12f2fcb743320d741a020af198c6dd16d0306c861d62a0",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.079Z"
+      "aktualisiert": "2026-08-11T11:31:26.897Z"
     },
     "41": {
       "typ": "gemischt",
@@ -31739,7 +32141,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6fe177b692a19809c8fef86f86d2369cbf2ef77e63233ba3a4e48bdfb44d7690",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.080Z"
+      "aktualisiert": "2026-08-11T11:31:26.898Z"
     },
     "42": {
       "typ": "gemischt",
@@ -32135,23 +32537,24 @@
           "von": 2266,
           "bis": 2445,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
-              "text": "zusteht",
+              "art": "tb",
+              "text": "dem Spezial-Investmentfonds kein Ermäßigungsanspruch aus einem Abkommen zur Vermeidung der Doppelbesteuerung aufgrund eines Quellensteuerhöchstsatzes von unter 15 Prozent zusteht",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 2",
-              "von": 2437,
-              "laenge": 7,
-              "konfidenz": 0.45,
+              "von": 2266,
+              "laenge": 178,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -32430,6 +32833,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "dem Spezial-Investmentfonds kein Ermäßigungsanspruch aus einem Abkommen zur Vermeidung der Doppelbesteuerung aufgrund eines Quellensteuerhöchstsatzes von unter 15 Prozent zusteht",
+                  "pfad": "Abs. 4 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -32451,14 +32862,6 @@
                   "t": "sind die in ausgeschütteten oder ausschüttungsgleichen Erträgen enthaltenen inländischen Beteiligungseinnahmen vollständig steuerbefreit",
                   "pfad": "Abs. 4 Satz 2",
                   "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "zusteht",
-                  "pfad": "Abs. 4 Nr. 2",
-                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -32522,6 +32925,7 @@
         "die keiner Ertragsbesteuerung unterliegen, von der Ertragsbesteuerung persönlich befreit sind oder sachlich insoweit von der Ertragsbesteuerung befreit sind, wie sie Ausschüttungen vornehmen",
         "Abweichend von Satz 1",
         "der Anleger dem Körperschaftsteuergesetz",
+        "dem Spezial-Investmentfonds kein Ermäßigungsanspruch aus einem Abkommen zur Vermeidung der Doppelbesteuerung aufgrund eines Quellensteuerhöchstsatzes von unter 15 Prozent zusteht",
         "Absatz 4 Satz 2"
       ],
       "rf": [
@@ -32534,7 +32938,6 @@
         "ist nicht auf vorbelastete REIT-Dividenden nach § 19a des REIT-Gesetzes",
         "sind 60 Prozent dieser ausgeschütteten oder ausschüttungsgleichen Erträge steuerfrei",
         "sind die in ausgeschütteten oder ausschüttungsgleichen Erträgen enthaltenen inländischen Beteiligungseinnahmen vollständig steuerbefreit",
-        "zusteht",
         "sind 20 Prozent dieser ausgeschütteten oder ausschüttungsgleichen Erträge steuerfrei",
         "ist entsprechend"
       ],
@@ -32542,7 +32945,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.584,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -32552,7 +32955,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "520b9be7ac2c630998e394255ce5f5676b7c76aebab4c77060fb3c5fce75bcff",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.084Z"
+      "aktualisiert": "2026-08-11T11:31:26.903Z"
     },
     "43": {
       "typ": "gemischt",
@@ -32734,23 +33137,24 @@
           "von": 1018,
           "bis": 1238,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
-              "text": "erfüllt",
+              "art": "tb",
+              "text": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach dem Abkommen zur Vermeidung der Doppelbesteuerung erfüllt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
-              "von": 1230,
-              "laenge": 7,
-              "konfidenz": 0.45,
+              "von": 1018,
+              "laenge": 219,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -32840,6 +33244,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach dem Abkommen zur Vermeidung der Doppelbesteuerung erfüllt",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -32876,14 +33288,6 @@
                   "n": "4.",
                   "t": "erfüllt",
                   "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "erfüllt",
-                  "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -32942,6 +33346,7 @@
         "wenn die jeweiligen Einkünfte des Spezial-Investmentfonds in dem ausländischen Staat, aus dem sie stammen, keiner tatsächlichen Besteuerung unterlegen haben",
         "Die Sätze 1 und 2",
         "der Anleger die persönlichen Voraussetzungen für eine Freistellung nach dem Abkommen zur Vermeidung der Doppelbesteuerung",
+        "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Freistellung nach dem Abkommen zur Vermeidung der Doppelbesteuerung erfüllt",
         "(weggefallen)"
       ],
       "rf": [
@@ -32949,14 +33354,13 @@
         "sind nicht auf Erträge nach § 20 Absatz 1 Nummer 1 und 3 des Einkommensteuergesetzes",
         "Satz 3",
         "erfüllt",
-        "erfüllt",
         "ausgeschüttete oder ausschüttungsgleiche Erträge, die aus Ausschüttungen von Investmentfonds, Vorabpauschalen oder Gewinnen aus der Veräußerung von Investmentanteilen stammen, ist die Teilfreistellung nach § 20 entsprechend anzuwenden"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.525,
+      "konfidenz": 0.54,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -32966,7 +33370,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "53a55f857fb78325ea400a30993a8877f984b4928d7a483445c2cea685665488",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.086Z"
+      "aktualisiert": "2026-08-11T11:31:26.905Z"
     },
     "44": {
       "typ": "aussage",
@@ -33053,7 +33457,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bcc237adf75797a3b04feef959c5ef962fc1858cfbf88cf9ef0272141323ddfd",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.086Z"
+      "aktualisiert": "2026-08-11T11:31:26.906Z"
     },
     "45": {
       "typ": "gemischt",
@@ -33133,23 +33537,24 @@
           "von": 511,
           "bis": 592,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2",
+              "text": "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2 ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
               "von": 511,
-              "laenge": 76,
+              "laenge": 80,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -33199,23 +33604,24 @@
           "von": 812,
           "bis": 1023,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
-              "text": "erfüllt",
+              "art": "tb",
+              "text": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Kürzung nach § 9 Nummer 2a und 7 des Gewerbesteuergesetzes erfüllt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 3",
-              "von": 1015,
-              "laenge": 7,
-              "konfidenz": 0.45,
+              "von": 812,
+              "laenge": 210,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -33376,7 +33782,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2",
+                  "t": "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2 ist",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -33386,6 +33792,14 @@
                   "n": "3.",
                   "t": "der Anleger dem Körperschaftsteuergesetz",
                   "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Kürzung nach § 9 Nummer 2a und 7 des Gewerbesteuergesetzes erfüllt",
+                  "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -33425,14 +33839,6 @@
                   "t": "unterliegt und kein Institut oder Unternehmen nach § 3 Nummer 40 Satz 3 oder 4 des Einkommensteuergesetzes oder § 8b Absatz 7 oder 8 des Körperschaftsteuergesetzes ist",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.54,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "erfüllt",
-                  "pfad": "Abs. 1 Nr. 3",
-                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -33535,8 +33941,9 @@
       ],
       "tb": [
         "Bei der Ermittlung des Gewerbeertrags nach § 7 des Gewerbesteuergesetzes",
-        "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2",
+        "der Schuldner der Kapitalerträge eine Gesellschaft nach § 26 Nummer 6 Satz 2 ist",
         "der Anleger dem Körperschaftsteuergesetz",
+        "die auf die Spezial-Investmentanteile des Anlegers rechnerisch entfallende Beteiligung am Kapital der Gesellschaft die Voraussetzungen für eine Kürzung nach § 9 Nummer 2a und 7 des Gewerbesteuergesetzes erfüllt",
         "Die nach § 43 Absatz 3 zu gewährenden Teilfreistellungen",
         "Die tarifliche Einkommensteuer des Anlegers",
         "gezahlte Gewerbesteuer ist beim Anleger nicht als Betriebsausgabe oder Werbungskosten abziehbar"
@@ -33544,7 +33951,6 @@
       "rf": [
         "sind § 42 Absatz 4 sowie § 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes nicht anzuwenden auf Kapitalerträge nach § 43 Absatz 1 Satz 1 Nummer 1, 1a und 6 sowie Satz 2 des Einkommensteuergesetzes, die in den ausgeschütteten oder ausschüttungsgleichen Erträgen enthalten sind und auf inländische Beteiligungseinnahmen, die dem Anleger nach § 30 Absatz 1 Satz 2 zugerechnet werden",
         "unterliegt und kein Institut oder Unternehmen nach § 3 Nummer 40 Satz 3 oder 4 des Einkommensteuergesetzes oder § 8b Absatz 7 oder 8 des Körperschaftsteuergesetzes ist",
-        "erfüllt",
         "sind bei der Ermittlung des Gewerbeertrags nach § 7 des Gewerbesteuergesetzes nur zur Hälfte",
         "ermäßigt sich nicht um die vom Spezial-Investmentfonds gezahlte Gewerbesteuer nach § 29 Absatz 1 in Verbindung mit § 15",
         "Die vom Spezial-Investmentfonds"
@@ -33555,7 +33961,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.582,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -33565,7 +33971,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3e75bffcf8033cafc9d59ec8c04faf70d9fb4f2522a800e0f17cff44b79cd578",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.088Z"
+      "aktualisiert": "2026-08-11T11:31:26.908Z"
     },
     "46": {
       "typ": "gemischt",
@@ -33697,6 +34103,7 @@
           "von": 416,
           "bis": 429,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -33722,6 +34129,7 @@
           "von": 433,
           "bis": 495,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -33747,6 +34155,7 @@
           "von": 499,
           "bis": 519,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -33772,6 +34181,7 @@
           "von": 523,
           "bis": 633,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -34063,7 +34473,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24bb87a46453655837078849e12879d3030e493a6fb716b0ca14aecd29981313",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.089Z"
+      "aktualisiert": "2026-08-11T11:31:26.910Z"
     },
     "47": {
       "typ": "gemischt",
@@ -34104,6 +34514,7 @@
           "von": 185,
           "bis": 233,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -34129,6 +34540,7 @@
           "von": 237,
           "bis": 291,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -34154,6 +34566,7 @@
           "von": 295,
           "bis": 400,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -34927,7 +35340,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fc4a84ea6ad14e8a9aa3511b239797eeb7dd4cd763111c84d693a5cd1a57c2ed",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.091Z"
+      "aktualisiert": "2026-08-11T11:31:26.914Z"
     },
     "48": {
       "typ": "gemischt",
@@ -35139,22 +35552,59 @@
           "von": 1300,
           "bis": 1516,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Gewinne aus der Veräußerung von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen nach § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 1",
+              "von": 1300,
+              "laenge": 215,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 2",
           "von": 1520,
           "bis": 1734,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Wertveränderungen von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 2",
+              "von": 1520,
+              "laenge": 213,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 3",
           "von": 1738,
           "bis": 1889,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35180,6 +35630,7 @@
           "von": 1893,
           "bis": 2108,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35287,23 +35738,24 @@
           "von": 2434,
           "bis": 2471,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "keiner Ertragsbesteuerung",
+              "text": "keiner Ertragsbesteuerung unterliegt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1",
               "von": 2434,
-              "laenge": 25,
-              "konfidenz": 0.45,
+              "laenge": 36,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -35476,6 +35928,7 @@
           "von": 3116,
           "bis": 3249,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35501,23 +35954,24 @@
           "von": 3253,
           "bis": 3357,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar",
+              "text": "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar wäre",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Nr. 2",
               "von": 3253,
-              "laenge": 98,
+              "laenge": 103,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -35526,6 +35980,7 @@
           "von": 3361,
           "bis": 3514,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35551,8 +36006,26 @@
           "von": 3518,
           "bis": 3738,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Anleger-Abkommensgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 4",
+              "von": 3518,
+              "laenge": 219,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 6 Satz 1",
@@ -35609,6 +36082,7 @@
           "von": 4096,
           "bis": 4194,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35634,6 +36108,7 @@
           "von": 4198,
           "bis": 4299,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35659,6 +36134,7 @@
           "von": 4303,
           "bis": 4465,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -35684,8 +36160,26 @@
           "von": 4469,
           "bis": 4697,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Anleger-Teilfreistellungsgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 4",
+              "von": 4469,
+              "laenge": 227,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         }
       ],
       "schema": [
@@ -35810,6 +36304,22 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Gewinne aus der Veräußerung von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen nach § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
+                  "pfad": "Abs. 3 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "Wertveränderungen von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
+                  "pfad": "Abs. 3 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Anleger-Aktiengewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds",
                   "pfad": "Abs. 3 Nr. 3",
                   "konfidenz": 0.6,
@@ -35817,7 +36327,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "4.",
                   "t": "Anleger-Aktiengewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial-Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial-Investmentfonds ermittelt werden",
                   "pfad": "Abs. 3 Nr. 4",
                   "konfidenz": 0.6,
@@ -35880,9 +36390,9 @@
                 },
                 {
                   "n": "3.",
-                  "t": "keiner Ertragsbesteuerung",
+                  "t": "keiner Ertragsbesteuerung unterliegt",
                   "pfad": "Abs. 4 Nr. 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -35982,7 +36492,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar",
+                  "t": "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar wäre",
                   "pfad": "Abs. 5 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -35992,6 +36502,14 @@
                   "n": "3.",
                   "t": "Anleger-Abkommensgewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial-Investmentanteils an einem Ziel-Spezial-Investmentfonds",
                   "pfad": "Abs. 5 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Anleger-Abkommensgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden",
+                  "pfad": "Abs. 5 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -36049,6 +36567,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Anleger-Teilfreistellungsgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden",
+                  "pfad": "Abs. 6 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -36083,21 +36609,25 @@
         "wenn der Spezial-Investmentfonds den Fonds-Aktiengewinn ermittelt und bekannt macht oder wenn der Anleger den Fonds-Aktiengewinn nachweist",
         "wenn der Spezial-Investmentfonds den Fonds-Abkommensgewinn ermittelt und bekannt macht oder wenn der Anleger den Fonds-Abkommensgewinn nachweist",
         "wenn der Spezial-Investmentfonds die Fonds-Teilfreistellungsgewinne ermittelt und bekannt macht oder wenn der Anleger die Fonds-Teilfreistellungsgewinne nachweist",
+        "Gewinne aus der Veräußerung von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen nach § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
+        "Wertveränderungen von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen, deren Leistungen beim Empfänger zu den Einnahmen im Sinne des § 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes gehören",
         "Anleger-Aktiengewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds",
         "Anleger-Aktiengewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial-Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial-Investmentfonds ermittelt werden",
         "Gewinne aus der Veräußerung sowie Wertveränderungen von Anteilen an Körperschaften, Personenvereinigungen und Vermögensmassen",
         "wenn die Körperschaft, Personenvereinigung oder Vermögensmasse",
-        "keiner Ertragsbesteuerung",
+        "keiner Ertragsbesteuerung unterliegt",
         "von der Ertragsbesteuerung persönlich",
         "sachlich insoweit von der Ertragsbesteuerung",
         "mindern den Fonds- Aktiengewinn",
         "wenn der Spezial-Investmentfonds im Rahmen einer konzeptionellen Gestaltung Verluste aus Finanzderivaten und in gleicher oder ähnlicher Höhe Wertveränderungen nach Absatz 3 Nummer 2 herbeigeführt hat",
         "Erträge, die aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung nach § 43 Absatz 1 von der Besteuerung freizustellen sind",
-        "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar",
+        "Wertveränderungen von Vermögensgegenständen, auf die bei einer Veräußerung § 43 Absatz 1 anwendbar wäre",
         "Anleger-Abkommensgewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial-Investmentanteils an einem Ziel-Spezial-Investmentfonds",
+        "Anleger-Abkommensgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden",
         "Erträge aus einem Investmentanteil, soweit diese nach § 20 von der Besteuerung freizustellen sind",
         "Wertveränderungen von Investmentanteilen, soweit auf diese bei einer Veräußerung § 20 anwendbar wäre",
-        "Anleger-Teilfreistellungsgewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial-Investmentanteils an einem Ziel-Spezial- Investmentfonds"
+        "Anleger-Teilfreistellungsgewinne eines Dach-Spezial-Investmentfonds aus der Veräußerung eines Spezial-Investmentanteils an einem Ziel-Spezial- Investmentfonds",
+        "Anleger-Teilfreistellungsgewinne eines Dach-Spezial-Investmentfonds aus dem Besitz eines Spezial- Investmentanteils an einem Ziel-Spezial-Investmentfonds, die bei der Bewertung des Dach-Spezial- Investmentfonds ermittelt werden"
       ],
       "rf": [
         "hat bei jeder Bewertung seines Vermögens pro Spezial-Investmentanteil den Fonds-Aktiengewinn, den Fonds-Abkommensgewinn und den Fonds-Teilfreistellungsgewinn als absolute Werte in Euro zu ermitteln und dem Anleger diese Werte bekannt zu machen",
@@ -36118,7 +36648,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.583,
+      "konfidenz": 0.589,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -36128,7 +36658,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1a4ceaf51a31d4e4922e08f21bf91367102c53f9db5072559bae6b44b581d8e1",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.096Z"
+      "aktualisiert": "2026-08-11T11:31:26.921Z"
     },
     "49": {
       "typ": "gemischt",
@@ -36169,39 +36699,24 @@
           "von": 140,
           "bis": 268,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44",
+              "text": "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44 anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
               "von": 140,
-              "laenge": 116,
+              "laenge": 127,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "anzuwenden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 1",
-              "von": 257,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -37018,6 +37533,7 @@
           "von": 3829,
           "bis": 3959,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -37084,8 +37600,26 @@
           "von": 4056,
           "bis": 4257,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Spezial-Investmentanteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 3",
+              "von": 4056,
+              "laenge": 200,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Satz 1 (Teil 2)",
@@ -37393,7 +37927,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44",
+                  "t": "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44 anzuwenden",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -37432,14 +37966,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "anzuwenden",
-                  "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "freizustellen und § 44 anzuwenden",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -37447,7 +37973,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "freizustellen und § 44 anzuwenden",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -37455,7 +37981,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "ist bei bilanziellem Ansatz der Spezial-Investmentanteile mit einem niedrigeren Teilwert nach § 6 Absatz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes und bei einer Teilwertzuschreibung nach § 6 Absatz 1 Nummer 2 Satz 3 des Einkommensteuergesetzes auf die Anschaffungskosten der Spezial-Investmentanteile entsprechend … anzuwenden",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.48,
@@ -37463,7 +37989,7 @@
                   "mehrteilig": true
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "gilt § 30 Absatz 3 entsprechend",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -37784,6 +38310,14 @@
                 },
                 {
                   "n": "4.",
+                  "t": "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Spezial-Investmentanteile",
+                  "pfad": "Abs. 5 Nr. 3",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "wenn die Summe der nach Absatz 1 bis 3 und § 56 ermittelten steuerpflichtigen Gewinne insgesamt positiv ist",
                   "pfad": "Abs. 5 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -37791,7 +38325,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "§ 6 Absatz 1 Satz 2 und 3 sowie Absatz 2 bis 5 des Außensteuergesetzes und § 17 Absatz 1 Satz 4 sowie Absatz 2 Satz 3 bis 5 des Einkommensteuergesetzes",
                   "pfad": "Abs. 5 Satz 2",
                   "konfidenz": 0.48,
@@ -37799,7 +38333,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "7.",
                   "t": "Bei der entsprechenden Anwendung des § 6 Absatz 3 Satz 1 Nummer 2 und Absatz 4 Satz 5 Nummer 5 des Außensteuergesetzes",
                   "pfad": "Abs. 5 Satz 3",
                   "konfidenz": 0.6,
@@ -37807,7 +38341,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "8.",
                   "t": "Im Fall des Satzes 1",
                   "pfad": "Abs. 5 Satz 6",
                   "konfidenz": 0.6,
@@ -37900,7 +38434,7 @@
       ],
       "tb": [
         "Wird der Spezial-Investmentanteil veräußert oder wird ein Gewinn aus dem Spezial-Investmentanteil in sonstiger Weise realisiert",
-        "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44",
+        "auf den Anleger-Aktiengewinn § 3 Nummer 40 des Einkommensteuergesetzes, § 8b des Körperschaftsteuergesetzes und § 44 anzuwenden",
         "der Anleger-Abkommensgewinn von der Besteuerung",
         "der Anleger-Teilfreistellungsgewinn von der Besteuerung",
         "Für die Anwendung des § 3 Nummer 40 des Einkommensteuergesetzes und des § 8b des Körperschaftsteuergesetzes",
@@ -37918,13 +38452,13 @@
         "stehen der Veräußerung von Spezial-Investmentanteilen zum gemeinen Wert",
         "die Beendigung der unbeschränkten Steuerpflicht des Anlegers infolge der Aufgabe des Wohnsitzes oder des gewöhnlichen Aufenthalts",
         "die unentgeltliche Übertragung auf eine nicht",
+        "vorbehaltlich der Nummern 1 und 2, der Ausschluss oder die Beschränkung des Besteuerungsrechts der Bundesrepublik Deutschland hinsichtlich des Gewinns aus der Veräußerung der Spezial-Investmentanteile",
         "wenn die Summe der nach Absatz 1 bis 3 und § 56 ermittelten steuerpflichtigen Gewinne insgesamt positiv ist",
         "§ 6 Absatz 1 Satz 2 und 3 sowie Absatz 2 bis 5 des Außensteuergesetzes und § 17 Absatz 1 Satz 4 sowie Absatz 2 Satz 3 bis 5 des Einkommensteuergesetzes",
         "Bei der entsprechenden Anwendung des § 6 Absatz 3 Satz 1 Nummer 2 und Absatz 4 Satz 5 Nummer 5 des Außensteuergesetzes",
         "Im Fall des Satzes 1"
       ],
       "rf": [
-        "anzuwenden",
         "freizustellen und § 44 anzuwenden",
         "freizustellen und § 44 anzuwenden",
         "ist bei bilanziellem Ansatz der Spezial-Investmentanteile mit einem niedrigeren Teilwert nach § 6 Absatz 1 Nummer 2 Satz 2 des Einkommensteuergesetzes und bei einer Teilwertzuschreibung nach § 6 Absatz 1 Nummer 2 Satz 3 des Einkommensteuergesetzes auf die Anschaffungskosten der Spezial-Investmentanteile entsprechend",
@@ -37959,7 +38493,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.58,
+      "konfidenz": 0.582,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -37969,7 +38503,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db5e1dd0475b402b00bb0fe26a21e881107524f924a000c1cb776fd8fc5ee219",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.102Z"
+      "aktualisiert": "2026-08-11T11:31:26.928Z"
     },
     "50": {
       "typ": "gemischt",
@@ -38076,6 +38610,7 @@
           "von": 291,
           "bis": 355,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38410,7 +38945,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1df77567016e3e34861987f391f87dac38c509c3915cecf4f7224f411a8f22fa",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.116Z"
+      "aktualisiert": "2026-08-11T11:31:26.946Z"
     },
     "51": {
       "typ": "gemischt",
@@ -38569,6 +39104,7 @@
           "von": 911,
           "bis": 990,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38594,6 +39130,7 @@
           "von": 994,
           "bis": 1099,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38644,6 +39181,7 @@
           "von": 1201,
           "bis": 1306,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38669,6 +39207,7 @@
           "von": 1310,
           "bis": 1426,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38694,6 +39233,7 @@
           "von": 1430,
           "bis": 1495,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -38719,6 +39259,7 @@
           "von": 1499,
           "bis": 1519,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": []
         },
@@ -38777,6 +39318,7 @@
           "von": 1822,
           "bis": 1892,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -39644,7 +40186,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "34164805d204941d1e2c435b46c642ef4fbaf85500b98f03a69e510e763d617a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.120Z"
+      "aktualisiert": "2026-08-11T11:31:26.949Z"
     },
     "52": {
       "typ": "gemischt",
@@ -40257,7 +40799,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "618ce9e89668202e178d1f9d42b4f3e38fec059d9369c466101df36f239c0438",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.121Z"
+      "aktualisiert": "2026-08-11T11:31:26.951Z"
     },
     "53": {
       "typ": "gemischt",
@@ -40338,39 +40880,24 @@
           "von": 241,
           "bis": 303,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "die die Voraussetzungen eines Spezial-Investmentfonds",
+              "text": "die die Voraussetzungen eines Spezial-Investmentfonds erfüllt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
               "von": 241,
-              "laenge": 53,
+              "laenge": 61,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "erfüllt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 2",
-              "von": 295,
-              "laenge": 7,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -40778,7 +41305,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "die die Voraussetzungen eines Spezial-Investmentfonds",
+                  "t": "die die Voraussetzungen eines Spezial-Investmentfonds erfüllt",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -40803,14 +41330,6 @@
                   "n": "2.",
                   "t": "gerichtet ist",
                   "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "erfüllt",
-                  "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -41016,7 +41535,7 @@
       ],
       "tb": [
         "deren Gesellschaftszweck unmittelbar und ausschließlich auf die Abdeckung von betrieblichen Altersvorsorgeverpflichtungen ihrer Anleger",
-        "die die Voraussetzungen eines Spezial-Investmentfonds",
+        "die die Voraussetzungen eines Spezial-Investmentfonds erfüllt",
         "Liegt diese Bestätigung bei im Ausland ansässigen Anlegern vor",
         "gilt diese Voraussetzung als nicht erfüllt",
         "wenn der Wert der Anteile, die ein Anleger erwirbt, den Wert seiner betrieblichen Altersvorsorgeverpflichtung übersteigt",
@@ -41028,7 +41547,6 @@
       "rf": [
         "ist eine offene Investmentkommanditgesellschaft",
         "gerichtet ist",
-        "erfüllt",
         "haben der offenen Investmentkommanditgesellschaft schriftlich nach amtlichem Muster",
         "gilt die Voraussetzung des Absatzes 1 Nummer 1 als erfüllt",
         "Im Übrigen",
@@ -41043,7 +41561,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.585,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -41053,7 +41571,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5c3ac88750cfebab975a7381b418facb20d10f7c9d497878cc5a30c29c0db953",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.123Z"
+      "aktualisiert": "2026-08-11T11:31:26.953Z"
     },
     "54": {
       "typ": "konditional",
@@ -41489,7 +42007,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c260059c547cc07949ccd3deedf71f705d43f929ac394467b3e9a441e4ba7aeb",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.127Z"
+      "aktualisiert": "2026-08-11T11:31:26.954Z"
     },
     "55": {
       "typ": "aussage",
@@ -41898,7 +42416,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2c69f66c275cab03071305d9cc4f64ce1e5000b41299f3575c648b4e9fad008a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.128Z"
+      "aktualisiert": "2026-08-11T11:31:26.955Z"
     },
     "56": {
       "typ": "gemischt",
@@ -42801,6 +43319,7 @@
           "von": 5677,
           "bis": 5741,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -42826,8 +43345,26 @@
           "von": 5745,
           "bis": 5877,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Erträge nach § 7 Absatz 1 Satz 1 Nummer 3 und 4 des Investmentsteuergesetzes in der bis zum 31. Dezember 2017 geltenden Fassung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 2",
+              "von": 5745,
+              "laenge": 131,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 4 Satz 1 (Teil 2)",
@@ -43503,6 +44040,7 @@
           "von": 8223,
           "bis": 8339,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "und",
           "elemente": [
             {
@@ -43528,8 +44066,26 @@
           "von": 8343,
           "bis": 8522,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Wertveränderungen, die ab dem 1. Januar 2018 eingetreten sind, steuerpflichtig, soweit der Gewinn aus der Veräußerung von bestandsgeschützten Alt-Anteilen 100 000 Euro übersteigt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 6 Nr. 2",
+              "von": 8343,
+              "laenge": 178,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 6 Satz 1 (Teil 2)",
@@ -44595,6 +45151,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "die Erträge nach § 7 Absatz 1 Satz 1 Nummer 3 und 4 des Investmentsteuergesetzes in der bis zum 31. Dezember 2017 geltenden Fassung",
+                  "pfad": "Abs. 4 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "dem Steuerpflichtigen auf Antrag die Angaben nach Satz 1 Nummer 1 mitzuteilen",
                   "pfad": "Abs. 4 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -44895,6 +45459,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "Wertveränderungen, die ab dem 1. Januar 2018 eingetreten sind, steuerpflichtig, soweit der Gewinn aus der Veräußerung von bestandsgeschützten Alt-Anteilen 100 000 Euro übersteigt",
+                  "pfad": "Abs. 6 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Der am Schluss des Veranlagungszeitraums verbleibende Freibetrag nach Satz 1 Nummer 2",
                   "pfad": "Abs. 6 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -44902,7 +45474,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
                   "t": "im Jahr der erstmaligen Inanspruchnahme der Betrag von 100 000 Euro vermindert um den bei der Ermittlung der Einkünfte berücksichtigten Freibetrag nach Satz 1 Nummer 2",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -44910,7 +45482,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "das für die Besteuerung des Anlegers nach dem Einkommen zuständig ist. § 10d Absatz 4 Satz 4 bis 6 des Einkommensteuergesetzes ist entsprechend anzuwenden",
                   "pfad": "Abs. 6 Satz 3",
                   "konfidenz": 0.6,
@@ -44918,7 +45490,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
                   "t": "Anteile im Sinne des § 21 Absatz 2a und 2b des Investmentsteuergesetzes in der bis zum 31. Dezember 2017 geltenden Fassung",
                   "pfad": "Abs. 6 Satz 4",
                   "konfidenz": 0.6,
@@ -45223,6 +45795,7 @@
         "eine fiktive Veräußerung nach § 19 Absatz 2 oder 3, § 49 Absatz 5 oder § 52 Absatz 2 einer tatsächlichen Veräußerung",
         "Die inländische Stelle, die die Alt-Anteile verwahrt oder verwaltet",
         "den Gewinn aus der fiktiven Veräußerung nach Absatz 2 Satz 1",
+        "die Erträge nach § 7 Absatz 1 Satz 1 Nummer 3 und 4 des Investmentsteuergesetzes in der bis zum 31. Dezember 2017 geltenden Fassung",
         "dem Steuerpflichtigen auf Antrag die Angaben nach Satz 1 Nummer 1 mitzuteilen",
         "wenn die Alt-Anteile zum Betriebsvermögen des Anlegers gehören",
         "Für die Zwecke des Satzes 1",
@@ -45237,6 +45810,7 @@
         "Für Alt-Anteile, die vor dem 1. Januar 2023 und vor der Abgabe der Feststellungserklärung veräußert wurden",
         "§ 180 Absatz 3 Satz 1 Nummer 2 sowie Satz 2 und 3 der Abgabenordnung",
         "Wertveränderungen, die zwischen dem Anschaffungszeitpunkt und dem 31. Dezember 2017 eingetreten sind, steuerfrei",
+        "Wertveränderungen, die ab dem 1. Januar 2018 eingetreten sind, steuerpflichtig, soweit der Gewinn aus der Veräußerung von bestandsgeschützten Alt-Anteilen 100 000 Euro übersteigt",
         "Der am Schluss des Veranlagungszeitraums verbleibende Freibetrag nach Satz 1 Nummer 2",
         "im Jahr der erstmaligen Inanspruchnahme der Betrag von 100 000 Euro vermindert um den bei der Ermittlung der Einkünfte berücksichtigten Freibetrag nach Satz 1 Nummer 2",
         "das für die Besteuerung des Anlegers nach dem Einkommen zuständig ist. § 10d Absatz 4 Satz 4 bis 6 des Einkommensteuergesetzes ist entsprechend anzuwenden",
@@ -45322,7 +45896,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5918fa1620b9f66faac06271fea9ee993ce53925338437a919ce452a3348e042",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.143Z"
+      "aktualisiert": "2026-08-11T11:31:26.970Z"
     },
     "57": {
       "typ": "anwendung",
@@ -45844,7 +46418,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "c4ed9c2913164dcd83409431169f75fe674d4e1d2caccd0d0bd779f4ad6f52cc",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:32.146Z"
+      "aktualisiert": "2026-08-11T11:31:26.973Z"
     },
     "5a": {
       "typ": "gemischt",
@@ -46084,7 +46658,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "35518449d235ff3abfbd78e63c98ad1a9a625a67bc973d90880112fab540bc50",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.990Z"
+      "aktualisiert": "2026-08-11T11:31:26.799Z"
     }
   }
 }

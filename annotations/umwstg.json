@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T09:36:31.825Z",
+  "aktualisiert": "2026-08-11T11:31:26.621Z",
   "quelle": "https://www.gesetze-im-internet.de/umwstg_2006/",
   "stand": [
     {
@@ -54,14 +54,33 @@
           "von": 43,
           "bis": 319,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2, 123 Abs. 1 und 2 des Umwandlungsgesetzes von Körperschaften oder vergleichbare ausländische Vorgänge sowie des Artikels 17 der Verordnung (EG) Nr. 2157/2001 und des Artikels 19 der Verordnung (EG) Nr. 1435/2003",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 43,
+              "laenge": 275,
+              "konfidenz": 0.42,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 323,
           "bis": 485,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -87,14 +106,33 @@
           "von": 489,
           "bis": 645,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Umwandlung im Sinne des § 1 Abs. 2 des Umwandlungsgesetzes, soweit sie einer Umwandlung im Sinne des § 1 Abs. 1 des Umwandlungsgesetzes entspricht",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 3",
+              "von": 489,
+              "laenge": 150,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 4",
           "von": 649,
           "bis": 717,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -195,14 +233,33 @@
           "von": 873,
           "bis": 1050,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2 und 123 Abs. 1 und 2 des Umwandlungsgesetzes von Personengesellschaften oder vergleichbare ausländische Vorgänge",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 1",
+              "von": 873,
+              "laenge": 176,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 2",
           "von": 1054,
           "bis": 1183,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -228,14 +285,33 @@
           "von": 1187,
           "bis": 1369,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "den Formwechsel einer Personengesellschaft in eine Kapitalgesellschaft oder Genossenschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 3",
+              "von": 1187,
+              "laenge": 181,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 4",
           "von": 1373,
           "bis": 1518,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -261,6 +337,7 @@
           "von": 1522,
           "bis": 1549,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -520,6 +597,7 @@
           "von": 3396,
           "bis": 3847,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -528,6 +606,7 @@
           "von": 3848,
           "bis": 3927,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -578,8 +657,26 @@
           "von": 4067,
           "bis": 4217,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 2",
+              "von": 4067,
+              "laenge": 149,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Nr. 2 Halbs. 2",
@@ -627,6 +724,7 @@
           "von": 4329,
           "bis": 4435,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -652,14 +750,33 @@
           "von": 4439,
           "bis": 4592,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Verordnung (EG) Nr. 1435/2003 die Verordnung (EG) Nr. 1435/2003 des Rates vom 22. Juli 2003 über das Statut der Europäischen Genossenschaften (SCE) (ABl",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Nr. 3",
+              "von": 4439,
+              "laenge": 152,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 5 Nr. 3 Halbs. 2",
           "von": 4593,
           "bis": 4698,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -728,6 +845,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2, 123 Abs. 1 und 2 des Umwandlungsgesetzes von Körperschaften oder vergleichbare ausländische Vorgänge sowie des Artikels 17 der Verordnung (EG) Nr. 2157/2001 und des Artikels 19 der Verordnung (EG) Nr. 1435/2003",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.42,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "den Formwechsel einer Kapitalgesellschaft in eine Personengesellschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -735,7 +860,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
+                  "t": "die Umwandlung im Sinne des § 1 Abs. 2 des Umwandlungsgesetzes, soweit sie einer Umwandlung im Sinne des § 1 Abs. 1 des Umwandlungsgesetzes entspricht",
+                  "pfad": "Abs. 1 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "die Vermögensübertragung im Sinne des § 174 des Umwandlungsgesetzes",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
@@ -805,6 +938,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2 und 123 Abs. 1 und 2 des Umwandlungsgesetzes von Personengesellschaften oder vergleichbare ausländische Vorgänge",
+                  "pfad": "Abs. 3 Nr. 1",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "die Ausgliederung von Vermögensteilen im Sinne des § 123 Abs. 3 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
                   "pfad": "Abs. 3 Nr. 2",
                   "konfidenz": 0.6,
@@ -812,7 +953,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
+                  "t": "den Formwechsel einer Personengesellschaft in eine Kapitalgesellschaft oder Genossenschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
+                  "pfad": "Abs. 3 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "die Einbringung von Betriebsvermögen durch Einzelrechtsnachfolge in eine Kapitalgesellschaft, eine Genossenschaft oder Personengesellschaft",
                   "pfad": "Abs. 3 Nr. 4",
                   "konfidenz": 0.6,
@@ -820,7 +969,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "6.",
                   "t": "den Austausch von Anteilen",
                   "pfad": "Abs. 3 Nr. 5",
                   "konfidenz": 0.6,
@@ -954,6 +1103,14 @@
                 },
                 {
                   "n": "3.",
+                  "t": "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
+                  "pfad": "Abs. 5 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "EG Nr. L 294 S. 1), zuletzt",
                   "pfad": "Abs. 5 Nr. 2 Halbs. 2",
                   "konfidenz": 0.6,
@@ -961,7 +1118,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "5.",
                   "t": "EU Nr. L 168 S. 1), in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
                   "pfad": "Abs. 5 Nr. 2 Halbs. 3",
                   "konfidenz": 0.6,
@@ -969,7 +1126,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "6.",
+                  "t": "Verordnung (EG) Nr. 1435/2003 die Verordnung (EG) Nr. 1435/2003 des Rates vom 22. Juli 2003 über das Statut der Europäischen Genossenschaften (SCE) (ABl",
+                  "pfad": "Abs. 5 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
                   "t": "EU Nr. L 207 S. 1) in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
                   "pfad": "Abs. 5 Nr. 3 Halbs. 2",
                   "konfidenz": 0.6,
@@ -1014,11 +1179,15 @@
       ],
       "tb": [
         "Der Zweite bis Fünfte Teil",
+        "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2, 123 Abs. 1 und 2 des Umwandlungsgesetzes von Körperschaften oder vergleichbare ausländische Vorgänge sowie des Artikels 17 der Verordnung (EG) Nr. 2157/2001 und des Artikels 19 der Verordnung (EG) Nr. 1435/2003",
         "den Formwechsel einer Kapitalgesellschaft in eine Personengesellschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
+        "die Umwandlung im Sinne des § 1 Abs. 2 des Umwandlungsgesetzes, soweit sie einer Umwandlung im Sinne des § 1 Abs. 1 des Umwandlungsgesetzes entspricht",
         "die Vermögensübertragung im Sinne des § 174 des Umwandlungsgesetzes",
         "(weggefallen)",
         "Der Sechste bis Achte Teil",
+        "die Verschmelzung, Aufspaltung und Abspaltung im Sinne der §§ 2 und 123 Abs. 1 und 2 des Umwandlungsgesetzes von Personengesellschaften oder vergleichbare ausländische Vorgänge",
         "die Ausgliederung von Vermögensteilen im Sinne des § 123 Abs. 3 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
+        "den Formwechsel einer Personengesellschaft in eine Kapitalgesellschaft oder Genossenschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
         "die Einbringung von Betriebsvermögen durch Einzelrechtsnachfolge in eine Kapitalgesellschaft, eine Genossenschaft oder Personengesellschaft",
         "den Austausch von Anteilen",
         "in den Fällen des Absatzes 3 Nr. 1 bis 4 a) beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger aa) eine natürliche Person",
@@ -1026,8 +1195,10 @@
         "wenn es sich um eine Personengesellschaft handelt, soweit an dieser Körperschaften, Personenvereinigungen, Vermögensmassen oder natürliche Personen unmittelbar oder mittelbar über eine oder mehrere Personengesellschaften beteiligt sind",
         "Soweit dieses Gesetz nichts anderes bestimmt",
         "L 310 vom 25.11.2009, S. 34), die zuletzt durch die Richtlinie 2013/13/EU (ABl",
+        "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
         "EG Nr. L 294 S. 1), zuletzt",
         "EU Nr. L 168 S. 1), in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
+        "Verordnung (EG) Nr. 1435/2003 die Verordnung (EG) Nr. 1435/2003 des Rates vom 22. Juli 2003 über das Statut der Europäischen Genossenschaften (SCE) (ABl",
         "EU Nr. L 207 S. 1) in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung"
       ],
       "rf": [
@@ -1047,7 +1218,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.571,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -1057,7 +1228,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "692301f68f8ced6d0fea4a955cc2645ee38647aa49ca92ec43bd6d93f6659762",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.755Z"
+      "aktualisiert": "2026-08-11T11:31:26.545Z"
     },
     "2": {
       "typ": "gemischt",
@@ -2209,7 +2380,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "28fbf5c9f1b825589c4757d1e654df9d6be5c8506faac049f1b124ef2893edb9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.759Z"
+      "aktualisiert": "2026-08-11T11:31:26.549Z"
     },
     "3": {
       "typ": "gemischt",
@@ -2863,7 +3034,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "804c88ca9a563a7bec1cd8d34092d9a79f72b10a685c7ec95b3c568c0b4a5816",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.761Z"
+      "aktualisiert": "2026-08-11T11:31:26.552Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4371,7 +4542,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ccdd4c31abed0ba7c2f031d2a635d61930d6dd049c57f73893b2f693d5d8b89a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.766Z"
+      "aktualisiert": "2026-08-11T11:31:26.560Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4690,7 +4861,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d8e06422c2302540d8fa8eaf46a27dfe01d40d7c44b73062437e7b044d6e0975",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.770Z"
+      "aktualisiert": "2026-08-11T11:31:26.562Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5093,7 +5264,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "610d6303078c8157a48737653e01afc4de6a75b664718722bfd1fafd5d993cbb",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.772Z"
+      "aktualisiert": "2026-08-11T11:31:26.563Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5263,7 +5434,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b19c12fad0c8657076fa12f0e54448e2e0aef801d03b97d893e37d1458d9d22",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.772Z"
+      "aktualisiert": "2026-08-11T11:31:26.564Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5500,7 +5671,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c7f59089f8505df5b208b517ea3f7051ddc9f6d1e1d1cc5b148095b371371298",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.773Z"
+      "aktualisiert": "2026-08-11T11:31:26.564Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5740,7 +5911,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f59fe61fae6b917a310d2b6a06756db2db2f09012ca3cd5ecd5576e23e82e75",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.774Z"
+      "aktualisiert": "2026-08-11T11:31:26.565Z"
     },
     "10": {
       "typ": "gemischt",
@@ -5763,7 +5934,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.774Z"
+      "aktualisiert": "2026-08-11T11:31:26.565Z"
     },
     "11": {
       "typ": "gemischt",
@@ -6363,7 +6534,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17007795c634f2056711c702aaec1b8a5614c878fc8ebd29e4e079df7ae46428",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.776Z"
+      "aktualisiert": "2026-08-11T11:31:26.567Z"
     },
     "12": {
       "typ": "gemischt",
@@ -6920,7 +7091,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e1ca6251d90130e25ebea592eaaeba7aaa3356458868254e416d62a8810d0121",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.777Z"
+      "aktualisiert": "2026-08-11T11:31:26.569Z"
     },
     "13": {
       "typ": "gemischt",
@@ -7065,23 +7236,24 @@
           "von": 567,
           "bis": 982,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden",
+              "text": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden haben",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 567,
-              "laenge": 114,
+              "laenge": 120,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             },
             {
               "art": "tb",
@@ -7359,7 +7531,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden",
+                  "t": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden haben",
                   "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -7475,7 +7647,7 @@
       "tb": [
         "Die Anteile an der übertragenden Körperschaft",
         "Abweichend von Absatz 1",
-        "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden",
+        "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden haben",
         "in diesem Fall",
         "Die Anteile an der übernehmenden Körperschaft",
         "Gehören die Anteile an der übertragenden Körperschaft nicht zu einem Betriebsvermögen"
@@ -7506,7 +7678,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c5fc6e6b03505cda25e0345baae595203edb6257bd1e749ed30efbc9b28de5c4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.779Z"
+      "aktualisiert": "2026-08-11T11:31:26.571Z"
     },
     "14": {
       "typ": "gemischt",
@@ -7529,7 +7701,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.779Z"
+      "aktualisiert": "2026-08-11T11:31:26.571Z"
     },
     "15": {
       "typ": "gemischt",
@@ -8478,7 +8650,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d72e47a513a8546e48723f6394773d94e5e7f14a1b5f1a07bdb604c92d807ad2",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.782Z"
+      "aktualisiert": "2026-08-11T11:31:26.575Z"
     },
     "16": {
       "typ": "konditional",
@@ -8588,7 +8760,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8f3e1ba807fde9d6d9232b325ec6891f7fe7f21090538c01cd5bad0ee3a660a8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.783Z"
+      "aktualisiert": "2026-08-11T11:31:26.575Z"
     },
     "17": {
       "typ": "gemischt",
@@ -8611,7 +8783,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.783Z"
+      "aktualisiert": "2026-08-11T11:31:26.575Z"
     },
     "18": {
       "typ": "gemischt",
@@ -9187,7 +9359,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "992ec7fc49e542bda8c55d80a229fec9dae96838e0ed1a625fbc47fe5a6b340d",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.784Z"
+      "aktualisiert": "2026-08-11T11:31:26.577Z"
     },
     "19": {
       "typ": "konditional",
@@ -9378,7 +9550,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22ce9304e0af7106c9ee0c115d3eac01eeefaf2492521de2b2073abfe571ceac",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.785Z"
+      "aktualisiert": "2026-08-11T11:31:26.578Z"
     },
     "20": {
       "typ": "gemischt",
@@ -9574,39 +9746,24 @@
           "von": 878,
           "bis": 1018,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht",
+              "art": "rf",
+              "text": "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht übersteigen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 878,
-              "laenge": 74,
+              "laenge": 86,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "übersteigen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
-              "von": 953,
-              "laenge": 11,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Anordnungsvariante des Einleitungssatzes"
             },
             {
               "art": "rf",
@@ -9692,6 +9849,7 @@
           "von": 1445,
           "bis": 1525,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10522,14 +10680,6 @@
                 },
                 {
                   "n": "4.",
-                  "t": "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht",
-                  "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
                   "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
                   "pfad": "Abs. 2 Satz 2 (Teil 2)",
                   "konfidenz": 0.6,
@@ -10537,7 +10687,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
@@ -10585,9 +10735,9 @@
                 },
                 {
                   "n": "5.",
-                  "t": "übersteigen",
+                  "t": "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht übersteigen",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -11027,7 +11177,6 @@
         "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen",
         "für die Bewertung von Pensionsrückstellungen",
         "Abweichend von Satz 1",
-        "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
         "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
         "Der Wert, mit dem die übernehmende Gesellschaft das eingebrachte Betriebsvermögen",
@@ -11050,7 +11199,7 @@
         "gilt § 6a des Einkommensteuergesetzes",
         "kann das übernommene Betriebsvermögen auf Antrag einheitlich mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
         "sichergestellt ist, dass es später bei der übernehmenden Körperschaft der Besteuerung mit Körperschaftsteuer unterliegt",
-        "übersteigen",
+        "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht übersteigen",
         "ist das Eigenkapital nicht",
         "beschränkt wird",
         "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
@@ -11078,7 +11227,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.578,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11088,7 +11237,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ea36c720801a0634a5f8ba2d6ffb545ae9518f4f976568ecec48956827b0293a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.790Z"
+      "aktualisiert": "2026-08-11T11:31:26.584Z"
     },
     "21": {
       "typ": "gemischt",
@@ -11252,6 +11401,7 @@
           "von": 963,
           "bis": 1033,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12287,7 +12437,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8983bf2950f1f99d8fb4eb46088bde704057131ad7aaf6a9580118deabdcfde5",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.795Z"
+      "aktualisiert": "2026-08-11T11:31:26.589Z"
     },
     "22": {
       "typ": "gemischt",
@@ -12338,47 +12488,20 @@
               "grund": "Hauptsatzprädikat"
             },
             {
-              "art": "tb",
-              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+              "art": "ausn",
+              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 405,
-              "laenge": 48,
+              "laenge": 70,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "sind nicht",
-              "anzeige": "sind nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind nicht",
-                  "von": 454,
-                  "laenge": 10
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 465,
-                  "laenge": 10
-                }
-              ],
-              "pfad": "Abs. 1 Satz 1",
-              "von": 454,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Satzausnahme: „§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden\""
             }
           ]
         },
@@ -12560,39 +12683,24 @@
           "von": 1499,
           "bis": 1644,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft",
+              "text": "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft überträgt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
               "von": 1499,
-              "laenge": 134,
+              "laenge": 144,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "überträgt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 1",
-              "von": 1634,
-              "laenge": 9,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -12850,47 +12958,20 @@
               "grund": "Hauptsatzprädikat"
             },
             {
-              "art": "tb",
-              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
+              "art": "ausn",
+              "text": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 4812,
-              "laenge": 48,
+              "laenge": 70,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "sind nicht",
-              "anzeige": "sind nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind nicht",
-                  "von": 4861,
-                  "laenge": 10
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 4872,
-                  "laenge": 10
-                }
-              ],
-              "pfad": "Abs. 2 Satz 1",
-              "von": 4861,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Satzausnahme: „§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden\""
             }
           ]
         },
@@ -13181,6 +13262,7 @@
           "von": 6307,
           "bis": 6409,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -13206,6 +13288,7 @@
           "von": 6413,
           "bis": 6514,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -13644,14 +13727,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -13659,7 +13734,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "Die Sätze 1 bis 5",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.6,
@@ -13667,15 +13742,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
-                  "t": "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft",
+                  "n": "4.",
+                  "t": "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft überträgt",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "der Einbringende die erhaltenen Anteile entgeltlich",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -13683,7 +13758,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "die Kapitalgesellschaft, an der die Anteile",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -13691,7 +13766,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "7.",
                   "t": "der Einbringende die erhaltenen Anteile durch einen Vorgang im Sinne des § 21 Absatz 1 oder einen Vorgang im Sinne des § 20 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zum Buchwert in eine Kapitalgesellschaft oder eine Genossenschaft",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.48,
@@ -13699,7 +13774,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "8.",
                   "t": "der Einbringende die erhaltenen Anteile in eine Kapitalgesellschaft oder eine Genossenschaft durch einen Vorgang im Sinne des § 20 Absatz 1 oder einen Vorgang im Sinne des § 21 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zu Buchwerten",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.48,
@@ -13715,6 +13790,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "es sei denn, er weist nach, dass diese Anteile zu Buchwerten übertragen wurden und keine sonstigen Gegenleistungen erbracht wurden, die die Grenze des § 20 Absatz 2 Satz 2 Nummer 4 oder die Grenze des § 21 Absatz 1 Satz 2 Nummer 2 übersteigen (Ketteneinbringung)",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.42,
@@ -13722,7 +13805,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
+                  "n": "3.",
                   "t": "es sei denn, er weist nach, dass die Einbringung zu Buchwerten erfolgte und keine sonstigen Gegenleistungen erbracht wurden, die die Grenze des § 20 Absatz 2 Satz 2 Nummer 4 oder die Grenze des § 21 Absatz 1 Satz 2 Nummer 2 übersteigen",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.42,
@@ -13746,14 +13829,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "sind nicht … anzuwenden",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
                   "t": "gilt insoweit als rückwirkendes Ereignis im Sinne von § 175 Abs. 1 Satz 1 Nr. 2 der Abgabenordnung",
                   "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
@@ -13761,7 +13836,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "Einbringungsgewinn I",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.45,
@@ -13769,7 +13844,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "Der Einbringungsgewinn I",
                   "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
@@ -13777,7 +13852,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -13785,7 +13860,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "sind daneben auch die Sätze 1 bis 4 anzuwenden",
                   "pfad": "Abs. 1 Satz 5",
                   "konfidenz": 0.6,
@@ -13793,7 +13868,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "7.",
                   "t": "gelten entsprechend",
                   "pfad": "Abs. 1 Satz 6",
                   "konfidenz": 0.45,
@@ -13801,15 +13876,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
-                  "t": "überträgt",
-                  "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "10.",
+                  "n": "8.",
                   "t": "bestehen, aufgelöst und abgewickelt wird oder das Kapital dieser Gesellschaft herabgesetzt und an die Anteilseigner zurückgezahlt wird oder Beträge aus dem steuerlichen Einlagekonto im Sinne des § 27 des Körperschaftsteuergesetzes ausgeschüttet oder zurückgezahlt werden",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.42,
@@ -13817,7 +13884,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "9.",
                   "t": "eingebracht hat und diese Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.54,
@@ -13825,7 +13892,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "10.",
                   "t": "einbringt und die aus dieser Einbringung erhaltenen Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
                   "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.54,
@@ -13833,7 +13900,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "11.",
                   "t": "erfüllt sind",
                   "pfad": "Abs. 1 Nr. 6",
                   "konfidenz": 0.45,
@@ -13841,7 +13908,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "12.",
                   "t": "Satz 4",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -13865,14 +13932,6 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "Absatz 1 Satz 2",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
@@ -13880,7 +13939,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "2.",
                   "t": "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -13888,7 +13947,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "wenn und soweit die Steuer nicht gestundet wird",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -13896,7 +13955,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "Sätze 1 bis 5",
                   "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.6,
@@ -13904,7 +13963,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "Absatz 1 Satz 7",
                   "pfad": "Abs. 2 Satz 7",
                   "konfidenz": 0.6,
@@ -13920,6 +13979,14 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Sätze 1 bis 4 sind nicht anzuwenden, soweit der Einbringende die erhaltenen Anteile unter Aufdeckung der stillen Reserven veräußert hat",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
@@ -13943,14 +14010,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "sind nicht … anzuwenden",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.45,
@@ -13958,7 +14017,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "Einbringungsgewinn II",
                   "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.45,
@@ -13966,7 +14025,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "4.",
                   "t": "Der Einbringungsgewinn II",
                   "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
@@ -13974,7 +14033,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "6.",
+                  "n": "5.",
                   "t": "gilt auch in den Fällen von § 6 des Außensteuergesetzes vom 8. September 1972 (BGBl. I S. 1713), das zuletzt durch Artikel 7 des Gesetzes vom 7. Dezember 2006 (BGBl. I S. 2782) geändert worden ist, in der jeweils geltenden Fassung",
                   "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.48,
@@ -13982,7 +14041,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "7.",
+                  "n": "6.",
                   "t": "gelten entsprechend",
                   "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.45,
@@ -13990,7 +14049,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "8.",
+                  "n": "7.",
                   "t": "ist entsprechend … anzuwenden",
                   "pfad": "Abs. 2 Satz 7",
                   "konfidenz": 0.45,
@@ -14288,15 +14347,13 @@
       ],
       "tb": [
         "Soweit in den Fällen einer Sacheinlage unter dem gemeinen Wert (§ 20 Abs. 2 Satz 2) der Einbringende die erhaltenen Anteile innerhalb eines Zeitraums von sieben Jahren nach dem Einbringungszeitpunkt veräußert",
-        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
         "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
         "Die Sätze 1 bis 5",
-        "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft",
+        "der Einbringende die erhaltenen Anteile unmittelbar oder mittelbar unentgeltlich auf eine Kapitalgesellschaft oder eine Genossenschaft überträgt",
         "der Einbringende die erhaltenen Anteile entgeltlich",
         "die Kapitalgesellschaft, an der die Anteile",
         "der Einbringende die erhaltenen Anteile durch einen Vorgang im Sinne des § 21 Absatz 1 oder einen Vorgang im Sinne des § 20 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zum Buchwert in eine Kapitalgesellschaft oder eine Genossenschaft",
         "der Einbringende die erhaltenen Anteile in eine Kapitalgesellschaft oder eine Genossenschaft durch einen Vorgang im Sinne des § 20 Absatz 1 oder einen Vorgang im Sinne des § 21 Absatz 1 oder auf Grund vergleichbarer ausländischer Vorgänge zu Buchwerten",
-        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes",
         "Absatz 1 Satz 2",
         "als nachträgliche Anschaffungskosten der erhaltenen Anteile",
         "wenn und soweit die Steuer nicht gestundet wird",
@@ -14313,21 +14370,18 @@
       ],
       "rf": [
         "ist der Gewinn aus der Einbringung rückwirkend im Wirtschaftsjahr der Einbringung als Gewinn des Einbringenden im Sinne von § 16 des Einkommensteuergesetzes zu versteuern (Einbringungsgewinn I)",
-        "sind nicht",
         "gilt insoweit als rückwirkendes Ereignis im Sinne von § 175 Abs. 1 Satz 1 Nr. 2 der Abgabenordnung",
         "Einbringungsgewinn I",
         "Der Einbringungsgewinn I",
         "Umfasst das eingebrachte Betriebsvermögen auch Anteile an Kapitalgesellschaften oder Genossenschaften, ist insoweit § 22 Abs. 2 anzuwenden",
         "sind daneben auch die Sätze 1 bis 4 anzuwenden",
         "gelten entsprechend",
-        "überträgt",
         "bestehen, aufgelöst und abgewickelt wird oder das Kapital dieser Gesellschaft herabgesetzt und an die Anteilseigner zurückgezahlt wird oder Beträge aus dem steuerlichen Einlagekonto im Sinne des § 27 des Körperschaftsteuergesetzes ausgeschüttet oder zurückgezahlt werden",
         "eingebracht hat und diese Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
         "einbringt und die aus dieser Einbringung erhaltenen Anteile anschließend unmittelbar oder mittelbar veräußert oder durch einen Vorgang im Sinne der Nummern 1 oder 2 unmittelbar oder mittelbar übertragen werden",
         "erfüllt sind",
         "Satz 4",
         "ist der Gewinn aus der Einbringung im Wirtschaftsjahr der Einbringung rückwirkend als Gewinn des Einbringenden aus der Veräußerung von Anteilen zu versteuern (Einbringungsgewinn II)",
-        "sind nicht",
         "gilt entsprechend",
         "Einbringungsgewinn II",
         "Der Einbringungsgewinn II",
@@ -14348,14 +14402,16 @@
         "gilt nur für Einbringungen, bei denen in den Fällen der Gesamtrechtsnachfolge der Umwandlungsbeschluss vor dem Zeitpunkt, ab dem das Vereinigte Königreich Großbritannien und Nordirland nicht mehr Mitgliedstaat der Europäischen Union ist und auch nicht wie ein solcher zu behandeln ist, erfolgt oder in den anderen Fällen, in denen die Einbringung nicht im Wege der Gesamtrechtsnachfolge"
       ],
       "ausnahmen": [
+        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
         "es sei denn, er weist nach, dass diese Anteile zu Buchwerten übertragen wurden und keine sonstigen Gegenleistungen erbracht wurden, die die Grenze des § 20 Absatz 2 Satz 2 Nummer 4 oder die Grenze des § 21 Absatz 1 Satz 2 Nummer 2 übersteigen (Ketteneinbringung)",
         "es sei denn, er weist nach, dass die Einbringung zu Buchwerten erfolgte und keine sonstigen Gegenleistungen erbracht wurden, die die Grenze des § 20 Absatz 2 Satz 2 Nummer 4 oder die Grenze des § 21 Absatz 1 Satz 2 Nummer 2 übersteigen",
+        "§ 16 Abs. 4 und § 34 des Einkommensteuergesetzes sind nicht anzuwenden",
         "Sätze 1 bis 4 sind nicht anzuwenden, soweit der Einbringende die erhaltenen Anteile unter Aufdeckung der stillen Reserven veräußert hat"
       ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.546,
+      "konfidenz": 0.551,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -14365,7 +14421,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "889d713fa7c495e7bb74409ae1d23557e6429e8a1b4a818870c0af07f16aa78f",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.803Z"
+      "aktualisiert": "2026-08-11T11:31:26.601Z"
     },
     "23": {
       "typ": "gemischt",
@@ -15195,7 +15251,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74de4b817bc70550532ec38d63bdc8cde46401aa684f90c4cedc5dc161484fa3",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.810Z"
+      "aktualisiert": "2026-08-11T11:31:26.605Z"
     },
     "24": {
       "typ": "gemischt",
@@ -15427,6 +15483,7 @@
           "von": 1055,
           "bis": 1135,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -16206,7 +16263,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9816ac1f9eec71e329f86ed7d09a45d2b9f80e4962551aef37fe23746772cbb0",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.814Z"
+      "aktualisiert": "2026-08-11T11:31:26.609Z"
     },
     "25": {
       "typ": "gemischt",
@@ -16362,7 +16419,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dd8c0fbb4374cc097779aadb9f34b48ecdb0c1b019e8385526dc18ad460aa0b7",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.814Z"
+      "aktualisiert": "2026-08-11T11:31:26.610Z"
     },
     "26": {
       "typ": "gemischt",
@@ -16385,7 +16442,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.821Z"
+      "aktualisiert": "2026-08-11T11:31:26.618Z"
     },
     "27": {
       "typ": "anwendung",
@@ -16691,7 +16748,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "546aff936ab9687b671a466b9f5b411687bef794d3ef671f5282d1ba6372695e",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.824Z"
+      "aktualisiert": "2026-08-11T11:31:26.621Z"
     },
     "28": {
       "typ": "aussage",
@@ -16767,7 +16824,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab5470b11d877e1d750db81377c7ff533d57ac69ecc1f6c9a9991a25aed63d9c",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.825Z"
+      "aktualisiert": "2026-08-11T11:31:26.621Z"
     }
   }
 }

@@ -1,13 +1,6 @@
 [
   {
     "norm": "§ 3",
-    "pfad": "Abs. 1 Nr. 6",
-    "art": "tb",
-    "text": "der Übergang anhängiger Verfahren auf ein anderes Gericht bei Maßnahmen nach den Nummern 1",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
     "pfad": "Abs. 2 Satz 1",
     "art": "tb",
     "text": "die Errichtung eines gemeinsamen Finanzgerichts oder gemeinsamer Senate eines Finanzgerich",
@@ -33,6 +26,13 @@
     "art": "tb",
     "text": "wirkt bei der mündlichen Verhandlung und der Urteilsfindung mit gleichen Rechten wie der R",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 18",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "Personen, die infolge Richterspruchs die Fähigkeit zur Bekleidung öffentlicher Ämter nicht",
+    "grund": "zu grob (59 Wörter)"
   },
   {
     "norm": "§ 44",
@@ -91,32 +91,11 @@
     "grund": "bloßes Normsubjekt"
   },
   {
-    "norm": "§ 58",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "die nach dem bürgerlichen Recht in der Geschäftsfähigkeit Beschränkten, soweit sie durch V",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 62",
-    "pfad": "Abs. 2 Nr. 2",
+    "pfad": "Abs. 2 Nr. 7",
     "art": "tb",
-    "text": "volljährige Familienangehörige (§ 15 der Abgabenordnung, § 11 des Lebenspartnerschaftsgese",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 62",
-    "pfad": "Abs. 2 Nr. 3",
-    "art": "tb",
-    "text": "Personen und Vereinigungen im Sinne der §§ 3a und 3c des Steuerberatungsgesetzes im Rahmen",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 62",
-    "pfad": "Abs. 2 Nr. 6",
-    "art": "tb",
-    "text": "Gewerkschaften und Vereinigungen von Arbeitgebern sowie Zusammenschlüsse solcher Verbände ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "juristische Personen, deren Anteile sämtlich im wirtschaftlichen Eigentum einer der in Num",
+    "grund": "zu grob (55 Wörter)"
   },
   {
     "norm": "§ 62",

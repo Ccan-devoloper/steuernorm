@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T09:36:31.731Z",
+  "aktualisiert": "2026-08-11T11:31:26.522Z",
   "quelle": "https://www.gesetze-im-internet.de/grestg_1983/",
   "stand": [
     {
@@ -82,6 +82,7 @@
           "von": 121,
           "bis": 213,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -107,6 +108,7 @@
           "von": 217,
           "bis": 321,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -132,6 +134,7 @@
           "von": 325,
           "bis": 476,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -230,6 +233,7 @@
           "von": 1327,
           "bis": 1916,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -238,6 +242,7 @@
           "von": 1920,
           "bis": 1980,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -969,6 +974,7 @@
           "von": 6426,
           "bis": 6856,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -977,24 +983,78 @@
           "von": 6860,
           "bis": 7041,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vereinigung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 1 vorausgegangen ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 2",
+              "von": 6860,
+              "laenge": 180,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 3",
           "von": 7045,
           "bis": 7194,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "ein Rechtsgeschäft, das den Anspruch auf Übertragung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft begründet",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 3",
+              "von": 7045,
+              "laenge": 148,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Nr. 4",
           "von": 7198,
           "bis": 7394,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Übergang unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft auf einen anderen, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 3 vorausgegangen ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Nr. 4",
+              "von": 7198,
+              "laenge": 195,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3a Satz 1",
@@ -1217,8 +1277,26 @@
           "von": 8412,
           "bis": 8611,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "natürliche Personen, soweit sie einzeln oder zusammengeschlossen einem Unternehmen so eingegliedert sind, dass sie den Weisungen des Unternehmers in Bezug auf die Anteile zu folgen verpflichtet sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 1",
+              "von": 8412,
+              "laenge": 198,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 4 Nr. 2",
@@ -2102,19 +2180,43 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "tarif",
+          "rolle": "Bemessung und Satz",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (eine genügt)",
+              "junktor": "oder",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Gehört zum Vermögen einer Gesellschaft ein inländisches Grundstück",
                   "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "die Vereinigung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 1 vorausgegangen ist",
+                  "pfad": "Abs. 3 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "ein Rechtsgeschäft, das den Anspruch auf Übertragung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft begründet",
+                  "pfad": "Abs. 3 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "der Übergang unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft auf einen anderen, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 3 vorausgegangen ist",
+                  "pfad": "Abs. 3 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2267,6 +2369,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "natürliche Personen, soweit sie einzeln oder zusammengeschlossen einem Unternehmen so eingegliedert sind, dass sie den Weisungen des Unternehmers in Bezug auf die Anteile zu folgen verpflichtet sind",
+                  "pfad": "Abs. 4 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "juristische Personen, die nach dem Gesamtbild der tatsächlichen Verhältnisse finanziell, wirtschaftlich und organisatorisch in ein Unternehmen",
                   "pfad": "Abs. 4 Nr. 2",
                   "konfidenz": 0.6,
@@ -2563,11 +2673,15 @@
         "Bei der Ermittlung des Vomhundertsatzes",
         "soweit der Anteilsübergang auf Grund eines Geschäfts an diesem Markt oder Drittlandhandelsplatz oder einem multilateralen Handelssystem im Sinne des Artikels 2 Absatz 1 Nummer 14 der Verordnung (EU) Nr. 600/2014 erfolgt",
         "Gehört zum Vermögen einer Gesellschaft ein inländisches Grundstück",
+        "die Vereinigung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 1 vorausgegangen ist",
+        "ein Rechtsgeschäft, das den Anspruch auf Übertragung unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft begründet",
+        "der Übergang unmittelbar oder mittelbar von mindestens 90 vom Hundert der Anteile der Gesellschaft auf einen anderen, wenn kein schuldrechtliches Geschäft im Sinne der Nummer 3 vorausgegangen ist",
         "Soweit ein Rechtsvorgang nicht nach Absatz 3 der Steuer unterliegt",
         "sich aus der Summe der unmittelbaren und mittelbaren Beteiligungen am Kapital oder am Vermögen der Gesellschaft",
         "Für die Ermittlung der mittelbaren Beteiligungen",
         "Absatz 2a oder Absatz 2b",
         "Im Sinne des Absatzes 3",
+        "natürliche Personen, soweit sie einzeln oder zusammengeschlossen einem Unternehmen so eingegliedert sind, dass sie den Weisungen des Unternehmers in Bezug auf die Anteile zu folgen verpflichtet sind",
         "juristische Personen, die nach dem Gesamtbild der tatsächlichen Verhältnisse finanziell, wirtschaftlich und organisatorisch in ein Unternehmen",
         "wenn sie es aufgrund eines Rechtsvorgangs nach § 1 Absatz 1 erworben hat",
         "wenn ein anderer Rechtsträger das Grundstück auf Grund eines Rechtsvorgangs nach § 1 Absatz 1 erworben hat oder wenn die Voraussetzungen nicht mehr vorliegen, die zur Zugehörigkeit nach Satz 1 geführt haben",
@@ -2626,7 +2740,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.578,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -2636,7 +2750,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "80bbd068a17a797698ef03a3031784576276df234d53138af50e122c6fa7eb02",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.679Z"
+      "aktualisiert": "2026-08-11T11:31:26.465Z"
     },
     "2": {
       "typ": "gemischt",
@@ -2734,6 +2848,7 @@
           "von": 162,
           "bis": 246,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2759,6 +2874,7 @@
           "von": 250,
           "bis": 309,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2784,6 +2900,7 @@
           "von": 313,
           "bis": 369,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2845,6 +2962,7 @@
           "von": 404,
           "bis": 417,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -2870,6 +2988,7 @@
           "von": 421,
           "bis": 447,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3244,7 +3363,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "83634c3b68cedd75692613ea55e6638963d9f8e82b3c71c4e3b1fe2b86dac218",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.680Z"
+      "aktualisiert": "2026-08-11T11:31:26.466Z"
     },
     "3": {
       "typ": "gemischt",
@@ -3301,6 +3420,7 @@
           "von": 41,
           "bis": 160,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3326,6 +3446,7 @@
           "von": 164,
           "bis": 302,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3392,6 +3513,7 @@
           "von": 458,
           "bis": 551,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3469,6 +3591,7 @@
           "von": 910,
           "bis": 985,
           "typ": "gleichstellung",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3494,6 +3617,7 @@
           "von": 989,
           "bis": 1070,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3519,6 +3643,7 @@
           "von": 1074,
           "bis": 1202,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3544,6 +3669,7 @@
           "von": 1207,
           "bis": 1363,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3569,8 +3695,26 @@
           "von": 1367,
           "bis": 1554,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Erwerb eines Grundstücks durch Personen, die mit dem Veräußerer in gerader Linie verwandt sind oder deren Verwandtschaft durch die Annahme als Kind bürgerlich-rechtlich erloschen ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 6",
+              "von": 1367,
+              "laenge": 186,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 6 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Nr. 6 Halbs. 2",
@@ -3665,6 +3809,7 @@
           "von": 1707,
           "bis": 1845,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3742,6 +3887,7 @@
           "von": 1958,
           "bis": 2051,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -3939,6 +4085,14 @@
                 },
                 {
                   "n": "11.",
+                  "t": "der Erwerb eines Grundstücks durch Personen, die mit dem Veräußerer in gerader Linie verwandt sind oder deren Verwandtschaft durch die Annahme als Kind bürgerlich-rechtlich erloschen ist",
+                  "pfad": "Nr. 6",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "12.",
                   "t": "Personen stehen deren Ehegatten oder deren Lebenspartner",
                   "pfad": "Nr. 6 Halbs. 3",
                   "konfidenz": 0.6,
@@ -3946,7 +4100,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "13.",
                   "t": "der Erwerb eines zum Gesamtgut gehörigen Grundstücks durch Teilnehmer an einer fortgesetzten Gütergemeinschaft zur Teilung des Gesamtguts",
                   "pfad": "Nr. 7",
                   "konfidenz": 0.6,
@@ -3954,7 +4108,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "13.",
+                  "n": "14.",
                   "t": "ihre Ehegatten oder ihre Lebenspartner",
                   "pfad": "Nr. 7 Halbs. 2",
                   "konfidenz": 0.6,
@@ -3962,7 +4116,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "14.",
+                  "n": "15.",
                   "t": "der Rückerwerb eines Grundstücks durch den Treugeber bei Auflösung des Treuhandverhältnisses",
                   "pfad": "Nr. 8",
                   "konfidenz": 0.6,
@@ -3970,7 +4124,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "15.",
+                  "n": "16.",
                   "t": "die Steuer entrichtet worden ist",
                   "pfad": "Nr. 8 Halbs. 2",
                   "konfidenz": 0.6,
@@ -4072,6 +4226,7 @@
         "der Grundstückserwerb durch den Ehegatten oder den Lebenspartner des Veräußerers",
         "der Grundstückserwerb durch den früheren Ehegatten des Veräußerers im Rahmen der Vermögensauseinandersetzung nach der Scheidung",
         "der Grundstückserwerb durch den früheren Lebenspartner des Veräußerers im Rahmen der Vermögensauseinandersetzung nach der Aufhebung der Lebenspartnerschaft",
+        "der Erwerb eines Grundstücks durch Personen, die mit dem Veräußerer in gerader Linie verwandt sind oder deren Verwandtschaft durch die Annahme als Kind bürgerlich-rechtlich erloschen ist",
         "Personen stehen deren Ehegatten oder deren Lebenspartner",
         "der Erwerb eines zum Gesamtgut gehörigen Grundstücks durch Teilnehmer an einer fortgesetzten Gütergemeinschaft zur Teilung des Gesamtguts",
         "ihre Ehegatten oder ihre Lebenspartner",
@@ -4093,7 +4248,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.581,
+      "konfidenz": 0.582,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -4103,7 +4258,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0d9100cc707691292eee54ade89380a6cba967867d01d11c54cd8cfe9660bcb8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.683Z"
+      "aktualisiert": "2026-08-11T11:31:26.469Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4158,8 +4313,26 @@
           "von": 41,
           "bis": 352,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Erwerb eines Grundstücks durch eine juristische Person öffentlichen Rechts, wenn das Grundstück aus Anlaß des Übergangs von öffentlich-rechtlichen Aufgaben oder aus Anlaß von Grenzänderungen von der einen auf die andere juristische Person übergeht und nicht überwiegend einem Betrieb gewerblicher Art dient",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 1",
+              "von": 41,
+              "laenge": 310,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Nr. 2",
@@ -4191,14 +4364,33 @@
           "von": 567,
           "bis": 763,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Erwerb eines Grundstücks durch einen ausländischen Staat oder eine ausländische kulturelle Einrichtung, wenn das Grundstück für kulturelle Zwecke bestimmt ist und Gegenseitigkeit gewährt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 3",
+              "von": 567,
+              "laenge": 195,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Nr. 4",
           "von": 767,
           "bis": 1315,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -4207,6 +4399,7 @@
           "von": 1319,
           "bis": 1834,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -4272,6 +4465,7 @@
           "von": 2107,
           "bis": 2237,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -4297,6 +4491,7 @@
           "von": 2241,
           "bis": 2812,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         }
@@ -4323,6 +4518,14 @@
                 },
                 {
                   "n": "2.",
+                  "t": "der Erwerb eines Grundstücks durch eine juristische Person öffentlichen Rechts, wenn das Grundstück aus Anlaß des Übergangs von öffentlich-rechtlichen Aufgaben oder aus Anlaß von Grenzänderungen von der einen auf die andere juristische Person übergeht und nicht überwiegend einem Betrieb gewerblicher Art dient",
+                  "pfad": "Nr. 1",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "wenn das Grundstück für die Zwecke von Botschaften, Gesandtschaften oder Konsulaten dieses Staates bestimmt ist und Gegenseitigkeit gewährt wird",
                   "pfad": "Nr. 2",
                   "konfidenz": 0.6,
@@ -4330,7 +4533,15 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "4.",
+                  "t": "der Erwerb eines Grundstücks durch einen ausländischen Staat oder eine ausländische kulturelle Einrichtung, wenn das Grundstück für kulturelle Zwecke bestimmt ist und Gegenseitigkeit gewährt wird",
+                  "pfad": "Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Die Ausnahme von der Besteuerung",
                   "pfad": "Nr. 5 Halbs. 2",
                   "konfidenz": 0.6,
@@ -4338,7 +4549,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "6.",
                   "t": "wenn die juristische Person des öffentlichen Rechts auf die Rückübertragung des Grundstücks verzichtet oder das Grundstück nicht mehr für einen öffentlichen Dienst oder Gebrauch genutzt wird",
                   "pfad": "Nr. 5 Halbs. 2",
                   "konfidenz": 0.6,
@@ -4346,7 +4557,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "5.",
+                  "n": "7.",
                   "t": "Erwerbe, die allein auf dem Austritt des Vereinigten Königreichs Großbritannien und Nordirland aus der Europäischen Union beruhen",
                   "pfad": "Nr. 6",
                   "konfidenz": 0.6,
@@ -4383,7 +4594,9 @@
       ],
       "tb": [
         "Von der Besteuerung",
+        "der Erwerb eines Grundstücks durch eine juristische Person öffentlichen Rechts, wenn das Grundstück aus Anlaß des Übergangs von öffentlich-rechtlichen Aufgaben oder aus Anlaß von Grenzänderungen von der einen auf die andere juristische Person übergeht und nicht überwiegend einem Betrieb gewerblicher Art dient",
         "wenn das Grundstück für die Zwecke von Botschaften, Gesandtschaften oder Konsulaten dieses Staates bestimmt ist und Gegenseitigkeit gewährt wird",
+        "der Erwerb eines Grundstücks durch einen ausländischen Staat oder eine ausländische kulturelle Einrichtung, wenn das Grundstück für kulturelle Zwecke bestimmt ist und Gegenseitigkeit gewährt wird",
         "Die Ausnahme von der Besteuerung",
         "wenn die juristische Person des öffentlichen Rechts auf die Rückübertragung des Grundstücks verzichtet oder das Grundstück nicht mehr für einen öffentlichen Dienst oder Gebrauch genutzt wird",
         "Erwerbe, die allein auf dem Austritt des Vereinigten Königreichs Großbritannien und Nordirland aus der Europäischen Union beruhen"
@@ -4396,7 +4609,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -4406,7 +4619,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "db5743e4ce533ba514ad78971debd5b71eccd08413b1e27d14c59d6e39a89cb9",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.685Z"
+      "aktualisiert": "2026-08-11T11:31:26.472Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4984,7 +5197,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3c8f7619a8084185f67030722fed1d2f47e66c14ad76f4182493ec78968e0b9a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.687Z"
+      "aktualisiert": "2026-08-11T11:31:26.474Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5836,7 +6049,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "a4c9913652d425d8880b72361649db0f40d2f163cc93aee133d7a78362f9d874",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.690Z"
+      "aktualisiert": "2026-08-11T11:31:26.478Z"
     },
     "7": {
       "typ": "konditional",
@@ -6168,7 +6381,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b008432f8b3a3f26b502cb06f814a0747de96cc69371744c8d69af67304338bb",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.692Z"
+      "aktualisiert": "2026-08-11T11:31:26.480Z"
     },
     "8": {
       "typ": "gemischt",
@@ -6257,6 +6470,7 @@
           "von": 290,
           "bis": 446,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6282,6 +6496,7 @@
           "von": 450,
           "bis": 489,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6556,7 +6771,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "78fb31726a2bb49c202056cdf9d4d3e58d76c4bff9a7139f34b4149ea5bcbf5a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.694Z"
+      "aktualisiert": "2026-08-11T11:31:26.482Z"
     },
     "9": {
       "typ": "gemischt",
@@ -6595,6 +6810,7 @@
           "von": 28,
           "bis": 168,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6702,6 +6918,7 @@
           "von": 405,
           "bis": 553,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6727,6 +6944,7 @@
           "von": 557,
           "bis": 657,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6845,8 +7063,26 @@
           "von": 876,
           "bis": 1131,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "bei der Abtretung des Übereignungsanspruchs: die Übernahme der Verpflichtung aus dem Rechtsgeschäft, das den Übereignungsanspruch begründet hat, einschließlich der besonderen Leistungen, zu denen sich der Übernehmer dem Abtretenden gegenüber verpflichtet",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 6",
+              "von": 876,
+              "laenge": 254,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 6 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 6 Halbs. 2",
@@ -6894,6 +7130,7 @@
           "von": 1219,
           "bis": 1257,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -6992,6 +7229,7 @@
           "von": 1585,
           "bis": 1598,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -7042,6 +7280,7 @@
           "von": 1633,
           "bis": 1769,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -7067,6 +7306,7 @@
           "von": 1773,
           "bis": 1873,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -7158,16 +7398,52 @@
           "von": 2011,
           "bis": 2175,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 2011,
+              "laenge": 163,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 4",
           "von": 2179,
           "bis": 2344,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 4",
+              "von": 2179,
+              "laenge": 164,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 1",
@@ -7292,6 +7568,14 @@
                 },
                 {
                   "n": "8.",
+                  "t": "bei der Abtretung des Übereignungsanspruchs: die Übernahme der Verpflichtung aus dem Rechtsgeschäft, das den Übereignungsanspruch begründet hat, einschließlich der besonderen Leistungen, zu denen sich der Übernehmer dem Abtretenden gegenüber verpflichtet",
+                  "pfad": "Abs. 1 Nr. 6",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
                   "t": "Leistungen, die der Abtretende dem Übernehmer gegenüber übernimmt",
                   "pfad": "Abs. 1 Nr. 6 Halbs. 2",
                   "konfidenz": 0.6,
@@ -7299,7 +7583,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "9.",
+                  "n": "10.",
                   "t": "bei der Enteignung: die Entschädigung",
                   "pfad": "Abs. 1 Nr. 7",
                   "konfidenz": 0.6,
@@ -7307,7 +7591,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "10.",
+                  "n": "11.",
                   "t": "Wird ein Grundstück enteignet, das zusammen mit anderen Grundstücken eine wirtschaftliche Einheit bildet",
                   "pfad": "Abs. 1 Nr. 7 Halbs. 2",
                   "konfidenz": 0.6,
@@ -7315,7 +7599,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "11.",
+                  "n": "12.",
                   "t": "wenn ein Grundstück zur Vermeidung der Enteignung freiwillig veräußert wird",
                   "pfad": "Abs. 1 Nr. 7 Halbs. 2",
                   "konfidenz": 0.6,
@@ -7323,7 +7607,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "12.",
+                  "n": "13.",
                   "t": "(weggefallen)",
                   "pfad": "Abs. 1 Nr. 8",
                   "konfidenz": 0.45,
@@ -7447,6 +7731,22 @@
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
+                  "pfad": "Abs. 2 Nr. 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -7522,6 +7822,7 @@
         "bei der Abtretung der Rechte aus dem Meistgebot: die Übernahme der Verpflichtung aus dem Meistgebot",
         "Zusätzliche Leistungen, zu denen sich der Erwerber gegenüber dem Meistbietenden verpflichtet",
         "Leistungen, die der Meistbietende dem Erwerber gegenüber übernimmt",
+        "bei der Abtretung des Übereignungsanspruchs: die Übernahme der Verpflichtung aus dem Rechtsgeschäft, das den Übereignungsanspruch begründet hat, einschließlich der besonderen Leistungen, zu denen sich der Übernehmer dem Abtretenden gegenüber verpflichtet",
         "Leistungen, die der Abtretende dem Übernehmer gegenüber übernimmt",
         "bei der Enteignung: die Entschädigung",
         "Wird ein Grundstück enteignet, das zusammen mit anderen Grundstücken eine wirtschaftliche Einheit bildet",
@@ -7531,6 +7832,8 @@
         "Leistungen, die der Erwerber des Grundstücks dem Veräußerer neben der beim Erwerbsvorgang vereinbarten Gegenleistung zusätzlich gewährt",
         "die Belastungen, die auf dem Grundstück ruhen, soweit sie auf den Erwerber kraft Gesetzes übergehen",
         "Zur Gegenleistung",
+        "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+        "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
         "Die Grunderwerbsteuer, die für den zu besteuernden Erwerbsvorgang zu entrichten ist"
       ],
       "rf": [
@@ -7550,7 +7853,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.568,
+      "konfidenz": 0.571,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -7560,7 +7863,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0ee8d45dcff4fbed7fd58591304712cfde5f3948bde9284af3c376d7640bb424",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.697Z"
+      "aktualisiert": "2026-08-11T11:31:26.485Z"
     },
     "10": {
       "typ": "aussage",
@@ -7637,7 +7940,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "766cab28eb7582f35619b67a1f50e763c5303a04d6c557b60a0a52cd7ae416a0",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.697Z"
+      "aktualisiert": "2026-08-11T11:31:26.485Z"
     },
     "11": {
       "typ": "gemischt",
@@ -7762,7 +8065,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3ad487f20ed4f6ee7a626dee53282416b1ac9e56879ba06e5a4f001f9b473df8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.697Z"
+      "aktualisiert": "2026-08-11T11:31:26.486Z"
     },
     "12": {
       "typ": "konditional",
@@ -7872,7 +8175,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "bf8547ecf0f8e69612a1b29e94f436e711501da660185151d59577b582dae0b4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.698Z"
+      "aktualisiert": "2026-08-11T11:31:26.486Z"
     },
     "13": {
       "typ": "gemischt",
@@ -7952,6 +8255,7 @@
           "von": 107,
           "bis": 177,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -7977,6 +8281,7 @@
           "von": 181,
           "bis": 231,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8002,6 +8307,7 @@
           "von": 235,
           "bis": 303,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8027,14 +8333,33 @@
           "von": 307,
           "bis": 486,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "a) bei der Vereinigung von mindestens 90 vom Hundert der Anteile an einer Gesellschaft in der Hand aa) des Erwerbers: der Erwerber und die Gesellschaft, der das Grundstück gehört",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 5",
+              "von": 307,
+              "laenge": 178,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "bb)",
           "von": 491,
           "bis": 593,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8127,6 +8452,14 @@
                 },
                 {
                   "n": "5.",
+                  "t": "a) bei der Vereinigung von mindestens 90 vom Hundert der Anteile an einer Gesellschaft in der Hand aa) des Erwerbers: der Erwerber und die Gesellschaft, der das Grundstück gehört",
+                  "pfad": "Nr. 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "mehrerer Unternehmen oder Personen: diese Beteiligten und die Gesellschaft, der das Grundstück gehört",
                   "pfad": "bb)",
                   "konfidenz": 0.6,
@@ -8174,6 +8507,7 @@
         "beim Erwerb kraft Gesetzes: der bisherige Eigentümer und der Erwerber",
         "beim Erwerb im Enteignungsverfahren: der Erwerber",
         "beim Meistgebot im Zwangsversteigerungsverfahren: der Meistbietende",
+        "a) bei der Vereinigung von mindestens 90 vom Hundert der Anteile an einer Gesellschaft in der Hand aa) des Erwerbers: der Erwerber und die Gesellschaft, der das Grundstück gehört",
         "mehrerer Unternehmen oder Personen: diese Beteiligten und die Gesellschaft, der das Grundstück gehört"
       ],
       "rf": [
@@ -8185,7 +8519,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.54,
+      "konfidenz": 0.547,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -8195,7 +8529,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "46c5458f52a4482314113dfbb965af8814039ea97871e95b1f07e2588b1d50fc",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.699Z"
+      "aktualisiert": "2026-08-11T11:31:26.487Z"
     },
     "14": {
       "typ": "gemischt",
@@ -8315,7 +8649,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24c525156c1ca1fe3d83a8793737da83d566827bf06247e0058a266207c1da0b",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.699Z"
+      "aktualisiert": "2026-08-11T11:31:26.488Z"
     },
     "15": {
       "typ": "aussage",
@@ -8425,7 +8759,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "39b1f0995e316ef4b70dfffc3c69b6a0a74e274b22d72bd639312d0c2c98a080",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.699Z"
+      "aktualisiert": "2026-08-11T11:31:26.488Z"
     },
     "16": {
       "typ": "gemischt",
@@ -8480,55 +8814,24 @@
           "von": 201,
           "bis": 398,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "wenn die Rückgängigmachung durch Vereinbarung",
+              "text": "wenn die Rückgängigmachung durch Vereinbarung, durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer stattfindet",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
               "von": 201,
-              "laenge": 45,
+              "laenge": 196,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
-            },
-            {
-              "art": "tb",
-              "text": "durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 1",
-              "von": 248,
-              "laenge": 137,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld (um Ausnahme gekürzt)"
-            },
-            {
-              "art": "rf",
-              "text": "stattfindet",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 1",
-              "von": 386,
-              "laenge": 11,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -8587,6 +8890,7 @@
           "von": 779,
           "bis": 908,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8603,7 +8907,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -8727,6 +9031,7 @@
           "von": 1592,
           "bis": 1683,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -8743,7 +9048,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -8897,7 +9202,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "wenn die Rückgängigmachung durch Vereinbarung",
+                  "t": "wenn die Rückgängigmachung durch Vereinbarung, durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer stattfindet",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -8905,14 +9210,6 @@
                 },
                 {
                   "n": "3.",
-                  "t": "durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer",
-                  "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
                   "t": "wenn die Vertragsbedingungen nicht erfüllt werden und der Erwerbsvorgang deshalb auf Grund eines Rechtsanspruchs rückgängig gemacht wird",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.6,
@@ -8931,14 +9228,6 @@
                   "t": "wird auf Antrag die Steuer nicht festgesetzt oder die Steuerfestsetzung aufgehoben",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "stattfindet",
-                  "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9148,8 +9437,7 @@
       ],
       "tb": [
         "Wird ein Erwerbsvorgang rückgängig gemacht bevor das Eigentum am Grundstück auf den Erwerber übergegangen ist",
-        "wenn die Rückgängigmachung durch Vereinbarung",
-        "durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer",
+        "wenn die Rückgängigmachung durch Vereinbarung, durch Ausübung eines vorbehaltenen Rücktrittsrechts oder eines Wiederkaufsrechts innerhalb von zwei Jahren seit der Entstehung der Steuer stattfindet",
         "wenn die Vertragsbedingungen nicht erfüllt werden und der Erwerbsvorgang deshalb auf Grund eines Rechtsanspruchs rückgängig gemacht wird",
         "wenn der Rückerwerb innerhalb von zwei Jahren seit der Entstehung der Steuer für den vorausgegangenen Erwerbsvorgang stattfindet",
         "Ist für den Rückerwerb eine Eintragung in das Grundbuch erforderlich",
@@ -9162,7 +9450,6 @@
       ],
       "rf": [
         "wird auf Antrag die Steuer nicht festgesetzt oder die Steuerfestsetzung aufgehoben",
-        "stattfindet",
         "Erwirbt der Veräußerer das Eigentum an dem veräußerten Grundstück zurück, so wird auf Antrag sowohl für den Rückerwerb als auch für den vorausgegangenen Erwerbsvorgang die Steuer nicht festgesetzt oder die Steuerfestsetzung aufgehoben",
         "muß innerhalb der Frist die Auflassung erklärt und die Eintragung im Grundbuch beantragt werden",
         "wird auf Antrag die Steuer entsprechend niedriger festgesetzt oder die Steuerfestsetzung geändert",
@@ -9173,7 +9460,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.564,
+      "konfidenz": 0.568,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -9183,7 +9470,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "42da45a0690cd164ec1b6c48c32990f3263beeca4ac3a288775bbc7025a12d66",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.702Z"
+      "aktualisiert": "2026-08-11T11:31:26.490Z"
     },
     "17": {
       "typ": "gemischt",
@@ -9369,23 +9656,24 @@
           "von": 985,
           "bis": 1114,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "befindet",
+              "art": "tb",
+              "text": "in den Fällen des § 1 Absatz 2a bis 3a durch das Finanzamt, in dessen Bezirk sich die Geschäftsleitung der Gesellschaft befindet",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 2",
-              "von": 1105,
-              "laenge": 8,
-              "konfidenz": 0.45,
+              "von": 985,
+              "laenge": 128,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -9567,39 +9855,24 @@
           "von": 2003,
           "bis": 2135,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "tb",
-              "text": "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht",
+              "art": "rf",
+              "text": "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht übersteigt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 2",
               "von": 2003,
-              "laenge": 120,
+              "laenge": 131,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "übersteigt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 2",
-              "von": 2124,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Aufzählungsglied Nr. 2 — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -9760,6 +10033,22 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": "oder",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "in den Fällen des § 1 Absatz 2a bis 3a durch das Finanzamt, in dessen Bezirk sich die Geschäftsleitung der Gesellschaft befindet",
+                  "pfad": "Abs. 3 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -9773,14 +10062,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "befindet",
-                  "pfad": "Abs. 3 Nr. 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "gesondert festgestellt",
                   "pfad": "Abs. 3 Satz 1 (Teil 2)",
                   "konfidenz": 0.45,
@@ -9788,7 +10069,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "Befindet sich die Geschäftsleitung nicht im Geltungsbereich des Gesetzes und werden in verschiedenen Finanzamtsbezirken liegende Grundstücke oder in verschiedenen Ländern liegende Grundstücksteile betroffen, so stellt das nach Absatz 2 zuständige Finanzamt die Besteuerungsgrundlagen gesondert fest",
                   "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.42,
@@ -9874,14 +10155,6 @@
                 },
                 {
                   "n": "3.",
-                  "t": "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht",
-                  "pfad": "Abs. 4 Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
                   "t": "Wird von der gesonderten Feststellung abgesehen",
                   "pfad": "Abs. 4 Satz 1 (Teil 2)",
                   "konfidenz": 0.6,
@@ -9905,9 +10178,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "übersteigt",
+                  "t": "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht übersteigt",
                   "pfad": "Abs. 4 Nr. 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -9928,11 +10201,11 @@
         "Für die Besteuerung",
         "Liegt das Grundstück in den Bezirken von Finanzämtern verschiedener Länder",
         "In den Fällen des Absatzes 1 Satz 2 sowie in Fällen, in denen sich ein Rechtsvorgang auf mehrere Grundstücke",
+        "in den Fällen des § 1 Absatz 2a bis 3a durch das Finanzamt, in dessen Bezirk sich die Geschäftsleitung der Gesellschaft befindet",
         "In die gesonderte Feststellung nach Absatz 2 und 3",
         "wenn die Steuer nach § 8 Absatz 2 zu bemessen ist",
         "Von der gesonderten Feststellung",
         "der Erwerb steuerfrei",
-        "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht",
         "Wird von der gesonderten Feststellung abgesehen"
       ],
       "rf": [
@@ -9940,12 +10213,11 @@
         "ist jedes dieser Finanzämter für die Besteuerung des Erwerbs insoweit zuständig, als der Grundstücksteil in seinem Bezirk liegt",
         "bezieht, die in den Bezirken verschiedener Finanzämter liegen, stellt das Finanzamt, in dessen Bezirk der wertvollste Grundstücksteil oder das wertvollste Grundstück oder der wertvollste Bestand an Grundstücksteilen oder Grundstücken liegt, die Besteuerungsgrundlagen gesondert fest",
         "befindet",
-        "befindet",
         "gesondert festgestellt",
         "Befindet sich die Geschäftsleitung nicht im Geltungsbereich des Gesetzes und werden in verschiedenen Finanzamtsbezirken liegende Grundstücke oder in verschiedenen Ländern liegende Grundstücksteile betroffen, so stellt das nach Absatz 2 zuständige Finanzamt die Besteuerungsgrundlagen gesondert fest",
         "sind nicht die Grundbesitzwerte im Sinne des § 151 Absatz 1 Satz 1 Nummer 1 in Verbindung mit § 157 Absatz 1 bis 3 des Bewertungsgesetzes aufzunehmen",
         "kann abgesehen werden",
-        "übersteigt",
+        "die anteilige Besteuerungsgrundlage für den Erwerb des in einem anderen Land liegenden Grundstücksteils 2.500 Euro nicht übersteigt",
         "ist in den Fällen der Nummer 2 die anteilige Besteuerungsgrundlage denen der anderen für die Besteuerung zuständigen Finanzämter nach dem Verhältnis ihrer Anteile hinzuzurechnen"
       ],
       "ausnahmen": [
@@ -9954,7 +10226,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.557,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -9964,7 +10236,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "f3e0628da5fcba4dfa239a523c62628fb15acaf2bd9004871719752ac6d59d25",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.704Z"
+      "aktualisiert": "2026-08-11T11:31:26.493Z"
     },
     "18": {
       "typ": "gemischt",
@@ -10021,16 +10293,52 @@
           "von": 142,
           "bis": 349,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 1",
+              "von": 142,
+              "laenge": 206,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 353,
           "bis": 584,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2",
+              "von": 353,
+              "laenge": 230,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Nr. 3",
@@ -10416,6 +10724,22 @@
                 },
                 {
                   "n": "2.",
+                  "t": "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.48,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "Zuschlagsbeschlüsse im Zwangsversteigerungsverfahren, Enteignungsbeschlüsse und andere Entscheidungen, durch die ein Wechsel im Grundstückseigentum",
                   "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
@@ -10423,7 +10747,7 @@
                   "mehrteilig": false
                 },
                 {
-                  "n": "3.",
+                  "n": "5.",
                   "t": "nachträgliche Änderungen oder Berichtigungen eines der unter Nummern 1 bis 3",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
@@ -10628,6 +10952,8 @@
       ],
       "tb": [
         "Gerichte, Behörden und Notare",
+        "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+        "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
         "Zuschlagsbeschlüsse im Zwangsversteigerungsverfahren, Enteignungsbeschlüsse und andere Entscheidungen, durch die ein Wechsel im Grundstückseigentum",
         "nachträgliche Änderungen oder Berichtigungen eines der unter Nummern 1 bis 3",
         "wenn zum Vermögen der Gesellschaft ein im Geltungsbereich dieses Gesetzes liegendes Grundstück gehört",
@@ -10651,7 +10977,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.574,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -10661,7 +10987,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "04d0b19f648927575e836296e891bd128961477072acc65de45d59bc6dd9ced3",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.708Z"
+      "aktualisiert": "2026-08-11T11:31:26.497Z"
     },
     "19": {
       "typ": "gemischt",
@@ -10718,6 +11044,7 @@
           "von": 49,
           "bis": 225,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10743,6 +11070,7 @@
           "von": 229,
           "bis": 365,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10768,6 +11096,7 @@
           "von": 369,
           "bis": 411,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10793,6 +11122,7 @@
           "von": 416,
           "bis": 741,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10818,6 +11148,7 @@
           "von": 746,
           "bis": 1063,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10843,6 +11174,7 @@
           "von": 1067,
           "bis": 1272,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10876,6 +11208,7 @@
           "von": 1417,
           "bis": 1615,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10901,6 +11234,7 @@
           "von": 1619,
           "bis": 1791,
           "typ": "tarif",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -10951,6 +11285,7 @@
           "von": 2087,
           "bis": 2140,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -11116,30 +11451,85 @@
           "von": 3009,
           "bis": 3173,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 3009,
+              "laenge": 163,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 3",
           "von": 3177,
           "bis": 3342,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 3177,
+              "laenge": 164,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 4",
           "von": 3346,
           "bis": 3504,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Änderungen im Gesellschafterbestand einer Gesamthand bei Gewährung der Steuervergünstigung nach § 5 Abs. 1 und 2 oder § 6 Abs. 3 in Verbindung mit § 6 Abs. 1",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 4",
+              "von": 3346,
+              "laenge": 157,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 4a",
           "von": 3509,
           "bis": 3576,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -11165,8 +11555,26 @@
           "von": 3580,
           "bis": 3726,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Änderungen in der Nutzung oder den Verzicht auf Rückübertragung, wenn der Grundstückserwerb nach § 4 Nummer 5 von der Besteuerung ausgenommen war",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 5",
+              "von": 3580,
+              "laenge": 145,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 3 Satz 1",
@@ -11385,47 +11793,20 @@
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             },
             {
-              "art": "tb",
-              "text": "§ 152 Absatz 6 der Abgabenordnung",
+              "art": "ausn",
+              "text": "§ 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 1",
               "von": 4534,
-              "laenge": 33,
+              "laenge": 54,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "ist nicht",
-              "anzeige": "ist nicht … anzuwenden",
-              "teile": [
-                {
-                  "text": "ist nicht",
-                  "von": 4568,
-                  "laenge": 9
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 4578,
-                  "laenge": 10
-                }
-              ],
-              "pfad": "Abs. 6 Satz 1",
-              "von": 4568,
-              "laenge": 9,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Satzausnahme: „§ 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden\""
             }
           ]
         },
@@ -11676,8 +12057,40 @@
                 },
                 {
                   "n": "3.",
+                  "t": "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "Änderungen im Gesellschafterbestand einer Gesamthand bei Gewährung der Steuervergünstigung nach § 5 Abs. 1 und 2 oder § 6 Abs. 3 in Verbindung mit § 6 Abs. 1",
+                  "pfad": "Abs. 2 Nr. 4",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "Änderungen von Beherrschungsverhältnissen im Sinne des § 6a Satz 4",
                   "pfad": "Abs. 2 4a",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "Änderungen in der Nutzung oder den Verzicht auf Rückübertragung, wenn der Grundstückserwerb nach § 4 Nummer 5 von der Besteuerung ausgenommen war",
+                  "pfad": "Abs. 2 Nr. 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -11847,19 +12260,11 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "§ 152 Absatz 6 der Abgabenordnung",
-                  "pfad": "Abs. 6 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "Die Begrenzung der Höhe des Verspätungszuschlags nach § 152 Absatz 10 der Abgabenordnung",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -11870,6 +12275,21 @@
             },
             {
               "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "§ 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden",
+                  "pfad": "Abs. 6 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -11883,14 +12303,6 @@
                 },
                 {
                   "n": "2.",
-                  "t": "ist nicht … anzuwenden",
-                  "pfad": "Abs. 6 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
                   "t": "findet keine Anwendung",
                   "pfad": "Abs. 6 Satz 2",
                   "konfidenz": 0.6,
@@ -11944,11 +12356,14 @@
         "Anzeige erstatten über",
         "Die in Absatz 1",
         "jede Erhöhung der Gegenleistung des Erwerbers durch Gewährung von zusätzlichen Leistungen",
+        "Leistungen, die der Erwerber des Grundstücks anderen Personen als dem Veräußerer als Gegenleistung dafür gewährt, daß sie auf den Erwerb des Grundstücks verzichten",
+        "Leistungen, die ein anderer als der Erwerber des Grundstücks dem Veräußerer als Gegenleistung dafür gewährt, daß der Veräußerer dem Erwerber das Grundstück überläßt",
+        "Änderungen im Gesellschafterbestand einer Gesamthand bei Gewährung der Steuervergünstigung nach § 5 Abs. 1 und 2 oder § 6 Abs. 3 in Verbindung mit § 6 Abs. 1",
         "Änderungen von Beherrschungsverhältnissen im Sinne des § 6a Satz 4",
+        "Änderungen in der Nutzung oder den Verzicht auf Rückübertragung, wenn der Grundstückserwerb nach § 4 Nummer 5 von der Besteuerung ausgenommen war",
         "wenn der Vorgang von der Besteuerung ausgenommen ist",
         "Ist über den anzeigepflichtigen Vorgang eine privatschriftliche Urkunde aufgenommen worden",
         "schriftlich abzugeben",
-        "§ 152 Absatz 6 der Abgabenordnung",
         "Die Begrenzung der Höhe des Verspätungszuschlags nach § 152 Absatz 10 der Abgabenordnung",
         "In den Fällen des Absatzes 2 Nummer 4"
       ],
@@ -11974,15 +12389,16 @@
         "sind Steuererklärungen im Sinne der Abgabenordnung",
         "können gemäß § 87a der Abgabenordnung in elektronischer Form übermittelt werden",
         "bestimmt sich nach § 152 Absatz 5 Satz 2 der Abgabenordnung",
-        "ist nicht",
         "findet keine Anwendung",
         "beginnt die Festsetzungsfrist mit Ablauf des Kalenderjahres, in dem das in Absatz 4 Satz 1 genannte Finanzamt von der anzeigepflichtigen Änderung Kenntnis erlangt hat, spätestens jedoch zehn Jahre nach Ablauf des Kalenderjahres, in dem die anzeigepflichtige Änderung eingetreten ist"
       ],
-      "ausnahmen": [],
+      "ausnahmen": [
+        "§ 152 Absatz 6 der Abgabenordnung ist nicht anzuwenden"
+      ],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.573,
+      "konfidenz": 0.577,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11992,7 +12408,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "421d817066a188cd162b3564fc5eb6bf82f8e737705a627af9a55f6805af07d8",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.713Z"
+      "aktualisiert": "2026-08-11T11:31:26.503Z"
     },
     "20": {
       "typ": "gemischt",
@@ -12014,6 +12430,7 @@
           "von": 34,
           "bis": 780,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "oder",
           "elemente": []
         },
@@ -12022,6 +12439,7 @@
           "von": 784,
           "bis": 1043,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12047,6 +12465,7 @@
           "von": 1047,
           "bis": 1124,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12072,6 +12491,7 @@
           "von": 1128,
           "bis": 1419,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12097,6 +12517,7 @@
           "von": 1423,
           "bis": 1475,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12122,6 +12543,7 @@
           "von": 1479,
           "bis": 1525,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12188,6 +12610,7 @@
           "von": 1623,
           "bis": 1960,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12213,6 +12636,7 @@
           "von": 1964,
           "bis": 2014,
           "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
@@ -12430,7 +12854,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eb7dfc4c9ebbaf600ba951a3e74b55598e3274002f9498732d94e702ca6dab94",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.715Z"
+      "aktualisiert": "2026-08-11T11:31:26.505Z"
     },
     "21": {
       "typ": "konditional",
@@ -12565,7 +12989,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5d53e5f83f013210c384d8303c904bf28c4878565fb5802d303a8bb08baee626",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.716Z"
+      "aktualisiert": "2026-08-11T11:31:26.505Z"
     },
     "22": {
       "typ": "gemischt",
@@ -13015,7 +13439,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "64b5839d9cd43878dda1933c5e60c6302ac30f840e5cfe5095a6b34d084b055a",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.717Z"
+      "aktualisiert": "2026-08-11T11:31:26.506Z"
     },
     "23": {
       "typ": "gemischt",
@@ -14305,7 +14729,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "978f2a77f0eda2694000ef77420195b7a8347a2eec758549b18a6a195cb748c0",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.724Z"
+      "aktualisiert": "2026-08-11T11:31:26.514Z"
     },
     "24": {
       "typ": "aussage",
@@ -14426,7 +14850,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d449cd3a7730d619fee009b4a534856e153a835e709ff511d1ff759f911b5327",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.731Z"
+      "aktualisiert": "2026-08-11T11:31:26.522Z"
     },
     "28": {
       "typ": "aussage",
@@ -14503,7 +14927,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "844df424a9c5cb55f23b7ad11f00abcc40f560f2daea33c41ef135da0c5fbab4",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.731Z"
+      "aktualisiert": "2026-08-11T11:31:26.522Z"
     },
     "6a": {
       "typ": "gemischt",
@@ -14676,7 +15100,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "790c81c7c333c044ecda5c9f80420a3e8bd01eb4c0c27f5564a97df5266dbe98",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.691Z"
+      "aktualisiert": "2026-08-11T11:31:26.479Z"
     },
     "22a": {
       "typ": "gemischt",
@@ -14756,8 +15180,26 @@
           "von": 622,
           "bis": 872,
           "typ": "konditional",
+          "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 2",
+              "von": 622,
+              "laenge": 249,
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         }
       ],
       "schema": [
@@ -14769,7 +15211,7 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
+              "t": "Voraussetzungen (kumulativ)",
               "junktor": "und",
               "sub": [
                 {
@@ -14777,6 +15219,14 @@
                   "t": "Einzelheiten der Datenübermittlung und Datenbereitstellung zu",
                   "pfad": "Nr. 1",
                   "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen",
+                  "pfad": "Nr. 2",
+                  "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -14809,7 +15259,8 @@
         }
       ],
       "tb": [
-        "Einzelheiten der Datenübermittlung und Datenbereitstellung zu"
+        "Einzelheiten der Datenübermittlung und Datenbereitstellung zu",
+        "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen"
       ],
       "rf": [
         "wird ermächtigt, im Einvernehmen mit dem Bundesministerium der Justiz und für Verbraucherschutz sowie mit Zustimmung des Bundesrates für Anzeigen nach § 18 Absatz 1 Satz 2, für die Abschrift der Urkunde nach § 18 Absatz 1 Satz 3 und für elektronisch zu erteilende Bescheinigungen nach § 22 Absatz 2 Satz 5 in der ab dem 1. Januar 2028 geltenden Fassung durch Rechtsverordnung",
@@ -14819,7 +15270,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.56,
+      "konfidenz": 0.555,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -14829,7 +15280,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "566d78d42a80084f58de1154ed8c752ec22d886603349dee47e870f3fe77d465",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.718Z"
+      "aktualisiert": "2026-08-11T11:31:26.507Z"
     },
     "(xxxx)-§§-25-bis-27": {
       "typ": "gemischt",
@@ -14852,7 +15303,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T09:36:31.731Z"
+      "aktualisiert": "2026-08-11T11:31:26.522Z"
     }
   }
 }

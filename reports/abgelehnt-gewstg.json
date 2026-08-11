@@ -29,13 +29,6 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Nr. 1",
-    "art": "tb",
-    "text": "das Bundeseisenbahnvermögen, die staatlichen Lotterieunternehmen, die zugelassenen öffentl",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
     "pfad": "Nr. 2",
     "art": "tb",
     "text": "die Deutsche Bundesbank, die Kreditanstalt für Wiederaufbau, die DEG – Deutsche Investitio",
@@ -50,45 +43,10 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Nr. 7",
-    "art": "tb",
-    "text": "Hochsee- und Küstenfischerei, wenn sie mit weniger als sieben im Jahresdurchschnitt beschä",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Nr. 8",
-    "art": "tb",
-    "text": "Genossenschaften sowie Vereine im Sinne des § 5 Abs. 1 Nr. 14 des Körperschaftsteuergesetz",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Nr. 9",
-    "art": "tb",
-    "text": "rechtsfähige Pensions-, Sterbe-, Kranken- und Unterstützungskassen im Sinne des § 5 Abs. 1",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Nr. 10",
-    "art": "tb",
-    "text": "Körperschaften oder Personenvereinigungen, deren Hauptzweck die Verwaltung des Vermögens f",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 3",
     "pfad": "Nr. 11",
     "art": "tb",
     "text": "öffentlich-rechtliche Versicherungs- und Versorgungseinrichtungen von Berufsgruppen, deren",
     "grund": "zu grob (57 Wörter)"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Buchst. b (Teil 2)",
-    "art": "tb",
-    "text": "bei Vereinen das Verhältnis des Werts des Anteils an dem Vereinsvermögen, der im Fall der ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 3",
@@ -162,13 +120,6 @@
   },
   {
     "norm": "§ 8",
-    "pfad": "Buchst. d",
-    "art": "tb",
-    "text": "einem Fünftel der Miet- und Pachtzinsen (einschließlich Leasingraten) für die Benutzung vo",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 8",
     "pfad": "Satz 2",
     "art": "tb",
     "text": "nicht vorzunehmen auf Aufwendungen, die nach § 25 des Künstlersozialversicherungsgesetzes ",
@@ -200,13 +151,6 @@
     "pfad": "Nr. 1 Halbs. 3",
     "art": "tb",
     "text": "wenn a) in Verbindung mit der Errichtung und Veräußerung von Eigentumswohnungen Teileigent",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 9",
-    "pfad": "Buchst. b",
-    "art": "tb",
-    "text": "in Verbindung mit der Verwaltung und Nutzung des eigenen Grundbesitzes Einnahmen aus der L",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -343,11 +287,18 @@
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 11",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "bei Unternehmen im Sinne des § 2 Abs. 3 und des § 3 Nr. 5, 6, 8, 9, 15, 17, 21, 26, 27, 28",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "norm": "§ 10a",
+    "pfad": "Satz 4",
+    "art": "def",
+    "text": "Vorabgewinnanteile",
+    "grund": "Definiendum nur in Definitionen"
+  },
+  {
+    "norm": "§ 10a",
+    "pfad": "Satz 5",
+    "art": "def",
+    "text": "Vorabgewinnanteile",
+    "grund": "Definiendum nur in Definitionen"
   },
   {
     "norm": "§ 11",
@@ -421,20 +372,6 @@
   },
   {
     "norm": "§ 35c",
-    "pfad": "Abs. 1 Buchst. c",
-    "art": "tb",
-    "text": "über die Festsetzung der Steuermessbeträge, soweit dies zur Wahrung der Gleichmäßigkeit de",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 35c",
-    "pfad": "Abs. 1 Buchst. a",
-    "art": "tb",
-    "text": "über die sich aus der Aufhebung oder Änderung von Vorschriften dieses Gesetzes ergebenden ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 35c",
     "pfad": "Abs. 1 Buchst. d (Teil 2)",
     "art": "tb",
     "text": "über die Steuerbefreiung bei",
@@ -446,13 +383,6 @@
     "art": "tb",
     "text": "Beträge (§ 8 Nr. 1 Buchstabe a) bei Kreditinstituten nach dem Verhältnis des Eigenkapitals",
     "grund": "zu grob (69 Wörter)"
-  },
-  {
-    "norm": "§ 35c",
-    "pfad": "Abs. 1 bb)",
-    "art": "tb",
-    "text": "Zahlungsinstituten, soweit sie Zahlungsdienste im Sinne des § 1 Absatz 1 Satz 2 Nummer 3 B",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 35c",

@@ -99,7 +99,7 @@ for (const meta of gesetze) {
         if (Array.isArray(el.teile) && el.teile.length) {
           const grund = pruefeSpanne({ art: el.art, text: el.teile[0].text }, {
             volltext, satztext: einheit.text, typ: satz.typ,
-            verberst: verberst(einheit.text),
+            verberst: verberst(einheit.text), katalog: Boolean(satz.katalog),
             gegenstand: String(gesetz.titel || "").replace(/gesetz.*$/i, "").toLowerCase(),
           });
           if (grund) { warnungen++; gruende.set(grund, (gruende.get(grund) || 0) + 1); }
@@ -117,7 +117,7 @@ for (const meta of gesetze) {
         }
         const grund = pruefeSpanne(el, {
           volltext, satztext: einheit.text, typ: satz.typ,
-          verberst: verberst(einheit.text),
+          verberst: verberst(einheit.text), katalog: Boolean(satz.katalog),
           gegenstand: String(gesetz.titel || "").replace(/gesetz.*$/i, "").toLowerCase(),
         });
         if (grund) {
