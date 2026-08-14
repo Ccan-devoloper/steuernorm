@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T11:31:26.756Z",
+  "aktualisiert": "2026-08-14T10:19:50.330Z",
   "quelle": "https://www.gesetze-im-internet.de/solzg_1995/",
   "stand": [
     {
@@ -778,7 +778,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "592bcfec932aaa416f9efd08950845b39ea43897df5b5f0ef127f5c260e8405a",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.742Z"
+      "aktualisiert": "2026-08-14T10:19:50.323Z"
     },
     "2": {
       "typ": "gemischt",
@@ -969,7 +969,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "eedadfc31d59f0fd0989ac390758b6081daf85482b46b061e4e6ef1a94d281ba",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.742Z"
+      "aktualisiert": "2026-08-14T10:19:50.323Z"
     },
     "3": {
       "typ": "gemischt",
@@ -1106,7 +1106,7 @@
         {
           "pfad": "Abs. 1 Nr. 3",
           "von": 558,
-          "bis": 753,
+          "bis": 642,
           "typ": "konditional",
           "junktor": "und",
           "elemente": [
@@ -1125,27 +1125,37 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bedingungsteil vor dem Doppelpunkt"
-            },
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 1 Nr. 3 Buchst. a",
+          "von": 646,
+          "bis": 753,
+          "typ": "aussage",
+          "katalog": true,
+          "junktor": "und",
+          "elemente": [
             {
-              "art": "rf",
-              "text": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
+              "art": "tb",
+              "text": "laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Nr. 3",
-              "von": 592,
-              "laenge": 160,
+              "pfad": "Abs. 1 Nr. 3 Buchst. a",
+              "von": 646,
+              "laenge": 106,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Anordnungsteil nach dem Doppelpunkt"
+              "grund": "Aufzählungsglied Nr. 3 Buchst. a — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 1 Buchst. b",
+          "pfad": "Abs. 1 Nr. 3 Buchst. b",
           "von": 757,
           "bis": 815,
           "typ": "aussage",
@@ -1157,7 +1167,7 @@
               "text": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Buchst. b",
+              "pfad": "Abs. 1 Nr. 3 Buchst. b",
               "von": 757,
               "laenge": 57,
               "konfidenz": 0.6,
@@ -1166,71 +1176,64 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 3 Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 1 Satz 1 (Teil 2)",
-          "von": 816,
-          "bis": 1383,
+          "pfad": "Abs. 1 Nr. 4",
+          "von": 819,
+          "bis": 961,
           "typ": "konditional",
-          "junktor": null,
+          "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "4. soweit ein Lohnsteuer-Jahresausgleich",
+              "text": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 816,
-              "laenge": 40,
+              "pfad": "Abs. 1 Nr. 4",
+              "von": 819,
+              "laenge": 55,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 857,
-              "laenge": 103,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            },
+              "grund": "Konditionalsatz mit „soweit\""
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 1 Nr. 5",
+          "von": 965,
+          "bis": 1201,
+          "typ": "konditional",
+          "junktor": "und",
+          "elemente": [
             {
               "art": "tb",
-              "text": "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
+              "text": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 962,
-              "laenge": 58,
+              "pfad": "Abs. 1 Nr. 5",
+              "von": 965,
+              "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Bedingungsteil vor dem Doppelpunkt (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
               "text": "außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "pfad": "Abs. 1 Nr. 5",
               "von": 1025,
               "laenge": 175,
               "konfidenz": 0.6,
@@ -1240,38 +1243,47 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Bedingungsausnahme mit „außer in den fällen\""
-            },
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 1 Nr. 6",
+          "von": 1205,
+          "bis": 1383,
+          "typ": "konditional",
+          "junktor": "und",
+          "elemente": [
             {
               "art": "tb",
-              "text": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+              "text": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 1202,
-              "laenge": 115,
+              "pfad": "Abs. 1 Nr. 6",
+              "von": 1205,
+              "laenge": 116,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Bedingungsteil vor dem Doppelpunkt"
             },
             {
               "art": "rf",
-              "text": "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+              "text": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
-              "von": 1318,
-              "laenge": 64,
+              "pfad": "Abs. 1 Nr. 6",
+              "von": 1323,
+              "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Anordnungsteil nach dem Doppelpunkt"
             }
           ]
         },
@@ -1739,19 +1751,19 @@
         {
           "pfad": "Abs. 4 Nr. 1",
           "von": 3767,
-          "bis": 3900,
+          "bis": 3794,
           "typ": "aussage",
           "katalog": true,
           "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+              "text": "bei monatlicher Lohnzahlung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1",
               "von": 3767,
-              "laenge": 129,
+              "laenge": 27,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -1763,7 +1775,33 @@
           ]
         },
         {
-          "pfad": "Abs. 4 Buchst. b",
+          "pfad": "Abs. 4 Nr. 1 Buchst. a",
+          "von": 3798,
+          "bis": 3900,
+          "typ": "aussage",
+          "katalog": true,
+          "junktor": "und",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 1 Buchst. a",
+              "von": 3798,
+              "laenge": 98,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 Buchst. a — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 4 Nr. 1 Buchst. b",
           "von": 3904,
           "bis": 4017,
           "typ": "aussage",
@@ -1775,7 +1813,7 @@
               "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Buchst. b",
+              "pfad": "Abs. 4 Nr. 1 Buchst. b",
               "von": 3904,
               "laenge": 112,
               "konfidenz": 0.6,
@@ -1784,37 +1822,38 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 1 Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Satz 1 (Teil 2)",
-          "von": 4018,
+          "pfad": "Abs. 4 Nr. 2",
+          "von": 4021,
           "bis": 4050,
           "typ": "aussage",
-          "junktor": null,
+          "katalog": true,
+          "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "2. bei wöchentlicher Lohnzahlung",
+              "text": "bei wöchentlicher Lohnzahlung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Satz 1 (Teil 2)",
-              "von": 4018,
-              "laenge": 32,
+              "pfad": "Abs. 4 Nr. 2",
+              "von": 4021,
+              "laenge": 29,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Buchst. a",
+          "pfad": "Abs. 4 Nr. 2 Buchst. a",
           "von": 4054,
           "bis": 4173,
           "typ": "aussage",
@@ -1826,7 +1865,7 @@
               "text": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Buchst. a",
+              "pfad": "Abs. 4 Nr. 2 Buchst. a",
               "von": 4054,
               "laenge": 115,
               "konfidenz": 0.6,
@@ -1835,12 +1874,12 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 2 Buchst. a — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Buchst. b (Teil 2)",
+          "pfad": "Abs. 4 Nr. 2 Buchst. b",
           "von": 4177,
           "bis": 4307,
           "typ": "aussage",
@@ -1852,7 +1891,7 @@
               "text": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Buchst. b (Teil 2)",
+              "pfad": "Abs. 4 Nr. 2 Buchst. b",
               "von": 4177,
               "laenge": 129,
               "konfidenz": 0.6,
@@ -1861,37 +1900,38 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 2 Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Satz 1 (Teil 3)",
-          "von": 4308,
+          "pfad": "Abs. 4 Nr. 3",
+          "von": 4311,
           "bis": 4336,
           "typ": "aussage",
-          "junktor": null,
+          "katalog": true,
+          "junktor": "und",
           "elemente": [
             {
               "art": "tb",
-              "text": "3. bei täglicher Lohnzahlung",
+              "text": "bei täglicher Lohnzahlung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Satz 1 (Teil 3)",
-              "von": 4308,
-              "laenge": 28,
+              "pfad": "Abs. 4 Nr. 3",
+              "von": 4311,
+              "laenge": 25,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Buchst. a (Teil 2)",
+          "pfad": "Abs. 4 Nr. 3 Buchst. a",
           "von": 4340,
           "bis": 4456,
           "typ": "aussage",
@@ -1903,7 +1943,7 @@
               "text": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Buchst. a (Teil 2)",
+              "pfad": "Abs. 4 Nr. 3 Buchst. a",
               "von": 4340,
               "laenge": 112,
               "konfidenz": 0.6,
@@ -1912,12 +1952,12 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. a — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 3 Buchst. a — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 4 Buchst. b (Teil 3)",
+          "pfad": "Abs. 4 Nr. 3 Buchst. b",
           "von": 4460,
           "bis": 4595,
           "typ": "tarif",
@@ -1929,7 +1969,7 @@
               "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Buchst. b (Teil 3)",
+              "pfad": "Abs. 4 Nr. 3 Buchst. b",
               "von": 4460,
               "laenge": 134,
               "konfidenz": 0.6,
@@ -1938,7 +1978,7 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 3 Buchst. b — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -2052,7 +2092,7 @@
           ]
         },
         {
-          "pfad": "Abs. 4a Satz 1 (Teil 2)",
+          "pfad": "Abs. 4a Satz 2",
           "von": 5129,
           "bis": 5225,
           "typ": "verweisung",
@@ -2063,7 +2103,7 @@
               "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4a Satz 1 (Teil 2)",
+              "pfad": "Abs. 4a Satz 2",
               "von": 5129,
               "laenge": 95,
               "konfidenz": 0.6,
@@ -2156,32 +2196,40 @@
                 },
                 {
                   "n": "4.",
-                  "t": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
-                  "pfad": "Abs. 1 Buchst. b",
+                  "t": "laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
+                  "pfad": "Abs. 1 Nr. 3 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
-                  "t": "4. soweit ein Lohnsteuer-Jahresausgleich",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "t": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
+                  "pfad": "Abs. 1 Nr. 3 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "6.",
-                  "t": "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "t": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+                  "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "7.",
-                  "t": "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "t": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+                  "pfad": "Abs. 1 Nr. 5",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
+                  "t": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
+                  "pfad": "Abs. 1 Nr. 6",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2204,7 +2252,7 @@
                 {
                   "n": "2.",
                   "t": "außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 1 Nr. 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2242,24 +2290,8 @@
                 },
                 {
                   "n": "4.",
-                  "t": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
-                  "pfad": "Abs. 1 Nr. 3",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "t": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+                  "pfad": "Abs. 1 Nr. 6",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2521,7 +2553,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+                  "t": "bei monatlicher Lohnzahlung",
                   "pfad": "Abs. 4 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -2529,56 +2561,64 @@
                 },
                 {
                   "n": "4.",
-                  "t": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
-                  "pfad": "Abs. 4 Buchst. b",
+                  "t": "in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+                  "pfad": "Abs. 4 Nr. 1 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
-                  "t": "2. bei wöchentlicher Lohnzahlung",
-                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "t": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
+                  "pfad": "Abs. 4 Nr. 1 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "6.",
-                  "t": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
-                  "pfad": "Abs. 4 Buchst. a",
+                  "t": "bei wöchentlicher Lohnzahlung",
+                  "pfad": "Abs. 4 Nr. 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "7.",
-                  "t": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
-                  "pfad": "Abs. 4 Buchst. b (Teil 2)",
+                  "t": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "8.",
-                  "t": "3. bei täglicher Lohnzahlung",
-                  "pfad": "Abs. 4 Satz 1 (Teil 3)",
+                  "t": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "9.",
-                  "t": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
-                  "pfad": "Abs. 4 Buchst. a (Teil 2)",
+                  "t": "bei täglicher Lohnzahlung",
+                  "pfad": "Abs. 4 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "10.",
+                  "t": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+                  "pfad": "Abs. 4 Nr. 3 Buchst. a",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "11.",
                   "t": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt",
-                  "pfad": "Abs. 4 Buchst. b (Teil 3)",
+                  "pfad": "Abs. 4 Nr. 3 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2648,7 +2688,7 @@
                 {
                   "n": "5.",
                   "t": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
-                  "pfad": "Abs. 4a Satz 1 (Teil 2)",
+                  "pfad": "Abs. 4a Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -2715,10 +2755,11 @@
         "soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist",
         "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind",
         "soweit Lohnsteuer zu erheben ist",
+        "laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
         "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
-        "4. soweit ein Lohnsteuer-Jahresausgleich",
-        "5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben",
-        "6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben",
+        "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+        "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+        "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
         "Bei der Veranlagung zur Einkommensteuer",
         "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich",
         "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
@@ -2729,12 +2770,13 @@
         "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
         "Beim Abzug vom laufenden Arbeitslohn",
         "wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum",
-        "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+        "bei monatlicher Lohnzahlung",
+        "in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
         "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
-        "2. bei wöchentlicher Lohnzahlung",
+        "bei wöchentlicher Lohnzahlung",
         "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
         "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
-        "3. bei täglicher Lohnzahlung",
+        "bei täglicher Lohnzahlung",
         "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
         "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt",
         "Beim Abzug von einem sonstigen Bezug",
@@ -2748,9 +2790,7 @@
         "bemisst sich",
         "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt",
         "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
-        "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
-        "durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
-        "ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+        "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
         "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
         "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer",
         "ist die Lohnsteuer maßgebend, die sich ergibt",
@@ -2780,9 +2820,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "12161727c2ccb1e5213cdd02e6b2033958cba2092a019be75410e30bbbda4e4b",
+      "text_hash": "98e71cda6f055ce77d574e3adccb705fbc2b972ee8d1d093bd2d5a5ec4613c9b",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.753Z"
+      "aktualisiert": "2026-08-14T10:19:50.328Z"
     },
     "4": {
       "typ": "gemischt",
@@ -2994,7 +3034,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "b8eb2b65618c2dace32c77221fa8bae9a16f130bd5e24bfc421e1426bef2e793",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.754Z"
+      "aktualisiert": "2026-08-14T10:19:50.328Z"
     },
     "5": {
       "typ": "konditional",
@@ -3104,7 +3144,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6c89736005eff5278a330e26b8e0e4c493efec0af540821f259416ba6be1dd87",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.754Z"
+      "aktualisiert": "2026-08-14T10:19:50.328Z"
     },
     "6": {
       "typ": "anwendung",
@@ -3458,7 +3498,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "a8fe08f695a58fccada782cdf000e1ed2556620c2bcab652ef9e71960ed0ae53",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.756Z"
+      "aktualisiert": "2026-08-14T10:19:50.330Z"
     }
   }
 }

@@ -1,6 +1,13 @@
 [
   {
     "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "die Person",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 1",
     "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "zu berücksichtigen, von welcher an dem Geschäftsvorfall beteiligten Person welche Funktion",
@@ -8,14 +15,14 @@
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 3c Satz 3",
+    "pfad": "Abs. 3c Satz 5",
     "art": "tb",
     "text": "Die Finanzierung der Entwicklung oder Erschaffung, des Erhalts oder des Schutzes eines imm",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 3e Satz 1 (Teil 2)",
+    "pfad": "Abs. 3e Satz 2",
     "art": "tb",
     "text": "auch regelmäßig dann auszugehen, wenn ein Unternehmen in der Unternehmensgruppe für ein od",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -99,7 +106,7 @@
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "rf",
     "text": "erfolgt im Fall des",
     "grund": "Fragment: endet auf Artikel oder Präposition"
@@ -134,35 +141,56 @@
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 1 Nr. 4",
+    "pfad": "Abs. 1 Nr. 4 Buchst. a",
     "art": "tb",
-    "text": "dem Handel, soweit nicht a) ein Steuerpflichtiger, der gemäß § 7 an der ausländischen Gese",
-    "grund": "zu grob (54 Wörter)"
+    "text": "ein Steuerpflichtiger, der gemäß § 7 an der ausländischen Gesellschaft beteiligt ist, oder",
+    "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 4 (Teil 2)",
     "art": "ausn",
     "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft einen für",
-    "grund": "zu grob (52 Wörter)"
+    "grund": "zu grob (51 Wörter)"
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 1 Buchst. a (Teil 2)",
+    "pfad": "Abs. 1 Nr. 6 Buchst. a",
     "art": "ausn",
     "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft die Ergeb",
     "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 1 Buchst. c",
+    "pfad": "Abs. 1 Nr. 6 Buchst. c",
     "art": "ausn",
     "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft einen Ges",
     "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 1 Satz 2 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 7 Buchst. b",
+    "art": "tb",
+    "text": "Bezüge, die bei der ausländischen Gesellschaft nach § 8b Absatz 4 des Körperschaftsteuerge",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 7 Buchst. c",
+    "art": "tb",
+    "text": "Bezüge, die bei der ausländischen Gesellschaft nach § 8b Absatz 7 des Körperschaftsteuerge",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 8",
+    "art": "tb",
+    "text": "der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder",
+    "grund": "zu grob (56 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 9",
     "art": "ausn",
     "text": "dies gilt nicht, soweit die Einkünfte auf der Übertragung von Wirtschaftsgütern beruhen, d",
     "grund": "zu grob (59 Wörter)"

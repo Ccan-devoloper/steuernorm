@@ -71,28 +71,28 @@
   },
   {
     "norm": "§ 97",
-    "pfad": "Abs. 1 Nr. 5",
+    "pfad": "Abs. 1 Nr. 5 Satz 1",
     "art": "tb",
     "text": "Gesellschaften im Sinne des § 15 Absatz 1 Satz 1 Nummer 2, des § 15 Absatz 3, des § 18 Abs",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 97",
-    "pfad": "Abs. 1 Nr. 5",
+    "pfad": "Abs. 1 Nr. 5 Satz 1",
     "art": "tb",
     "text": "wenn sie ihrer Tätigkeit nach einer Gesellschaft im Sinne des § 15 Absatz 1 Satz 1 Nummer ",
     "grund": "zu grob (67 Wörter)"
   },
   {
     "norm": "§ 97",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "§ 160 Absatz 10",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 97",
-    "pfad": "Abs. 1a Buchst. b",
+    "pfad": "Abs. 1a Nr. 1 Buchst. b",
     "art": "def",
     "text": "Vorabgewinnanteile",
     "grund": "Definiendum nur in Definitionen"
@@ -141,10 +141,10 @@
   },
   {
     "norm": "§ 160",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
+    "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
-    "text": "2. die Nebenbetriebe, 3. die",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
+    "text": "die Nebenbetriebe",
+    "grund": "bloßes Normsubjekt"
   },
   {
     "norm": "§ 160",
@@ -155,7 +155,7 @@
   },
   {
     "norm": "§ 163",
-    "pfad": "Abs. 4 Satz 1 (Teil 2)",
+    "pfad": "Abs. 4 Satz 3",
     "art": "rf",
     "text": "bestimmen sich für",
     "grund": "Fragment: endet auf Artikel oder Präposition"
@@ -176,14 +176,14 @@
   },
   {
     "norm": "§ 166",
-    "pfad": "Abs. 2 Nr. 1 Halbs. 3",
+    "pfad": "Abs. 2 Nr. 1 Satz 3",
     "art": "tb",
     "text": "Zur Berücksichtigung der Liquidationskosten",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 166",
-    "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+    "pfad": "Abs. 2 Nr. 2 Satz 2",
     "art": "tb",
     "text": "Zur Berücksichtigung der Liquidationskosten",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -281,7 +281,7 @@
   },
   {
     "norm": "§ 176",
-    "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+    "pfad": "Abs. 2 Nr. 2 Satz 2",
     "art": "tb",
     "text": "jedoch die Verstärkungen von Decken und die nicht ausschließlich zu einer Betriebsanlage g",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -469,6 +469,20 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
+    "norm": "§ 234",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "die Nutzungsarten",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 234",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "die Nebenbetriebe",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
     "norm": "§ 237",
     "pfad": "Abs. 3 Satz 4",
     "art": "tb",
@@ -491,7 +505,7 @@
   },
   {
     "norm": "§ 238",
-    "pfad": "Abs. 1 Nr. 2 Halbs. 3",
+    "pfad": "Abs. 1 Nr. 2 Satz 3",
     "art": "tb",
     "text": "ob die Flächen unter Glas und Kunststoffen neben der Erzeugung auch zur Lagerung oder zum ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -813,105 +827,105 @@
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 2 (Teil 2)",
+    "pfad": "Satz 4",
     "art": "rf",
     "text": "ausgebaut 1.01 freistehende Einfamilienhäuser 655 725 835 1005 1260 1.011 freistehende Zwe",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 3",
+    "pfad": "Satz 5",
     "art": "tb",
     "text": "Umrechnungsfaktor hinsichtlich der Brutto-Grundfläche (BGF) für Wohnungseigentum in Mehrfa",
     "grund": "zu grob (58 Wörter)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 3",
+    "pfad": "Satz 5",
     "art": "rf",
     "text": "genutzte Grundstücke, Geschäftsgrundstücke und sonstige bebaute Grundstücke Standardstufe ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 12",
+    "pfad": "Satz 14",
     "art": "rf",
     "text": "gegliederte Dachlandschaft, sichtbare Bogendach-konstruktionen 15 Fenster und Außentüren E",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 12",
+    "pfad": "Satz 14",
     "art": "tb",
     "text": "strukturierte Türblätter ➀ Wandvertäfelungen (Holzpaneele) gestaltete Wandabläufe (z. B. P",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 12",
+    "pfad": "Satz 14",
     "art": "rf",
     "text": "breite Stahlbeton-, Metall- oder Hartholztreppenanlage mit hochwertigem Geländer 11 Fußböd",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 13",
+    "pfad": "Satz 15",
     "art": "tb",
     "text": "Bidet/Urinal, Gäste-WC, bodengleiche Dusche; Wand- und Bodenfliesen; jeweils in gehobener ",
     "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 13",
+    "pfad": "Satz 15",
     "art": "rf",
     "text": "gesteuerte Fern- oder Zentralheizung, Niedertemperatur- oder Brennwertkessel Fußbodenheizu",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 14",
+    "pfad": "Satz 16",
     "art": "tb",
     "text": "➂ Vorhangfassade aus Glas Konstruktion ➇ Holzkonstruktion in nicht zeitgemäßer statischer ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 14",
+    "pfad": "Satz 16",
     "art": "tb",
     "text": "Eingangstüren mit nicht zeitgemäßem Wärmeschutz (vor ca. 1995) Zweifachverglasung (nach ca",
     "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 16",
+    "pfad": "Satz 18",
     "art": "rf",
     "text": "abgehängte Decken ➄ ➆ Deckenverkleidung ➅ Betondecke ➂ höherwertige abgehängte Decken ➃ ➄ ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 16",
+    "pfad": "Satz 18",
     "art": "rf",
     "text": "gesteuerte Fern- oder Zentralheizung, Niedertemperatur- oder Brennwertkessel Solarkollekto",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 17",
+    "pfad": "Satz 19",
     "art": "rf",
     "text": "begrünte Metallgitter, Glasbausteine Außentüren in hochwertigen Materialien Fußböden Beton",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 18",
+    "pfad": "Satz 20",
     "art": "rf",
     "text": "gehoben aufwendig Außenwände Holzfachwerkwand; Holzstützen, Vollholz; Brettschalung oder P",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 24",
-    "pfad": "Satz 18",
+    "pfad": "Satz 20",
     "art": "rf",
     "text": "geglättet, Anstrich baukonstruktive Einbauten ➉ ➉ Reithallenbande aus Nadelholz zur Abgren",
     "grund": "zu lang (>600 Zeichen)"
@@ -1044,21 +1058,21 @@
   },
   {
     "norm": "Anlage 42",
-    "pfad": "Satz 2",
+    "pfad": "II Satz 1",
     "art": "tb",
     "text": "Normalherstellungskosten (NHK) Normalherstellungskosten in Euro/m2 BGF auf der Grundlage d",
     "grund": "zu grob (49 Wörter)"
   },
   {
     "norm": "Anlage 42",
-    "pfad": "Satz 2",
+    "pfad": "II Satz 1",
     "art": "rf",
     "text": "genutzte Grundstücke (Wohnhäuser mit Mischnutzung) 695 886 1 118 2 Banken und ähnliche Ges",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "Anlage 42",
-    "pfad": "Satz 2",
+    "pfad": "II Satz 1",
     "art": "tb",
     "text": "industrielle Produktionsgebäude, überwiegend Skelettbauweise 536 680 942 12.1 Lagergebäude",
     "grund": "zu grob (78 Wörter)"

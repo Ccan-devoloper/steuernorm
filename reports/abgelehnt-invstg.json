@@ -1,42 +1,49 @@
 [
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Buchst. b",
+    "pfad": "Abs. 8 Nr. 2 Satz 1",
+    "art": "tb",
+    "text": "Anteile an einer Kapitalgesellschaft, die keine Immobilien-Gesellschaft ist und die",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 8 Nr. 2 Buchst. b",
     "art": "tb",
     "text": "in einem Drittstaat ansässig",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Satz 3",
+    "pfad": "Abs. 8 Satz 2",
     "art": "tb",
     "text": "Sieht ein Aktienfonds in seinen Anlagebedingungen einen höheren Prozentsatz als 51 Prozent",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Satz 4",
+    "pfad": "Abs. 8 Satz 3",
     "art": "tb",
     "text": "Sieht ein Mischfonds in seinen Anlagebedingungen einen höheren Prozentsatz als 25 Prozent ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Nr. 4",
+    "pfad": "Abs. 8 Nr. 4 Buchst. a",
     "art": "tb",
-    "text": "Anteile an Kapitalgesellschaften, a) deren Einnahmen unmittelbar oder mittelbar zu mehr al",
+    "text": "deren Einnahmen unmittelbar oder mittelbar zu mehr als 10 Prozent aus Beteiligungen an Kap",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Buchst. b (Teil 2)",
+    "pfad": "Abs. 8 Nr. 4 Buchst. b",
     "art": "tb",
     "text": "die unmittelbar oder mittelbar Beteiligungen an Kapitalgesellschaften",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 2",
-    "pfad": "Abs. 8 Buchst. b (Teil 2)",
+    "pfad": "Abs. 8 Nr. 4 Buchst. b",
     "art": "tb",
     "text": "wenn der gemeine Wert derartiger Beteiligungen mehr als 10 Prozent des gemeinen Werts der ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -113,21 +120,21 @@
   },
   {
     "norm": "§ 4",
-    "pfad": "Abs. 2 1a",
+    "pfad": "Abs. 2 1a Satz 1",
     "art": "tb",
     "text": "das Finanzamt, das in den Fällen des § 6 Absatz 4 Satz 1 Nummer 4 in Verbindung mit § 49 A",
     "grund": "zu grob (52 Wörter)"
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 4 Satz 2",
+    "pfad": "Abs. 4 Satz 3",
     "art": "tb",
     "text": "Wertveränderungen, die vor dem 1. Januar 2018 eingetreten sind",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 6",
-    "pfad": "Abs. 4 Satz 2",
+    "pfad": "Abs. 4 Satz 3",
     "art": "tb",
     "text": "sofern der Zeitraum zwischen der Anschaffung und der Veräußerung mehr als zehn Jahre beträ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -225,21 +232,21 @@
   },
   {
     "norm": "§ 16",
-    "pfad": "Abs. 4 Satz 1 (Teil 2)",
+    "pfad": "Abs. 4 Satz 2",
     "art": "tb",
     "text": "wenn nach dem Abkommen die Besteuerung der Ausschüttung in diesem Staat 0 Prozent nicht üb",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
-    "pfad": "Abs. 4 Satz 2",
+    "pfad": "Abs. 4 Satz 3",
     "art": "tb",
     "text": "Von einer allgemeinen Ertragsbesteuerung",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
-    "pfad": "Abs. 4 Satz 2",
+    "pfad": "Abs. 4 Satz 3",
     "art": "tb",
     "text": "wenn der Anleger nachweist, dass der Investmentfonds einer Ertragsbesteuerung in Höhe von ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -255,7 +262,14 @@
     "norm": "§ 19",
     "pfad": "Abs. 3 Nr. 2 (Teil 2)",
     "art": "tb",
-    "text": "der Anleger a) innerhalb der",
+    "text": "der Anleger",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 19",
+    "pfad": "Abs. 3 Nr. 2 Buchst. a",
+    "art": "tb",
+    "text": "innerhalb der",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
@@ -288,44 +302,51 @@
   },
   {
     "norm": "§ 26",
-    "pfad": "Buchst. j",
+    "pfad": "Nr. 4 Buchst. j",
     "art": "tb",
     "text": "Beteiligungen an ÖPP-Projektgesellschaften nach § 1 Absatz 19 Nummer 28 des Kapitalanlageg",
     "grund": "zu grob (53 Wörter)"
   },
   {
     "norm": "§ 26",
-    "pfad": "Satz 1 (Teil 2)",
+    "pfad": "Nr. 5 Satz 1",
     "art": "tb",
     "text": "Höchstens 20 Prozent des Wertes des Investmentfonds",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 26",
-    "pfad": "Satz 2",
+    "pfad": "Nr. 5 Satz 2",
     "art": "tb",
     "text": "Investmentfonds, die nach ihren Anlagebedingungen das bei ihnen angelegte Geld in Immobili",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 26",
-    "pfad": "Satz 4",
+    "pfad": "Nr. 5 Satz 4",
     "art": "tb",
     "text": "Höchstens 20 Prozent des Wertes des Investmentfonds",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 26",
-    "pfad": "Satz 5",
+    "pfad": "Nr. 6 Satz 1",
     "art": "tb",
     "text": "Die Höhe der unmittelbaren Beteiligung oder der mittelbaren Beteiligung über eine Personen",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 26",
-    "pfad": "Satz 2 (Teil 2)",
+    "pfad": "Nr. 7 Satz 2",
     "art": "tb",
     "text": "Investmentfonds, die nach den Anlagebedingungen das bei ihnen eingelegte Geld in Immobilie",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 26",
+    "pfad": "7a Satz 1",
+    "art": "tb",
+    "text": "Die Einnahmen aus einer aktiven unternehmerischen Bewirtschaftung im Sinne des § 15 Absatz",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
@@ -336,8 +357,15 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
+    "norm": "§ 30",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "rf",
+    "text": "ist und der Spezial-Investmentfonds in wesentlichem Umfang Anteile hält, die",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
     "norm": "§ 31",
-    "pfad": "Abs. 3 Nr. 2 (Teil 3)",
+    "pfad": "Abs. 3 Nr. 2 Satz 2",
     "art": "tb",
     "text": "Kapitalertragsteuer in Höhe von 15 Prozent der Kapitalerträge im Sinne des § 43 Absatz 1 S",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -393,7 +421,7 @@
   },
   {
     "norm": "§ 36",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "sind die inländischen Beteiligungseinnahmen und die sonstigen inländischen Einkünfte mit S",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
@@ -414,14 +442,14 @@
   },
   {
     "norm": "§ 38",
-    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "sind mit der Emissionsrendite anzusetzen",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 38",
-    "pfad": "Abs. 3 Satz 2",
+    "pfad": "Abs. 3 Satz 3",
     "art": "tb",
     "text": "der Unterschiedsbetrag zwischen dem Marktwert zum Ende des Geschäftsjahres und dem Marktwe",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -484,7 +512,7 @@
   },
   {
     "norm": "§ 49",
-    "pfad": "Abs. 5 Satz 4",
+    "pfad": "Abs. 5 Satz 5",
     "art": "tb",
     "text": "§ 6 Absatz 3 Satz 1 des Außensteuergesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"

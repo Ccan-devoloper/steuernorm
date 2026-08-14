@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-11T11:31:26.621Z",
+  "aktualisiert": "2026-08-14T10:19:50.241Z",
   "quelle": "https://www.gesetze-im-internet.de/umwstg_2006/",
   "stand": [
     {
@@ -154,7 +154,7 @@
           ]
         },
         {
-          "pfad": "Abs. 1 Satz 1 (Teil 2)",
+          "pfad": "Abs. 1 Satz 2",
           "von": 718,
           "bis": 815,
           "typ": "aussage",
@@ -165,7 +165,7 @@
               "text": "gelten nicht für die Ausgliederung im Sinne des § 123 Abs. 3 des Umwandlungsgesetzes",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "pfad": "Abs. 1 Satz 2",
               "von": 730,
               "laenge": 84,
               "konfidenz": 0.6,
@@ -411,19 +411,71 @@
         {
           "pfad": "Abs. 4 Nr. 2",
           "von": 2059,
-          "bis": 2629,
-          "typ": "konditional",
+          "bis": 2099,
+          "typ": "aussage",
+          "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "in den Fällen des Absatzes 3 Nr. 1 bis 4 a) beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger aa) eine natürliche Person",
+              "text": "in den Fällen des Absatzes 3 Nr. 1 bis 4",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 2",
               "von": 2059,
-              "laenge": 259,
-              "konfidenz": 0.48,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 4 Nr. 2 Buchst. a",
+          "von": 2103,
+          "bis": 2291,
+          "typ": "aussage",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 2 Buchst. a",
+              "von": 2103,
+              "laenge": 188,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 Buchst. a — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 4 Nr. 2 Buchst. a aa)",
+          "von": 2296,
+          "bis": 2629,
+          "typ": "aussage",
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "eine natürliche Person",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 2 Buchst. a aa)",
+              "von": 2296,
+              "laenge": 22,
+              "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -436,7 +488,7 @@
               "text": "ist, deren Wohnsitz oder gewöhnlicher Aufenthalt sich innerhalb des Hoheitsgebiets eines der Staaten im Sinne der Nummer 1 befindet und die nicht auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig angesehen wird",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Nr. 2",
+              "pfad": "Abs. 4 Nr. 2 Buchst. a aa)",
               "von": 2319,
               "laenge": 304,
               "konfidenz": 0.48,
@@ -450,7 +502,7 @@
           ]
         },
         {
-          "pfad": "Abs. 4 bb)",
+          "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
           "von": 2634,
           "bis": 3013,
           "typ": "konditional",
@@ -461,7 +513,7 @@
               "text": "eine Gesellschaft im Sinne der Nummer 1",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 bb)",
+              "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
               "von": 2634,
               "laenge": 39,
               "konfidenz": 0.6,
@@ -477,7 +529,7 @@
               "text": "wenn es sich um eine Personengesellschaft handelt, soweit an dieser Körperschaften, Personenvereinigungen, Vermögensmassen oder natürliche Personen unmittelbar oder mittelbar über eine oder mehrere Personengesellschaften beteiligt sind",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 bb)",
+              "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
               "von": 2683,
               "laenge": 235,
               "konfidenz": 0.6,
@@ -493,7 +545,7 @@
               "text": "die die Voraussetzungen im Sinne der Nummern 1 und 2 Buchstabe a Doppelbuchstabe aa erfüllen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 bb)",
+              "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
               "von": 2920,
               "laenge": 92,
               "konfidenz": 0.6,
@@ -507,18 +559,43 @@
           ]
         },
         {
-          "pfad": "Abs. 4 Satz 1 (Teil 2)",
+          "pfad": "Abs. 4 Nr. 2 Buchst. a (Teil 2)",
           "von": 3014,
+          "bis": 3018,
+          "typ": "aussage",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": []
+        },
+        {
+          "pfad": "Abs. 4 Nr. 2 Buchst. b",
+          "von": 3022,
           "bis": 3188,
           "typ": "aussage",
-          "junktor": null,
+          "junktor": "oder",
           "elemente": [
+            {
+              "art": "tb",
+              "text": "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile nicht ausgeschlossen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Nr. 2 Buchst. b",
+              "von": 3022,
+              "laenge": 145,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
             {
               "art": "rf",
               "text": "beschränkt ist",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 4 Satz 1 (Teil 2)",
+              "pfad": "Abs. 4 Nr. 2 Buchst. b",
               "von": 3173,
               "laenge": 14,
               "konfidenz": 0.45,
@@ -593,7 +670,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 1",
+          "pfad": "Abs. 5 Nr. 1 Satz 1",
           "von": 3396,
           "bis": 3847,
           "typ": "aussage",
@@ -602,7 +679,7 @@
           "elemente": []
         },
         {
-          "pfad": "Abs. 5 Nr. 1 Halbs. 2",
+          "pfad": "Abs. 5 Nr. 1 Satz 2",
           "von": 3848,
           "bis": 3927,
           "typ": "aussage",
@@ -614,7 +691,7 @@
               "text": "L 310 vom 25.11.2009, S. 34), die zuletzt durch die Richtlinie 2013/13/EU (ABl",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 1 Halbs. 2",
+              "pfad": "Abs. 5 Nr. 1 Satz 2",
               "von": 3848,
               "laenge": 78,
               "konfidenz": 0.6,
@@ -628,7 +705,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 1 Halbs. 3",
+          "pfad": "Abs. 5 Nr. 1 Satz 3",
           "von": 3928,
           "bis": 4063,
           "typ": "aussage",
@@ -639,7 +716,7 @@
               "text": "geändert worden ist, in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 1 Halbs. 3",
+              "pfad": "Abs. 5 Nr. 1 Satz 3",
               "von": 3956,
               "laenge": 106,
               "konfidenz": 0.6,
@@ -653,7 +730,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 2",
+          "pfad": "Abs. 5 Nr. 2 Satz 1",
           "von": 4067,
           "bis": 4217,
           "typ": "aussage",
@@ -665,7 +742,7 @@
               "text": "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 2",
+              "pfad": "Abs. 5 Nr. 2 Satz 1",
               "von": 4067,
               "laenge": 149,
               "konfidenz": 0.6,
@@ -679,7 +756,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 2 Halbs. 2",
+          "pfad": "Abs. 5 Nr. 2 Satz 2",
           "von": 4218,
           "bis": 4328,
           "typ": "aussage",
@@ -690,7 +767,7 @@
               "text": "EG Nr. L 294 S. 1), zuletzt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 2 Halbs. 2",
+              "pfad": "Abs. 5 Nr. 2 Satz 2",
               "von": 4218,
               "laenge": 27,
               "konfidenz": 0.6,
@@ -706,7 +783,7 @@
               "text": "geändert durch die Verordnung (EG) Nr. 885/2004 des Rates vom 26. April 2004 (ABl",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 2 Halbs. 2",
+              "pfad": "Abs. 5 Nr. 2 Satz 2",
               "von": 4246,
               "laenge": 81,
               "konfidenz": 0.6,
@@ -720,7 +797,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 2 Halbs. 3",
+          "pfad": "Abs. 5 Nr. 2 Satz 3",
           "von": 4329,
           "bis": 4435,
           "typ": "aussage",
@@ -732,7 +809,7 @@
               "text": "EU Nr. L 168 S. 1), in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 2 Halbs. 3",
+              "pfad": "Abs. 5 Nr. 2 Satz 3",
               "von": 4329,
               "laenge": 105,
               "konfidenz": 0.6,
@@ -746,7 +823,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 3",
+          "pfad": "Abs. 5 Nr. 3 Satz 1",
           "von": 4439,
           "bis": 4592,
           "typ": "aussage",
@@ -758,7 +835,7 @@
               "text": "Verordnung (EG) Nr. 1435/2003 die Verordnung (EG) Nr. 1435/2003 des Rates vom 22. Juli 2003 über das Statut der Europäischen Genossenschaften (SCE) (ABl",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 3",
+              "pfad": "Abs. 5 Nr. 3 Satz 1",
               "von": 4439,
               "laenge": 152,
               "konfidenz": 0.6,
@@ -772,7 +849,7 @@
           ]
         },
         {
-          "pfad": "Abs. 5 Nr. 3 Halbs. 2",
+          "pfad": "Abs. 5 Nr. 3 Satz 2",
           "von": 4593,
           "bis": 4698,
           "typ": "aussage",
@@ -784,7 +861,7 @@
               "text": "EU Nr. L 207 S. 1) in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 5 Nr. 3 Halbs. 2",
+              "pfad": "Abs. 5 Nr. 3 Satz 2",
               "von": 4593,
               "laenge": 104,
               "konfidenz": 0.6,
@@ -885,7 +962,7 @@
                 {
                   "n": "1.",
                   "t": "gelten nicht für die Ausgliederung im Sinne des § 123 Abs. 3 des Umwandlungsgesetzes",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -982,8 +1059,8 @@
         },
         {
           "absatz": "Abs. 4",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -993,24 +1070,48 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "in den Fällen des Absatzes 3 Nr. 1 bis 4 a) beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger aa) eine natürliche Person",
+                  "t": "in den Fällen des Absatzes 3 Nr. 1 bis 4",
                   "pfad": "Abs. 4 Nr. 2",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "eine Gesellschaft im Sinne der Nummer 1",
-                  "pfad": "Abs. 4 bb)",
+                  "t": "beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "eine natürliche Person",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a aa)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "eine Gesellschaft im Sinne der Nummer 1",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "wenn es sich um eine Personengesellschaft handelt, soweit an dieser Körperschaften, Personenvereinigungen, Vermögensmassen oder natürliche Personen unmittelbar oder mittelbar über eine oder mehrere Personengesellschaften beteiligt sind",
-                  "pfad": "Abs. 4 bb)",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile nicht ausgeschlossen",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1041,7 +1142,7 @@
                 {
                   "n": "3.",
                   "t": "ist, deren Wohnsitz oder gewöhnlicher Aufenthalt sich innerhalb des Hoheitsgebiets eines der Staaten im Sinne der Nummer 1 befindet und die nicht auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig angesehen wird",
-                  "pfad": "Abs. 4 Nr. 2",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a aa)",
                   "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
@@ -1049,7 +1150,7 @@
                 {
                   "n": "4.",
                   "t": "die die Voraussetzungen im Sinne der Nummern 1 und 2 Buchstabe a Doppelbuchstabe aa erfüllen",
-                  "pfad": "Abs. 4 bb)",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. a bb)",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1057,7 +1158,7 @@
                 {
                   "n": "5.",
                   "t": "beschränkt ist",
-                  "pfad": "Abs. 4 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 4 Nr. 2 Buchst. b",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -1096,7 +1197,7 @@
                 {
                   "n": "2.",
                   "t": "L 310 vom 25.11.2009, S. 34), die zuletzt durch die Richtlinie 2013/13/EU (ABl",
-                  "pfad": "Abs. 5 Nr. 1 Halbs. 2",
+                  "pfad": "Abs. 5 Nr. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1104,7 +1205,7 @@
                 {
                   "n": "3.",
                   "t": "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
-                  "pfad": "Abs. 5 Nr. 2",
+                  "pfad": "Abs. 5 Nr. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1112,7 +1213,7 @@
                 {
                   "n": "4.",
                   "t": "EG Nr. L 294 S. 1), zuletzt",
-                  "pfad": "Abs. 5 Nr. 2 Halbs. 2",
+                  "pfad": "Abs. 5 Nr. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1120,7 +1221,7 @@
                 {
                   "n": "5.",
                   "t": "EU Nr. L 168 S. 1), in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
-                  "pfad": "Abs. 5 Nr. 2 Halbs. 3",
+                  "pfad": "Abs. 5 Nr. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1128,7 +1229,7 @@
                 {
                   "n": "6.",
                   "t": "Verordnung (EG) Nr. 1435/2003 die Verordnung (EG) Nr. 1435/2003 des Rates vom 22. Juli 2003 über das Statut der Europäischen Genossenschaften (SCE) (ABl",
-                  "pfad": "Abs. 5 Nr. 3",
+                  "pfad": "Abs. 5 Nr. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1136,7 +1237,7 @@
                 {
                   "n": "7.",
                   "t": "EU Nr. L 207 S. 1) in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
-                  "pfad": "Abs. 5 Nr. 3 Halbs. 2",
+                  "pfad": "Abs. 5 Nr. 3 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1151,7 +1252,7 @@
                 {
                   "n": "1.",
                   "t": "geändert worden ist, in der zum Zeitpunkt des steuerlichen Übertragungsstichtags jeweils geltenden Fassung",
-                  "pfad": "Abs. 5 Nr. 1 Halbs. 3",
+                  "pfad": "Abs. 5 Nr. 1 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1159,7 +1260,7 @@
                 {
                   "n": "2.",
                   "t": "geändert durch die Verordnung (EG) Nr. 885/2004 des Rates vom 26. April 2004 (ABl",
-                  "pfad": "Abs. 5 Nr. 2 Halbs. 2",
+                  "pfad": "Abs. 5 Nr. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -1190,9 +1291,12 @@
         "den Formwechsel einer Personengesellschaft in eine Kapitalgesellschaft oder Genossenschaft im Sinne des § 190 Abs. 1 des Umwandlungsgesetzes oder vergleichbare ausländische Vorgänge",
         "die Einbringung von Betriebsvermögen durch Einzelrechtsnachfolge in eine Kapitalgesellschaft, eine Genossenschaft oder Personengesellschaft",
         "den Austausch von Anteilen",
-        "in den Fällen des Absatzes 3 Nr. 1 bis 4 a) beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger aa) eine natürliche Person",
+        "in den Fällen des Absatzes 3 Nr. 1 bis 4",
+        "beim Formwechsel der umwandelnde Rechtsträger, bei der Einbringung durch Einzelrechtsnachfolge der einbringende Rechtsträger oder bei den anderen Umwandlungen der übertragende Rechtsträger",
+        "eine natürliche Person",
         "eine Gesellschaft im Sinne der Nummer 1",
         "wenn es sich um eine Personengesellschaft handelt, soweit an dieser Körperschaften, Personenvereinigungen, Vermögensmassen oder natürliche Personen unmittelbar oder mittelbar über eine oder mehrere Personengesellschaften beteiligt sind",
+        "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des Gewinns aus der Veräußerung der erhaltenen Anteile nicht ausgeschlossen",
         "Soweit dieses Gesetz nichts anderes bestimmt",
         "L 310 vom 25.11.2009, S. 34), die zuletzt durch die Richtlinie 2013/13/EU (ABl",
         "Verordnung (EG) Nr. 2157/2001 die Verordnung (EG) Nr. 2157/2001 des Rates vom 8. Oktober 2001 über das Statut der Europäischen Gesellschaft (SE) (ABl",
@@ -1218,7 +1322,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.571,
+      "konfidenz": 0.577,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -1226,9 +1330,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "692301f68f8ced6d0fea4a955cc2645ee38647aa49ca92ec43bd6d93f6659762",
+      "text_hash": "d04ba7dcaf22ae488b48a9a8ba7060bf35a2f0fab4e5d02766b27322df6946ca",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.545Z"
+      "aktualisiert": "2026-08-14T10:19:50.184Z"
     },
     "2": {
       "typ": "gemischt",
@@ -2380,7 +2484,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "28fbf5c9f1b825589c4757d1e654df9d6be5c8506faac049f1b124ef2893edb9",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.549Z"
+      "aktualisiert": "2026-08-14T10:19:50.187Z"
     },
     "3": {
       "typ": "gemischt",
@@ -2631,7 +2735,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 2",
           "von": 1170,
           "bis": 1346,
           "typ": "aussage",
@@ -2653,7 +2757,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 2",
               "von": 1181,
               "laenge": 153,
               "konfidenz": 0.6,
@@ -2905,7 +3009,7 @@
                 {
                   "n": "5.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der steuerlichen Schlussbilanz bei dem für die Besteuerung der übertragenden Körperschaft zuständigen Finanzamt … zu stellen",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -3034,7 +3138,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "804c88ca9a563a7bec1cd8d34092d9a79f72b10a685c7ec95b3c568c0b4a5816",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.552Z"
+      "aktualisiert": "2026-08-14T10:19:50.189Z"
     },
     "4": {
       "typ": "gemischt",
@@ -4542,7 +4646,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ccdd4c31abed0ba7c2f031d2a635d61930d6dd049c57f73893b2f693d5d8b89a",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.560Z"
+      "aktualisiert": "2026-08-14T10:19:50.194Z"
     },
     "5": {
       "typ": "gemischt",
@@ -4861,7 +4965,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d8e06422c2302540d8fa8eaf46a27dfe01d40d7c44b73062437e7b044d6e0975",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.562Z"
+      "aktualisiert": "2026-08-14T10:19:50.195Z"
     },
     "6": {
       "typ": "gemischt",
@@ -5264,7 +5368,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "610d6303078c8157a48737653e01afc4de6a75b664718722bfd1fafd5d993cbb",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.563Z"
+      "aktualisiert": "2026-08-14T10:19:50.196Z"
     },
     "7": {
       "typ": "gemischt",
@@ -5434,7 +5538,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b19c12fad0c8657076fa12f0e54448e2e0aef801d03b97d893e37d1458d9d22",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.564Z"
+      "aktualisiert": "2026-08-14T10:19:50.197Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5671,7 +5775,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c7f59089f8505df5b208b517ea3f7051ddc9f6d1e1d1cc5b148095b371371298",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.564Z"
+      "aktualisiert": "2026-08-14T10:19:50.197Z"
     },
     "9": {
       "typ": "gemischt",
@@ -5911,7 +6015,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f59fe61fae6b917a310d2b6a06756db2db2f09012ca3cd5ecd5576e23e82e75",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.565Z"
+      "aktualisiert": "2026-08-14T10:19:50.198Z"
     },
     "10": {
       "typ": "gemischt",
@@ -5934,7 +6038,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.565Z"
+      "aktualisiert": "2026-08-14T10:19:50.198Z"
     },
     "11": {
       "typ": "gemischt",
@@ -6170,7 +6274,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 2",
           "von": 1049,
           "bis": 1331,
           "typ": "aussage",
@@ -6181,7 +6285,7 @@
               "text": "Anteile an der übernehmenden Körperschaft",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 2",
               "von": 1049,
               "laenge": 41,
               "konfidenz": 0.6,
@@ -6208,7 +6312,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 2",
               "von": 1091,
               "laenge": 227,
               "konfidenz": 0.48,
@@ -6222,7 +6326,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 2",
+          "pfad": "Abs. 2 Satz 3",
           "von": 1332,
           "bis": 1445,
           "typ": "konditional",
@@ -6233,7 +6337,7 @@
               "text": "Auf einen sich daraus ergebenden Gewinn",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1332,
               "laenge": 39,
               "konfidenz": 0.6,
@@ -6249,7 +6353,7 @@
               "text": "findet § 8b Abs. 2 Satz 4 und 5 des Körperschaftsteuergesetzes Anwendung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1372,
               "laenge": 72,
               "konfidenz": 0.6,
@@ -6389,7 +6493,7 @@
                 {
                   "n": "3.",
                   "t": "Anteile an der übernehmenden Körperschaft",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -6397,7 +6501,7 @@
                 {
                   "n": "4.",
                   "t": "Auf einen sich daraus ergebenden Gewinn",
-                  "pfad": "Abs. 2 Satz 2",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -6444,7 +6548,7 @@
                 {
                   "n": "5.",
                   "t": "sind mindestens mit dem Buchwert, erhöht um Abschreibungen sowie um Abzüge nach § 6b des Einkommensteuergesetzes und ähnliche Abzüge, die in früheren Jahren steuerwirksam vorgenommen worden sind, höchstens mit dem gemeinen Wert … anzusetzen",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": true
@@ -6452,7 +6556,7 @@
                 {
                   "n": "6.",
                   "t": "findet § 8b Abs. 2 Satz 4 und 5 des Körperschaftsteuergesetzes Anwendung",
-                  "pfad": "Abs. 2 Satz 2",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -6534,7 +6638,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "17007795c634f2056711c702aaec1b8a5614c878fc8ebd29e4e079df7ae46428",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.567Z"
+      "aktualisiert": "2026-08-14T10:19:50.199Z"
     },
     "12": {
       "typ": "gemischt",
@@ -7091,7 +7195,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "e1ca6251d90130e25ebea592eaaeba7aaa3356458868254e416d62a8810d0121",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.569Z"
+      "aktualisiert": "2026-08-14T10:19:50.201Z"
     },
     "13": {
       "typ": "gemischt",
@@ -7232,7 +7336,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Nr. 2",
+          "pfad": "Abs. 2 Nr. 2 Satz 1",
           "von": 567,
           "bis": 982,
           "typ": "aussage",
@@ -7244,7 +7348,7 @@
               "text": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden haben",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
+              "pfad": "Abs. 2 Nr. 2 Satz 1",
               "von": 567,
               "laenge": 120,
               "konfidenz": 0.6,
@@ -7260,7 +7364,7 @@
               "text": "in diesem Fall",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
+              "pfad": "Abs. 2 Nr. 2 Satz 1",
               "von": 689,
               "laenge": 14,
               "konfidenz": 0.6,
@@ -7287,7 +7391,7 @@
                   "laenge": 83
                 }
               ],
-              "pfad": "Abs. 2 Nr. 2",
+              "pfad": "Abs. 2 Nr. 2 Satz 1",
               "von": 704,
               "laenge": 68,
               "konfidenz": 0.6,
@@ -7303,7 +7407,7 @@
               "text": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
+              "pfad": "Abs. 2 Nr. 2 Satz 1",
               "von": 773,
               "laenge": 123,
               "konfidenz": 0.6,
@@ -7317,7 +7421,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+          "pfad": "Abs. 2 Nr. 2 Satz 2",
           "von": 983,
           "bis": 1059,
           "typ": "verweisung",
@@ -7339,7 +7443,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+              "pfad": "Abs. 2 Nr. 2 Satz 2",
               "von": 1031,
               "laenge": 16,
               "konfidenz": 0.45,
@@ -7353,7 +7457,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 2",
           "von": 1060,
           "bis": 1213,
           "typ": "aussage",
@@ -7375,7 +7479,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 2",
               "von": 1071,
               "laenge": 130,
               "konfidenz": 0.6,
@@ -7389,7 +7493,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 2",
+          "pfad": "Abs. 2 Satz 3",
           "von": 1214,
           "bis": 1338,
           "typ": "aussage",
@@ -7400,7 +7504,7 @@
               "text": "Die Anteile an der übernehmenden Körperschaft",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1214,
               "laenge": 45,
               "konfidenz": 0.6,
@@ -7416,7 +7520,7 @@
               "text": "treten steuerlich an die Stelle der Anteile an der übertragenden Körperschaft",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1260,
               "laenge": 77,
               "konfidenz": 0.6,
@@ -7430,7 +7534,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 3",
+          "pfad": "Abs. 2 Satz 4",
           "von": 1339,
           "bis": 1484,
           "typ": "konditional",
@@ -7441,7 +7545,7 @@
               "text": "Gehören die Anteile an der übertragenden Körperschaft nicht zu einem Betriebsvermögen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 3",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1339,
               "laenge": 85,
               "konfidenz": 0.6,
@@ -7457,7 +7561,7 @@
               "text": "treten an die Stelle des Buchwerts die Anschaffungskosten",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 3",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1426,
               "laenge": 57,
               "konfidenz": 0.6,
@@ -7532,7 +7636,7 @@
                 {
                   "n": "2.",
                   "t": "die Mitgliedstaaten der Europäischen Union bei einer Verschmelzung Artikel 8 der Richtlinie 2009/133/EG anzuwenden haben",
-                  "pfad": "Abs. 2 Nr. 2",
+                  "pfad": "Abs. 2 Nr. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7540,7 +7644,7 @@
                 {
                   "n": "3.",
                   "t": "in diesem Fall",
-                  "pfad": "Abs. 2 Nr. 2",
+                  "pfad": "Abs. 2 Nr. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7548,7 +7652,7 @@
                 {
                   "n": "4.",
                   "t": "Die Anteile an der übernehmenden Körperschaft",
-                  "pfad": "Abs. 2 Satz 2",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7556,7 +7660,7 @@
                 {
                   "n": "5.",
                   "t": "Gehören die Anteile an der übertragenden Körperschaft nicht zu einem Betriebsvermögen",
-                  "pfad": "Abs. 2 Satz 3",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7571,7 +7675,7 @@
                 {
                   "n": "1.",
                   "t": "ungeachtet der Bestimmungen eines Abkommens zur Vermeidung der Doppelbesteuerung in der gleichen Art und Weise zu besteuern",
-                  "pfad": "Abs. 2 Nr. 2",
+                  "pfad": "Abs. 2 Nr. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7602,7 +7706,7 @@
                 {
                   "n": "3.",
                   "t": "ist der Gewinn aus einer späteren Veräußerung der erworbenen Anteile … wie die Veräußerung der Anteile an der übertragenden Körperschaft zu besteuern wäre",
-                  "pfad": "Abs. 2 Nr. 2",
+                  "pfad": "Abs. 2 Nr. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -7610,7 +7714,7 @@
                 {
                   "n": "4.",
                   "t": "ist entsprechend … anzuwenden",
-                  "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+                  "pfad": "Abs. 2 Nr. 2 Satz 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": true
@@ -7618,7 +7722,7 @@
                 {
                   "n": "5.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Anteilseigners zuständigen Finanzamt … zu stellen",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -7626,7 +7730,7 @@
                 {
                   "n": "6.",
                   "t": "treten steuerlich an die Stelle der Anteile an der übertragenden Körperschaft",
-                  "pfad": "Abs. 2 Satz 2",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7634,7 +7738,7 @@
                 {
                   "n": "7.",
                   "t": "treten an die Stelle des Buchwerts die Anschaffungskosten",
-                  "pfad": "Abs. 2 Satz 3",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -7678,7 +7782,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "c5fc6e6b03505cda25e0345baae595203edb6257bd1e749ed30efbc9b28de5c4",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.571Z"
+      "aktualisiert": "2026-08-14T10:19:50.202Z"
     },
     "14": {
       "typ": "gemischt",
@@ -7701,7 +7805,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.571Z"
+      "aktualisiert": "2026-08-14T10:19:50.203Z"
     },
     "15": {
       "typ": "gemischt",
@@ -8650,7 +8754,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "d72e47a513a8546e48723f6394773d94e5e7f14a1b5f1a07bdb604c92d807ad2",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.575Z"
+      "aktualisiert": "2026-08-14T10:19:50.205Z"
     },
     "16": {
       "typ": "konditional",
@@ -8760,7 +8864,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "8f3e1ba807fde9d6d9232b325ec6891f7fe7f21090538c01cd5bad0ee3a660a8",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.575Z"
+      "aktualisiert": "2026-08-14T10:19:50.205Z"
     },
     "17": {
       "typ": "gemischt",
@@ -8783,7 +8887,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.575Z"
+      "aktualisiert": "2026-08-14T10:19:50.205Z"
     },
     "18": {
       "typ": "gemischt",
@@ -9359,7 +9463,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "992ec7fc49e542bda8c55d80a229fec9dae96838e0ed1a625fbc47fe5a6b340d",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.577Z"
+      "aktualisiert": "2026-08-14T10:19:50.207Z"
     },
     "19": {
       "typ": "konditional",
@@ -9550,7 +9654,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22ce9304e0af7106c9ee0c115d3eac01eeefaf2492521de2b2073abfe571ceac",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.578Z"
+      "aktualisiert": "2026-08-14T10:19:50.207Z"
     },
     "20": {
       "typ": "gemischt",
@@ -9822,30 +9926,56 @@
         {
           "pfad": "Abs. 2 Nr. 4",
           "von": 1244,
-          "bis": 1441,
-          "typ": "tarif",
+          "bis": 1372,
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+              "art": "tb",
+              "text": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 4",
-              "von": 1361,
-              "laenge": 75,
+              "von": 1244,
+              "laenge": 116,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             }
           ]
         },
         {
-          "pfad": "Abs. 2 Buchst. b",
+          "pfad": "Abs. 2 Nr. 4 Buchst. a",
+          "von": 1376,
+          "bis": 1441,
+          "typ": "tarif",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 4 Buchst. a",
+              "von": 1376,
+              "laenge": 60,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 4 Buchst. a — Anordnungsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 4 Buchst. b",
           "von": 1445,
           "bis": 1525,
           "typ": "aussage",
@@ -9857,7 +9987,7 @@
               "text": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Buchst. b",
+              "pfad": "Abs. 2 Nr. 4 Buchst. b",
               "von": 1445,
               "laenge": 79,
               "konfidenz": 0.6,
@@ -9866,12 +9996,12 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Anordnungsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 4 Buchst. b — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 3",
           "von": 1526,
           "bis": 1702,
           "typ": "aussage",
@@ -9893,7 +10023,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1537,
               "laenge": 153,
               "konfidenz": 0.6,
@@ -9907,7 +10037,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 2 (Teil 2)",
+          "pfad": "Abs. 2 Satz 4",
           "von": 1703,
           "bis": 1991,
           "typ": "konditional",
@@ -9918,7 +10048,7 @@
               "text": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1703,
               "laenge": 91,
               "konfidenz": 0.6,
@@ -9934,7 +10064,7 @@
               "text": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1796,
               "laenge": 194,
               "konfidenz": 0.6,
@@ -9948,7 +10078,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 3",
+          "pfad": "Abs. 2 Satz 5",
           "von": 1992,
           "bis": 2170,
           "typ": "aussage",
@@ -9959,7 +10089,7 @@
               "text": "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 3",
+              "pfad": "Abs. 2 Satz 5",
               "von": 1992,
               "laenge": 81,
               "konfidenz": 0.6,
@@ -9975,7 +10105,7 @@
               "text": "ermittelt sich unter Berücksichtigung der Entnahmen und Einlagen im Sinne des Absatzes 5 Satz 2",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 3",
+              "pfad": "Abs. 2 Satz 5",
               "von": 2074,
               "laenge": 95,
               "konfidenz": 0.6,
@@ -10680,16 +10810,24 @@
                 },
                 {
                   "n": "4.",
-                  "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "t": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
+                  "pfad": "Abs. 2 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
+                  "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
+                  "pfad": "Abs. 2 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
                   "t": "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
-                  "pfad": "Abs. 2 Satz 3",
+                  "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -10759,8 +10897,8 @@
                 },
                 {
                   "n": "8.",
-                  "t": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
-                  "pfad": "Abs. 2 Nr. 4",
+                  "t": "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+                  "pfad": "Abs. 2 Nr. 4 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -10768,7 +10906,7 @@
                 {
                   "n": "9.",
                   "t": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
-                  "pfad": "Abs. 2 Buchst. b",
+                  "pfad": "Abs. 2 Nr. 4 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -10776,7 +10914,7 @@
                 {
                   "n": "10.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der steuerlichen Schlussbilanz bei dem für die Besteuerung der übernehmenden Gesellschaft zuständigen Finanzamt … zu stellen",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -10784,7 +10922,7 @@
                 {
                   "n": "11.",
                   "t": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -10792,7 +10930,7 @@
                 {
                   "n": "12.",
                   "t": "ermittelt sich unter Berücksichtigung der Entnahmen und Einlagen im Sinne des Absatzes 5 Satz 2",
-                  "pfad": "Abs. 2 Satz 3",
+                  "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -11177,6 +11315,7 @@
         "das eingebrachte Betriebsvermögen mit dem gemeinen Wert anzusetzen",
         "für die Bewertung von Pensionsrückstellungen",
         "Abweichend von Satz 1",
+        "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
         "Das eingebrachte Betriebsvermögen im Sinne von Satz 2 Nummer 2 und 4 sowie Satz 4",
         "Der Wert, mit dem die übernehmende Gesellschaft das eingebrachte Betriebsvermögen",
@@ -11202,7 +11341,7 @@
         "die Passivposten des eingebrachten Betriebsvermögens die Aktivposten nicht übersteigen",
         "ist das Eigenkapital nicht",
         "beschränkt wird",
-        "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+        "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
         "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
         "ist spätestens bis zur erstmaligen Abgabe der steuerlichen Schlussbilanz bei dem für die Besteuerung der übernehmenden Gesellschaft zuständigen Finanzamt",
         "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
@@ -11227,7 +11366,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.58,
+      "konfidenz": 0.581,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11235,16 +11374,16 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "ea36c720801a0634a5f8ba2d6ffb545ae9518f4f976568ecec48956827b0293a",
+      "text_hash": "866fd3ced4e3d5c049f201c08af05c3ee0a79ebee7399a9cb6826817007dce2c",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.584Z"
+      "aktualisiert": "2026-08-14T10:19:50.215Z"
     },
     "21": {
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "tarif",
         "aussage",
+        "tarif",
         "verweisung"
       ],
       "saetze": [
@@ -11374,30 +11513,56 @@
         {
           "pfad": "Abs. 1 Nr. 2",
           "von": 785,
-          "bis": 959,
-          "typ": "tarif",
+          "bis": 900,
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "beträgt als a) 25 Prozent des Buchwerts der eingebrachten Anteile",
+              "art": "tb",
+              "text": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Anteilen gewährt werden, nicht mehr",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
-              "von": 889,
-              "laenge": 65,
+              "von": 785,
+              "laenge": 103,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             }
           ]
         },
         {
-          "pfad": "Abs. 1 Buchst. b",
+          "pfad": "Abs. 1 Nr. 2 Buchst. a",
+          "von": 904,
+          "bis": 959,
+          "typ": "tarif",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "25 Prozent des Buchwerts der eingebrachten Anteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Nr. 2 Buchst. a",
+              "von": 904,
+              "laenge": 50,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 Buchst. a — Anordnungsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 1 Nr. 2 Buchst. b",
           "von": 963,
           "bis": 1033,
           "typ": "aussage",
@@ -11409,7 +11574,7 @@
               "text": "500 000 Euro, höchstens jedoch den Buchwert der eingebrachten Anteile",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Buchst. b",
+              "pfad": "Abs. 1 Nr. 2 Buchst. b",
               "von": 963,
               "laenge": 69,
               "konfidenz": 0.6,
@@ -11418,12 +11583,12 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Anordnungsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 2 Buchst. b — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 1 Satz 1 (Teil 2)",
+          "pfad": "Abs. 1 Satz 3",
           "von": 1034,
           "bis": 1073,
           "typ": "verweisung",
@@ -11434,7 +11599,7 @@
               "text": "gilt entsprechend",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "pfad": "Abs. 1 Satz 3",
               "von": 1055,
               "laenge": 17,
               "konfidenz": 0.45,
@@ -11448,7 +11613,7 @@
           ]
         },
         {
-          "pfad": "Abs. 1 Satz 2 (Teil 2)",
+          "pfad": "Abs. 1 Satz 4",
           "von": 1074,
           "bis": 1355,
           "typ": "konditional",
@@ -11459,7 +11624,7 @@
               "text": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 2 (Teil 2)",
+              "pfad": "Abs. 1 Satz 4",
               "von": 1074,
               "laenge": 91,
               "konfidenz": 0.6,
@@ -11475,7 +11640,7 @@
               "text": "sind die eingebrachten Anteile abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 2 (Teil 2)",
+              "pfad": "Abs. 1 Satz 4",
               "von": 1167,
               "laenge": 187,
               "konfidenz": 0.6,
@@ -11812,7 +11977,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 4",
           "von": 3042,
           "bis": 3194,
           "typ": "aussage",
@@ -11834,7 +11999,7 @@
                   "laenge": 10
                 }
               ],
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 4",
               "von": 3053,
               "laenge": 129,
               "konfidenz": 0.6,
@@ -11848,7 +12013,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 2 (Teil 2)",
+          "pfad": "Abs. 2 Satz 5",
           "von": 3195,
           "bis": 3344,
           "typ": "konditional",
@@ -11859,7 +12024,7 @@
               "text": "Haben die eingebrachten Anteile beim Einbringenden nicht zu einem Betriebsvermögen gehört",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 5",
               "von": 3195,
               "laenge": 89,
               "konfidenz": 0.6,
@@ -11875,7 +12040,7 @@
               "text": "treten an die Stelle des Buchwerts die Anschaffungskosten",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 5",
               "von": 3286,
               "laenge": 57,
               "konfidenz": 0.6,
@@ -11889,7 +12054,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 3 (Teil 2)",
+          "pfad": "Abs. 2 Satz 6",
           "von": 3345,
           "bis": 3382,
           "typ": "verweisung",
@@ -11900,7 +12065,7 @@
               "text": "gilt entsprechend",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 3 (Teil 2)",
+              "pfad": "Abs. 2 Satz 6",
               "von": 3364,
               "laenge": 17,
               "konfidenz": 0.45,
@@ -12050,8 +12215,16 @@
                 },
                 {
                   "n": "4.",
+                  "t": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Anteilen gewährt werden, nicht mehr",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
-                  "pfad": "Abs. 1 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12089,8 +12262,8 @@
                 },
                 {
                   "n": "4.",
-                  "t": "beträgt als a) 25 Prozent des Buchwerts der eingebrachten Anteile",
-                  "pfad": "Abs. 1 Nr. 2",
+                  "t": "25 Prozent des Buchwerts der eingebrachten Anteile",
+                  "pfad": "Abs. 1 Nr. 2 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12098,7 +12271,7 @@
                 {
                   "n": "5.",
                   "t": "500 000 Euro, höchstens jedoch den Buchwert der eingebrachten Anteile",
-                  "pfad": "Abs. 1 Buchst. b",
+                  "pfad": "Abs. 1 Nr. 2 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12106,7 +12279,7 @@
                 {
                   "n": "6.",
                   "t": "gilt entsprechend",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -12114,7 +12287,7 @@
                 {
                   "n": "7.",
                   "t": "sind die eingebrachten Anteile abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
-                  "pfad": "Abs. 1 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 1 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12201,7 +12374,7 @@
                 {
                   "n": "9.",
                   "t": "Haben die eingebrachten Anteile beim Einbringenden nicht zu einem Betriebsvermögen gehört",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12287,7 +12460,7 @@
                 {
                   "n": "8.",
                   "t": "ist spätestens bis zur erstmaligen Abgabe der Steuererklärung bei dem für die Besteuerung des Einbringenden zuständigen Finanzamt … zu stellen",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -12295,7 +12468,7 @@
                 {
                   "n": "9.",
                   "t": "treten an die Stelle des Buchwerts die Anschaffungskosten",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 5",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -12303,7 +12476,7 @@
                 {
                   "n": "10.",
                   "t": "gilt entsprechend",
-                  "pfad": "Abs. 2 Satz 3 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 6",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -12386,6 +12559,7 @@
         "Werden Anteile an einer Kapitalgesellschaft oder einer Genossenschaft (erworbene Gesellschaft) in eine Kapitalgesellschaft oder Genossenschaft (übernehmende Gesellschaft) gegen Gewährung neuer Anteile an der übernehmenden Gesellschaft eingebracht (Anteilstausch)",
         "Abweichend von Satz 1",
         "die übernehmende Gesellschaft nach der Einbringung auf Grund ihrer Beteiligung einschließlich der eingebrachten Anteile nachweisbar unmittelbar die Mehrheit der Stimmrechte an der erworbenen Gesellschaft",
+        "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Anteilen gewährt werden, nicht mehr",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
         "Der Wert, mit dem die übernehmende Gesellschaft die eingebrachten Anteile",
         "Abweichend von Satz 1",
@@ -12403,7 +12577,7 @@
         "hat die übernehmende Gesellschaft die eingebrachten Anteile mit dem gemeinen Wert anzusetzen",
         "können die eingebrachten Anteile auf Antrag mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem gemeinen Wert, angesetzt werden",
         "hat (qualifizierter Anteilstausch)",
-        "beträgt als a) 25 Prozent des Buchwerts der eingebrachten Anteile",
+        "25 Prozent des Buchwerts der eingebrachten Anteile",
         "500 000 Euro, höchstens jedoch den Buchwert der eingebrachten Anteile",
         "gilt entsprechend",
         "sind die eingebrachten Anteile abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
@@ -12435,9 +12609,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "8983bf2950f1f99d8fb4eb46088bde704057131ad7aaf6a9580118deabdcfde5",
+      "text_hash": "d04e952eb41a50e3f7e157b204164c2eaa189d75033acf6192c109b9069fafd9",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.589Z"
+      "aktualisiert": "2026-08-14T10:19:50.219Z"
     },
     "22": {
       "typ": "gemischt",
@@ -12910,7 +13084,7 @@
           ]
         },
         {
-          "pfad": "Abs. 1 Satz 1 (Teil 2)",
+          "pfad": "Abs. 1 Satz 7",
           "von": 3950,
           "bis": 4158,
           "typ": "aussage",
@@ -12921,7 +13095,7 @@
               "text": "Satz 4",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Satz 1 (Teil 2)",
+              "pfad": "Abs. 1 Satz 7",
               "von": 3950,
               "laenge": 6,
               "konfidenz": 0.45,
@@ -13910,7 +14084,7 @@
                 {
                   "n": "12.",
                   "t": "Satz 4",
-                  "pfad": "Abs. 1 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 1 Satz 7",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -14421,7 +14595,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "889d713fa7c495e7bb74409ae1d23557e6429e8a1b4a818870c0af07f16aa78f",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.601Z"
+      "aktualisiert": "2026-08-14T10:19:50.227Z"
     },
     "23": {
       "typ": "gemischt",
@@ -14736,7 +14910,7 @@
           ]
         },
         {
-          "pfad": "Abs. 3 Satz 1 (Teil 2)",
+          "pfad": "Abs. 3 Satz 2",
           "von": 2244,
           "bis": 2578,
           "typ": "konditional",
@@ -14747,7 +14921,7 @@
               "text": "Bei einer Erhöhung der Anschaffungskosten oder Herstellungskosten auf Grund rückwirkender Besteuerung des Einbringungsgewinns (Absatz 2)",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 3 Satz 1 (Teil 2)",
+              "pfad": "Abs. 3 Satz 2",
               "von": 2244,
               "laenge": 136,
               "konfidenz": 0.6,
@@ -14763,7 +14937,7 @@
               "text": "gilt dies mit der Maßgabe, dass an die Stelle des Zeitpunkts der Einbringung der Beginn des Wirtschaftsjahrs tritt, in welches das die Besteuerung des Einbringungsgewinns auslösende Ereignis fällt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 3 Satz 1 (Teil 2)",
+              "pfad": "Abs. 3 Satz 2",
               "von": 2381,
               "laenge": 196,
               "konfidenz": 0.6,
@@ -15054,7 +15228,7 @@
                 {
                   "n": "3.",
                   "t": "Bei einer Erhöhung der Anschaffungskosten oder Herstellungskosten auf Grund rückwirkender Besteuerung des Einbringungsgewinns (Absatz 2)",
-                  "pfad": "Abs. 3 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15093,7 +15267,7 @@
                 {
                   "n": "4.",
                   "t": "gilt dies mit der Maßgabe, dass an die Stelle des Zeitpunkts der Einbringung der Beginn des Wirtschaftsjahrs tritt, in welches das die Besteuerung des Einbringungsgewinns auslösende Ereignis fällt",
-                  "pfad": "Abs. 3 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 3 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15251,7 +15425,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "74de4b817bc70550532ec38d63bdc8cde46401aa684f90c4cedc5dc161484fa3",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.605Z"
+      "aktualisiert": "2026-08-14T10:19:50.229Z"
     },
     "24": {
       "typ": "gemischt",
@@ -15456,30 +15630,56 @@
         {
           "pfad": "Abs. 2 Nr. 2",
           "von": 854,
-          "bis": 1051,
-          "typ": "tarif",
+          "bis": 982,
+          "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+              "art": "tb",
+              "text": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
-              "von": 971,
-              "laenge": 75,
+              "von": 854,
+              "laenge": 116,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Tarif — vollständig Rechtsfolge"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             }
           ]
         },
         {
-          "pfad": "Abs. 2 Buchst. b",
+          "pfad": "Abs. 2 Nr. 2 Buchst. a",
+          "von": 986,
+          "bis": 1051,
+          "typ": "tarif",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2 Buchst. a",
+              "von": 986,
+              "laenge": 60,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 Buchst. a — Anordnungsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 2 Buchst. b",
           "von": 1055,
           "bis": 1135,
           "typ": "aussage",
@@ -15491,7 +15691,7 @@
               "text": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Buchst. b",
+              "pfad": "Abs. 2 Nr. 2 Buchst. b",
               "von": 1055,
               "laenge": 79,
               "konfidenz": 0.6,
@@ -15500,12 +15700,12 @@
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungsglied Buchst. b — Anordnungsvariante des Einleitungssatzes"
+              "grund": "Aufzählungsglied Nr. 2 Buchst. b — Anordnungsvariante des Einleitungssatzes"
             }
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 1 (Teil 2)",
+          "pfad": "Abs. 2 Satz 3",
           "von": 1136,
           "bis": 1173,
           "typ": "verweisung",
@@ -15516,7 +15716,7 @@
               "text": "gilt entsprechend",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 1 (Teil 2)",
+              "pfad": "Abs. 2 Satz 3",
               "von": 1155,
               "laenge": 17,
               "konfidenz": 0.45,
@@ -15530,7 +15730,7 @@
           ]
         },
         {
-          "pfad": "Abs. 2 Satz 2 (Teil 2)",
+          "pfad": "Abs. 2 Satz 4",
           "von": 1174,
           "bis": 1462,
           "typ": "konditional",
@@ -15541,7 +15741,7 @@
               "text": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1174,
               "laenge": 91,
               "konfidenz": 0.6,
@@ -15557,7 +15757,7 @@
               "text": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 2 Satz 2 (Teil 2)",
+              "pfad": "Abs. 2 Satz 4",
               "von": 1267,
               "laenge": 194,
               "konfidenz": 0.6,
@@ -15941,8 +16141,16 @@
                 },
                 {
                   "n": "4.",
+                  "t": "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15988,8 +16196,8 @@
                 },
                 {
                   "n": "5.",
-                  "t": "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
-                  "pfad": "Abs. 2 Nr. 2",
+                  "t": "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+                  "pfad": "Abs. 2 Nr. 2 Buchst. a",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15997,7 +16205,7 @@
                 {
                   "n": "6.",
                   "t": "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
-                  "pfad": "Abs. 2 Buchst. b",
+                  "pfad": "Abs. 2 Nr. 2 Buchst. b",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -16005,7 +16213,7 @@
                 {
                   "n": "7.",
                   "t": "gilt entsprechend",
-                  "pfad": "Abs. 2 Satz 1 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 3",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -16013,7 +16221,7 @@
                 {
                   "n": "8.",
                   "t": "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
-                  "pfad": "Abs. 2 Satz 2 (Teil 2)",
+                  "pfad": "Abs. 2 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -16221,6 +16429,7 @@
         "für die Bewertung von Pensionsrückstellungen",
         "Abweichend von Satz 1",
         "das Recht der Bundesrepublik Deutschland hinsichtlich der Besteuerung des eingebrachten Betriebsvermögens nicht ausgeschlossen",
+        "der gemeine Wert von sonstigen Gegenleistungen, die neben den neuen Gesellschaftsanteilen gewährt werden, nicht mehr",
         "Erhält der Einbringende neben den neuen Gesellschaftsanteilen auch sonstige Gegenleistungen",
         "Der Wert, mit dem das eingebrachte Betriebsvermögen in der Bilanz der Personengesellschaft einschließlich der Ergänzungsbilanzen für ihre Gesellschafter",
         "wenn das eingebrachte Betriebsvermögen mit dem gemeinen Wert angesetzt wird und es sich nicht um die Einbringung von Teilen eines Mitunternehmeranteils handelt",
@@ -16237,7 +16446,7 @@
         "gilt § 6a des Einkommensteuergesetzes",
         "kann das übernommene Betriebsvermögen auf Antrag mit dem Buchwert oder einem höheren Wert, höchstens jedoch mit dem Wert im Sinne des Satzes 1, angesetzt werden",
         "beschränkt wird",
-        "beträgt als a) 25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
+        "25 Prozent des Buchwerts des eingebrachten Betriebsvermögens",
         "500 000 Euro, höchstens jedoch den Buchwert des eingebrachten Betriebsvermögens",
         "gilt entsprechend",
         "ist das eingebrachte Betriebsvermögen abweichend von Satz 2 mindestens mit dem gemeinen Wert der sonstigen Gegenleistungen anzusetzen, wenn dieser den sich nach Satz 2 ergebenden Wert übersteigt",
@@ -16253,7 +16462,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.579,
+      "konfidenz": 0.58,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -16261,9 +16470,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "9816ac1f9eec71e329f86ed7d09a45d2b9f80e4962551aef37fe23746772cbb0",
+      "text_hash": "a93ab6122f2604f9620ebf3990381168115424f164aac4046e71e78c361c3bc0",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.609Z"
+      "aktualisiert": "2026-08-14T10:19:50.232Z"
     },
     "25": {
       "typ": "gemischt",
@@ -16419,7 +16628,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "dd8c0fbb4374cc097779aadb9f34b48ecdb0c1b019e8385526dc18ad460aa0b7",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.610Z"
+      "aktualisiert": "2026-08-14T10:19:50.233Z"
     },
     "26": {
       "typ": "gemischt",
@@ -16442,7 +16651,7 @@
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
       "text_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.618Z"
+      "aktualisiert": "2026-08-14T10:19:50.238Z"
     },
     "27": {
       "typ": "anwendung",
@@ -16499,7 +16708,7 @@
           "elemente": []
         },
         {
-          "pfad": "Abs. 3 Nr. 2",
+          "pfad": "Abs. 3 Nr. 2 Satz 1",
           "von": 1614,
           "bis": 1895,
           "typ": "anwendung",
@@ -16507,15 +16716,23 @@
           "elemente": []
         },
         {
-          "pfad": "Abs. 3 Nr. 2 Halbs. 2",
+          "pfad": "Abs. 3 Nr. 2 Satz 2",
           "von": 1896,
+          "bis": 2002,
+          "typ": "anwendung",
+          "junktor": "oder",
+          "elemente": []
+        },
+        {
+          "pfad": "Abs. 3 Nr. 2 Buchst. a",
+          "von": 2006,
           "bis": 2470,
           "typ": "anwendung",
           "junktor": "oder",
           "elemente": []
         },
         {
-          "pfad": "Abs. 3 Buchst. b",
+          "pfad": "Abs. 3 Nr. 2 Buchst. b",
           "von": 2474,
           "bis": 2801,
           "typ": "anwendung",
@@ -16523,7 +16740,7 @@
           "elemente": []
         },
         {
-          "pfad": "Abs. 3 Satz 1 (Teil 2)",
+          "pfad": "Abs. 3 Satz 2",
           "von": 2802,
           "bis": 3071,
           "typ": "anwendung",
@@ -16746,9 +16963,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Für diese Vorschrift wird keine Markierung erzeugt (Anwendungs- oder Verweisungsvorschrift ohne eigenständige Tatbestand-Rechtsfolge-Struktur).",
-      "text_hash": "546aff936ab9687b671a466b9f5b411687bef794d3ef671f5282d1ba6372695e",
+      "text_hash": "39b692620ffb7dda04e018ff279c90d2186a3c032a343c602405138667babfac",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.621Z"
+      "aktualisiert": "2026-08-14T10:19:50.241Z"
     },
     "28": {
       "typ": "aussage",
@@ -16824,7 +17041,7 @@
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "ab5470b11d877e1d750db81377c7ff533d57ac69ecc1f6c9a9991a25aed63d9c",
       "format": 5,
-      "aktualisiert": "2026-08-11T11:31:26.621Z"
+      "aktualisiert": "2026-08-14T10:19:50.241Z"
     }
   }
 }

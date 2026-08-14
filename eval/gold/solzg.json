@@ -16,75 +16,159 @@
      "pfad": "Abs. 1 Satz 1",
      "text": "Zur Einkommensteuer und zur Körperschaftsteuer wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben.",
      "elemente": [
-      { "art": "tb", "text": "Zur Einkommensteuer und zur Körperschaftsteuer", "rolle": "Anknüpfungssteuer" },
-      { "art": "rf", "text": "wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben", "rolle": "Erhebungsanordnung" }
+      {
+       "art": "tb",
+       "text": "Zur Einkommensteuer und zur Körperschaftsteuer",
+       "rolle": "Anknüpfungssteuer"
+      },
+      {
+       "art": "rf",
+       "text": "wird ein Solidaritätszuschlag als Ergänzungsabgabe erhoben",
+       "rolle": "Erhebungsanordnung"
+      }
      ]
     },
     {
      "pfad": "Abs. 2 Satz 1",
      "text": "Auf die Festsetzung und Erhebung des Solidaritätszuschlags sind die Vorschriften des Einkommensteuergesetzes mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend anzuwenden.",
      "elemente": [
-      { "art": "tb", "text": "Auf die Festsetzung und Erhebung des Solidaritätszuschlags", "rolle": "Anwendungsbereich" },
-      { "art": "rf", "text": "sind die Vorschriften des Einkommensteuergesetzes", "rolle": "Verweisung" },
-      { "art": "rf", "text": "und des Körperschaftsteuergesetzes entsprechend anzuwenden", "rolle": "Verweisung" },
-      { "art": "ausn", "text": "mit Ausnahme des § 36a des Einkommensteuergesetzes", "rolle": "Bereichsausnahme" }
+      {
+       "art": "tb",
+       "text": "Auf die Festsetzung und Erhebung des Solidaritätszuschlags",
+       "rolle": "Anwendungsbereich"
+      },
+      {
+       "art": "rf",
+       "text": "sind die Vorschriften des Einkommensteuergesetzes",
+       "rolle": "Verweisung"
+      },
+      {
+       "art": "rf",
+       "text": "und des Körperschaftsteuergesetzes entsprechend anzuwenden",
+       "rolle": "Verweisung"
+      },
+      {
+       "art": "ausn",
+       "text": "mit Ausnahme des § 36a des Einkommensteuergesetzes",
+       "rolle": "Bereichsausnahme"
+      }
      ]
     },
     {
      "pfad": "Abs. 2 Satz 2",
      "text": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben, so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden.",
      "elemente": [
-      { "art": "tb", "text": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben", "rolle": "uneingeleiteter Bedingungssatz" },
-      { "art": "rf", "text": "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden", "rolle": "Verarbeitungsbefugnis" }
+      {
+       "art": "tb",
+       "text": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so dürfen die zu diesem Zweck verarbeiteten personenbezogenen Daten auch für die Erhebung des Solidaritätszuschlags im Wege des Steuerabzugs verarbeitet werden",
+       "rolle": "Verarbeitungsbefugnis"
+      }
      ]
     },
     {
      "pfad": "Abs. 3 Satz 1",
      "text": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten oder werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst, gilt dies für den Solidaritätszuschlag entsprechend.",
      "elemente": [
-      { "art": "tb", "text": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten", "rolle": "Abgeltungswirkung" },
-      { "art": "tb", "text": "werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst", "rolle": "Nichterfassung" },
-      { "art": "rf", "text": "gilt dies für den Solidaritätszuschlag entsprechend", "rolle": "Gleichlauf" }
+      {
+       "art": "tb",
+       "text": "Ist die Einkommen- oder Körperschaftsteuer für Einkünfte, die dem Steuerabzug unterliegen, durch den Steuerabzug abgegolten",
+       "rolle": "Abgeltungswirkung"
+      },
+      {
+       "art": "tb",
+       "text": "werden solche Einkünfte bei der Veranlagung zur Einkommen- oder Körperschaftsteuer oder beim Lohnsteuer-Jahresausgleich nicht erfasst",
+       "rolle": "Nichterfassung"
+      },
+      {
+       "art": "rf",
+       "text": "gilt dies für den Solidaritätszuschlag entsprechend",
+       "rolle": "Gleichlauf"
+      }
      ]
     },
     {
      "pfad": "Abs. 4 Satz 1",
      "text": "Die Vorauszahlungen auf den Solidaritätszuschlag sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten; § 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden.",
      "elemente": [
-      { "art": "rf", "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten", "rolle": "Fälligkeit" },
-      { "art": "ausn", "text": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden", "rolle": "Derogation" }
+      {
+       "art": "rf",
+       "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körperschaftsteuer zu entrichten",
+       "rolle": "Fälligkeit"
+      },
+      {
+       "art": "ausn",
+       "text": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
+       "rolle": "Derogation"
+      }
      ]
     },
     {
      "pfad": "Abs. 4 Satz 2",
      "text": "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist, sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten.",
      "elemente": [
-      { "art": "tb", "text": "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist", "rolle": "Zeitbedingung" },
-      { "art": "rf", "text": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten", "rolle": "Zahlungspflicht" }
+      {
+       "art": "tb",
+       "text": "Solange ein Bescheid über die Vorauszahlungen auf den Solidaritätszuschlag nicht erteilt worden ist",
+       "rolle": "Zeitbedingung"
+      },
+      {
+       "art": "rf",
+       "text": "sind die Vorauszahlungen ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszuschlag geltenden Vorschriften zu entrichten",
+       "rolle": "Zahlungspflicht"
+      }
      ]
     },
     {
      "pfad": "Abs. 4 Satz 3",
      "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden; § 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß.",
      "elemente": [
-      { "art": "ausn", "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden", "rolle": "Derogation" },
-      { "art": "rf", "text": "§ 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß", "rolle": "Verweisung" }
+      {
+       "art": "ausn",
+       "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden",
+       "rolle": "Derogation"
+      },
+      {
+       "art": "rf",
+       "text": "§ 254 Abs. 2 der Abgabenordnung gilt insoweit sinngemäß",
+       "rolle": "Verweisung"
+      }
      ]
     },
     {
      "pfad": "Abs. 5 Satz 1",
      "text": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden.",
      "elemente": [
-      { "art": "tb", "text": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag", "rolle": "Verfahrenslage" },
-      { "art": "rf", "text": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden", "rolle": "Rügeausschluss" }
+      {
+       "art": "tb",
+       "text": "Mit einem Rechtsbehelf gegen den Solidaritätszuschlag",
+       "rolle": "Verfahrenslage"
+      },
+      {
+       "art": "rf",
+       "text": "kann weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens angegriffen werden",
+       "rolle": "Rügeausschluss"
+      }
      ]
     },
     {
      "pfad": "Abs. 5 Satz 2",
      "text": "Wird die Bemessungsgrundlage geändert, ändert sich der Solidaritätszuschlag entsprechend.",
      "elemente": [
-      { "art": "tb", "text": "Wird die Bemessungsgrundlage geändert", "rolle": "uneingeleiteter Bedingungssatz" },
-      { "art": "rf", "text": "ändert sich der Solidaritätszuschlag entsprechend", "rolle": "Folgeänderung" }
+      {
+       "art": "tb",
+       "text": "Wird die Bemessungsgrundlage geändert",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "ändert sich der Solidaritätszuschlag entsprechend",
+       "rolle": "Folgeänderung"
+      }
      ]
     }
    ]
@@ -99,28 +183,44 @@
      "pfad": "Satz 1",
      "text": "Abgabepflichtig sind",
      "elemente": [
-      { "art": "rf", "text": "Abgabepflichtig sind", "rolle": "Abgabepflicht" }
+      {
+       "art": "rf",
+       "text": "Abgabepflichtig sind",
+       "rolle": "Abgabepflicht"
+      }
      ]
     },
     {
      "pfad": "Nr. 1",
      "text": "natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind,",
      "elemente": [
-      { "art": "tb", "text": "natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind", "rolle": "Person" }
+      {
+       "art": "tb",
+       "text": "natürliche Personen, die nach § 1 des Einkommensteuergesetzes einkommensteuerpflichtig sind",
+       "rolle": "Person"
+      }
      ]
     },
     {
      "pfad": "Nr. 2",
      "text": "natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind,",
      "elemente": [
-      { "art": "tb", "text": "natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind", "rolle": "Person" }
+      {
+       "art": "tb",
+       "text": "natürliche Personen, die nach § 2 des Außensteuergesetzes erweitert beschränkt steuerpflichtig sind",
+       "rolle": "Person"
+      }
      ]
     },
     {
      "pfad": "Nr. 3",
      "text": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig sind.",
      "elemente": [
-      { "art": "tb", "text": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig sind", "rolle": "Person" }
+      {
+       "art": "tb",
+       "text": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach § 1 oder § 2 des Körperschaftsteuergesetzes körperschaftsteuerpflichtig sind",
+       "rolle": "Person"
+      }
      ]
     }
    ]
@@ -135,114 +235,281 @@
      "pfad": "Abs. 1 Satz 1",
      "text": "Der Solidaritätszuschlag bemisst sich vorbehaltlich der Absätze 2 bis 5,",
      "elemente": [
-      { "art": "rf", "text": "bemisst sich", "rolle": "Bemessungsanordnung" },
-      { "art": "ausn", "text": "vorbehaltlich der Absätze 2 bis 5", "rolle": "Vorbehalt" }
+      {
+       "art": "rf",
+       "text": "bemisst sich",
+       "rolle": "Bemessungsanordnung"
+      },
+      {
+       "art": "ausn",
+       "text": "vorbehaltlich der Absätze 2 bis 5",
+       "rolle": "Vorbehalt"
+      }
      ]
     },
     {
      "pfad": "Abs. 1 Nr. 1",
      "text": "soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist: nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer, wenn ein positiver Betrag verbleibt;",
      "elemente": [
-      { "art": "tb", "text": "soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist", "rolle": "Anwendungsfall" },
-      { "art": "tb", "text": "wenn ein positiver Betrag verbleibt", "rolle": "Zusatzbedingung" },
-      { "art": "rf", "text": "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer", "rolle": "Bemessungsgröße" }
+      {
+       "art": "tb",
+       "text": "soweit eine Veranlagung zur Einkommensteuer oder Körperschaftsteuer vorzunehmen ist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "tb",
+       "text": "wenn ein positiver Betrag verbleibt",
+       "rolle": "Zusatzbedingung"
+      },
+      {
+       "art": "rf",
+       "text": "nach der nach Absatz 2 berechneten Einkommensteuer oder der festgesetzten Körperschaftsteuer für Veranlagungszeiträume ab 1998, vermindert um die anzurechnende oder vergütete Körperschaftsteuer",
+       "rolle": "Bemessungsgröße"
+      }
      ]
     },
     {
      "pfad": "Abs. 1 Nr. 2",
      "text": "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind: nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002;",
      "elemente": [
-      { "art": "tb", "text": "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002", "rolle": "Bemessungsgröße" }
+      {
+       "art": "tb",
+       "text": "soweit Vorauszahlungen zur Einkommensteuer oder Körperschaftsteuer zu leisten sind",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "nach den Vorauszahlungen auf die Steuer für Veranlagungszeiträume ab 2002",
+       "rolle": "Bemessungsgröße"
+      }
      ]
     },
     {
      "pfad": "Abs. 1 Nr. 3",
-     "text": "soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird,",
+     "text": "soweit Lohnsteuer zu erheben ist: nach der nach Absatz 2a berechneten Lohnsteuer für",
      "elemente": [
-      { "art": "tb", "text": "soweit Lohnsteuer zu erheben ist", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "nach der nach Absatz 2a berechneten Lohnsteuer für a) laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird", "rolle": "Bemessungsgröße" }
+      {
+       "art": "tb",
+       "text": "soweit Lohnsteuer zu erheben ist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "nach der nach Absatz 2a berechneten Lohnsteuer",
+       "rolle": "Bemessungsgröße"
+      }
      ]
     },
     {
-     "pfad": "Abs. 1 Buchst. b",
+     "pfad": "Abs. 1 Nr. 3 Buchst. a",
+     "elemente": [
+      {
+       "art": "rf",
+       "text": "laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird",
+       "rolle": "Bemessungsgröße"
+      }
+     ],
+     "text": "laufenden Arbeitslohn, der für einen nach dem 31. Dezember 1997 endenden Lohnzahlungszeitraum gezahlt wird,"
+    },
+    {
+     "pfad": "Abs. 1 Nr. 3 Buchst. b",
      "text": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen;",
      "elemente": [
-      { "art": "rf", "text": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen", "rolle": "Bemessungsgröße" }
+      {
+       "art": "rf",
+       "text": "sonstige Bezüge, die nach dem 31. Dezember 1997 zufließen",
+       "rolle": "Bemessungsgröße"
+      }
      ]
     },
     {
-     "pfad": "Abs. 1 Satz 1 (Teil 2)",
-     "text": "4. soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998; 5. soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag; 6. soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag.",
+     "pfad": "Abs. 1 Nr. 4",
      "elemente": [
-      { "art": "tb", "text": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998", "rolle": "Bemessungsgröße" },
-      { "art": "tb", "text": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist", "rolle": "Anwendungsfall" },
-      { "art": "ausn", "text": "außer in den Fällen des § 43b des Einkommensteuergesetzes", "rolle": "Bereichsausnahme" },
-      { "art": "rf", "text": "nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag", "rolle": "Bemessungsgröße" },
-      { "art": "tb", "text": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag", "rolle": "Bemessungsgröße" }
-     ]
+      {
+       "art": "tb",
+       "text": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998",
+       "rolle": "Bemessungsgröße"
+      }
+     ],
+     "text": "soweit ein Lohnsteuer-Jahresausgleich durchzuführen ist, nach der nach Absatz 2a sich ergebenden Jahreslohnsteuer für Ausgleichsjahre ab 1998;"
+    },
+    {
+     "pfad": "Abs. 1 Nr. 5",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "ausn",
+       "text": "außer in den Fällen des § 43b des Einkommensteuergesetzes",
+       "rolle": "Bereichsausnahme"
+      },
+      {
+       "art": "rf",
+       "text": "nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag",
+       "rolle": "Bemessungsgröße"
+      }
+     ],
+     "text": "soweit Kapitalertragsteuer oder Zinsabschlag zu erheben ist außer in den Fällen des § 43b des Einkommensteuergesetzes: nach der ab 1. Januar 1998 zu erhebenden Kapitalertragsteuer oder dem ab diesem Zeitpunkt zu erhebenden Zinsabschlag;"
+    },
+    {
+     "pfad": "Abs. 1 Nr. 6",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag",
+       "rolle": "Bemessungsgröße"
+      }
+     ],
+     "text": "soweit bei beschränkt Steuerpflichtigen ein Steuerabzugsbetrag nach § 50a des Einkommensteuergesetzes zu erheben ist: nach dem ab 1. Januar 1998 zu erhebenden Steuerabzugsbetrag."
     },
     {
      "pfad": "Abs. 2 Satz 1",
      "text": "Bei der Veranlagung zur Einkommensteuer ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer, die abweichend von § 2 Abs. 6 des Einkommensteuergesetzes unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre.",
      "elemente": [
-      { "art": "tb", "text": "Bei der Veranlagung zur Einkommensteuer", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer", "rolle": "Bemessungsgrundlage" },
-      { "art": "rf", "text": "unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre", "rolle": "Bemessungsgrundlage" }
+      {
+       "art": "tb",
+       "text": "Bei der Veranlagung zur Einkommensteuer",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist Bemessungsgrundlage für den Solidaritätszuschlag die Einkommensteuer",
+       "rolle": "Bemessungsgrundlage"
+      },
+      {
+       "art": "rf",
+       "text": "unter Berücksichtigung von Freibeträgen nach § 32 Abs. 6 des Einkommensteuergesetzes in allen Fällen des § 32 des Einkommensteuergesetzes festzusetzen wäre",
+       "rolle": "Bemessungsgrundlage"
+      }
      ]
     },
     {
      "pfad": "Abs. 2a Satz 1",
      "text": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer; beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich ist die Lohnsteuer maßgebend, die sich ergibt, wenn der nach § 39b Absatz 2 Satz 5 des Einkommensteuergesetzes zu versteuernde Jahresbetrag für die Steuerklassen I, II und III im Sinne des § 38b des Einkommensteuergesetzes um den doppelten Kinderfreibetrag sowie den doppelten Freibetrag für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf und für die Steuerklasse IV im Sinne des § 38b des Einkommensteuergesetzes um den Kinderfreibetrag sowie den Freibetrag für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf (§ 32 Absatz 6 Satz 1 des Einkommensteuergesetzes) für jedes Kind vermindert wird, für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt.",
      "elemente": [
-      { "art": "ausn", "text": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes", "rolle": "Vorbehalt" },
-      { "art": "tb", "text": "beim Steuerabzug vom Arbeitslohn", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer", "rolle": "Bemessungsgrundlage" },
-      { "art": "tb", "text": "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist die Lohnsteuer maßgebend, die sich ergibt", "rolle": "Bemessungsgrundlage" },
-      { "art": "tb", "text": "für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt", "rolle": "Einschränkung je Kind" }
+      {
+       "art": "ausn",
+       "text": "Vorbehaltlich des § 40a Absatz 2 des Einkommensteuergesetzes",
+       "rolle": "Vorbehalt"
+      },
+      {
+       "art": "tb",
+       "text": "beim Steuerabzug vom Arbeitslohn",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist beim Steuerabzug vom Arbeitslohn Bemessungsgrundlage die Lohnsteuer",
+       "rolle": "Bemessungsgrundlage"
+      },
+      {
+       "art": "tb",
+       "text": "beim Steuerabzug vom laufenden Arbeitslohn und beim Jahresausgleich",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist die Lohnsteuer maßgebend, die sich ergibt",
+       "rolle": "Bemessungsgrundlage"
+      },
+      {
+       "art": "tb",
+       "text": "für das eine Kürzung der Freibeträge für Kinder nach § 32 Absatz 6 Satz 4 des Einkommensteuergesetzes nicht in Betracht kommt",
+       "rolle": "Einschränkung je Kind"
+      }
      ]
     },
     {
      "pfad": "Abs. 2a Satz 2",
      "text": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend.",
      "elemente": [
-      { "art": "tb", "text": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend", "rolle": "Maßgeblichkeit" }
+      {
+       "art": "tb",
+       "text": "Bei der Anwendung des § 39b des Einkommensteuergesetzes für die Ermittlung des Solidaritätszuschlages",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist die als Lohnsteuerabzugsmerkmal gebildete Zahl der Kinderfreibeträge maßgebend",
+       "rolle": "Maßgeblichkeit"
+      }
      ]
     },
     {
      "pfad": "Abs. 2a Satz 3",
      "text": "Bei Anwendung des § 39f des Einkommensteuergesetzes ist beim Steuerabzug vom laufenden Arbeitslohn die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt.",
      "elemente": [
-      { "art": "tb", "text": "Bei Anwendung des § 39f des Einkommensteuergesetzes", "rolle": "Anwendungsfall" },
-      { "art": "tb", "text": "beim Steuerabzug vom laufenden Arbeitslohn", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt", "rolle": "Bemessungsgrundlage" }
+      {
+       "art": "tb",
+       "text": "Bei Anwendung des § 39f des Einkommensteuergesetzes",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "tb",
+       "text": "beim Steuerabzug vom laufenden Arbeitslohn",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "die Lohnsteuer maßgebend, die sich bei Anwendung des nach § 39f Abs. 1 des Einkommensteuergesetzes ermittelten Faktors auf den nach den Sätzen 1 und 2 ermittelten Betrag ergibt",
+       "rolle": "Bemessungsgrundlage"
+      }
      ]
     },
     {
      "pfad": "Abs. 3 Satz 1",
      "text": "Der Solidaritätszuschlag ist von einkommensteuerpflichtigen Personen nur zu erheben, wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes,",
      "elemente": [
-      { "art": "tb", "text": "von einkommensteuerpflichtigen Personen", "rolle": "Person" },
-      { "art": "tb", "text": "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes", "rolle": "Freigrenze" },
-      { "art": "rf", "text": "ist von einkommensteuerpflichtigen Personen nur zu erheben", "rolle": "Erhebungsanordnung" }
+      {
+       "art": "tb",
+       "text": "von einkommensteuerpflichtigen Personen",
+       "rolle": "Person"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
+       "rolle": "Freigrenze"
+      },
+      {
+       "art": "rf",
+       "text": "ist von einkommensteuerpflichtigen Personen nur zu erheben",
+       "rolle": "Erhebungsanordnung"
+      }
      ]
     },
     {
      "pfad": "Abs. 3 Nr. 1",
      "text": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro,",
      "elemente": [
-      { "art": "tb", "text": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro", "rolle": "Freigrenze Zusammenveranlagung" }
+      {
+       "art": "tb",
+       "text": "in den Fällen des § 32a Absatz 5 und 6 des Einkommensteuergesetzes 40 700 Euro",
+       "rolle": "Freigrenze Zusammenveranlagung"
+      }
      ]
     },
     {
      "pfad": "Abs. 3 Nr. 2",
      "text": "in anderen Fällen 20 350 Euro",
      "elemente": [
-      { "art": "tb", "text": "in anderen Fällen 20 350 Euro", "rolle": "Freigrenze übrige Fälle" }
+      {
+       "art": "tb",
+       "text": "in anderen Fällen 20 350 Euro",
+       "rolle": "Freigrenze übrige Fälle"
+      }
      ]
     },
     {
@@ -254,113 +521,216 @@
      "pfad": "Abs. 3 Satz 2",
      "text": "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben.",
      "elemente": [
-      { "art": "tb", "text": "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben", "rolle": "Erhebungsanordnung" },
-      { "art": "ausn", "text": "ungeachtet des Satzes 1", "rolle": "Rückausnahme zur Freigrenze" }
+      {
+       "art": "tb",
+       "text": "Auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "ist der Solidaritätszuschlag ungeachtet des Satzes 1 zu erheben",
+       "rolle": "Erhebungsanordnung"
+      },
+      {
+       "art": "ausn",
+       "text": "ungeachtet des Satzes 1",
+       "rolle": "Rückausnahme zur Freigrenze"
+      }
      ]
     },
     {
      "pfad": "Abs. 4 Satz 1",
      "text": "Beim Abzug vom laufenden Arbeitslohn ist der Solidaritätszuschlag nur zu erheben, wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum",
      "elemente": [
-      { "art": "tb", "text": "Beim Abzug vom laufenden Arbeitslohn", "rolle": "Anwendungsfall" },
-      { "art": "tb", "text": "wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum", "rolle": "Freigrenze" },
-      { "art": "rf", "text": "ist der Solidaritätszuschlag nur zu erheben", "rolle": "Erhebungsanordnung" }
+      {
+       "art": "tb",
+       "text": "Beim Abzug vom laufenden Arbeitslohn",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Bemessungsgrundlage im jeweiligen Lohnzahlungszeitraum",
+       "rolle": "Freigrenze"
+      },
+      {
+       "art": "rf",
+       "text": "ist der Solidaritätszuschlag nur zu erheben",
+       "rolle": "Erhebungsanordnung"
+      }
      ]
     },
     {
      "pfad": "Abs. 4 Nr. 1",
-     "text": "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages und",
+     "text": "bei monatlicher Lohnzahlung",
      "elemente": [
-      { "art": "tb", "text": "bei monatlicher Lohnzahlung a) in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages", "rolle": "Freigrenze monatlich" }
+      {
+       "art": "tb",
+       "text": "bei monatlicher Lohnzahlung",
+       "rolle": "Anwendungsfall"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Buchst. b",
+     "pfad": "Abs. 4 Nr. 1 Buchst. a",
+     "elemente": [
+      {
+       "art": "tb",
+       "text": "in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+       "rolle": "Freigrenze monatlich"
+      }
+     ],
+     "text": "in der Steuerklasse III mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages und"
+    },
+    {
+     "pfad": "Abs. 4 Nr. 1 Buchst. b",
      "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages,",
      "elemente": [
-      { "art": "tb", "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages", "rolle": "Freigrenze monatlich" }
+      {
+       "art": "tb",
+       "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Zwölftel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
+       "rolle": "Freigrenze monatlich"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Satz 1 (Teil 2)",
-     "text": "2. bei wöchentlicher Lohnzahlung",
+     "pfad": "Abs. 4 Nr. 2",
+     "text": "bei wöchentlicher Lohnzahlung",
      "elemente": [
-      { "art": "tb", "text": "bei wöchentlicher Lohnzahlung", "rolle": "Anwendungsfall" }
+      {
+       "art": "tb",
+       "text": "bei wöchentlicher Lohnzahlung",
+       "rolle": "Anwendungsfall"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Buchst. a",
+     "pfad": "Abs. 4 Nr. 2 Buchst. a",
      "text": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages und",
      "elemente": [
-      { "art": "tb", "text": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages", "rolle": "Freigrenze wöchentlich" }
+      {
+       "art": "tb",
+       "text": "in der Steuerklasse III mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+       "rolle": "Freigrenze wöchentlich"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Buchst. b (Teil 2)",
+     "pfad": "Abs. 4 Nr. 2 Buchst. b",
      "text": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages,",
      "elemente": [
-      { "art": "tb", "text": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages", "rolle": "Freigrenze wöchentlich" }
+      {
+       "art": "tb",
+       "text": "in den Steuerklassen I, II, IV bis VI mehr als sieben Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages",
+       "rolle": "Freigrenze wöchentlich"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Satz 1 (Teil 3)",
-     "text": "3. bei täglicher Lohnzahlung",
+     "pfad": "Abs. 4 Nr. 3",
+     "text": "bei täglicher Lohnzahlung",
      "elemente": [
-      { "art": "tb", "text": "bei täglicher Lohnzahlung", "rolle": "Anwendungsfall" }
+      {
+       "art": "tb",
+       "text": "bei täglicher Lohnzahlung",
+       "rolle": "Anwendungsfall"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Buchst. a (Teil 2)",
+     "pfad": "Abs. 4 Nr. 3 Buchst. a",
      "text": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages und",
      "elemente": [
-      { "art": "tb", "text": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages", "rolle": "Freigrenze täglich" }
+      {
+       "art": "tb",
+       "text": "in der Steuerklasse III mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 1 angegebenen Betrages",
+       "rolle": "Freigrenze täglich"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4 Buchst. b (Teil 3)",
+     "pfad": "Abs. 4 Nr. 3 Buchst. b",
      "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt.",
      "elemente": [
-      { "art": "tb", "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt", "rolle": "Freigrenze täglich" }
+      {
+       "art": "tb",
+       "text": "in den Steuerklassen I, II, IV bis VI mehr als ein Dreihundertsechzigstel des in Absatz 3 Satz 1 Nummer 2 angegebenen Betrages beträgt",
+       "rolle": "Freigrenze täglich"
+      }
      ]
     },
     {
      "pfad": "Abs. 4a Satz 1",
      "text": "Beim Abzug von einem sonstigen Bezug ist der Solidaritätszuschlag nur zu erheben, wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt:",
      "elemente": [
-      { "art": "tb", "text": "Beim Abzug von einem sonstigen Bezug", "rolle": "Anwendungsfall" },
-      { "art": "tb", "text": "wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt", "rolle": "Freigrenze" },
-      { "art": "rf", "text": "ist der Solidaritätszuschlag nur zu erheben", "rolle": "Erhebungsanordnung" }
+      {
+       "art": "tb",
+       "text": "Beim Abzug von einem sonstigen Bezug",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Jahreslohnsteuer im Sinne des § 39b Absatz 3 Satz 5 des Einkommensteuergesetzes unter Berücksichtigung des Kinderfreibetrags und des Freibetrags für den Betreuungs- und Erziehungs- oder Ausbildungsbedarf für jedes Kind entsprechend den Vorgaben in Absatz 2a folgende Beträge übersteigt",
+       "rolle": "Freigrenze"
+      },
+      {
+       "art": "rf",
+       "text": "ist der Solidaritätszuschlag nur zu erheben",
+       "rolle": "Erhebungsanordnung"
+      }
      ]
     },
     {
      "pfad": "Abs. 4a Nr. 1",
      "text": "in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2 und",
      "elemente": [
-      { "art": "tb", "text": "in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2", "rolle": "Freigrenze sonstiger Bezug" }
+      {
+       "art": "tb",
+       "text": "in den Steuerklassen I, II, IV bis VI den Betrag nach Absatz 3 Satz 1 Nummer 2",
+       "rolle": "Freigrenze sonstiger Bezug"
+      }
      ]
     },
     {
      "pfad": "Abs. 4a Nr. 2",
      "text": "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1.",
      "elemente": [
-      { "art": "tb", "text": "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1", "rolle": "Freigrenze sonstiger Bezug" }
+      {
+       "art": "tb",
+       "text": "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1",
+       "rolle": "Freigrenze sonstiger Bezug"
+      }
      ]
     },
     {
-     "pfad": "Abs. 4a Satz 1 (Teil 2)",
+     "pfad": "Abs. 4a Satz 2",
      "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung.",
      "elemente": [
-      { "art": "rf", "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung", "rolle": "Verweisung" }
+      {
+       "art": "rf",
+       "text": "Die weiteren Berechnungsvorgaben in § 39b Absatz 3 des Einkommensteuergesetzes finden Anwendung",
+       "rolle": "Verweisung"
+      }
      ]
     },
     {
      "pfad": "Abs. 5 Satz 1",
      "text": "Beim Lohnsteuer-Jahresausgleich ist der Solidaritätszuschlag nur zu ermitteln, wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt.",
      "elemente": [
-      { "art": "tb", "text": "Beim Lohnsteuer-Jahresausgleich", "rolle": "Anwendungsfall" },
-      { "art": "tb", "text": "wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt", "rolle": "Freigrenze" },
-      { "art": "rf", "text": "ist der Solidaritätszuschlag nur zu ermitteln", "rolle": "Ermittlungsanordnung" }
+      {
+       "art": "tb",
+       "text": "Beim Lohnsteuer-Jahresausgleich",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "tb",
+       "text": "wenn die Bemessungsgrundlage in Steuerklasse III mehr als den Betrag nach Absatz 3 Satz 1 Nummer 1 und in den Steuerklassen I, II oder IV mehr als den Betrag nach Absatz 3 Satz 1 Nummer 2 beträgt",
+       "rolle": "Freigrenze"
+      },
+      {
+       "art": "rf",
+       "text": "ist der Solidaritätszuschlag nur zu ermitteln",
+       "rolle": "Ermittlungsanordnung"
+      }
      ]
     }
    ]
@@ -375,30 +745,54 @@
      "pfad": "Satz 1",
      "text": "Der Solidaritätszuschlag beträgt 5,5 Prozent der Bemessungsgrundlage.",
      "elemente": [
-      { "art": "rf", "text": "beträgt 5,5 Prozent der Bemessungsgrundlage", "rolle": "Zuschlagsatz" }
+      {
+       "art": "rf",
+       "text": "beträgt 5,5 Prozent der Bemessungsgrundlage",
+       "rolle": "Zuschlagsatz"
+      }
      ]
     },
     {
      "pfad": "Satz 2",
      "text": "Er beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze.",
      "elemente": [
-      { "art": "rf", "text": "beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze", "rolle": "Höchstsatz (Milderungszone)" }
+      {
+       "art": "rf",
+       "text": "beträgt nicht mehr als 11,9 Prozent des Unterschiedsbetrages zwischen der Bemessungsgrundlage, vermindert um die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes, und der nach § 3 Absatz 3, 4 und 5 jeweils maßgebenden Freigrenze",
+       "rolle": "Höchstsatz (Milderungszone)"
+      }
      ]
     },
     {
      "pfad": "Satz 3",
      "text": "Bruchteile eines Cents bleiben außer Ansatz.",
      "elemente": [
-      { "art": "rf", "text": "Bruchteile eines Cents bleiben außer Ansatz", "rolle": "Rechenregel" }
+      {
+       "art": "rf",
+       "text": "Bruchteile eines Cents bleiben außer Ansatz",
+       "rolle": "Rechenregel"
+      }
      ]
     },
     {
      "pfad": "Satz 4",
      "text": "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes beträgt ungeachtet des Satzes 2 5,5 Prozent.",
      "elemente": [
-      { "art": "tb", "text": "auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes", "rolle": "Anwendungsfall" },
-      { "art": "rf", "text": "beträgt ungeachtet des Satzes 2 5,5 Prozent", "rolle": "Zuschlagsatz" },
-      { "art": "ausn", "text": "ungeachtet des Satzes 2", "rolle": "Vorrangregel" }
+      {
+       "art": "tb",
+       "text": "auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommensteuergesetzes und auf die Lohnsteuer nach § 39b Absatz 3 des Einkommensteuergesetzes",
+       "rolle": "Anwendungsfall"
+      },
+      {
+       "art": "rf",
+       "text": "beträgt ungeachtet des Satzes 2 5,5 Prozent",
+       "rolle": "Zuschlagsatz"
+      },
+      {
+       "art": "ausn",
+       "text": "ungeachtet des Satzes 2",
+       "rolle": "Vorrangregel"
+      }
      ]
     }
    ]
@@ -412,8 +806,16 @@
      "pfad": "Satz 1",
      "text": "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt, so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen.",
      "elemente": [
-      { "art": "tb", "text": "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt", "rolle": "uneingeleiteter Bedingungssatz" },
-      { "art": "rf", "text": "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen", "rolle": "Reihenfolge der Ermäßigung" }
+      {
+       "art": "tb",
+       "text": "Werden auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses Gesetzes erhobene Steuern vom Einkommen ermäßigt",
+       "rolle": "uneingeleiteter Bedingungssatz"
+      },
+      {
+       "art": "rf",
+       "text": "so ist diese Ermäßigung zuerst auf den Solidaritätszuschlag zu beziehen",
+       "rolle": "Reihenfolge der Ermäßigung"
+      }
      ]
     }
    ]
@@ -424,47 +826,170 @@
    "typ": "anwendung",
    "hinweis": "Reine Anwendungsvorschrift: zeitlicher Geltungsbereich von Fassungen. Weder Tatbestand noch Rechtsfolge — alle Sätze bleiben absichtlich ohne Element. Diese Norm prüft, ob die Erkennung das Nichts erkennt.",
    "saetze": [
-    { "pfad": "Abs. 1 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 2 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 3 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 4 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 5 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 6 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 7 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 8 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 9 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 10 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 11 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 12 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 12 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 13 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 14 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 14 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 14 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 15 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 16 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 17 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 18 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 19 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 20 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 21 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 21 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 21 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 22 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 23 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 23 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 23 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 23 Satz 4", "elemente": [] },
-    { "pfad": "Abs. 24 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 24 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 24 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 25 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 25 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 25 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 26 Satz 1", "elemente": [] },
-    { "pfad": "Abs. 26 Satz 2", "elemente": [] },
-    { "pfad": "Abs. 26 Satz 3", "elemente": [] },
-    { "pfad": "Abs. 27 Satz 1", "elemente": [] }
+    {
+     "pfad": "Abs. 1 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 2 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 3 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 4 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 5 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 6 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 7 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 8 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 9 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 10 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 11 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 12 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 12 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 13 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 14 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 14 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 14 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 15 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 16 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 17 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 18 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 19 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 20 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 21 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 21 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 21 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 22 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 23 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 23 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 23 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 23 Satz 4",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 24 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 24 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 24 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 25 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 25 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 25 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 26 Satz 1",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 26 Satz 2",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 26 Satz 3",
+     "elemente": []
+    },
+    {
+     "pfad": "Abs. 27 Satz 1",
+     "elemente": []
+    }
    ]
   }
  }

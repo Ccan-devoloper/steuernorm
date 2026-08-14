@@ -359,6 +359,36 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4.1b Eine Aufzählung unterbricht den Satz, sie beendet ihn nicht ──
+   § 10 Abs. 4 UStG: „Der Umsatz wird bemessen 1. … 2. … 3. …" ist Satz 1,
+   „Die Umsatzsteuer gehört nicht zur Bemessungsgrundlage." dahinter ist Satz 2.
+   Innerhalb der Nummern zählt das Gesetz eigens weiter — Nr. 3 verweist selbst
+   auf „Satz 1 Nr. 2 Sätze 2 und 3". */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/ustg/10", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+
+  const abs4 = await seite.evaluate(() => {
+    const block = [...document.querySelectorAll(".lesespalte .absatz")]
+      .find((b) => (b.querySelector(".an") || {}).textContent === "(4)");
+    if (!block) return null;
+    return [...block.querySelectorAll(".sn")].map((s) => s.textContent + " · " + (s.title || ""));
+  });
+  ok("Der Absatz mit Aufzählung trägt Satznummern", abs4 && abs4.length > 0,
+    abs4 ? abs4.join(" | ") : "kein Absatz (4)");
+  ok("Der Einleitungssatz ist Satz 1",
+    abs4 && abs4[0] && /Abs\. 4 Satz 1$/.test(abs4[0]), abs4 && abs4[0]);
+  ok("Der Satz hinter der Aufzählung ist Satz 2",
+    abs4 && abs4.some((s) => /Abs\. 4 Satz 2$/.test(s)), abs4 && abs4.join(" | "));
+  ok("Innerhalb einer Nummer wird eigens gezählt",
+    abs4 && abs4.some((s) => /Abs\. 4 Nr\. 2 Satz 3$/.test(s)), abs4 && abs4.join(" | "));
+  ok("Keine Nummer für eine einsätzige Nummer",
+    abs4 && !abs4.some((s) => /Nr\. 1 Satz/.test(s)));
+  await ctx.close();
+}
+
 /* ── 4.2 Satzbild: fortlaufend oder satzweise ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });

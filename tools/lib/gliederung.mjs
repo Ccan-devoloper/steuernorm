@@ -80,36 +80,114 @@ export function einheiten(norm) {
     const praefix = absNr ? `Abs. ${absNr}` : "";
     // Aufzählungen isolieren: <dt>1.</dt><dd>…</dd>
     const teile = zerlegeListe(abs.html);
+
+    /* Die Satzzählung läuft über den ganzen ADRESSRAUM, nicht über das
+       einzelne Stück. Eine Aufzählung unterbricht den Satz, sie beendet ihn
+       nicht: „Der Umsatz wird bemessen 1. … 2. … 3. …" ist Satz 1, und „Die
+       Umsatzsteuer gehört nicht zur Bemessungsgrundlage." dahinter ist Satz 2
+       — nicht noch einmal Satz 1. Weil die Zählung bei jedem Stück neu bei 1
+       begann, trugen 843 Sätze in 375 Normen die Nummer eines anderen.
+       Dasselbe gilt eine Ebene tiefer für eine Nummer, die von einer
+       Unteraufzählung unterbrochen wird. */
+    const zaehler = new Map();     // Adressraum („" = Absatz, sonst die Marke)
+    const roh = [];
     for (const teil of teile) {
-      if (teil.marke) {
-        for (const [j, s] of saetze(teil.text).entries()) {
-          raus.push({ pfad: `${praefix} ${teil.marke}`.trim() + (j ? ` Halbs. ${j + 1}` : ""), text: s, ebene: "nr", nr: teil.marke });
-        }
-      } else {
-        for (const [j, s] of saetze(teil.text).entries()) {
-          raus.push({ pfad: `${praefix} Satz ${j + 1}`.trim(), text: s, ebene: "satz", nr: null });
-        }
+      const schluessel = teil.marke || "";
+      const schonDa = zaehler.has(schluessel);
+      let nr = zaehler.get(schluessel) || 0;
+      for (const [j, s] of saetze(teil.text).entries()) {
+        /* Ein Stück, das denselben Adressraum FORTSETZT: Beginnt es klein,
+           führt es den unterbrochenen Satz zu Ende und behält dessen Nummer —
+           `ankern` hängt dann „(Teil 2)" an. Beginnt es groß oder mit „§", ist
+           es ein neuer Satz. Im Deutschen ist die Großschreibung des ersten
+           Wortes das verlässliche Zeichen dafür. */
+        const fortsetzung = j === 0 && schonDa && nr > 0 && !/^[A-ZÄÖÜ§]/.test(s);
+        if (!fortsetzung) nr++;
+        roh.push({ schluessel, marke: teil.marke, nr, text: s });
       }
+      zaehler.set(schluessel, nr);
+    }
+
+    for (const e of roh) {
+      /* Innerhalb einer Nummer stehen SÄTZE, keine Halbsätze. Das Gesetz sagt
+         es selbst: § 10 Abs. 4 Nr. 3 UStG verweist auf „Satz 1 Nr. 2 Sätze 2
+         und 3". Wo nur ein Satz steht, braucht er keine Nummer — die Nummer
+         der Aufzählung ist dort die ganze Adresse. */
+      const mehrere = (zaehler.get(e.schluessel) || 0) > 1;
+      raus.push({
+        pfad: e.marke
+          ? `${praefix} ${e.marke}`.trim() + (mehrere ? ` Satz ${e.nr}` : "")
+          : `${praefix} Satz ${e.nr}`.trim(),
+        text: e.text,
+        ebene: e.marke ? "nr" : "satz",
+        nr: e.marke || null,
+      });
     }
   }
   return ankern(raus, volltextDerNorm(norm));
 }
 
+/**
+ * Ende eines Elements, das sich selbst enthalten kann — `<dl>` in `<dd>`.
+ *
+ * Hier stand ein `([\s\S]*?)<\/dl>`. Das Fragezeichen macht die Suche
+ * genügsam, und bei einer geschachtelten Aufzählung endete die äußere Liste
+ * deshalb am `</dl>` der INNEREN. § 12 AO war das sichtbare Beispiel: Der Text
+ * von Buchst. a verschwand in dem der Nr. 8, die Buchstaben b und c verloren
+ * ihre Nummer, und „länger als sechs Monate dauern." landete als eigener Satz
+ * hinter der Aufzählung statt als Schluss von Nr. 8. 151 der 1 537 Normen
+ * tragen eine geschachtelte Aufzählung; in allen war die Zerlegung falsch.
+ * Gezählt wird deshalb die Verschachtelungstiefe.
+ */
+function endeVon(html, tag, ab) {
+  const muster = new RegExp(`<${tag}\\b[^>]*>|</${tag}\\s*>`, "gi");
+  muster.lastIndex = ab;
+  let tiefe = 0;
+  let m;
+  while ((m = muster.exec(html))) {
+    if (m[0][1] === "/") {
+      tiefe--;
+      if (tiefe === 0) return { inhaltBis: m.index, nach: m.index + m[0].length };
+    } else {
+      tiefe++;
+    }
+  }
+  return null;
+}
+
+/** Die `<dt>/<dd>`-Paare EINER Ebene — verschachtelte werden übersprungen. */
+function listenpaare(inhalt) {
+  const raus = [];
+  const dt = /<dt\b[^>]*>([\s\S]*?)<\/dt\s*>/gi;
+  let m;
+  while ((m = dt.exec(inhalt))) {
+    const ddAuf = /<dd\b[^>]*>/gi;
+    ddAuf.lastIndex = dt.lastIndex;
+    const auf = ddAuf.exec(inhalt);
+    if (!auf) break;
+    const ende = endeVon(inhalt, "dd", auf.index);
+    if (!ende) break;
+    raus.push([m[1], inhalt.slice(auf.index + auf[0].length, ende.inhaltBis)]);
+    dt.lastIndex = ende.nach;
+  }
+  return raus;
+}
+
 function zerlegeListe(html) {
   const teile = [];
-  // Alles vor der ersten Liste ist der Einleitungssatz.
-  const listen = [...html.matchAll(/<dl[^>]*class="[^"]*\bgl\b[^"]*"[^>]*>([\s\S]*?)<\/dl>/g)];
-  if (!listen.length) {
-    const t = entkerne(html);
-    if (t) teile.push({ marke: null, text: t });
-    return teile;
-  }
+  const auf = /<dl\b[^>]*class="[^"]*\bgl\b[^"]*"[^>]*>/gi;
   let cursor = 0;
-  for (const liste of listen) {
-    const vor = entkerne(html.slice(cursor, liste.index));
+  let hatListe = false;
+  let m;
+  while ((m = auf.exec(html))) {
+    const ende = endeVon(html, "dl", m.index);
+    if (!ende) break;
+    hatListe = true;
+    // Alles vor der Liste ist der Einleitungssatz.
+    const vor = entkerne(html.slice(cursor, m.index));
     if (vor) teile.push({ marke: null, text: vor });
-    const paare = [...liste[1].matchAll(/<dt>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/g)];
-    for (const [, dt, dd] of paare) {
+
+    for (const [dt, dd] of listenpaare(html.slice(m.index + m[0].length, ende.inhaltBis))) {
       const marke = entkerne(dt).replace(/\.$/, "");
       const inner = zerlegeListe(dd);
       if (inner.length === 1 && !inner[0].marke) {
@@ -123,7 +201,13 @@ function zerlegeListe(html) {
         }
       }
     }
-    cursor = liste.index + liste[0].length;
+    cursor = ende.nach;
+    auf.lastIndex = ende.nach;
+  }
+  if (!hatListe) {
+    const t = entkerne(html);
+    if (t) teile.push({ marke: null, text: t });
+    return teile;
   }
   const nach = entkerne(html.slice(cursor));
   if (nach) teile.push({ marke: null, text: nach });

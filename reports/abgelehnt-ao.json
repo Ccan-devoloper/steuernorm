@@ -84,18 +84,18 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
-    "norm": "§ 29c",
-    "pfad": "Abs. 1 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "oder 6. sie für die Wahrnehmung von Aufsichts-, Steuerungs- und Disziplinarbefugnissen der",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
-  },
-  {
     "norm": "§ 30",
-    "pfad": "Abs. 4 Buchst. b (Teil 2)",
+    "pfad": "Abs. 4 Nr. 5 Buchst. b",
     "art": "tb",
     "text": "die nach ihrer Begehungsweise oder wegen des Umfangs des durch sie verursachten Schadens g",
     "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 31a",
+    "pfad": "Abs. 1 Nr. 1 Buchst. b",
+    "art": "tb",
+    "text": "der Entscheidung",
+    "grund": "bloßes Normsubjekt"
   },
   {
     "norm": "§ 31b",
@@ -148,9 +148,9 @@
   },
   {
     "norm": "§ 32b",
-    "pfad": "Abs. 1 Nr. 1",
+    "pfad": "Abs. 1 Nr. 1 Buchst. a",
     "art": "tb",
-    "text": "soweit die Erteilung der Information a) die ordnungsgemäße Erfüllung der in der Zuständigk",
+    "text": "die ordnungsgemäße Erfüllung der in der Zuständigkeit der Finanzbehörden oder anderer öffe",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -169,7 +169,7 @@
   },
   {
     "norm": "§ 32c",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 3 (Teil 2)",
     "art": "tb",
     "text": "und die Auskunftserteilung einen unverhältnismäßigen Aufwand",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
@@ -218,7 +218,7 @@
   },
   {
     "norm": "§ 39",
-    "pfad": "Abs. 2 Nr. 1",
+    "pfad": "Abs. 2 Nr. 1 Satz 1",
     "art": "tb",
     "text": "Übt ein anderer als der Eigentümer die tatsächliche Herrschaft über ein Wirtschaftsgut in ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -267,14 +267,14 @@
   },
   {
     "norm": "§ 52",
-    "pfad": "Abs. 2 Nr. 27 Halbs. 2",
+    "pfad": "Abs. 2 Nr. 27 Satz 2",
     "art": "tb",
     "text": "§ 53 Nummer 2",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 52",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
+    "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "aber die Allgemeinheit auf materiellem, geistigem oder sittlichem Gebiet entsprechend selb",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
@@ -288,7 +288,7 @@
   },
   {
     "norm": "§ 55",
-    "pfad": "Abs. 1 Nr. 5 Halbs. 3",
+    "pfad": "Abs. 1 Nr. 5 Satz 3",
     "art": "tb",
     "text": "ist gegeben",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
@@ -302,7 +302,7 @@
   },
   {
     "norm": "§ 58",
-    "pfad": "Nr. 3",
+    "pfad": "Nr. 3 Satz 1",
     "art": "tb",
     "text": "eine Körperschaft ihre Überschüsse der Einnahmen über die Ausgaben aus der Vermögensverwal",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -323,7 +323,7 @@
   },
   {
     "norm": "§ 62",
-    "pfad": "Abs. 1 Nr. 3",
+    "pfad": "Abs. 1 Nr. 3 Satz 1",
     "art": "tb",
     "text": "der freien Rücklage",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -358,35 +358,28 @@
   },
   {
     "norm": "§ 68",
-    "pfad": "Satz 1 (Teil 2)",
+    "pfad": "Nr. 2",
     "art": "tb",
     "text": "wenn die Lieferungen und sonstigen Leistungen dieser Einrichtungen an Außenstehende dem We",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 68",
-    "pfad": "Buchst. c (Teil 2)",
+    "pfad": "Nr. 3 Buchst. c",
     "art": "tb",
     "text": "Inklusionsbetriebe im Sinne des § 215 Absatz 1 des Neunten Buches Sozialgesetzbuch, wenn m",
     "grund": "zu grob (53 Wörter)"
   },
   {
     "norm": "§ 68",
-    "pfad": "Satz 1 (Teil 3)",
+    "pfad": "Nr. 4",
     "art": "tb",
     "text": "Einrichtungen, die zur Durchführung der Fürsorge für blinde Menschen, zur Durchführung der",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 68",
-    "pfad": "Satz 6",
-    "art": "tb",
-    "text": "Nicht zum Zweckbetrieb gehören Tätigkeiten, die sich auf die Anwendung gesicherter wissens",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 72a",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
+    "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "soweit der Auftragnehmer nachweist, dass die unrichtige oder unvollständige Übermittlung d",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -484,7 +477,7 @@
   },
   {
     "norm": "§ 89a",
-    "pfad": "Abs. 3 Satz 4",
+    "pfad": "Abs. 3 Satz 5",
     "art": "tb",
     "text": "insbesondere der Fall, wenn die zuständige Behörde des anderen Vertragsstaates ein Verfahr",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -596,13 +589,6 @@
   },
   {
     "norm": "§ 93",
-    "pfad": "Abs. 8 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "soweit dies zur Überprüfung des Vorliegens der Anspruchsvoraussetzungen erforderlich ist u",
-    "grund": "zu grob (48 Wörter)"
-  },
-  {
-    "norm": "§ 93",
     "pfad": "Abs. 9 Nr. 2",
     "art": "tb",
     "text": "wenn die Überprüfung der Kontoverbindung ergibt, dass die betroffene Person über das nach ",
@@ -610,16 +596,16 @@
   },
   {
     "norm": "§ 93",
-    "pfad": "Abs. 9 Satz 1 (Teil 2)",
+    "pfad": "Abs. 9 Satz 4",
     "art": "tb",
     "text": "§ 32c Absatz 5",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 93a",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 1 Buchst. a",
     "art": "tb",
-    "text": "2. den Empfänger im Sinne der Nummer 1 Buchstabe a über die Summe der jährlichen Leistunge",
+    "text": "den Empfänger gewährter Leistungen sowie den Rechtsgrund, die Höhe, den Zeitpunkt dieser L",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -708,24 +694,10 @@
   },
   {
     "norm": "§ 117",
-    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "Soweit die zwischenstaatliche Rechts- und Amtshilfe Steuern betrifft, die von den Landesfi",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 117a",
-    "pfad": "Abs. 1 2a",
-    "art": "rf",
-    "text": "zwischen der Bundesrepublik Deutschland und den Vereinigten Staaten von Amerika zur Förder",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 117a",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "durch in dem Abkommen dem Grunde nach bestimmte Dritte nach amtlich vorgeschriebenem Daten",
-    "grund": "zu grob (60 Wörter)"
   },
   {
     "norm": "§ 117c",
@@ -848,7 +820,7 @@
   },
   {
     "norm": "§ 131",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
+    "pfad": "Abs. 2 Satz 2",
     "art": "tb",
     "text": "§ 130 Absatz 3",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
@@ -862,24 +834,17 @@
   },
   {
     "norm": "§ 138",
-    "pfad": "Abs. 2 Nr. 3",
+    "pfad": "Abs. 2 Nr. 3 Buchst. a",
     "art": "tb",
-    "text": "wenn a) damit eine Beteiligung von mindestens 10 Prozent am Kapital oder am Vermögen der K",
+    "text": "damit eine Beteiligung von mindestens 10 Prozent am Kapital oder am Vermögen der Körpersch",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 138",
-    "pfad": "Abs. 2 Buchst. b Halbs. 2",
+    "pfad": "Abs. 2 Nr. 3 Buchst. b Satz 2",
     "art": "ausn",
     "text": "Dies gilt nicht für den Erwerb und die Veräußerung von Beteiligungen von weniger als 1 Pro",
     "grund": "zu grob (85 Wörter)"
-  },
-  {
-    "norm": "§ 138",
-    "pfad": "Abs. 2 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "4. die Tatsache, dass sie allein oder zusammen mit nahestehenden Personen im Sinne des § 1",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138",
@@ -890,7 +855,7 @@
   },
   {
     "norm": "§ 138a",
-    "pfad": "Abs. 2 Buchst. g",
+    "pfad": "Abs. 2 Nr. 1 Buchst. g",
     "art": "tb",
     "text": "das Eigenkapital",
     "grund": "bloßes Normsubjekt"
@@ -925,119 +890,105 @@
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 1 Buchst. b",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "die Vereinbarung",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 138e",
+    "pfad": "Abs. 1 Nr. 1 Buchst. b",
     "art": "tb",
     "text": "einer Vergütung, die in Bezug auf den steuerlichen Vorteil der Steuergestaltung festgesetz",
     "grund": "zu grob (53 Wörter)"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 2",
     "art": "tb",
-    "text": "2. eine standardisierte Dokumentation oder Struktur der Gestaltung, die für mehr als einen",
+    "text": "eine standardisierte Dokumentation oder Struktur der Gestaltung, die für mehr als einen Nu",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 1 Buchst. c",
+    "pfad": "Abs. 1 Nr. 3 Buchst. c",
     "art": "tb",
     "text": "Transaktionen durch die Einbeziehung zwischengeschalteter Unternehmen, die keine wesentlic",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 1 Buchst. d",
+    "pfad": "Abs. 1 Nr. 3 Buchst. d",
     "art": "tb",
     "text": "der Empfänger grenzüberschreitender, beim Zahlenden als Betriebsausgaben abzugsfähiger Zah",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Nr. 1",
+    "pfad": "Abs. 2 Nr. 2 Buchst. e",
     "art": "tb",
-    "text": "Gestaltungen, die zum Gegenstand haben, dass a) der Empfänger grenzüberschreitender Zahlun",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "die Einbeziehung von Rechtsträgern, Steuergestaltungen oder Strukturen, die die Meldung ei",
+    "grund": "zu grob (59 Wörter)"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Satz 1 (Teil 4)",
-    "art": "tb",
-    "text": "Gestaltungen, die zu einer Aushöhlung der Mitteilungspflicht gemäß den Rechtsvorschriften ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 138e",
-    "pfad": "Abs. 2 Buchst. f",
+    "pfad": "Abs. 2 Nr. 2 Buchst. f",
     "art": "tb",
     "text": "die Aushöhlung von Verfahren zur Erfüllung der Sorgfaltspflichten, die Finanzinstitute zur",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Buchst. b (Teil 3)",
+    "pfad": "Abs. 2 Nr. 4 Buchst. b",
     "art": "rf",
     "text": "zwischen dem Unternehmen und seiner ausländischen Betriebstätte überführt werden, für die ",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Buchst. c (Teil 3)",
+    "pfad": "Abs. 2 Nr. 4 Buchst. c",
     "art": "tb",
     "text": "innerhalb von verbundenen Unternehmen eine grenzüberschreitende Übertragung oder Verlageru",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Buchst. c (Teil 3)",
+    "pfad": "Abs. 2 Nr. 4 Buchst. c",
     "art": "tb",
     "text": "wenn die Übertragung nicht stattgefunden hätte",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 2 Buchst. c (Teil 3)",
+    "pfad": "Abs. 2 Nr. 4 Buchst. c",
     "art": "rf",
     "text": "gelten sinngemäß auch für",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "Falls mehr als eine Person gemäß Satz 1 an der Geschäftsleitung, der Kontrolle, dem Kapita",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138e",
-    "pfad": "Abs. 3 Satz 2",
+    "pfad": "Abs. 3 Satz 3",
     "art": "tb",
     "text": "Falls dieselben Personen gemäß Satz 1 an der Geschäftsleitung, der Kontrolle, dem Kapital ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138f",
-    "pfad": "Abs. 3 Buchst. c (Teil 2)",
+    "pfad": "Abs. 3 Nr. 3",
     "art": "tb",
-    "text": "die Anschrift",
-    "grund": "bloßes Normsubjekt"
-  },
-  {
-    "norm": "§ 138f",
-    "pfad": "Abs. 3 Buchst. b (Teil 3)",
-    "art": "tb",
-    "text": "die Anschrift",
-    "grund": "bloßes Normsubjekt"
-  },
-  {
-    "norm": "§ 138f",
-    "pfad": "Abs. 3 Satz 2",
-    "art": "tb",
-    "text": "Einzelheiten zu den einschlägigen Rechtsvorschriften aller betroffenen Mitgliedstaaten der",
+    "text": "wenn an der grenzüberschreitenden Steuergestaltung Personen beteiligt sind, die im Sinne d",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 138f",
-    "pfad": "Abs. 3 Satz 4",
+    "pfad": "Abs. 3 Satz 2",
     "art": "tb",
     "text": "Soweit dem Intermediär bekannt ist, dass neben ihm mindestens ein weiterer Intermediär im ",
     "grund": "zu grob (57 Wörter)"
@@ -1142,7 +1093,7 @@
   },
   {
     "norm": "§ 139b",
-    "pfad": "Abs. 10 Satz 2",
+    "pfad": "Abs. 10 Satz 3",
     "art": "tb",
     "text": "vollendet haben und für die nach § 63 des Einkommensteuergesetzes Kindergeld festgesetzt o",
     "grund": "zu grob (81 Wörter)"
@@ -1184,7 +1135,14 @@
   },
   {
     "norm": "§ 146a",
-    "pfad": "Abs. 3 Buchst. b",
+    "pfad": "Abs. 3 Nr. 2 Buchst. a",
+    "art": "tb",
+    "text": "das Sicherheitsmodul",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 146a",
+    "pfad": "Abs. 3 Nr. 2 Buchst. b",
     "art": "tb",
     "text": "das Speichermedium",
     "grund": "bloßes Normsubjekt"
@@ -1254,28 +1212,28 @@
   },
   {
     "norm": "§ 149",
-    "pfad": "Abs. 4 Buchst. b",
+    "pfad": "Abs. 4 Nr. 1 Buchst. b",
     "art": "tb",
     "text": "für den vorangegangenen Besteuerungszeitraum innerhalb von drei Monaten vor Abgabe der Ste",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 149",
-    "pfad": "Abs. 4 Buchst. d",
+    "pfad": "Abs. 4 Nr. 1 Buchst. d",
     "art": "tb",
     "text": "die Veranlagung für den vorangegangenen Veranlagungszeitraum zu einer Abschlusszahlung von",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 149",
-    "pfad": "Abs. 4 Buchst. e",
+    "pfad": "Abs. 4 Nr. 1 Buchst. e",
     "art": "tb",
     "text": "die Steuerfestsetzung auf Grund einer Steuererklärung im Sinne des Absatzes 3 Nummer 1, 2 ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 150",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "§ 87a Absatz 1 Satz 1",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
@@ -1403,8 +1361,8 @@
     "norm": "§ 169",
     "pfad": "Abs. 1 Nr. 1",
     "art": "tb",
-    "text": "der Steuerbescheid a) im Fall des § 122 Absatz 2, 2a oder Absatz 5 den Bereich der für die",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+    "text": "der Steuerbescheid",
+    "grund": "bloßes Normsubjekt"
   },
   {
     "norm": "§ 170",
@@ -1429,7 +1387,7 @@
   },
   {
     "norm": "§ 173",
-    "pfad": "Abs. 1 Nr. 2",
+    "pfad": "Abs. 1 Nr. 2 Satz 1",
     "art": "tb",
     "text": "soweit Tatsachen oder Beweismittel nachträglich bekannt werden, die zu einer niedrigeren S",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -1460,6 +1418,20 @@
     "pfad": "Abs. 5 Nr. 1",
     "art": "tb",
     "text": "die nach einem Abkommen zur Vermeidung der Doppelbesteuerung von der Bemessungsgrundlage a",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 181",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "in den Fällen des § 180 Absatz 1 Satz 1 Nummer 3 jeder Feststellungsbeteiligte, dem ein An",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 181",
+    "pfad": "Abs. 2 Nr. 4",
+    "art": "tb",
+    "text": "in den Fällen des § 180 Absatz 1 Satz 1 Nummer 2 Buchstabe a und Nummer 3 bei nicht rechts",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
@@ -1520,7 +1492,7 @@
   },
   {
     "norm": "§ 200a",
-    "pfad": "Abs. 3 Nr. 2 Halbs. 2",
+    "pfad": "Abs. 3 Nr. 2 Satz 2",
     "art": "tb",
     "text": "insbesondere anzunehmen, wenn die Umsatzerlöse des Steuerpflichtigen in einem der von der ",
     "grund": "zu grob (47 Wörter)"
@@ -1547,13 +1519,6 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
-    "norm": "§ 215",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "Waren, die im grenznahen Raum oder in Gebieten, die der Grenzaufsicht unterliegen, aufgefu",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 224",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
@@ -1569,7 +1534,7 @@
   },
   {
     "norm": "§ 231",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "§ 169 Absatz 1 Satz 3",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
@@ -1604,21 +1569,21 @@
   },
   {
     "norm": "§ 244",
-    "pfad": "Abs. 1 Satz 4",
+    "pfad": "Abs. 1 Satz 5",
     "art": "tb",
     "text": "Über die Annahme von Bürgschaftserklärungen in den Verfahren nach dem A.T.A.-Übereinkommen",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 244",
-    "pfad": "Abs. 1 Satz 5",
+    "pfad": "Abs. 1 Satz 6",
     "art": "tb",
     "text": "Über die Annahme von Bürgschaftserklärungen über Einzelsicherheiten in Form von Sicherheit",
     "grund": "zu grob (52 Wörter)"
   },
   {
     "norm": "§ 244",
-    "pfad": "Abs. 1 Satz 6",
+    "pfad": "Abs. 1 Satz 7",
     "art": "tb",
     "text": "L 343 vom 29.12.2015, S. 1) sowie nach der Durchführungsverordnung (EU) 2015/2447 der Komm",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -1730,38 +1695,10 @@
   },
   {
     "norm": "§ 344",
-    "pfad": "Abs. 1 Satz 3",
+    "pfad": "Abs. 1 Nr. 1 Satz 4",
     "art": "tb",
     "text": "Werden zum Zweck der Überlassung von elektronisch gespeicherten Dateien Dokumente zuvor au",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 344",
-    "pfad": "Abs. 1 Satz 6",
-    "art": "tb",
-    "text": "Kosten, die durch öffentliche Bekanntmachung entstehen, 5. an die zum Öffnen von Türen und",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 344",
-    "pfad": "Abs. 1 Satz 7",
-    "art": "tb",
-    "text": "Kosten für die Beförderung, Verwahrung und Beaufsichtigung gepfändeter Sachen, Kosten für ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 344",
-    "pfad": "Abs. 1 Satz 8",
-    "art": "tb",
-    "text": "Beträge, die in entsprechender Anwendung des Justizvergütungs- und -entschädigungsgesetzes",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 344",
-    "pfad": "Abs. 1 Satz 9",
-    "art": "tb",
-    "text": "Kosten für die Umschreibung eines auf einen Namen lautenden Wertpapiers oder für die Wiede",
-    "grund": "zu grob (59 Wörter)"
   },
   {
     "norm": "§ 352",
@@ -1769,6 +1706,13 @@
     "art": "tb",
     "text": "Gegen Bescheide über die",
     "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 352",
+    "pfad": "Abs. 1 Nr. 5",
+    "art": "tb",
+    "text": "soweit es sich um eine Frage handelt, die einen Beteiligten persönlich angeht, jeder, der ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 356",
@@ -1960,20 +1904,6 @@
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
-    "norm": "§ 398a",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "einen Geldbetrag in folgender Höhe zugunsten der Staatskasse",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 398a",
-    "pfad": "Abs. 1 Nr. 2",
-    "art": "tb",
-    "text": "wenn der Hinterziehungsbetrag 100 000 Euro nicht übersteigt",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
     "norm": "§ 400",
     "pfad": "Satz 1",
     "art": "tb",
@@ -2010,14 +1940,14 @@
   },
   {
     "norm": "Anlage 1",
-    "pfad": "Nr. 1",
+    "pfad": "Nr. 1 Satz 1",
     "art": "tb",
     "text": "an – den – die – das – … (Bezeichnung einer juristischen Person des öffentlichen Rechts od",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "Anlage 1",
-    "pfad": "Nr. 2",
+    "pfad": "Nr. 2 Satz 1",
     "art": "tb",
     "text": "an eine juristische Person des öffentlichen Rechts oder eine andere steuerbegünstigte Körp",
     "grund": "zu grob (56 Wörter)"

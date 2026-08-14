@@ -8,24 +8,10 @@
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "pfad": "Abs. 3 Nr. 2",
     "art": "tb",
-    "text": "2. die sonstigen Leistungen, die",
+    "text": "die sonstigen Leistungen, die",
     "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 1",
-    "pfad": "Abs. 3 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "3. die Lieferungen im Sinne des § 3 Abs. 1b und die sonstigen Leistungen im Sinne des § 3 ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 1",
-    "pfad": "Abs. 3 Satz 1 (Teil 4)",
-    "art": "tb",
-    "text": "5. die sonstigen Leistungen, die im Rahmen eines Veredelungsverkehrs oder einer Lagerung i",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 1b",
@@ -71,7 +57,7 @@
   },
   {
     "norm": "§ 3a",
-    "pfad": "Abs. 3 Satz 3",
+    "pfad": "Abs. 3 Nr. 3 Satz 1",
     "art": "tb",
     "text": "Kulturelle, künstlerische, wissenschaftliche, unterrichtende, sportliche, unterhaltende od",
     "grund": "zu grob (49 Wörter)"
@@ -92,7 +78,7 @@
   },
   {
     "norm": "§ 3a",
-    "pfad": "Abs. 5 Satz 1 (Teil 3)",
+    "pfad": "Abs. 5 Satz 3",
     "art": "ausn",
     "text": "Satz 1 ist nicht anzuwenden, wenn der leistende Unternehmer seinen Sitz, seine Geschäftsle",
     "grund": "zu lang (>600 Zeichen)"
@@ -127,140 +113,119 @@
   },
   {
     "norm": "§ 4",
-    "pfad": "bb) Halbs. 2",
+    "pfad": "Nr. 3 Buchst. a bb) Satz 2",
     "art": "tb",
     "text": "befreit sind die Beförderungen der in § 1 Abs. 3 Nr. 4 Buchstabe a bezeichneten Gegenständ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 5)",
+    "pfad": "Nr. 5 Satz 1",
     "art": "tb",
-    "text": "7. die Lieferungen",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+    "text": "die Vermittlung",
+    "grund": "bloßes Normsubjekt"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. e (Teil 2)",
+    "pfad": "Nr. 6 Buchst. c Satz 1",
+    "art": "tb",
+    "text": "die Lieferungen von eingeführten Gegenständen an im Drittlandsgebiet, ausgenommen Gebiete ",
+    "grund": "zu grob (47 Wörter)"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Nr. 7 Buchst. e",
     "art": "tb",
     "text": "wenn die Umsätze für den Gebrauch oder Verbrauch durch die Streitkräfte, ihres zivilen Beg",
     "grund": "zu grob (46 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 8)",
-    "art": "tb",
-    "text": "11. die Umsätze aus der Tätigkeit als Bausparkassenvertreter, Versicherungsvertreter und V",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Satz 2 (Teil 4)",
-    "art": "tb",
-    "text": "Universaldienstleistungen nach Artikel 3 Absatz 4 der Richtlinie 97/67/EG des Europäischen",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Buchst. b (Teil 9)",
+    "pfad": "11b Buchst. b",
     "art": "tb",
     "text": "auf Grund allgemeiner Geschäftsbedingungen zu abweichenden Qualitätsbedingungen oder zu gü",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 11)",
+    "pfad": "Nr. 12",
     "art": "tb",
     "text": "die ein Unternehmer zur kurzfristigen Beherbergung von Fremden bereithält, die Vermietung ",
     "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. a (Teil 11)",
+    "pfad": "Nr. 14 Buchst. a Satz 1",
     "art": "tb",
     "text": "Heilbehandlungen im Bereich der Humanmedizin, die im Rahmen der Ausübung der Tätigkeit als",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. b Halbs. 2 (Teil 3)",
+    "pfad": "Nr. 14 Buchst. b aa)",
     "art": "tb",
     "text": "wenn das Leistungsangebot des Krankenhauses den von Krankenhäusern in öffentlich-rechtlich",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 13)",
+    "pfad": "Nr. 14 Buchst. c",
     "art": "tb",
-    "text": "c) Leistungen nach den Buchstaben a und b, die im Rahmen der hausarztzentrierten Versorgun",
-    "grund": "zu grob (54 Wörter)"
+    "text": "Leistungen nach den Buchstaben a und b, die im Rahmen der hausarztzentrierten Versorgung n",
+    "grund": "zu grob (53 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 14)",
+    "pfad": "Nr. 15",
     "art": "tb",
-    "text": "15. die Umsätze der gesetzlichen Träger der Sozialversicherung, der gesetzlichen Träger de",
-    "grund": "zu grob (57 Wörter)"
+    "text": "die Umsätze der gesetzlichen Träger der Sozialversicherung, der gesetzlichen Träger der Gr",
+    "grund": "zu grob (56 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 1 (Teil 15)",
+    "pfad": "15a",
     "art": "tb",
-    "text": "15a. die auf Gesetz beruhenden Leistungen der Medizinischen Dienste (§ 278 SGB V) und des ",
-    "grund": "zu grob (58 Wörter)"
+    "text": "die auf Gesetz beruhenden Leistungen der Medizinischen Dienste (§ 278 SGB V) und des Mediz",
+    "grund": "zu grob (56 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 2 (Teil 5)",
-    "art": "tb",
-    "text": "Eingliederungsleistungen nach dem Zweiten Buch Sozialgesetzbuch, Leistungen der aktiven Ar",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Buchst. b (Teil 13)",
+    "pfad": "15b Buchst. b",
     "art": "tb",
     "text": "die für ihre Leistungen nach Satz 1 Verträge mit den gesetzlichen Trägern der Grundsicheru",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 4",
-    "pfad": "Satz 2 (Teil 6)",
-    "art": "tb",
-    "text": "Leistungen zur Teilhabe am Arbeitsleben nach § 49 des Neunten Buches Sozialgesetzbuch, die",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 4",
-    "pfad": "Buchst. i (Teil 2)",
+    "pfad": "Nr. 16 Buchst. i",
     "art": "tb",
     "text": "Einrichtungen, mit denen ein Vertrag nach § 8 Absatz 3 des Gesetzes zur Errichtung der Soz",
     "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. n",
+    "pfad": "Nr. 16 Buchst. n",
     "art": "tb",
     "text": "Einrichtungen, bei denen die Betreuungs- oder Pflegekosten oder die Kosten für eng mit der",
     "grund": "zu grob (68 Wörter)"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. a Halbs. 3 (Teil 2)",
+    "pfad": "Nr. 20 Buchst. a Satz 3",
     "art": "tb",
     "text": "sind auch die Umsätze von Bühnenregisseuren und Bühnenchoreographen an Einrichtungen im Si",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 4",
-    "pfad": "bb) (Teil 8)",
+    "pfad": "Nr. 25 Buchst. b bb)",
     "art": "tb",
     "text": "die im vorangegangenen Kalenderjahr ganz oder zum überwiegenden Teil durch Träger der öffe",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 4",
-    "pfad": "Buchst. b (Teil 23)",
+    "pfad": "Nr. 27 Buchst. b",
     "art": "tb",
     "text": "die Gestellung von land- und forstwirtschaftlichen Arbeitskräften durch juristische Person",
     "grund": "Fragment: endet auf Artikel oder Präposition"
@@ -274,10 +239,17 @@
   },
   {
     "norm": "§ 5",
-    "pfad": "Abs. 1 Nr. 3",
+    "pfad": "Abs. 1 Nr. 8 Satz 2",
+    "art": "rf",
+    "text": "ist, und zwar in den Grenzen und zu den",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 1 Nr. 10",
     "art": "tb",
-    "text": "der Gegenstände, die von einem Schuldner der Einfuhrumsatzsteuer im Anschluss an die Einfu",
-    "grund": "zu grob (56 Wörter)"
+    "text": "von Gegenständen durch die Streitkräfte anderer Mitgliedstaaten für den eigenen Gebrauch o",
+    "grund": "zu grob (50 Wörter)"
   },
   {
     "norm": "§ 6b",
@@ -386,77 +358,63 @@
   },
   {
     "norm": "§ 12",
-    "pfad": "Abs. 2 Buchst. b",
+    "pfad": "Abs. 2 Nr. 7 Buchst. b",
     "art": "tb",
     "text": "die Überlassung von Filmen zur Auswertung und Vorführung sowie die Filmvorführungen, sowei",
     "grund": "zu grob (71 Wörter)"
   },
   {
     "norm": "§ 12",
-    "pfad": "Abs. 2 Buchst. a Halbs. 3",
+    "pfad": "Abs. 2 Nr. 8 Buchst. a Satz 3",
     "art": "tb",
     "text": "wenn der Zweckbetrieb nicht in erster Linie der Erzielung zusätzlicher Einnahmen durch die",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
-    "norm": "§ 12",
-    "pfad": "Abs. 2 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "11. die Vermietung von Wohn- und Schlafräumen, die ein Unternehmer zur kurzfristigen Beher",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 13",
-    "pfad": "Abs. 1 Nr. 1",
+    "pfad": "Abs. 1 Nr. 1 Buchst. a Satz 1",
     "art": "tb",
-    "text": "für Lieferungen und sonstige Leistungen a) bei der Berechnung der Steuer nach vereinbarten",
+    "text": "bei der Berechnung der Steuer nach vereinbarten Entgelten (§ 16 Abs. 1 Satz 1) mit Ablauf ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 5",
-    "art": "tb",
-    "text": "Lieferungen von Gold mit einem Feingehalt von mindestens 325 Tausendstel, in Rohform oder ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 6",
+    "pfad": "Abs. 2 Nr. 10",
     "art": "tb",
     "text": "Lieferungen von Mobilfunkgeräten, Tablet-Computern und Spielekonsolen sowie von integriert",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 6",
+    "pfad": "Abs. 2 Nr. 10",
     "art": "tb",
     "text": "wenn die Summe der für sie in Rechnung zu stellenden Entgelte im Rahmen eines wirtschaftli",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 6",
+    "pfad": "Abs. 2 Nr. 10",
     "art": "tb",
     "text": "nachträgliche Minderungen des Entgelts",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 7",
+    "pfad": "Abs. 2 Nr. 11",
     "art": "tb",
     "text": "Lieferungen der in der Anlage 4",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 7",
+    "pfad": "Abs. 2 Nr. 11",
     "art": "tb",
     "text": "wenn die Summe der für sie in Rechnung zu stellenden Entgelte im Rahmen eines wirtschaftli",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 13b",
-    "pfad": "Abs. 2 Satz 7",
+    "pfad": "Abs. 2 Nr. 11",
     "art": "tb",
     "text": "nachträgliche Minderungen des Entgelts",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -470,7 +428,7 @@
   },
   {
     "norm": "§ 14",
-    "pfad": "Abs. 1 Nr. 2 Halbs. 2",
+    "pfad": "Abs. 1 Nr. 2 Satz 2",
     "art": "tb",
     "text": "dass das Format die richtige und vollständige Extraktion der nach diesem Gesetz erforderli",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -498,14 +456,14 @@
   },
   {
     "norm": "§ 14b",
-    "pfad": "Abs. 1 Nr. 2 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 2 Satz 2",
     "art": "tb",
     "text": "ist, aber die Leistung für seinen nichtunternehmerischen Bereich verwendet",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 15",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "Nicht als für das Unternehmen",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
@@ -589,42 +547,42 @@
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 5 Nr. 3 Halbs. 4",
+    "pfad": "Abs. 5 Nr. 3 Satz 4",
     "art": "tb",
     "text": "Die Sätze 2 und 3",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 5 Nr. 3 Halbs. 4",
+    "pfad": "Abs. 5 Nr. 3 Satz 4",
     "art": "tb",
     "text": "wenn der Unterschiedsbetrag weniger als 2,50 Euro beträgt",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 9 Satz 2 (Teil 2)",
+    "pfad": "Abs. 9 Satz 4",
     "art": "tb",
     "text": "Sind die durch die Rechtsverordnung nach den Sätzen 1 und 2 geregelten Voraussetzungen des",
     "grund": "zu grob (47 Wörter)"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 9 Satz 6",
+    "pfad": "Abs. 9 Satz 8",
     "art": "ausn",
     "text": "gelten nicht für Unternehmer, die nicht im Gemeinschaftsgebiet ansässig sind, soweit sie i",
     "grund": "zu grob (63 Wörter)"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 9 Satz 7",
+    "pfad": "Abs. 9 Satz 9",
     "art": "tb",
     "text": "soweit sie im Besteuerungszeitraum (§ 16 Absatz 1 Satz 2) nach dem 30. Juni 2021 als Steue",
     "grund": "zu grob (84 Wörter)"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 9 Satz 7",
+    "pfad": "Abs. 9 Satz 9",
     "art": "tb",
     "text": "dass die Vorsteuerbeträge mit Lieferungen nach § 3 Absatz 3a Satz 1 innerhalb eines Mitgli",
     "grund": "zu grob (57 Wörter)"
@@ -638,28 +596,28 @@
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 10 Nr. 1 Halbs. 2",
+    "pfad": "Abs. 10 Nr. 1 Buchst. a Satz 2",
     "art": "tb",
     "text": "die in Nummer 2 Buchstabe a bezeichneten Daten und das zugeteilte amtliche Kennzeichen ode",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 10 Satz 1 (Teil 2)",
+    "pfad": "Abs. 10 Nr. 2",
     "art": "tb",
     "text": "In den Fällen des innergemeinschaftlichen Erwerbs neuer motorbetriebener Landfahrzeuge (§ ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 10 Satz 9",
+    "pfad": "Abs. 10 Nr. 3 Satz 1",
     "art": "tb",
     "text": "In den Fällen des innergemeinschaftlichen Erwerbs neuer Luftfahrzeuge (§ 1b Abs. 2 Satz 1 ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 10 ff) (Teil 2)",
+    "pfad": "Abs. 10 Nr. 3 Buchst. a ff)",
     "art": "tb",
     "text": "die Starthöchstmasse",
     "grund": "bloßes Normsubjekt"
@@ -939,7 +897,7 @@
   },
   {
     "norm": "§ 21a",
-    "pfad": "Abs. 5 Satz 3",
+    "pfad": "Abs. 5 Satz 4",
     "art": "tb",
     "text": "zu dem für den Zahlungsaufschub gemäß Artikel 110 Buchstabe b des Zollkodex der Union gelt",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -953,7 +911,7 @@
   },
   {
     "norm": "§ 22",
-    "pfad": "Abs. 2 Nr. 2 Halbs. 2",
+    "pfad": "Abs. 2 Nr. 2 Satz 2",
     "art": "tb",
     "text": "ersichtlich zu machen, wie sich die Entgelte und Teilentgelte auf die steuerpflichtigen Um",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -988,7 +946,7 @@
   },
   {
     "norm": "§ 22g",
-    "pfad": "Abs. 7 Nr. 7",
+    "pfad": "Abs. 7 Nr. 7 Satz 1",
     "art": "tb",
     "text": "„IBAN“ eine internationale Nummer gemäß der Definition in Artikel 2 Nummer 15 der Verordnu",
     "grund": "zu grob (50 Wörter)"
@@ -1128,21 +1086,21 @@
   },
   {
     "norm": "Anlage 2",
-    "pfad": "Satz 1 (Teil 27)",
+    "pfad": "Satz 16 (Teil 2)",
     "art": "tb",
     "text": "aus Position 0714 11 Genießbare Früchte und Nüsse Positionen 0801 bis 0813 12 Kaffee, Tee,",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "Anlage 2",
-    "pfad": "Satz 1 (Teil 30)",
+    "pfad": "Satz 19",
     "art": "tb",
     "text": "Position 1104 15 Mehl, Grieß, Pulver, Flocken, Granulat und Pellets von Kartoffeln Positio",
     "grund": "zu grob (87 Wörter)"
   },
   {
     "norm": "Anlage 2",
-    "pfad": "Satz 1 (Teil 36)",
+    "pfad": "Satz 19 (Teil 7)",
     "art": "rf",
     "text": "einschließlich Quellwasser und Tafelwasser, das in zur Abgabe an den Verbraucher bestimmte",
     "grund": "zu grob (76 Wörter)"

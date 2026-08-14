@@ -1,24 +1,17 @@
 [
   {
     "norm": "§ 1",
-    "pfad": "Abs. 1 Nr. 3 Halbs. 2",
+    "pfad": "Abs. 1 Nr. 3 Buchst. a",
     "art": "tb",
-    "text": "a) der Übergang des Eigentums durch die Abfindung in Land und die unentgeltliche Zuteilung",
-    "grund": "zu grob (61 Wörter)"
+    "text": "der Übergang des Eigentums durch die Abfindung in Land und die unentgeltliche Zuteilung vo",
+    "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 1",
-    "pfad": "Abs. 1 Buchst. b",
+    "pfad": "Abs. 1 Nr. 3 Buchst. b",
     "art": "tb",
     "text": "der Übergang des Eigentums im Umlegungsverfahren nach dem Bundesbaugesetz in seiner jeweil",
     "grund": "zu grob (80 Wörter)"
-  },
-  {
-    "norm": "§ 1",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "4. das Meistgebot im Zwangsversteigerungsverfahren; 5. ein Rechtsgeschäft, das den Anspruc",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 1",
@@ -71,7 +64,7 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Nr. 6 Halbs. 2",
+    "pfad": "Nr. 6 Satz 2",
     "art": "tb",
     "text": "die Stiefkinder",
     "grund": "bloßes Normsubjekt"
@@ -85,7 +78,7 @@
   },
   {
     "norm": "§ 4",
-    "pfad": "Nr. 5",
+    "pfad": "Nr. 5 Satz 1",
     "art": "tb",
     "text": "der Erwerb eines Grundstücks von einer juristischen Person des öffentlichen Rechts sowie d",
     "grund": "zu grob (71 Wörter)"
@@ -176,17 +169,10 @@
   },
   {
     "norm": "§ 8",
-    "pfad": "Abs. 2 Satz 2",
+    "pfad": "Abs. 2 Satz 3",
     "art": "tb",
     "text": "wenn die Änderung des Gesellschafterbestandes im Sinne des § 1 Absatz 2a oder 2b oder das ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 13",
-    "pfad": "Satz 1 (Teil 2)",
-    "art": "tb",
-    "text": "b) bei der Übertragung vereinigter Anteile von mindestens 90 vom Hundert an einer Gesellsc",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 16",
@@ -211,7 +197,7 @@
   },
   {
     "norm": "§ 18",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Satz 2",
     "art": "tb",
     "text": "die Anzeige nach Satz 1 auch elektronisch nach amtlich vorgeschriebenem Datensatz über die",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"

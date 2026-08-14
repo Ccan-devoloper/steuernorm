@@ -14,13 +14,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 2",
-    "pfad": "Abs. 7 Satz 1 (Teil 3)",
-    "art": "tb",
-    "text": "3. der nicht zur Bundesrepublik Deutschland gehörende Teil eines grenzüberschreitenden Gew",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 2a",
     "pfad": "Satz 2",
     "art": "rf",
@@ -36,65 +29,58 @@
   },
   {
     "norm": "§ 3",
-    "pfad": "Nr. 6",
+    "pfad": "Nr. 6 Satz 1",
     "art": "tb",
     "text": "Körperschaften, Personenvereinigungen und Vermögensmassen, die nach der Satzung, dem Stift",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 3",
-    "pfad": "Nr. 11",
+    "pfad": "Nr. 11 Satz 1",
     "art": "tb",
     "text": "öffentlich-rechtliche Versicherungs- und Versorgungseinrichtungen von Berufsgruppen, deren",
     "grund": "zu grob (57 Wörter)"
   },
   {
     "norm": "§ 3",
-    "pfad": "Satz 4",
+    "pfad": "Nr. 20",
     "art": "tb",
     "text": "Krankenhäuser, Altenheime, Altenwohnheime, Pflegeheime, Einrichtungen zur vorübergehenden ",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
-    "pfad": "Buchst. d",
+    "pfad": "Nr. 20 Buchst. d",
     "art": "tb",
     "text": "bei Einrichtungen zur vorübergehenden Aufnahme pflegebedürftiger Personen und bei Einricht",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 3",
-    "pfad": "Buchst. e",
+    "pfad": "Nr. 20 Buchst. e Satz 1",
     "art": "tb",
     "text": "bei Einrichtungen zur",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
-    "pfad": "Buchst. e Halbs. 2",
+    "pfad": "Nr. 20 Buchst. e Satz 2",
     "art": "tb",
     "text": "soweit die Einrichtung Leistungen im Rahmen der verordneten ambulanten oder stationären Re",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 3",
-    "pfad": "Satz 6",
+    "pfad": "Nr. 23 Satz 3",
     "art": "rf",
     "text": "haben der Widerruf der Anerkennung und der Verzicht auf die Anerkennung innerhalb der in §",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 3",
-    "pfad": "Satz 7",
+    "pfad": "Nr. 24",
     "art": "tb",
-    "text": "einem Grundlagenbescheid gleich; 24. die folgenden Kapitalbeteiligungsgesellschaften für d",
-    "grund": "zu lang (>600 Zeichen)"
-  },
-  {
-    "norm": "§ 3",
-    "pfad": "Satz 10",
-    "art": "tb",
-    "text": "Zusammenschlüsse im Sinne des § 5 Abs. 1 Nr. 20 des Körperschaftsteuergesetzes",
+    "text": "die folgenden Kapitalbeteiligungsgesellschaften für die mittelständische Wirtschaft, sowei",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
@@ -113,161 +99,168 @@
   },
   {
     "norm": "§ 8",
-    "pfad": "Nr. 1 Halbs. 2",
+    "pfad": "Nr. 1 Buchst. a Satz 2",
     "art": "tb",
     "text": "auch der Aufwand aus nicht dem gewöhnlichen Geschäftsverkehr entsprechenden gewährten Skon",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 8",
-    "pfad": "Satz 2",
+    "pfad": "Nr. 1 Buchst. d Satz 2",
+    "art": "rf",
+    "text": "ist nur zur Hälfte vorzunehmen bei",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Nr. 5",
     "art": "tb",
-    "text": "nicht vorzunehmen auf Aufwendungen, die nach § 25 des Künstlersozialversicherungsgesetzes ",
+    "text": "die nach § 3 Nr. 40 des Einkommensteuergesetzes oder § 8b Abs. 1 des Körperschaftsteuerges",
     "grund": "zu lang (>600 Zeichen)"
   },
   {
     "norm": "§ 8",
-    "pfad": "Satz 3",
+    "pfad": "Nr. 8 Satz 1",
     "art": "tb",
-    "text": "6. (weggefallen) 7. (weggefallen) 8. die Anteile am Verlust einer in- oder ausländischen o",
+    "text": "die Anteile am Verlust einer in- oder ausländischen offenen Handelsgesellschaft, einer Kom",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 8",
-    "pfad": "Satz 5",
+    "pfad": "Nr. 10",
     "art": "tb",
     "text": "Gewinnminderungen, die",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 9",
-    "pfad": "Nr. 1 Halbs. 3",
+    "pfad": "Nr. 1 Buchst. a",
     "art": "tb",
-    "text": "gilt entsprechend",
+    "text": "in Verbindung mit der Errichtung und Veräußerung von Eigentumswohnungen Teileigentum im Si",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Nr. 1 Halbs. 3",
-    "art": "tb",
-    "text": "wenn a) in Verbindung mit der Errichtung und Veräußerung von Eigentumswohnungen Teileigent",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
-    "norm": "§ 9",
-    "pfad": "bb)",
+    "pfad": "Nr. 1 Buchst. b bb)",
     "art": "tb",
     "text": "aus dem Betrieb von Ladestationen für Elektrofahrzeuge oder Elektrofahrräder",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 1 (Teil 2)",
+    "pfad": "Nr. 1 Buchst. b (Teil 2)",
     "art": "tb",
     "text": "die Einnahmen im Sinne von Doppelbuchstabe aa",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 1 (Teil 2)",
-    "art": "ausn",
-    "text": "es sei denn, diese sind Mieter des Anlagenbetreibers, oder c) Einnahmen aus unmittelbaren ",
-    "grund": "zu grob (51 Wörter)"
+    "pfad": "Nr. 1 Buchst. c",
+    "art": "tb",
+    "text": "Einnahmen aus unmittelbaren Vertragsbeziehungen mit den Mietern des Grundbesitzes aus ande",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Nr. 2",
+    "pfad": "Nr. 1 Nr. 2",
     "art": "tb",
     "text": "soweit der Gewerbeertrag Gewinne aus der Aufdeckung stiller Reserven aus dem Grundbesitz e",
     "grund": "zu grob (56 Wörter)"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 11",
+    "pfad": "2a Satz 1",
+    "art": "tb",
+    "text": "die Gewinne aus Anteilen an einer nicht",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "2a Satz 1",
+    "art": "tb",
+    "text": "wenn die Beteiligung zu Beginn des Erhebungszeitraums mindestens 15 Prozent des Grund- ode",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Nr. 3 Satz 3",
     "art": "tb",
     "text": "Ist Gegenstand eines Betriebs nicht",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 11",
+    "pfad": "Nr. 3 Satz 3",
     "art": "tb",
     "text": "in diesem Fall",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 12",
+    "pfad": "Nr. 3 Satz 4",
     "art": "tb",
     "text": "werden im internationalen Verkehr betrieben",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   },
   {
     "norm": "§ 9",
-    "pfad": "Buchst. a",
+    "pfad": "Nr. 5 Satz 1",
+    "art": "tb",
+    "text": "die aus den Mitteln des Gewerbebetriebs",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Nr. 5 Buchst. a",
     "art": "tb",
     "text": "an eine juristische Person des öffentlichen Rechts oder an eine öffentliche Dienststelle, ",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 4 (Teil 2)",
+    "pfad": "Nr. 5 Satz 5",
     "art": "tb",
     "text": "die gegenseitige Unterstützung bei der Beitreibung von Forderungen im Sinne oder entsprech",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 1 (Teil 6)",
+    "pfad": "Nr. 5 Satz 13",
     "art": "tb",
     "text": "§ 10b Absatz 3 und 4 Satz 1 sowie § 10d Absatz 4 des Einkommensteuergesetzes und § 9 Absat",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 3 (Teil 4)",
+    "pfad": "Nr. 5 Satz 15",
     "art": "tb",
     "text": "§ 10b Absatz 4 Satz 5 des Einkommensteuergesetzes",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 7 (Teil 3)",
+    "pfad": "Nr. 8 Satz 1",
     "art": "tb",
-    "text": "wenn die Beteiligung zu Beginn des Erhebungszeitraums mindestens 15 Prozent des Nennkapita",
+    "text": "die Gewinne aus Anteilen an einer ausländischen Gesellschaft, die nach einem Abkommen zur ",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 8 (Teil 3)",
-    "art": "tb",
-    "text": "§ 9 Nummer 2a Satz 3 bis 5",
-    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
-  },
-  {
-    "norm": "§ 9",
-    "pfad": "Satz 8 (Teil 3)",
+    "pfad": "Nr. 8 Satz 1",
     "art": "tb",
     "text": "wenn die Beteiligung mindestens 15 Prozent beträgt und die Gewinnanteile bei der Ermittlun",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 8 (Teil 3)",
-    "art": "tb",
-    "text": "ist in einem Abkommen zur Vermeidung der Doppelbesteuerung eine niedrigere Mindestbeteilig",
-    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
-  },
-  {
-    "norm": "§ 9",
-    "pfad": "Satz 9 (Teil 3)",
+    "pfad": "Nr. 8 Satz 2",
     "art": "tb",
     "text": "§ 9 Nr. 2a Satz 3",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
     "norm": "§ 9",
-    "pfad": "Satz 10 (Teil 3)",
+    "pfad": "Nr. 8 Satz 3",
     "art": "tb",
     "text": "§ 9 Nr. 2a Satz 4",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
@@ -344,14 +337,14 @@
   },
   {
     "norm": "§ 29",
-    "pfad": "Abs. 1 Satz 1 (Teil 2)",
+    "pfad": "Abs. 1 Nr. 2 Buchst. b Satz 2",
     "art": "rf",
     "text": "wird ermittelt aus dem Verhältnis, in dem",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 29",
-    "pfad": "Abs. 1 Satz 2",
+    "pfad": "Abs. 1 Nr. 2 Buchst. b Satz 3",
     "art": "tb",
     "text": "Anlagen, die nach dem 30. Juni 2013 zur Erzeugung von Strom und anderen Energieträgern sow",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
@@ -372,21 +365,28 @@
   },
   {
     "norm": "§ 35c",
-    "pfad": "Abs. 1 Buchst. d (Teil 2)",
+    "pfad": "Abs. 1 Nr. 2 Buchst. d",
     "art": "tb",
     "text": "über die Steuerbefreiung bei",
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
     "norm": "§ 35c",
-    "pfad": "Abs. 1 Buchst. e (Teil 2)",
+    "pfad": "Abs. 1 Nr. 2 Buchst. e",
     "art": "tb",
     "text": "Beträge (§ 8 Nr. 1 Buchstabe a) bei Kreditinstituten nach dem Verhältnis des Eigenkapitals",
     "grund": "zu grob (69 Wörter)"
   },
   {
     "norm": "§ 35c",
-    "pfad": "Abs. 1 Satz 1 (Teil 3)",
+    "pfad": "Abs. 1 Nr. 2 Buchst. f Satz 1",
+    "art": "tb",
+    "text": "Beträge (§ 8 Nummer 1 Buchstabe a) bei",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 35c",
+    "pfad": "Abs. 1 Nr. 2 Buchst. f Satz 2",
     "art": "tb",
     "text": "Voraussetzung für die Umsetzung von Satz 1",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
