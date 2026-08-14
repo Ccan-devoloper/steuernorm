@@ -20,12 +20,13 @@ import {
   verfuegbareModelle, modelleAbgleichen, modelleOrdnen, modellAntwortet,
 } from "./lib/modell.mjs";
 
-const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
+const TOKEN = process.env.KI_SCHLUESSEL
+  || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
 const WUNSCH = (process.env.KI_MODELLE || "gemini-2.5-flash,gemini-2.0-flash")
   .split(",").map((s) => s.trim()).filter(Boolean);
 
 if (!TOKEN) {
-  console.error("GEMINI_API_KEY ist nicht gesetzt.");
+  console.error("Kein Schlüssel gesetzt (KI_SCHLUESSEL oder GEMINI_API_KEY).");
   console.error("Kostenlosen Schlüssel holen: https://aistudio.google.com/app/apikey");
   console.error("Dann:  export GEMINI_API_KEY=...");
   process.exit(2);

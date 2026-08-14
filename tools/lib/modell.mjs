@@ -31,8 +31,25 @@
  * Voraussetzung oder Folge ist. Weicht sie ab, wird die Spanne verworfen.
  */
 
-const ENDPUNKT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
-const MODELLLISTE = "https://generativelanguage.googleapis.com/v1beta/openai/models";
+/* ── Anbieter ─────────────────────────────────────────────────────────
+   Der Endpunkt stand als feste Zeichenkette hier. Das band die ganze Pipeline
+   an Google, obwohl nichts daran googlespezifisch ist: Gesprochen wird der zu
+   OpenAI kompatible Dialekt, den mehrere Anbieter bereitstellen. Ein Wechsel
+   ist damit eine Umgebungsvariable und kein Commit — und man kann zwei
+   Anbieter an denselben 45 Normen gegeneinander messen.
+
+     KI_ENDPUNKT=https://api.anthropic.com/v1
+     KI_SCHLUESSEL=…
+
+   `KI_OHNE_SCHEMA=1` schaltet den Antwortzwang über `response_format` ab.
+   Google trägt ihn; wer ihn nicht trägt, antwortet mit HTTP 400 auf das Feld
+   und nicht auf den Inhalt. Das Schema steht dann nur in der Anweisung, und
+   die Antwort wird wie bisher nachgeprüft — schwächer, aber nicht blind. */
+const BASIS = (process.env.KI_ENDPUNKT || "https://generativelanguage.googleapis.com/v1beta/openai")
+  .replace(/\/+$/, "");
+export const ENDPUNKT = `${BASIS}/chat/completions`;
+export const MODELLLISTE = `${BASIS}/models`;
+const SCHEMA_ZWANG = process.env.KI_OHNE_SCHEMA !== "1";
 const TIMEOUT_MS = 90_000;
 
 /**
@@ -358,7 +375,9 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
     ],
     temperature: temperatur,
     max_tokens: 6_000,
-    response_format: { type: "json_schema", json_schema: schema },
+    response_format: SCHEMA_ZWANG
+      ? { type: "json_schema", json_schema: schema }
+      : { type: "json_object" },
   };
 
   let folge429 = 0;   // aufeinanderfolgende 429-Antworten TROTZ Wartezeit
@@ -438,7 +457,12 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
       );
     }
     if ((antwort.status === 400 || antwort.status === 422) && body.response_format) {
-      body.response_format = { type: "json_object" };
+      /* Abwärts über die Stufen: json_schema → json_object → gar keine Vorgabe.
+         Vorher wurde immer nur auf `json_object` gesetzt; war auch das nicht
+         genehm, schickte die Schleife viermal denselben abgelehnten Aufruf.
+         Das fällt erst bei einem anderen Anbieter auf — Google trägt beide. */
+      if (body.response_format.type === "json_schema") body.response_format = { type: "json_object" };
+      else delete body.response_format;
       continue;
     }
     throw new ModellKontingentErschoepft(`HTTP ${antwort.status}: ${text.slice(0, 200)}`);

@@ -14,6 +14,8 @@
  * Umgebung:
  *   GEMINI_API_KEY   Zugang zur kostenlosen Gemini-Freistufe (aistudio.google.com/app/apikey)
  *                    GitHub Models wurde am 30.07.2026 abgeschaltet.
+ *   KI_SCHLUESSEL    Schlüssel eines beliebigen Anbieters — hat Vorrang.
+ *   KI_ENDPUNKT      Anderer OpenAI-kompatibler Endpunkt, ohne „/chat/completions".
  *   KI_MODELLE       kommagetrennt, Voreinstellung: gemini-2.5-flash,gemini-2.0-flash
  *   KI_MINDESTABSTAND_MS  Wartezeit zwischen zwei Modellaufrufen, Voreinstellung 6500
  *   MAX_MODELLAUFRUFE Tagesbudget, Voreinstellung 400
@@ -48,10 +50,13 @@ const args = process.argv.slice(2);
 const flagWert = (f, v = null) => { const i = args.indexOf(f); return i >= 0 ? (args[i + 1] ?? v) : v; };
 const hat = (f) => args.includes(f);
 
-// GitHub Models wurde am 30.07.2026 abgeschaltet. Der Schlüssel kommt jetzt von der
-// KOSTENLOSEN Gemini-Freistufe (Google AI Studio). GEMINI_API_KEY ist der maßgebliche
-// Name; GOOGLE_API_KEY wird als gängiger Alias akzeptiert.
-const TOKEN = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
+// GitHub Models wurde am 30.07.2026 abgeschaltet. Voreingestellt ist die
+// KOSTENLOSE Gemini-Freistufe (Google AI Studio); GEMINI_API_KEY ist dafür der
+// maßgebliche Name, GOOGLE_API_KEY ein gängiger Alias. KI_SCHLUESSEL steht
+// davor und gilt für jeden Anbieter — zusammen mit KI_ENDPUNKT (siehe
+// lib/modell.mjs) ist ein Anbieterwechsel damit reine Umgebung.
+const TOKEN = process.env.KI_SCHLUESSEL
+  || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
 // Zwei unterschiedliche Gemini-Modelle für die Mehrfachläufe — dieselbe Überlegung
 // wie zuvor bei zwei OpenAI-Modellen: getrennte Modelle irren seltener übereinstimmend
 // als zwei Temperaturen desselben Modells. Beide liegen auf der kostenlosen Freistufe.
@@ -76,7 +81,8 @@ const ohneKi = hat("--ohne-ki") || !TOKEN;
 
 if (!TOKEN && !hat("--ohne-ki")) {
   console.error("");
-  console.error("  ⚠  GEMINI_API_KEY fehlt — es läuft NUR die Syntaxanalyse.");
+  console.error("  ⚠  Kein Schlüssel gesetzt — es läuft NUR die Syntaxanalyse.");
+  console.error("     Erwartet wird KI_SCHLUESSEL oder GEMINI_API_KEY.");
   console.error("     Kostenlosen Schlüssel holen: aistudio.google.com/app/apikey");
   console.error("     (kein Zahlungsmittel nötig). Im Workflow benötigt:");
   console.error("     env.GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}");
