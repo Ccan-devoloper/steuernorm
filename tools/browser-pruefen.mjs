@@ -196,6 +196,101 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4.0 Die Kopfleiste bleibt stehen ── */
+{
+  for (const [breite, hoehe, mobil] of [[1440, 900, false], [1024, 860, false], [390, 844, true]]) {
+    const ctx = await browser.newContext({
+      viewport: { width: breite, height: hoehe }, isMobile: mobil, hasTouch: mobil,
+    });
+    const seite = await ctx.newPage();
+    await seite.goto(WURZEL + "/#/estg/6", { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1600);
+    await seite.evaluate(() => window.scrollTo(0, 2500));
+    await seite.waitForTimeout(400);
+
+    const lage = await seite.evaluate(() => {
+      const st = getComputedStyle(document.documentElement);
+      const kopf = document.querySelector("header").getBoundingClientRect();
+      const sicht = (wahl) => {
+        const k = document.querySelector(wahl);
+        if (!k || getComputedStyle(k).display === "none") return null;
+        return Math.round(k.getBoundingClientRect().top);
+      };
+      return {
+        hoehe: parseFloat(st.getPropertyValue("--kopfhoehe")),
+        klebt: parseFloat(st.getPropertyValue("--kopfklebt")),
+        unten: Math.round(kopf.bottom),
+        gescrollt: Math.round(window.scrollY),
+        suchfeld: sicht(".suchfeld"),
+        reiter: sicht(".reiterleiste"),
+        nav: sicht(".navspalte"),
+        apparat: sicht(".apparat"),
+        /* Unterhalb von 1200 px ist die linke Spalte keine klebende Spalte
+           mehr, sondern eine Schublade über allem — die deckt die Kopfleiste
+           absichtlich zu und setzt deshalb bei 0 an. */
+        navLage: document.querySelector(".navspalte")
+          ? getComputedStyle(document.querySelector(".navspalte")).position : null,
+      };
+    });
+
+    const name = `${breite} px`;
+    ok(`Kopfleiste bleibt stehen (${name})`,
+      lage.gescrollt > 1000 && lage.unten > 0 && lage.unten <= lage.hoehe + 1,
+      JSON.stringify(lage));
+    ok(`Suchfeld und Reiter bleiben erreichbar (${name})`,
+      lage.suchfeld !== null && lage.suchfeld >= -1
+      && lage.reiter !== null && lage.reiter >= -1,
+      `Suchfeld ${lage.suchfeld}, Reiter ${lage.reiter}`);
+    /* Die Marke muss gemessen sein, nicht geraten — sonst stimmen alle
+       abgeleiteten Abstände nicht. */
+    ok(`Kopfhöhe ist gemessen (${name})`, lage.hoehe > 0, lage.hoehe + " px");
+
+    if (mobil) {
+      /* Auf 390 px darf nicht die ganze Leiste kleben: 217 von 844 px wären
+         ein Viertel des Schirms. */
+      ok("Auf dem Telefon klebt nur ein Teil", lage.klebt < lage.hoehe,
+        `${lage.klebt} von ${lage.hoehe} px`);
+      ok("Und höchstens ein Sechstel des Schirms", lage.klebt <= hoehe / 6,
+        `${lage.klebt} px bei ${hoehe} px Höhe`);
+    } else {
+      ok(`Am Schreibtisch klebt die ganze Leiste (${name})`, lage.klebt === lage.hoehe,
+        `${lage.klebt} / ${lage.hoehe}`);
+      /* Nichts darf unter der Kopfleiste verschwinden — außer der Schublade,
+         die bewusst darüber liegt. */
+      ok(`Linke Spalte sitzt richtig (${name})`,
+        lage.navLage === "fixed"
+          ? lage.nav === 0
+          : (lage.nav !== null && Math.abs(lage.nav - lage.klebt) <= 2),
+        `${lage.navLage} bei ${lage.nav}, Kopf endet bei ${lage.klebt}`);
+      ok(`Apparat setzt unter der Kopfleiste an (${name})`,
+        lage.apparat !== null && Math.abs(lage.apparat - lage.klebt) <= 2,
+        `Apparat bei ${lage.apparat}`);
+    }
+    ok(`Kein waagerechter Überlauf mit klebender Kopfleiste (${name})`, !(await ueberlauf(seite)));
+    await ctx.close();
+  }
+
+  /* Die Mappe hängt an einem klebenden Knopf — sie darf beim Scrollen nicht
+     davonlaufen. */
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/6", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  await seite.evaluate(() => window.scrollTo(0, 2500));
+  await seite.waitForTimeout(300);
+  await seite.click("#knopf-mappe");
+  await seite.waitForTimeout(400);
+  const mappe = await seite.evaluate(() => {
+    const f = document.getElementById("mappe").getBoundingClientRect();
+    const k = document.getElementById("knopf-mappe").getBoundingClientRect();
+    return { lage: getComputedStyle(document.getElementById("mappe")).position,
+      abstand: Math.round(f.top - k.bottom) };
+  });
+  ok("Mappe bleibt am Knopf, auch weit unten",
+    mappe.lage === "fixed" && Math.abs(mappe.abstand - 8) <= 2, JSON.stringify(mappe));
+  await ctx.close();
+}
+
 /* ── 4.1 Satznummern, auch wo die amtlichen Daten keine führen ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });

@@ -92,6 +92,19 @@
      Flexkind mit `max-width`, keine feste Breite. */
   --lesespalte:46rem;
   --rinne:34px;              /* Absatzmarken links vom Text */
+  /* Höhe der klebenden Kopfleiste. Wird von `kopfhoeheMessen()` gesetzt, weil
+     sie nicht feststeht: Die Schalterzeile bricht je nach Fensterbreite um,
+     und die Reiterleiste fehlt auf Startseite und Trefferliste ganz. Alles,
+     was ebenfalls klebt, rechnet mit dieser Marke — sonst verschwände es
+     unter der Kopfleiste. 0 als Vorgabe: Vor dem ersten Messen verhält sich
+     die Seite wie bisher. */
+  --kopfhoehe:0px;
+  /* Der Teil der Kopfleiste, der beim Scrollen WIRKLICH stehen bleibt. Am
+     Schreibtisch die ganze; auf dem Telefon nur Suchfeld und Reiter, weil die
+     volle Leiste dort 217 von 844 px belegt — ein Viertel des Schirms für
+     Werkzeuge, die man beim Lesen nicht ständig braucht. Alles, was ebenfalls
+     klebt, rechnet mit DIESER Marke, nicht mit der vollen Höhe. */
+  --kopfklebt:0px;
   /* Schriftgröße des Normtextes. Eine Marke, keine feste Zahl: Der Regler in
      der Kopfleiste schreibt sie um, und alles, was am Normtext hängt
      (Lesespalte, Fassungsvergleich), folgt von selbst. */
@@ -303,6 +316,16 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 /* ══════════════════════════════════════════════════════════════════════
    Kopfleiste
    ══════════════════════════════════════════════════════════════════════ */
+/* Die Kopfleiste bleibt stehen. Suchfeld, Einfärbung, Satzbild, Schriftgrad
+   und die Reiter sind Werkzeuge, die man beim Lesen braucht — nicht nur am
+   Anfang einer Norm. § 8b KStG hat 12 428 Zeichen; wer dort unten steht,
+   scrollte bisher erst nach oben, um ein Gesetz zu wechseln.
+
+   z-index 40: über dem Text, aber UNTER Schublade (60), Blatt (60), Schleier
+   (55) und Mappe (70). Wenn die Schublade aufgeht, soll sie die Kopfleiste
+   verdecken, nicht darunter durchlaufen. */
+header{position:sticky;top:0;z-index:40}
+
 .kopf{
   display:flex;align-items:center;gap:16px;
   padding:10px 16px;
@@ -401,7 +424,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   width:var(--nav);flex:none;
   border-right:1px solid var(--linie-schwach);
   padding:18px 0 60px;
-  position:sticky;top:0;max-height:100vh;overflow-y:auto;
+  position:sticky;top:var(--kopfklebt);max-height:calc(100vh - var(--kopfklebt));overflow-y:auto;
 }
 .mono-etikett{
   font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
@@ -464,8 +487,8 @@ body[data-ansicht=norm] .blaettern{margin-left:auto;margin-right:auto}
    setzt die Hervorhebung dafür bereits. */
 .rinne{
   flex:none;width:var(--rinne);display:flex;flex-direction:column;gap:2px;
-  padding-top:4px;position:sticky;top:12px;align-self:flex-start;
-  max-height:calc(100vh - 24px);overflow-y:auto;scrollbar-width:none;
+  padding-top:4px;position:sticky;top:calc(var(--kopfklebt) + 12px);align-self:flex-start;
+  max-height:calc(100vh - var(--kopfklebt) - 24px);overflow-y:auto;scrollbar-width:none;
 }
 .rinne::-webkit-scrollbar{display:none}
 .rinne button{
@@ -481,7 +504,11 @@ body[data-ansicht=norm] .blaettern{margin-left:auto;margin-right:auto}
    ausschließlich gesetzt, nicht ergänzt. */
 .lesespalte{font-family:var(--serif);font-size:var(--leseschrift);line-height:1.8;color:var(--text)}
 .lesespalte p{margin:0 0 12px}
-.lesespalte .absatz{margin-bottom:10px}
+.lesespalte .absatz{
+  margin-bottom:10px;
+  /* Ein Sprung zu „(4a)" landete sonst hinter der klebenden Kopfleiste. */
+  scroll-margin-top:calc(var(--kopfklebt) + 14px);
+}
 .lesespalte dl{margin:8px 0 12px}
 .lesespalte dt{
   float:left;clear:left;font-family:var(--mono);font-size:12.5px;color:var(--text-5);
@@ -708,8 +735,11 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 /* ══════════════════════════════════════════════════════════════════════
    Mappe — Sammelmappe für Normen und markierte Stellen
    ══════════════════════════════════════════════════════════════════════ */
+/* `fixed`, nicht `absolute`: Die Mappe hängt an einem Knopf in der klebenden
+   Kopfleiste. Dokumentkoordinaten liefen beim Scrollen unter ihr weg, während
+   der Knopf stehen bliebe. */
 .mappe{
-  position:absolute;z-index:70;display:none;flex-direction:column;
+  position:fixed;z-index:70;display:none;flex-direction:column;
   width:392px;background:var(--weiss);
   border:1px solid var(--linie);border-radius:8px;
   box-shadow:var(--schatten-popover);overflow:hidden;
@@ -805,7 +835,7 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
 
 .vergleich-raster{display:grid;grid-template-columns:1fr 1fr;gap:1px 18px;align-items:start}
 .vergleich-kopf{
-  position:sticky;top:0;z-index:3;background:var(--papier);
+  position:sticky;top:var(--kopfklebt);z-index:3;background:var(--papier);
   display:flex;flex-direction:column;gap:3px;
   padding:8px 0 9px;border-bottom:1px solid var(--linie);margin-bottom:6px;
 }
@@ -902,7 +932,7 @@ body[data-satzbild=einzeln] .lesespalte p{margin-bottom:.72em}
 .apparat{
   width:var(--apparat);flex:none;
   border-left:1px solid var(--linie-schwach);
-  position:sticky;top:0;max-height:100vh;overflow-y:auto;
+  position:sticky;top:var(--kopfklebt);max-height:calc(100vh - var(--kopfklebt));overflow-y:auto;
   padding-bottom:40px;
 }
 .register{
@@ -1174,6 +1204,13 @@ body[data-ansicht=start] .suchfeld{display:none}
   .kopf{gap:10px;flex-wrap:wrap}
   .kopf .einfaerben>span{display:none}
   .kopf-knoepfe{display:none}
+  /* Teilweise klebend: Die Leiste schiebt sich nach oben aus dem Bild, bis
+     nur noch Suchfeld und Reiter stehen. Der bekannte Kniff — der negative
+     Versatz ist genau der Teil, der verschwinden darf. */
+  header{top:calc(var(--kopfklebt) - var(--kopfhoehe))}
+  /* Die Absatzmarken laufen hier waagerecht; angeheftet stünden sie als
+     zweite Leiste unter der ersten. */
+  .rinne{position:static;max-height:none}
   /* Drei Schaltergruppen passen auf 390 px nicht nebeneinander. Die
      Einfärbung entfällt hier — sie steht als Pille in der Werkzeugleiste am
      Fuß, und zweimal derselbe Schalter ist einer zu viel. Schrift und
@@ -1270,7 +1307,7 @@ body[data-ansicht=start] .suchfeld{display:none}
      beide Daten nennt und zugleich das Umschalten von jeder Stelle erlaubt,
      und jede Zelle trägt ihre Fassung an der Nummer. */
   .vergleich-leiste{
-    position:sticky;top:0;z-index:4;background:var(--papier);
+    position:sticky;top:var(--kopfklebt);z-index:4;background:var(--papier);
     margin:0 0 12px;padding:10px 0 12px;
   }
   .vergleich-kopf{position:static;padding:8px 0;margin-bottom:0;border-bottom:0}
@@ -1804,6 +1841,41 @@ function schriftSetzen(px){
  * `<span class="satz">` liegen ohnehin im Text, sie werden nur von Zeile zu
  * Block. Das hält den Wechsel augenblicklich, auch bei § 8b KStG.
  */
+/**
+ * Höhe der klebenden Kopfleiste messen und als Marke ablegen.
+ *
+ * Sie steht nicht fest: Die Schalterzeile bricht je nach Fensterbreite in eine
+ * zweite Reihe um, und die Reiterleiste fehlt auf Startseite und Trefferliste
+ * ganz. Eine feste Zahl im CSS wäre auf der Hälfte der Fensterbreiten falsch —
+ * mal klebte die linke Spalte zu tief, mal verschwände sie darunter.
+ *
+ * Ein `ResizeObserver` hält die Marke nach, ohne bei jedem Scrollen zu rechnen.
+ */
+function kopfhoeheMessen(){
+  const kopf = document.querySelector("header");
+  if (!kopf) return;
+  const setze = () => {
+    const kasten = kopf.getBoundingClientRect();
+    const hoehe = Math.round(kasten.height);
+    document.documentElement.style.setProperty("--kopfhoehe", hoehe + "px");
+
+    /* Auf dem Telefon klebt nur vom Suchfeld abwärts. Gemessen statt gesetzt:
+       Wie viele Zeilen die Schalter darüber belegen, hängt von der Breite ab. */
+    let klebt = hoehe;
+    if (window.matchMedia && window.matchMedia("(max-width: 767px)").matches){
+      const feld = document.querySelector(".suchfeld");
+      if (feld){
+        const oben = feld.getBoundingClientRect().top - kasten.top;
+        klebt = Math.max(56, Math.round(hoehe - oben + 8));
+      }
+    }
+    document.documentElement.style.setProperty("--kopfklebt", klebt + "px");
+  };
+  setze();
+  if (window.ResizeObserver) new ResizeObserver(setze).observe(kopf);
+  else window.addEventListener("resize", setze);
+}
+
 function satzbildSetzen(bild){
   const gueltig = bild === "einzeln" ? "einzeln" : "fortlaufend";
   S.satzbild = gueltig;
@@ -2796,12 +2868,13 @@ function mappeOeffnen(){
   mappeZeichnen();
   const feld = el("mappe");
   feld.classList.add("offen");
+  /* Fensterkoordinaten, kein `scrollY`: Das Feld liegt `fixed`. */
   const knopfKasten = el("knopf-mappe").getBoundingClientRect();
   const links = Math.min(
-    window.scrollX + knopfKasten.right - feld.offsetWidth,
-    window.scrollX + document.documentElement.clientWidth - feld.offsetWidth - 12,
+    knopfKasten.right - feld.offsetWidth,
+    document.documentElement.clientWidth - feld.offsetWidth - 12,
   );
-  feld.style.top = (window.scrollY + knopfKasten.bottom + 8) + "px";
+  feld.style.top = (knopfKasten.bottom + 8) + "px";
   feld.style.left = Math.max(8, links) + "px";
   el("knopf-mappe").setAttribute("aria-expanded", "true");
   /* Auf dem Telefon ist die Mappe ein Blatt von unten; die Marke schaltet den
@@ -4929,6 +5002,7 @@ async function start(){
     });
   }
 
+  kopfhoeheMessen();
   satzbildSetzen(gemerkt("satzbild", "fortlaufend"));
   for (const b of el("satzbild").querySelectorAll("button")){
     b.onclick = () => satzbildSetzen(b.dataset.bild);
