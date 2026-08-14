@@ -101,6 +101,39 @@ ok("Die Bezeichnung steht vor dem Wortlaut",
 ok("Die Bezeichnung bleibt aus dem kanonischen Text heraus",
   !kanonisch.includes("(2a)"), kanonisch.slice(0, 0));
 
+/* ── Satznummern ──
+   Die amtlichen Daten führen sie nur bei 260 von 1 537 Normen. Wo sie fehlen,
+   werden sie aus `struktur/<gesetz>.json` gesetzt — aus derselben Gliederung,
+   die auch die Fundstellen bildet. */
+const satzmarken = [...d.querySelectorAll(".lesespalte .sn")];
+ok("Satznummern stehen im Text", satzmarken.length > 0, satzmarken.length + " Nummern");
+ok("Jede Satznummer nennt ihre Fundstelle",
+  satzmarken.every((x) => /Satz \d+$/.test(x.title || "")),
+  satzmarken.slice(0, 3).map((x) => x.title).join(" | "));
+ok("Satznummern bleiben aus dem kanonischen Text heraus",
+  kanonisch === js("textindex(document.querySelector('.lesespalte')).text"));
+/* Ein Absatz mit nur einem Satz bekommt keine Nummer — die Absatzbezeichnung
+   sagt dort schon alles. */
+const einzeln = js(`(() => {
+  const gruppen = new Map();
+  for (const s of saetzeDerNorm()) {
+    const k = s.absatz || "";
+    gruppen.set(k, (gruppen.get(k) || 0) + 1);
+  }
+  return [...gruppen.values()].filter(n => n === 1).length;
+})()`);
+const mehrfach = js(`(() => {
+  const gruppen = new Map();
+  for (const s of saetzeDerNorm()) {
+    const k = s.absatz || "";
+    gruppen.set(k, (gruppen.get(k) || 0) + 1);
+  }
+  return [...gruppen.values()].filter(n => n > 1).reduce((a, b) => a + b, 0);
+})()`);
+ok("Nur mehrsätzige Absätze werden nummeriert",
+  satzmarken.length === mehrfach,
+  `${satzmarken.length} Nummern, ${mehrfach} Sätze in mehrsätzigen Absätzen, ${einzeln} einsätzige Absätze`);
+
 /* ── Apparat ── */
 const register = [...d.querySelectorAll(".register button")].map((b) => b.textContent);
 ok("Fünf Register", register.length === 5, register.join(" · "));

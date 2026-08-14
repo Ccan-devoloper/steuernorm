@@ -28,6 +28,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { einheiten as zerlegeNorm } from "./lib/gliederung.mjs";
+
 const WURZEL = path.resolve(import.meta.dirname, "..");
 const ZIEL = path.join(WURZEL, "struktur");
 const FORMAT = 1;
@@ -39,6 +41,47 @@ const nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null
 
 /** Die drei Kategorien der Legende. Alles andere wird nicht eingefärbt. */
 const TYP = { tb: "tatbestand", rf: "rechtsfolge", ausn: "ausnahme" };
+
+/**
+ * Satzgrenzen einer Norm.
+ *
+ * WOZU. Die amtlichen Daten führen Satznummern nur bei 260 von 1 537 Normen
+ * als `<span class="sn">`; bei den übrigen 1 277 steht im Quelltext keine.
+ * Angezeigt wurde deshalb fast nirgends eine — obwohl die Adresse überall
+ * existiert: Die Gliederung spricht von „Abs. 3 Satz 2", die Fundstellen der
+ * Verwaltungsanweisungen tun es auch, und ohne sichtbare Nummer kann der
+ * Leser die eine der anderen nicht zuordnen.
+ *
+ * Gezählt wird deshalb NICHT neu, sondern aus derselben Quelle gelesen wie
+ * die Fundstelle: `gliederung.mjs`. Damit zeigt die Anzeige denselben Satz 2,
+ * den auch das Register meint. Eine eigene Satzzählung im Frontend wäre eine
+ * zweite Wahrheit und liefe früher oder später auseinander.
+ *
+ * Aufzählungsglieder („Nr. 1", „Buchst. a") sind keine Sätze und bekommen
+ * keine Nummer. Fortsetzungen („… (Teil 2)") gehören zu ihrem Satz und
+ * bekommen ebenfalls keine eigene.
+ */
+const SATZPFAD = /(?:^|\s)Satz (\d+)$/;
+
+function satzgrenzen(norm) {
+  const raus = [];
+  for (const e of zerlegeNorm(norm)) {
+    const m = SATZPFAD.exec(e.pfad || "");
+    if (!m) continue;
+    if (!Number.isInteger(e.von)) continue;
+    raus.push({
+      nr: Number(m[1]),
+      von: e.von,
+      bis: Number.isInteger(e.bis) ? e.bis : e.von,
+      pfad: e.pfad,
+      /* Der Absatz, zu dem der Satz gehört — die Anzeige nummeriert nur, wo
+         ein Absatz mehr als einen Satz hat. Bei einem einzigen Satz sagt die
+         Absatzbezeichnung bereits alles. */
+      absatz: e.pfad.replace(SATZPFAD, "").trim() || null,
+    });
+  }
+  return raus;
+}
 
 const register = JSON.parse(await readFile(path.join(WURZEL, "data", "index.json"), "utf8"));
 const gesetze = register.gesetze.filter(
@@ -60,10 +103,20 @@ for (const meta of gesetze) {
     continue;
   }
 
+  /* Der Normtext, nicht nur die Annotation: Die Satzgrenzen kommen aus
+     `gliederung.mjs` und brauchen die Norm selbst. */
+  const gesetz = JSON.parse(await readFile(path.join(WURZEL, "data", meta.datei), "utf8"));
+
   const normen = {};
   let segmenteImGesetz = 0;
+  let saetzeImGesetz = 0;
 
-  for (const [normId, anm] of Object.entries(annotation.normen || {})) {
+  /* Über die NORMEN des Gesetzes, nicht über die Annotationen: Satzgrenzen
+     hängen nicht an der Erkennung. Wer nur die annotierten Normen durchgeht,
+     lässt jede Norm ohne Annotation auch ohne Satznummern — und das waren 95. */
+  for (const norm of gesetz.normen) {
+    const normId = norm.id;
+    const anm = (annotation.normen || {})[normId] || {};
     const segmente = [];
 
     for (const satz of anm.saetze || []) {
@@ -93,10 +146,18 @@ for (const meta of gesetze) {
       }
     }
 
-    if (!segmente.length) continue;
     segmente.sort((a, b) => a.von - b.von || a.bis - b.bis);
-    normen[normId] = { segmente };
+    const saetze = satzgrenzen(norm);
+    /* Eine Norm ohne Segmente KANN Satzgrenzen haben — 127 Normen tragen
+       keine erkannte Struktur, ihre Sätze sind trotzdem adressierbar. Nur wo
+       beides fehlt, gibt es nichts zu schreiben. */
+    if (!segmente.length && !saetze.length) continue;
+    normen[normId] = {
+      ...(segmente.length ? { segmente } : {}),
+      ...(saetze.length ? { saetze } : {}),
+    };
     segmenteImGesetz += segmente.length;
+    saetzeImGesetz += saetze.length;
     gesamtNormen++;
   }
 
@@ -114,7 +175,8 @@ for (const meta of gesetze) {
 
   await writeFile(path.join(ZIEL, meta.datei), `${JSON.stringify(inhalt)}\n`);
   gesamtSegmente += segmenteImGesetz;
-  console.log(`  ${meta.abk.padEnd(7)} ${String(Object.keys(normen).length).padStart(4)} Normen · ${String(segmenteImGesetz).padStart(6)} Segmente`);
+  console.log(`  ${meta.abk.padEnd(7)} ${String(Object.keys(normen).length).padStart(4)} Normen · `
+    + `${String(segmenteImGesetz).padStart(6)} Segmente · ${String(saetzeImGesetz).padStart(6)} Sätze`);
 }
 
 console.log(`\n${gesamtNormen} Normen, ${gesamtSegmente} Segmente nach struktur/ geschrieben.`);

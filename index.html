@@ -1539,6 +1539,83 @@ function strukturDerNorm(){
   return eintrag && Array.isArray(eintrag.segmente) ? eintrag.segmente : [];
 }
 
+/** Satzgrenzen der laufenden Norm — leer, wenn es keinen Datensatz gibt. */
+function saetzeDerNorm(){
+  const gesetz = S.struktur[S.abk];
+  if (!gesetz) return [];
+  const eintrag = gesetz[S.normId];
+  return eintrag && Array.isArray(eintrag.saetze) ? eintrag.saetze : [];
+}
+
+/**
+ * Satznummern in den Text setzen.
+ *
+ * WARUM ÜBERHAUPT. Die amtlichen Daten führen Satznummern nur bei 260 von
+ * 1 537 Normen als `<span class="sn">`; bei den übrigen steht im Quelltext
+ * keine. Die ADRESSE gibt es trotzdem überall — die Gliederung spricht von
+ * „Abs. 3 Satz 2", die Verwaltungsanweisungen zitieren so, und der
+ * Fassungsvergleich auch. Ohne sichtbare Nummer kann der Leser die Fundstelle
+ * nicht im Text wiederfinden.
+ *
+ * Gezählt wird NICHT hier, sondern in `tools/struktur.mjs` aus derselben
+ * Gliederung, die auch die Fundstellen bildet. Eine eigene Satzzählung im
+ * Frontend wäre eine zweite Wahrheit und liefe früher oder später auseinander.
+ *
+ * DREI VORSICHTSMASSNAHMEN:
+ *
+ *   Nur wo ein Absatz mehr als einen Satz hat. Bei einem einzigen Satz sagt
+ *   die Absatzbezeichnung schon alles, und eine „1" wäre bloßes Rauschen.
+ *
+ *   Nicht dort, wo die amtlichen Daten schon nummerieren — sonst stünde die
+ *   Nummer doppelt. Welche Absätze das sind, wird VOR der ersten Einfügung
+ *   festgestellt: Danach trägt jeder bearbeitete Absatz selbst eine.
+ *
+ *   Von hinten nach vorn. Jede Einfügung teilt einen Textknoten und verschiebt
+ *   alles dahinter; wer vorn beginnt, trifft ab der zweiten Nummer daneben.
+ */
+function satznummernSetzen(wurzel, saetze){
+  if (!saetze.length) return 0;
+
+  const jeAbsatz = new Map();
+  for (const s of saetze){
+    const schluessel = s.absatz || "";
+    if (!jeAbsatz.has(schluessel)) jeAbsatz.set(schluessel, []);
+    jeAbsatz.get(schluessel).push(s);
+  }
+  const ziele = [];
+  for (const liste of jeAbsatz.values()){
+    if (liste.length > 1) ziele.push(...liste);
+  }
+  if (!ziele.length) return 0;
+
+  const schonNummeriert = new Set(
+    [...wurzel.querySelectorAll(".absatz")].filter(b => b.querySelector(".sn")));
+
+  const { karte } = textindex(wurzel);
+  ziele.sort((a, b) => b.von - a.von);
+
+  let gesetzt = 0;
+  for (const s of ziele){
+    const ref = karte[s.von];
+    if (!ref || !ref.n) continue;
+    const block = ref.n.parentElement && ref.n.parentElement.closest(".absatz");
+    if (block && schonNummeriert.has(block)) continue;
+
+    const marke = document.createElement("span");
+    marke.className = "sn";
+    marke.textContent = String(s.nr);
+    marke.title = s.pfad;
+
+    if (ref.i === 0) ref.n.parentNode.insertBefore(marke, ref.n);
+    else {
+      const rest = ref.n.splitText(ref.i);
+      rest.parentNode.insertBefore(marke, rest);
+    }
+    gesetzt++;
+  }
+  return gesetzt;
+}
+
 /* ── Kleinigkeiten ─────────────────────────────────────────────────── */
 function knopf(klasse, inhalt){
   const b = document.createElement("button");
@@ -3213,6 +3290,11 @@ function hauptZeichnen(){
     lese.appendChild(block);
     if (abs.n) marken.push({ text: "(" + abs.n + ")", knoten: block });
   }
+
+  /* Satznummern VOR der Einfärbung. Sie sind — wie die Absatzbezeichnung —
+     aus dem kanonischen Volltext ausgeblendet; die Zeichenpositionen der
+     Struktur bleiben deshalb unberührt, ganz gleich in welcher Reihenfolge. */
+  satznummernSetzen(lese, saetzeDerNorm());
 
   /* Struktur-Einfärbung VOR den Verweisen: Sie rechnet auf dem kanonischen
      Volltext, und der darf zu diesem Zeitpunkt noch keine eingefügten

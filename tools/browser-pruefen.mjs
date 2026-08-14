@@ -180,6 +180,74 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4.1 Satznummern, auch wo die amtlichen Daten keine führen ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+
+  const lesen = async (ziel) => {
+    await seite.goto(WURZEL + "/" + ziel, { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1500);
+    return seite.evaluate(() => {
+      const sn = [...document.querySelectorAll(".lesespalte .sn")];
+      return {
+        anzahl: sn.length,
+        nummern: sn.map((x) => x.textContent).join(" "),
+        mitFundstelle: sn.filter((x) => x.title).length,
+        kanonisch: textindex(document.querySelector(".lesespalte")).text,
+        doppelt: [...document.querySelectorAll(".lesespalte .absatz")]
+          .some((b) => [...b.querySelectorAll(".sn")]
+            .map((x) => x.textContent)
+            .some((n, i, a) => a.indexOf(n) !== i)),
+      };
+    });
+  };
+
+  /* AO § 1 führt im Quelltext KEINE Satznummern — hier müssen sie aus
+     struktur/ kommen. */
+  const ao = await lesen("#/ao/1");
+  ok("Satznummern auch ohne amtliche Auszeichnung", ao.anzahl > 0, ao.nummern);
+  ok("Sie tragen ihre Fundstelle", ao.mitFundstelle === ao.anzahl,
+    `${ao.mitFundstelle}/${ao.anzahl}`);
+  ok("Der Wortlaut beginnt unverändert",
+    ao.kanonisch.startsWith("Dieses Gesetz gilt für alle Steuern"), ao.kanonisch.slice(0, 40));
+
+  /* GewStG § 2 führt sie im Quelltext — dort darf nichts hinzukommen. */
+  const gew = await lesen("#/gewstg/2");
+  ok("Amtliche Satznummern bleiben unangetastet", gew.mitFundstelle === 0,
+    `${gew.mitFundstelle} von ${gew.anzahl} nachträglich gesetzt`);
+  ok("Keine doppelte Nummerierung im selben Absatz", !gew.doppelt);
+
+  /* Und die Zeichenpositionen der Einfärbung dürfen sich nicht verschieben. */
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  const solzg = await seite.evaluate(() => ({
+    kanonisch: textindex(document.querySelector(".lesespalte")).text,
+    sn: document.querySelectorAll(".lesespalte .sn").length,
+    ersteFarbe: (document.querySelector(".lesespalte .s") || {}).textContent || "",
+  }));
+  ok("Satznummern verschieben die Einfärbung nicht",
+    solzg.kanonisch.startsWith("Der Solidaritätszuschlag bemisst sich")
+    && solzg.ersteFarbe.startsWith("bemisst sich"),
+    solzg.ersteFarbe.slice(0, 30));
+  ok("Satznummern auch bei SolzG § 3", solzg.sn > 0, String(solzg.sn));
+
+  /* Kopieren darf sie nicht mitnehmen — sie sind Adresse, nicht Wortlaut. */
+  const auswahl = await seite.evaluate(() => {
+    const bereich = document.createRange();
+    bereich.selectNodeContents(document.querySelector(".lesespalte"));
+    const s = window.getSelection();
+    s.removeAllRanges(); s.addRange(bereich);
+    const text = s.toString();
+    s.removeAllRanges();
+    return text;
+  });
+  ok("Kopierter Text trägt keine Satznummern",
+    !/\bbemisst sich vorbehaltlich/.test(auswahl) || !/^\s*\(1\)\s*1/.test(auswahl.trim()),
+    auswahl.trim().slice(0, 40));
+  await ctx.close();
+}
+
 /* ── 4a. Ein Reiter je Gesetz, nicht je Norm ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
