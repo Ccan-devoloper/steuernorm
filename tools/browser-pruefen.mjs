@@ -1181,6 +1181,110 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4j. Die Spalten lassen sich breiter ziehen ──
+   216 px links schneiden die Überschriften des UStG nach drei Wörtern ab,
+   340 px rechts pressen einen UStAE-Auszug in eine Rinne. Beide Ränder sind
+   zu ziehen; die Mitte behält dabei ihr Mindestmaß. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1600, height: 900 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/ustg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+
+  const breiten = () => seite.evaluate(() => ({
+    nav: Math.round(document.querySelector(".navspalte").getBoundingClientRect().width),
+    mitte: Math.round(document.querySelector(".hauptspalte").getBoundingClientRect().width),
+    apparat: Math.round(document.querySelector(".apparat").getBoundingClientRect().width),
+  }));
+
+  const vorher = await breiten();
+  ok("Die Spalten starten auf den Vorgabemaßen",
+    vorher.nav === 216 && vorher.apparat === 340, JSON.stringify(vorher));
+
+  const ziehen = async (wahl, um) => {
+    const k = await seite.locator(wahl).boundingBox();
+    await seite.mouse.move(k.x + k.width / 2, k.y + 200);
+    await seite.mouse.down();
+    await seite.mouse.move(k.x + k.width / 2 + um, k.y + 200, { steps: 12 });
+    await seite.mouse.up();
+    await seite.waitForTimeout(150);
+  };
+
+  await ziehen("#griff-nav", 140);
+  const nachNav = await breiten();
+  ok("Das Verzeichnis lässt sich breiter ziehen",
+    Math.abs(nachNav.nav - (vorher.nav + 140)) <= 4, `${vorher.nav} → ${nachNav.nav}`);
+  ok("Die Mitte gibt den Platz her, nicht der Apparat",
+    nachNav.apparat === vorher.apparat && nachNav.mitte < vorher.mitte, JSON.stringify(nachNav));
+
+  await ziehen("#griff-apparat", -160);
+  const nachApparat = await breiten();
+  ok("Der Apparat lässt sich nach links breiter ziehen",
+    Math.abs(nachApparat.apparat - (vorher.apparat + 160)) <= 4,
+    `${vorher.apparat} → ${nachApparat.apparat}`);
+  ok("Kein waagerechter Überlauf durch gezogene Spalten", !(await ueberlauf(seite)));
+
+  /* Über die Grenze hinaus: Die Mitte behält ihr Mindestmaß. */
+  await ziehen("#griff-nav", 900);
+  const gezerrt = await breiten();
+  ok("Die Lesespalte behält mindestens 420 px", gezerrt.mitte >= 420, JSON.stringify(gezerrt));
+  ok("Auch am Anschlag kein Überlauf", !(await ueberlauf(seite)));
+
+  /* Gemerkt wird über den Seitenwechsel hinweg. */
+  await seite.reload({ waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  const nachLaden = await breiten();
+  ok("Die Breiten überleben das Neuladen",
+    nachLaden.nav === gezerrt.nav && nachLaden.apparat === gezerrt.apparat,
+    JSON.stringify(nachLaden));
+
+  /* Doppelklick und Tastatur. */
+  await seite.dblclick("#griff-nav");
+  await seite.waitForTimeout(150);
+  ok("Doppelklick setzt zurück", (await breiten()).nav === 216, JSON.stringify(await breiten()));
+  await seite.focus("#griff-nav");
+  await seite.keyboard.press("ArrowRight");
+  await seite.keyboard.press("ArrowRight");
+  ok("Pfeiltasten verschieben den Griff", (await breiten()).nav === 216 + 32,
+    JSON.stringify(await breiten()));
+  const marken = await seite.evaluate(() => {
+    const g = document.getElementById("griff-nav");
+    return { rolle: g.getAttribute("role"), jetzt: g.getAttribute("aria-valuenow"),
+      text: g.getAttribute("aria-valuetext"), name: g.getAttribute("aria-label") };
+  });
+  ok("Der Griff sagt der Sprachausgabe, was er ist",
+    marken.rolle === "separator" && marken.jetzt === "248" && Boolean(marken.name),
+    JSON.stringify(marken));
+  await ctx.close();
+}
+
+/* Wo die Spalte keine Spalte ist, gibt es auch keinen Griff. */
+{
+  for (const [breite, sichtbar] of [[1600, ["griff-nav", "griff-apparat"]],
+    [1024, ["griff-apparat"]], [390, []]]) {
+    const ctx = await browser.newContext({
+      viewport: { width: breite, height: 900 }, isMobile: breite < 500, hasTouch: breite < 500,
+    });
+    const seite = await ctx.newPage();
+    await seite.goto(WURZEL + "/#/ustg/3", { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1500);
+    const da = await seite.evaluate(() => ["griff-nav", "griff-apparat"]
+      .filter((id) => getComputedStyle(document.getElementById(id)).display !== "none"));
+    ok(`Griffe nur, wo Spalten sind (${breite} px)`,
+      da.join(",") === sichtbar.join(","), `sichtbar: ${da.join(", ") || "keine"}`);
+    await ctx.close();
+  }
+  /* Auf der Trefferliste gibt es weder Verzeichnis noch Apparat. */
+  const ctx = await browser.newContext({ viewport: { width: 1600, height: 900 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/suche/Vorsteuer", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  const da = await seite.evaluate(() => ["griff-nav", "griff-apparat"]
+    .filter((id) => getComputedStyle(document.getElementById(id)).display !== "none"));
+  ok("Keine Griffe auf der Trefferliste", da.length === 0, da.join(", "));
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });

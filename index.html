@@ -475,6 +475,38 @@ header{position:sticky;top:0;z-index:40}
 .zuletzt-liste{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:var(--text-3);align-items:flex-start}
 .zuletzt-liste button:hover{color:var(--text)}
 
+/* ── Griffe zwischen den Spalten ──
+   216 und 340 px sind eine Setzung, keine Wahrheit: Im Verzeichnis brechen
+   lange Überschriften nach drei Wörtern ab („Innergemeinschaftlic…"), und im
+   Apparat steht ein UStAE-Auszug in einer Spalte von 340 px. Wer einen breiten
+   Schirm hat, soll ihn hergeben können.
+
+   Der Griff liegt ÜBER der Trennlinie statt neben ihr: Die negativen Ränder
+   heben seine neun Pixel wieder auf, damit er im Raster keine Breite kostet
+   und die Spalten dort bleiben, wo sie ohne ihn wären. Sichtbar wird er erst
+   unter dem Zeiger oder im Tastaturfokus — eine dauerhaft gezeichnete
+   Doppellinie zwischen den Spalten wäre lauter als die Sache wert ist. */
+.griff{
+  flex:none;width:9px;margin:0 -4px;z-index:2;
+  position:sticky;top:var(--kopfklebt);height:calc(100vh - var(--kopfklebt));
+  display:flex;align-items:center;justify-content:center;
+  cursor:col-resize;background:transparent;border:0;padding:0;
+  touch-action:none;   /* sonst scrollt das Telefon, statt zu ziehen */
+}
+.griff::before{
+  content:"";width:1px;height:100%;background:transparent;
+  transition:background 120ms ease-out,width 120ms ease-out;
+}
+.griff:hover::before,
+.griff:focus-visible::before,
+.griff[data-zieht]::before{background:var(--text-4);width:3px}
+.griff:focus-visible{outline:0}
+/* Ohne die zugehörige Spalte hat der Griff nichts zu greifen. */
+body[data-ansicht=start] .griff,
+body[data-ansicht=uebersicht] .griff,
+body[data-ansicht=suche] .griff,
+body[data-ansicht=vergleich] #griff-apparat{display:none}
+
 /* ── Mittelspalte ── */
 .hauptspalte{flex:1;min-width:0;padding:30px 32px 70px}
 .brotkrume{
@@ -1183,6 +1215,9 @@ body[data-ansicht=start] .suchfeld{display:none}
 
 @media (max-width:1199px){
   :root{--apparat:300px}
+  /* Das Verzeichnis ist hier eine Schublade über allem, keine Spalte — an
+     ihrem Rand gibt es nichts zu ziehen. */
+  #griff-nav{display:none}
   /* Fünf Register verteilt auf 300 px schneiden „Markierungen“ ab. Die Zeile
      wird deshalb waagerecht schiebbar — dieselbe Lösung, die der Entwurf für
      die Mobilstufe vorsieht. */
@@ -1255,6 +1290,9 @@ body[data-ansicht=start] .suchfeld{display:none}
   .suchfeld{max-width:none;order:3;flex-basis:100%}
   .kopf-rechts{margin-left:auto}
   .raster{flex-direction:column}
+  /* Der Apparat sitzt hier unter dem Text und später als Blatt von unten.
+     Waagerecht ziehen hat auf einer Spalte keinen Sinn. */
+  #griff-apparat{display:none}
   .hauptspalte{padding:22px 18px 60px;width:100%}
   .hauptspalte h1{font-size:23px;line-height:1.22}
   .leseraum{gap:14px}
@@ -1556,7 +1594,13 @@ body[data-ansicht=start] .suchfeld{display:none}
 
 <div class="raster">
   <nav class="navspalte" id="navspalte" aria-label="Normen des Gesetzes"></nav>
+  <div class="griff" id="griff-nav" role="separator" aria-orientation="vertical" tabindex="0"
+       aria-label="Breite des Normenverzeichnisses"
+       title="Ziehen zum Verbreitern · Doppelklick setzt zurück"></div>
   <main class="hauptspalte" id="haupt"><p class="platzhalter">Wird geladen …</p></main>
+  <div class="griff" id="griff-apparat" role="separator" aria-orientation="vertical" tabindex="0"
+       aria-label="Breite des Apparats"
+       title="Ziehen zum Verbreitern · Doppelklick setzt zurück"></div>
   <aside class="apparat" id="apparat" aria-label="Apparat"></aside>
 </div>
 
@@ -1591,6 +1635,7 @@ const S = {
   darstellung: "system",   // system | hell | dunkel — global, localStorage
   leseschrift: 17.5,       // px, Schriftgröße des Normtextes, localStorage
   satzbild: "fortlaufend", // fortlaufend | einzeln — localStorage
+  spalten: { nav: 216, apparat: 340 }, // Breite links/rechts in px, localStorage
   letzteFarbe: "#F2C744",  // localStorage
   filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
 };
@@ -1866,6 +1911,101 @@ function schriftSetzen(px){
   el("schrift-kleiner").disabled = stelle === 0;
   el("schrift-groesser").disabled = stelle === SCHRIFTSTUFEN.length - 1;
   merken("leseschrift", naechste);
+}
+
+/* ── Spaltenbreiten ───────────────────────────────────────────────────
+   216 px links und 340 px rechts sind der Entwurf, nicht das Maß aller
+   Schirme. Im Verzeichnis brechen die Überschriften des UStG nach drei Wörtern
+   ab, im Apparat steht ein UStAE-Auszug in einer schmalen Rinne. Beide Ränder
+   sind jetzt zu ziehen, und die Breiten werden gemerkt.
+
+   DIE MITTE HAT VORRANG. Geklemmt wird nicht nur an festen Grenzen, sondern
+   auch am verbleibenden Platz: Der Normtext behält immer mindestens 420 px,
+   sonst zöge man sich die Lesespalte zu, um das Verzeichnis zu weiten. Weil
+   die Rechnung an der Fensterbreite hängt, wird sie beim Ändern der Größe
+   wiederholt — eine Breite, die auf 1 920 px passte, passt auf 1 280 nicht. */
+const SPALTEN_VORGABE = { nav: 216, apparat: 340 };
+const SPALTEN_GRENZEN = { nav: [180, 560], apparat: [260, 680] };
+const MITTE_MINDESTENS = 420;
+
+function spalteKlemmen(welche, wert){
+  const [min, max] = SPALTEN_GRENZEN[welche];
+  const andere = welche === "nav" ? "apparat" : "nav";
+  const platz = window.innerWidth - S.spalten[andere] - MITTE_MINDESTENS;
+  return Math.round(Math.max(min, Math.min(max, platz, wert)));
+}
+
+function spalteSetzen(welche, wert, merkeEs = false){
+  S.spalten[welche] = spalteKlemmen(welche, wert);
+  document.documentElement.style.setProperty(
+    welche === "nav" ? "--nav" : "--apparat", S.spalten[welche] + "px");
+  const griff = el(welche === "nav" ? "griff-nav" : "griff-apparat");
+  if (griff){
+    const [min, max] = SPALTEN_GRENZEN[welche];
+    griff.setAttribute("aria-valuenow", String(S.spalten[welche]));
+    griff.setAttribute("aria-valuemin", String(min));
+    griff.setAttribute("aria-valuemax", String(max));
+    griff.setAttribute("aria-valuetext", S.spalten[welche] + " Pixel");
+  }
+  if (merkeEs) merken("spalten", S.spalten);
+}
+
+function spaltenSetzen(merkeEs = false){
+  for (const welche of ["nav", "apparat"]) spalteSetzen(welche, S.spalten[welche], false);
+  if (merkeEs) merken("spalten", S.spalten);
+}
+
+function griffVerdrahten(griff, welche){
+  if (!griff) return;
+  let zug = null;
+
+  griff.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    zug = { x: e.clientX, breite: S.spalten[welche] };
+    griff.setPointerCapture(e.pointerId);
+    griff.dataset.zieht = "";
+    /* Ohne das markiert der Zeiger beim Ziehen den halben Normtext. */
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "col-resize";
+    e.preventDefault();
+  });
+
+  griff.addEventListener("pointermove", (e) => {
+    if (!zug) return;
+    /* Der Apparat sitzt rechts: Er wächst, wenn der Zeiger nach LINKS geht. */
+    const richtung = welche === "nav" ? 1 : -1;
+    spalteSetzen(welche, zug.breite + richtung * (e.clientX - zug.x));
+  });
+
+  const loslassen = () => {
+    if (!zug) return;
+    zug = null;
+    delete griff.dataset.zieht;
+    document.body.style.userSelect = "";
+    document.body.style.cursor = "";
+    /* Erst am Ende schreiben, nicht bei jedem Pixel. */
+    merken("spalten", S.spalten);
+  };
+  griff.addEventListener("pointerup", loslassen);
+  griff.addEventListener("pointercancel", loslassen);
+
+  /* Doppelklick stellt die Vorgabe wieder her — schneller als zurückzuzielen. */
+  griff.addEventListener("dblclick", () => spalteSetzen(welche, SPALTEN_VORGABE[welche], true));
+
+  /* Mit der Tastatur: Pfeile in Sechzehnerschritten, mit Umschalt in
+     Achtundvierzigern, Pos1 zurück auf die Vorgabe. Ein Griff, den man nur
+     mit der Maus bewegen kann, ist für Tastaturnutzer kein Griff. */
+  griff.addEventListener("keydown", (e) => {
+    const schritt = e.shiftKey ? 48 : 16;
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight"){
+      e.preventDefault();
+      const richtung = (e.key === "ArrowRight" ? 1 : -1) * (welche === "nav" ? 1 : -1);
+      spalteSetzen(welche, S.spalten[welche] + richtung * schritt, true);
+    } else if (e.key === "Home"){
+      e.preventDefault();
+      spalteSetzen(welche, SPALTEN_VORGABE[welche], true);
+    }
+  });
 }
 
 /**
@@ -5391,6 +5531,21 @@ async function start(){
   schriftSetzen(Number(gemerkt("leseschrift", 17.5)) || 17.5);
   el("schrift-kleiner").onclick = () => schriftVerschieben(-1);
   el("schrift-groesser").onclick = () => schriftVerschieben(1);
+
+  /* Spaltenbreiten: gemerkte Werte, aber gegen das AKTUELLE Fenster geklemmt.
+     Wer auf 1 920 px gezogen hat und auf 1 280 px wiederkommt, soll die Mitte
+     wiederfinden und nicht zwei Randspalten mit einem Spalt dazwischen. */
+  const gemerkteSpalten = gemerkt("spalten", null);
+  if (gemerkteSpalten && typeof gemerkteSpalten === "object"){
+    for (const welche of ["nav", "apparat"]){
+      const wert = Number(gemerkteSpalten[welche]);
+      if (Number.isFinite(wert)) S.spalten[welche] = wert;
+    }
+  }
+  spaltenSetzen();
+  griffVerdrahten(el("griff-nav"), "nav");
+  griffVerdrahten(el("griff-apparat"), "apparat");
+  window.addEventListener("resize", () => spaltenSetzen());
 
   S.strukturModus = gemerkt("strukturModus", "voll");
   S.markierungen = markierungenLesen();

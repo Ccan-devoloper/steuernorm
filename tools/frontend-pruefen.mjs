@@ -262,6 +262,30 @@ ok("Escape schließt die Liste", box.hidden);
 ok("Escape lässt den Text stehen", feld.value === "§ 5 EStG", feld.value);
 feld.value = "";
 
+/* ── Spaltenbreiten ──
+   jsdom rechnet kein Layout; geprüft wird die Mechanik, nicht das Bild. */
+ok("Beide Griffe sind da",
+  Boolean(d.getElementById("griff-nav") && d.getElementById("griff-apparat")));
+ok("Der Griff ist als Trenner ausgezeichnet",
+  d.getElementById("griff-nav").getAttribute("role") === "separator"
+  && d.getElementById("griff-nav").getAttribute("aria-orientation") === "vertical");
+ok("Der Griff ist mit der Tastatur erreichbar",
+  d.getElementById("griff-nav").getAttribute("tabindex") === "0");
+js('spalteSetzen("nav", 300, true)');
+ok("Eine Breite landet an der Marke",
+  d.documentElement.style.getPropertyValue("--nav") === js("S.spalten.nav") + "px",
+  d.documentElement.style.getPropertyValue("--nav"));
+ok("Die Breite wird gemerkt",
+  JSON.parse(speicher.get("sn.spalten") || "{}").nav === js("S.spalten.nav"),
+  speicher.get("sn.spalten"));
+/* Die Mitte hat Vorrang: Was der Lesespalte ihr Mindestmaß nähme, wird gekappt. */
+js('spalteSetzen("nav", 5000)');
+ok("Die Lesespalte lässt sich nicht zuziehen",
+  js("window.innerWidth - S.spalten.nav - S.spalten.apparat") >= 420,
+  `Fenster ${js("window.innerWidth")}, nav ${js("S.spalten.nav")}, Apparat ${js("S.spalten.apparat")}`);
+js('spalteSetzen("nav", 0)');
+ok("Und nicht unter ihr eigenes Mindestmaß", js("S.spalten.nav") === 180, js("S.spalten.nav"));
+
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
   (d.getElementById("stufen") || {}).getAttribute
