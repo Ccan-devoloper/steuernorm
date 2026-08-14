@@ -1,0 +1,68 @@
+name: Änderungsübersicht sondieren
+
+# WOZU. Die Änderungsübersicht je Norm — Inkrafttreten, Änderungsgesetz,
+# Ausfertigung, Fundstelle — steht nicht in „Gesetze im Internet". Sie braucht
+# eine zweite Quelle, und die ist aus der Entwicklungsumgebung nicht
+# erreichbar: Der Proxy dort lehnt jede Verbindung dorthin mit HTTP 403 ab.
+#
+# Hier ist das Netz offen. Dieser Lauf fragt die Quelle und BERICHTET, was sie
+# liefert — er schreibt nichts nach `aenderungen/`. Aus dem Befund wird der
+# Auswerter geschrieben. Ein Auswerter gegen eine ungesehene Schnittstelle ist
+# genau die Sorte Code, die beim ersten echten Lauf umfällt.
+
+on:
+  workflow_dispatch:
+    inputs:
+      basis:
+        description: "Grundadresse der Quelle (leer = Rechtsinformationsportal des Bundes)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: steuernorm-aenderungen
+  cancel-in-progress: true
+
+jobs:
+  sondieren:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with: { ref: main }
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+
+      - name: Quelle abfragen
+        env:
+          RIP_BASIS: ${{ inputs.basis }}
+        run: |
+          set -euo pipefail
+          node tools/aenderungen.mjs --sondieren | tee sondierung.txt
+          {
+            echo "## Befund"
+            echo ""
+            echo '```'
+            cat sondierung.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Antwort als Artefakt sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: aenderungen-sondierung
+          path: reports/aenderungen-sondierung.json
+          retention-days: 14
+
+      - name: Befund festschreiben
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/aenderungen-sondierung.json
+          if git diff --cached --quiet; then echo "Befund unverändert."; exit 0; fi
+          git commit -m "Sondierung der Änderungsquelle ($(date -u +%Y-%m-%d))"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
