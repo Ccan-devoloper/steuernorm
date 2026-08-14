@@ -187,6 +187,37 @@ ok("Löschen räumt die Mappe mit auf",
   !js(`S.mappen.some(m => m.eintraege.some(e => e.markierungId === "${neueId}"))`));
 window.mappeSchliessen();
 
+/* ── Suche: Fundstellen ──
+   „§ 5 EStG" ist eine Adresse, keine Zeichenfolge im Wortlaut. Geprüft wird
+   gegen das Register — das EStG ist in diesem Lauf NICHT geladen, der Treffer
+   muss also aus `data/index.json` kommen. */
+const adr = js('adresseLesen("§ 5 EStG")');
+ok("Fundstelle wird als Adresse gelesen",
+  adr && adr.abk === "EStG" && adr.enbez === "§ 5", JSON.stringify(adr));
+ok("Fundstelle führt unmittelbar auf die Norm",
+  js('sucheZiel("§ 5 EStG")') === "#/estg/5", js('sucheZiel("§ 5 EStG")'));
+const schreibweisen = ["§5 EStG", "EStG § 5", "EStG 5", "§ 5 Abs. 2 EStG", "estg §5"];
+ok("Umgestellte Schreibweisen führen ans selbe Ziel",
+  schreibweisen.every((s) => js("sucheZiel(" + JSON.stringify(s) + ")") === "#/estg/5"),
+  schreibweisen.map((s) => js("sucheZiel(" + JSON.stringify(s) + ")")).join(" · "));
+ok("Der ausgeschriebene Name zählt auch",
+  js('sucheZiel("§ 370 Abgabenordnung")') === "#/ao/370",
+  js('sucheZiel("§ 370 Abgabenordnung")'));
+ok("Die Fundstelle steht auch ohne geladenen Volltext in der Liste",
+  js('trefferliste("§ 5 EStG").length') >= 1
+  && js('trefferliste("§ 5 EStG")[0].abk') === "EStG"
+  && js('trefferliste("§ 5 EStG")[0].id') === "5",
+  js('JSON.stringify(trefferliste("§ 5 EStG")[0] || null)').slice(0, 90));
+ok("Mehr als eine Fundstelle bleibt eine Suche",
+  js('sucheZiel("§ 5 EStG Gewinn")').startsWith("#/suche/"), js('sucheZiel("§ 5 EStG Gewinn")'));
+ok("Ohne genanntes Gesetz wird nicht gesprungen",
+  js('sucheZiel("§ 5")').startsWith("#/suche/"), js('sucheZiel("§ 5")'));
+ok("Ohne Gesetz zeigt die Adresse auf alle Gesetze, die die Norm führen",
+  js('adressTreffer(adresseLesen("§ 5")).length') === 14,
+  js('adressTreffer(adresseLesen("§ 5")).length') + " Gesetze");
+ok("Was es nicht gibt, wird nicht erfunden",
+  js('adressTreffer(adresseLesen("§ 999 EStG")).length') === 0);
+
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
   (d.getElementById("stufen") || {}).getAttribute

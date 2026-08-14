@@ -349,6 +349,29 @@ header{position:sticky;top:0;z-index:40}
 .suchfeld input:focus{outline:0}
 .suchfeld:focus-within{border-color:var(--text)}
 
+/* ── Vorschläge unter dem Suchfeld ──
+   Die Liste hängt an ihrem Feld, nicht am Seitenkörper: Beide Suchfelder — das
+   in der Kopfleiste und das große auf der Startseite — bekommen dieselbe
+   Hülle und dieselbe Liste. `z-index` gilt innerhalb der Kopfleiste; die liegt
+   als Ganzes auf 40 und damit über dem Text. */
+.suchhuelle{position:relative}
+.vorschlaege{
+  position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:70;
+  background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r-feld);
+  box-shadow:var(--schatten-popover);
+  max-height:min(60vh,420px);overflow-y:auto;
+}
+.vorschlaege[hidden]{display:none}
+.vorschlag{
+  display:flex;align-items:baseline;gap:10px;width:100%;text-align:left;
+  padding:8px 12px;font-size:13px;color:var(--text-2b);
+}
+.vorschlag+.vorschlag{border-top:1px solid var(--linie-zart)}
+.vorschlag:hover,.vorschlag[aria-selected=true]{background:var(--zeile-aktiv)}
+.vorschlag .vkopf{font-family:var(--serif);font-size:14px;color:var(--text);white-space:nowrap;flex:none}
+.vorschlag .vbei{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-3);font-size:12.5px}
+.vorschlag .vmarke{font-family:var(--mono);font-size:10px;color:var(--text-5);white-space:nowrap;flex:none}
+
 /* Umbrechen statt überlaufen. Mit vier Schaltergruppen passt die Zeile
    unterhalb von 1440 px nicht mehr in einer Reihe; eine zweite Reihe ist
    besser als ein waagerechter Bildlauf über die ganze Seite. */
@@ -1430,7 +1453,7 @@ body[data-ansicht=start] .suchfeld{display:none}
     <button class="schubladen-knopf" id="schublade-auf" aria-label="Normenverzeichnis öffnen">☰&nbsp;Normen</button>
     <button type="button" class="wortmarke" id="wortmarke" aria-label="Zur Startseite">steuernorm</button>
 
-    <label class="suchfeld" for="suche">
+    <label class="suchfeld suchhuelle" for="suche">
       <span class="kuerzel" aria-hidden="true">⌘K</span>
       <input id="suche" type="search" placeholder="Norm, Wortlaut oder Fundstelle …" autocomplete="off">
     </label>
@@ -4501,7 +4524,7 @@ function startseiteZeichnen(){
   mitte.appendChild(h1);
 
   const feld = document.createElement("form");
-  feld.className = "grossfeld";
+  feld.className = "grossfeld suchhuelle";
   const eingabe = document.createElement("input");
   eingabe.type = "search";
   eingabe.placeholder = "Norm, Wortlaut oder Fundstelle …";
@@ -4703,8 +4726,127 @@ function uebersichtZeichnen(){
    vorliegt, erscheinen grau mit dem Vermerk „Datensatz … ausstehend" — nie mit
    erfundenem Wortlaut.
    ══════════════════════════════════════════════════════════════════════ */
+/* ── Fundstellen lesen ───────────────────────────────────────────────
+   „§ 5 EStG" steht in keinem Wortlaut: Die Abkürzung des Gesetzes gehört zur
+   Adresse, nicht zum Text. Die reine Volltextsuche fand deshalb null Treffer
+   für genau die Eingabe, die am nächsten liegt — sie suchte die Zeichenfolge
+   „§ 5 estg" in Überschriften und Absätzen, wo sie nie steht.
+
+   Gelesen wird gegen das Register: Es führt alle vierzehn Gesetze mit Nummer
+   und Überschrift, auch ohne geladenen Volltext. Erkannt werden „§ 5 EStG",
+   „§5 EStG", „EStG § 5", „EStG 5", „§ 5 Abs. 2 EStG", „Anlage 3 EStG" und der
+   ausgeschriebene Gesetzesname. Was keine Norm des Bestands trifft, wird nicht
+   erkannt — dann bleibt es bei der Volltextsuche. Erfunden wird nichts. */
+const ADRESSGLEICH = (s) => String(s).replace(/\s+/g, "").toLowerCase();
+
+function adresseLesen(begriff){
+  if (!S.register) return null;
+  const roh = String(begriff).replace(/ /g, " ").trim();
+  if (!roh) return null;
+
+  /* Das Gesetz: ein eigenes Wort, das einer Abkürzung gleicht — sonst der
+     ausgeschriebene Titel, längste zuerst, damit „Erbschaftsteuer- und
+     Schenkungsteuergesetz" nicht an einem kürzeren Namen hängen bleibt. */
+  let abk = null;
+  let rest = roh;
+  for (const wort of roh.split(/[\s,;()]+/).filter(Boolean)){
+    const rein = wort.replace(/[.:]+$/, "");
+    const g = S.register.gesetze.find(x => x.abk.toLowerCase() === rein.toLowerCase());
+    if (g){ abk = g.abk; rest = rest.replace(wort, " "); break; }
+  }
+  if (!abk){
+    for (const g of [...S.register.gesetze].sort((a, b) => b.titel.length - a.titel.length)){
+      const i = rest.toLowerCase().indexOf(g.titel.toLowerCase());
+      if (i < 0) continue;
+      abk = g.abk;
+      rest = rest.slice(0, i) + " " + rest.slice(i + g.titel.length);
+      break;
+    }
+  }
+
+  /* Die Nummer: hinter dem Paragrafenzeichen, sonst die erste freistehende
+     Zahl. „Anlage" ist im Bestand eine eigene Bezeichnungsform. */
+  const anlage = /\bAnlagen?\s*(\d+[a-z]?)/i.exec(rest);
+  const nachZeichen = /§+\s*(\d+[a-z]?)/i.exec(rest);
+  const freieZahl = /(?:^|\s)(\d+[a-z]?)(?=$|[\s,.;:)])/.exec(rest);
+  let enbez = null;
+  if (anlage) enbez = "Anlage " + anlage[1];
+  else {
+    const m = nachZeichen || freieZahl;
+    if (m) enbez = "§ " + m[1].toLowerCase();
+  }
+  if (!enbez) return null;
+
+  /* Bleibt außer der Adresse noch etwas stehen, ist die Eingabe mehr als eine
+     Fundstelle — „§ 5 EStG Gewinn" will gelesen, nicht angesprungen werden. */
+  const uebrig = rest
+    .replace(/§+/g, " ")
+    .replace(/\bAnlagen?\b/gi, " ")
+    .replace(/\bAbs(?:atz|ätze|\.)?\b/gi, " ")
+    .replace(/\bSatz\b|\bSätze\b|\bS\./gi, " ")
+    .replace(/\bNummer\b|\bNr\.?\b/gi, " ")
+    .replace(/\bBuchstabe\b/gi, " ")
+    .replace(/\d+[a-z]?/g, " ")
+    .replace(/[\s.,;:()§-]+/g, "");
+
+  return {
+    abk,
+    enbez,
+    absatz: (/\bAbs(?:atz|\.)?\s*(\d+[a-z]?)/i.exec(rest) || [])[1] || null,
+    rein: uebrig === "",
+  };
+}
+
+/**
+ * Normen, auf die eine Adresse zeigt.
+ *
+ * Ohne genanntes Gesetz zeigt „§ 5" auf vierzehn Normen — das eigene Gesetz
+ * zuerst, denn wer im EStG liest und „§ 5" tippt, meint in aller Regel das
+ * EStG. Der Gesetzesfilter der Trefferliste wird hier NICHT angewandt: Er
+ * gehört zur Liste, nicht zur Adresse.
+ */
+function adressTreffer(adresse){
+  if (!adresse || !S.register) return [];
+  let gesetze = adresse.abk
+    ? [registerEintrag(adresse.abk)].filter(Boolean)
+    : [...S.register.gesetze];
+  if (!adresse.abk && S.abk){
+    gesetze.sort((a, b) => (b.abk === S.abk ? 1 : 0) - (a.abk === S.abk ? 1 : 0));
+  }
+
+  const raus = [];
+  for (const meta of gesetze){
+    const eintrag = (meta.normen || []).find(n => ADRESSGLEICH(n.e) === ADRESSGLEICH(adresse.enbez));
+    if (!eintrag) continue;
+    const geladen = cacheGesetz.get(meta.abk.toLowerCase());
+    const norm = geladen ? geladen.normen.find(n => String(n.id) === String(eintrag.id)) : null;
+    raus.push({
+      abk: meta.abk, id: eintrag.id, enbez: eintrag.e, titel: eintrag.t || "",
+      ausstehend: !norm, text: norm ? normVolltext(norm) : "", stelle: -1, adresse: true,
+    });
+  }
+  return raus;
+}
+
+/**
+ * Wohin eine Eingabe führt.
+ *
+ * Eine vollständige Fundstelle ist keine Frage, sondern eine Adresse: „§ 5
+ * EStG" gehört auf die Norm, nicht auf eine Trefferliste mit einem Eintrag.
+ * Alles andere — auch „§ 5" ohne Gesetz, das vierzehn Normen treffen kann —
+ * geht in die Liste.
+ */
+function sucheZiel(begriff){
+  const adresse = adresseLesen(begriff);
+  if (adresse && adresse.abk && adresse.rein){
+    const ziele = adressTreffer(adresse);
+    if (ziele.length === 1) return "#/" + ziele[0].abk.toLowerCase() + "/" + ziele[0].id;
+  }
+  return "#/suche/" + encodeURIComponent(begriff);
+}
+
 function sucheOeffnen(begriff){
-  location.hash = "#/suche/" + encodeURIComponent(begriff);
+  location.hash = sucheZiel(begriff);
 }
 
 function normVolltext(norm){
@@ -4719,6 +4861,16 @@ function normVolltext(norm){
 function trefferliste(begriff){
   const suche = begriff.toLowerCase();
   const treffer = [];
+  const gesehen = new Set();
+
+  /* Die Fundstelle zuerst. Sie steht auch dann in der Liste, wenn der Volltext
+     des Gesetzes noch nicht geladen ist — das Register kennt sie. */
+  for (const t of adressTreffer(adresseLesen(begriff))){
+    if (S.filterGesetze.size && !S.filterGesetze.has(t.abk)) continue;
+    treffer.push(t);
+    gesehen.add(t.abk + "/" + t.id);
+  }
+
   for (const meta of S.register.gesetze){
     if (S.filterGesetze.size && !S.filterGesetze.has(meta.abk)) continue;
     const geladen = cacheGesetz.get(meta.abk.toLowerCase());
@@ -4726,6 +4878,7 @@ function trefferliste(begriff){
       /* Nicht geladen: Der Registereintrag trägt Nummern und Titel, mehr nicht.
          Diese Treffer werden als ausstehend gezeigt. */
       for (const n of meta.normen || []){
+        if (gesehen.has(meta.abk + "/" + n.id)) continue;
         if (!((n.e + " " + (n.t || "")).toLowerCase().includes(suche))) continue;
         treffer.push({ abk: meta.abk, id: n.id, enbez: n.e, titel: n.t || "", ausstehend: true });
         if (treffer.length > 300) return treffer;
@@ -4733,6 +4886,7 @@ function trefferliste(begriff){
       continue;
     }
     for (const norm of geladen.normen){
+      if (gesehen.has(meta.abk + "/" + norm.id)) continue;
       const kopf = (norm.enbez + " " + (norm.titel || "")).toLowerCase();
       const text = normVolltext(norm);
       const imKopf = kopf.includes(suche);
@@ -4854,9 +5008,12 @@ function trefferZeichnen(begriff){
 
     const fund = document.createElement("span");
     fund.className = "treffer-fund";
-    fund.textContent = t.ausstehend
-      ? "Datensatz " + t.abk + " ausstehend"
-      : t.abk + " " + t.enbez;
+    fund.textContent = t.adresse
+      ? "Fundstelle · " + t.abk + " " + t.enbez
+        + (t.ausstehend ? " · Wortlaut noch nicht geladen" : "")
+      : t.ausstehend
+        ? "Datensatz " + t.abk + " ausstehend"
+        : t.abk + " " + t.enbez;
     b.appendChild(fund);
 
     b.onclick = () => { location.hash = "#/" + t.abk.toLowerCase() + "/" + t.id; };
