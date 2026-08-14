@@ -77,7 +77,20 @@
   /* ── Maße ── */
   --nav:216px;               /* linke Spalte */
   --apparat:340px;           /* rechter Apparat */
-  --lesespalte:36rem;        /* Lesespalte, in allen Stufen gleich */
+  /* Lesespalte. Das Übergabepaket nannte 36 rem (576 px) — rund 66 Zeichen je
+     Zeile und damit das typografische Optimum. Bei 1440 px stehen aber 820 px
+     zur Verfügung; 244 davon blieben leer, während der Normtext in eine
+     schmale Rinne gepresst wurde. Gesetzestexte lesen sich anders als Prosa:
+     Man springt, vergleicht Absätze und verfolgt Verweise, statt Zeile für
+     Zeile zu lesen — dafür sind weniger Umbrüche mehr wert als die reine
+     Leseoptimierung. 46 rem sind rund 84 Zeichen; das ist die Breite, die auch
+     dejure und lxgesetze fahren.
+
+     Eine Obergrenze bleibt es trotzdem: Auf einem 1920er Schirm wächst die
+     Spalte nicht weiter mit, sonst liefen die Zeilen ins Unlesbare. Wo weniger
+     Platz ist, schrumpft sie von selbst — `.lesespalte-huelle` ist ein
+     Flexkind mit `max-width`, keine feste Breite. */
+  --lesespalte:46rem;
   --rinne:34px;              /* Absatzmarken links vom Text */
   /* Schriftgröße des Normtextes. Eine Marke, keine feste Zahl: Der Regler in
      der Kopfleiste schreibt sie um, und alles, was am Normtext hängt

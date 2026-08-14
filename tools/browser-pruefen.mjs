@@ -106,11 +106,27 @@ const ueberlauf = (seite) => seite.evaluate(() =>
       const knoten = document.querySelector(wahl);
       return knoten ? Math.round(knoten.getBoundingClientRect().width) : null;
     };
-    return { nav: breite(".navspalte"), apparat: breite(".apparat"), lese: breite(".lesespalte") };
+    /* Die Sollbreite aus der Marke lesen, nicht als Zahl festschreiben: Sonst
+       misst die Prüfung eine Zahl von gestern, sobald jemand `--lesespalte`
+       ändert — und meldet einen Fehler, wo eine Entscheidung getroffen wurde. */
+    const marke = getComputedStyle(document.documentElement)
+      .getPropertyValue("--lesespalte").trim();
+    const soll = Math.round(parseFloat(marke)
+      * (marke.endsWith("rem") ? parseFloat(getComputedStyle(document.documentElement).fontSize) : 1));
+    return {
+      nav: breite(".navspalte"), apparat: breite(".apparat"),
+      lese: breite(".lesespalte"), soll,
+      zeichen: Math.round(breite(".lesespalte")
+        / (parseFloat(getComputedStyle(document.querySelector(".lesespalte")).fontSize) * 0.5)),
+    };
   });
   ok("Linke Spalte 216 px", mass.nav === 216, String(mass.nav));
   ok("Apparat 340 px", mass.apparat === 340, String(mass.apparat));
-  ok("Lesespalte 36 rem (576 px)", mass.lese === 576, String(mass.lese));
+  ok("Lesespalte schöpft die Marke aus", mass.lese === mass.soll,
+    `${mass.lese} von ${mass.soll} px`);
+  /* Eine Obergrenze bleibt nötig: Über etwa 90 Zeichen je Zeile findet das
+     Auge den Zeilenanfang nicht mehr zuverlässig. */
+  ok("Zeilenlänge bleibt lesbar", mass.zeichen <= 90, mass.zeichen + " Zeichen");
   ok("Kein waagerechter Überlauf (1440 px)", !(await ueberlauf(seite)));
   await ctx.close();
 }
