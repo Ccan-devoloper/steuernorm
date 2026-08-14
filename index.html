@@ -876,6 +876,46 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
   margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--linie-schwach);
 }
+
+/* ── Fassungsblatt ──
+   Steht dort, wo es nichts zu vergleichen gibt — also vorerst fast überall. Es
+   zeigt Standangabe, Anwendungsvorschrift und aufgezeichnete Zeitstände, und
+   es sagt in derselben Schrift, was der Bestand NICHT hergibt. Lücken werden
+   gekennzeichnet, nicht übersprungen. */
+.fassungsblatt{max-width:var(--lesespalte);margin-top:18px}
+.fassung-abschnitt{margin-bottom:26px}
+.fassung-abschnitt h2{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-4);font-weight:400;margin:0 0 6px;
+}
+.fassung-reichweite{font-size:11.5px;color:var(--text-5);margin:0 0 10px}
+.fassung-liste{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline}
+.fassung-liste dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--text-4);
+  white-space:nowrap;
+}
+.fassung-liste dd{margin:0;font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--text)}
+.fassung-fussnote{
+  font-family:var(--serif);font-size:15px;line-height:1.6;color:var(--text);margin:0;
+  padding:12px 14px;background:var(--flaeche);border-radius:var(--r-karte);
+  border:1px solid var(--linie-zart);
+}
+.fassung-staende{
+  margin:0 0 10px;padding-left:18px;
+  font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--text);
+}
+.fassung-luecke,.fassung-fehlt{font-size:12.5px;line-height:1.6;color:var(--text-3);margin:0}
+.fassung-fehlt{
+  padding:12px 14px;border-left:2px solid var(--linie);background:var(--flaeche);
+  border-radius:0 var(--r-karte) var(--r-karte) 0;
+}
+.fassung-quelle{font-family:var(--mono);font-size:10.5px;color:var(--text-5);margin:10px 0 0}
+.fassung-amtlich{
+  display:inline-block;margin-top:10px;font-size:12.5px;
+  color:var(--text-2b);border-bottom:1px solid var(--linie);text-decoration:none;
+}
+.fassung-amtlich:hover{color:var(--text);border-bottom-color:var(--text)}
+.fassungsblatt .vergleich-zurueck{margin-left:0;margin-top:8px}
 .vergleich-wahl{
   font-family:var(--mono);font-size:12px;color:var(--text-2b);
   background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r-knopf);
@@ -1552,8 +1592,8 @@ body[data-ansicht=start] .suchfeld{display:none}
              Schritt 12 ihn anbindet, und sagt im Titel, warum. Ein Knopf, der
              ins Leere klickt, ist schlechter als einer, der sichtbar noch
              nicht kann. -->
-        <button type="button" id="knopf-vergleichen" disabled
-                title="Fassungsvergleich — folgt in Schritt 12 (fassungen/&lt;gesetz&gt;.json).">Vergleichen</button>
+        <button type="button" id="knopf-vergleichen"
+                title="Fassung und Zeitstände dieser Norm">Fassung</button>
         <button type="button" id="knopf-mappe" aria-haspopup="dialog" aria-expanded="false"
                 title="Sammelmappe für Normen und markierte Stellen">Mappe</button>
       </div>
@@ -3241,6 +3281,157 @@ function vergleichZelle(stuecke, seite){
   return zelle;
 }
 
+/**
+ * Das Fassungsblatt einer Norm.
+ *
+ * WAS ES ZEIGT UND WAS NICHT. dejure führt zu jeder Norm eine
+ * Änderungsübersicht: Inkrafttreten, Änderungsgesetz, Ausfertigung,
+ * Fundstelle. Diese Tabelle ist redaktionelle Arbeit am Bundesgesetzblatt und
+ * steht in unserer Quelle NICHT — „Gesetze im Internet" veröffentlicht den
+ * geltenden Wortlaut, dazu eine Standangabe für das ganze Gesetz und
+ * Anwendungsfußnoten für einzelne Normen. Was der Bestand nicht hat, wird hier
+ * auch nicht behauptet: Es steht da, was er hat, daneben die Lücke als Lücke
+ * und der Weg zur amtlichen Quelle.
+ *
+ * Drei Abschnitte, jeder mit seiner Reichweite ausgewiesen:
+ *   1. Stand — gilt für das GESETZ, nicht für diese Norm allein.
+ *   2. Anwendungsvorschrift — gilt für DIESE Norm, aus der amtlichen Fußnote.
+ *   3. Aufgezeichnete Zeitstände — was dieser Bestand selbst mitgeschrieben
+ *      hat, seit er läuft.
+ */
+function fassungsblatt(haupt, gesetz, norm, alle){
+  const blatt = document.createElement("div");
+  blatt.className = "fassungsblatt";
+
+  const abschnitt = (ueberschrift, reichweite) => {
+    const s = document.createElement("section");
+    s.className = "fassung-abschnitt";
+    const h = document.createElement("h2");
+    h.textContent = ueberschrift;
+    s.appendChild(h);
+    if (reichweite){
+      const r = document.createElement("p");
+      r.className = "fassung-reichweite";
+      r.textContent = reichweite;
+      s.appendChild(r);
+    }
+    blatt.appendChild(s);
+    return s;
+  };
+
+  /* ── 1. Stand des Gesetzes ── */
+  const staende = Array.isArray(gesetz.stand) ? gesetz.stand.filter(s => s && s.text) : [];
+  const s1 = abschnitt("Stand des Gesetzes",
+    "Gilt für das " + gesetz.abk + " insgesamt, nicht für " + norm.enbez + " allein.");
+  if (staende.length){
+    const liste = document.createElement("dl");
+    liste.className = "fassung-liste";
+    for (const eintrag of staende){
+      const dt = document.createElement("dt");
+      dt.textContent = STANDTYP[eintrag.typ] || eintrag.typ || "Angabe";
+      const dd = document.createElement("dd");
+      dd.textContent = eintrag.text.replace(/;\s*$/, "");
+      liste.append(dt, dd);
+    }
+    s1.appendChild(liste);
+  } else {
+    s1.appendChild(fassungLuecke("Der Bestand führt für dieses Gesetz keine Standangabe."));
+  }
+  if (gesetz.builddate || gesetz.geladen){
+    const p = document.createElement("p");
+    p.className = "fassung-quelle";
+    p.textContent = [gesetz.builddate ? "Datenstand der Quelle: " + gesetz.builddate : null,
+      gesetz.geladen ? "abgerufen am " + gesetz.geladen : null].filter(Boolean).join(" · ");
+    s1.appendChild(p);
+  }
+
+  /* ── 2. Anwendungsvorschrift dieser Norm ── */
+  const s2 = abschnitt("Anwendungsvorschrift", "Amtliche Fußnote zu " + norm.enbez + ".");
+  if (norm.fussnote){
+    const p = document.createElement("p");
+    p.className = "fassung-fussnote";
+    /* Die Klammern des Quellformats tragen nichts bei; der Verweis darin schon,
+       und der wird zum Sprungziel. */
+    p.textContent = norm.fussnote.replace(/\(\+\+\+|\+\+\+\)/g, "").trim();
+    s2.appendChild(p);
+    try { verweiseSetzen(p, gesetz.abk); } catch (e) { /* ohne Verlinkung lesbar */ }
+  } else {
+    s2.appendChild(fassungLuecke("Zu dieser Norm führt der Bestand keine Anwendungsfußnote."));
+  }
+
+  /* ── 3. Aufgezeichnete Zeitstände ── */
+  const s3 = abschnitt("Aufgezeichnete Zeitstände",
+    "Was dieser Bestand seit seinem Beginn selbst mitgeschrieben hat.");
+  if (alle.length){
+    const liste = document.createElement("ul");
+    liste.className = "fassung-staende";
+    for (const f of alle){
+      const li = document.createElement("li");
+      li.textContent = f.abgerufen + (f.aktuell ? " · geltender Wortlaut" : "");
+      liste.appendChild(li);
+    }
+    s3.appendChild(liste);
+  }
+  s3.appendChild(fassungLuecke(alle.length === 1
+    ? "Ein zweiter Zeitstand entsteht, sobald sich der Wortlaut zwischen zwei "
+      + "Abrufen ändert. Erst dann gibt es hier einen Wortvergleich."
+    : "Für diese Norm ist noch kein Zeitstand aufgezeichnet. Der Bestand "
+      + "schreibt seit wenigen Tagen mit; frühere Fassungen sind ihm nicht bekannt."));
+
+  /* ── Was fehlt, und wo es steht ── */
+  const s4 = abschnitt("Vollständige Änderungsübersicht");
+  const p = document.createElement("p");
+  p.className = "fassung-fehlt";
+  p.textContent = "Eine Übersicht aller Änderungsgesetze mit Inkrafttreten und "
+    + "Fundstelle im Bundesgesetzblatt ist nicht Teil der amtlichen Daten, aus "
+    + "denen dieser Bestand gebildet wird. Sie wird hier nicht nachgebildet — "
+    + "eine halbe Änderungsgeschichte wäre schlimmer als keine.";
+  s4.appendChild(p);
+  const ziel = giiAdresse(gesetz, norm);
+  if (ziel){
+    const a = document.createElement("a");
+    a.className = "fassung-amtlich";
+    a.href = ziel;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = norm.enbez + " " + gesetz.abk + " bei Gesetze im Internet ↗";
+    s4.appendChild(a);
+  }
+
+  const zurueck = knopf("vergleich-zurueck", "Zum Normtext");
+  zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
+  blatt.appendChild(zurueck);
+  haupt.appendChild(blatt);
+}
+
+/** Ein Hinweis auf eine Lücke — sichtbar als Lücke, nicht als Aussage. */
+function fassungLuecke(text){
+  const p = document.createElement("p");
+  p.className = "fassung-luecke";
+  p.textContent = text;
+  return p;
+}
+
+const STANDTYP = {
+  Neuf: "Neufassung",
+  Stand: "Letzte Änderung",
+  Hinweis: "Hinweis",
+  Sonst: "Weitere Angabe",
+};
+
+/**
+ * Adresse der Norm bei „Gesetze im Internet".
+ *
+ * Das Portal adressiert Paragrafen als `__<nummer>.html`. Für alles andere —
+ * Anlagen, zusammengefasste Normen — gilt das nicht, und ein geratener Link
+ * ins Leere ist schlechter als keiner: Dort führt der Weg auf das Gesetz.
+ */
+function giiAdresse(gesetz, norm){
+  if (!gesetz.quelle) return null;
+  const basis = String(gesetz.quelle).replace(/\/*$/, "/");
+  return /^\d+[a-z]?$/i.test(String(norm.id)) ? basis + "__" + norm.id + ".html" : basis;
+}
+
 function vergleichZeichnen(){
   const haupt = el("haupt");
   haupt.innerHTML = "";
@@ -3275,23 +3466,11 @@ function vergleichZeichnen(){
   }
   haupt.appendChild(h1);
 
-  /* Weniger als zwei Fassungen: Es gibt nichts zu vergleichen, und das wird
-     gesagt — samt der Datei, in der der zweite Stand stünde. */
+  /* Weniger als zwei aufgezeichnete Zeitstände: Es gibt nichts zu VERGLEICHEN,
+     aber sehr wohl etwas zu sagen. Das Fassungsblatt zeigt, was der Bestand
+     über die Fassung dieser Norm hergibt. */
   if (alle.length < 2){
-    const kasten = document.createElement("div");
-    kasten.className = "melder";
-    const stark = document.createElement("strong");
-    stark.textContent = "Von dieser Norm liegt nur ein Zeitstand vor.";
-    const p = document.createElement("p");
-    p.textContent = "Ein zweiter stünde in fassungen/"
-      + gesetz.abk.toLowerCase() + ".json. Der Bestand kennt bisher nur den "
-      + "geltenden Wortlaut; frühere Fassungen entstehen erst, wenn sich der "
-      + "Text zwischen zwei Abrufen ändert.";
-    kasten.append(stark, p);
-    const zurueck = knopf("", "Zum Normtext");
-    zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
-    kasten.appendChild(zurueck);
-    haupt.appendChild(kasten);
+    fassungsblatt(haupt, gesetz, norm, alle);
     reiterZeichnen();
     return;
   }
@@ -3439,19 +3618,31 @@ function vergleichZeichnen(){
  * Kein Knopf ohne Funktion: Wo es nur einen Zeitstand gibt, bleibt er gesperrt
  * und sagt im Titel, woran es liegt — statt eine leere Ansicht zu öffnen.
  */
+/**
+ * Der Knopf zur Fassung.
+ *
+ * Er hing am WORTVERGLEICH und damit an zwei aufgezeichneten Zeitständen — die
+ * es bei 1 536 von 1 537 Normen nicht gibt, weil dieser Bestand erst seit
+ * wenigen Tagen mitschreibt. Ein Knopf, der bei 99,9 % der Normen grau ist,
+ * ist kein Knopf.
+ *
+ * Er führt jetzt auf das Fassungsblatt: Standangabe des Gesetzes,
+ * Anwendungsvorschrift der Norm, aufgezeichnete Zeitstände — und den
+ * Wortvergleich dort, wo zwei vorliegen. Damit hat er auf jeder Norm etwas zu
+ * zeigen, ohne dass etwas erfunden würde.
+ */
 function vergleichKnopfSetzen(){
   const k = el("knopf-vergleichen");
   if (!k) return;
   const norm = document.body.dataset.ansicht === "norm"
     || document.body.dataset.ansicht === "vergleich";
   const zahl = norm ? fassungenDerNorm().length : 0;
-  k.disabled = zahl < 2;
+  k.disabled = !norm;
   k.title = !norm
-    ? "Fassungsvergleich — erst mit geöffneter Norm."
-    : zahl < 2
-      ? "Von dieser Norm liegt nur ein Zeitstand vor (fassungen/"
-        + String(S.abk).toLowerCase() + ".json)."
-      : zahl + " Zeitstände dieser Norm vergleichen";
+    ? "Fassung — erst mit geöffneter Norm."
+    : zahl >= 2
+      ? zahl + " aufgezeichnete Zeitstände dieser Norm vergleichen"
+      : "Fassung dieser Norm: Stand, Anwendungsvorschrift, Zeitstände";
   k.onclick = () => {
     location.hash = "#/" + String(S.abk).toLowerCase() + "/" + S.normId + "/fassungen";
   };

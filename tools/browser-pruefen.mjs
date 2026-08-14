@@ -851,14 +851,35 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   const seite = await ctx.newPage();
 
-  /* Zuerst der Regelfall: nur ein Zeitstand, Knopf gesperrt mit Begründung. */
+  /* Der Regelfall: nur ein Zeitstand. Der Knopf ist trotzdem bedienbar und
+     führt auf das Fassungsblatt — er war zuvor bei 1 536 von 1 537 Normen grau. */
   await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
   await seite.waitForTimeout(1400);
-  ok("Ohne zweiten Zeitstand ist „Vergleichen“ gesperrt",
-    await seite.isDisabled("#knopf-vergleichen"));
-  const titel = await seite.getAttribute("#knopf-vergleichen", "title");
-  ok("Der gesperrte Knopf sagt, woran es liegt",
-    (titel || "").includes("fassungen/solzg.json"), titel);
+  ok("Auch ohne zweiten Zeitstand ist der Fassungsknopf bedienbar",
+    !(await seite.isDisabled("#knopf-vergleichen")));
+  await seite.click("#knopf-vergleichen");
+  await seite.waitForTimeout(1200);
+  const blatt = await seite.evaluate(() => {
+    const b = document.querySelector(".fassungsblatt");
+    if (!b) return null;
+    return {
+      abschnitte: [...b.querySelectorAll(".fassung-abschnitt h2")].map((h) => h.textContent),
+      stand: [...b.querySelectorAll(".fassung-liste dd")].map((d) => d.textContent),
+      amtlich: (b.querySelector(".fassung-amtlich") || {}).href || "",
+      hash: location.hash,
+    };
+  });
+  ok("Der Knopf führt auf das Fassungsblatt",
+    blatt && blatt.hash === "#/solzg/3/fassungen", blatt && blatt.hash);
+  ok("Das Blatt nennt den Stand aus den Daten",
+    blatt && blatt.stand.some((t) => /zuletzt geändert durch/.test(t)), blatt && blatt.stand.join(" · "));
+  ok("Und weist die fehlende Änderungsübersicht aus",
+    blatt && blatt.abschnitte.includes("Vollständige Änderungsübersicht"),
+    blatt && blatt.abschnitte.join(" | "));
+  ok("Der Weg zur amtlichen Quelle steht daneben",
+    blatt && blatt.amtlich === "https://www.gesetze-im-internet.de/solzg_1995/__3.html",
+    blatt && blatt.amtlich);
+  ok("Kein waagerechter Überlauf im Fassungsblatt", !(await ueberlauf(seite)));
 
   /* Und der Fall mit zwei Ständen. */
   await seite.goto(WURZEL + "/#/gewstg/16", { waitUntil: "networkidle" });
@@ -972,6 +993,29 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   }));
   ok("Wählleiste wird nicht gedruckt", druck.leiste === "none", druck.leiste);
   ok("Spaltenkopf klebt im Druck nicht", druck.kopf === "static", druck.kopf);
+  await ctx.close();
+}
+
+/* Der Knopf muss über den ganzen Bestand tragen, nicht nur auf einer Norm. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const seite = await ctx.newPage();
+  let gesperrt = 0;
+  let ohneBlatt = 0;
+  const proben = ["#/estg/1", "#/ustg/3", "#/ao/370", "#/kstg/8b", "#/fgo/1", "#/estg/anlage-3"];
+  for (const ziel of proben) {
+    await seite.goto(WURZEL + "/" + ziel, { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1300);
+    if (await seite.isDisabled("#knopf-vergleichen")) { gesperrt++; continue; }
+    await seite.goto(WURZEL + "/" + ziel + "/fassungen", { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1300);
+    const da = await seite.evaluate(() =>
+      Boolean(document.querySelector(".fassungsblatt") || document.querySelector(".vergleich-raster")));
+    if (!da) { ohneBlatt++; console.log(`     ✗ ${ziel} — kein Fassungsblatt`); }
+  }
+  ok("Der Fassungsknopf ist auf jeder Probe bedienbar", gesperrt === 0,
+    `${proben.length - gesperrt}/${proben.length}`);
+  ok("Jede Probe zeigt ein Fassungsblatt", ohneBlatt === 0);
   await ctx.close();
 }
 

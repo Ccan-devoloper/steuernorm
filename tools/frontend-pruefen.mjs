@@ -286,6 +286,58 @@ ok("Die Lesespalte lässt sich nicht zuziehen",
 js('spalteSetzen("nav", 0)');
 ok("Und nicht unter ihr eigenes Mindestmaß", js("S.spalten.nav") === 180, js("S.spalten.nav"));
 
+/* ── Fassungsblatt ──
+   Der Knopf hing am Wortvergleich und war damit bei 1 536 von 1 537 Normen
+   grau. Er führt jetzt auf ein Blatt, das auf JEDER Norm etwas zu sagen hat —
+   und zwar nur das, was in den Daten steht. */
+const knopfFassung = d.getElementById("knopf-vergleichen");
+ok("Der Fassungsknopf ist auf einer Norm bedienbar",
+  knopfFassung && !knopfFassung.disabled,
+  knopfFassung ? "disabled=" + knopfFassung.disabled : "kein Knopf");
+ok("Er sagt, wohin er führt",
+  /Fassung dieser Norm|Zeitstände/.test(knopfFassung.title), knopfFassung.title);
+ok("SolzG § 3 hat weniger als zwei Zeitstände",
+  js("fassungenDerNorm().length") < 2, js("fassungenDerNorm().length") + " Zeitstände");
+
+js('vergleichZeichnen()');
+const blatt = d.querySelector(".fassungsblatt");
+ok("Trotzdem erscheint ein Fassungsblatt", Boolean(blatt));
+const ueberschriften = [...d.querySelectorAll(".fassung-abschnitt h2")].map((h) => h.textContent);
+ok("Es nennt Stand, Anwendung, Zeitstände und die Lücke",
+  ueberschriften.join(" | ") === "Stand des Gesetzes | Anwendungsvorschrift"
+    + " | Aufgezeichnete Zeitstände | Vollständige Änderungsübersicht",
+  ueberschriften.join(" | "));
+
+/* Der Stand kommt aus data/, nicht aus dem Entwurf. */
+const standWerte = [...d.querySelectorAll(".fassung-liste dd")].map((x) => x.textContent);
+ok("Der Stand steht wörtlich so in den Daten",
+  standWerte.length > 0 && standWerte.every((t) => js("JSON.stringify(S.gesetz.stand)").includes(t)),
+  standWerte.join(" · "));
+ok("Die Reichweite des Standes wird gesagt",
+  (d.querySelector(".fassung-reichweite") || {}).textContent.includes("insgesamt"),
+  (d.querySelector(".fassung-reichweite") || {}).textContent);
+
+/* Was fehlt, wird als Lücke gezeigt — nicht überspielt. */
+ok("Die fehlende Änderungsübersicht wird benannt",
+  (d.querySelector(".fassung-fehlt") || {}).textContent.includes("nicht Teil der amtlichen Daten"));
+ok("Der Weg zur amtlichen Quelle steht daneben",
+  (d.querySelector(".fassung-amtlich") || {}).getAttribute("href")
+  === "https://www.gesetze-im-internet.de/solzg_1995/__3.html",
+  (d.querySelector(".fassung-amtlich") || {}).getAttribute("href"));
+/* Der eigentliche Prüfstein: JEDE Datumsangabe auf dem Blatt muss in den Daten
+   stehen. Eine nachgebildete Änderungsgeschichte fiele genau hier auf. */
+const datenRoh = js("JSON.stringify(S.gesetz) + JSON.stringify(S.fassungen)");
+const datumsangaben = (blatt.textContent.match(/\d{1,2}\.\d{1,2}\.\d{4}|\d{4}-\d{2}-\d{2}/g) || []);
+ok("Jede Datumsangabe steht so in den Daten",
+  datumsangaben.length > 0 && datumsangaben.every((t) => datenRoh.includes(t)),
+  datumsangaben.join(" · ") || "keine");
+
+/* Eine Anlage bekommt keinen geratenen Paragrafenlink. */
+ok("Für eine Anlage führt der Weg auf das Gesetz",
+  js(`giiAdresse({ quelle: "https://www.gesetze-im-internet.de/estg/", abk: "EStG" }, { id: "anlage-3" })`)
+  === "https://www.gesetze-im-internet.de/estg/",
+  js(`giiAdresse({ quelle: "https://www.gesetze-im-internet.de/estg/" }, { id: "anlage-3" })`));
+
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
   (d.getElementById("stufen") || {}).getAttribute
