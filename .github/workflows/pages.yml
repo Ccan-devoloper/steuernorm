@@ -31,14 +31,22 @@ permissions:
 
 concurrency:
   group: steuernorm-pages
-  # NICHT abbrechen. Der Lauf wird von drei Ereignissen ausgelöst, und zwei
-  # davon treffen bei jedem Push zusammen: der Push selbst und der Abschluss
-  # von „Annotationen erzeugen“, das derselbe Push angestoßen hat. Mit
-  # `cancel-in-progress: true` räumte der zweite den ersten regelmäßig ab —
-  # dreimal in Folge stand „cancelled“ im Verlauf, und ob überhaupt
-  # veröffentlicht wurde, hing daran, dass der Nachzügler durchlief.
-  # Eine abgebrochene Veröffentlichung ist schlimmer als eine wartende.
-  cancel-in-progress: false
+  # Der jüngste Lauf gewinnt.
+  #
+  # Hier stand `false`, mit der Begründung, eine abgebrochene Veröffentlichung
+  # sei schlimmer als eine wartende. Die Begründung war falsch, und sie hat
+  # drei Tage lang jede Veröffentlichung verhindert: In einer Gruppe hält
+  # GitHub genau EINEN wartenden Lauf. Kommt ein dritter, wird der wartende
+  # abgeräumt. Da jeder Push zwei Läufe auslöst — den Push selbst und den
+  # Abschluss von „Annotationen erzeugen“ —, war ab dem 11. August ein Lauf
+  # vom 11. August dauerhaft in der Warteschlange, und alle 18 Läufe danach
+  # sind hinter ihm abgeräumt worden, ohne dass etwas online ging.
+  #
+  # Abbrechen ist hier gefahrlos, denn jeder Lauf checkt `ref: main` aus, nicht
+  # seinen eigenen Commit: Der überlebende Lauf veröffentlicht immer den
+  # neuesten Stand, einschließlich dessen, was der abgebrochene mitgebracht
+  # hätte. Und der jüngste Lauf ist derjenige, der nie abgebrochen wird.
+  cancel-in-progress: true
 
 jobs:
   deploy:
