@@ -4,6 +4,8 @@
  *
  *   node tools/annotieren.mjs                      alle Gesetze
  *   node tools/annotieren.mjs --nur solzg,estg
+ *   node tools/annotieren.mjs --gold               nur die Normen des Goldstandards
+ *   node tools/annotieren.mjs --normen ustg:10,ao:12
  *   node tools/annotieren.mjs --ohne-ki            nur Syntaxanalyse, kein Netz
  *   node tools/annotieren.mjs --laeufe 3           Anzahl unabhängiger Modellläufe
  *   node tools/annotieren.mjs --ohne-gegenprobe    spart Aufrufe
@@ -96,7 +98,50 @@ let belegLiegtVor = false;
 
 const nurRoh = flagWert("--nur");
 const kurz = (s) => String(s || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
-const nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null;
+let nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null;
+
+/* ── Filter auf einzelne NORMEN ───────────────────────────────────────
+   `--nur` schränkt auf Gesetze ein, und das reicht nicht: Die 45 Normen des
+   Goldstandards verteilen sich über alle vierzehn Gesetze. Ein Lauf mit dem
+   Tagesbudget von 180 Aufrufen hätte sie nie erreicht — er wäre der Reihe nach
+   durch die AO gelaufen und hätte 45 Normen annotiert, von denen keine
+   einzige gemessen werden kann.
+
+   `--gold` liest die Auswahl aus `eval/gold/`. Damit kostet ein Messlauf genau
+   so viel Kontingent, wie er messbar macht: 45 Normen × 4 Aufrufe = 180. */
+const normenRoh = flagWert("--normen");
+let normFilter = null;
+
+if (hat("--gold")) {
+  const { readdir } = await import("node:fs/promises");
+  normFilter = new Map();
+  for (const datei of (await readdir(path.join(WURZEL, "eval", "gold"))).filter((d) => d.endsWith(".json"))) {
+    const gold = JSON.parse(await readFile(path.join(WURZEL, "eval", "gold", datei), "utf8"));
+    const schluessel = kurz(gold.abk || datei);
+    const ids = new Set(Object.keys(gold.normen || {}).map(String));
+    normFilter.set(schluessel, new Set([...(normFilter.get(schluessel) || []), ...ids]));
+  }
+} else if (normenRoh) {
+  /* Schreibweise: gesetz:id, kommagetrennt — „ustg:10,ao:12" */
+  normFilter = new Map();
+  for (const stueck of normenRoh.split(",").map((s) => s.trim()).filter(Boolean)) {
+    const [g, id] = stueck.split(":");
+    if (!g || !id) { console.error(`--normen: „${stueck}" ist kein gesetz:id`); process.exit(2); }
+    const schluessel = kurz(g);
+    if (!normFilter.has(schluessel)) normFilter.set(schluessel, new Set());
+    normFilter.get(schluessel).add(String(id));
+  }
+}
+
+if (normFilter) {
+  /* Der Normfilter zieht den Gesetzesfilter nach: Ein Gesetz ohne ausgewählte
+     Norm wird gar nicht erst geöffnet. */
+  const betroffen = new Set(normFilter.keys());
+  nur = nur ? new Set([...nur].filter((k) => betroffen.has(k))) : betroffen;
+  const zahl = [...normFilter.values()].reduce((a, s) => a + s.size, 0);
+  console.error(`  Normfilter: ${zahl} Normen in ${normFilter.size} Gesetzen`
+    + ` (rechnerisch ${zahl * (LAEUFE + 1)} Aufrufe bei ${LAEUFE} Läufen und Gegenprobe)`);
+}
 
 const hash = (s) => createHash("sha256").update(s).digest("hex");
 
@@ -194,6 +239,18 @@ for (const meta of gesetze) {
   console.log(`\n${gesetz.abk} — ${gesetz.normen.length} Normen`);
 
   for (const norm of gesetz.normen) {
+    /* Nicht ausgewählt: Die vorhandene Annotation bleibt unangetastet stehen —
+       ein Filterlauf darf den Bestand nicht ausdünnen. */
+    if (normFilter && !(normFilter.get(kurz(meta.abk)) || new Set()).has(String(norm.id))) {
+      const bestand = alt?.normen?.[norm.id];
+      if (bestand) {
+        normen[norm.id] = bestand;
+        uebernommen++;
+        if (bestand.markierbar) markierbar++;
+      }
+      continue;
+    }
+
     const einheiten = zerlegeNorm(norm);
     const volltext = einheiten.map((e) => e.text).join(" ");
     const th = hash(volltext);
@@ -305,7 +362,19 @@ for (const meta of gesetze) {
     markierbar, abgelehnt: alleAbgelehnt.length, vollstaendig: !abbruch,
   });
   if (!trocken) {
-    await schreibe(path.join(BERICHTE, `abgelehnt-${kurz(meta.abk)}.json`), alleAbgelehnt.slice(0, 500));
+    /* Der Bericht sammelt nur über die BEARBEITETEN Normen. Ein Filterlauf
+       hätte ihn deshalb geleert — 11 545 Zeilen Verworfenes wären beim ersten
+       Messlauf verschwunden, obwohl die zugehörigen Annotationen unverändert
+       stehen. Was nicht angefasst wurde, bleibt darum stehen. */
+    const datei = path.join(BERICHTE, `abgelehnt-${kurz(meta.abk)}.json`);
+    let eintraege = alleAbgelehnt;
+    if (normFilter) {
+      const angefasst = new Set(alleAbgelehnt.map((a) => a.norm));
+      const frueher = (await lies(datei)) || [];
+      eintraege = [...(Array.isArray(frueher) ? frueher : []).filter((a) => !angefasst.has(a.norm)),
+        ...alleAbgelehnt];
+    }
+    await schreibe(datei, eintraege.slice(0, 500));
   }
   if (abbruch) break;
 }

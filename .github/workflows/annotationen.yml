@@ -39,6 +39,11 @@ on:
         description: "Nur diese Gesetze (kommagetrennt, leer = alle)"
         required: false
         default: ""
+      gold:
+        description: "Nur die 45 Normen des Goldstandards — genau ein Tagesbudget, und alles davon messbar"
+        type: boolean
+        required: false
+        default: false
       laeufe:
         description: "Unabhängige Modellläufe je Norm"
         required: false
@@ -109,6 +114,19 @@ jobs:
           node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
           node tools/pruefen.mjs --nur solzg --streng
           node tools/konsistenz.mjs --nur solzg
+
+          # Der Normfilter trägt den Messlauf: Er muss genau die Normen des
+          # Goldstandards auswählen und den Bestand dabei unangetastet lassen.
+          node tools/annotieren.mjs --gold --ohne-ki --trocken 2>&1 | tee filter.txt
+          grep -q "Normfilter: 45 Normen in 14 Gesetzen" filter.txt
+          node - <<'NODE'
+          const vorher = require('./annotations/estg.json');
+          const zahl = Object.keys(vorher.normen || {}).length;
+          if (zahl < 200) throw new Error('EStG-Annotationen unerwartet dünn: ' + zahl);
+          NODE
+          node tools/annotieren.mjs --normen 'ustg:10' --ohne-ki --trocken 2>&1 | tee filter2.txt
+          grep -q "Normfilter: 1 Normen in 1 Gesetzen" filter2.txt
+          rm -f filter.txt filter2.txt
 
   push-check:
     if: github.event_name == 'push'
@@ -235,10 +253,15 @@ jobs:
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_LAEUFE: ${{ inputs.laeufe }}
           INPUT_OHNE_KI: ${{ inputs.ohne_ki }}
+          INPUT_GOLD: ${{ inputs.gold }}
         run: |
           set -euo pipefail
           args=(--laeufe "${INPUT_LAEUFE:-3}")
           [ -n "${INPUT_NUR:-}" ] && args+=(--nur "$INPUT_NUR")
+          # Der Messlauf: 45 Normen × 4 Aufrufe = 180, genau das Tagesbudget.
+          # Ohne diesen Filter liefe das Budget der Reihe nach durch die AO und
+          # erreichte keine einzige Norm, die der Goldstandard kennt.
+          [ "${INPUT_GOLD:-false}" = "true" ] && args+=(--gold)
           if [ "${INPUT_OHNE_KI:-false}" = "true" ]; then
             args+=(--ohne-ki)
           else
