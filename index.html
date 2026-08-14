@@ -910,6 +910,23 @@ body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
   border-radius:0 var(--r-karte) var(--r-karte) 0;
 }
 .fassung-quelle{font-family:var(--mono);font-size:10.5px;color:var(--text-5);margin:10px 0 0}
+/* Die Übersicht kann breiter sein als die Lesespalte — sie schiebt dann in
+   ihrem eigenen Kasten, nicht die ganze Seite. */
+.aenderung-huelle{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.aenderungen{border-collapse:collapse;width:100%;font-size:13px}
+.aenderungen th{
+  text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-4);font-weight:400;
+  padding:0 14px 7px 0;border-bottom:1px solid var(--linie);white-space:nowrap;
+}
+.aenderungen td{
+  padding:8px 14px 8px 0;border-bottom:1px solid var(--linie-zart);
+  color:var(--text-2);vertical-align:baseline;line-height:1.45;
+}
+.aenderungen tr:last-child td{border-bottom:0}
+.aenderungen .a-datum{font-family:var(--mono);font-size:12px;color:var(--text);white-space:nowrap}
+.aenderungen a{color:var(--text-2b);border-bottom:1px solid var(--linie);text-decoration:none;white-space:nowrap}
+.aenderungen a:hover{color:var(--text);border-bottom-color:var(--text)}
 .fassung-amtlich{
   display:inline-block;margin-top:10px;font-size:12.5px;
   color:var(--text-2b);border-bottom:1px solid var(--linie);text-decoration:none;
@@ -1667,6 +1684,7 @@ const S = {
   verwaltung: {},          // abk → verwaltung/<gesetz>.json
   aktiveVerwaltung: null,  // id | null — flüchtig
   fassungen: {},           // abk → fassungen/<gesetz>.json
+  aenderungen: {},         // abk → aenderungen/<gesetz>.json (Änderungsübersicht)
   vergleich: null,         // { links, rechts } — gewählte Fassungen
   markierungen: [],        // eigene Markierungen, localStorage
   aktiveMarkierung: null,  // id | null — flüchtig
@@ -1745,6 +1763,12 @@ async function zutatenLaden(abk){
   if (!(abk in S.fassungen)){
     try { S.fassungen[abk] = await holen("fassungen/" + schluessel + ".json"); }
     catch (e) { S.fassungen[abk] = null; }
+  }
+  /* Die Änderungsübersicht ist eine Zutat wie jede andere: Fehlt die Datei,
+     sagt das Fassungsblatt, dass sie fehlt — es erfindet keine. */
+  if (!(abk in S.aenderungen)){
+    try { S.aenderungen[abk] = await holen("aenderungen/" + schluessel + ".json"); }
+    catch (e) { S.aenderungen[abk] = null; }
   }
 }
 
@@ -3378,15 +3402,37 @@ function fassungsblatt(haupt, gesetz, norm, alle){
     : "Für diese Norm ist noch kein Zeitstand aufgezeichnet. Der Bestand "
       + "schreibt seit wenigen Tagen mit; frühere Fassungen sind ihm nicht bekannt."));
 
-  /* ── Was fehlt, und wo es steht ── */
-  const s4 = abschnitt("Vollständige Änderungsübersicht");
-  const p = document.createElement("p");
-  p.className = "fassung-fehlt";
-  p.textContent = "Eine Übersicht aller Änderungsgesetze mit Inkrafttreten und "
-    + "Fundstelle im Bundesgesetzblatt ist nicht Teil der amtlichen Daten, aus "
-    + "denen dieser Bestand gebildet wird. Sie wird hier nicht nachgebildet — "
-    + "eine halbe Änderungsgeschichte wäre schlimmer als keine.";
-  s4.appendChild(p);
+  /* ── Änderungsübersicht ── */
+  const uebersicht = aenderungenDerNorm(gesetz.abk, norm.id);
+  const quelldatei = S.aenderungen[gesetz.abk];
+  const s4 = abschnitt("Änderungsübersicht",
+    uebersicht.length ? "Jede Änderung dieser Norm mit Inkrafttreten und Fundstelle." : null);
+  if (uebersicht.length){
+    s4.appendChild(aenderungstabelle(uebersicht));
+    if (quelldatei && quelldatei.quelle){
+      const q = document.createElement("p");
+      q.className = "fassung-quelle";
+      q.textContent = "Quelle: " + quelldatei.quelle
+        + (quelldatei.erzeugt ? " · abgerufen " + String(quelldatei.erzeugt).slice(0, 10) : "");
+      s4.appendChild(q);
+    }
+  } else {
+    const p = document.createElement("p");
+    p.className = "fassung-fehlt";
+    /* Zwei verschiedene Lücken, und sie bedeuten Verschiedenes: keine Datei
+       heißt „noch nicht abgerufen", eine Datei ohne Eintrag heißt „die Quelle
+       kennt zu dieser Norm nichts". Beides zu vermengen wäre eine Aussage, die
+       niemand belegen kann. */
+    p.textContent = quelldatei
+      ? "Zu dieser Norm führt die Änderungsübersicht keinen Eintrag. Das heißt "
+        + "nicht, dass sie nie geändert wurde — es heißt, dass die Quelle dazu "
+        + "nichts hergibt."
+      : "Eine Übersicht aller Änderungsgesetze mit Inkrafttreten und Fundstelle "
+        + "im Bundesgesetzblatt steht noch nicht bereit (aenderungen/"
+        + gesetz.abk.toLowerCase() + ".json). Sie wird nicht nachgebildet — eine "
+        + "halbe Änderungsgeschichte wäre schlimmer als keine.";
+    s4.appendChild(p);
+  }
   const ziel = giiAdresse(gesetz, norm);
   if (ziel){
     const a = document.createElement("a");
@@ -3402,6 +3448,83 @@ function fassungsblatt(haupt, gesetz, norm, alle){
   zurueck.onclick = () => { location.hash = "#/" + gesetz.abk.toLowerCase() + "/" + norm.id; };
   blatt.appendChild(zurueck);
   haupt.appendChild(blatt);
+}
+
+/**
+ * Änderungen einer Norm, jüngste zuerst.
+ *
+ * Das Format von `aenderungen/<gesetz>.json` ist absichtlich schlicht und
+ * quellenunabhängig — es soll tragen, woher die Daten am Ende auch kommen:
+ *
+ *   { normen: { "3": [ { inkrafttreten, aenderungsgesetz,
+ *                        ausfertigung, fundstelle, fundstelleUrl } ] } }
+ *
+ * Datumsangaben nach ISO (2024-12-02), damit sich sortieren lässt, ohne zu
+ * raten, was vor was liegt.
+ */
+function aenderungenDerNorm(abk = S.abk, normId = S.normId){
+  const datei = S.aenderungen[abk];
+  const liste = datei && datei.normen ? datei.normen[normId] : null;
+  if (!Array.isArray(liste)) return [];
+  return [...liste].sort((a, b) =>
+    String(b.inkrafttreten || "").localeCompare(String(a.inkrafttreten || "")));
+}
+
+/** „2024-12-02" → „02.12.2024". Was nicht so aussieht, bleibt, wie es ist. */
+function datumDeutsch(wert){
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(wert || ""));
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : String(wert || "");
+}
+
+/** Die Übersicht als Tabelle — vier Spalten, wie man sie aus dem Recht kennt. */
+function aenderungstabelle(eintraege){
+  const huelle = document.createElement("div");
+  huelle.className = "aenderung-huelle";
+  const t = document.createElement("table");
+  t.className = "aenderungen";
+
+  const kopf = document.createElement("thead");
+  const kz = document.createElement("tr");
+  for (const name of ["Inkrafttreten", "Änderungsgesetz", "Ausfertigung", "Fundstelle"]){
+    const th = document.createElement("th");
+    th.scope = "col";
+    th.textContent = name;
+    kz.appendChild(th);
+  }
+  kopf.appendChild(kz);
+  t.appendChild(kopf);
+
+  const koerper = document.createElement("tbody");
+  for (const e of eintraege){
+    const tr = document.createElement("tr");
+
+    const inkraft = document.createElement("td");
+    inkraft.className = "a-datum";
+    inkraft.textContent = datumDeutsch(e.inkrafttreten) || "—";
+    const gesetzZelle = document.createElement("td");
+    gesetzZelle.textContent = e.aenderungsgesetz || "—";
+    const ausfertigung = document.createElement("td");
+    ausfertigung.className = "a-datum";
+    ausfertigung.textContent = datumDeutsch(e.ausfertigung) || "—";
+
+    const fund = document.createElement("td");
+    if (e.fundstelle && e.fundstelleUrl){
+      const a = document.createElement("a");
+      a.href = e.fundstelleUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = e.fundstelle;
+      fund.appendChild(a);
+    } else {
+      fund.textContent = e.fundstelle || "—";
+    }
+
+    tr.append(inkraft, gesetzZelle, ausfertigung, fund);
+    koerper.appendChild(tr);
+  }
+  t.appendChild(koerper);
+  huelle.appendChild(t);
+  return huelle;
 }
 
 /** Ein Hinweis auf eine Lücke — sichtbar als Lücke, nicht als Aussage. */

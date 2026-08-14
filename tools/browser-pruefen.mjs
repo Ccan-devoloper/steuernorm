@@ -873,8 +873,8 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     blatt && blatt.hash === "#/solzg/3/fassungen", blatt && blatt.hash);
   ok("Das Blatt nennt den Stand aus den Daten",
     blatt && blatt.stand.some((t) => /zuletzt geändert durch/.test(t)), blatt && blatt.stand.join(" · "));
-  ok("Und weist die fehlende Änderungsübersicht aus",
-    blatt && blatt.abschnitte.includes("Vollständige Änderungsübersicht"),
+  ok("Und führt die Änderungsübersicht als eigenen Abschnitt",
+    blatt && blatt.abschnitte.includes("Änderungsübersicht"),
     blatt && blatt.abschnitte.join(" | "));
   ok("Der Weg zur amtlichen Quelle steht daneben",
     blatt && blatt.amtlich === "https://www.gesetze-im-internet.de/solzg_1995/__3.html",
@@ -1017,6 +1017,51 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     `${proben.length - gesperrt}/${proben.length}`);
   ok("Jede Probe zeigt ein Fassungsblatt", ohneBlatt === 0);
   await ctx.close();
+}
+
+/* Die Änderungsübersicht, sobald ein Datensatz vorliegt. Der wird hier
+   ABGEFANGEN, nicht mitgeliefert: Eine erfundene Änderungsgeschichte hätte im
+   Bestand nichts verloren, auch nicht als Prüfmuster. */
+{
+  const muster = {
+    abk: "SolzG", quelle: "https://beispiel.invalid/prüfmuster", erzeugt: "2026-08-14",
+    normen: { 3: [
+      { inkrafttreten: "2025-01-01", aenderungsgesetz: "Jahressteuergesetz 2024",
+        ausfertigung: "2024-12-02", fundstelle: "BGBl. I Nr. 387",
+        fundstelleUrl: "https://beispiel.invalid/387" },
+      { inkrafttreten: "2020-12-29", aenderungsgesetz: "Jahressteuergesetz 2020",
+        ausfertigung: "2020-12-21", fundstelle: "BGBl. I S. 3096" },
+    ] },
+  };
+  for (const breite of [1440, 390]) {
+    const ctx = await browser.newContext({
+      viewport: { width: breite, height: 900 }, isMobile: breite < 500, hasTouch: breite < 500,
+    });
+    await ctx.route("**/aenderungen/solzg.json", (route) =>
+      route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(muster) }));
+    const seite = await ctx.newPage();
+    await seite.goto(WURZEL + "/#/solzg/3/fassungen", { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1600);
+    const t = await seite.evaluate(() => {
+      const tab = document.querySelector(".aenderungen");
+      if (!tab) return null;
+      const k = tab.getBoundingClientRect();
+      return {
+        spalten: [...tab.querySelectorAll("th")].map((x) => x.textContent),
+        erste: [...(tab.querySelector("tbody tr") || { children: [] }).children].map((x) => x.textContent),
+        zeilen: tab.querySelectorAll("tbody tr").length,
+        breite: Math.round(k.width),
+        fenster: window.innerWidth,
+      };
+    });
+    ok(`Die Änderungsübersicht erscheint als Tabelle (${breite} px)`, Boolean(t),
+      t ? t.zeilen + " Zeilen" : "keine Tabelle");
+    ok(`Vier Spalten, jüngste Änderung oben (${breite} px)`,
+      t && t.spalten.length === 4 && t.erste[0] === "01.01.2025",
+      t && t.erste.join(" · "));
+    ok(`Kein waagerechter Überlauf durch die Tabelle (${breite} px)`, !(await ueberlauf(seite)));
+    await ctx.close();
+  }
 }
 
 /* ── 4h. Fassungsvergleich auf dem Telefon ── */

@@ -305,7 +305,7 @@ ok("Trotzdem erscheint ein Fassungsblatt", Boolean(blatt));
 const ueberschriften = [...d.querySelectorAll(".fassung-abschnitt h2")].map((h) => h.textContent);
 ok("Es nennt Stand, Anwendung, Zeitstände und die Lücke",
   ueberschriften.join(" | ") === "Stand des Gesetzes | Anwendungsvorschrift"
-    + " | Aufgezeichnete Zeitstände | Vollständige Änderungsübersicht",
+    + " | Aufgezeichnete Zeitstände | Änderungsübersicht",
   ueberschriften.join(" | "));
 
 /* Der Stand kommt aus data/, nicht aus dem Entwurf. */
@@ -319,7 +319,8 @@ ok("Die Reichweite des Standes wird gesagt",
 
 /* Was fehlt, wird als Lücke gezeigt — nicht überspielt. */
 ok("Die fehlende Änderungsübersicht wird benannt",
-  (d.querySelector(".fassung-fehlt") || {}).textContent.includes("nicht Teil der amtlichen Daten"));
+  (d.querySelector(".fassung-fehlt") || {}).textContent.includes("steht noch nicht bereit"),
+  (d.querySelector(".fassung-fehlt") || {}).textContent.slice(0, 70));
 ok("Der Weg zur amtlichen Quelle steht daneben",
   (d.querySelector(".fassung-amtlich") || {}).getAttribute("href")
   === "https://www.gesetze-im-internet.de/solzg_1995/__3.html",
@@ -337,6 +338,55 @@ ok("Für eine Anlage führt der Weg auf das Gesetz",
   js(`giiAdresse({ quelle: "https://www.gesetze-im-internet.de/estg/", abk: "EStG" }, { id: "anlage-3" })`)
   === "https://www.gesetze-im-internet.de/estg/",
   js(`giiAdresse({ quelle: "https://www.gesetze-im-internet.de/estg/" }, { id: "anlage-3" })`));
+
+/* ── Änderungsübersicht ──
+   Der Datensatz wird hier EINGESPIELT, nicht mitgeliefert: Eine erfundene
+   Änderungsgeschichte hätte im Bestand nichts verloren, auch nicht als
+   Prüfmuster. Geprüft wird die Anzeige, nicht der Inhalt. */
+js(`S.aenderungen.SolzG = {
+  abk: "SolzG",
+  quelle: "https://beispiel.invalid/prüfmuster",
+  erzeugt: "2026-08-14T00:00:00Z",
+  normen: { "3": [
+    { inkrafttreten: "2020-12-29", aenderungsgesetz: "Zweites Gesetz",
+      ausfertigung: "2020-12-21", fundstelle: "BGBl. I S. 3096",
+      fundstelleUrl: "https://beispiel.invalid/3096" },
+    { inkrafttreten: "2025-01-01", aenderungsgesetz: "Erstes Gesetz",
+      ausfertigung: "2024-12-02", fundstelle: "BGBl. I Nr. 387" }
+  ] }
+}`);
+js('vergleichZeichnen()');
+const tabelle = d.querySelector(".aenderungen");
+ok("Mit Daten erscheint die Änderungsübersicht als Tabelle", Boolean(tabelle));
+const spalten = [...d.querySelectorAll(".aenderungen th")].map((x) => x.textContent);
+ok("Vier Spalten wie im Recht üblich",
+  spalten.join(" | ") === "Inkrafttreten | Änderungsgesetz | Ausfertigung | Fundstelle",
+  spalten.join(" | "));
+const zeilen = [...d.querySelectorAll(".aenderungen tbody tr")]
+  .map((tr) => [...tr.children].map((td) => td.textContent).join(" · "));
+ok("Zwei Zeilen, jüngste zuerst",
+  zeilen.length === 2 && zeilen[0].startsWith("01.01.2025") && zeilen[1].startsWith("29.12.2020"),
+  zeilen.join(" || "));
+ok("ISO-Datum wird deutsch gezeigt", js('datumDeutsch("2024-12-02")') === "02.12.2024",
+  js('datumDeutsch("2024-12-02")'));
+ok("Was kein ISO-Datum ist, bleibt unverändert",
+  js('datumDeutsch("2. Dezember 2024")') === "2. Dezember 2024");
+ok("Die Fundstelle wird verlinkt, wo eine Adresse vorliegt",
+  (d.querySelector(".aenderungen a") || {}).getAttribute("href") === "https://beispiel.invalid/3096",
+  (d.querySelector(".aenderungen a") || {}).getAttribute("href"));
+ok("Ohne Adresse bleibt die Fundstelle Text",
+  d.querySelectorAll(".aenderungen a").length === 1,
+  d.querySelectorAll(".aenderungen a").length + " Verweise");
+ok("Die Herkunft der Übersicht wird genannt",
+  [...d.querySelectorAll(".fassung-quelle")].some((x) => x.textContent.includes("beispiel.invalid")));
+
+/* Eine Datei OHNE Eintrag zu dieser Norm sagt etwas anderes als gar keine Datei. */
+js('S.aenderungen.SolzG = { abk: "SolzG", normen: {} }');
+js('vergleichZeichnen()');
+ok("Datei ohne Eintrag wird von fehlender Datei unterschieden",
+  (d.querySelector(".fassung-fehlt") || {}).textContent.includes("die Quelle dazu nichts hergibt"),
+  (d.querySelector(".fassung-fehlt") || {}).textContent.slice(0, 60));
+js('S.aenderungen.SolzG = null');
 
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
