@@ -248,6 +248,69 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4.2 Satzbild: fortlaufend oder satzweise ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/ao/1", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+
+  const lage = () => seite.evaluate(() => {
+    const s = [...document.querySelectorAll(".lesespalte .satz")];
+    const kasten = s.map((x) => Math.round(x.getBoundingClientRect().top));
+    return {
+      huellen: s.length,
+      anzeige: s.length ? getComputedStyle(s[0]).display : "",
+      /* Untereinander heißt: verschiedene Oberkanten. */
+      zeilen: new Set(kasten).size,
+      kanonisch: textindex(document.querySelector(".lesespalte")).text.slice(0, 40),
+      an: document.querySelector(".lesespalte .an")
+        ? getComputedStyle(document.querySelector(".lesespalte .an")).display : "",
+    };
+  });
+
+  const fort = await lage();
+  ok("Sätze tragen eine eigene Hülle", fort.huellen > 0, fort.huellen + " Hüllen");
+  ok("Fortlaufend stehen sie im Fluss", fort.anzeige === "inline", fort.anzeige);
+
+  await seite.click("#satzbild button[data-bild=einzeln]");
+  await seite.waitForTimeout(400);
+  const einzeln = await lage();
+  ok("Satzweise wird jeder Satz ein Block", einzeln.anzeige === "block", einzeln.anzeige);
+  ok("Die Sätze stehen untereinander", einzeln.zeilen === einzeln.huellen,
+    `${einzeln.zeilen} Oberkanten bei ${einzeln.huellen} Sätzen`);
+  ok("Die Absatzbezeichnung rückt auf eine eigene Zeile", einzeln.an === "block", einzeln.an);
+  ok("Der Wortlaut ändert sich nicht", einzeln.kanonisch === fort.kanonisch, einzeln.kanonisch);
+  ok("Kein waagerechter Überlauf satzweise", !(await ueberlauf(seite)));
+
+  /* Die Wahl übersteht den Neustart. */
+  await seite.reload({ waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  ok("Satzbild wird gemerkt",
+    (await seite.evaluate(() => document.body.dataset.satzbild)) === "einzeln");
+
+  /* Satznummern: sichtbar, mitwachsend, nicht mehr fast unsichtbar. */
+  const marke = await seite.evaluate(() => {
+    const sn = document.querySelector(".lesespalte .sn");
+    if (!sn) return null;
+    const stil = getComputedStyle(sn);
+    return { groesse: parseFloat(stil.fontSize), farbe: stil.color };
+  });
+  ok("Satznummer ist ablesbar groß", marke && marke.groesse >= 10.5,
+    marke ? marke.groesse + " px" : "keine");
+  await seite.click("#schrift-groesser");
+  await seite.waitForTimeout(300);
+  const groesser = await seite.evaluate(() =>
+    parseFloat(getComputedStyle(document.querySelector(".lesespalte .sn")).fontSize));
+  ok("Satznummer wächst mit dem Schriftgrad", groesser > marke.groesse,
+    marke.groesse + " → " + groesser);
+
+  await seite.click("#satzbild button[data-bild=fortlaufend]");
+  await seite.waitForTimeout(300);
+  ok("Zurückschalten geht", !(await seite.evaluate(() => document.body.dataset.satzbild)));
+  await ctx.close();
+}
+
 /* ── 4a. Ein Reiter je Gesetz, nicht je Norm ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });

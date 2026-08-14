@@ -134,6 +134,18 @@ ok("Nur mehrsätzige Absätze werden nummeriert",
   satzmarken.length === mehrfach,
   `${satzmarken.length} Nummern, ${mehrfach} Sätze in mehrsätzigen Absätzen, ${einzeln} einsätzige Absätze`);
 
+/* ── Satzbild ── */
+ok("Satzbild-Umschalter vorhanden", Boolean(d.getElementById("satzbild")));
+const huellen = d.querySelectorAll(".lesespalte .satz").length;
+ok("Sätze tragen eine eigene Hülle", huellen > 0, huellen + " Hüllen");
+js('satzbildSetzen("einzeln")');
+ok("Satzweise Darstellung setzt die Marke",
+  d.body.dataset.satzbild === "einzeln", String(d.body.dataset.satzbild));
+ok("Der kanonische Text bleibt beim Umschalten derselbe",
+  kanonisch === js("textindex(document.querySelector('.lesespalte')).text"));
+js('satzbildSetzen("fortlaufend")');
+ok("Zurückschalten entfernt die Marke", !d.body.dataset.satzbild);
+
 /* ── Apparat ── */
 const register = [...d.querySelectorAll(".register button")].map((b) => b.textContent);
 ok("Fünf Register", register.length === 5, register.join(" · "));

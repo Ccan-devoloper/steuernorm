@@ -313,7 +313,10 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .suchfeld input:focus{outline:0}
 .suchfeld:focus-within{border-color:var(--text)}
 
-.kopf-rechts{display:flex;align-items:center;gap:14px;margin-left:auto}
+/* Umbrechen statt überlaufen. Mit vier Schaltergruppen passt die Zeile
+   unterhalb von 1440 px nicht mehr in einer Reihe; eine zweite Reihe ist
+   besser als ein waagerechter Bildlauf über die ganze Seite. */
+.kopf-rechts{display:flex;align-items:center;gap:14px;margin-left:auto;flex-wrap:wrap;row-gap:8px}
 .kopfgruppe{display:flex;align-items:center;gap:8px}
 .kopfgruppe>span{font-size:12.5px;color:var(--text-3);white-space:nowrap}
 .stufen{display:flex;border:1px solid var(--linie);border-radius:var(--r-knopf);overflow:hidden;background:var(--weiss)}
@@ -481,9 +484,16 @@ body[data-ansicht=norm] .blaettern{margin-left:auto;margin-right:auto}
    als Trennung zwischen zwei Elementen wiederhergestellt. Am Wortlaut ändert
    das nichts — es wird kein Wort eingefügt, gekürzt oder ersetzt. */
 .lesespalte dd>span+span::before{content:" ";white-space:pre}
+/* Satznummer. In `em`, nicht in `px`: Sie soll mit dem Schriftgrad des
+   Normtextes mitwachsen — bei 24 px Lesetext wäre eine 10-px-Ziffer nicht mehr
+   zu erkennen. Der Ton ist deutlich dunkler als zuvor (--text-6 war so hell,
+   dass die Nummer im Fließtext verschwand) und trägt die Verweisfarbe: Sie
+   IST ein Verweis — auf die Fundstelle, die im `title` steht. */
 .lesespalte .sn{
-  font-family:var(--mono);font-size:10px;color:var(--text-6);vertical-align:super;
-  margin-right:2px;-webkit-user-select:none;user-select:none;
+  font-family:var(--mono);font-size:.62em;font-weight:600;
+  color:var(--verweis);vertical-align:super;line-height:0;
+  margin-right:.22em;-webkit-user-select:none;user-select:none;
+  cursor:help;
 }
 /* Absatzbezeichnung im Text. `user-select:none` ist keine Kosmetik: Ohne das
    landete „(1)" beim Markieren im Ankertext, und der findet sich im
@@ -819,6 +829,38 @@ ins.v-neu,.vergleich-marke.v-neu{
 }
 .vergleich-quelle{margin:8px 0 0;font-size:11px;line-height:1.6;color:var(--text-5)}
 
+/* ══════════════════════════════════════════════════════════════════════
+   Satzweise Darstellung
+
+   Zwei Satzbilder derselben Norm. Fortlaufend ist die amtliche Form: Ein
+   Absatz ist ein Fließtext, so steht er im Bundesgesetzblatt. Satzweise
+   bricht ihn auf — jeder Satz eine Zeile, die Absatzbezeichnung darüber.
+
+   Das ist kein Eingriff in den Wortlaut, sondern in den Umbruch: Es wird
+   kein Zeichen eingefügt, gekürzt oder umgestellt. Wer den Text kopiert,
+   bekommt in beiden Ansichten dasselbe.
+
+   Warum es hilft: Ein Absatz des Steuerrechts trägt regelmäßig vier bis sechs
+   Sätze mit je eigener Anordnung. Fortlaufend gesetzt muss der Leser die
+   Satzgrenzen selbst finden, um „Satz 3" zu treffen; satzweise stehen sie da.
+   ══════════════════════════════════════════════════════════════════════ */
+body[data-satzbild=einzeln] .lesespalte .satz{
+  display:block;
+  margin-bottom:.72em;
+}
+body[data-satzbild=einzeln] .lesespalte .satz:last-child{margin-bottom:0}
+/* Die Absatzbezeichnung rückt auf eine eigene Zeile und bekommt Luft — sie
+   gliedert dann sichtbar, statt am ersten Satz zu kleben. */
+body[data-satzbild=einzeln] .lesespalte .an{
+  display:block;
+  font-size:1em;
+  margin:0 0 .5em;
+}
+body[data-satzbild=einzeln] .lesespalte .absatz{margin-bottom:1.35em}
+/* Ohne Hülle kein Umbruch: Sätze über Elementgrenzen bleiben fortlaufend.
+   Damit das nicht wie ein Fehler aussieht, rücken sie wenigstens ab. */
+body[data-satzbild=einzeln] .lesespalte p{margin-bottom:.72em}
+
 /* Verweis auf eine andere Norm. Die Unterkante ist heller als die Schrift —
    der Verweis soll im Lesefluss erkennbar sein, ohne ihn zu zerhacken. */
 .lesespalte a.verweis{
@@ -939,7 +981,10 @@ body[data-ansicht=vergleich] .apparat{display:none}
 /* Die Einfärbung gilt dem Normtext; im Vergleich ist sie ausgeblendet, also
    darf ihr Schalter dort auch nicht bedienbar dastehen. Die Schriftgröße
    BLEIBT dort — der Vergleich zeigt Normtext, nur zweispaltig. */
+/* Der Fassungsvergleich stellt Wortlaute gegenüber, nicht Satzbilder — die
+   Zellen tragen keine Satzhüllen, der Umschalter liefe dort ins Leere. */
 body[data-ansicht=vergleich] .einfaerben,
+body[data-ansicht=vergleich] #satzbildgruppe,
 body[data-ansicht=vergleich] .trenner-einfaerben{display:none}
 body[data-ansicht=start] .reiterleiste,
 body[data-ansicht=suche] .reiterleiste{display:none}
@@ -1054,7 +1099,7 @@ body[data-ansicht=start] .suchfeld{display:none}
    offen. Ab hier fehlt der Kopfleiste der Platz für die ausgeschriebene
    Beschriftung des Schalters. Sie entfällt sichtbar, bleibt aber über
    `aria-label` der Gruppe erhalten — für die Sprachausgabe ändert sich nichts. */
-@media (max-width:1120px){
+@media (max-width:1340px){
   .kopfgruppe>span{display:none}
 }
 
@@ -1351,6 +1396,15 @@ body[data-ansicht=start] .suchfeld{display:none}
         </div>
       </div>
       <div class="trenner trenner-einfaerben" aria-hidden="true"></div>
+      <div class="kopfgruppe schriftgruppe" id="satzbildgruppe">
+        <span id="satzbild-beschriftung">Satzbild</span>
+        <div class="stufen" role="radiogroup" id="satzbild"
+             aria-label="Absatz fortlaufend oder Satz für Satz">
+          <button type="button" role="radio" data-bild="fortlaufend" aria-checked="false">fortlaufend</button>
+          <button type="button" role="radio" data-bild="einzeln" aria-checked="false">satzweise</button>
+        </div>
+      </div>
+      <div class="trenner trenner-einfaerben" aria-hidden="true"></div>
       <div class="kopfgruppe schriftgruppe" id="schriftgruppe">
         <span id="schrift-beschriftung">Schrift</span>
         <div class="stufen" id="schrift" role="group" aria-label="Schriftgröße des Normtextes">
@@ -1451,6 +1505,7 @@ const S = {
   aktiveMappe: null,
   darstellung: "system",   // system | hell | dunkel — global, localStorage
   leseschrift: 17.5,       // px, Schriftgröße des Normtextes, localStorage
+  satzbild: "fortlaufend", // fortlaufend | einzeln — localStorage
   letzteFarbe: "#F2C744",  // localStorage
   filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
 };
@@ -1606,6 +1661,16 @@ function satznummernSetzen(wurzel, saetze){
     marke.textContent = String(s.nr);
     marke.title = s.pfad;
 
+    /* Den Satz zusätzlich in eine eigene Hülle fassen, damit die satzweise
+       Darstellung ihn zum Block machen kann. Das gelingt nur, wenn Anfang und
+       Ende im selben Elternelement liegen — ein Satz, der über eine
+       Aufzählung hinweggeht, ließe sich nicht ohne Bruch umschließen.
+       `surroundContents` wirft in diesem Fall; dann bleibt es bei der Nummer,
+       und der Satz läuft in der satzweisen Ansicht eben weiter. Lieber ein
+       nicht umbrochener Satz als ein zerrissener Wortlaut. */
+    const huelle = satzHuelle(karte, s);
+    if (huelle){ huelle.prepend(marke); gesetzt++; continue; }
+
     if (ref.i === 0) ref.n.parentNode.insertBefore(marke, ref.n);
     else {
       const rest = ref.n.splitText(ref.i);
@@ -1614,6 +1679,36 @@ function satznummernSetzen(wurzel, saetze){
     gesetzt++;
   }
   return gesetzt;
+}
+
+/**
+ * Umschließt einen Satz mit `<span class="satz">` — oder gibt null zurück.
+ *
+ * Gearbeitet wird auf der Zeichenkarte des kanonischen Volltextes, dieselbe
+ * Grundlage wie bei der Einfärbung. Die Hülle ist ein reines Anzeigemittel:
+ * Sie fügt kein Zeichen ein, `textindex` läuft unverändert hindurch.
+ */
+function satzHuelle(karte, satz){
+  const anfang = karte[satz.von];
+  /* `bis` ist die Position NACH dem letzten Zeichen; die Karte endet dort
+     womöglich schon, weil zwischen zwei Sätzen ein Leerzeichen steht. */
+  let ende = null;
+  for (let i = Math.min(satz.bis, karte.length) - 1; i > satz.von; i--){
+    if (karte[i] && karte[i].n){ ende = karte[i]; break; }
+  }
+  if (!anfang || !anfang.n || !ende || !ende.n) return null;
+
+  try {
+    const bereich = document.createRange();
+    bereich.setStart(anfang.n, anfang.i);
+    bereich.setEnd(ende.n, ende.i + 1);
+    const huelle = document.createElement("span");
+    huelle.className = "satz";
+    bereich.surroundContents(huelle);
+    return huelle;
+  } catch (fehler) {
+    return null;   // Satz über Elementgrenzen — bleibt ungehüllt
+  }
 }
 
 /* ── Kleinigkeiten ─────────────────────────────────────────────────── */
@@ -1686,6 +1781,25 @@ function schriftSetzen(px){
   el("schrift-kleiner").disabled = stelle === 0;
   el("schrift-groesser").disabled = stelle === SCHRIFTSTUFEN.length - 1;
   merken("leseschrift", naechste);
+}
+
+/**
+ * Satzbild umschalten.
+ *
+ * Die Marke sitzt am `body`, nicht am Text: Umgeschaltet wird der Umbruch,
+ * nicht der Inhalt. Neu gezeichnet werden muss deshalb nichts — die Hüllen
+ * `<span class="satz">` liegen ohnehin im Text, sie werden nur von Zeile zu
+ * Block. Das hält den Wechsel augenblicklich, auch bei § 8b KStG.
+ */
+function satzbildSetzen(bild){
+  const gueltig = bild === "einzeln" ? "einzeln" : "fortlaufend";
+  S.satzbild = gueltig;
+  if (gueltig === "einzeln") document.body.dataset.satzbild = "einzeln";
+  else delete document.body.dataset.satzbild;
+  for (const b of el("satzbild").querySelectorAll("button")){
+    b.setAttribute("aria-checked", String(b.dataset.bild === gueltig));
+  }
+  merken("satzbild", gueltig);
 }
 
 function schriftVerschieben(richtung){
@@ -4800,6 +4914,11 @@ async function start(){
       if (S.darstellung !== "system") return;
       if (document.body.dataset.ansicht === "norm"){ hauptZeichnen(); apparatZeichnen(); }
     });
+  }
+
+  satzbildSetzen(gemerkt("satzbild", "fortlaufend"));
+  for (const b of el("satzbild").querySelectorAll("button")){
+    b.onclick = () => satzbildSetzen(b.dataset.bild);
   }
 
   schriftSetzen(Number(gemerkt("leseschrift", 17.5)) || 17.5);
