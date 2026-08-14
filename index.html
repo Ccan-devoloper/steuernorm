@@ -1136,6 +1136,7 @@ body[data-ansicht=start] .suchfeld{display:none}
 .trefferraster{display:flex;align-items:flex-start}
 .filterspalte{width:var(--nav);flex:none;padding:22px 16px 60px;border-right:1px solid var(--linie-schwach)}
 .filterzeile{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:12.5px;color:var(--text-2b);width:100%;text-align:left}
+.ladestand{font-size:11.5px;line-height:1.55;color:var(--text-4);margin:14px 0 0}
 .filterzeile .zahl{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-5)}
 .trefferspalte{flex:1;min-width:0;padding:22px 32px 70px}
 .trefferkopf{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap}
@@ -5124,17 +5125,25 @@ function trefferZeichnen(begriff){
     filter.appendChild(b);
   }
 
-  const nachladen = S.register.gesetze.filter(g => !cacheGesetz.has(g.abk.toLowerCase()));
-  if (nachladen.length){
-    const b = knopf("pille", nachladen.length + " Gesetze laden");
-    b.style.marginTop = "14px";
-    b.title = "Ohne geladenen Volltext wird nur in Nummer und Überschrift gesucht.";
-    b.onclick = async () => {
-      b.textContent = "lädt …"; b.disabled = true;
-      for (const g of nachladen){ try { await gesetzLaden(g.abk); } catch (e) { /* weiter */ } }
-      trefferZeichnen(begriff);
-    };
-    filter.appendChild(b);
+  /* Hier stand ein Knopf „12 Gesetze laden". Wer ihn nicht drückte, bekam für
+     zwölf von vierzehn Gesetzen eine Null — eine Suche, die zwölf Gesetze
+     übergeht und das nur im Kleingedruckten sagt, ist keine Suche. Die
+     Volltexte kommen jetzt von selbst nach; der Fortschritt steht daneben. */
+  const offen = ungeladeneGesetze();
+  if (offen.length){
+    const p = document.createElement("p");
+    p.className = "ladestand";
+    p.id = "ladestand";
+    p.textContent = ladesatz();
+    filter.appendChild(p);
+  }
+  /* Was nicht erreichbar war, wird gesagt und nicht überspielt. */
+  if (volltextFehlt.size){
+    const p = document.createElement("p");
+    p.className = "ladestand";
+    p.textContent = "Nicht erreichbar: " + [...volltextFehlt].join(", ")
+      + " — dort wurde nur in Nummer und Überschrift gesucht.";
+    filter.appendChild(p);
   }
 
   /* ── Trefferspalte ── */
@@ -5151,8 +5160,11 @@ function trefferZeichnen(begriff){
     const p = document.createElement("p");
     p.className = "platzhalter";
     p.style.maxWidth = "var(--lesespalte)";
-    p.textContent = "Kein Treffer. Es wird in den geladenen Volltexten gesucht; "
-      + "über „Gesetze laden“ lässt sich der Bestand erweitern.";
+    p.textContent = offen.length
+      ? "Noch kein Treffer. Die Volltexte der übrigen Gesetze werden gerade "
+        + "geladen; die Liste füllt sich dann von selbst."
+      : "Kein Treffer in den " + S.register.gesetze.length + " Gesetzen des Bestands."
+        + (volltextFehlt.size ? " Nicht jedes Gesetz war erreichbar — siehe links." : "");
     spalte.appendChild(p);
   }
 
@@ -5201,6 +5213,40 @@ function trefferZeichnen(begriff){
   haupt.appendChild(raster);
   reiterZeichnen();
   document.title = "„" + begriff + "“ — Suche · steuernorm";
+  if (offen.length) volltexteNachladen(begriff);
+}
+
+/* ── Volltexte nachladen ──────────────────────────────────────────────
+   Die Suche liest den Wortlaut aus `data/<gesetz>.json`; geladen wird sonst
+   nur, was man aufschlägt. Auf der Trefferliste wird der Rest nachgeholt —
+   einmalig gut vier Megabyte, die der Dienstarbeiter danach vorhält, sodass
+   die Suche auch ohne Netz vollständig bleibt.
+
+   Ein Gesetz, dessen Datei fehlt, wird vermerkt und nicht erneut versucht:
+   Sonst bliebe es immer „ungeladen“ und der Lauf riefe sich endlos selbst. */
+const volltextFehlt = new Set();
+let volltextLauf = 0;
+
+const ungeladeneGesetze = () => S.register.gesetze.filter(
+  g => !cacheGesetz.has(g.abk.toLowerCase()) && !volltextFehlt.has(g.abk));
+
+function ladesatz(){
+  const alle = S.register.gesetze.length;
+  return "Volltexte werden geladen … " + (alle - ungeladeneGesetze().length) + " von " + alle;
+}
+
+async function volltexteNachladen(begriff){
+  const mein = ++volltextLauf;
+  const laeuftNoch = () => mein === volltextLauf && document.body.dataset.ansicht === "suche";
+
+  for (const g of [...ungeladeneGesetze()]){
+    try { await gesetzLaden(g.abk); }
+    catch (e) { volltextFehlt.add(g.abk); }
+    if (!laeuftNoch()) return;
+    const stand = el("ladestand");
+    if (stand) stand.textContent = ladesatz();
+  }
+  if (laeuftNoch()) trefferZeichnen(begriff);
 }
 
 /* ══════════════════════════════════════════════════════════════════════

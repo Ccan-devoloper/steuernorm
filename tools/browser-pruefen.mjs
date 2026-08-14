@@ -1092,6 +1092,45 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* Die Suche holt die fehlenden Volltexte von selbst — ohne den Knopf, den man
+   drücken musste, um überhaupt zu suchen. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  /* Auf dem lokalen Server sind die 4,4 MB in unter einer Sekunde da; das
+     Nachladen wäre vorbei, bevor man es sehen könnte. Jede Datei wird deshalb
+     um 300 ms verzögert — so ist der Zwischenstand überhaupt prüfbar. */
+  await ctx.route("**/data/*.json", async (route) => {
+    await new Promise((r) => setTimeout(r, 300));
+    await route.continue();
+  });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/suche/" + encodeURIComponent("Einkommen"), { waitUntil: "domcontentloaded" });
+  await seite.waitForTimeout(1600);
+
+  const anfang = await seite.evaluate(() => ({
+    kopf: (document.querySelector(".trefferkopf h1") || {}).textContent || "",
+    laedt: Boolean(document.getElementById("ladestand")),
+    knopf: [...document.querySelectorAll(".filterspalte .pille")].map((b) => b.textContent),
+  }));
+  ok("Die Trefferliste sagt, dass sie noch lädt", anfang.laedt, anfang.kopf);
+  ok("Kein Knopf mehr, der die Suche erst vollständig macht",
+    anfang.knopf.length === 0, anfang.knopf.join(" · "));
+
+  await seite.waitForFunction(() => !document.getElementById("ladestand"), null, { timeout: 90000 });
+  await seite.waitForTimeout(400);
+  const ende = await seite.evaluate(() => ({
+    kopf: (document.querySelector(".trefferkopf h1") || {}).textContent || "",
+    gesetze: [...document.querySelectorAll(".filterzeile .zahl")]
+      .map((z) => Number(z.textContent)).filter((n) => n > 0).length,
+  }));
+  const zahl = (t) => Number((t.match(/^\d+/) || [0])[0]);
+  ok("Die Volltexte kommen von selbst nach", zahl(ende.kopf) > zahl(anfang.kopf),
+    `${anfang.kopf.trim()} → ${ende.kopf.trim()}`);
+  ok("Gesucht wird am Ende in allen Gesetzen", ende.gesetze >= 10,
+    ende.gesetze + " Gesetze mit Treffern");
+  await ctx.close();
+}
+
 /* Im Dunkelmodus darf die Liste nicht hell bleiben. */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: "dark" });
