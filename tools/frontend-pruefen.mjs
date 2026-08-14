@@ -218,6 +218,50 @@ ok("Ohne Gesetz zeigt die Adresse auf alle Gesetze, die die Norm führen",
 ok("Was es nicht gibt, wird nicht erfunden",
   js('adressTreffer(adresseLesen("§ 999 EStG")).length') === 0);
 
+/* ── Suche: Vorschläge während der Eingabe ── */
+const v1 = js('vorschlaege("§ 5 EStG")');
+ok("Vorschläge kommen bei einer Fundstelle", v1.length >= 2, v1.length + " Vorschläge");
+ok("Die Fundstelle steht oben",
+  v1[0] && v1[0].ziel === "#/estg/5" && v1[0].marke === "Fundstelle",
+  v1[0] && v1[0].kopf + " → " + v1[0].ziel);
+ok("Die Volltextsuche bleibt immer erreichbar",
+  v1[v1.length - 1].ziel.startsWith("#/suche/"), v1[v1.length - 1].kopf);
+ok("Vorschläge zu einem Gesetz",
+  js('vorschlaege("GewStG")').some((v) => v.ziel === "#/gewstg"), "");
+ok("Vorschläge zu einer Überschrift",
+  js('vorschlaege("Gewinnermittlung")').some((v) => v.marke === "Überschrift"), "");
+ok("Ein einzelner Buchstabe schlägt nichts vor", js('vorschlaege("a")').length === 0);
+ok("Nicht mehr als acht Vorschläge",
+  js('vorschlaege("Steuer")').length <= 8, js('vorschlaege("Steuer")').length + " Vorschläge");
+
+/* Die Liste hängt am Feld und erscheint beim Tippen. */
+const feld = d.getElementById("suche");
+ok("Das Suchfeld trägt eine Vorschlagsliste",
+  Boolean(feld.closest(".suchhuelle") && feld.closest(".suchhuelle").querySelector(".vorschlaege")));
+const box = feld.closest(".suchhuelle").querySelector(".vorschlaege");
+ok("Die Liste bleibt zu, solange nichts getippt ist", box.hidden);
+
+feld.value = "§ 5 EStG";
+feld.dispatchEvent(new window.Event("input", { bubbles: true }));
+ok("Tippen öffnet die Liste", !box.hidden);
+ok("Die Liste zeigt Einträge", box.querySelectorAll(".vorschlag").length >= 2,
+  box.querySelectorAll(".vorschlag").length + " Einträge");
+ok("Der erste Eintrag nennt die Fundstelle",
+  (box.querySelector(".vorschlag .vkopf") || {}).textContent === "§ 5 EStG",
+  (box.querySelector(".vorschlag .vkopf") || {}).textContent);
+ok("Das Feld meldet die offene Liste",
+  feld.getAttribute("aria-expanded") === "true");
+
+feld.dispatchEvent(new window.KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }));
+ok("Pfeiltaste wählt den ersten Eintrag",
+  box.querySelectorAll('.vorschlag[aria-selected=true]').length === 1
+  && box.querySelector(".vorschlag").getAttribute("aria-selected") === "true");
+
+feld.dispatchEvent(new window.KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+ok("Escape schließt die Liste", box.hidden);
+ok("Escape lässt den Text stehen", feld.value === "§ 5 EStG", feld.value);
+feld.value = "";
+
 /* ── Zugänglichkeit ── */
 ok("Schalter trägt den vollen Namen",
   (d.getElementById("stufen") || {}).getAttribute

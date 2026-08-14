@@ -326,8 +326,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
    verdecken, nicht darunter durchlaufen. */
 header{position:sticky;top:0;z-index:40}
 
+/* `flex-wrap` als Notausgang: Reicht der Platz in einer Reihe nicht mehr für
+   Wortmarke, Suchfeld und Schalter, rutschen die Schalter in eine zweite Reihe.
+   Ohne das schrumpfte allein das Suchfeld — bei 1024 px auf 26 Pixel, ein
+   Streifen ohne erkennbaren Zweck. Es hat deshalb unten eine Grenze. */
 .kopf{
-  display:flex;align-items:center;gap:16px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;row-gap:8px;
   padding:10px 16px;
   background:var(--leiste);
   border-bottom:1px solid var(--linie);
@@ -335,10 +339,12 @@ header{position:sticky;top:0;z-index:40}
 .wortmarke{font-family:var(--serif);font-size:16px;font-weight:600;white-space:nowrap}
 
 .suchfeld{
-  /* `min-width:0` ist nicht schmückend: Ohne die Angabe bekommt ein Flexkind
-     seine Mindestbreite aus dem Inhalt und schrumpft nicht. Die Kopfleiste lief
-     dadurch bei 1024 px um fünf Pixel über den Rand hinaus. */
-  flex:1;min-width:0;display:flex;align-items:center;gap:10px;
+  /* Die untere Grenze ist gemessen, nicht gegriffen: Kürzel, Abstand, Rahmen
+     und der Platzhalter „Norm, Wortlaut oder Fundstelle …“ brauchen zusammen
+     rund 260 px. Darunter ist das Feld kein Suchfeld mehr, sondern ein
+     Streifen. Was nicht mehr in die Reihe passt, wandert nach unten — dafür
+     trägt `.kopf` sein `flex-wrap`. */
+  flex:1 1 260px;min-width:260px;display:flex;align-items:center;gap:10px;
   background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r-feld);
   padding:7px 12px;max-width:520px;box-shadow:var(--schatten-feld);
   cursor:text;
@@ -1164,8 +1170,13 @@ body[data-ansicht=start] .suchfeld{display:none}
 /* Die Spezifikation lässt das Verhalten zwischen 390 und 1440 px ausdrücklich
    offen. Ab hier fehlt der Kopfleiste der Platz für die ausgeschriebene
    Beschriftung des Schalters. Sie entfällt sichtbar, bleibt aber über
-   `aria-label` der Gruppe erhalten — für die Sprachausgabe ändert sich nichts. */
-@media (max-width:1340px){
+   `aria-label` der Gruppe erhalten — für die Sprachausgabe ändert sich nichts.
+
+   Die Schwelle lag bei 1340 px und war zu niedrig: Die vier Beschriftungen
+   nehmen zusammen rund 330 px, und die gingen bis dahin dem Suchfeld ab — bei
+   1440 px blieben ihm 73 Pixel. Eine Beschriftung, die man ohnehin am Schalter
+   abliest, wiegt weniger als ein benutzbares Suchfeld. */
+@media (max-width:1600px){
   .kopfgruppe>span{display:none}
 }
 
@@ -4534,6 +4545,7 @@ function startseiteZeichnen(){
   enter.textContent = "Enter zum Suchen";
   feld.append(eingabe, enter);
   feld.onsubmit = (e) => { e.preventDefault(); if (eingabe.value.trim()) sucheOeffnen(eingabe.value.trim()); };
+  suchfeldVerdrahten(eingabe, feld);
   mitte.appendChild(feld);
 
   /* „Häufig" führt auf echte Normen des Bestands, nicht auf erfundene. */
@@ -4847,6 +4859,171 @@ function sucheZiel(begriff){
 
 function sucheOeffnen(begriff){
   location.hash = sucheZiel(begriff);
+}
+
+/* ── Vorschläge ──────────────────────────────────────────────────────
+   Bisher gab das Feld während der Eingabe nichts zurück: Man tippte blind und
+   erfuhr erst nach Enter, ob etwas dahinter steckt. Die Vorschläge kommen aus
+   dem Register — Kürzel, Nummer und Überschrift aller 1 537 Normen liegen mit
+   `data/index.json` bereits im Speicher, ohne dass ein Volltext geladen sein
+   müsste. Angeboten wird nur, was es gibt; die letzte Zeile führt immer in die
+   Volltextsuche, damit der Weg über Enter nie verstellt ist. */
+const VORSCHLAEGE_MAX = 8;
+
+function vorschlaege(begriff){
+  if (!S.register) return [];
+  const roh = String(begriff).trim();
+  if (roh.length < 2) return [];
+  const suche = roh.toLowerCase();
+  const liste = [];
+  const gesehen = new Set();
+  const dazu = (v) => {
+    if (gesehen.has(v.ziel)) return;
+    gesehen.add(v.ziel);
+    liste.push(v);
+  };
+
+  /* 1. Die Fundstelle — der genaueste Treffer, den eine Eingabe haben kann. */
+  for (const t of adressTreffer(adresseLesen(roh))){
+    dazu({
+      ziel: "#/" + t.abk.toLowerCase() + "/" + t.id,
+      kopf: t.enbez + " " + t.abk, bei: t.titel, marke: "Fundstelle",
+    });
+    if (liste.length >= 4) break;
+  }
+
+  /* 2. Ganze Gesetze. */
+  for (const g of S.register.gesetze){
+    if (!(g.abk.toLowerCase().startsWith(suche) || g.titel.toLowerCase().includes(suche))) continue;
+    dazu({ ziel: "#/" + g.abk.toLowerCase(), kopf: g.abk, bei: g.titel, marke: g.anzahl + " Normen" });
+  }
+
+  /* 3. Überschriften. Was vorne beginnt, steht vor dem, was mittendrin trifft. */
+  const kopfzeilen = [];
+  for (const meta of S.register.gesetze){
+    for (const n of meta.normen || []){
+      const t = (n.t || "").toLowerCase();
+      if (!t.includes(suche)) continue;
+      kopfzeilen.push({ rang: t.startsWith(suche) ? 0 : 1, meta, n });
+    }
+  }
+  kopfzeilen.sort((a, b) => a.rang - b.rang);
+  for (const k of kopfzeilen){
+    if (liste.length >= VORSCHLAEGE_MAX - 1) break;
+    dazu({
+      ziel: "#/" + k.meta.abk.toLowerCase() + "/" + k.n.id,
+      kopf: k.n.e + " " + k.meta.abk, bei: k.n.t || "", marke: "Überschrift",
+    });
+  }
+
+  /* 4. Der Ausweg in den Wortlaut steht immer zuletzt. */
+  liste.length = Math.min(liste.length, VORSCHLAEGE_MAX - 1);
+  liste.push({
+    ziel: "#/suche/" + encodeURIComponent(roh),
+    kopf: "Im Wortlaut suchen", bei: "„" + roh + "“", marke: "Enter",
+  });
+  return liste;
+}
+
+/**
+ * Bedienung eines Suchfelds.
+ *
+ * Beide Felder — das schlanke in der Kopfleiste und das große auf der
+ * Startseite — bekommen dieselbe Liste und dieselben Tasten: Pfeile wählen,
+ * Enter geht, Escape schließt erst die Liste und dann das Feld.
+ */
+function suchfeldVerdrahten(eingabe, huelle){
+  const liste = document.createElement("div");
+  liste.className = "vorschlaege";
+  liste.setAttribute("role", "listbox");
+  liste.setAttribute("aria-label", "Vorschläge");
+  liste.hidden = true;
+  huelle.appendChild(liste);
+
+  eingabe.setAttribute("role", "combobox");
+  eingabe.setAttribute("aria-autocomplete", "list");
+  eingabe.setAttribute("aria-expanded", "false");
+  eingabe.setAttribute("autocomplete", "off");
+
+  let stand = [];
+  let wahl = -1;
+
+  const schliessen = () => {
+    liste.hidden = true;
+    liste.innerHTML = "";
+    stand = [];
+    wahl = -1;
+    eingabe.setAttribute("aria-expanded", "false");
+  };
+
+  const auswahlZeigen = () => {
+    [...liste.children].forEach((k, i) => {
+      k.setAttribute("aria-selected", String(i === wahl));
+      if (i === wahl && k.scrollIntoView) k.scrollIntoView({ block: "nearest" });
+    });
+  };
+
+  const gehen = (v) => { schliessen(); eingabe.blur(); location.hash = v.ziel; };
+
+  const zeichnen = () => {
+    stand = vorschlaege(eingabe.value);
+    liste.innerHTML = "";
+    wahl = -1;
+    if (!stand.length){ schliessen(); return; }
+    for (const v of stand){
+      const b = knopf("vorschlag");
+      b.setAttribute("role", "option");
+      b.setAttribute("aria-selected", "false");
+      const k = document.createElement("span"); k.className = "vkopf"; k.textContent = v.kopf;
+      const t = document.createElement("span"); t.className = "vbei"; t.textContent = v.bei;
+      const m = document.createElement("span"); m.className = "vmarke"; m.textContent = v.marke;
+      b.append(k, t, m);
+      /* `mousedown` abfangen: Sonst verlöre das Feld den Fokus, bevor der Klick
+         beim Knopf ankommt, und die Liste wäre schon zu. */
+      b.addEventListener("mousedown", (e) => e.preventDefault());
+      b.onclick = () => gehen(v);
+      liste.appendChild(b);
+    }
+    liste.hidden = false;
+    eingabe.setAttribute("aria-expanded", "true");
+  };
+
+  eingabe.addEventListener("input", zeichnen);
+  eingabe.addEventListener("focus", () => { if (eingabe.value.trim()) zeichnen(); });
+
+  eingabe.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp"){
+      if (liste.hidden) zeichnen();
+      if (liste.hidden) return;               // nichts anzubieten
+      e.preventDefault();
+      wahl = e.key === "ArrowDown"
+        ? (wahl + 1) % stand.length
+        : (wahl <= 0 ? stand.length - 1 : wahl - 1);
+      auswahlZeigen();
+      return;
+    }
+    if (e.key === "Enter"){
+      e.preventDefault();
+      if (wahl >= 0 && stand[wahl]){ gehen(stand[wahl]); return; }
+      const begriff = eingabe.value.trim();
+      schliessen();
+      if (begriff) sucheOeffnen(begriff);
+      return;
+    }
+    if (e.key === "Escape" && !liste.hidden){
+      /* Das erste Escape schließt nur die Liste; Text und Fokus bleiben. Erst
+         das zweite geht an die Seite und schließt Schublade oder Blatt. */
+      e.stopPropagation();
+      schliessen();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!huelle.isConnected) return;          // Startseite neu gezeichnet
+    if (!huelle.contains(e.target)) schliessen();
+  });
+
+  return { zeichnen, schliessen };
 }
 
 function normVolltext(norm){
@@ -5254,12 +5431,7 @@ async function start(){
     popoverSchliessen();
   });
 
-  el("suche").addEventListener("keydown", (e) => {
-    if (e.key !== "Enter") return;
-    e.preventDefault();
-    const begriff = el("suche").value.trim();
-    if (begriff) sucheOeffnen(begriff);
-  });
+  suchfeldVerdrahten(el("suche"), el("suche").closest(".suchhuelle"));
   el("wortmarke").onclick = () => { location.hash = "#/"; };
 
   window.addEventListener("hashchange", wegweiser);

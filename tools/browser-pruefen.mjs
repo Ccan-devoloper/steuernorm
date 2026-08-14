@@ -971,6 +971,147 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4i. Die Suche ──
+   Zwei Fehler waren zu beheben: Die Eingabe gab nichts zurück, und Enter fand
+   für „§ 5 EStG" null Treffer — die Abkürzung des Gesetzes steht in keinem
+   Wortlaut. Geprüft wird beides an der Tastatur, nicht am Zustand. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/1", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+
+  await seite.click("#suche");
+  await seite.type("#suche", "§ 5 EStG", { delay: 20 });
+  await seite.waitForTimeout(300);
+
+  const liste = await seite.evaluate(() => {
+    const box = document.querySelector(".suchhuelle .vorschlaege");
+    if (!box || box.hidden) return null;
+    const k = box.getBoundingClientRect();
+    const mitte = document.elementFromPoint(k.left + k.width / 2, k.top + 12);
+    return {
+      zahl: box.querySelectorAll(".vorschlag").length,
+      erster: (box.querySelector(".vorschlag .vkopf") || {}).textContent || "",
+      links: Math.round(k.left), rechts: Math.round(k.right), breite: Math.round(k.width),
+      fensterbreite: window.innerWidth,
+      obenauf: Boolean(mitte && box.contains(mitte)),
+    };
+  });
+  ok("Die Eingabe schlägt etwas vor", liste && liste.zahl >= 2,
+    liste ? liste.zahl + " Vorschläge" : "keine Liste");
+  ok("Der erste Vorschlag ist die Fundstelle",
+    liste && liste.erster === "§ 5 EStG", liste && liste.erster);
+  ok("Die Liste bleibt im Fenster",
+    liste && liste.links >= 0 && liste.rechts <= liste.fensterbreite + 1,
+    liste && `${liste.links}–${liste.rechts} von ${liste.fensterbreite}`);
+  ok("Die Liste liegt über der Seite", liste && liste.obenauf);
+  ok("Kein waagerechter Überlauf durch die Vorschläge", !(await ueberlauf(seite)));
+
+  /* Pfeiltaste wählt, Enter geht. */
+  await seite.keyboard.press("ArrowDown");
+  await seite.keyboard.press("Enter");
+  await seite.waitForTimeout(1600);
+  const nachPfeil = await seite.evaluate(() => ({
+    hash: location.hash,
+    kopf: (document.querySelector("h1") || {}).textContent || "",
+    liste: Boolean(document.querySelector(".suchhuelle .vorschlaege:not([hidden])")),
+  }));
+  ok("Der gewählte Vorschlag führt auf die Norm",
+    nachPfeil.hash === "#/estg/5" && nachPfeil.kopf.startsWith("§ 5"), JSON.stringify(nachPfeil));
+  ok("Nach dem Sprung ist die Liste zu", !nachPfeil.liste);
+
+  /* Enter ohne Auswahl: Die vollständige Fundstelle führt unmittelbar hin. */
+  await seite.goto(WURZEL + "/#/solzg/3", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  await seite.click("#suche");
+  await seite.evaluate(() => { document.getElementById("suche").value = ""; });
+  await seite.type("#suche", "§ 15 EStG", { delay: 20 });
+  await seite.keyboard.press("Enter");
+  await seite.waitForTimeout(1800);
+  const direkt = await seite.evaluate(() => ({
+    hash: location.hash, kopf: (document.querySelector("h1") || {}).textContent || "",
+  }));
+  ok("Enter auf einer Fundstelle geht ohne Umweg zur Norm",
+    direkt.hash === "#/estg/15" && direkt.kopf.startsWith("§ 15"), JSON.stringify(direkt));
+
+  /* Ein Wort aus dem Wortlaut bleibt eine Trefferliste. */
+  await seite.click("#suche");
+  await seite.evaluate(() => { document.getElementById("suche").value = ""; });
+  await seite.type("#suche", "Vorsteuer", { delay: 20 });
+  await seite.keyboard.press("Enter");
+  await seite.waitForTimeout(1500);
+  const wortlaut = await seite.evaluate(() => ({
+    hash: location.hash,
+    treffer: document.querySelectorAll(".treffer").length,
+    kopf: (document.querySelector(".trefferkopf h1") || {}).textContent || "",
+  }));
+  ok("Ein Wort führt in die Trefferliste",
+    wortlaut.hash.startsWith("#/suche/") && wortlaut.treffer > 0, JSON.stringify(wortlaut));
+  await ctx.close();
+}
+
+/* Das Feld muss auf jeder Stufe breit genug bleiben, um es als Suchfeld zu
+   erkennen. Es schrumpfte als einziges Kind der Kopfleiste und war bei 1024 px
+   26 Pixel breit — ein Streifen ohne Platzhalter. */
+{
+  for (const breite of [1920, 1440, 1280, 1024, 900, 768, 390]) {
+    const ctx = await browser.newContext({
+      viewport: { width: breite, height: 900 }, isMobile: breite < 500, hasTouch: breite < 500,
+    });
+    const seite = await ctx.newPage();
+    await seite.goto(WURZEL + "/#/estg/1", { waitUntil: "networkidle" });
+    await seite.waitForTimeout(1400);
+    const feld = await seite.evaluate(() => {
+      const k = document.querySelector(".suchfeld");
+      const p = document.querySelector("#suche");
+      return { breite: Math.round(k.getBoundingClientRect().width), platzhalter: p.placeholder };
+    });
+    ok(`Das Suchfeld bleibt benutzbar (${breite} px)`, feld.breite >= 250,
+      feld.breite + " px für „" + feld.platzhalter + "“");
+    ok(`Kein waagerechter Überlauf der Kopfleiste (${breite} px)`, !(await ueberlauf(seite)));
+    await ctx.close();
+  }
+}
+
+/* Die Trefferliste kennt die Fundstelle auch ohne geladenen Volltext. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/suche/" + encodeURIComponent("§ 5 EStG"), { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1600);
+  const stand = await seite.evaluate(() => ({
+    kopf: (document.querySelector(".trefferkopf h1") || {}).textContent || "",
+    erster: (document.querySelector(".treffer .treffer-nr") || {}).textContent || "",
+    fund: (document.querySelector(".treffer .treffer-fund") || {}).textContent || "",
+  }));
+  ok("Die Trefferliste meldet die Fundstelle",
+    stand.kopf.startsWith("1 Treffer") || /^\d+ Treffer/.test(stand.kopf), stand.kopf);
+  ok("Der Treffer ist die adressierte Norm", stand.erster === "§ 5", stand.erster);
+  ok("Er ist als Fundstelle ausgewiesen", stand.fund.startsWith("Fundstelle · EStG § 5"), stand.fund);
+  await ctx.close();
+}
+
+/* Im Dunkelmodus darf die Liste nicht hell bleiben. */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: "dark" });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/1", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+  await seite.click("#suche");
+  await seite.type("#suche", "§ 5 EStG", { delay: 20 });
+  await seite.waitForTimeout(300);
+  const farbe = await seite.evaluate(() => {
+    const box = document.querySelector(".suchhuelle .vorschlaege");
+    if (!box || box.hidden) return null;
+    const [r, g, b] = (getComputedStyle(box).backgroundColor.match(/[\d.]+/g) || []).map(Number);
+    return { hell: (r + g + b) / 3, wert: getComputedStyle(box).backgroundColor };
+  });
+  ok("Die Vorschläge folgen dem Dunkelmodus", farbe && farbe.hell < 120,
+    farbe ? farbe.wert : "keine Liste");
+  await ctx.close();
+}
+
 /* ── 5. Die drei Stufen des Rasters ── */
 for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 860], ["390 px", 390, 844]]) {
   const ctx = await browser.newContext({ viewport: { width: breite, height: hoehe } });
