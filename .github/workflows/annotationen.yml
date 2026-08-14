@@ -301,6 +301,12 @@ jobs:
           set -euo pipefail
           if [ "${{ inputs.ohne_ki }}" != "true" ]; then
             node - <<'NODE'
+          // Zuerst der Abbruch, dann der Nachweis. Vorher meldete dieser Schritt
+          // „SolzG-Mehrfachlauf fehlt" — richtig, aber nicht die Ursache: Der Lauf
+          // war in der AO stehengeblieben und hatte das SolzG nie erreicht. Die
+          // wirkliche Meldung stand zwanzig Zeilen weiter oben im Protokoll.
+          const b=require('./reports/annotation.json');
+          if(b.abgebrochen)throw new Error('Lauf abgebrochen: '+b.abgebrochen);
           const a=require('./annotations/solzg.json');
           if(!String(a.verfahren||'').includes('mehrfachlauf')||Number(a.laeufe||0)<1)throw new Error('SolzG-Mehrfachlauf fehlt');
           if(!Object.values(a.normen||{}).some(n=>String(n.verfahren||'').includes('mehrfachlauf')))throw new Error('Keine SolzG-Norm mit Mehrfachlauf');

@@ -222,6 +222,19 @@ async function pausiere() {
 }
 
 export class ModellKontingentErschoepft extends Error {}
+
+/**
+ * Die Antwort war kein brauchbares JSON.
+ *
+ * WARUM DAS EINE EIGENE KLASSE BRAUCHT. Bisher flog dafür
+ * `ModellKontingentErschoepft`, und der Aufrufer behandelt die als Grund, den
+ * GANZEN Lauf anzuhalten. Am 12., 13. und 14. August ist genau das dreimal
+ * passiert: „Ungültige Antwort: Unterminated string in JSON at position 769" —
+ * abgebrochen nach 3 von 503 Normen der AO, 26 Aufrufe verbraucht, nichts
+ * veröffentlicht. Eine abgeschnittene Antwort auf EINE Norm sagt nichts über
+ * das Kontingent und darf die anderen 1 534 nicht kosten.
+ */
+export class ModellAntwortUnbrauchbar extends Error {}
 export class ModellBudgetErschoepft extends Error {}
 /** Tageskontingent der Freistufe erreicht. Erbt bewusst von ModellBudgetErschoepft,
  *  damit jede Stelle, die auf einen kontrollierten Gesamtabbruch reagiert, das
@@ -408,12 +421,27 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
     clearTimeout(uhr);
 
     if (antwort.ok) {
+      const roh = JSON.parse(text);
+      const grund = roh.choices?.[0]?.finish_reason || "";
+      const inhalt = roh.choices?.[0]?.message?.content ?? "";
       try {
-        const roh = JSON.parse(text);
-        const inhalt = roh.choices?.[0]?.message?.content ?? "";
         return JSON.parse(String(inhalt).replace(/^```json\s*|```\s*$/g, "").trim());
       } catch (fehler) {
-        if (versuch >= 3) throw new ModellKontingentErschoepft(`Ungültige Antwort: ${fehler.message}`);
+        /* `finish_reason: "length"` heißt: Die Antwort ist nicht falsch,
+           sondern abgeschnitten. Bei denkenden Modellen zählen die
+           Überlegungen gegen dasselbe Kontingent wie die Antwort — 6 000
+           Marken können vollständig dort hineinlaufen und einen Satz mitten im
+           String enden lassen. Einmal mehr Platz geben ist billiger als die
+           Norm zu verlieren. */
+        if (grund === "length" && body.max_tokens < 16_000) {
+          body.max_tokens = 16_000;
+          continue;
+        }
+        if (versuch >= 3) {
+          throw new ModellAntwortUnbrauchbar(
+            `Ungültige Antwort (${grund || "ohne Grund"}, ${inhalt.length} Zeichen): `
+            + `${fehler.message} · Anfang: ${String(inhalt).slice(0, 160)}`);
+        }
         await warte(2_000 * versuch);
         continue;
       }
@@ -463,6 +491,14 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
          Das fällt erst bei einem anderen Anbieter auf — Google trägt beide. */
       if (body.response_format.type === "json_schema") body.response_format = { type: "json_object" };
       else delete body.response_format;
+      continue;
+    }
+    /* Serverfehler sind vorübergehend und wurden bisher sofort zum Laufende
+       erklärt: ein einzelnes 503 auf eine von 1 537 Normen hätte den ganzen
+       Lauf gekostet. Erst wenn fünf Versuche über gut zwanzig Sekunden alle
+       scheitern, ist es eine Störung und keine Schwankung. */
+    if (antwort.status >= 500 && versuch < 5) {
+      await warte(2_000 * versuch);
       continue;
     }
     throw new ModellKontingentErschoepft(`HTTP ${antwort.status}: ${text.slice(0, 200)}`);
@@ -525,6 +561,14 @@ export async function extrahiereMehrfach({ gesetz, norm, einheiten, vorschlag, b
          wiederholt wird. */
       if (fehler instanceof ModellPauseNoetig){ i--; continue; }
       if (fehler instanceof ModellBudgetErschoepft) throw fehler;
+      /* Eine unbrauchbare Antwort kostet diesen Durchgang und sonst nichts.
+         Bleiben am Ende null Antworten, arbeitet die Norm mit der Syntaxbasis
+         weiter — schlechter als mit Modell, aber die Norm ist da und der Lauf
+         läuft. */
+      if (fehler instanceof ModellAntwortUnbrauchbar){
+        console.warn(`     ⚠ ${norm.enbez}: ${fehler.message}`);
+        continue;
+      }
       if (antworten.length === 0) throw fehler;
       break; // mit weniger Läufen weiterarbeiten, Konfidenz sinkt entsprechend
     }
