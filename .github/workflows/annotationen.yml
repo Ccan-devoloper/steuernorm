@@ -48,6 +48,10 @@ on:
         description: "Unabhängige Modellläufe je Norm"
         required: false
         default: "3"
+      budget:
+        description: "Höchstzahl Modellaufrufe (leer = 180, das Tagesmaß der Freistufe)"
+        required: false
+        default: ""
       ohne_ki:
         description: "Nur Syntaxanalyse, keine Modellaufrufe"
         type: boolean
@@ -276,7 +280,11 @@ jobs:
           # jetzt die Liste, ordnet nach Familie und Fassung und pingt jedes
           # Modell an, bevor es damit arbeitet. Ein Name hier überschreibt das.
           KI_MODELLE: ""
-          MAX_MODELLAUFRUFE: "180"
+          # 180 = 45 Goldnormen × 4 Aufrufe, zugleich ein sicheres Tagesmaß der
+          # Freistufe. Reicht es nicht — Wiederholungen und Belegproben kommen
+          # obendrauf —, lässt sich der Wert beim Handstart heraufsetzen; die
+          # Grenze des Anbieters bleibt davon unberührt.
+          MAX_MODELLAUFRUFE: ${{ inputs.budget || '180' }}
           INPUT_NUR: ${{ inputs.nur }}
           INPUT_LAEUFE: ${{ inputs.laeufe }}
           INPUT_OHNE_KI: ${{ inputs.ohne_ki }}
@@ -297,21 +305,31 @@ jobs:
           node tools/annotieren.mjs "${args[@]}"
 
       - name: KI-Wirkung und Struktur nachweisen
+        env:
+          OHNE_KI: ${{ inputs.ohne_ki }}
         run: |
           set -euo pipefail
-          if [ "${{ inputs.ohne_ki }}" != "true" ]; then
-            node - <<'NODE'
-          // Zuerst der Abbruch, dann der Nachweis. Vorher meldete dieser Schritt
-          // „SolzG-Mehrfachlauf fehlt" — richtig, aber nicht die Ursache: Der Lauf
-          // war in der AO stehengeblieben und hatte das SolzG nie erreicht. Die
-          // wirkliche Meldung stand zwanzig Zeilen weiter oben im Protokoll.
-          const b=require('./reports/annotation.json');
-          if(b.abgebrochen)throw new Error('Lauf abgebrochen: '+b.abgebrochen);
-          const a=require('./annotations/solzg.json');
-          if(!String(a.verfahren||'').includes('mehrfachlauf')||Number(a.laeufe||0)<1)throw new Error('SolzG-Mehrfachlauf fehlt');
-          if(!Object.values(a.normen||{}).some(n=>String(n.verfahren||'').includes('mehrfachlauf')))throw new Error('Keine SolzG-Norm mit Mehrfachlauf');
+          node - <<'NODE'
+          const b = require('./reports/annotation.json');
+          if (b.abgebrochen) {
+            /* EIN LAUF AM KONTINGENT IST NICHT GESCHEITERT. Genau dafür gibt es
+               den Zwischenstand, und genau darauf ist das Tagesbudget ausgelegt:
+               Der Lauf hält an, der nächste setzt fort. Diese Prüfung hielt den
+               geplanten Halt für einen Fehler und ließ den Job scheitern — womit
+               der Festschreibeschritt übersprungen wurde und 180 Modellaufrufe
+               Arbeit im Papierkorb des Runners lagen. Ein unvollständiger Lauf
+               wird berichtet, nicht bestraft. */
+            console.log('⏸ Lauf unvollständig: ' + b.abgebrochen);
+            console.log('   Modellaufrufe: ' + b.modellaufrufe);
+            console.log('   Der Zwischenstand wird festgeschrieben; der nächste Lauf setzt dort fort.');
+          } else if (process.env.OHNE_KI !== 'true') {
+            const a = require('./annotations/solzg.json');
+            if (!String(a.verfahren || '').includes('mehrfachlauf') || Number(a.laeufe || 0) < 1)
+              throw new Error('SolzG-Mehrfachlauf fehlt');
+            if (!Object.values(a.normen || {}).some((n) => String(n.verfahren || '').includes('mehrfachlauf')))
+              throw new Error('Keine SolzG-Norm mit Mehrfachlauf');
+          }
           NODE
-          fi
           node tools/pruefen.mjs --streng | tee pruefbericht-ki.txt
           node tools/konsistenz.mjs --schreiben
 
@@ -322,12 +340,22 @@ jobs:
           if [ -d eval/gold ]; then node tools/eval.mjs | tee reports/eval.txt; else echo "Kein Goldstandard vorhanden — Messung übersprungen." | tee reports/eval.txt; fi
 
       - name: Änderungen konfliktfest festschreiben
+        # IMMER. Modellaufrufe sind das Knappste am ganzen Verfahren: Die
+        # Freistufe gibt sie einmal am Tag her, und ein Lauf über 53 Minuten
+        # steckt in Dateien, die mit dem Runner verschwinden. Scheitert eine
+        # Prüfung davor, ist das ein Grund, den Lauf ROT zu melden — kein Grund,
+        # die Arbeit wegzuwerfen. Was festgeschrieben wird, sagt die
+        # Commit-Nachricht; ob es taugt, sagt der Status des Laufs.
+        if: always()
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A annotations reports pruefbericht-ki.txt .fortschritt 2>/dev/null || true
           if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
-          git commit -m "Annotationen und Belegkonsens aktualisiert ($(date -u +%Y-%m-%d))"
+          stand="$(node -e 'const b=require("./reports/annotation.json");
+            process.stdout.write(b.abgebrochen ? "unvollständig, "+b.modellaufrufe+" Modellaufrufe" : "vollständig")' \
+            2>/dev/null || echo "Stand unbekannt")"
+          git commit -m "Annotationen und Belegkonsens aktualisiert ($(date -u +%Y-%m-%d), $stand)"
           git pull --rebase --autostash origin main
           git push origin HEAD:main
