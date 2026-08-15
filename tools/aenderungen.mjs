@@ -10,6 +10,26 @@
  * aus den Änderungsgesetzen im Bundesgesetzblatt gebildet. Dafür braucht es
  * eine zweite Quelle: das Rechtsinformationsportal des Bundes.
  *
+ * BEFUND VOM 15.08.2026, nach vier Sondierungsläufen — damit ihn niemand ein
+ * zweites Mal erarbeiten muss:
+ *
+ *   Der Bestand stimmt. Das UStG steht mit eigenem Kürzel im Portal, zur AO
+ *   gibt es 216 Treffer, zum EStG 113.
+ *
+ *   Die STRUKTUR trägt. Das LegalDocML des UStG hat 88 `period`-Attribute:
+ *   Jedes ordnet ein Element einer Geltungszeitgruppe zu, und die Gruppen
+ *   verweisen auf Ereignisse im Lebenszyklus. Die Zuordnung JE NORM ist damit
+ *   angelegt — genau das, was die Tabelle braucht.
+ *
+ *   Der INHALT fehlt. Jedes Ereignis trägt `date="1001-01-01"` und
+ *   `source="attributsemantik-noch-undefiniert"`. Ein Platzhalter und ein
+ *   Eingeständnis: Wann geändert wurde und durch welches Gesetz, steht nicht
+ *   da. Aus einem leeren Gerüst lässt sich keine Änderungsgeschichte bilden,
+ *   nur eine erfundene. Der Auswerter entsteht deshalb nicht.
+ *
+ * Die Sondierung urteilt am Ende selbst. Füllt das Portal die Zeitschiene
+ * eines Tages, sagt ein späterer Lauf es von allein.
+ *
  * DIE ERSTE SONDIERUNG hat gezeigt, dass es antwortet und wie:
  *
  *   GET /v1/legislation?searchTerm=…  →  JSON-LD nach schema.org
