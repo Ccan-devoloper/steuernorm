@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-08-15T09:18:14.267Z",
+ "erzeugt": "2026-08-15T13:06:23.649Z",
  "basis": "https://testphase.rechtsinformationen.bund.de",
  "gesetz": "Solidaritätszuschlaggesetz",
  "proben": [
@@ -3537,73 +3537,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu",
-       "name": "Verordnung über Mitteilungen an die Finanzbehörden durch andere Behörden und öffentlich-rechtliche Rundfunkanstalten",
-       "legislationIdentifier": "eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554",
-        "legislationIdentifier": "eli/bund/bgbl-1/1993/s1554",
-        "legislationDate": "1993-09-07",
-        "datePublished": "1993-09-07",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 1993 1554"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "MV",
-       "alternateName": "Mitteilungsverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 4a Ordnungsgelder nach § 335 des Handelsgesetzbuchs",
-        "text": "4 der <mark>Abgabenordnung</mark> fünf Jahre aufzubewahren; die Frist beginnt mit dem Tag der Festsetzung des Ordnungsgelds.",
-        "location": "art-z4a"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 13a Mitteilungen über Billigkeitsleistungen zur temporären Kostendämpfung des Erdgas- und Strompreisanstiegs nach dem Energiekostendämpfungsprogramm",
-        "text": "Schnittstelle nach Maßgabe des § 93c der <mark>Abgabenordnung</mark> mitzuteilen. (2) Zur Sicherstellung der Besteuerung sind neben den in § 93c Absatz 1 Nummer 2 der <mark>Abgabenordnung</mark> genannten Angaben folgende Angaben mitzuteilen: die Art und die Höhe der jeweils gewährten Zahlung,das Datum, an dem die Zahlung bewilligt wurde,das Datum",
-        "location": "art-z13a"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 8 Form, Inhalt und Zeitpunkt der Mitteilungen",
-        "text": "6 Absatz 2 sind abweichend von § 93c Absatz 1 Nummer 1 der <mark>Abgabenordnung</mark> unverzüglich zu übermitteln.",
-        "location": "art-z8"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1965/s585/2025-01-01/1/deu",
        "name": "Fünftes Gesetz zur Förderung der Vermögensbildung der Arbeitnehmer",
        "legislationIdentifier": "eli/bund/bgbl-1/1965/s585/2025-01-01/1/deu",
@@ -3664,6 +3597,73 @@
         "name": "§ 4 Sparvertrag über Wertpapiere oder andere Vermögensbeteiligungen",
         "text": "gleichgestellten Anlagen gilt dies nur bei Zustimmung des Unternehmens, das im Sinne des § 18 Abs. 1 des Aktiengesetzes als herrschendes Unternehmen mit dem Unternehmen des Arbeitgebers verbunden ist,der Arbeitnehmer nach Vertragsabschluß unter Aufgabe der nichtselbständigen Arbeit eine Erwerbstätigkeit, die nach § 138 Abs. 1 der <mark>Abgabenordnung</mark>",
         "location": "art-z4"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu",
+       "name": "Verordnung über Mitteilungen an die Finanzbehörden durch andere Behörden und öffentlich-rechtliche Rundfunkanstalten",
+       "legislationIdentifier": "eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554",
+        "legislationIdentifier": "eli/bund/bgbl-1/1993/s1554",
+        "legislationDate": "1993-09-07",
+        "datePublished": "1993-09-07",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1993 1554"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "MV",
+       "alternateName": "Mitteilungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1993/s1554/2025-01-01/1/deu/2026-08-10.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 4a Ordnungsgelder nach § 335 des Handelsgesetzbuchs",
+        "text": "4 der <mark>Abgabenordnung</mark> fünf Jahre aufzubewahren; die Frist beginnt mit dem Tag der Festsetzung des Ordnungsgelds.",
+        "location": "art-z4a"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 13a Mitteilungen über Billigkeitsleistungen zur temporären Kostendämpfung des Erdgas- und Strompreisanstiegs nach dem Energiekostendämpfungsprogramm",
+        "text": "Schnittstelle nach Maßgabe des § 93c der <mark>Abgabenordnung</mark> mitzuteilen. (2) Zur Sicherstellung der Besteuerung sind neben den in § 93c Absatz 1 Nummer 2 der <mark>Abgabenordnung</mark> genannten Angaben folgende Angaben mitzuteilen: die Art und die Höhe der jeweils gewährten Zahlung,das Datum, an dem die Zahlung bewilligt wurde,das Datum",
+        "location": "art-z13a"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 8 Form, Inhalt und Zeitpunkt der Mitteilungen",
+        "text": "6 Absatz 2 sind abweichend von § 93c Absatz 1 Nummer 1 der <mark>Abgabenordnung</mark> unverzüglich zu übermitteln.",
+        "location": "art-z8"
        }
       ]
      },
@@ -4073,67 +4073,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
-       "name": "Berufsbildungsgesetz",
-       "legislationIdentifier": "eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931",
-        "legislationIdentifier": "eli/bund/bgbl-1/2005/s931",
-        "legislationDate": "2005-03-23",
-        "datePublished": "2005-03-31",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2005 931"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "BBiG",
-       "alternateName": null,
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 34 Einrichten, Führen",
-        "text": "Nummer 1 nach dem Wort „Anschrift,” die Wörter „Identifikationsnummer nach dem Identifikationsnummerngesetz und” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
-        "location": "art-z34"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 36 Antrag und Mitteilungspflichten",
-        "text": "Wort „Tatsachen” die Wörter „mit Ausnahme der Identifikationsnummer nach dem Identifikationsnummerngesetz” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
-        "location": "art-z36"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/2011/s2592/2013-01-01/1/deu",
        "name": "Gesetz über die Durchführung der Amtshilfe bei der Beitreibung von Forderungen in Bezug auf bestimmte Steuern, Abgaben und sonstige Maßnahmen zwischen den Mitgliedstaaten der Europäischen Union",
        "legislationIdentifier": "eli/bund/bgbl-1/2011/s2592/2013-01-01/1/deu",
@@ -4194,6 +4133,67 @@
         "name": "§ 1 Anwendungsbereich und anzuwendendes Recht",
         "text": "Zur Ausführung der <mark>Abgabenordnung</mark> hat das Bundesministerium der Finanzen Verwaltungsvorschriften erlassen.",
         "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
+       "name": "Berufsbildungsgesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931",
+        "legislationIdentifier": "eli/bund/bgbl-1/2005/s931",
+        "legislationDate": "2005-03-23",
+        "datePublished": "2005-03-31",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2005 931"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BBiG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 34 Einrichten, Führen",
+        "text": "Nummer 1 nach dem Wort „Anschrift,” die Wörter „Identifikationsnummer nach dem Identifikationsnummerngesetz und” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
+        "location": "art-z34"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 36 Antrag und Mitteilungspflichten",
+        "text": "Wort „Tatsachen” die Wörter „mit Ausnahme der Identifikationsnummer nach dem Identifikationsnummerngesetz” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
+        "location": "art-z36"
        }
       ]
      },
@@ -4518,6 +4518,73 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
+       "name": "Investitionszulagengesetz 2007",
+       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614",
+        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614",
+        "legislationDate": "2006-07-15",
+        "datePublished": "2006-07-20",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2006 1614"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "InvZulG 2007",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 11 Verzinsung des Rückforderungsanspruchs",
+        "text": "Ist der Bescheid über die Investitionszulage aufgehoben oder zuungunsten des Anspruchsberechtigten geändert worden, ist der Rückzahlungsanspruch nach § 238 der <mark>Abgabenordnung</mark> vom Tag der Auszahlung der Investitionszulage, in den Fällen des § 175 Abs. 1 Satz 1 Nr. 2 der <mark>Abgabenordnung</mark> vom Tag des Eintritts des rückwirkenden",
+        "location": "art-z11"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 13 Anwendung der <mark>Abgabenordnung</mark>",
+        "text": "Die für Steuervergütungen geltenden Vorschriften der <mark>Abgabenordnung</mark> sind mit Ausnahme des § 163 entsprechend anzuwenden. In öffentlich-rechtlichen Streitigkeiten über die aufgrund dieses Gesetzes ergehenden Verwaltungsakte der Finanzbehörden ist der Finanzrechtsweg gegeben.",
+        "location": "art-z13"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 14 Verfolgung von Straftaten",
+        "text": "Für die Verfolgung einer Straftat nach den §§ 263 und 264 des Strafgesetzbuches, die sich auf die Investitionszulage bezieht, sowie der Begünstigung einer Person, die eine solche Straftat begangen hat, gelten die Vorschriften der <mark>Abgabenordnung</mark> über die Verfolgung von Steuerstraftaten entsprechend.",
+        "location": "art-z14"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1804/2015-09-08/1/deu",
        "name": "Kernbrennstoffsteuergesetz",
        "legislationIdentifier": "eli/bund/bgbl-1/2010/s1804/2015-09-08/1/deu",
@@ -4645,73 +4712,6 @@
         "name": "§ 8 Verbot des Betriebsausgaben- und Werbungskostenabzugs",
         "text": "oderdie Aufwendungen stammen aus Inhaberschuldverschreibungen, die durch eine Globalurkunde verbrieft und im Rahmen der Girosammelverwahrung bei einem Zentralverwahrer verwahrt werden und mit diesen vergleichbare Schuldtitel, die an einer anerkannten Börse im Sinne des § 138 Absatz 2 Satz 1 Nummer 3 Buchstabe b Satz 2 der <mark>Abgabenordnung</mark>",
         "location": "art-z8"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
-       "name": "Investitionszulagengesetz 2007",
-       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614",
-        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614",
-        "legislationDate": "2006-07-15",
-        "datePublished": "2006-07-20",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2006 1614"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "InvZulG 2007",
-       "alternateName": null,
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 11 Verzinsung des Rückforderungsanspruchs",
-        "text": "Ist der Bescheid über die Investitionszulage aufgehoben oder zuungunsten des Anspruchsberechtigten geändert worden, ist der Rückzahlungsanspruch nach § 238 der <mark>Abgabenordnung</mark> vom Tag der Auszahlung der Investitionszulage, in den Fällen des § 175 Abs. 1 Satz 1 Nr. 2 der <mark>Abgabenordnung</mark> vom Tag des Eintritts des rückwirkenden",
-        "location": "art-z11"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 13 Anwendung der <mark>Abgabenordnung</mark>",
-        "text": "Die für Steuervergütungen geltenden Vorschriften der <mark>Abgabenordnung</mark> sind mit Ausnahme des § 163 entsprechend anzuwenden. In öffentlich-rechtlichen Streitigkeiten über die aufgrund dieses Gesetzes ergehenden Verwaltungsakte der Finanzbehörden ist der Finanzrechtsweg gegeben.",
-        "location": "art-z13"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 14 Verfolgung von Straftaten",
-        "text": "Für die Verfolgung einer Straftat nach den §§ 263 und 264 des Strafgesetzbuches, die sich auf die Investitionszulage bezieht, sowie der Begünstigung einer Person, die eine solche Straftat begangen hat, gelten die Vorschriften der <mark>Abgabenordnung</mark> über die Verfolgung von Steuerstraftaten entsprechend.",
-        "location": "art-z14"
        }
       ]
      },
@@ -5548,73 +5548,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu",
-       "name": "Gesetz zur Errichtung und Führung eines Registers über Unternehmensbasisdaten und zur Einführung einer bundeseinheitlichen Wirtschaftsnummer für Unternehmen",
-       "legislationIdentifier": "eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506",
-        "legislationIdentifier": "eli/bund/bgbl-1/2021/s2506",
-        "legislationDate": "2021-07-09",
-        "datePublished": "2021-07-14",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2021 2506"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "UBRegG",
-       "alternateName": "Unternehmensbasisdatenregistergesetz",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 2 Bundeseinheitliche Wirtschaftsnummer für Unternehmen",
-        "text": "Als bundeseinheitliche Wirtschaftsnummer für Unternehmen dient die Wirtschafts-Identifikationsnummer nach § 139c der <mark>Abgabenordnung</mark>. (2) Die bundeseinheitliche Wirtschaftsnummer für Unternehmen dient dem Zweck der registerübergreifenden eindeutigen Identifikation der im Basisregister geführten Unternehmen. (3) Die öffentlichen",
-        "location": "art-z2"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 3 Inhalt des Basisregisters",
-        "text": ", einschließlich des Unterscheidungsmerkmals gemäß § 139c Absatz 5a der <mark>Abgabenordnung</mark>,die gültige Rechtsträgerkennung (LEI) gemäß Artikel 13 Absatz 1 der Delegierten Verordnung (EU) 2017/590 der Kommission vom 28.",
-        "location": "art-z3"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 4 Datenübermittlung an die Registerbehörde",
-        "text": "Daten zu den Merkmalen nach § 3 Absatz 2, 3 und 4 Nummer 1 bis 3, soweit sie aufgrund des Siebten Buches Sozialgesetzbuch gespeichert sind,von dem Bundeszentralamt für Steuern Daten zu den Merkmalen nach § 3 Absatz 2, 3 und 4 Nummer 1 bis 3, soweit sie aufgrund des § 139c der <mark>Abgabenordnung</mark> gespeichert sind. (2) Zur Pflege",
-        "location": "art-z4"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1982/s1777/2026-07-03/1/deu",
        "name": "Grunderwerbsteuergesetz",
        "legislationIdentifier": "eli/bund/bgbl-1/1982/s1777/2026-07-03/1/deu",
@@ -5675,6 +5608,73 @@
         "name": "§ 19 Anzeigepflicht der Beteiligten",
         "text": "Sie können gemäß § 87a der <mark>Abgabenordnung</mark> in elektronischer Form übermittelt werden. (6) Die Höhe des Verspätungszuschlags bestimmt sich nach § 152 Absatz 5 Satz 2 der <mark>Abgabenordnung</mark>; § 152 Absatz 6 der <mark>Abgabenordnung</mark> ist nicht anzuwenden.",
         "location": "art-z19"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu",
+       "name": "Gesetz zur Errichtung und Führung eines Registers über Unternehmensbasisdaten und zur Einführung einer bundeseinheitlichen Wirtschaftsnummer für Unternehmen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506",
+        "legislationIdentifier": "eli/bund/bgbl-1/2021/s2506",
+        "legislationDate": "2021-07-09",
+        "datePublished": "2021-07-14",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2021 2506"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "UBRegG",
+       "alternateName": "Unternehmensbasisdatenregistergesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2506/2026-01-01/1/deu/2026-03-04.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Bundeseinheitliche Wirtschaftsnummer für Unternehmen",
+        "text": "Als bundeseinheitliche Wirtschaftsnummer für Unternehmen dient die Wirtschafts-Identifikationsnummer nach § 139c der <mark>Abgabenordnung</mark>. (2) Die bundeseinheitliche Wirtschaftsnummer für Unternehmen dient dem Zweck der registerübergreifenden eindeutigen Identifikation der im Basisregister geführten Unternehmen. (3) Die öffentlichen",
+        "location": "art-z2"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Inhalt des Basisregisters",
+        "text": ", einschließlich des Unterscheidungsmerkmals gemäß § 139c Absatz 5a der <mark>Abgabenordnung</mark>,die gültige Rechtsträgerkennung (LEI) gemäß Artikel 13 Absatz 1 der Delegierten Verordnung (EU) 2017/590 der Kommission vom 28.",
+        "location": "art-z3"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 4 Datenübermittlung an die Registerbehörde",
+        "text": "Daten zu den Merkmalen nach § 3 Absatz 2, 3 und 4 Nummer 1 bis 3, soweit sie aufgrund des Siebten Buches Sozialgesetzbuch gespeichert sind,von dem Bundeszentralamt für Steuern Daten zu den Merkmalen nach § 3 Absatz 2, 3 und 4 Nummer 1 bis 3, soweit sie aufgrund des § 139c der <mark>Abgabenordnung</mark> gespeichert sind. (2) Zur Pflege",
+        "location": "art-z4"
        }
       ]
      },
@@ -6773,73 +6773,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu",
-       "name": "Verordnung zur Umsetzung der Verpflichtungen aus dem Abkommen zwischen der Bundesrepublik Deutschland und den Vereinigten Staaten von Amerika zur Förderung der Steuerehrlichkeit bei internationalen Sachverhalten und hinsichtlich der als Gesetz über die Steuerehrlichkeit bezüglich Auslandskonten bekannten US-amerikanischen Informations- und Meldebestimmungen",
-       "legislationIdentifier": "eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222",
-        "legislationIdentifier": "eli/bund/bgbl-1/2014/s1222",
-        "legislationDate": "2014-07-23",
-        "datePublished": "2014-07-28",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2014 1222"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "FATCA-USA-UmsV",
-       "alternateName": "FATCA-USA-Umsetzungsverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 4 Verhinderung der Umgehung der Meldepflicht",
-        "text": ". § 42 der <mark>Abgabenordnung</mark> gilt entsprechend.",
-        "location": "art-z4"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "Eingangsformel",
-        "text": "Auf Grund des § 117c Absatz 1 Satz 1 der <mark>Abgabenordnung</mark>, der durch Artikel 13 des Gesetzes vom 18. Dezember 2013 (BGBl. I S. 4318) eingefügt worden ist, verordnet das Bundesministerium der Finanzen:",
-        "location": "präambel-n1_formel-n1"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 11 Ordnungswidrigkeiten",
-        "text": "Ordnungswidrig im Sinne des § 383a Absatz 1 der <mark>Abgabenordnung</mark> handelt, wer vorsätzlich oder leichtfertig entgegen § 8 Absatz 3 oder § 10 Absatz 1 Daten nicht, nicht richtig, nicht vollständig, nicht in der vorgeschriebenen Weise oder nicht rechtzeitig übermittelt.",
-        "location": "art-z11"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s2359/2026-01-01/1/deu",
        "name": "Umsatzsteuer-Durchführungsverordnung",
        "legislationIdentifier": "eli/bund/bgbl-1/1979/s2359/2026-01-01/1/deu",
@@ -6900,6 +6833,73 @@
         "name": "§ 48 Verfahren",
         "text": "Ein danach verbleibender Erstattungsanspruch ist mit Ansprüchen aus dem Steuerschuldverhältnis aufzurechnen (§ 226 der <mark>Abgabenordnung</mark>), im Übrigen zu erstatten.",
         "location": "art-z48"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu",
+       "name": "Verordnung zur Umsetzung der Verpflichtungen aus dem Abkommen zwischen der Bundesrepublik Deutschland und den Vereinigten Staaten von Amerika zur Förderung der Steuerehrlichkeit bei internationalen Sachverhalten und hinsichtlich der als Gesetz über die Steuerehrlichkeit bezüglich Auslandskonten bekannten US-amerikanischen Informations- und Meldebestimmungen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222",
+        "legislationIdentifier": "eli/bund/bgbl-1/2014/s1222",
+        "legislationDate": "2014-07-23",
+        "datePublished": "2014-07-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2014 1222"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "FATCA-USA-UmsV",
+       "alternateName": "FATCA-USA-Umsetzungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1222/2026-07-03/1/deu/2026-08-10.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 4 Verhinderung der Umgehung der Meldepflicht",
+        "text": ". § 42 der <mark>Abgabenordnung</mark> gilt entsprechend.",
+        "location": "art-z4"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "Eingangsformel",
+        "text": "Auf Grund des § 117c Absatz 1 Satz 1 der <mark>Abgabenordnung</mark>, der durch Artikel 13 des Gesetzes vom 18. Dezember 2013 (BGBl. I S. 4318) eingefügt worden ist, verordnet das Bundesministerium der Finanzen:",
+        "location": "präambel-n1_formel-n1"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 11 Ordnungswidrigkeiten",
+        "text": "Ordnungswidrig im Sinne des § 383a Absatz 1 der <mark>Abgabenordnung</mark> handelt, wer vorsätzlich oder leichtfertig entgegen § 8 Absatz 3 oder § 10 Absatz 1 Daten nicht, nicht richtig, nicht vollständig, nicht in der vorgeschriebenen Weise oder nicht rechtzeitig übermittelt.",
+        "location": "art-z11"
        }
       ]
      },
@@ -8663,61 +8663,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu",
-       "name": "Gesetz über die Erhebung einer Sondersteuer auf alkoholhaltige Süßgetränke Alkopops zum Schutz junger Menschen",
-       "legislationIdentifier": "eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857",
-        "legislationIdentifier": "eli/bund/bgbl-1/2004/s1857",
-        "legislationDate": "2004-07-23",
-        "datePublished": "2004-07-28",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2004 1857"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "AlkopopStG",
-       "alternateName": "Alkopopsteuergesetz",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 1 Steuergebiet, Steuergegenstand",
-        "text": "Die Alkopopsteuer ist eine Verbrauchsteuer im Sinne der <mark>Abgabenordnung</mark>. (2) Alkopops im Sinne dieses Gesetzes sind Getränke, auch in gefrorenem Zustand, die aus einer Mischung von Getränken mit einem Alkoholgehalt von 1,2 Prozent vol oder weniger oder gegorenen Getränken mit einem Alkoholgehalt von mehr als 1,2 Prozent",
-        "location": "art-z1"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1999/s378/2026-01-01/1/deu",
        "name": "Stromsteuergesetz",
        "legislationIdentifier": "eli/bund/bgbl-1/1999/s378/2026-01-01/1/deu",
@@ -8778,6 +8723,128 @@
         "name": "§ 10a Datenübermittlung",
         "text": "Bundesnetzagentur, das Umweltbundesamt sowie das Bundesamt für Wirtschaft und Ausfuhrkontrolle dürfen Informationen, einschließlich personenbezogener Daten sowie Betriebs- und Geschäftsgeheimnisse, an die Generalzolldirektion und die Hauptzollämter übermitteln, soweit dies zur Durchführung eines Steuerverfahrens nach der <mark>Abgabenordnung</mark>",
         "location": "art-z10a"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu",
+       "name": "Gesetz über die Erhebung einer Sondersteuer auf alkoholhaltige Süßgetränke Alkopops zum Schutz junger Menschen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857",
+        "legislationIdentifier": "eli/bund/bgbl-1/2004/s1857",
+        "legislationDate": "2004-07-23",
+        "datePublished": "2004-07-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2004 1857"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "AlkopopStG",
+       "alternateName": "Alkopopsteuergesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1857/2023-02-13/1/deu/2023-04-25.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Steuergebiet, Steuergegenstand",
+        "text": "Die Alkopopsteuer ist eine Verbrauchsteuer im Sinne der <mark>Abgabenordnung</mark>. (2) Alkopops im Sinne dieses Gesetzes sind Getränke, auch in gefrorenem Zustand, die aus einer Mischung von Getränken mit einem Alkoholgehalt von 1,2 Prozent vol oder weniger oder gegorenen Getränken mit einem Alkoholgehalt von mehr als 1,2 Prozent",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu",
+       "name": "Verordnung zur Anwendung des Fremdvergleichsgrundsatzes auf Betriebsstätten nach § 1 Absatz 5 des Außensteuergesetzes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603",
+        "legislationIdentifier": "eli/bund/bgbl-1/2014/s1603",
+        "legislationDate": "2014-10-13",
+        "datePublished": "2014-10-17",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2014 1603"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BsGaV",
+       "alternateName": "Betriebsstättengewinnaufteilungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Hilfs- und Nebenrechnung",
+        "text": "Die Hilfs- und Nebenrechnung beinhaltet auch fiktive Betriebseinnahmen und fiktive Betriebsausgaben, die auf Grund anzunehmender schuldrechtlicher Beziehungen entstehen (§§ 16 und 17). (3) In den Aufzeichnungen, die nach § 90 Absatz 3 der <mark>Abgabenordnung</mark> zu erstellen und nach § 90 Absatz 4 der <mark>Abgabenordnung</mark> vorzulegen sind",
+        "location": "art-z3"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 39 Ständige Vertreter",
+        "text": "(1) Diese Verordnung ist sinngemäß auf ständige Vertreter im Sinne des § 13 der <mark>Abgabenordnung</mark> anzuwenden. (2) Handelt es sich bei einem ständigen Vertreter um ein rechtlich selbständiges Unternehmen mit eigenem Personal im Sinne des § 2 Absatz 4, so sind für die sinngemäße Anwendung nach Absatz 1 abweichend von § 2 Absatz",
+        "location": "art-z39"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Zurechnung von Einkünften zu einer Betriebsstätte",
+        "text": "(1) Für die steuerliche Zurechnung von Einkünften zu einer Betriebsstätte eines Unternehmens nach § 1 Absatz 5 des Außensteuergesetzes ist eine Funktions- und Risikoanalyse der Geschäftstätigkeit der Betriebsstätte (§ 12 der <mark>Abgabenordnung</mark>) als Teil der Geschäftstätigkeit des Unternehmens durchzuführen.",
+        "location": "art-z1"
        }
       ]
      },
@@ -8896,73 +8963,6 @@
         "location": "präambel-n1_formel-n1"
        }
       ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu",
-       "name": "Verordnung zur Anwendung des Fremdvergleichsgrundsatzes auf Betriebsstätten nach § 1 Absatz 5 des Außensteuergesetzes",
-       "legislationIdentifier": "eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603",
-        "legislationIdentifier": "eli/bund/bgbl-1/2014/s1603",
-        "legislationDate": "2014-10-13",
-        "datePublished": "2014-10-17",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2014 1603"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "BsGaV",
-       "alternateName": "Betriebsstättengewinnaufteilungsverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2014/s1603/2025-12-30/1/deu/2026-02-12.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 3 Hilfs- und Nebenrechnung",
-        "text": "Die Hilfs- und Nebenrechnung beinhaltet auch fiktive Betriebseinnahmen und fiktive Betriebsausgaben, die auf Grund anzunehmender schuldrechtlicher Beziehungen entstehen (§§ 16 und 17). (3) In den Aufzeichnungen, die nach § 90 Absatz 3 der <mark>Abgabenordnung</mark> zu erstellen und nach § 90 Absatz 4 der <mark>Abgabenordnung</mark> vorzulegen sind",
-        "location": "art-z3"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 39 Ständige Vertreter",
-        "text": "(1) Diese Verordnung ist sinngemäß auf ständige Vertreter im Sinne des § 13 der <mark>Abgabenordnung</mark> anzuwenden. (2) Handelt es sich bei einem ständigen Vertreter um ein rechtlich selbständiges Unternehmen mit eigenem Personal im Sinne des § 2 Absatz 4, so sind für die sinngemäße Anwendung nach Absatz 1 abweichend von § 2 Absatz",
-        "location": "art-z39"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 1 Zurechnung von Einkünften zu einer Betriebsstätte",
-        "text": "(1) Für die steuerliche Zurechnung von Einkünften zu einer Betriebsstätte eines Unternehmens nach § 1 Absatz 5 des Außensteuergesetzes ist eine Funktions- und Risikoanalyse der Geschäftstätigkeit der Betriebsstätte (§ 12 der <mark>Abgabenordnung</mark>) als Teil der Geschäftstätigkeit des Unternehmens durchzuführen.",
-        "location": "art-z1"
-       }
-      ]
      }
     ],
     "view": {
@@ -8974,6 +8974,2334 @@
     }
    },
    "gestalt": "{ @type: \"hydra:Collection\", @id: \"/v1/legislation?pageIndex=0&size=100\", totalItems: 216, member: Array(100) von { @type: \"SearchResult\", item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(4) }, view: { @type: \"hydra:PartialCollectionView\", first: \"/v1/legislation?pageIndex=0&size=100\", previous: null, next: \"/v1/legislation?pageIndex=1&size=100\", last: \"/v1/legislation?pageIndex=2&size=100\" } }"
+  },
+  {
+   "zweck": "Wie viele Fassungen führt das Portal zum UStG?",
+   "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Umsatzsteuergesetz&size=100",
+   "status": 200,
+   "typ": "application/json",
+   "laenge": 83437,
+   "daten": {
+    "@type": "hydra:Collection",
+    "@id": "/v1/legislation?pageIndex=0&size=100",
+    "totalItems": 39,
+    "member": [
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu",
+       "name": "Umsatzsteuergesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s1953",
+        "legislationIdentifier": "eli/bund/bgbl-1/1979/s1953",
+        "legislationDate": "1979-11-26",
+        "datePublished": "1979-11-26",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1979 1953"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "UStG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu/2026-08-07.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "name",
+        "text": "<mark>Umsatzsteuergesetz</mark>",
+        "location": null
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu",
+       "name": "Fahrzeuglieferungs-Meldepflichtverordnung",
+       "legislationIdentifier": "eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s630",
+        "legislationIdentifier": "eli/bund/bgbl-1/2009/s630",
+        "legislationDate": "2009-03-18",
+        "datePublished": "2009-03-25",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2009 630"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "FzgLiefgMeldV",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s630/2025-12-30/1/deu/2026-02-12.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Meldepflichtiger",
+        "text": "Zur Meldung verpflichtet ist der Unternehmer (§ 2 des <mark>Umsatzsteuergesetzes</mark>) oder Fahrzeuglieferer (§ 2a des <mark>Umsatzsteuergesetzes</mark>), der die Lieferung des Fahrzeugs ausführt.",
+        "location": "art-z3"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Gegenstand, Form und Frist der Meldung",
+        "text": "(1) Die in § 3 genannten Verpflichteten haben die innergemeinschaftliche Lieferung (§ 6a Abs. 1 und 2 des <mark>Umsatzsteuergesetzes</mark>) eines neuen Fahrzeuges im Sinne des § 1b Abs. 2 und 3 des <mark>Umsatzsteuergesetzes</mark> bis zum zehnten Tag nach Ablauf des Kalendervierteljahres, in dem die Lieferung ausgeführt worden ist (Meldezeitraum",
+        "location": "art-z1"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "Eingangsformel",
+        "text": "Auf Grund des § 18c Satz 1 und 2 Nr. 1 bis 4 des <mark>Umsatzsteuergesetzes</mark> in der Fassung der Bekanntmachung vom 21. Februar 2005 (BGBl. I S. 386) verordnet das Bundesministerium der Finanzen:",
+        "location": "präambel-n1_formel-n1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu",
+       "name": "Verordnung über die örtliche Zuständigkeit für die Umsatzsteuer im Ausland ansässiger Unternehmer",
+       "legislationIdentifier": "eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2001/s3814",
+        "legislationIdentifier": "eli/bund/bgbl-1/2001/s3814",
+        "legislationDate": "2001-12-20",
+        "datePublished": "2001-12-20",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2001 3814"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "UStZustV",
+       "alternateName": "Umsatzsteuerzuständigkeitsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2001/s3814/2025-12-30/1/deu/2026-02-12.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1",
+        "text": "Union die Teilnahme an dem Verfahren im Sinne des § 18j des <mark>Umsatzsteuergesetzes</mark> angezeigt haben, sind die Absätze 1 und 2 für Zwecke der Durchführung des Verfahrens im Sinne des § 18j des <mark>Umsatzsteuergesetzes</mark> mit der Maßgabe anzuwenden, dass der Unternehmer in dem Mitgliedstaat als ansässig zu behandeln ist, in dem die",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu",
+       "name": "Verordnung zur Vergabe steuerlicher Wirtschafts-Identifikationsnummern",
+       "legislationIdentifier": "eli/bund/bgbl-1/2024/293/2024-09-30/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2024/293",
+        "legislationIdentifier": "eli/bund/bgbl-1/2024/293",
+        "legislationDate": "2024-09-30",
+        "datePublished": "2024-10-02",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2024 293"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "WIdV",
+       "alternateName": "Wirtschafts-Identifikationsnummer-Verordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/293/2024-09-30/1/deu/2024-10-02.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Einführung, Aufbau und Zuteilung der Wirtschafts-Identifikationsnummer",
+        "text": "November 2024 eine Umsatzsteuer-Identifikationsnummer nach § 27a des <mark>Umsatzsteuergesetzes</mark> erteilt wurde, diese als Wirtschafts-Identifikationsnummer zu. (3) Einem wirtschaftlich Tätigen, der zwar umsatzsteuerlich erfasst oder Kleinunternehmer im Sinne des § 19 des <mark>Umsatzsteuergesetzes</mark> ist, dem das Bundeszentralamt für Steuern",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu",
+       "name": "Verordnung über die Erstattung von Umsatzsteuer an ausländische ständige diplomatische Missionen und berufskonsularische Vertretungen sowie an ihre ausländischen Mitglieder",
+       "legislationIdentifier": "eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1970/s316",
+        "legislationIdentifier": "eli/bund/bgbl-1/1970/s316",
+        "legislationDate": "1970-04-03",
+        "datePublished": "1970-04-03",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1970 316"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "UStErstV",
+       "alternateName": "Umsatzsteuererstattungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1970/s316/2023-01-01/1/deu/2023-01-13.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1",
+        "text": "in Rechnung gestellte und von ihr bezahlte Umsatzsteuer erstattet, wenn der Rechnungsbetrag einschließlich der Steuer 100 Euro übersteigt;die von ihr nach § 13b Absatz 5 des <mark>Umsatzsteuergesetzes</mark> geschuldete und von ihr entrichtete Umsatzsteuer erstattet, wenn der Rechnungsbetrag zuzüglich der Steuer 100 Euro übersteigt",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu",
+       "name": "Gesetz über den Aufbau und die Führung eines Statistikregisters",
+       "legislationIdentifier": "eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s1300",
+        "legislationIdentifier": "eli/bund/bgbl-1/1998/s1300",
+        "legislationDate": "1998-06-16",
+        "datePublished": "1998-06-16",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1998 1300"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StatRegG",
+       "alternateName": "Statistikregistergesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s1300/2024-01-01/1/deu/2023-02-13.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2a",
+        "text": "Das Bundeszentralamt für Steuern übermittelt an das Statistische Bundesamt für Organgesellschaften und Organträger nach § 2 Absatz 2 Nummer 2 des <mark>Umsatzsteuergesetzes</mark> folgende Angaben: Steuernummer einschließlich Nummer des Finanzamts, bei Änderung auch die bisherige Steuernummer,Umsatzsteuer-Identifikationsnummer,Name",
+        "location": "art-z2a"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2",
+        "text": "Einkünfte aus selbständiger Arbeit,die Angaben nach Absatz 1 Satz 1 Nummer 1 bis 4, 6 und 7.Im Rahmen der Datenübermittlung nach Satz 1 übermitteln die Finanzbehörden zusätzlich für Zwecke des Statistikregisters folgende Angaben von Steuerpflichtigen mit Lieferungen, sonstigen Leistungen und Eigenverbrauch nach § 4 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z2"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu",
+       "name": "Verordnung über Höhe und Erhebung der Konzessionsabgabe für das Betreiben eines Nebenbetriebs an der Bundesautobahn",
+       "legislationIdentifier": "eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1997/s1513",
+        "legislationIdentifier": "eli/bund/bgbl-1/1997/s1513",
+        "legislationDate": "1997-06-24",
+        "datePublished": "1997-06-24",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1997 1513"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BAB-KAbgV",
+       "alternateName": "BAB-Konzessionsabgabenverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1997/s1513/2023-03-09/1/deu/2023-03-08.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 5 Anwendung der Abgabenordnung",
+        "text": "Steuererklärungen (§§ 149 bis 153), über die Steuerfestsetzung (§§ 155 bis 168), über die Festsetzungsverjährung (§ 169 Abs. 1, 2 Satz 1 Nr. 2, Satz 2 und 3, §§ 170 und 171), über die Bestandskraft (§§ 172 bis 177), über das Erhebungsverfahren (§§ 218 bis 222, 224, 234, 240 bis 248), über die Vollstreckung (§§ 249 bis 346) und des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z5"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Höhe der Konzessionsabgabe",
+        "text": "abgegebenen Dieselkraftstoffs sowie 0,17895 Euro je einhundert Liter für sonstigen flüssigen oder je einhundert Kilogramm für gasförmigen Kraftstoff, der zum Antrieb von Kraftfahrzeugen geeignet ist. (3) Die Konzessionsabgabe für anderen Geschäfte eines Autobahnnebenbetriebs beträgt 1,1 vom Hundert des Umsatzes im Sinne des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu",
+       "name": "Gesetz über die strafbefreiende Erklärung",
+       "legislationIdentifier": "eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2003/s2928",
+        "legislationIdentifier": "eli/bund/bgbl-1/2003/s2928",
+        "legislationDate": "2003-12-23",
+        "datePublished": "2003-12-23",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2003 2928"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StraBEG",
+       "alternateName": "Strafbefreiungserklärungsgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2003/s2928/2003-12-23/1/deu/2005-12-19.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 6 Steuerordnungswidrigkeiten",
+        "text": "Die §§ 1 bis 5 gelten bei Steuerordnungswidrigkeiten nach §§ 378 bis 380 der Abgabenordnung und § 26b des <mark>Umsatzsteuergesetzes</mark> entsprechend.",
+        "location": "art-z6"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Inhalt und Wirkung der strafbefreienden Erklärung",
+        "text": "Einkommensteuer, Körperschaftsteuer, Umsatzsteuer, Vermögensteuer, Gewerbesteuer, Erbschaftsteuer, Schenkungsteuer oder Abzugsteuern nach dem Einkommensteuergesetz verkürzt oder für sich oder einen anderen nicht gerechtfertigte Steuervorteile erlangt hat, wird nicht nach den §§ 370, 370a der Abgabenordnung oder § 26c des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu",
+       "name": "Gesetz zur Ausführung der zoll- und steuerrechtlichen Bestimmungen des NATO-Truppenstatuts, des Zusatzabkommens zum NATO-Truppenstatut hinsichtlich der in der Bundesrepublik Deutschland stationierten ausländischen Streitkräfte und des Protokolls und der Abkommen betreffend die in der Bundesrepublik Deutschland errichteten internationalen militärischen Hauptquartiere",
+       "legislationIdentifier": "eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1090",
+        "legislationIdentifier": "eli/bund/bgbl-1/2009/s1090",
+        "legislationDate": "2009-05-19",
+        "datePublished": "2009-05-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2009 1090"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "TrZollG",
+       "alternateName": "Truppenzollgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1090/2026-04-01/1/deu/2026-03-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 9 Übergang von Unionswaren in die Truppenverwendung",
+        "text": "(1) Unionswaren, die ausländischen Streitkräften nach Artikel 67 des Zusatzabkommens umsatz- oder verbrauchsteuerfrei oder unter Vergütung der Verbrauchsteuer,unter den Voraussetzungen des § 1c Absatz 1 des <mark>Umsatzsteuergesetzes</mark>,nach § 4 Nummer 7 Satz 1 Buchstabe a des <mark>Umsatzsteuergesetzes</mark> steuerfrei odernach den Vorschriften",
+        "location": "art-z9"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 19 Abgabenschuld, Abgabenschuldner",
+        "text": "freien Verkehr beendet, gelten für die Entstehung der Abgabenschuld dieser Einfuhrwaren vorbehaltlich Absatz 3 die Vorschriften des Zollkodex der Union, der Delegierten Verordnung zum Zollkodex, der Durchführungsverordnung zum Zollkodex und der Übergangsverordnung zum Zollkodex, die darauf Bezug nehmenden Vorschriften des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z19"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu",
+       "name": "Luftverkehrsteuergesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1885",
+        "legislationIdentifier": "eli/bund/bgbl-1/2010/s1885",
+        "legislationDate": "2010-12-09",
+        "datePublished": "2010-12-14",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2010 1885"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "LuftVStG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s1885/2026-07-01/1/deu/2026-06-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 8 Steuerliche Beauftragte",
+        "text": "Erlaubnis zur Ausübung der Tätigkeit als steuerlicher Beauftragter hat folgende Angaben zu enthalten: den Namen des Antragstellers,den Geschäfts- oder den Wohnsitz,die Rechtsform,den abweichenden Ort der Buchführung sowiedie Steuernummer beim Finanzamt und, falls erteilt, die Umsatzsteuer-Identifikationsnummer (§ 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z8"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 7 Registrierung",
+        "text": "nachzuholen. (2) Im Antrag auf Registrierung sind von dem Luftverkehrsunternehmen anzugeben: der Name des Unternehmens,der Geschäfts- oder der Wohnsitz,die Rechtsform,der abweichende Ort der Buchführung sowiefalls erteilt, die Steuernummer beim Finanzamt und falls erteilt, die Umsatzsteuer-Identifikationsnummer nach § 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z7"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu",
+       "name": "Verordnung zur Durchführung des Leistungsanspruchs für den Aufbau und die Unterhaltung der Beratungsstellen nach dem Arbeitnehmer-Entsendegesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2766",
+        "legislationIdentifier": "eli/bund/bgbl-1/2020/s2766",
+        "legislationDate": "2020-11-03",
+        "datePublished": "2020-11-09",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2020 2766"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BStV",
+       "alternateName": "Beratungsstellenverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2766/2023-07-01/1/deu/2023-09-08.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Antragsverfahren",
+        "text": "Dritte,die Erklärung, dass der Wirtschaftlichkeits- und Sparsamkeitsgrundsatz eingehalten werden wird, undeine Bestätigung des Deutschen Gewerkschaftsbundes, dass die für den Leistungszweck eingesetzten Beschäftigten nicht bessergestellt werden als vergleichbare Bundesbedienstete. (3) Die Umsatzsteuer, die nach § 15 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu",
+       "name": "Verordnung über Informationspflichten für Dienstleistungserbringer",
+       "legislationIdentifier": "eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s267",
+        "legislationIdentifier": "eli/bund/bgbl-1/2010/s267",
+        "legislationDate": "2010-03-12",
+        "datePublished": "2010-03-17",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2010 267"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "DL-InfoV",
+       "alternateName": "Dienstleistungs-Informationspflichten-Verordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s267/2026-07-01/1/deu/2026-05-18.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Stets zur Verfügung zu stellende Informationen",
+        "text": "Genossenschaftsregister, Gesellschaftsregister, Partnerschaftsregister oder Vereinsregister unter Angabe des Registergerichts und der Registernummer,bei erlaubnispflichtigen Tätigkeiten Name und Anschrift der zuständigen Behörde oder der einheitlichen Stelle,falls er eine Umsatzsteuer-Identifikationsnummer nach § 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z2"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu",
+       "name": "Verordnung zur Durchführung von § 89 Abs. 2 der Abgabenordnung",
+       "legislationIdentifier": "eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2007/s2783",
+        "legislationIdentifier": "eli/bund/bgbl-1/2007/s2783",
+        "legislationDate": "2007-11-30",
+        "datePublished": "2007-12-07",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2007 2783"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StAuskV",
+       "alternateName": "Steuer-Auskunftsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2007/s2783/2022-12-23/1/deu/2023-01-13.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Form und Inhalt des Antrags auf Erteilung einer verbindlichen Auskunft",
+        "text": "entsprechen. (2) Eine verbindliche Auskunft kann von allen Beteiligten nur gemeinsam beantragt werden, wenn sie sich auf einen Sachverhalt bezieht, der mehreren Personen steuerlich zuzurechnen ist (§ 179 Absatz 2 Satz 2 der Abgabenordnung),zur Begründung oder Beendigung einer Organschaft im Sinne des § 2 Absatz 2 Nummer 2 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu",
+       "name": "Gesetz zur Regelung einzelner dem Schutz der finanziellen Interessen der Union dienender Bestimmungen im Rahmen der Gemeinsamen Agrarpolitik",
+       "legislationIdentifier": "eli/bund/bgbl-1/2023/204/2023-07-26/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204",
+        "legislationIdentifier": "eli/bund/bgbl-1/2023/204",
+        "legislationDate": "2023-07-26",
+        "datePublished": "2023-08-02",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2023 204"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "GAPFinISchG",
+       "alternateName": "GAP-Finanzinteressen-Schutz-Gesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu/2023-08-02.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Angaben zur Identifizierung",
+        "text": "Sofern eine Wirtschafts-Identifikationsnummer im Sinne des § 139c der Abgabenordnung nicht vergeben ist, ist die gültige Umsatzsteuer-Identifikationsnummer im Sinne des § 27a des <mark>Umsatzsteuergesetzes</mark> anzugeben. Ist auch diese nicht vergeben, ist die Steuernummer anzugeben.",
+        "location": "art-z3"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu",
+       "name": "Gesetz über die Statistik des Warenverkehrs mit dem Ausland",
+       "legislationIdentifier": "eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s1751",
+        "legislationIdentifier": "eli/bund/bgbl-1/2021/s1751",
+        "legislationDate": "2021-06-14",
+        "datePublished": "2021-06-17",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2021 1751"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "AHStatG",
+       "alternateName": "Außenhandelsstatistikgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s1751/2025-01-01/1/deu/2025-03-14.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 9 Auskunftspflicht",
+        "text": ". (4) Auskunftspflichtig für die Intrahandelsstatistik sind von den in Absatz 3 genannten Personen nur Unternehmer im Sinne von § 2 des <mark>Umsatzsteuergesetzes</mark>.",
+        "location": "art-z9"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu",
+       "name": "Verordnung über die Einfuhrabgabenfreiheit von Waren im persönlichen Gepäck von Reisenden",
+       "legislationIdentifier": "eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s2235",
+        "legislationIdentifier": "eli/bund/bgbl-1/2008/s2235",
+        "legislationDate": "2008-11-24",
+        "datePublished": "2008-11-27",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2008 2235"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "EF-VO",
+       "alternateName": "Einreise-Freimengen-Verordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s2235/2008-11-24/1/deu/2009-02-27.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "Eingangsformel",
+        "text": "I S. 2030) neu gefasst worden ist,–des § 5 Abs. 2 Nr. 8 des <mark>Umsatzsteuergesetzes</mark> in der Fassung der Bekanntmachung vom 21. Februar 2005 (BGBl. I S. 386),–des § 31 Nr. 15 Buchstabe d des Tabaksteuergesetzes vom 21. Dezember 1992 (BGBl. I S. 2150), der zuletzt durch Artikel 1 Nr. 9 Buchstabe b des Gesetzes vom 16.",
+        "location": "präambel-n1_formel-n1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu",
+       "name": "Verordnung zur Berechnung von Ablösungsbeträgen nach dem Eisenbahnkreuzungsgesetz, dem Bundesfernstraßengesetz und dem Bundeswasserstraßengesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s856",
+        "legislationIdentifier": "eli/bund/bgbl-1/2010/s856",
+        "legislationDate": "2010-07-01",
+        "datePublished": "2010-07-12",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2010 856"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "ABBV",
+       "alternateName": "Ablösungsbeträge-Berechnungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2010/s856/2021-07-01/1/deu/2022-09-23.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "Anlage (zu § 2 Absatz 1)",
+        "text": "Ist der zukünftige Erhaltungspflichtige Unternehmer im Sinne des <mark>Umsatzsteuergesetzes</mark>, ist die Berechnung auf Basis von Nettokosten durchzuführen. Eigenleistungen sind auf der Grundlage von Unternehmerleistungen zu veranschlagen.",
+        "location": "anlagen-n1_anlage-n1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu",
+       "name": "Verordnung zur Bestimmung der technischen Anforderungen an elektronische Aufzeichnungs- und Sicherungssysteme im Geschäftsverkehr",
+       "legislationIdentifier": "eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s3515",
+        "legislationIdentifier": "eli/bund/bgbl-1/2017/s3515",
+        "legislationDate": "2017-09-26",
+        "datePublished": "2017-10-06",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2017 3515"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "KassenSichV",
+       "alternateName": "Kassensicherungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s3515/2026-02-01/1/deu/2026-03-11.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 6 Anforderungen an den Beleg",
+        "text": "Die Angaben nach Satz 1 müssen für jedermann ohne maschinelle Unterstützung lesbar sein,aus einem QR-Code auslesbar sein oderin einer elektronischen Rechnung nach § 14 Absatz 1 Satz 3 und 6 des <mark>Umsatzsteuergesetzes</mark> enthalten sein.",
+        "location": "art-z6"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu",
+       "name": "Verordnung über den Ausgleich gemeinwirtschaftlicher Leistungen im Straßenpersonenverkehr",
+       "legislationIdentifier": "eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1460",
+        "legislationIdentifier": "eli/bund/bgbl-1/1977/s1460",
+        "legislationDate": "1977-08-02",
+        "datePublished": "1977-08-02",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1977 1460"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "PBefAusglV",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1460/2024-01-01/1/deu/2025-07-16.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "Anlage zu § 2",
+        "text": "Steuern, Gebühren, Beiträge Vorsteuern im Sinne des <mark>Umsatzsteuergesetzes</mark> bleiben außer Ansatz. Berücksichtigt werden können: 4a. Gewerbekapital- und Lohnsummensteuer 4b. Vermögensteuer 4c. Sonstige Steuern   Es sind alle sonstigen Kostensteuern des Verkehrsbetriebs einzusetzen (z.B. Grundsteuer). 4d.",
+        "location": "anlagen-n1_anlage-n1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu",
+       "name": "Verordnung über den Ausgleich gemeinwirtschaftlicher Leistungen im Eisenbahnverkehr",
+       "legislationIdentifier": "eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1465",
+        "legislationIdentifier": "eli/bund/bgbl-1/1977/s1465",
+        "legislationDate": "1977-08-02",
+        "datePublished": "1977-08-02",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1977 1465"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "AEAusglV",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1977/s1465/2024-01-01/1/deu/2023-12-29.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "Anlage (zu § 2)",
+        "text": "Steuern, Gebühren, Beiträge Vorsteuern im Sinne des <mark>Umsatzsteuergesetzes</mark> bleiben außer Ansatz. Berücksichtigt werden können: 4a. Gewerbekapital- und Lohnsummensteuer 4b. Vermögensteuer 4c. Sonstige Steuern Es sind alle sonstigen Kostensteuern des Verkehrsbetriebs einzusetzen (z.B. Grundsteuer). 4d.",
+        "location": "anlagen-n1_anlage-n1"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu",
+       "name": "Investitionszulagengesetz 1996",
+       "legislationIdentifier": "eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1333",
+        "legislationIdentifier": "eli/bund/bgbl-1/1991/s1333",
+        "legislationDate": "1991-06-24",
+        "datePublished": "1991-06-24",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1991 1333"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "InvZulG 1996",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1333/1998-12-24/1/deu/2005-12-19.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 11 Anwendungsbereich",
+        "text": "I S. 1861) ausgewiesen ist,tritt in § 5 Abs. 3 Nr. 1 an die Stelle der Zahl von 250 Arbeitnehmern die Zahl von 50 Arbeitnehmern,ist § 5 Abs. 3 nur anzuwenden, wenn der steuerbare Umsatz des Betriebs im Sinne des § 1 Abs. 1 Nr. 1 bis 3 des <mark>Umsatzsteuergesetzes</mark> in den 12 Monaten vor Beginn des Wirtschaftsjahres der Anschaffung",
+        "location": "art-z11"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu",
+       "name": "Vergütungsverordnung für Steuerberater, Steuerbevollmächtigte und Berufsausübungsgesellschaften",
+       "legislationIdentifier": "eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1981/s1442",
+        "legislationIdentifier": "eli/bund/bgbl-1/1981/s1442",
+        "legislationDate": "1981-12-17",
+        "datePublished": "1981-12-17",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1981 1442"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StBVV",
+       "alternateName": "Steuerberatervergütungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1981/s1442/2026-01-01/1/deu/2026-02-12.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 15 Umsatzsteuer",
+        "text": "Der Vergütung ist die Umsatzsteuer hinzuzurechnen, die nach § 12 des <mark>Umsatzsteuergesetzes</mark> auf die Tätigkeit entfällt. Dies gilt nicht, wenn die Umsatzsteuer nach § 19 Abs. 1 des <mark>Umsatzsteuergesetzes</mark> unerhoben bleibt.",
+        "location": "art-z15"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu",
+       "name": "Gesetz über die Vergütung von Vormündern und Betreuern",
+       "legislationIdentifier": "eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s925",
+        "legislationIdentifier": "eli/bund/bgbl-1/2021/s925",
+        "legislationDate": "2021-05-04",
+        "datePublished": "2021-05-12",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2021 925"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "VBVG",
+       "alternateName": "Vormünder- und Betreuervergütungsgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s925/2026-01-01/1/deu/2025-04-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Stundensatz des Vormunds",
+        "text": "Eine auf die Vergütung anfallende Umsatzsteuer wird, soweit sie nicht nach § 19 Absatz 1 des <mark>Umsatzsteuergesetzes</mark> unerhoben bleibt, zusätzlich ersetzt. (2) Bestellt das Familiengericht einen Vormund, der über besondere Kenntnisse verfügt, die für die Führung der Vormundschaft allgemein nutzbar und durch eine Ausbildung",
+        "location": "art-z3"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu",
+       "name": "Verordnung zur Durchführung des Stromsteuergesetzes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2000/s794",
+        "legislationIdentifier": "eli/bund/bgbl-1/2000/s794",
+        "legislationDate": "2000-05-31",
+        "datePublished": "2000-05-31",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2000 794"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StromStV",
+       "alternateName": "Stromsteuer-Durchführungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2000/s794/2026-01-01/1/deu/2026-03-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 15 Zuordnung von Unternehmen",
+        "text": "Die umsatzsteuerlichen Vorschriften zur Organschaft (§ 2 Absatz 2 Nummer 2 des <mark>Umsatzsteuergesetzes</mark>) sind nicht anwendbar.",
+        "location": "art-z15"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu",
+       "name": "Gesetz zur Bekämpfung der Schwarzarbeit und illegalen Beschäftigung",
+       "legislationIdentifier": "eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1842",
+        "legislationIdentifier": "eli/bund/bgbl-1/2004/s1842",
+        "legislationDate": "2004-07-23",
+        "datePublished": "2004-07-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2004 1842"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "SchwarzArbG",
+       "alternateName": "Schwarzarbeitsbekämpfungsgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s1842/2026-07-01/1/deu/2026-05-27.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 4 Befugnisse bei der Prüfung von Unterlagen und Daten",
+        "text": "der Durchführung der Prüfung nach § 2 Absatz 1 Nummer 4, 5 und 6 entsprechend für Unterlagen, aus denen die Vergütung des Leiharbeitsverhältnisses hervorgeht. (4) Die Behörden der Zollverwaltung sind zur Durchführung der Prüfungen nach § 2 Abs. 1 befugt, bei dem Auftraggeber, der nicht Unternehmer im Sinne des § 2 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z4"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 5 Duldungs- und Mitwirkungspflichten",
+        "text": "Gibt die Ausländerbehörde die einbehaltenen Dokumente zurück oder werden Ersatzdokumente ausgestellt oder vorgelegt, behält die Ausländerbehörde die Bescheinigung ein. (4) In Fällen des § 4 Absatz 4 haben die Auftraggeber, die nicht Unternehmer im Sinne des § 2 des <mark>Umsatzsteuergesetzes</mark> 1999 sind, eine Prüfung nach § 2 Abs",
+        "location": "art-z5"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 26 Operatives Informations- und Datenanalysesystem; Verordnungsermächtigung",
+        "text": "automatisiert abrufen oder von diesen Stellen übermittelt bekommen und diese Daten in dem operativen Informations- und Datenanalysesystem speichern: von den Landesfinanzbehörden: die zu einem Arbeitgeber oder Unternehmer gespeicherten Grundinformationen aus dem Stammdatendienst, Daten aus Umsatzsteuer-Voranmeldungen nach § 18 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z26"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu",
+       "name": "Gesetz über die Meldepflicht und den automatischen Austausch von Informationen meldender Plattformbetreiber in Steuersachen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2022/s2730",
+        "legislationIdentifier": "eli/bund/bgbl-1/2022/s2730",
+        "legislationDate": "2022-12-20",
+        "datePublished": "2022-12-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2022 2730"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "PStTG",
+       "alternateName": "Plattformen-Steuertransparenzgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2022/s2730/2025-12-24/1/deu/2026-02-04.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 6 Sonstige Begriffsbestimmungen",
+        "text": "Im Fall der Bundesrepublik Deutschland ist die Identifikationsnummer für Umsatzsteuerzwecke die vom Bundeszentralamt für Steuern erteilte Umsatzsteuer-Identifikationsnummer nach § 27a des <mark>Umsatzsteuergesetzes</mark>. (6) Der Meldezeitraum ist das Kalenderjahr, für das die Meldung gemäß Abschnitt 2 erfolgt. (7) Eine inserierte",
+        "location": "art-z6"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 12 Registrierung",
+        "text": "elektronischen Adressen, einschließlich der Internetadressen des meldenden Plattformbetreibers;jede Steueridentifikationsnummer, die dem meldenden Plattformbetreiber erteilt wurde;eine Erklärung mit Informationen über die Identifizierung des meldenden Plattformbetreibers für Umsatzsteuerzwecke gemäß den §§ 18i und 18j des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z12"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu",
+       "name": "Gesetz zur Einrichtung und zum Betrieb eines Registers zum Schutz des Wettbewerbs um öffentliche Aufträge und Konzessionen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s2739",
+        "legislationIdentifier": "eli/bund/bgbl-1/2017/s2739",
+        "legislationDate": "2017-07-18",
+        "datePublished": "2017-07-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2017 2739"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "WRegG",
+       "alternateName": "Wettbewerbsregistergesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2017/s2739/2026-07-01/1/deu/2026-06-16.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 3 Inhalt der Eintragung in das Wettbewerbsregister",
+        "text": ". § 27a Absatz 2 Satz 2 des <mark>Umsatzsteuergesetzes</mark> bleibt unberührt.",
+        "location": "art-z3"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu",
+       "name": "Tabaksteuergesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1870",
+        "legislationIdentifier": "eli/bund/bgbl-1/2009/s1870",
+        "legislationDate": "2009-07-15",
+        "datePublished": "2009-07-21",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2009 1870"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "TabStG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1870/2023-02-13/1/deu/2024-09-25.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 23d Versandhandel",
+        "text": "Als Privatpersonen gelten alle Erwerber, die sich gegenüber dem Versandhändler nicht als solche Abnehmer ausweisen, deren innergemeinschaftliche Erwerbe nach den Vorschriften des <mark>Umsatzsteuergesetzes</mark> der Umsatzsteuer unterliegen. (2) Wer als Versandhändler mit Sitz im Steuergebiet Tabakwaren des steuerrechtlich freien Verkehrs",
+        "location": "art-z23d"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Steuertarif",
+        "text": "Januar 2020 gültige Umsatzsteuersatz nach § 12 des <mark>Umsatzsteuergesetzes</mark>. (4) Das Bundesministerium der Finanzen macht im Bundesanzeiger jeweils im Monat Januar eines Jahres mit Wirkung vom 15.",
+        "location": "art-z2"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu",
+       "name": "Verordnung zur Durchführung des Gesetzes über die Statistik des Warenverkehrs mit dem Ausland",
+       "legislationIdentifier": "eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2580",
+        "legislationIdentifier": "eli/bund/bgbl-1/2021/s2580",
+        "legislationDate": "2021-07-07",
+        "datePublished": "2021-07-16",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2021 2580"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "AHStatDV",
+       "alternateName": "Außenhandelsstatistik-Durchführungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2021/s2580/2025-01-01/1/deu/2025-03-12.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 11 Rechnungsbetrag",
+        "text": "L 63 vom 23.2.2021, S. 386) geändert worden ist, in der jeweils geltenden Fassung zum Zeitpunkt der Annahme der Zollanmeldung festgelegt ist,der nach § 16 Absatz 6 Satz 1 des <mark>Umsatzsteuergesetzes</mark> in der jeweils geltenden Fassung monatlich festgesetzte Umsatzsteuer-Umrechnungskurs, oderder von der Europäischen Zentralbank",
+        "location": "art-z11"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu",
+       "name": "Gesetz über die Vergütung von Sachverständigen, Dolmetscherinnen, Dolmetschern, Übersetzerinnen und Übersetzern sowie die Entschädigung von ehrenamtlichen Richterinnen, ehrenamtlichen Richtern, Zeuginnen, Zeugen und Dritten",
+       "legislationIdentifier": "eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s776",
+        "legislationIdentifier": "eli/bund/bgbl-1/2004/s776",
+        "legislationDate": "2004-05-05",
+        "datePublished": "2004-05-12",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2004 776"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "JVEG",
+       "alternateName": "Justizvergütungs- und -entschädigungsgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2004/s776/2026-01-01/1/deu/2026-01-27.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 12 Ersatz für besondere Aufwendungen",
+        "text": "Gutachtens je angefangene 1 000 Anschläge 0,90 Euro, in Angelegenheiten, in denen der Sachverständige ein Honorar nach der Anlage 1 Teil 2 oder der Anlage 2 erhält, 1,50 Euro; ist die Zahl der Anschläge nicht bekannt, ist diese zu schätzen;die auf die Vergütung entfallende Umsatzsteuer, sofern diese nicht nach § 19 Abs. 1 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z12"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
+       "name": "Verordnung zur Durchführung des Energiesteuergesetzes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753",
+        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753",
+        "legislationDate": "2006-07-31",
+        "datePublished": "2006-08-03",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2006 1753"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "EnergieStV",
+       "alternateName": "Energiesteuer-Durchführungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 78 Anmeldung für Lieferer, Entnehmer und Bezieher von Erdgas",
+        "text": "Anmeldepflichtigen zuständigen Hauptzollamt abzugeben. (2) In der Anmeldung sind anzugeben: Name, Geschäfts- oder Wohnsitz, Rechtsform, bei jährlicher Steueranmeldung die voraussichtlich zu erwartende Jahressteuerschuld, die Steuernummer beim Finanzamt und - falls erteilt - die Umsatzsteuer-Identifikationsnummer (§ 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z78"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 62 Anmeldung des Kohlebetriebs",
+        "text": "Anmeldung nach § 31 Absatz 3 des Gesetzes vor der Eröffnung des Betriebs schriftlich beim Hauptzollamt abzugeben. (2) In der Anmeldung sind anzugeben: Name, Geschäftssitz (§ 23 Abs. 2 der Abgabenordnung), Rechtsform, die Steuernummer beim Finanzamt und - falls erteilt - die Umsatzsteuer-Identifikationsnummer (§ 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z62"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 50 Anzeige",
+        "text": "§ 23 Absatz 4 Satz 1 des Gesetzes ist schriftlich bei dem für den Anzeigepflichtigen zuständigen Hauptzollamt zu erstatten. (2) In der Anzeige sind anzugeben: Name, Geschäfts- oder Wohnsitz, Rechtsform, die Steuernummer beim zuständigen Finanzamt und - falls erteilt - die Umsatzsteuer-Identifikationsnummer (§ 27a des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z50"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu",
+       "name": "Schaumwein- und Zwischenerzeugnissteuergesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1896",
+        "legislationIdentifier": "eli/bund/bgbl-1/2009/s1896",
+        "legislationDate": "2009-07-15",
+        "datePublished": "2009-07-21",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2009 1896"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "SchaumwZwStG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2009/s1896/2023-02-13/1/deu/2024-09-25.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 21 Versandhandel",
+        "text": "Als Privatpersonen gelten alle Erwerber, die sich gegenüber dem Versandhändler nicht als Abnehmer ausweisen, deren innergemeinschaftliche Erwerbe nach den Vorschriften des <mark>Umsatzsteuergesetzes</mark> der Umsatzsteuer unterliegen. (2) Wer als Versandhändler Schaumwein in das Steuergebiet liefern will, bedarf einer Erlaubnis.",
+        "location": "art-z21"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu",
+       "name": "Verordnung über die Honorare für Architekten- und Ingenieurleistungen",
+       "legislationIdentifier": "eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2276",
+        "legislationIdentifier": "eli/bund/bgbl-1/2013/s2276",
+        "legislationDate": "2013-07-10",
+        "datePublished": "2013-07-16",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2013 2276"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "HOAI",
+       "alternateName": "Honorarordnung für Architekten und Ingenieure",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2276/2023-09-28/1/deu/2025-09-23.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 16 Umsatzsteuer",
+        "text": "(1) Der Auftragnehmer hat Anspruch auf Ersatz der gesetzlich geschuldeten Umsatzsteuer für nach dieser Verordnung abrechenbare Leistungen, sofern nicht die Kleinunternehmerregelung nach § 19 des <mark>Umsatzsteuergesetzes</mark> angewendet wird.",
+        "location": "art-z16"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 14 Nebenkosten",
+        "text": "(1) Der Auftragnehmer kann neben den Honoraren dieser Verordnung auch die für die Ausführung des Auftrags erforderlichen Nebenkosten in Rechnung stellen; ausgenommen sind die abziehbaren Vorsteuern gemäß § 15 Absatz 1 des <mark>Umsatzsteuergesetzes</mark> in der jeweils geltenden Fassung.",
+        "location": "art-z14"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu",
+       "name": "Digitale-Dienste-Gesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2024/149/2026-07-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2024/149",
+        "legislationIdentifier": "eli/bund/bgbl-1/2024/149",
+        "legislationDate": "2024-05-06",
+        "datePublished": "2024-05-13",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2024 149"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "DDG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2024/149/2026-07-01/1/deu/2026-05-18.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 5 Allgemeine Informationspflichten",
+        "text": "Diensteanbieter angehören,die gesetzliche Berufsbezeichnung und den Staat, in dem die Berufsbezeichnung verliehen worden ist,die Bezeichnung der berufsrechtlichen Regelungen und die Angabe, wie diese Regelungen zugänglich sind,in Fällen, in denen sie eine Umsatzsteueridentifikationsnummer nach § 27a Absatz 1 Satz 1, 2 oder 3 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z5"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu",
+       "name": "Alkoholsteuergesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s1651",
+        "legislationIdentifier": "eli/bund/bgbl-1/2013/s1651",
+        "legislationDate": "2013-06-21",
+        "datePublished": "2013-06-28",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2013 1651"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "AlkStG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s1651/2023-02-13/1/deu/2024-09-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 25 Versandhandel",
+        "text": "Als Privatpersonen gelten alle Erwerber, die sich gegenüber dem Versandhändler nicht als Abnehmer ausweisen, deren innergemeinschaftliche Erwerbe nach den Vorschriften des <mark>Umsatzsteuergesetzes</mark> der Umsatzsteuer unterliegen. (2) Wer als Versandhändler Alkoholerzeugnisse in das Steuergebiet liefern will, bedarf einer Erlaubnis",
+        "location": "art-z25"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu",
+       "name": "Einführungsgesetz zur Abgabenordnung",
+       "legislationIdentifier": "eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1976/s3341",
+        "legislationIdentifier": "eli/bund/bgbl-1/1976/s3341",
+        "legislationDate": "1976-12-14",
+        "datePublished": "1976-12-14",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1976 3341"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "EGAO",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1976/s3341/2026-02-14/1/deu/2026-07-02.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 8 Verspätungszuschlag",
+        "text": "Januar 2019 einzureichen sind, undUmsatzsteuererklärungen für den kürzeren Besteuerungszeitraum nach § 18 Absatz 3 Satz 1 und 2 des <mark>Umsatzsteuergesetzes</mark>, wenn die gewerbliche oder berufliche Tätigkeit im Laufe des Kalenderjahres 2018 endet.",
+        "location": "art-z8"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu",
+       "name": "Gesetz zur Errichtung eines Finanzmarkt- und eines Wirtschaftsstabilisierungsfonds",
+       "legislationIdentifier": "eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s1982",
+        "legislationIdentifier": "eli/bund/bgbl-1/2008/s1982",
+        "legislationDate": "2008-10-17",
+        "datePublished": "2008-10-17",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2008 1982"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "StFG",
+       "alternateName": "Stabilisierungsfondsgesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2008/s1982/2026-01-01/1/deu/2026-02-10.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 14 Steuern",
+        "text": "Er ist kein Unternehmer im Sinne des <mark>Umsatzsteuergesetzes</mark>. (2) Auf Kapitalerträge des Fonds ist ein Steuerabzug nicht vorzunehmen; ist Kapitalertragsteuer einbehalten und abgeführt worden, obwohl eine Verpflichtung hierzu nicht bestand, hat der zum Steuerabzug Verpflichtete die Steueranmeldung insoweit zu ändern.",
+        "location": "art-z14"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu",
+       "name": "Gesetz über Kosten der freiwilligen Gerichtsbarkeit für Gerichte und Notare",
+       "legislationIdentifier": "eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2586",
+        "legislationIdentifier": "eli/bund/bgbl-1/2013/s2586",
+        "legislationDate": "2013-07-23",
+        "datePublished": "2013-07-29",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2013 2586"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "GNotKG",
+       "alternateName": "Gerichts- und Notarkostengesetz",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2013/s2586/2026-01-01/1/deu/2026-04-27.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 110 Verschiedene Beurkundungsgegenstände",
+        "text": "verschiedene Beurkundungsgegenstände Beschlüsse von Organen einer Vereinigung oder Stiftung und Erklärungen,ein Veräußerungsvertrag und Erklärungen zur Finanzierung der Gegenleistung gegenüber Dritten,Erklärungen zur Bestellung von subjektiv-dinglichen Rechten sowieein Verzicht auf Steuerbefreiungen gemäß § 9 Absatz 1 des <mark>Umsatzsteuergesetzes</mark>",
+        "location": "art-z110"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu",
+       "name": "Luftverkehrsgesetz",
+       "legislationIdentifier": "eli/bund/banz-at/1922/s681/2026-07-29/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/banz-at/1922/s681",
+        "legislationIdentifier": "eli/bund/banz-at/1922/s681",
+        "legislationDate": "1922-08-01",
+        "datePublished": "1922-08-01",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "1922 681"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "LuftVG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29/zip",
+         "contentUrl": "/v1/legislation/eli/bund/banz-at/1922/s681/2026-07-29/1/deu/2026-07-29.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 32",
+        "text": "August 2013 geltenden Fassung zu erhebenden Auslagen ist eine für die Amtshandlungen nach § 32 Abs. 4 Satz 1 Nr. 7 nach dem <mark>Umsatzsteuergesetz</mark> geschuldete Umsatzsteuer hinzuzurechnen.",
+        "location": "art-z32"
+       }
+      ]
+     }
+    ],
+    "view": {
+     "@type": "hydra:PartialCollectionView",
+     "first": "/v1/legislation?pageIndex=0&size=100",
+     "previous": null,
+     "next": null,
+     "last": "/v1/legislation?pageIndex=0&size=100"
+    }
+   },
+   "gestalt": "{ @type: \"hydra:Collection\", @id: \"/v1/legislation?pageIndex=0&size=100\", totalItems: 39, member: Array(39) von { @type: \"SearchResult\", item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: \"hydra:PartialCollectionView\", first: \"/v1/legislation?pageIndex=0&size=100\", previous: null, next: null, last: \"/v1/legislation?pageIndex=0&size=100\" } }"
+  },
+  {
+   "zweck": "Stehen die Änderungsgesetze darin?",
+   "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Jahressteuergesetz",
+   "status": 200,
+   "typ": "application/json",
+   "laenge": 2676,
+   "daten": {
+    "@type": "hydra:Collection",
+    "@id": "/v1/legislation?pageIndex=0&size=100",
+    "totalItems": 1,
+    "member": [
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu",
+       "name": "Einführungsgesetz zum Strafgesetzbuch",
+       "legislationIdentifier": "eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1974/s469",
+        "legislationIdentifier": "eli/bund/bgbl-1/1974/s469",
+        "legislationDate": "1974-03-02",
+        "datePublished": "1974-03-02",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1974 469"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "EGStGB",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1974/s469/2024-04-01/1/deu/2025-09-24.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "Art 316j Übergangsvorschrift zum <mark>Jahressteuergesetz</mark> 2020",
+        "text": "Wird über die Anordnung der Einziehung des Tatertrages oder des Wertes des Tatertrages wegen einer Tat, die vor dem 29. Dezember 2020 begangen worden ist, nach diesem Zeitpunkt entschieden, so ist abweichend von § 2 Absatz 5 des Strafgesetzbuches § 73e Absatz 1 Satz 2 des Strafgesetzbuches in der am 29. Dezember 2020 geltenden Fassung anzuwenden, wenn es sich um eine unter den in § 370 Absatz 3 Satz 2 Nummer 1 der Abgabenordnung genannten Voraussetzungen begangene Tat handelt oderdas Erlöschen im Sinne von § 73e Absatz 1 Satz 2 des Strafgesetzbuches durch Verjährung nach § 47 der Abgabenordnung nach dem 1. Juli 2020 eingetreten ist oderdas Erlöschen im Sinne von § 73e Absatz 1 Satz 2 des Strafgesetzbuches nach dem 29. Dezember 2020 eingetreten ist.",
+        "location": "art-z316j"
+       }
+      ]
+     }
+    ],
+    "view": {
+     "@type": "hydra:PartialCollectionView",
+     "first": "/v1/legislation?pageIndex=0&size=100",
+     "previous": null,
+     "next": null,
+     "last": "/v1/legislation?pageIndex=0&size=100"
+    }
+   },
+   "gestalt": "{ @type: \"hydra:Collection\", @id: \"/v1/legislation?pageIndex=0&size=100\", totalItems: 1, member: Array(1) von { @type: \"SearchResult\", item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: \"hydra:PartialCollectionView\", first: \"/v1/legislation?pageIndex=0&size=100\", previous: null, next: null, last: \"/v1/legislation?pageIndex=0&size=100\" } }"
   },
   {
    "zweck": "Verweis aus dem Treffer",
@@ -9119,7 +11447,7 @@
    "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1.html",
    "status": 200,
    "typ": "text/html;charset=UTF-8",
-   "laenge": 12542,
+   "laenge": 12543,
    "gestalt": "kein JSON (text/html)"
   },
   {
@@ -9350,5 +11678,25 @@
     "location": null
    }
   ]
+ },
+ "fassungenDesUStG": [
+  "eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu"
+ ],
+ "aenderungsgesetze": {
+  "gefunden": 1,
+  "erste": [
+   {
+    "name": "Einführungsgesetz zum Strafgesetzbuch",
+    "datum": "1974-03-02",
+    "fundstelle": "BGBl I, 1974 469"
+   }
+  ]
+ },
+ "urteil": {
+  "ereignisse": 16,
+  "mitEchtemDatum": 0,
+  "mitQuelle": 0,
+  "perioden": 93,
+  "tragfaehig": false
  }
 }
