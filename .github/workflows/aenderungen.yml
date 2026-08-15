@@ -11,6 +11,12 @@ name: Änderungsübersicht sondieren
 # genau die Sorte Code, die beim ersten echten Lauf umfällt.
 
 on:
+  # Monatlich, weil sich die Antwort ändern kann: Das Portal ist in der
+  # Testphase, sein Gerüst ist vollständig, nur die Zeitschiene ist leer.
+  # Füllt es sie, ändert sich der festgeschriebene Befund — und wir sehen es,
+  # ohne dass jemand daran denken muss.
+  schedule:
+    - cron: "0 6 1 * *"
   workflow_dispatch:
     inputs:
       basis:

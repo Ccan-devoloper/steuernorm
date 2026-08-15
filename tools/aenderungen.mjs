@@ -27,8 +27,30 @@
  *   da. Aus einem leeren Gerüst lässt sich keine Änderungsgeschichte bilden,
  *   nur eine erfundene. Der Auswerter entsteht deshalb nicht.
  *
- * Die Sondierung urteilt am Ende selbst. Füllt das Portal die Zeitschiene
- * eines Tages, sagt ein späterer Lauf es von allein.
+ * ZWEI AUSWEGE GEPRÜFT, beide zu. Es hätte einen günstigen Weg geben können,
+ * denn auf DOKUMENTEBENE sind die Angaben echt — „1979-11-26", „BGBl I, 1979
+ * 1953". Also:
+ *
+ *   Führt das Portal mehrere FASSUNGEN eines Gesetzes? Dann wäre die
+ *   Fassungsreihe selbst die Zeitschiene. → Nein. Zum UStG steht genau eine:
+ *   eli/bund/bgbl-1/1979/s1953/2026-02-10/1/deu. Nur die geltende.
+ *
+ *   Stehen die ÄNDERUNGSGESETZE als Verkündungsfassung darin? Dann trügen sie
+ *   Ausfertigung und Fundstelle mit sich. → Nein. Die Suche nach
+ *   „Jahressteuergesetz" findet einen einzigen Treffer, und der ist das
+ *   Einführungsgesetz zum Strafgesetzbuch von 1974.
+ *
+ * Damit bleibt für eine echte Änderungsübersicht nur der Nachbau aus dem
+ * Bundesgesetzblatt: jedes Änderungsgesetz lesen, seine Änderungsbefehle den
+ * Normen zuordnen, das Inkrafttreten aus dem Schlussartikel holen. Wochen
+ * Arbeit mit der schlechtesten aller Fehlerarten — erfundene Rechtsgeschichte,
+ * die richtig aussieht. Und absehbar Wegwerfarbeit, denn das Gerüst im Portal
+ * ist vollständig; es fehlt nur der Inhalt.
+ *
+ * Die Sondierung urteilt deshalb am Ende selbst und läuft monatlich. Füllt das
+ * Portal die Zeitschiene, ändert sich der Bericht und wir sehen es. Dann ist
+ * der Auswerter eine Sache von Tagen, weil die Gestalt bekannt ist und die
+ * Anzeige steht.
  *
  * DIE ERSTE SONDIERUNG hat gezeigt, dass es antwortet und wie:
  *
