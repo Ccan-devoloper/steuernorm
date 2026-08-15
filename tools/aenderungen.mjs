@@ -59,7 +59,7 @@ const BASIS = (process.env.RIP_BASIS || "https://testphase.rechtsinformationen.b
 /* Das kleinste Gesetz des Bestands: sechs Normen. Eine Sondierung soll die
    Gestalt zeigen, nicht den Bestand herunterladen. */
 const GESETZ = wert("--gesetz", "Solidaritätszuschlaggesetz");
-const HOECHSTENS = 14;                    // Abrufe insgesamt
+const HOECHSTENS = 20;                    // Abrufe insgesamt
 
 /** Die Gestalt eines Werts, ohne ihn zu deuten. */
 function gestalt(w, tiefe = 0) {
@@ -77,15 +77,44 @@ function gestalt(w, tiefe = 0) {
   return typeof w === "string" && w.length > 60 ? "string" : JSON.stringify(w);
 }
 
-/** Alle Zeichenketten, die wie eine Adresse dieses Portals aussehen. */
+/** Alle Zeichenketten, die wie eine Adresse dieses Portals aussehen.
+    Die `@id`-Werte sind RELATIV („/v1/legislation/eli/…"). Der erste Anlauf
+    suchte nur absolute und fand deshalb nichts zu folgen — ein Abruf, zwei
+    Erkenntnisse zu wenig. */
 function verweise(w, gefunden = new Set()) {
   if (typeof w === "string") {
     if (/^https?:\/\//.test(w) && w.startsWith(BASIS)) gefunden.add(w);
+    else if (/^\/v1\//.test(w)) gefunden.add(BASIS + w);
     return gefunden;
   }
   if (Array.isArray(w)) { for (const x of w) verweise(x, gefunden); return gefunden; }
   if (w && typeof w === "object") { for (const x of Object.values(w)) verweise(x, gefunden); }
   return gefunden;
+}
+
+/** Die Gestalt eines XML-Dokuments: welche Elemente kommen wie oft vor.
+    Der Wortlaut interessiert hier nicht — nur, ob die Auszeichnung trägt,
+    was wir brauchen: `analysis`, `passiveModifications`, `temporalData`. */
+function xmlGestalt(text) {
+  const zahl = new Map();
+  for (const m of text.matchAll(/<([a-zA-Z][\w.:-]*)[\s>\/]/g)) {
+    const name = m[1];
+    zahl.set(name, (zahl.get(name) || 0) + 1);
+  }
+  const geordnet = [...zahl].sort((a, b) => b[1] - a[1]);
+  const wichtig = ["analysis", "passiveModifications", "activeModifications", "temporalData",
+    "temporalGroup", "timeInterval", "eventRef", "lifecycle", "FRBRExpression", "FRBRdate",
+    "textualMod", "meta", "body", "article", "paragraph"];
+  const treffer = {};
+  for (const [name, n] of zahl) {
+    const rein = name.replace(/^[\w-]+:/, "");
+    if (wichtig.includes(rein)) treffer[name] = n;
+  }
+  return {
+    elemente: geordnet.length,
+    haeufigste: Object.fromEntries(geordnet.slice(0, 18)),
+    gesucht: treffer,
+  };
 }
 
 let abrufe = 0;
@@ -97,7 +126,7 @@ async function frage(zweck, url) {
   const eintrag = { zweck, url };
   try {
     const antwort = await fetch(url, {
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json, application/xml;q=0.9, */*;q=0.5" },
       signal: AbortSignal.timeout(30_000),
     });
     eintrag.status = antwort.status;
@@ -109,6 +138,15 @@ async function frage(zweck, url) {
         eintrag.daten = JSON.parse(text);
         eintrag.gestalt = gestalt(eintrag.daten);
       } catch (fehler) { eintrag.gestalt = "kein gültiges JSON: " + fehler.message; }
+    } else if (/xml/i.test(eintrag.typ)) {
+      eintrag.xml = xmlGestalt(text);
+      eintrag.gestalt = `XML · ${eintrag.xml.elemente} Elementarten · gesucht gefunden: `
+        + (Object.keys(eintrag.xml.gesucht).join(", ") || "keine");
+      /* Der Abschnitt, auf den es ankommt, im Wortlaut — höchstens 2 000
+         Zeichen. Aus IHM wird der Auswerter geschrieben. */
+      const abschnitt = /<([\w-]+:)?analysis[\s>][\s\S]{0,4000}?<\/([\w-]+:)?analysis>/i.exec(text)
+        || /<([\w-]+:)?temporalData[\s>][\s\S]{0,2000}?<\/([\w-]+:)?temporalData>/i.exec(text);
+      if (abschnitt) eintrag.auszug = abschnitt[0].slice(0, 2000);
     } else {
       eintrag.gestalt = "kein JSON (" + eintrag.typ.split(";")[0] + ")";
     }
@@ -125,9 +163,24 @@ async function frage(zweck, url) {
   return eintrag.daten || null;
 }
 
-/* ── 1. Suchen ── */
+/* ── 1. Suchen ──
+   Und zwar nach ZWEI Gesetzen: Die Testphase führt nicht zwangsläufig den
+   ganzen Bestand. Ob unsere vierzehn Steuergesetze überhaupt darin stehen,
+   entscheidet, ob dieser Weg trägt — das muss vor allem anderen feststehen. */
 const suche = await frage("Suche: " + GESETZ,
   `${BASIS}/v1/legislation?searchTerm=${encodeURIComponent(GESETZ)}`);
+
+for (const name of ["Umsatzsteuergesetz", "Einkommensteuergesetz", "Abgabenordnung"]) {
+  const treffer = await frage("Gibt es das " + name + "?",
+    `${BASIS}/v1/legislation?searchTerm=${encodeURIComponent(name)}`);
+  if (treffer && Array.isArray(treffer.member)) {
+    const namen = treffer.member.slice(0, 8)
+      .map((m) => `${m.item?.abbreviation || "?"} — ${m.item?.name}`);
+    (bericht.bestand ||= {})[name] = { gefunden: treffer.totalItems, erste: namen };
+    for (const z of namen) console.log("       · " + z);
+    console.log("");
+  }
+}
 
 /* ── 2. Den ersten Treffer VOLLSTÄNDIG zeigen ──
    Die Gestalt sagt, welche Felder es gibt; erst der ganze Eintrag sagt, was
