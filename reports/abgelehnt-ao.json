@@ -1,9 +1,779 @@
 [
   {
     "norm": "§ 1",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "ist nur anwendbar",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "rf",
+    "text": "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten ",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 2",
+    "art": "rf",
+    "text": "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "rf",
+    "text": "die Vorschriften des Dritten Teils",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "rf",
+    "text": "(Allgemeine Verfahrensvorschriften)",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 4",
+    "art": "rf",
+    "text": "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 5",
+    "art": "rf",
+    "text": "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 6",
+    "art": "rf",
+    "text": "§ 249 Absatz 2 Satz 2",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1",
     "pfad": "Abs. 2 Nr. 6",
     "art": "tb",
     "text": "§ 249 Absatz 2 Satz 2",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 7",
+    "art": "rf",
+    "text": "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 8",
+    "art": "rf",
+    "text": "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfa",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "soweit dies besonders bestimmt wird",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "ausn",
+    "text": "gilt jedoch nur, soweit dies besonders bestimmt wird",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "rf",
+    "text": "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Dop",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "gelten für Finanzbehörden nur",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "finden keine Anwendung",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "L 119 vom 4.5.2016, S. 1; L 314 vom 22.11.2016, S. 72; L 127 vom 23.5.2018, S. 2; L 47 vom",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "kann Nebenzweck sein",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "die Erzielung von Einnahmen kann Nebenzweck sein",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "def",
+    "text": "Steuern",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "die Erzielung von Einnahmen",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "def",
+    "text": "Realsteuern",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "bezeichnet die Verordnung (EU) Nr. 952/2013 des Europäischen Parlaments und des Rates vom ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "rf",
+    "text": "Zollkodex der Union bezeichnet",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 3",
+    "art": "tb",
+    "text": "L 269 vom 10.10.2013, S. 1, L 287, S. 90) in der jeweils geltenden Fassung",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 1",
+    "art": "tb",
+    "text": "Verzögerungsgelder nach § 146 Absatz 2c",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 2",
+    "art": "tb",
+    "text": "Verspätungszuschläge nach § 152",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 5",
+    "art": "tb",
+    "text": "Säumniszuschläge nach § 240",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 7",
+    "art": "tb",
+    "text": "Kosten nach den §§ 89, 89a Absatz 7 sowie den §§ 178 und 337 bis 345",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 8",
+    "art": "tb",
+    "text": "Zinsen auf Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der U",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4 Nr. 10",
+    "art": "tb",
+    "text": "Kosten nach § 10 Absatz 5 und § 11 Absatz 7 des Plattformen-Steuertransparenzgesetzes",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "die Finanzbehörde ermächtigt ist, nach ihrem Ermessen zu handeln",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben hat",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "die gesetzlichen Grenzen des Ermessens einzuhalten hat",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "ist die Finanzbehörde ermächtigt, nach ihrem Ermessen zu handeln",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1a Satz 1",
+    "art": "tb",
+    "text": "die Behörden",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1a Satz 1",
+    "art": "rf",
+    "text": "Behörden",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1b Satz 1",
+    "art": "tb",
+    "text": "die Behörden",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1b Satz 1",
+    "art": "ausn",
+    "text": "ungeachtet ihrer Rechtsform",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 1",
+    "art": "tb",
+    "text": "sie über den Bereich eines Landes hinaus tätig werden",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 1",
+    "art": "tb",
+    "text": "dem Bund die absolute Mehrheit der Anteile gehört oder die absolute Mehrheit der Stimmen z",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 1",
+    "art": "rf",
+    "text": "gelten als öffentliche Stellen des Bundes",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 1",
+    "art": "rf",
+    "text": "gelten ungeachtet der Beteiligung nicht-öffentlicher Stellen als öffentliche Stellen des B",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 2",
+    "art": "rf",
+    "text": "Anderenfalls",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1c Satz 2",
+    "art": "tb",
+    "text": "sie als öffentliche Stellen der Länder",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1d Satz 1",
+    "art": "tb",
+    "text": "sind natürliche und juristische Personen, Gesellschaften und andere Personenvereinigungen ",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1d Satz 1",
+    "art": "ausn",
+    "text": "soweit sie nicht unter die Absätze 1a bis 1c fallen",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1e Satz 1",
+    "art": "rf",
+    "text": "Öffentliche Stellen des Bundes oder der Länder gelten als nicht-öffentliche Stellen im Sin",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "das Bundesministerium der Finanzen und die für die Finanzverwaltung zuständigen",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "rf",
+    "text": "obersten Landesbehörden als oberste Behörden",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "Rechenzentren sowie Landesfinanzbehörden, denen durch eine Rechtsverordnung nach § 17 Absa",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "rf",
+    "text": "worden ist, als Landesoberbehörden",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 4",
+    "art": "tb",
+    "text": "die Oberfinanzdirektionen",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 4a",
+    "art": "rf",
+    "text": "sind Landesfinanzbehörden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 6",
+    "art": "rf",
+    "text": "sind Finanzbehörden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 7",
+    "art": "rf",
+    "text": "sind Finanzbehörden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 2 Nr. 8",
+    "art": "rf",
+    "text": "sind Finanzbehörden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "wer nach deutschem Recht Beamter oder Richter (§ 11 Absatz 1 Nummer 3 des Strafgesetzbuchs",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "wer nach deutschem Recht in einem sonstigen öffentlich-rechtlichen Amtsverhältnis steht",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "wer nach deutschem Recht sonst dazu bestellt ist, bei einer Behörde oder bei einer sonstig",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "ist, wer nach deutschem Recht",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Nr. 3",
+    "art": "tb",
+    "text": "sonst dazu bestellt ist, bei einer Behörde oder bei einer sonstigen öffentlichen Stelle od",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Nr. 3",
+    "art": "rf",
+    "text": "bestellt ist, bei einer Behörde oder bei einer sonstigen öffentlichen Stelle oder in deren",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "hat jemand dort",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Den gewöhnlichen Aufenthalt",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "Als gewöhnlicher Aufenthalt im Geltungsbereich dieses Gesetzes ist stets und von Beginn an",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "als gewöhnlicher Aufenthalt im Geltungsbereich dieses Gesetzes ist stets und von Beginn an",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "Als gewöhnlicher Aufenthalt im Geltungsbereich dieses Gesetzes",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "kurzfristige Unterbrechungen",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "bleiben unberücksichtigt",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 11",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Den Sitz",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 12",
+    "pfad": "Satz 1",
+    "art": "def",
+    "text": "Betriebstätte",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "die für ein Unternehmen nachhaltig Verträge abschließt oder vermittelt oder Aufträge einho",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "die für ein Unternehmen nachhaltig einen Bestand von Gütern oder Waren unterhält und davon",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "Ständiger Vertreter",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "ist insbesondere eine Person",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Nr. 1",
+    "art": "tb",
+    "text": "Verträge vermittelt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Nr. 1",
+    "art": "rf",
+    "text": "Verträge",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Nr. 1",
+    "art": "tb",
+    "text": "abschließt oder vermittelt oder Aufträge einholt",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Nr. 2",
+    "art": "rf",
+    "text": "Waren unterhält und davon Auslieferungen vornimmt",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 14",
+    "pfad": "Satz 3",
+    "art": "tb",
+    "text": "Vermögen genutzt wird",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14",
+    "pfad": "Satz 3",
+    "art": "tb",
+    "text": "Kapitalvermögen verzinslich angelegt wird",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14",
+    "pfad": "Satz 3",
+    "art": "rf",
+    "text": "liegt in der Regel vor",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Personenvereinigungen im Sinne dieses Gesetzes und der Steuergesetze",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Vereine ohne Rechtspersönlichkeit (§ 54 des Bürgerlichen Gesetzbuchs)",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "rechtsfähige Personengesellschaften einschließlich Gesellschaften (§ 705 des Bürgerlichen ",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Gemeinschaften der Wohnungseigentümer (§ 9a des Wohnungseigentumsgesetzes)",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Rechtsfähige Personenvereinigungen",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Bruchteilsgemeinschaften (§ 741 des Bürgerlichen Gesetzbuchs)",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Gütergemeinschaften (§ 1415 des Bürgerlichen Gesetzbuchs)",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Erbengemeinschaften (§ 2032 des Bürgerlichen Gesetzbuchs)",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "Nicht rechtsfähige Personenvereinigungen",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "sind die für nicht rechtsfähige Personenvereinigungen geltenden Vorschriften sinngemäß anz",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14b",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "Die Anteilseigner haften für die von der Körperschaft geschuldeten Ansprüche aus dem Steue",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "der Verlobte",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "der Ehegatte oder Lebenspartner",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Verwandte und Verschwägerte gerader Linie",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Geschwister",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Kinder der Geschwister",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Ehegatten oder Lebenspartner der Geschwister und Geschwister der Ehegatten oder Lebenspart",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Geschwister der Eltern",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Personen, die durch ein auf längere Dauer angelegtes Pflegeverhältnis mit häuslicher Gemei",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "der Verlobte",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "tb",
+    "text": "der Ehegatte",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "Verwandte gerader Linie",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Angehörige sind die … auch dann, wenn",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "in den Fällen der Nummern 2, 3 und 6 die die Beziehung begründende Ehe oder Lebenspartners",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "in den Fällen der Nummern 3 bis 7 die Verwandtschaft oder Schwägerschaft durch Annahme als",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "im Fall der Nummer 8 die häusliche Gemeinschaft nicht mehr besteht, sofern die Personen we",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "def",
+    "text": "Angehörige",
+    "grund": "Definiendum nur in Definitionen"
   }
 ]

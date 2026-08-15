@@ -1,29 +1,29 @@
 {
-  "erzeugt": "2026-08-15T04:47:40.183Z",
+  "erzeugt": "2026-08-15T05:38:41.423Z",
   "format": 5,
   "modelle": [
     "gemini-3.7-flash",
-    "gemini-3.7-flash-video-understanding-eap",
     "gemini-3.6-flash",
-    "gemini-3.5-flash"
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite"
   ],
   "laeufe": 3,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 1,
+      "bearbeitet": 18,
       "uebernommen": 0,
-      "markierbar": 1,
-      "abgelehnt": 1,
+      "markierbar": 16,
+      "abgelehnt": 111,
       "vollstaendig": false
     }
   ],
-  "modellaufrufe": 7,
+  "modellaufrufe": 180,
   "belegprobe": {
     "gestuetzt": 0,
     "entfernt": 0,
     "strittig": 0
   },
-  "abgebrochen": "Alle Modelle am Kontingent."
+  "abgebrochen": "Budget von 180 Modellaufrufen erschöpft"
 }
