@@ -260,6 +260,18 @@ export class ModellPauseNoetig extends Error {
 const ERSCHOEPFT = new Set();
 export const erschoepfteModelle = () => [...ERSCHOEPFT];
 
+/* ── Unbrauchbare Antworten mitschreiben ──────────────────────────────
+   WOZU. Der Lauf vom 15.08. hat 180 Aufrufe verbraucht und 18 Normen
+   angefasst — und jede einzelne ist auf der Syntaxbasis geblieben, `laeufe: 0`.
+   Es kam also aus KEINEM Aufruf etwas Brauchbares zurück. Warum, stand als
+   Warnzeile im Protokoll: 476 Zeilen, aus denen sich die entscheidenden nicht
+   herausholen lassen, ohne das ganze Protokoll zu ziehen.
+
+   Deshalb landen sie jetzt im Bericht, der ohnehin festgeschrieben wird.
+   Zwanzig Fälle reichen, um ein Muster zu erkennen; mehr wäre Ballast. */
+const UNBRAUCHBAR = [];
+export const unbrauchbareAntworten = () => UNBRAUCHBAR.slice(0, 20);
+
 /* ─────────────────────────── Systemvorgaben ─────────────────────────── */
 
 const SYSTEM_EXTRAKTION = `Du zerlegst deutsche Steuerrechtsnormen in Tatbestand und Rechtsfolge. Du erteilst keine Rechtsberatung und gibst ausschließlich valides JSON zurück.
@@ -438,6 +450,13 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
           continue;
         }
         if (versuch >= 3) {
+          UNBRAUCHBAR.push({
+            modell,
+            abschluss: grund || "ohne Grund",
+            zeichen: inhalt.length,
+            grund: fehler.message,
+            anfang: String(inhalt).slice(0, 300),
+          });
           throw new ModellAntwortUnbrauchbar(
             `Ungültige Antwort (${grund || "ohne Grund"}, ${inhalt.length} Zeichen): `
             + `${fehler.message} · Anfang: ${String(inhalt).slice(0, 160)}`);

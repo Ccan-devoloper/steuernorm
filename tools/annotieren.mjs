@@ -31,7 +31,7 @@ import { baueSchema, fuehreZusammen, normText } from "./lib/konsens.mjs";
 import {
   einAufruf, extrahiereMehrfach, gegenprobe,
   verfuegbareModelle, modelleAbgleichen, modelleOrdnen, modellAntwortet,
-  erschoepfteModelle,
+  erschoepfteModelle, unbrauchbareAntworten,
   ModellBudgetErschoepft, ModellKontingentErschoepft,
 } from "./lib/modell.mjs";
 // ModellTageslimitErschoepft wird nicht eigens importiert — sie erbt von
@@ -386,6 +386,10 @@ for (const meta of gesetze) {
 }
 
 bericht.modellaufrufe = budget.verbraucht;
+/* Was das Modell zurückgab, wenn es nichts Brauchbares zurückgab. Ohne diese
+   Zeilen sieht man nur, DASS nichts ankam. */
+const unbrauchbar = unbrauchbareAntworten();
+if (unbrauchbar.length) bericht.unbrauchbareAntworten = unbrauchbar;
 bericht.belegprobe = belegBilanz;
 bericht.abgebrochen = abbruch;
 if (!trocken) await schreibe(path.join(BERICHTE, "annotation.json"), bericht);
