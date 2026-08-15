@@ -1,0 +1,39 @@
+{
+ "erzeugt": "2026-08-15T06:37:45.090Z",
+ "basis": "https://testphase.rechtsinformationen.bund.de",
+ "proben": [
+  {
+   "zweck": "Wurzel",
+   "url": "https://testphase.rechtsinformationen.bund.de/",
+   "status": 200,
+   "typ": "text/html;charset=utf-8",
+   "laenge": 39837,
+   "gestalt": "kein JSON",
+   "anfang": "<!DOCTYPE html><html  lang=\"de\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Schneller und direkter Zugang zu Rechtsinformationen — Rechtsinformationen des Bundes</title><script nonce=\"wRO//Fnkw3H19GdiJwDH8jTn\" type=\"importmap\">{\"imports\":{\"#entry\":\"/_nuxt/DyKxRuPY.js\"}}</script><style nonce=\"wRO//Fnkw3H19GdiJwDH8jTn\">._skipLinkTarget_1u4ny"
+  },
+  {
+   "zweck": "Suche nach dem Solidaritätszuschlaggesetz",
+   "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Solidarit%C3%A4tszuschlaggesetz",
+   "status": 200,
+   "typ": "application/json",
+   "laenge": 6010,
+   "gestalt": "{ @type: string, @id: string, totalItems: number, member: Array(3) von { @type: string, item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: string, first: string, previous: null, next: null, last: string } }"
+  },
+  {
+   "zweck": "Suche allgemein",
+   "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Umsatzsteuergesetz",
+   "status": 200,
+   "typ": "application/json",
+   "laenge": 83437,
+   "gestalt": "{ @type: string, @id: string, totalItems: number, member: Array(39) von { @type: string, item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: string, first: string, previous: null, next: null, last: string } }"
+  },
+  {
+   "zweck": "Dokumentation",
+   "url": "https://testphase.rechtsinformationen.bund.de/api-docs",
+   "status": 404,
+   "typ": "application/json",
+   "laenge": 238,
+   "gestalt": "{ error: boolean, url: string, statusCode: number, statusMessage: string, message: string, data: { path: string } }"
+  }
+ ]
+}
