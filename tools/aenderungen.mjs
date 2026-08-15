@@ -79,7 +79,7 @@ const BASIS = (process.env.RIP_BASIS || "https://testphase.rechtsinformationen.b
 /* Das kleinste Gesetz des Bestands: sechs Normen. Eine Sondierung soll die
    Gestalt zeigen, nicht den Bestand herunterladen. */
 const GESETZ = wert("--gesetz", "Solidaritätszuschlaggesetz");
-const HOECHSTENS = 20;                    // Abrufe insgesamt
+const HOECHSTENS = 24;                    // Abrufe insgesamt
 
 /** Die Gestalt eines Werts, ohne ihn zu deuten. */
 function gestalt(w, tiefe = 0) {
@@ -238,6 +238,55 @@ if (ersterTreffer) {
   console.log("  Erster Treffer, ungekürzt:");
   console.log("  " + JSON.stringify(ersterTreffer, null, 1).split("\n").join("\n  ").slice(0, 2200));
   console.log("");
+}
+
+/* ── 2b. Die zwei Fragen, an denen der günstige Weg hängt ──────────────
+   Auf DOKUMENTEBENE sind die Angaben echt: legislationDate „1979-11-26",
+   isPartOf „BGBl I, 1979 1953", und das Fassungsdatum steckt in der
+   ELI-Kennung. Nur die Lebenszyklus-Ereignisse sind Platzhalter. Daraus
+   folgen zwei Fragen, und beide sind billig zu stellen:
+
+   ERSTENS: Führt das Portal MEHRERE Fassungen eines Gesetzes? Dann ist die
+   Fassungsreihe selbst die Zeitschiene — mit echten Daten, ohne dass ein
+   einziger Änderungsbefehl gelesen werden müsste.
+
+   ZWEITENS: Stehen die ÄNDERUNGSGESETZE als Verkündungsfassung darin? Dann
+   trägt jedes von ihnen sein Ausfertigungsdatum und seine Fundstelle im
+   Bundesgesetzblatt — zwei der vier Spalten geschenkt, und die dritte
+   (welche Norm) stünde als Änderungsbefehl im Text.
+
+   Fällt beides negativ aus, ist der Nachbau aus dem Bundesgesetzblatt ein
+   Vorhaben von Wochen mit der schlechtesten aller Fehlerarten: erfundene
+   Rechtsgeschichte, die richtig aussieht. */
+{
+  const werk = "eli/bund/bgbl-1/1979/s1953";                       // UStG
+  const alle = await frage("Wie viele Fassungen führt das Portal zum UStG?",
+    `${BASIS}/v1/legislation?searchTerm=Umsatzsteuergesetz&size=100`);
+  if (alle && Array.isArray(alle.member)) {
+    const fassungen = alle.member
+      .filter((m) => String(m.item?.legislationIdentifier || "").startsWith(werk))
+      .map((m) => m.item.legislationIdentifier);
+    bericht.fassungenDesUStG = fassungen;
+    console.log(`       ${fassungen.length} Fassung(en) desselben Werks:`);
+    for (const f of fassungen.slice(0, 10)) console.log("         · " + f);
+    console.log("");
+  }
+
+  const aenderung = await frage("Stehen die Änderungsgesetze darin?",
+    `${BASIS}/v1/legislation?searchTerm=${encodeURIComponent("Jahressteuergesetz")}`);
+  if (aenderung && Array.isArray(aenderung.member)) {
+    const treffer = aenderung.member.slice(0, 8).map((m) => ({
+      name: m.item?.name,
+      datum: m.item?.exampleOfWork?.legislationDate || null,
+      fundstelle: m.item?.exampleOfWork?.isPartOf?.name || null,
+    }));
+    bericht.aenderungsgesetze = { gefunden: aenderung.totalItems, erste: treffer };
+    console.log(`       ${aenderung.totalItems} Treffer:`);
+    for (const t of treffer) {
+      console.log(`         · ${t.datum || "ohne Datum"} · ${t.fundstelle || "ohne Fundstelle"} · ${String(t.name).slice(0, 60)}`);
+    }
+    console.log("");
+  }
 }
 
 /* ── 3. Den Verweisen folgen ──
