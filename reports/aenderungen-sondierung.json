@@ -1,39 +1,249 @@
 {
- "erzeugt": "2026-08-15T06:37:45.090Z",
+ "erzeugt": "2026-08-15T08:37:43.164Z",
  "basis": "https://testphase.rechtsinformationen.bund.de",
+ "gesetz": "Solidaritätszuschlaggesetz",
  "proben": [
   {
-   "zweck": "Wurzel",
-   "url": "https://testphase.rechtsinformationen.bund.de/",
-   "status": 200,
-   "typ": "text/html;charset=utf-8",
-   "laenge": 39837,
-   "gestalt": "kein JSON",
-   "anfang": "<!DOCTYPE html><html  lang=\"de\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Schneller und direkter Zugang zu Rechtsinformationen — Rechtsinformationen des Bundes</title><script nonce=\"wRO//Fnkw3H19GdiJwDH8jTn\" type=\"importmap\">{\"imports\":{\"#entry\":\"/_nuxt/DyKxRuPY.js\"}}</script><style nonce=\"wRO//Fnkw3H19GdiJwDH8jTn\">._skipLinkTarget_1u4ny"
-  },
-  {
-   "zweck": "Suche nach dem Solidaritätszuschlaggesetz",
+   "zweck": "Suche: Solidaritätszuschlaggesetz",
    "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Solidarit%C3%A4tszuschlaggesetz",
    "status": 200,
    "typ": "application/json",
    "laenge": 6010,
-   "gestalt": "{ @type: string, @id: string, totalItems: number, member: Array(3) von { @type: string, item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: string, first: string, previous: null, next: null, last: string } }"
-  },
-  {
-   "zweck": "Suche allgemein",
-   "url": "https://testphase.rechtsinformationen.bund.de/v1/legislation?searchTerm=Umsatzsteuergesetz",
-   "status": 200,
-   "typ": "application/json",
-   "laenge": 83437,
-   "gestalt": "{ @type: string, @id: string, totalItems: number, member: Array(39) von { @type: string, item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: string, first: string, previous: null, next: null, last: string } }"
-  },
-  {
-   "zweck": "Dokumentation",
-   "url": "https://testphase.rechtsinformationen.bund.de/api-docs",
-   "status": 404,
-   "typ": "application/json",
-   "laenge": 238,
-   "gestalt": "{ error: boolean, url: string, statusCode: number, statusMessage: string, message: string, data: { path: string } }"
+   "daten": {
+    "@type": "hydra:Collection",
+    "@id": "/v1/legislation?pageIndex=0&size=100",
+    "totalItems": 3,
+    "member": [
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu",
+       "name": "Solidaritätszuschlaggesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318",
+        "legislationIdentifier": "eli/bund/bgbl-1/1991/s1318",
+        "legislationDate": "1991-06-24",
+        "datePublished": "1991-06-24",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1991 1318"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "SolZG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "name",
+        "text": "<mark>Solidaritätszuschlaggesetz</mark>",
+        "location": null
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu",
+       "name": "Verordnung über die Gewährung eines Zuschlags bei Altersteilzeit",
+       "legislationIdentifier": "eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s3191",
+        "legislationIdentifier": "eli/bund/bgbl-1/1998/s3191",
+        "legislationDate": "1998-10-21",
+        "datePublished": "1998-10-21",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 1998 3191"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "ATZV",
+       "alternateName": "Altersteilzeitzuschlagsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1998/s3191/2009-02-12/1/deu/2009-05-06.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Höhe und Berechnung",
+        "text": "Zur Ermittlung dieser letztgenannten Nettobesoldung ist die Bruttobesoldung um die Lohnsteuer entsprechend der individuellen Steuerklasse (§§ 38a, 38b des Einkommensteuergesetzes), den Solidaritätszuschlag (§ 4 Satz 1 des <mark>Solidaritätszuschlaggesetzes</mark> 1995) und um einen Abzug in Höhe von 8 vom Hundert der Lohnsteuer zu vermindern",
+        "location": "art-z2"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu",
+       "name": "Verordnung über die Bewilligung von Altersteilzeit und die Gewährung eines Altersteilzeitzuschlags für die Beamtinnen und Beamten bei der Deutschen Post AG",
+       "legislationIdentifier": "eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2015/s2204",
+        "legislationIdentifier": "eli/bund/bgbl-1/2015/s2204",
+        "legislationDate": "2015-12-07",
+        "datePublished": "2015-12-16",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2015 2204"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "PostBATZV",
+       "alternateName": "Postbeamtenaltersteilzeitverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2015/s2204/2025-12-05/1/deu/2025-12-04.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Post-Altersteilzeitzuschlag",
+        "text": "Zur Ermittlung dieser letztgenannten Nettobesoldung ist die Bruttobesoldung um die Lohnsteuer entsprechend der individuellen Steuerklasse (§§ 38a, 38b des Einkommensteuergesetzes), den Solidaritätszuschlag (§ 4 Satz 1 des <mark>Solidaritätszuschlaggesetzes</mark> 1995) und um einen Abzug in Höhe von 8 Prozent der Lohnsteuer zu vermindern",
+        "location": "art-z2"
+       }
+      ]
+     }
+    ],
+    "view": {
+     "@type": "hydra:PartialCollectionView",
+     "first": "/v1/legislation?pageIndex=0&size=100",
+     "previous": null,
+     "next": null,
+     "last": "/v1/legislation?pageIndex=0&size=100"
+    }
+   },
+   "gestalt": "{ @type: \"hydra:Collection\", @id: \"/v1/legislation?pageIndex=0&size=100\", totalItems: 3, member: Array(3) von { @type: \"SearchResult\", item: { @type, @id, name, legislationIdentifier, exampleOfWork, temporalCoverage, abbreviation, alternateName, legislationLegalForce, encoding }, textMatches: Array(1) }, view: { @type: \"hydra:PartialCollectionView\", first: \"/v1/legislation?pageIndex=0&size=100\", previous: null, next: null, last: \"/v1/legislation?pageIndex=0&size=100\" } }"
   }
- ]
+ ],
+ "ersterTreffer": {
+  "@type": "SearchResult",
+  "item": {
+   "@type": "Legislation",
+   "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu",
+   "name": "Solidaritätszuschlaggesetz",
+   "legislationIdentifier": "eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu",
+   "exampleOfWork": {
+    "@type": "Legislation",
+    "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318",
+    "legislationIdentifier": "eli/bund/bgbl-1/1991/s1318",
+    "legislationDate": "1991-06-24",
+    "datePublished": "1991-06-24",
+    "isPartOf": {
+     "@type": "PublicationIssue",
+     "name": "BGBl I, 1991 1318"
+    }
+   },
+   "temporalCoverage": null,
+   "abbreviation": "SolZG",
+   "alternateName": null,
+   "legislationLegalForce": "InForce",
+   "encoding": [
+    {
+     "@type": "LegislationObject",
+     "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1/html",
+     "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1.html",
+     "encodingFormat": "text/html",
+     "inLanguage": "de"
+    },
+    {
+     "@type": "LegislationObject",
+     "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1/xml",
+     "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/regelungstext-verkuendung-1.xml",
+     "encodingFormat": "application/xml",
+     "inLanguage": "de"
+    },
+    {
+     "@type": "LegislationObject",
+     "@id": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19/zip",
+     "contentUrl": "/v1/legislation/eli/bund/bgbl-1/1991/s1318/1992-02-29/1/deu/2005-12-19.zip",
+     "encodingFormat": "application/zip",
+     "inLanguage": "de"
+    }
+   ]
+  },
+  "textMatches": [
+   {
+    "@type": "SearchResultMatch",
+    "name": "name",
+    "text": "<mark>Solidaritätszuschlaggesetz</mark>",
+    "location": null
+   }
+  ]
+ }
 }
