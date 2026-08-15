@@ -1,0 +1,897 @@
+{
+  "abk": "AO",
+  "titel": "Abgabenordnung",
+  "format": 5,
+  "automatisch": true,
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "modelle": [
+    "gemini-3.7-flash",
+    "gemini-3.7-flash-video-understanding-eap",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash"
+  ],
+  "laeufe": 3,
+  "aktualisiert": "2026-08-15T05:20:05.366Z",
+  "quelle": "https://www.gesetze-im-internet.de/ao_1977/",
+  "stand": [
+    {
+      "typ": "Neuf",
+      "text": "Neugefasst durch Bek. v. 23.1.2025 I Nr. 24;"
+    },
+    {
+      "typ": "Stand",
+      "text": "zuletzt geändert durch Art. 15 Abs. 6 G v. 3.7.2026 I Nr. 199"
+    }
+  ],
+  "unvollstaendig": true,
+  "normen": {
+    "1": {
+      "typ": "gemischt",
+      "typen": [
+        "konditional",
+        "aussage",
+        "verweisung"
+      ],
+      "saetze": [
+        {
+          "pfad": "Abs. 1 Satz 1",
+          "von": 0,
+          "bis": 232,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 14,
+              "laenge": 129,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld enthält mit 'Dieses Gesetz' das Satzsubjekt und bezeichnet den Normgegenstand."
+            },
+            {
+              "art": "tb",
+              "text": "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 145,
+              "laenge": 86,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld enthält mit 'Dieses Gesetz' das Satzsubjekt und bezeichnet den Normgegenstand."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 1 Satz 2",
+          "von": 233,
+          "bis": 302,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "ist nur",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 236,
+              "laenge": 7,
+              "konfidenz": 0.488,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld bildet mit dem Pronomen 'Es' das Satzsubjekt."
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Rechts der Europäischen Union anwendbar",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 244,
+              "laenge": 57,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld bildet mit dem Pronomen 'Es' das Satzsubjekt."
+            },
+            {
+              "art": "rf",
+              "text": "anwendbar",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 292,
+              "laenge": 9,
+              "konfidenz": 0.488,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld bildet mit dem Pronomen 'Es' das Satzsubjekt."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Satz 1",
+          "von": 303,
+          "bis": 447,
+          "typ": "verweisung",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Für die Realsteuern",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 303,
+              "laenge": 19,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Für die Realsteuern' ist ein präpositionales Adverbial, das den Anwendungsfall beschreibt."
+            },
+            {
+              "art": "rf",
+              "text": "gelten",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 323,
+              "laenge": 6,
+              "konfidenz": 0.488,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Für die Realsteuern' ist ein präpositionales Adverbial, das den Anwendungsfall beschreibt."
+            },
+            {
+              "art": "tb",
+              "text": "soweit ihre Verwaltung den Gemeinden übertragen worden ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 331,
+              "laenge": 58,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Für die Realsteuern' ist ein präpositionales Adverbial, das den Anwendungsfall beschreibt."
+            },
+            {
+              "art": "rf",
+              "text": "die folgenden Vorschriften dieses Gesetzes entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 391,
+              "laenge": 55,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Für die Realsteuern' ist ein präpositionales Adverbial, das den Anwendungsfall beschreibt."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 1",
+          "von": 451,
+          "bis": 750,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 451,
+              "laenge": 298,
+              "konfidenz": 0.81,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 2",
+          "von": 754,
+          "bis": 809,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 754,
+              "laenge": 54,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 3",
+          "von": 813,
+          "bis": 914,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Dritten Teils",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 813,
+              "laenge": 34,
+              "konfidenz": 0.65,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt mit explizitem Ausnahmetatbestand."
+            },
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 813,
+              "laenge": 100,
+              "konfidenz": 0.35,
+              "stimmen": 0,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            },
+            {
+              "art": "ausn",
+              "text": "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 848,
+              "laenge": 65,
+              "konfidenz": 0.65,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt mit explizitem Ausnahmetatbestand."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 4",
+          "von": 918,
+          "bis": 984,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 4",
+              "von": 918,
+              "laenge": 65,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 5",
+          "von": 988,
+          "bis": 1044,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 5",
+              "von": 988,
+              "laenge": 55,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 6",
+          "von": 1048,
+          "bis": 1070,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": []
+        },
+        {
+          "pfad": "Abs. 2 Nr. 7",
+          "von": 1074,
+          "bis": 1122,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 7",
+              "von": 1074,
+              "laenge": 47,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 8",
+          "von": 1126,
+          "bis": 1222,
+          "typ": "verweisung",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 8",
+              "von": 1126,
+              "laenge": 95,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nummerierter Aufzählungspunkt als Tatbestandsmerkmal der Verweisungsnorm."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 3 Satz 1",
+          "von": 1223,
+          "bis": 1361,
+          "typ": "verweisung",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Auf steuerliche Nebenleistungen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 1223,
+              "laenge": 31,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Auf steuerliche Nebenleistungen' bestimmt als Adverbial den Anwendungsfall der entsprechenden Anwendung."
+            },
+            {
+              "art": "rf",
+              "text": "sind die Vorschriften dieses Gesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 1255,
+              "laenge": 37,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Auf steuerliche Nebenleistungen' bestimmt als Adverbial den Anwendungsfall der entsprechenden Anwendung."
+            },
+            {
+              "art": "ausn",
+              "text": "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 1293,
+              "laenge": 67,
+              "konfidenz": 0.9,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Auf steuerliche Nebenleistungen' bestimmt als Adverbial den Anwendungsfall der entsprechenden Anwendung."
+            },
+            {
+              "art": "rf",
+              "text": "sinngemäß anwendbar",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 1341,
+              "laenge": 19,
+              "konfidenz": 0.488,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Auf steuerliche Nebenleistungen' bestimmt als Adverbial den Anwendungsfall der entsprechenden Anwendung."
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 3 Satz 2",
+          "von": 1362,
+          "bis": 1466,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1362,
+              "laenge": 66,
+              "konfidenz": 0.65,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Der Dritte bis Sechste Abschnitt des Vierten Teils' bildet das Satzsubjekt."
+            },
+            {
+              "art": "ausn",
+              "text": "gilt jedoch nur, soweit dies besonders bestimmt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1413,
+              "laenge": 52,
+              "konfidenz": 0.35,
+              "stimmen": 0,
+              "laeufe": 1,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Rückausnahme: stellt die Regel wieder her"
+            },
+            {
+              "art": "tb",
+              "text": "soweit dies besonders bestimmt wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 1430,
+              "laenge": 35,
+              "konfidenz": 0.65,
+              "stimmen": 1,
+              "laeufe": 1,
+              "syntax": false,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Das Vorfeld 'Der Dritte bis Sechste Abschnitt des Vierten Teils' bildet das Satzsubjekt."
+            }
+          ]
+        }
+      ],
+      "schema": [
+        {
+          "absatz": "Abs. 1",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Rechts der Europäischen Union anwendbar",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "ist nur",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.488,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "anwendbar",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.488,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 2",
+          "typ": "verweisung",
+          "rolle": "Verweisung",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (eine genügt)",
+              "junktor": "oder",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Für die Realsteuern",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "soweit ihre Verwaltung den Gemeinden übertragen worden ist",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
+                  "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.81,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "die Vorschriften des Dritten Teils",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.65,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "6.",
+                  "t": "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.35,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "7.",
+                  "t": "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
+                  "pfad": "Abs. 2 Nr. 4",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "8.",
+                  "t": "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
+                  "pfad": "Abs. 2 Nr. 5",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "9.",
+                  "t": "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
+                  "pfad": "Abs. 2 Nr. 7",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "10.",
+                  "t": "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
+                  "pfad": "Abs. 2 Nr. 8",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.65,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "gelten",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.488,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "die folgenden Vorschriften dieses Gesetzes entsprechend",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 3",
+          "typ": "verweisung",
+          "rolle": "Verweisung",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Auf steuerliche Nebenleistungen",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "soweit dies besonders bestimmt wird",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.65,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "ausn",
+              "t": "Ausnahmen und Rückausnahmen",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt jedoch nur, soweit dies besonders bestimmt wird",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.35,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "III.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "sind die Vorschriften dieses Gesetzes",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.9,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "sinngemäß anwendbar",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.488,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.65,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tb": [
+        "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
+        "Für die Realsteuern",
+        "soweit ihre Verwaltung den Gemeinden übertragen worden ist",
+        "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
+        "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
+        "die Vorschriften des Dritten Teils",
+        "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+        "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
+        "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
+        "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
+        "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
+        "Auf steuerliche Nebenleistungen",
+        "soweit dies besonders bestimmt wird"
+      ],
+      "rf": [
+        "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
+        "ist nur",
+        "anwendbar",
+        "gelten",
+        "die folgenden Vorschriften dieses Gesetzes entsprechend",
+        "sind die Vorschriften dieses Gesetzes",
+        "sinngemäß anwendbar",
+        "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur"
+      ],
+      "ausnahmen": [
+        "vorbehaltlich des Rechts der Europäischen Union anwendbar",
+        "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
+        "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar",
+        "gilt jedoch nur, soweit dies besonders bestimmt wird"
+      ],
+      "definitionen": [],
+      "status": "mehrheit",
+      "markierbar": true,
+      "konfidenz": 0.746,
+      "belegquote": 0,
+      "belege": [],
+      "strittig": false,
+      "einstimmigkeit": 0.92,
+      "laeufe": 1,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 1 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 92 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "text_hash": "9a1a89e36594449f538915eb09c0da52ab715107c65d2606c915451a322f0033",
+      "format": 5,
+      "aktualisiert": "2026-08-15T05:20:05.366Z"
+    }
+  }
+}

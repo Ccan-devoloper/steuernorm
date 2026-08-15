@@ -1,18 +1,18 @@
 {
-  "erzeugt": "2026-07-30T11:53:03.126Z",
+  "erzeugt": "2026-08-15T05:20:06.892Z",
   "schwellen": {
     "min": 4,
     "quote": 0.8
   },
-  "wendungen": 7041,
-  "verdaechtig": 15,
+  "wendungen": 9162,
+  "verdaechtig": 19,
   "funde": [
     {
       "wendung": "gilt entsprechend",
       "schluessel": "gilt entsprechend",
       "verteilung": {
         "tb": 6,
-        "rf": 135,
+        "rf": 180,
         "ausn": 0
       },
       "mehrheit": "rf",
@@ -36,7 +36,7 @@
         {
           "gesetz": "EStG",
           "norm": "10",
-          "pfad": "Abs. 1 Satz 2 (Teil 2)",
+          "pfad": "Abs. 1 Nr. 3 Satz 3",
           "art": "tb",
           "konfidenz": 0.45,
           "status": "syntaktisch"
@@ -68,55 +68,11 @@
       ]
     },
     {
-      "wendung": "Lebensjahr vollendet",
-      "schluessel": "lebensjahr vollendet",
-      "verteilung": {
-        "tb": 4,
-        "rf": 18,
-        "ausn": 0
-      },
-      "mehrheit": "rf",
-      "ausreisser": [
-        {
-          "gesetz": "EStG",
-          "norm": "6a",
-          "pfad": "Abs. 2 Nr. 1 Halbs. 2",
-          "art": "tb",
-          "konfidenz": 0.45,
-          "status": "syntaktisch"
-        },
-        {
-          "gesetz": "EStG",
-          "norm": "6a",
-          "pfad": "Abs. 2 Buchst. b Halbs. 2",
-          "art": "tb",
-          "konfidenz": 0.45,
-          "status": "syntaktisch"
-        },
-        {
-          "gesetz": "EStG",
-          "norm": "6a",
-          "pfad": "Abs. 2 Buchst. c Halbs. 2",
-          "art": "tb",
-          "konfidenz": 0.45,
-          "status": "syntaktisch"
-        },
-        {
-          "gesetz": "EStG",
-          "norm": "6a",
-          "pfad": "Abs. 2 Buchst. d Halbs. 2",
-          "art": "tb",
-          "konfidenz": 0.45,
-          "status": "syntaktisch"
-        }
-      ]
-    },
-    {
       "wendung": "gilt sinngemäß",
       "schluessel": "gilt sinngemäß",
       "verteilung": {
-        "tb": 2,
-        "rf": 18,
+        "tb": 3,
+        "rf": 30,
         "ausn": 0
       },
       "mehrheit": "rf",
@@ -125,6 +81,14 @@
           "gesetz": "AO",
           "norm": "22",
           "pfad": "Abs. 3 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "AO",
+          "norm": "174",
+          "pfad": "Abs. 2 Satz 1",
           "art": "tb",
           "konfidenz": 0.45,
           "status": "syntaktisch"
@@ -140,61 +104,165 @@
       ]
     },
     {
-      "wendung": "In den Fällen des Absatzes 8",
-      "schluessel": "in den fällen des absatzes #",
+      "wendung": "im Übrigen",
+      "schluessel": "im übrigen",
       "verteilung": {
-        "tb": 9,
-        "rf": 1,
+        "tb": 3,
+        "rf": 20,
         "ausn": 0
-      },
-      "mehrheit": "tb",
-      "ausreisser": [
-        {
-          "gesetz": "UStG",
-          "norm": "25a",
-          "pfad": "Abs. 7 Buchst. c",
-          "art": "rf",
-          "konfidenz": 0.6,
-          "status": "syntaktisch"
-        }
-      ]
-    },
-    {
-      "wendung": "In den Fällen des Satzes 1 Nummer 3",
-      "schluessel": "in den fällen des satzes # nummer #",
-      "verteilung": {
-        "tb": 7,
-        "rf": 1,
-        "ausn": 0
-      },
-      "mehrheit": "tb",
-      "ausreisser": [
-        {
-          "gesetz": "EStG",
-          "norm": "41c",
-          "pfad": "Abs. 1 Satz 1 (Teil 2)",
-          "art": "rf",
-          "konfidenz": 0.6,
-          "status": "syntaktisch"
-        }
-      ]
-    },
-    {
-      "wendung": "sind nicht anzuwenden",
-      "schluessel": "sind nicht anzuwenden",
-      "verteilung": {
-        "tb": 0,
-        "rf": 10,
-        "ausn": 1
       },
       "mehrheit": "rf",
       "ausreisser": [
         {
-          "gesetz": "KStG",
-          "norm": "8b",
-          "pfad": "Abs. 10 Satz 3",
-          "art": "ausn",
+          "gesetz": "AO",
+          "norm": "81",
+          "pfad": "Abs. 2 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "AO",
+          "norm": "392",
+          "pfad": "Abs. 1 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "GewStG",
+          "norm": "7",
+          "pfad": "Satz 4",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "Die zentrale Stelle",
+      "schluessel": "die zentrale stelle",
+      "verteilung": {
+        "tb": 2,
+        "rf": 16,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "EStG",
+          "norm": "90",
+          "pfad": "Abs. 3 Satz 6",
+          "art": "tb",
           "konfidenz": 0.6,
+          "status": "syntaktisch"
+        },
+        {
+          "gesetz": "EStG",
+          "norm": "22a",
+          "pfad": "Abs. 1 Nr. 6",
+          "art": "tb",
+          "konfidenz": 0.6,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "darüber hinaus",
+      "schluessel": "darüber hinaus",
+      "verteilung": {
+        "tb": 1,
+        "rf": 5,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "AO",
+          "norm": "139b",
+          "pfad": "Abs. 5 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "gelten nicht",
+      "schluessel": "gelten nicht",
+      "verteilung": {
+        "tb": 1,
+        "rf": 25,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "BewG",
+          "norm": "1",
+          "pfad": "Abs. 2 Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "im Inland",
+      "schluessel": "im inland",
+      "verteilung": {
+        "tb": 4,
+        "rf": 1,
+        "ausn": 0
+      },
+      "mehrheit": "tb",
+      "ausreisser": [
+        {
+          "gesetz": "GewStG",
+          "norm": "2",
+          "pfad": "Abs. 1 Satz 3",
+          "art": "rf",
+          "konfidenz": 0.45,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "ist nur anzuwenden",
+      "schluessel": "ist nur anzuwenden",
+      "verteilung": {
+        "tb": 1,
+        "rf": 12,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "EStG",
+          "norm": "13",
+          "pfad": "Abs. 4 Satz 6 (Teil 2)",
+          "art": "tb",
+          "konfidenz": 0.6,
+          "status": "syntaktisch"
+        }
+      ]
+    },
+    {
+      "wendung": "richtet sich",
+      "schluessel": "richtet sich",
+      "verteilung": {
+        "tb": 1,
+        "rf": 4,
+        "ausn": 0
+      },
+      "mehrheit": "rf",
+      "ausreisser": [
+        {
+          "gesetz": "AO",
+          "norm": "17",
+          "pfad": "Satz 1",
+          "art": "tb",
+          "konfidenz": 0.45,
           "status": "syntaktisch"
         }
       ]
