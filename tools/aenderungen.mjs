@@ -238,6 +238,43 @@ for (const url of tiefer.slice(0, Math.max(0, HOECHSTENS - abrufe))) {
   await frage("Verweis der zweiten Ebene", url);
 }
 
+/* ── Das Urteil ──────────────────────────────────────────────────────
+   Die Sondierung soll nicht nur sammeln, sondern sagen, was daraus folgt.
+   Sonst liest sie jedes Mal jemand neu und kommt jedes Mal neu zum selben
+   Schluss. Und sie soll es beim nächsten Lauf WIEDER sagen: Füllt das Portal
+   die Zeitschiene eines Tages, fällt das hier von selbst auf. */
+const PLATZHALTER = /^1001-01-01$|^0001-01-01$/;
+let ereignisse = 0, mitEchtemDatum = 0, mitQuelle = 0, perioden = 0;
+for (const p of bericht.proben) {
+  for (const e of p.ereignisse || []) {
+    ereignisse++;
+    const datum = /date="([^"]+)"/.exec(e)?.[1] || "";
+    const quelle = /source="([^"]+)"/.exec(e)?.[1] || "";
+    if (datum && !PLATZHALTER.test(datum)) mitEchtemDatum++;
+    if (quelle && !/noch-undefiniert/.test(quelle)) mitQuelle++;
+  }
+  perioden += p.perioden?.zahl || 0;
+}
+bericht.urteil = {
+  ereignisse, mitEchtemDatum, mitQuelle, perioden,
+  tragfaehig: ereignisse > 0 && mitEchtemDatum > 0 && mitQuelle > 0,
+};
+
+console.log("");
+console.log("── Was daraus folgt ──");
+console.log(`  ${perioden} Elemente tragen ein period-Attribut — die Zuordnung JE NORM ist angelegt.`);
+console.log(`  ${ereignisse} Lebenszyklus-Ereignisse, davon ${mitEchtemDatum} mit echtem Datum`
+  + ` und ${mitQuelle} mit benannter Quelle.`);
+if (!bericht.urteil.tragfaehig) {
+  console.log("");
+  console.log("  Die Zeitschiene ist da, aber leer: date=\"1001-01-01\" ist ein Platzhalter,");
+  console.log("  source=\"attributsemantik-noch-undefiniert\" sagt es im Klartext. Aus diesen");
+  console.log("  Angaben lässt sich keine Änderungsübersicht bilden — nur eine erfundene.");
+  console.log("  Das Portal ist in der Testphase; die Gestalt steht, der Inhalt fehlt.");
+  console.log("");
+  console.log("  Ein späterer Lauf sagt von selbst, wenn sich das ändert.");
+}
+
 await mkdir(BERICHTE, { recursive: true });
 await writeFile(path.join(BERICHTE, "aenderungen-sondierung.json"),
   JSON.stringify(bericht, null, 1) + "\n");
