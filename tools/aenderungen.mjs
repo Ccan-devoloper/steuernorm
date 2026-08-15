@@ -83,8 +83,11 @@ function gestalt(w, tiefe = 0) {
     Erkenntnisse zu wenig. */
 function verweise(w, gefunden = new Set()) {
   if (typeof w === "string") {
-    if (/^https?:\/\//.test(w) && w.startsWith(BASIS)) gefunden.add(w);
-    else if (/^\/v1\//.test(w)) gefunden.add(BASIS + w);
+    /* Ohne Fragment: „…/deu#art-z1" liefert dasselbe Dokument wie „…/deu"
+       und kostete fünf der zwanzig Abrufe für nichts. */
+    const rein = w.split("#")[0];
+    if (/^https?:\/\//.test(rein) && rein.startsWith(BASIS)) gefunden.add(rein);
+    else if (/^\/v1\//.test(rein)) gefunden.add(BASIS + rein);
     return gefunden;
   }
   if (Array.isArray(w)) { for (const x of w) verweise(x, gefunden); return gefunden; }
@@ -144,9 +147,20 @@ async function frage(zweck, url) {
         + (Object.keys(eintrag.xml.gesucht).join(", ") || "keine");
       /* Der Abschnitt, auf den es ankommt, im Wortlaut — höchstens 2 000
          Zeichen. Aus IHM wird der Auswerter geschrieben. */
-      const abschnitt = /<([\w-]+:)?analysis[\s>][\s\S]{0,4000}?<\/([\w-]+:)?analysis>/i.exec(text)
-        || /<([\w-]+:)?temporalData[\s>][\s\S]{0,2000}?<\/([\w-]+:)?temporalData>/i.exec(text);
-      if (abschnitt) eintrag.auszug = abschnitt[0].slice(0, 2000);
+      eintrag.auszuege = {};
+      for (const name of ["analysis", "lifecycle", "references", "temporalData"]) {
+        const treffer = new RegExp(
+          `<([\\w-]+:)?${name}[\\s>][\\s\\S]{0,6000}?</([\\w-]+:)?${name}>`, "i").exec(text);
+        if (treffer) eintrag.auszuege[name] = treffer[0].slice(0, 3000);
+      }
+      /* Trägt die Auszeichnung eine Zuordnung JE NORM? In LegalDocML.de hängt
+         sie an `period`-Verweisen auf eine Geltungszeitgruppe. Ohne die bliebe
+         die Änderungsgeschichte auf Gesetzesebene — brauchbar, aber nicht das,
+         wonach gefragt war. */
+      const perioden = [...text.matchAll(/\speriod="([^"]+)"/g)].map((m) => m[1]);
+      eintrag.perioden = { zahl: perioden.length, beispiele: [...new Set(perioden)].slice(0, 6) };
+      const ereignisse = [...text.matchAll(/<[\w-]*:?eventRef\b[^>]*>/g)].map((m) => m[0]);
+      eintrag.ereignisse = ereignisse.slice(0, 12);
     } else {
       eintrag.gestalt = "kein JSON (" + eintrag.typ.split(";")[0] + ")";
     }
@@ -170,15 +184,28 @@ async function frage(zweck, url) {
 const suche = await frage("Suche: " + GESETZ,
   `${BASIS}/v1/legislation?searchTerm=${encodeURIComponent(GESETZ)}`);
 
-for (const name of ["Umsatzsteuergesetz", "Einkommensteuergesetz", "Abgabenordnung"]) {
+/* Und danach an einem WIRKLICHEN Steuergesetz. Das SolZG von 1991 ist die
+   Verkündungsfassung eines Gesetzes mit fünf Artikeln — daran lässt sich nicht
+   ablesen, ob eine gewachsene Änderungsgeschichte mitgeliefert wird. Das UStG
+   ist der ehrlichere Prüfstein. */
+let steuerXml = null;
+for (const [name, kuerzel] of [["Umsatzsteuergesetz", "UStG"], ["Abgabenordnung", "AO"]]) {
   const treffer = await frage("Gibt es das " + name + "?",
     `${BASIS}/v1/legislation?searchTerm=${encodeURIComponent(name)}`);
-  if (treffer && Array.isArray(treffer.member)) {
-    const namen = treffer.member.slice(0, 8)
-      .map((m) => `${m.item?.abbreviation || "?"} — ${m.item?.name}`);
-    (bericht.bestand ||= {})[name] = { gefunden: treffer.totalItems, erste: namen };
-    for (const z of namen) console.log("       · " + z);
-    console.log("");
+  if (!treffer || !Array.isArray(treffer.member)) continue;
+  const namen = treffer.member.slice(0, 6)
+    .map((m) => `${m.item?.abbreviation || "?"} — ${m.item?.name}`);
+  (bericht.bestand ||= {})[name] = { gefunden: treffer.totalItems, erste: namen };
+  for (const z of namen) console.log("       · " + z);
+  console.log("");
+
+  const genau = treffer.member.find((m) => m.item?.abbreviation === kuerzel);
+  if (!genau) { console.log(`       ${kuerzel} selbst ist nicht darunter.\n`); continue; }
+  (bericht.gefunden ||= {})[kuerzel] = genau.item;
+  const xmlAdresse = (genau.item.encoding || [])
+    .find((e) => e.encodingFormat === "application/xml");
+  if (xmlAdresse && !steuerXml) {
+    steuerXml = await frage(kuerzel + " als LegalDocML", BASIS + xmlAdresse.contentUrl);
   }
 }
 
