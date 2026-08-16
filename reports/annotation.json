@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-15T05:38:41.423Z",
+  "erzeugt": "2026-08-16T04:50:59.918Z",
   "format": 5,
   "modelle": [
     "gemini-3.7-flash",
@@ -12,18 +12,18 @@
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 18,
+      "bearbeitet": 4,
       "uebernommen": 0,
-      "markierbar": 16,
-      "abgelehnt": 111,
+      "markierbar": 4,
+      "abgelehnt": 15,
       "vollstaendig": false
     }
   ],
-  "modellaufrufe": 180,
+  "modellaufrufe": 40,
   "belegprobe": {
     "gestuetzt": 0,
     "entfernt": 0,
     "strittig": 0
   },
-  "abgebrochen": "Budget von 180 Modellaufrufen erschöpft"
+  "abgebrochen": "Netzfehler: This operation was aborted"
 }
