@@ -353,7 +353,20 @@ for (const meta of gesetze) {
   if (!trocken) {
     if (abbruch) {
       await schreibe(zwischenDatei, inhalt);
-      console.log(`  Zwischenstand gespeichert (${Object.keys(normen).length}/${gesetz.normen.length}).`);
+      /* UND IN DEN BESTAND. Der Zwischenstand allein reichte nicht: Solange
+         der Lauf am Tagesbudget abbricht, wurde `annotations/<gesetz>.json`
+         nie geschrieben — bei 503 Normen der AO und 18 Normen je Tag wären das
+         achtundzwanzig Tage, in denen die Oberfläche nichts von der Arbeit
+         sieht, weil `struktur/` aus `annotations/` gebildet wird.
+         Ersetzt werden darf die Datei dabei NICHT: Nach dem Abbruch enthält
+         `normen` nur die bearbeiteten, die übrigen 485 stünden nicht darin und
+         verschwänden. Der Teilstand wird deshalb über den vorhandenen gelegt. */
+      const zusammen = { ...(alt?.normen || {}), ...normen };
+      const tmp = `${zielDatei}.tmp`;
+      await schreibe(tmp, datei(gesetz, zusammen, true));
+      await rename(tmp, zielDatei);
+      console.log(`  Zwischenstand gespeichert (${Object.keys(normen).length}/${gesetz.normen.length})`
+        + `, ${Object.keys(zusammen).length} Normen im Bestand.`);
     } else {
       const tmp = `${zielDatei}.tmp`;
       await schreibe(tmp, inhalt);
@@ -457,8 +470,16 @@ function bauAnnotation({ norm, erg, th, ohneKi }) {
     strittig: Boolean(erg.strittig),
     einstimmigkeit: erg.einstimmigkeit ?? null,
     laeufe: erg.laeufe,
-    verfahren: ohneKi ? "syntaxanalyse" : "syntaxanalyse+mehrfachlauf+gegenprobe",
-    hinweis: hinweistext(erg, ohneKi),
+    /* Das Verfahren muss sagen, was WIRKLICH geschehen ist, nicht in welchem
+       Modus der Lauf gestartet wurde. Eine Norm, deren Modellaufrufe alle
+       gescheitert sind, fällt auf die Syntaxbasis zurück — sie trug trotzdem
+       „syntaxanalyse+mehrfachlauf+gegenprobe" im Feld und behauptete damit
+       eine Herkunft, die sie nicht hat. In einem Bestand, der seine Herkunft
+       belegen soll, ist das der schlimmste Ort für eine Ungenauigkeit. */
+    verfahren: (ohneKi || !erg.laeufe)
+      ? "syntaxanalyse"
+      : "syntaxanalyse+mehrfachlauf+gegenprobe",
+    hinweis: hinweistext(erg, ohneKi || !erg.laeufe),
     text_hash: th,
     format: FORMAT,
     aktualisiert: new Date().toISOString(),

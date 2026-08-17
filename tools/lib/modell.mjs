@@ -520,6 +520,17 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
       await warte(2_000 * versuch);
       continue;
     }
+    /* Überlast ist kein Laufende, sondern ein Grund, das Modell zu wechseln.
+       Am 17.08. starben zwei Läufe nach einem und nach neun Aufrufen an
+       „This model is currently experiencing high demand" — obwohl drei weitere
+       Modelle bereitstanden und die Rotation beim Kontingent längst
+       funktioniert. Ein 503 geht deshalb denselben Weg wie ein 429: Dieses
+       Modell gilt als vorerst erschöpft, der Aufrufer nimmt das nächste. */
+    if (antwort.status >= 500) {
+      ERSCHOEPFT.add(modell);
+      throw new ModellPauseNoetig(modell,
+        `${modell} ist überlastet (HTTP ${antwort.status}). Es wird gewechselt.`);
+    }
     throw new ModellKontingentErschoepft(`HTTP ${antwort.status}: ${text.slice(0, 200)}`);
   }
   throw new ModellKontingentErschoepft("Alle Versuche erschöpft");
