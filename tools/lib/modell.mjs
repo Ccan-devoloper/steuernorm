@@ -525,7 +525,12 @@ export async function einAufruf({ system, nutzer, schema, modell, temperatur, to
        „This model is currently experiencing high demand" — obwohl drei weitere
        Modelle bereitstanden und die Rotation beim Kontingent längst
        funktioniert. Ein 503 geht deshalb denselben Weg wie ein 429: Dieses
-       Modell gilt als vorerst erschöpft, der Aufrufer nimmt das nächste. */
+       Modell gilt als vorerst erschöpft, der Aufrufer nimmt das nächste.
+
+       Nachgestellt an einem Modellserver, der ein Modell überlasten lässt und
+       die übrigen antworten: 5 Aufrufe an das überlastete, alle 503, dann
+       Wechsel — und alle sechs Normen des SolzG kamen mit `laeufe 1` durch.
+       Ohne diesen Zweig endete der Lauf bei der ersten Norm. */
     if (antwort.status >= 500) {
       ERSCHOEPFT.add(modell);
       throw new ModellPauseNoetig(modell,
