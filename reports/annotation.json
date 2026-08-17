@@ -1,29 +1,29 @@
 {
-  "erzeugt": "2026-08-17T04:58:35.627Z",
+  "erzeugt": "2026-08-17T05:48:37.071Z",
   "format": 5,
   "modelle": [
     "gemini-3.7-flash",
     "gemini-3.6-flash",
-    "gemini-3.5-flash-lite",
-    "gemini-3.1-flash-lite"
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite"
   ],
   "laeufe": 3,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 1,
+      "bearbeitet": 18,
       "uebernommen": 0,
-      "markierbar": 1,
-      "abgelehnt": 1,
+      "markierbar": 18,
+      "abgelehnt": 138,
       "vollstaendig": false
     }
   ],
-  "modellaufrufe": 1,
+  "modellaufrufe": 180,
   "belegprobe": {
     "gestuetzt": 0,
     "entfernt": 0,
     "strittig": 0
   },
-  "abgebrochen": "HTTP 503: [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n]"
+  "abgebrochen": "Budget von 180 Modellaufrufen erschöpft"
 }
