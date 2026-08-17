@@ -7,11 +7,11 @@
   "modelle": [
     "gemini-3.7-flash",
     "gemini-3.6-flash",
-    "gemini-3.5-flash",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite"
   ],
   "laeufe": 3,
-  "aktualisiert": "2026-08-17T04:28:21.359Z",
+  "aktualisiert": "2026-08-17T05:04:48.748Z",
   "quelle": "https://www.gesetze-im-internet.de/ao_1977/",
   "stand": [
     {
@@ -29,7 +29,8 @@
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "verweisung"
+        "definition",
+        "aussage"
       ],
       "saetze": [
         {
@@ -41,51 +42,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Dieses Gesetz gilt für alle Steuern einschließlich der Steuervergütungen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 72,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Normsubjekt, während die Voraussetzungen in Nebensätzen geregelt sind."
-            },
-            {
-              "art": "rf",
               "text": "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 14,
               "laenge": 129,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält als Normgegenstand das Satzsubjekt, der Nebensatz mit 'soweit' bildet die tatbestandliche Einschränkung."
-            },
-            {
-              "art": "tb",
-              "text": "die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 74,
-              "laenge": 69,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Normsubjekt, während die Voraussetzungen in Nebensätzen geregelt sind."
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
               "art": "tb",
@@ -95,13 +64,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 145,
               "laenge": 86,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält als Normgegenstand das Satzsubjekt, der Nebensatz mit 'soweit' bildet die tatbestandliche Einschränkung."
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -109,25 +78,9 @@
           "pfad": "Abs. 1 Satz 2",
           "von": 233,
           "bis": 302,
-          "typ": "konditional",
+          "typ": "definition",
           "junktor": null,
           "elemente": [
-            {
-              "art": "rf",
-              "text": "Es ist nur",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 2",
-              "von": 233,
-              "laenge": 10,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Pronomen als Normsubjekt und der Vorbehalt wird als Ausnahme erfasst."
-            },
             {
               "art": "ausn",
               "text": "vorbehaltlich des Rechts der Europäischen Union anwendbar",
@@ -136,13 +89,13 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 244,
               "laenge": 57,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Subjekt steht im Vorfeld, die Vorbehaltsklausel schränkt als Ausnahme die generelle Anwendbarkeit ein."
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -150,7 +103,7 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 303,
           "bis": 447,
-          "typ": "verweisung",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -161,29 +114,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 303,
               "laenge": 19,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Adverbial im Vorfeld und der Konditionalsatz bestimmen die tatbestandlichen Voraussetzungen der Verweisung."
-            },
-            {
-              "art": "rf",
-              "text": "gelten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 323,
-              "laenge": 6,
-              "konfidenz": 0.563,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das präpositionale Adverbial im Vorfeld und der Konditionalsatz bestimmen die tatbestandlichen Voraussetzungen der Verweisung."
+              "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
               "art": "tb",
@@ -193,13 +130,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 331,
               "laenge": 58,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Adverbial im Vorfeld und der Konditionalsatz bestimmen die tatbestandlichen Voraussetzungen der Verweisung."
+              "grund": "Konditionalsatz mit „soweit\""
             },
             {
               "art": "rf",
@@ -209,13 +146,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 391,
               "laenge": 55,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Adverbial im Vorfeld und der Konditionalsatz bestimmen die tatbestandlichen Voraussetzungen der Verweisung."
+              "grund": "Hauptsatzprädikat"
             }
           ]
         },
@@ -223,25 +160,25 @@
           "pfad": "Abs. 2 Nr. 1",
           "von": 451,
           "bis": 750,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 1",
               "von": 451,
               "laenge": 298,
-              "konfidenz": 0.675,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.54,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungselement vervollständigt als Akkusativobjekt die Rechtsfolge des Einleitungssatzes."
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -249,25 +186,25 @@
           "pfad": "Abs. 2 Nr. 2",
           "von": 754,
           "bis": 809,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 2",
               "von": 754,
               "laenge": 54,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungselement konkretisiert die entsprechend geltenden Vorschriften im Rahmen der Verweisungsrechtsfolge."
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -275,57 +212,25 @@
           "pfad": "Abs. 2 Nr. 3",
           "von": 813,
           "bis": 914,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
-              "text": "die Vorschriften des Dritten Teils",
+              "art": "tb",
+              "text": "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 3",
               "von": 813,
-              "laenge": 34,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 100,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Die Präpositionalphrase 'mit Ausnahme' nimmt bestimmte Paragrafen von der Verweisungsrechtsfolge aus."
-            },
-            {
-              "art": "ausn",
-              "text": "mit Ausnahme der §§ 82 bis 84",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 3",
-              "von": 848,
-              "laenge": 29,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Die Präpositionalphrase 'mit Ausnahme' nimmt bestimmte Paragrafen von der Verweisungsrechtsfolge aus."
-            },
-            {
-              "art": "ausn",
-              "text": "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 3",
-              "von": 848,
-              "laenge": 65,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Aufzählungsglied einer Verweisung mit ausdrücklicher Ausnahmeerklärung."
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -333,25 +238,25 @@
           "pfad": "Abs. 2 Nr. 4",
           "von": 918,
           "bis": 984,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 4",
               "von": 918,
               "laenge": 65,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungselement nennt die für Realsteuern entsprechend anwendbaren Bestimmungen als Rechtsfolge."
+              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -359,25 +264,25 @@
           "pfad": "Abs. 2 Nr. 5",
           "von": 988,
           "bis": 1044,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 5",
               "von": 988,
               "laenge": 55,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Aufzählungselement ist Bestandteil des Normkomplexes der Rechtsfolgenverweisung."
+              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -385,7 +290,7 @@
           "pfad": "Abs. 2 Nr. 6",
           "von": 1048,
           "bis": 1070,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": []
@@ -394,25 +299,25 @@
           "pfad": "Abs. 2 Nr. 7",
           "von": 1074,
           "bis": 1122,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 7",
               "von": 1074,
               "laenge": 47,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Konkrete Normennennung innerhalb des Rechtsfolgenkatalogs für Realsteuern."
+              "grund": "Aufzählungsglied Nr. 7 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -420,25 +325,25 @@
           "pfad": "Abs. 2 Nr. 8",
           "von": 1126,
           "bis": 1222,
-          "typ": "verweisung",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Nr. 8",
               "von": 1126,
               "laenge": 95,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Abschließendes Aufzählungsglied der entsprechend anwendbaren Vorschriften."
+              "grund": "Aufzählungsglied Nr. 8 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -446,7 +351,7 @@
           "pfad": "Abs. 3 Satz 1",
           "von": 1223,
           "bis": 1361,
-          "typ": "verweisung",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -457,13 +362,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 1223,
               "laenge": 31,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Objekt im Vorfeld benennt den Anwendungsbereich, das Prädikat regelt die sinngemäße Geltung."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -473,13 +378,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 1255,
               "laenge": 37,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Objekt im Vorfeld benennt den Anwendungsbereich, das Prädikat regelt die sinngemäße Geltung."
+              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -489,29 +394,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 1293,
               "laenge": 67,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "ausn",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das präpositionale Objekt im Vorfeld benennt den Anwendungsbereich, das Prädikat regelt die sinngemäße Geltung."
-            },
-            {
-              "art": "rf",
-              "text": "sinngemäß anwendbar",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 1341,
-              "laenge": 19,
-              "konfidenz": 0.563,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das präpositionale Objekt im Vorfeld benennt den Anwendungsbereich, das Prädikat regelt die sinngemäße Geltung."
+              "grund": "Vorbehalt mit „vorbehaltlich\""
             }
           ]
         },
@@ -523,36 +412,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur",
+              "art": "tb",
+              "text": "Der Dritte bis Sechste Abschnitt des Vierten Teils",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 2",
               "von": 1362,
-              "laenge": 66,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 50,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält das Subjekt der Einschränkung, während der 'soweit'-Satz die Bedingung für das Greifen der Rechtsfolge normiert."
+              "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
-              "art": "tb",
-              "text": "soweit dies besonders bestimmt wird",
+              "art": "ausn",
+              "text": "gilt jedoch nur, soweit dies besonders bestimmt wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 2",
-              "von": 1430,
-              "laenge": 35,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 1413,
+              "laenge": 52,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält das Subjekt der Einschränkung, während der 'soweit'-Satz die Bedingung für das Greifen der Rechtsfolge normiert."
+              "grund": "Rückausnahme: stellt die Regel wieder her"
             }
           ]
         }
@@ -566,22 +455,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -596,7 +477,7 @@
                   "n": "1.",
                   "t": "vorbehaltlich des Rechts der Europäischen Union anwendbar",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.8,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -609,25 +490,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Dieses Gesetz gilt für alle Steuern einschließlich der Steuervergütungen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.367,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.633,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Es ist nur",
-                  "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.367,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -637,8 +502,8 @@
         },
         {
           "absatz": "Abs. 2",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -650,7 +515,7 @@
                   "n": "1.",
                   "t": "Für die Realsteuern",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -658,53 +523,7 @@
                   "n": "2.",
                   "t": "soweit ihre Verwaltung den Gemeinden übertragen worden ist",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "mit Ausnahme der §§ 82 bis 84",
-                  "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
-                  "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "gelten",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.563,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "die folgenden Vorschriften dieses Gesetzes entsprechend",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -712,7 +531,7 @@
                   "n": "3.",
                   "t": "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
                   "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.675,
+                  "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -720,15 +539,15 @@
                   "n": "4.",
                   "t": "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
-                  "t": "die Vorschriften des Dritten Teils",
+                  "t": "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
                   "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -736,7 +555,7 @@
                   "n": "6.",
                   "t": "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
                   "pfad": "Abs. 2 Nr. 4",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -744,7 +563,7 @@
                   "n": "7.",
                   "t": "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
                   "pfad": "Abs. 2 Nr. 5",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -752,7 +571,7 @@
                   "n": "8.",
                   "t": "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
                   "pfad": "Abs. 2 Nr. 7",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -760,7 +579,22 @@
                   "n": "9.",
                   "t": "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
                   "pfad": "Abs. 2 Nr. 8",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "die folgenden Vorschriften dieses Gesetzes entsprechend",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -770,8 +604,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
           "schritte": [
             {
               "n": "I.",
@@ -783,15 +617,15 @@
                   "n": "1.",
                   "t": "Auf steuerliche Nebenleistungen",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "soweit dies besonders bestimmt wird",
+                  "t": "Der Dritte bis Sechste Abschnitt des Vierten Teils",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -806,7 +640,15 @@
                   "n": "1.",
                   "t": "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt jedoch nur, soweit dies besonders bestimmt wird",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -821,23 +663,7 @@
                   "n": "1.",
                   "t": "sind die Vorschriften dieses Gesetzes",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "sinngemäß anwendbar",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.563,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -847,3616 +673,33 @@
         }
       ],
       "tb": [
-        "die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
         "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
         "Für die Realsteuern",
         "soweit ihre Verwaltung den Gemeinden übertragen worden ist",
-        "Auf steuerliche Nebenleistungen",
-        "soweit dies besonders bestimmt wird"
-      ],
-      "rf": [
-        "Dieses Gesetz gilt für alle Steuern einschließlich der Steuervergütungen",
-        "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
-        "Es ist nur",
-        "gelten",
-        "die folgenden Vorschriften dieses Gesetzes entsprechend",
         "die Vorschriften des Ersten, Zweiten, Vierten, Sechsten und Siebten Abschnitts des Ersten Teils (Anwendungsbereich; Steuerliche Begriffsbestimmungen; Datenverarbeitung und Steuergeheimnis; Betroffenenrechte; Datenschutzaufsicht, Gerichtlicher Rechtsschutz in datenschutzrechtlichen Angelegenheiten)",
         "die Vorschriften des Zweiten Teils (Steuerschuldrecht)",
-        "die Vorschriften des Dritten Teils",
+        "die Vorschriften des Dritten Teils mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
         "die Vorschriften des Vierten Teils (Durchführung der Besteuerung)",
         "die Vorschriften des Fünften Teils (Erhebungsverfahren)",
         "die §§ 351 und 361 Absatz 1 Satz 2 und Absatz 3",
         "die Vorschriften des Achten Teils (Straf- und Bußgeldvorschriften, Straf- und Bußgeldverfahren)",
-        "sind die Vorschriften dieses Gesetzes",
-        "sinngemäß anwendbar",
-        "Der Dritte bis Sechste Abschnitt des Vierten Teils gilt jedoch nur"
+        "Auf steuerliche Nebenleistungen",
+        "Der Dritte bis Sechste Abschnitt des Vierten Teils"
+      ],
+      "rf": [
+        "gilt für alle Steuern einschließlich der Steuervergütungen, die durch Bundesrecht oder Recht der Europäischen Union geregelt sind",
+        "die folgenden Vorschriften dieses Gesetzes entsprechend",
+        "sind die Vorschriften dieses Gesetzes"
       ],
       "ausnahmen": [
         "vorbehaltlich des Rechts der Europäischen Union anwendbar",
-        "mit Ausnahme der §§ 82 bis 84",
-        "mit Ausnahme der §§ 82 bis 84 (Allgemeine Verfahrensvorschriften)",
-        "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar"
+        "vorbehaltlich des Rechts der Europäischen Union sinngemäß anwendbar",
+        "gilt jedoch nur, soweit dies besonders bestimmt wird"
       ],
       "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.739,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.76,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 76 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "9a1a89e36594449f538915eb09c0da52ab715107c65d2606c915451a322f0033",
-      "format": 5,
-      "aktualisiert": "2026-08-16T04:56:20.714Z"
-    },
-    "2": {
-      "typ": "gemischt",
-      "typen": [
-        "konditional",
-        "aussage",
-        "definition"
-      ],
-      "saetze": [
-        {
-          "pfad": "Abs. 1 Satz 1",
-          "von": 0,
-          "bis": 212,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Verträge mit anderen Staaten im Sinne des Artikels 59 Absatz 2 Satz 1 des Grundgesetzes über die Besteuerung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 108,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
-            },
-            {
-              "art": "tb",
-              "text": "soweit sie unmittelbar anwendbares innerstaatliches Recht geworden sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 116,
-              "laenge": 71,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normgegenstand, die Tatbestandsvoraussetzung ist als einschränkender Nebensatz mit soweit ausgestaltet."
-            },
-            {
-              "art": "rf",
-              "text": "den Steuergesetzen vor",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 189,
-              "laenge": 22,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normgegenstand, die Tatbestandsvoraussetzung ist als einschränkender Nebensatz mit soweit ausgestaltet."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 1",
-          "von": 213,
-          "bis": 498,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "wird ermächtigt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 248,
-              "laenge": 15,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das Normsubjekt, während die finalen und modalen Satzglieder die Tatbestandsvoraussetzungen der Ermächtigung bilden."
-            },
-            {
-              "art": "rf",
-              "text": "wird ermächtigt, zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung mit Zustimmung des Bundesrates Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen zu erlassen",
-              "anzeige": "wird ermächtigt, zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung mit Zustimmung des Bundesrates Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen … zu erlassen",
-              "teile": [
-                {
-                  "text": "wird ermächtigt, zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung mit Zustimmung des Bundesrates Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen",
-                  "von": 248,
-                  "laenge": 237
-                },
-                {
-                  "text": "zu erlassen",
-                  "von": 486,
-                  "laenge": 11
-                }
-              ],
-              "pfad": "Abs. 2 Satz 1",
-              "von": 248,
-              "laenge": 249,
-              "konfidenz": 0.735,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Normsubjekt besetzt, worauf die ermächtigende Rechtsfolge als Prädikat mit Infinitivkonstruktion folgt."
-            },
-            {
-              "art": "tb",
-              "text": "zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 265,
-              "laenge": 124,
-              "konfidenz": 0.345,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das Normsubjekt, während die finalen und modalen Satzglieder die Tatbestandsvoraussetzungen der Ermächtigung bilden."
-            },
-            {
-              "art": "tb",
-              "text": "mit Zustimmung des Bundesrates",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 390,
-              "laenge": 30,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das Normsubjekt, während die finalen und modalen Satzglieder die Tatbestandsvoraussetzungen der Ermächtigung bilden."
-            },
-            {
-              "art": "rf",
-              "text": "Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen zu erlassen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 421,
-              "laenge": 76,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das Normsubjekt, während die finalen und modalen Satzglieder die Tatbestandsvoraussetzungen der Ermächtigung bilden."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 2",
-          "von": 499,
-          "bis": 862,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Konsultationsvereinbarungen nach Satz 1",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 2",
-              "von": 499,
-              "laenge": 39,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Doppelbesteuerungsabkommens mit dem Ziel, Einzelheiten der Durchführung eines solchen Abkommens zu regeln, insbesondere Schwierigkeiten oder Zweifel, die bei der Auslegung oder Anwendung des jeweiligen Abkommens bestehen, zu beseitigen",
-              "anzeige": "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Doppelbesteuerungsabkommens mit dem Ziel, Einzelheiten der Durchführung eines solchen Abkommens zu regeln, insbesondere Schwierigkeiten oder Zweifel, die bei der Auslegung oder Anwendung des jeweiligen Abkommens bestehen … zu beseitigen",
-              "teile": [
-                {
-                  "text": "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Doppelbesteuerungsabkommens mit dem Ziel, Einzelheiten der Durchführung eines solchen Abkommens zu regeln, insbesondere Schwierigkeiten oder Zweifel, die bei der Auslegung oder Anwendung des jeweiligen Abkommens bestehen",
-                  "von": 539,
-                  "laenge": 307
-                },
-                {
-                  "text": "zu beseitigen",
-                  "von": 848,
-                  "laenge": 13
-                }
-              ],
-              "pfad": "Abs. 2 Satz 2",
-              "von": 539,
-              "laenge": 322,
-              "konfidenz": 0.64,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das zu definierende Subjekt, das Prädikat und das nachfolgende Prädikatsnomen bilden die begriffliche Bestimmung."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 1",
-          "von": 863,
-          "bis": 998,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "wird ermächtigt, durch Rechtsverordnung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 898,
-              "laenge": 39,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das ermächtigte Normsubjekt, während das modale Adverbial die formelle Voraussetzung bestimmt."
-            },
-            {
-              "art": "rf",
-              "text": "wird ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates Vorschriften zu erlassen, die",
-              "anzeige": "wird ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates Vorschriften … zu erlassen",
-              "teile": [
-                {
-                  "text": "wird ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates Vorschriften",
-                  "von": 898,
-                  "laenge": 83
-                },
-                {
-                  "text": "zu erlassen",
-                  "von": 982,
-                  "laenge": 11
-                }
-              ],
-              "pfad": "Abs. 3 Satz 1",
-              "von": 898,
-              "laenge": 100,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Normsubjekt eingenommen und das mehrteilige Prädikat drückt die Verordnungsermächtigung als Rechtsfolge aus."
-            },
-            {
-              "art": "tb",
-              "text": "mit Zustimmung des Bundesrates",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 938,
-              "laenge": 30,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt das ermächtigte Normsubjekt, während das modale Adverbial die formelle Voraussetzung bestimmt."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Nr. 1",
-          "von": 1002,
-          "bis": 1272,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Einkünfte oder Vermögen oder Teile davon bestimmen, für die die Bundesrepublik Deutschland in Anwendung der Bestimmung eines Abkommens zur Vermeidung der Doppelbesteuerung auf Grund einer auf diplomatischem Weg erfolgten Notifizierung eine Steueranrechnung vornimmt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Nr. 1",
-              "von": 1002,
-              "laenge": 265,
-              "konfidenz": 0.493,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Der Teilsatz führt die im Einleitungssatz begonnene Infinitivkonstruktion der Rechtsfolge fort."
-            },
-            {
-              "art": "rf",
-              "text": "Einkünfte oder Vermögen oder Teile davon bestimmen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Nr. 1",
-              "von": 1002,
-              "laenge": 50,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Die Aufzählung führt den Relativsatz als Ermächtigungsinhalt fort, wobei der eingebettete Relativsatz die Tatbestandsbedingung darstellt."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Nr. 2",
-          "von": 1276,
-          "bis": 1577,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "in den Anwendungsbereich der Bestimmungen über den öffentlichen Dienst eines Abkommens zur Vermeidung der Doppelbesteuerung diejenigen Körperschaften und Einrichtungen einbeziehen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Nr. 2",
-              "von": 1276,
-              "laenge": 179,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Der Infinitivteil bildet die Rechtsfolge der Ermächtigung, während der nachgestellte Relativsatz das tatbestandliche Kriterium bestimmt."
-            },
-            {
-              "art": "tb",
-              "text": "die auf Grund einer in diesem Abkommen vorgesehenen Vereinbarung zwischen den zuständigen Behörden bestimmt worden sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Nr. 2",
-              "von": 1457,
-              "laenge": 119,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Der Infinitivteil bildet die Rechtsfolge der Ermächtigung, während der nachgestellte Relativsatz das tatbestandliche Kriterium bestimmt."
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "Abs. 1",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Verträge mit anderen Staaten im Sinne des Artikels 59 Absatz 2 Satz 1 des Grundgesetzes über die Besteuerung",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "soweit sie unmittelbar anwendbares innerstaatliches Recht geworden sind",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "den Steuergesetzen vor",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 2",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.345,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "mit Zustimmung des Bundesrates",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Konsultationsvereinbarungen nach Satz 1",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "wird ermächtigt",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "wird ermächtigt, zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung mit Zustimmung des Bundesrates Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen … zu erlassen",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.735,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
-                  "t": "Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen zu erlassen",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Doppelbesteuerungsabkommens mit dem Ziel, Einzelheiten der Durchführung eines solchen Abkommens zu regeln, insbesondere Schwierigkeiten oder Zweifel, die bei der Auslegung oder Anwendung des jeweiligen Abkommens bestehen … zu beseitigen",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.64,
-                  "beleg": null,
-                  "mehrteilig": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 3",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "mit Zustimmung des Bundesrates",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "die auf Grund einer in diesem Abkommen vorgesehenen Vereinbarung zwischen den zuständigen Behörden bestimmt worden sind",
-                  "pfad": "Abs. 3 Nr. 2",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "wird ermächtigt, durch Rechtsverordnung",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "wird ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates Vorschriften … zu erlassen",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.817,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "3.",
-                  "t": "Einkünfte oder Vermögen oder Teile davon bestimmen, für die die Bundesrepublik Deutschland in Anwendung der Bestimmung eines Abkommens zur Vermeidung der Doppelbesteuerung auf Grund einer auf diplomatischem Weg erfolgten Notifizierung eine Steueranrechnung vornimmt",
-                  "pfad": "Abs. 3 Nr. 1",
-                  "konfidenz": 0.493,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "Einkünfte oder Vermögen oder Teile davon bestimmen",
-                  "pfad": "Abs. 3 Nr. 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "in den Anwendungsbereich der Bestimmungen über den öffentlichen Dienst eines Abkommens zur Vermeidung der Doppelbesteuerung diejenigen Körperschaften und Einrichtungen einbeziehen",
-                  "pfad": "Abs. 3 Nr. 2",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "Verträge mit anderen Staaten im Sinne des Artikels 59 Absatz 2 Satz 1 des Grundgesetzes über die Besteuerung",
-        "soweit sie unmittelbar anwendbares innerstaatliches Recht geworden sind",
-        "zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung",
-        "mit Zustimmung des Bundesrates",
-        "Konsultationsvereinbarungen nach Satz 1",
-        "mit Zustimmung des Bundesrates",
-        "die auf Grund einer in diesem Abkommen vorgesehenen Vereinbarung zwischen den zuständigen Behörden bestimmt worden sind"
-      ],
-      "rf": [
-        "den Steuergesetzen vor",
-        "wird ermächtigt",
-        "wird ermächtigt, zur Sicherung der Gleichmäßigkeit der Besteuerung und zur Vermeidung einer Doppelbesteuerung oder doppelten Nichtbesteuerung mit Zustimmung des Bundesrates Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen zu erlassen",
-        "Rechtsverordnungen zur Umsetzung von Konsultationsvereinbarungen zu erlassen",
-        "sind einvernehmliche Vereinbarungen der zuständigen Behörden der Vertragsstaaten eines Doppelbesteuerungsabkommens mit dem Ziel, Einzelheiten der Durchführung eines solchen Abkommens zu regeln, insbesondere Schwierigkeiten oder Zweifel, die bei der Auslegung oder Anwendung des jeweiligen Abkommens bestehen, zu beseitigen",
-        "wird ermächtigt, durch Rechtsverordnung",
-        "wird ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates Vorschriften zu erlassen, die",
-        "Einkünfte oder Vermögen oder Teile davon bestimmen, für die die Bundesrepublik Deutschland in Anwendung der Bestimmung eines Abkommens zur Vermeidung der Doppelbesteuerung auf Grund einer auf diplomatischem Weg erfolgten Notifizierung eine Steueranrechnung vornimmt",
-        "Einkünfte oder Vermögen oder Teile davon bestimmen",
-        "in den Anwendungsbereich der Bestimmungen über den öffentlichen Dienst eines Abkommens zur Vermeidung der Doppelbesteuerung diejenigen Körperschaften und Einrichtungen einbeziehen"
-      ],
-      "ausnahmen": [],
-      "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.523,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.176,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 18 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "93ec9da77448bc7d94dab4930e7e381bf11f4a52ce0261b3ba187d19cce328fd",
-      "format": 5,
-      "aktualisiert": "2026-08-16T05:06:21.208Z"
-    },
-    "3": {
-      "typ": "gemischt",
-      "typen": [
-        "definition",
-        "aussage"
-      ],
-      "saetze": [
-        {
-          "pfad": "Abs. 1 Satz 1",
-          "von": 0,
-          "bis": 329,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Steuern",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 7,
-              "konfidenz": 0.425,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Satzsubjekt (Steuern) besetzt, während das Prädikativum die definierenden Merkmale bildet."
-            },
-            {
-              "art": "tb",
-              "text": "Geldleistungen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 13,
-              "laenge": 14,
-              "konfidenz": 0.425,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Satzsubjekt (Steuern) besetzt, während das Prädikativum die definierenden Merkmale bildet."
-            },
-            {
-              "art": "tb",
-              "text": "Geldleistungen, die nicht eine Gegenleistung für eine besondere Leistung darstellen und von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 13,
-              "laenge": 265,
-              "konfidenz": 0.507,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das prädikative Nomen als Rechtsfolge, während der Hauptsatz das Definiens im Nachfeld anführt."
-            },
-            {
-              "art": "tb",
-              "text": "die nicht eine Gegenleistung für eine besondere Leistung darstellen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 29,
-              "laenge": 67,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Satzsubjekt (Steuern) besetzt, während das Prädikativum die definierenden Merkmale bildet."
-            },
-            {
-              "art": "tb",
-              "text": "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 101,
-              "laenge": 177,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld wird vom Satzsubjekt (Steuern) besetzt, während das Prädikativum die definierenden Merkmale bildet."
-            },
-            {
-              "art": "tb",
-              "text": "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 101,
-              "laenge": 95,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthaelt das grammatikalische Subjekt, welches das Definiendum darstellt, waehrend das Nachfeld die definierenden Merkmale enthaelt."
-            },
-            {
-              "art": "tb",
-              "text": "bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 198,
-              "laenge": 80,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthaelt das grammatikalische Subjekt, welches das Definiendum darstellt, waehrend das Nachfeld die definierenden Merkmale enthaelt."
-            },
-            {
-              "art": "rf",
-              "text": "die Erzielung von Einnahmen kann Nebenzweck sein",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 280,
-              "laenge": 48,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das prädikative Nomen als Rechtsfolge, während der Hauptsatz das Definiens im Nachfeld anführt."
-            },
-            {
-              "art": "tb",
-              "text": "die Erzielung von Einnahmen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 280,
-              "laenge": 27,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 1",
-          "von": 330,
-          "bis": 385,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Realsteuern",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 330,
-              "laenge": 11,
-              "konfidenz": 0.275,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Bezugssubjekt (Realsteuern), das Prädikatsnomen nennt die zugehörigen Steuerarten."
-            },
-            {
-              "art": "rf",
-              "text": "Realsteuern sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 330,
-              "laenge": 16,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das prädikative Nomen steht im Vorfeld als Rechtsfolge."
-            },
-            {
-              "art": "tb",
-              "text": "die Grundsteuer und die Gewerbesteuer",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 347,
-              "laenge": 37,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das prädikative Nomen steht im Vorfeld als Rechtsfolge."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 1",
-          "von": 386,
-          "bis": 508,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 386,
-              "laenge": 83,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld; das Prädikativ bezeichnet die Einordnung als Steuern."
-            },
-            {
-              "art": "rf",
-              "text": "sind Steuern im Sinne dieses Gesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 470,
-              "laenge": 37,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld; das Prädikativ bezeichnet die Einordnung als Steuern."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 2",
-          "von": 509,
-          "bis": 679,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Zollkodex der Union",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 2",
-              "von": 509,
-              "laenge": 19,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält den zu definierenden Begriff als Satzsubjekt."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 3",
-          "von": 680,
-          "bis": 755,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": []
-        },
-        {
-          "pfad": "Abs. 4 Satz 1",
-          "von": 756,
-          "bis": 788,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Steuerliche Nebenleistungen sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Satz 1",
-              "von": 756,
-              "laenge": 32,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Einleitungssatz der Aufzählung; das Vorfeld wird vom Oberbegriff eingenommen."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 1",
-          "von": 792,
-          "bis": 832,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Verzögerungsgelder nach § 146 Absatz 2c",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 1",
-              "von": 792,
-              "laenge": 39,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt ergänzt das Prädikatsnomen des Einleitungssatzes."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 2",
-          "von": 836,
-          "bis": 868,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Verspätungszuschläge nach § 152",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 2",
-              "von": 836,
-              "laenge": 31,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt ergänzt das Prädikatsnomen des Einleitungssatzes."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 3",
-          "von": 872,
-          "bis": 909,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Zuschläge nach § 162 Absatz 4 und 4a",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 3",
-              "von": 872,
-              "laenge": 36,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt ergänzt das Prädikatsnomen des Einleitungssatzes."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 3a",
-          "von": 914,
-          "bis": 1032,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 3a",
-              "von": 914,
-              "laenge": 50,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt enthält zwei durch Konjunktion verbundene Tatbestandsalternativen."
-            },
-            {
-              "art": "tb",
-              "text": "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2 und Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 3a",
-              "von": 914,
-              "laenge": 117,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungsglied 3a — Merkmalsvariante des Einleitungssatzes"
-            },
-            {
-              "art": "tb",
-              "text": "Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 3a",
-              "von": 969,
-              "laenge": 62,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt enthält zwei durch Konjunktion verbundene Tatbestandsalternativen."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 4",
-          "von": 1036,
-          "bis": 1301,
-          "typ": "definition",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Zinsen nach den §§ 233 bis 237",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 4",
-              "von": 1036,
-              "laenge": 30,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt fasst verschiedene Zinstatbestände als Subjektsbestandteile zusammen."
-            },
-            {
-              "art": "tb",
-              "text": "Zinsen nach den §§ 233 bis 237 sowie Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 4",
-              "von": 1036,
-              "laenge": 95,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "tb",
-              "text": "Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239 anzuwenden sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 4",
-              "von": 1073,
-              "laenge": 74,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt fasst verschiedene Zinstatbestände als Subjektsbestandteile zusammen."
-            },
-            {
-              "art": "tb",
-              "text": "Zinsen, die über die §§ 233 bis 237 und die Steuergesetze hinaus nach dem Recht der Europäischen Union auf zu erstattende Steuern zu leisten sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 4",
-              "von": 1155,
-              "laenge": 145,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt fasst verschiedene Zinstatbestände als Subjektsbestandteile zusammen."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 5",
-          "von": 1305,
-          "bis": 1333,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": []
-        },
-        {
-          "pfad": "Abs. 4 Nr. 6",
-          "von": 1337,
-          "bis": 1361,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Zwangsgelder nach § 329",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 6",
-              "von": 1337,
-              "laenge": 23,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt ergänzt das Prädikatsnomen des Einleitungssatzes."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 7",
-          "von": 1365,
-          "bis": 1434,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": []
-        },
-        {
-          "pfad": "Abs. 4 Nr. 8",
-          "von": 1438,
-          "bis": 1533,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": []
-        },
-        {
-          "pfad": "Abs. 4 Nr. 9",
-          "von": 1537,
-          "bis": 1606,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Verspätungsgelder nach § 22a Absatz 5 des Einkommensteuergesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Nr. 9",
-              "von": 1537,
-              "laenge": 65,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Aufzählungspunkt ergänzt das Prädikatsnomen des Einleitungssatzes."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Nr. 10",
-          "von": 1611,
-          "bis": 1697,
-          "typ": "definition",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": []
-        },
-        {
-          "pfad": "Abs. 5 Satz 1",
-          "von": 1698,
-          "bis": 1829,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Das Aufkommen der Zinsen auf Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1698,
-              "laenge": 112,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, das Prädikat regelt die Ertragshoheit."
-            },
-            {
-              "art": "rf",
-              "text": "steht dem Bund zu",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1811,
-              "laenge": 17,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, das Prädikat regelt die Ertragshoheit."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 2",
-          "von": 1830,
-          "bis": 1918,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Das Aufkommen der übrigen Zinsen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 2",
-              "von": 1830,
-              "laenge": 32,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein bloßes Satzsubjekt, welches den Normgegenstand bezeichnet."
-            },
-            {
-              "art": "tb",
-              "text": "übrigen Zinsen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 2",
-              "von": 1848,
-              "laenge": 14,
-              "konfidenz": 0.425,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Bezugssubjekt, das Prädikat bestimmt den Gläubiger der Erträge."
-            },
-            {
-              "art": "rf",
-              "text": "steht den jeweils steuerberechtigten Körperschaften zu",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 2",
-              "von": 1863,
-              "laenge": 54,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das Bezugssubjekt, das Prädikat bestimmt den Gläubiger der Erträge."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 3",
-          "von": 1919,
-          "bis": 2070,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Das Aufkommen der Kosten im Sinne des § 89",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 3",
-              "von": 1919,
-              "laenge": 42,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein bloßes Satzsubjekt, welches den Normgegenstand bezeichnet."
-            },
-            {
-              "art": "tb",
-              "text": "Kosten im Sinne des § 89",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 3",
-              "von": 1937,
-              "laenge": 24,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält den Normgegenstand, die Rechtsfolge regelt die Zuordnung."
-            },
-            {
-              "art": "rf",
-              "text": "steht jeweils der Körperschaft zu, deren Behörde für die Erteilung der verbindlichen Auskunft zuständig ist",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 3",
-              "von": 1962,
-              "laenge": 107,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält den Normgegenstand, die Rechtsfolge regelt die Zuordnung."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 4",
-          "von": 2071,
-          "bis": 2189,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Das Aufkommen der Kosten im Sinne des § 89a Absatz 7",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 4",
-              "von": 2071,
-              "laenge": 52,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein bloßes Satzsubjekt, welches den Normgegenstand bezeichnet."
-            },
-            {
-              "art": "tb",
-              "text": "Kosten im Sinne des § 89a Absatz 7",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 4",
-              "von": 2089,
-              "laenge": 34,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld, das Prädikat legt die Aufteilung fest."
-            },
-            {
-              "art": "rf",
-              "text": "steht dem Bund und dem jeweils betroffenen Land je zur Hälfte zu",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 4",
-              "von": 2124,
-              "laenge": 64,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld, das Prädikat legt die Aufteilung fest."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 5",
-          "von": 2190,
-          "bis": 2312,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Das Aufkommen der Kosten nach § 10 Absatz 5 und § 11 Absatz 7 des Plattformen-Steuertransparenzgesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 5",
-              "von": 2190,
-              "laenge": 103,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält den Gegenstand, die Rechtsfolge regelt die Ertragszusteilung."
-            },
-            {
-              "art": "rf",
-              "text": "steht dem Bund zu",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 5",
-              "von": 2294,
-              "laenge": 17,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält den Gegenstand, die Rechtsfolge regelt die Ertragszusteilung."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 6",
-          "von": 2313,
-          "bis": 2397,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Die übrigen steuerlichen Nebenleistungen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 6",
-              "von": 2313,
-              "laenge": 40,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld benennt die übrigen Nebenleistungen als Subjekt, das Prädikat legt den Zufluss fest."
-            },
-            {
-              "art": "rf",
-              "text": "fließen den verwaltenden Körperschaften zu",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 6",
-              "von": 2354,
-              "laenge": 42,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld benennt die übrigen Nebenleistungen als Subjekt, das Prädikat legt den Zufluss fest."
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "Abs. 1",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Geldleistungen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.425,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Geldleistungen, die nicht eine Gegenleistung für eine besondere Leistung darstellen und von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.507,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "die nicht eine Gegenleistung für eine besondere Leistung darstellen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
-                  "t": "die Erzielung von Einnahmen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Steuern",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.425,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "die Erzielung von Einnahmen kann Nebenzweck sein",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 2",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "die Grundsteuer und die Gewerbesteuer",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.633,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Realsteuern",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.275,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Realsteuern sind",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 3",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "sind Steuern im Sinne dieses Gesetzes",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Zollkodex der Union",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.8,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 4",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Verzögerungsgelder nach § 146 Absatz 2c",
-                  "pfad": "Abs. 4 Nr. 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Verspätungszuschläge nach § 152",
-                  "pfad": "Abs. 4 Nr. 2",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Zuschläge nach § 162 Absatz 4 und 4a",
-                  "pfad": "Abs. 4 Nr. 3",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2",
-                  "pfad": "Abs. 4 3a",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2 und Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-                  "pfad": "Abs. 4 3a",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-                  "pfad": "Abs. 4 3a",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
-                  "t": "Zinsen nach den §§ 233 bis 237",
-                  "pfad": "Abs. 4 Nr. 4",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "8.",
-                  "t": "Zinsen nach den §§ 233 bis 237 sowie Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239",
-                  "pfad": "Abs. 4 Nr. 4",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "9.",
-                  "t": "Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239 anzuwenden sind",
-                  "pfad": "Abs. 4 Nr. 4",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "10.",
-                  "t": "Zinsen, die über die §§ 233 bis 237 und die Steuergesetze hinaus nach dem Recht der Europäischen Union auf zu erstattende Steuern zu leisten sind",
-                  "pfad": "Abs. 4 Nr. 4",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "11.",
-                  "t": "Zwangsgelder nach § 329",
-                  "pfad": "Abs. 4 Nr. 6",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "12.",
-                  "t": "Verspätungsgelder nach § 22a Absatz 5 des Einkommensteuergesetzes",
-                  "pfad": "Abs. 4 Nr. 9",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Steuerliche Nebenleistungen sind",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 5",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Das Aufkommen der Zinsen auf Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Das Aufkommen der übrigen Zinsen",
-                  "pfad": "Abs. 5 Satz 2",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "übrigen Zinsen",
-                  "pfad": "Abs. 5 Satz 2",
-                  "konfidenz": 0.425,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "Das Aufkommen der Kosten im Sinne des § 89",
-                  "pfad": "Abs. 5 Satz 3",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "Kosten im Sinne des § 89",
-                  "pfad": "Abs. 5 Satz 3",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "Das Aufkommen der Kosten im Sinne des § 89a Absatz 7",
-                  "pfad": "Abs. 5 Satz 4",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
-                  "t": "Kosten im Sinne des § 89a Absatz 7",
-                  "pfad": "Abs. 5 Satz 4",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "8.",
-                  "t": "Das Aufkommen der Kosten nach § 10 Absatz 5 und § 11 Absatz 7 des Plattformen-Steuertransparenzgesetzes",
-                  "pfad": "Abs. 5 Satz 5",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "9.",
-                  "t": "Die übrigen steuerlichen Nebenleistungen",
-                  "pfad": "Abs. 5 Satz 6",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "steht dem Bund zu",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "steht den jeweils steuerberechtigten Körperschaften zu",
-                  "pfad": "Abs. 5 Satz 2",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "steht jeweils der Körperschaft zu, deren Behörde für die Erteilung der verbindlichen Auskunft zuständig ist",
-                  "pfad": "Abs. 5 Satz 3",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "steht dem Bund und dem jeweils betroffenen Land je zur Hälfte zu",
-                  "pfad": "Abs. 5 Satz 4",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "steht dem Bund zu",
-                  "pfad": "Abs. 5 Satz 5",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "fließen den verwaltenden Körperschaften zu",
-                  "pfad": "Abs. 5 Satz 6",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "Geldleistungen",
-        "Geldleistungen, die nicht eine Gegenleistung für eine besondere Leistung darstellen und von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-        "die nicht eine Gegenleistung für eine besondere Leistung darstellen",
-        "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden, bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-        "von einem öffentlich-rechtlichen Gemeinwesen zur Erzielung von Einnahmen allen auferlegt werden",
-        "bei denen der Tatbestand zutrifft, an den das Gesetz die Leistungspflicht knüpft",
-        "die Erzielung von Einnahmen",
-        "die Grundsteuer und die Gewerbesteuer",
-        "Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-        "Verzögerungsgelder nach § 146 Absatz 2c",
-        "Verspätungszuschläge nach § 152",
-        "Zuschläge nach § 162 Absatz 4 und 4a",
-        "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2",
-        "Mitwirkungsverzögerungsgelder nach § 200a Absatz 2 und Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-        "Zuschläge zum Mitwirkungsverzögerungsgeld nach § 200a Absatz 3",
-        "Zinsen nach den §§ 233 bis 237",
-        "Zinsen nach den §§ 233 bis 237 sowie Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239",
-        "Zinsen nach den Steuergesetzen, auf die die §§ 238 und 239 anzuwenden sind",
-        "Zinsen, die über die §§ 233 bis 237 und die Steuergesetze hinaus nach dem Recht der Europäischen Union auf zu erstattende Steuern zu leisten sind",
-        "Zwangsgelder nach § 329",
-        "Verspätungsgelder nach § 22a Absatz 5 des Einkommensteuergesetzes",
-        "Das Aufkommen der Zinsen auf Einfuhr- und Ausfuhrabgaben nach Artikel 5 Nummer 20 und 21 des Zollkodex der Union",
-        "Das Aufkommen der übrigen Zinsen",
-        "übrigen Zinsen",
-        "Das Aufkommen der Kosten im Sinne des § 89",
-        "Kosten im Sinne des § 89",
-        "Das Aufkommen der Kosten im Sinne des § 89a Absatz 7",
-        "Kosten im Sinne des § 89a Absatz 7",
-        "Das Aufkommen der Kosten nach § 10 Absatz 5 und § 11 Absatz 7 des Plattformen-Steuertransparenzgesetzes",
-        "Die übrigen steuerlichen Nebenleistungen"
-      ],
-      "rf": [
-        "Steuern",
-        "die Erzielung von Einnahmen kann Nebenzweck sein",
-        "Realsteuern",
-        "Realsteuern sind",
-        "sind Steuern im Sinne dieses Gesetzes",
-        "Zollkodex der Union",
-        "Steuerliche Nebenleistungen sind",
-        "steht dem Bund zu",
-        "steht den jeweils steuerberechtigten Körperschaften zu",
-        "steht jeweils der Körperschaft zu, deren Behörde für die Erteilung der verbindlichen Auskunft zuständig ist",
-        "steht dem Bund und dem jeweils betroffenen Land je zur Hälfte zu",
-        "steht dem Bund zu",
-        "fließen den verwaltenden Körperschaften zu"
-      ],
-      "ausnahmen": [],
-      "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.704,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.535,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 54 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "9f21e42a829d1d9aa55eece0aadd2d87609ce5a27da2e61e3b51a2ee65cc32b4",
-      "format": 5,
-      "aktualisiert": "2026-08-16T06:04:40.469Z"
-    },
-    "4": {
-      "typ": "definition",
-      "typen": [
-        "definition"
-      ],
-      "saetze": [
-        {
-          "pfad": "Satz 1",
-          "von": 0,
-          "bis": 27,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Gesetz",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 0,
-              "laenge": 6,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Da das Vorfeld mit dem Nomen 'Gesetz' das Subjekt bzw. den definierten Begriff darstellt, liegt kein prädikatives Adjektiv, konditionales Adverbial oder eine Verberststellung vor."
-            },
-            {
-              "art": "tb",
-              "text": "jede Rechtsnorm",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 11,
-              "laenge": 15,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld nennt als Definiendum das Normsubjekt, während das prädikative Substantiv im Nachfeld das Merkmal der Legaldefinition bestimmt."
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "jede Rechtsnorm",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Gesetz",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "jede Rechtsnorm"
-      ],
-      "rf": [
-        "Gesetz"
-      ],
-      "ausnahmen": [],
-      "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.519,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.5,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "227142208593e11f207f9390a656f94b1c68c8a6ed5b35674f0c212df95a3f8f",
-      "format": 5,
-      "aktualisiert": "2026-08-17T04:26:14.153Z"
-    },
-    "5": {
-      "typ": "konditional",
-      "typen": [
-        "konditional"
-      ],
-      "saetze": [
-        {
-          "pfad": "Satz 1",
-          "von": 0,
-          "bis": 192,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Ist die Finanzbehörde ermächtigt, nach ihrem Ermessen zu handeln",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 0,
-              "laenge": 64,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Der vorangestellte uneingeleitete Konditionalsatz mit Verberststellung bildet die Bedingung, der nachfolgende koordinierte Hauptsatz die Rechtsfolge."
-            },
-            {
-              "art": "rf",
-              "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 66,
-              "laenge": 70,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Der vorangestellte uneingeleitete Konditionalsatz mit Verberststellung bildet die Bedingung, der nachfolgende koordinierte Hauptsatz die Rechtsfolge."
-            },
-            {
-              "art": "rf",
-              "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 66,
-              "laenge": 125,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
-            },
-            {
-              "art": "rf",
-              "text": "die gesetzlichen Grenzen des Ermessens einzuhalten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 141,
-              "laenge": 50,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Der vorangestellte uneingeleitete Konditionalsatz mit Verberststellung bildet die Bedingung, der nachfolgende koordinierte Hauptsatz die Rechtsfolge."
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Ist die Finanzbehörde ermächtigt, nach ihrem Ermessen zu handeln",
-                  "pfad": "Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "die gesetzlichen Grenzen des Ermessens einzuhalten",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "Ist die Finanzbehörde ermächtigt, nach ihrem Ermessen zu handeln"
-      ],
-      "rf": [
-        "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben",
-        "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten",
-        "die gesetzlichen Grenzen des Ermessens einzuhalten"
-      ],
-      "ausnahmen": [],
-      "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.738,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.75,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 75 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "2122de45e791f2573dbded9da4be7d2691433feed92c1793f6bab06ab4e420e6",
-      "format": 5,
-      "aktualisiert": "2026-08-17T04:27:16.210Z"
-    },
-    "6": {
-      "typ": "gemischt",
-      "typen": [
-        "definition",
-        "aussage",
-        "konditional",
-        "fiktion"
-      ],
-      "saetze": [
-        {
-          "pfad": "Abs. 1 Satz 1",
-          "von": 0,
-          "bis": 88,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "def",
-              "text": "Behörde",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 7,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Definiendum vor dem Kopulaverb"
-            },
-            {
-              "art": "tb",
-              "text": "jede öffentliche Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 12,
-              "laenge": 75,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Definiens — Merkmale des Begriffs"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1a Satz 1",
-          "von": 89,
-          "bis": 385,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Öffentliche Stellen des Bundes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1a Satz 1",
-              "von": 89,
-              "laenge": 30,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "Behörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1a Satz 1",
-              "von": 129,
-              "laenge": 8,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
-            },
-            {
-              "art": "ausn",
-              "text": "ungeachtet ihrer Rechtsform",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1a Satz 1",
-              "von": 357,
-              "laenge": 27,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Vorbehalt mit „ungeachtet\""
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1b Satz 1",
-          "von": 386,
-          "bis": 731,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Öffentliche Stellen der Länder",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1b Satz 1",
-              "von": 386,
-              "laenge": 30,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "sind die Behörden, die Organe der Rechtspflege und andere öffentlich-rechtlich organisierte Einrichtungen eines Landes, einer Gemeinde, eines Gemeindeverbandes oder sonstiger der Aufsicht des Landes unterstehender juristischer Personen des öffentlichen Rechts sowie deren Vereinigungen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1b Satz 1",
-              "von": 417,
-              "laenge": 285,
-              "konfidenz": 0.42,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge (um Ausnahme gekürzt)"
-            },
-            {
-              "art": "ausn",
-              "text": "ungeachtet ihrer Rechtsform",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1b Satz 1",
-              "von": 703,
-              "laenge": 27,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Vorbehalt mit „ungeachtet\""
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1c Satz 1",
-          "von": 732,
-          "bis": 972,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Vereinigungen des privaten Rechts von öffentlichen Stellen des Bundes und der Länder, die Aufgaben der öffentlichen Verwaltung wahrnehmen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Satz 1",
-              "von": 732,
-              "laenge": 137,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "ausn",
-              "text": "ungeachtet der Beteiligung nicht-öffentlicher Stellen als öffentliche Stellen des Bundes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Satz 1",
-              "von": 878,
-              "laenge": 88,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Vorbehalt mit „ungeachtet\""
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1c Nr. 1",
-          "von": 976,
-          "bis": 1034,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "sie über den Bereich eines Landes hinaus tätig",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Nr. 1",
-              "von": 976,
-              "laenge": 46,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1c Nr. 2",
-          "von": 1038,
-          "bis": 1135,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "dem Bund die absolute Mehrheit der Anteile",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Nr. 2",
-              "von": 1038,
-              "laenge": 42,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "gehört oder die absolute Mehrheit der Stimmen zusteht",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Nr. 2",
-              "von": 1081,
-              "laenge": 53,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1c Satz 2",
-          "von": 1136,
-          "bis": 1195,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Anderenfalls",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Satz 2",
-              "von": 1136,
-              "laenge": 12,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
-            },
-            {
-              "art": "tb",
-              "text": "sie als öffentliche Stellen der Länder",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1c Satz 2",
-              "von": 1156,
-              "laenge": 38,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1d Satz 1",
-          "von": 1196,
-          "bis": 1385,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Nicht-öffentliche Stellen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1d Satz 1",
-              "von": 1196,
-              "laenge": 25,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Prädikativ im Vorfeld"
-            },
-            {
-              "art": "tb",
-              "text": "soweit sie nicht unter die Absätze 1a bis 1c fallen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1d Satz 1",
-              "von": 1333,
-              "laenge": 51,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\""
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1d Satz 2",
-          "von": 1386,
-          "bis": 1538,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Nimmt eine nicht-öffentliche Stelle hoheitliche Aufgaben der öffentlichen Verwaltung wahr",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1d Satz 2",
-              "von": 1386,
-              "laenge": 89,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
-            },
-            {
-              "art": "rf",
-              "text": "ist sie insoweit öffentliche Stelle im Sinne dieses Gesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1d Satz 2",
-              "von": 1477,
-              "laenge": 60,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1e Satz 1",
-          "von": 1539,
-          "bis": 1723,
-          "typ": "fiktion",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Öffentliche Stellen des Bundes oder der Länder",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1e Satz 1",
-              "von": 1539,
-              "laenge": 46,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
-            },
-            {
-              "art": "rf",
-              "text": "gelten als nicht-öffentliche Stellen im Sinne dieses Gesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1e Satz 1",
-              "von": 1586,
-              "laenge": 61,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
-            },
-            {
-              "art": "tb",
-              "text": "soweit sie als öffentlich-rechtliche Unternehmen am Wettbewerb teilnehmen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1e Satz 1",
-              "von": 1649,
-              "laenge": 73,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\""
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 1",
-          "von": 1724,
-          "bis": 1862,
-          "typ": "definition",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Finanzbehörden im Sinne dieses Gesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 1724,
-              "laenge": 39,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "sind die folgenden im Gesetz über die Finanzverwaltung genannten Bundes- und Landesfinanzbehörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 1764,
-              "laenge": 97,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 1",
-          "von": 1866,
-          "bis": 1991,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "das Bundesministerium der Finanzen und die für die Finanzverwaltung zuständigen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 1",
-              "von": 1866,
-              "laenge": 79,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "obersten Landesbehörden als oberste Behörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 1",
-              "von": 1946,
-              "laenge": 44,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 2",
-          "von": 1995,
-          "bis": 2117,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "das Bundeszentralamt für Steuern, das Informationstechnikzentrum Bund und die Generalzolldirektion als Bundesoberbehörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 2",
-              "von": 1995,
-              "laenge": 121,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 3",
-          "von": 2121,
-          "bis": 2418,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "worden ist, als Landesoberbehörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 3",
-              "von": 2383,
-              "laenge": 34,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 4",
-          "von": 2422,
-          "bis": 2467,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "die Oberfinanzdirektionen als Mittelbehörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 4",
-              "von": 2422,
-              "laenge": 44,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 4a",
-          "von": 2472,
-          "bis": 2603,
-          "typ": "aussage",
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "die nach dem Finanzverwaltungsgesetz oder nach Landesrecht an Stelle einer Oberfinanzdirektion",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 4a",
-              "von": 2472,
-              "laenge": 94,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "eingerichteten Landesfinanzbehörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 4a",
-              "von": 2567,
-              "laenge": 35,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 5",
-          "von": 2607,
-          "bis": 2764,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "die Hauptzollämter einschließlich ihrer Dienststellen, die Zollfahndungsämter, die Finanzämter und die besonderen Landesfinanzbehörden als örtliche Behörden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 5",
-              "von": 2607,
-              "laenge": 156,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 6",
-          "von": 2768,
-          "bis": 2783,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Familienkassen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 6",
-              "von": 2768,
-              "laenge": 14,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 6 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 7",
-          "von": 2787,
-          "bis": 2856,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "die zentrale Stelle im Sinne des § 81 des Einkommensteuergesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 7",
-              "von": 2787,
-              "laenge": 65,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 7 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Nr. 8",
-          "von": 2860,
-          "bis": 2958,
-          "typ": "aussage",
-          "katalog": true,
-          "junktor": "und",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "die Deutsche Rentenversicherung Knappschaft-Bahn-See (§ 40a Absatz 6 des Einkommensteuergesetzes)",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 8",
-              "von": 2860,
-              "laenge": 97,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 8 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "Abs. 1",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "def",
-              "t": "Begriffsbestimmung",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Behörde",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "tb",
-              "t": "Merkmale des Begriffs",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "jede öffentliche Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 1a",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Öffentliche Stellen des Bundes",
-                  "pfad": "Abs. 1a Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "ungeachtet ihrer Rechtsform",
-                  "pfad": "Abs. 1a Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Behörden",
-                  "pfad": "Abs. 1a Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 1b",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Öffentliche Stellen der Länder",
-                  "pfad": "Abs. 1b Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "ungeachtet ihrer Rechtsform",
-                  "pfad": "Abs. 1b Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "sind die Behörden, die Organe der Rechtspflege und andere öffentlich-rechtlich organisierte Einrichtungen eines Landes, einer Gemeinde, eines Gemeindeverbandes oder sonstiger der Aufsicht des Landes unterstehender juristischer Personen des öffentlichen Rechts sowie deren Vereinigungen",
-                  "pfad": "Abs. 1b Satz 1",
-                  "konfidenz": 0.42,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 1c",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Vereinigungen des privaten Rechts von öffentlichen Stellen des Bundes und der Länder, die Aufgaben der öffentlichen Verwaltung wahrnehmen",
-                  "pfad": "Abs. 1c Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "sie über den Bereich eines Landes hinaus tätig",
-                  "pfad": "Abs. 1c Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "dem Bund die absolute Mehrheit der Anteile",
-                  "pfad": "Abs. 1c Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "sie als öffentliche Stellen der Länder",
-                  "pfad": "Abs. 1c Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "ungeachtet der Beteiligung nicht-öffentlicher Stellen als öffentliche Stellen des Bundes",
-                  "pfad": "Abs. 1c Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "gehört oder die absolute Mehrheit der Stimmen zusteht",
-                  "pfad": "Abs. 1c Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Anderenfalls",
-                  "pfad": "Abs. 1c Satz 2",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 1d",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "soweit sie nicht unter die Absätze 1a bis 1c fallen",
-                  "pfad": "Abs. 1d Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Nimmt eine nicht-öffentliche Stelle hoheitliche Aufgaben der öffentlichen Verwaltung wahr",
-                  "pfad": "Abs. 1d Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Nicht-öffentliche Stellen",
-                  "pfad": "Abs. 1d Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "ist sie insoweit öffentliche Stelle im Sinne dieses Gesetzes",
-                  "pfad": "Abs. 1d Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 1e",
-          "typ": "fiktion",
-          "rolle": "Fiktion",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Öffentliche Stellen des Bundes oder der Länder",
-                  "pfad": "Abs. 1e Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "soweit sie als öffentlich-rechtliche Unternehmen am Wettbewerb teilnehmen",
-                  "pfad": "Abs. 1e Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "gelten als nicht-öffentliche Stellen im Sinne dieses Gesetzes",
-                  "pfad": "Abs. 1e Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 2",
-          "typ": "aussage",
-          "rolle": "Anordnung",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Finanzbehörden im Sinne dieses Gesetzes",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "das Bundesministerium der Finanzen und die für die Finanzverwaltung zuständigen",
-                  "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "das Bundeszentralamt für Steuern, das Informationstechnikzentrum Bund und die Generalzolldirektion als Bundesoberbehörden",
-                  "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "die Oberfinanzdirektionen als Mittelbehörden",
-                  "pfad": "Abs. 2 Nr. 4",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "die nach dem Finanzverwaltungsgesetz oder nach Landesrecht an Stelle einer Oberfinanzdirektion",
-                  "pfad": "Abs. 2 4a",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "die Hauptzollämter einschließlich ihrer Dienststellen, die Zollfahndungsämter, die Finanzämter und die besonderen Landesfinanzbehörden als örtliche Behörden",
-                  "pfad": "Abs. 2 Nr. 5",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
-                  "t": "Familienkassen",
-                  "pfad": "Abs. 2 Nr. 6",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "8.",
-                  "t": "die zentrale Stelle im Sinne des § 81 des Einkommensteuergesetzes",
-                  "pfad": "Abs. 2 Nr. 7",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "9.",
-                  "t": "die Deutsche Rentenversicherung Knappschaft-Bahn-See (§ 40a Absatz 6 des Einkommensteuergesetzes)",
-                  "pfad": "Abs. 2 Nr. 8",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "sind die folgenden im Gesetz über die Finanzverwaltung genannten Bundes- und Landesfinanzbehörden",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "obersten Landesbehörden als oberste Behörden",
-                  "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "worden ist, als Landesoberbehörden",
-                  "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "eingerichteten Landesfinanzbehörden",
-                  "pfad": "Abs. 2 4a",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "jede öffentliche Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt",
-        "Öffentliche Stellen des Bundes",
-        "Öffentliche Stellen der Länder",
-        "Vereinigungen des privaten Rechts von öffentlichen Stellen des Bundes und der Länder, die Aufgaben der öffentlichen Verwaltung wahrnehmen",
-        "sie über den Bereich eines Landes hinaus tätig",
-        "dem Bund die absolute Mehrheit der Anteile",
-        "sie als öffentliche Stellen der Länder",
-        "soweit sie nicht unter die Absätze 1a bis 1c fallen",
-        "Nimmt eine nicht-öffentliche Stelle hoheitliche Aufgaben der öffentlichen Verwaltung wahr",
-        "Öffentliche Stellen des Bundes oder der Länder",
-        "soweit sie als öffentlich-rechtliche Unternehmen am Wettbewerb teilnehmen",
-        "Finanzbehörden im Sinne dieses Gesetzes",
-        "das Bundesministerium der Finanzen und die für die Finanzverwaltung zuständigen",
-        "das Bundeszentralamt für Steuern, das Informationstechnikzentrum Bund und die Generalzolldirektion als Bundesoberbehörden",
-        "die Oberfinanzdirektionen als Mittelbehörden",
-        "die nach dem Finanzverwaltungsgesetz oder nach Landesrecht an Stelle einer Oberfinanzdirektion",
-        "die Hauptzollämter einschließlich ihrer Dienststellen, die Zollfahndungsämter, die Finanzämter und die besonderen Landesfinanzbehörden als örtliche Behörden",
-        "Familienkassen",
-        "die zentrale Stelle im Sinne des § 81 des Einkommensteuergesetzes",
-        "die Deutsche Rentenversicherung Knappschaft-Bahn-See (§ 40a Absatz 6 des Einkommensteuergesetzes)"
-      ],
-      "rf": [
-        "Behörden",
-        "sind die Behörden, die Organe der Rechtspflege und andere öffentlich-rechtlich organisierte Einrichtungen eines Landes, einer Gemeinde, eines Gemeindeverbandes oder sonstiger der Aufsicht des Landes unterstehender juristischer Personen des öffentlichen Rechts sowie deren Vereinigungen",
-        "gehört oder die absolute Mehrheit der Stimmen zusteht",
-        "Anderenfalls",
-        "Nicht-öffentliche Stellen",
-        "ist sie insoweit öffentliche Stelle im Sinne dieses Gesetzes",
-        "gelten als nicht-öffentliche Stellen im Sinne dieses Gesetzes",
-        "sind die folgenden im Gesetz über die Finanzverwaltung genannten Bundes- und Landesfinanzbehörden",
-        "obersten Landesbehörden als oberste Behörden",
-        "worden ist, als Landesoberbehörden",
-        "eingerichteten Landesfinanzbehörden"
-      ],
-      "ausnahmen": [
-        "ungeachtet ihrer Rechtsform",
-        "ungeachtet ihrer Rechtsform",
-        "ungeachtet der Beteiligung nicht-öffentlicher Stellen als öffentliche Stellen des Bundes"
-      ],
-      "definitionen": [
-        "Behörde"
-      ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.597,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -4464,828 +707,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
       "hinweis": "Aus 0 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 0 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "5d30f7a9b60d2aadb3748ce74190d5fc98117d25ac6f5f16def96c60d461fa8c",
+      "text_hash": "9a1a89e36594449f538915eb09c0da52ab715107c65d2606c915451a322f0033",
       "format": 5,
-      "aktualisiert": "2026-08-17T04:28:21.359Z"
-    },
-    "2a": {
-      "typ": "gemischt",
-      "typen": [
-        "konditional",
-        "fiktion",
-        "aussage"
-      ],
-      "saetze": [
-        {
-          "pfad": "Abs. 1 Satz 1",
-          "von": 0,
-          "bis": 330,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten im Anwendungsbereich dieses Gesetzes gelten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 4,
-              "laenge": 140,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, während das konditionale Adverbial im Nachfeld den Tatbestand darstellt."
-            },
-            {
-              "art": "rf",
-              "text": "gelten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 138,
-              "laenge": 6,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normgegenstand, während das präpositionale Adverbial den Tatbestand bildet."
-            },
-            {
-              "art": "tb",
-              "text": "bei der Verarbeitung personenbezogener Daten durch Finanzbehörden (§ 6 Absatz 2), andere öffentliche Stellen (§ 6 Absatz 1a bis 1c) und nicht-öffentliche Stellen (§ 6 Absatz 1d und 1e)",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 145,
-              "laenge": 184,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normgegenstand, während das präpositionale Adverbial den Tatbestand bildet."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1 Satz 2",
-          "von": 331,
-          "bis": 537,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Das Bundesdatenschutzgesetz oder andere Datenschutzvorschriften des Bundes sowie entsprechende Landesgesetze gelten für Finanzbehörden nur",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 2",
-              "von": 331,
-              "laenge": 138,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, während der konditionale Nebensatz im Nachfeld den Tatbestand bildet."
-            },
-            {
-              "art": "rf",
-              "text": "gelten für Finanzbehörden nur",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 2",
-              "von": 440,
-              "laenge": 29,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld und der nachgestellte Konditionalsatz bildet den Tatbestand."
-            },
-            {
-              "art": "tb",
-              "text": "soweit dies in diesem Gesetz oder den Steuergesetzen bestimmt ist",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 2",
-              "von": 471,
-              "laenge": 65,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld und der nachgestellte Konditionalsatz bildet den Tatbestand."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 1",
-          "von": 538,
-          "bis": 735,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Die datenschutzrechtlichen Regelungen dieses Gesetzes gelten auch",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 538,
-              "laenge": 65,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, während das präpositionale Glied im Nachfeld den Tatbestand beschreibt."
-            },
-            {
-              "art": "rf",
-              "text": "gelten auch",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 592,
-              "laenge": 11,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das bloße Satzsubjekt, während das Präpositionalobjekt den Tatbestand beschreibt."
-            },
-            {
-              "art": "tb",
-              "text": "für Daten, die die Finanzbehörden im Rahmen ihrer Aufgaben bei der Überwachung des grenzüberschreitenden Warenverkehrs verarbeiten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 604,
-              "laenge": 130,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Im Vorfeld steht das bloße Satzsubjekt, während das Präpositionalobjekt den Tatbestand beschreibt."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2 Satz 2",
-          "von": 736,
-          "bis": 812,
-          "typ": "fiktion",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Die Daten gelten als im Rahmen eines Verfahrens in Steuersachen verarbeitet",
-              "anzeige": "gelten als im Rahmen eines Verfahrens in Steuersachen … verarbeitet",
-              "teile": [
-                {
-                  "text": "gelten als im Rahmen eines Verfahrens in Steuersachen",
-                  "von": 746,
-                  "laenge": 53
-                },
-                {
-                  "text": "verarbeitet",
-                  "von": 800,
-                  "laenge": 11
-                }
-              ],
-              "pfad": "Abs. 2 Satz 2",
-              "von": 746,
-              "laenge": 75,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Fiktionsprädikat im Hauptsatz ordnet eine gesetzliche Gleichstellung als Rechtsfolge an."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 1",
-          "von": 813,
-          "bis": 1262,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Die Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten finden keine Anwendung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 813,
-              "laenge": 123,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, während der konditionale Nebensatz im Nachfeld den Tatbestand darstellt."
-            },
-            {
-              "art": "rf",
-              "text": "finden keine Anwendung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 914,
-              "laenge": 22,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld und die eingeleitete Adverbialbestimmung bildet den Tatbestand."
-            },
-            {
-              "art": "tb",
-              "text": "soweit das Recht der Europäischen Union, im Besonderen die Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung) (ABl",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 938,
-              "laenge": 323,
-              "konfidenz": 0.653,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt besetzt das Vorfeld und die eingeleitete Adverbialbestimmung bildet den Tatbestand."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 3 Satz 2",
-          "von": 1263,
-          "bis": 1453,
-          "typ": "aussage",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "in der jeweils geltenden Fassung unmittelbar oder nach Absatz 5 entsprechend gilt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 2",
-              "von": 1371,
-              "laenge": 81,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Der Satzteil setzt den Nebensatz des Tatbestands aus dem vorangegangenen Satz fort."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 4 Satz 1",
-          "von": 1454,
-          "bis": 1759,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Für die Verarbeitung personenbezogener Daten zum Zweck der Verhütung, Ermittlung, Aufdeckung, Verfolgung oder Ahndung von Steuerstraftaten oder Steuerordnungswidrigkeiten",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Satz 1",
-              "von": 1454,
-              "laenge": 170,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld wird von einem konditionalen Adverbial als Tatbestand besetzt."
-            },
-            {
-              "art": "rf",
-              "text": "gelten die Vorschriften des Ersten und des Dritten Teils des Bundesdatenschutzgesetzes",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Satz 1",
-              "von": 1625,
-              "laenge": 86,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld wird von einem konditionalen Adverbial als Tatbestand besetzt."
-            },
-            {
-              "art": "tb",
-              "text": "soweit gesetzlich nichts anderes bestimmt ist",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 4 Satz 1",
-              "von": 1713,
-              "laenge": 45,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Das Vorfeld wird von einem konditionalen Adverbial als Tatbestand besetzt."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Satz 1",
-          "von": 1760,
-          "bis": 2045,
-          "typ": "konditional",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Soweit nichts anderes bestimmt ist",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1760,
-              "laenge": 34,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Der vorangestellte Konditionalsatz steht im Vorfeld und bildet das erste Tatbestandsmerkmal."
-            },
-            {
-              "art": "rf",
-              "text": "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1796,
-              "laenge": 171,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Der vorangestellte Konditionalsatz steht im Vorfeld und bildet das erste Tatbestandsmerkmal."
-            },
-            {
-              "art": "rf",
-              "text": "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend für Informationen, die sich beziehen auf identifizierte oder identifizierbare",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1796,
-              "laenge": 249,
-              "konfidenz": 0.735,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld wird durch einen konditonalen Nebensatz gebildet, der den Tatbestand darstellt."
-            },
-            {
-              "art": "tb",
-              "text": "für Informationen, die sich beziehen auf identifizierte oder identifizierbare",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Satz 1",
-              "von": 1968,
-              "laenge": 77,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Der vorangestellte Konditionalsatz steht im Vorfeld und bildet das erste Tatbestandsmerkmal."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Nr. 1",
-          "von": 2049,
-          "bis": 2085,
-          "typ": "konditional",
-          "katalog": true,
-          "junktor": "oder",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "verstorbene natürliche Personen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Nr. 1",
-              "von": 2049,
-              "laenge": 31,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Aufzählungsglied vervollständigt das präpositionale Satzglied des Tatbestands."
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 5 Nr. 2",
-          "von": 2089,
-          "bis": 2156,
-          "typ": "konditional",
-          "katalog": true,
-          "junktor": "oder",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Körperschaften, Personenvereinigungen (§ 14a) oder Vermögensmassen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 5 Nr. 2",
-              "von": 2089,
-              "laenge": 66,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": true,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Aufzählungsglied bildet eine alternative Variante des Tatbestandsmerkmals."
-            }
-          ]
-        }
-      ],
-      "schema": [
-        {
-          "absatz": "Abs. 1",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "bei der Verarbeitung personenbezogener Daten durch Finanzbehörden (§ 6 Absatz 2), andere öffentliche Stellen (§ 6 Absatz 1a bis 1c) und nicht-öffentliche Stellen (§ 6 Absatz 1d und 1e)",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "soweit dies in diesem Gesetz oder den Steuergesetzen bestimmt ist",
-                  "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten im Anwendungsbereich dieses Gesetzes gelten",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gelten",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Das Bundesdatenschutzgesetz oder andere Datenschutzvorschriften des Bundes sowie entsprechende Landesgesetze gelten für Finanzbehörden nur",
-                  "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "gelten für Finanzbehörden nur",
-                  "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.633,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 2",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "für Daten, die die Finanzbehörden im Rahmen ihrer Aufgaben bei der Überwachung des grenzüberschreitenden Warenverkehrs verarbeiten",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Die datenschutzrechtlichen Regelungen dieses Gesetzes gelten auch",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gelten auch",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "gelten als im Rahmen eines Verfahrens in Steuersachen … verarbeitet",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 3",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "soweit das Recht der Europäischen Union, im Besonderen die Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung) (ABl",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.653,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "in der jeweils geltenden Fassung unmittelbar oder nach Absatz 5 entsprechend gilt",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.367,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Die Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten finden keine Anwendung",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.367,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "finden keine Anwendung",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.633,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 4",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Für die Verarbeitung personenbezogener Daten zum Zweck der Verhütung, Ermittlung, Aufdeckung, Verfolgung oder Ahndung von Steuerstraftaten oder Steuerordnungswidrigkeiten",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "soweit gesetzlich nichts anderes bestimmt ist",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.8,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "gelten die Vorschriften des Ersten und des Dritten Teils des Bundesdatenschutzgesetzes",
-                  "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 5",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzungen (eine genügt)",
-              "junktor": "oder",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Soweit nichts anderes bestimmt ist",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.8,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "für Informationen, die sich beziehen auf identifizierte oder identifizierbare",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "verstorbene natürliche Personen",
-                  "pfad": "Abs. 5 Nr. 1",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "Körperschaften, Personenvereinigungen (§ 14a) oder Vermögensmassen",
-                  "pfad": "Abs. 5 Nr. 2",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend für Informationen, die sich beziehen auf identifizierte oder identifizierbare",
-                  "pfad": "Abs. 5 Satz 1",
-                  "konfidenz": 0.735,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "tb": [
-        "bei der Verarbeitung personenbezogener Daten durch Finanzbehörden (§ 6 Absatz 2), andere öffentliche Stellen (§ 6 Absatz 1a bis 1c) und nicht-öffentliche Stellen (§ 6 Absatz 1d und 1e)",
-        "soweit dies in diesem Gesetz oder den Steuergesetzen bestimmt ist",
-        "für Daten, die die Finanzbehörden im Rahmen ihrer Aufgaben bei der Überwachung des grenzüberschreitenden Warenverkehrs verarbeiten",
-        "soweit das Recht der Europäischen Union, im Besonderen die Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung) (ABl",
-        "in der jeweils geltenden Fassung unmittelbar oder nach Absatz 5 entsprechend gilt",
-        "Für die Verarbeitung personenbezogener Daten zum Zweck der Verhütung, Ermittlung, Aufdeckung, Verfolgung oder Ahndung von Steuerstraftaten oder Steuerordnungswidrigkeiten",
-        "soweit gesetzlich nichts anderes bestimmt ist",
-        "Soweit nichts anderes bestimmt ist",
-        "für Informationen, die sich beziehen auf identifizierte oder identifizierbare",
-        "verstorbene natürliche Personen",
-        "Körperschaften, Personenvereinigungen (§ 14a) oder Vermögensmassen"
-      ],
-      "rf": [
-        "Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten im Anwendungsbereich dieses Gesetzes gelten",
-        "gelten",
-        "Das Bundesdatenschutzgesetz oder andere Datenschutzvorschriften des Bundes sowie entsprechende Landesgesetze gelten für Finanzbehörden nur",
-        "gelten für Finanzbehörden nur",
-        "Die datenschutzrechtlichen Regelungen dieses Gesetzes gelten auch",
-        "gelten auch",
-        "Die Daten gelten als im Rahmen eines Verfahrens in Steuersachen verarbeitet",
-        "Die Vorschriften dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten finden keine Anwendung",
-        "finden keine Anwendung",
-        "gelten die Vorschriften des Ersten und des Dritten Teils des Bundesdatenschutzgesetzes",
-        "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend",
-        "gelten die Vorschriften der Verordnung (EU) 2016/679, dieses Gesetzes und der Steuergesetze über die Verarbeitung personenbezogener Daten natürlicher Personen entsprechend für Informationen, die sich beziehen auf identifizierte oder identifizierbare"
-      ],
-      "ausnahmen": [],
-      "definitionen": [],
-      "status": "mehrheit",
-      "markierbar": true,
-      "konfidenz": 0.643,
-      "belegquote": 0,
-      "belege": [],
-      "strittig": false,
-      "einstimmigkeit": 0.348,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 35 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "a31edc159b4a995d953bb8be07efb0cd2ee243eb54c529ca0c833330dccb6717",
-      "format": 5,
-      "aktualisiert": "2026-08-16T05:10:02.058Z"
+      "aktualisiert": "2026-08-17T05:04:48.748Z"
     }
   }
 }

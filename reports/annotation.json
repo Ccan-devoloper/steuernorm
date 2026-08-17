@@ -1,25 +1,25 @@
 {
-  "erzeugt": "2026-08-17T04:24:29.910Z",
+  "erzeugt": "2026-08-17T04:58:35.627Z",
   "format": 5,
   "modelle": [
     "gemini-3.7-flash",
     "gemini-3.6-flash",
-    "gemini-3.5-flash",
-    "gemini-3.5-flash-lite"
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite"
   ],
   "laeufe": 3,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 3,
-      "uebernommen": 4,
-      "markierbar": 7,
-      "abgelehnt": 2,
+      "bearbeitet": 1,
+      "uebernommen": 0,
+      "markierbar": 1,
+      "abgelehnt": 1,
       "vollstaendig": false
     }
   ],
-  "modellaufrufe": 9,
+  "modellaufrufe": 1,
   "belegprobe": {
     "gestuetzt": 0,
     "entfernt": 0,
