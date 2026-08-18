@@ -1,9 +1,366 @@
 [
   {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "die Person",
+    "grund": "bloßes Normsubjekt"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "zu berücksichtigen, von welcher an dem Geschäftsvorfall beteiligten Person welche Funktion",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3c Satz 5",
+    "art": "tb",
+    "text": "Die Finanzierung der Entwicklung oder Erschaffung, des Erhalts oder des Schutzes eines imm",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3e Satz 2",
+    "art": "tb",
+    "text": "auch regelmäßig dann auszugehen, wenn ein Unternehmen in der Unternehmensgruppe für ein od",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "wenn für eine Geschäftsbeziehung im Sinne des Absatzes 4 Satz 1 Nummer 2 die Bedingungen, ",
+    "grund": "zu grob (46 Wörter)"
+  },
+  {
+    "norm": "§ 1a",
+    "pfad": "Satz 3",
+    "art": "tb",
+    "text": "Eine erhebliche Abweichung im Sinne des Satzes 1",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 1a",
+    "pfad": "Satz 3",
+    "art": "tb",
+    "text": "wenn der unter Zugrundelegung der tatsächlichen Gewinnentwicklung zutreffende Fremdverglei",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Eine natürliche Person, die in den letzten zehn Jahren vor dem Ende ihrer unbeschränkten S",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "sie zu Beginn des Veranlagungszeitraums Unternehmer oder Mitunternehmer eines im Geltungsb",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 3 Nr. 1",
+    "art": "tb",
+    "text": "sofern sie Kommanditist ist",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 3 Nr. 3",
+    "art": "tb",
+    "text": "zu Beginn des Veranlagungszeitraums ihr Vermögen, dessen Erträge bei unbeschränkter Einkom",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "Ist Absatz 1 anzuwenden",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 5 Satz 3",
+    "art": "tb",
+    "text": "§ 43 Absatz 5 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
     "norm": "§ 4",
     "pfad": "Abs. 2 Satz 1",
     "art": "ausn",
     "text": "Absatz 1 findet keine Anwendung, wenn nachgewiesen wird, daß für die Teile des Erwerbs, di",
     "grund": "zu grob (62 Wörter)"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Sind natürliche Personen, die in den letzten zehn Jahren vor dem Ende ihrer unbeschränkten",
+    "grund": "zu grob (63 Wörter)"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "erfolgt im Fall des",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "tb",
+    "text": "keine Gewinnausschüttungen oder keine Einlagenrückgewähr",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 6",
+    "pfad": "Abs. 4 Nr. 5",
+    "art": "tb",
+    "text": "soweit Gewinnausschüttungen oder eine Einlagenrückgewähr erfolgen und soweit deren gemeine",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "sind für die Steuerpflicht nach Satz 1 unbeachtlich",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 7",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "wenn dem Steuerpflichtigen allein oder zusammen mit ihm nahestehenden Personen am Ende des",
+    "grund": "zu grob (68 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 4 Buchst. a",
+    "art": "tb",
+    "text": "ein Steuerpflichtiger, der gemäß § 7 an der ausländischen Gesellschaft beteiligt ist, oder",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 4 (Teil 2)",
+    "art": "ausn",
+    "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft einen für",
+    "grund": "zu grob (51 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 6 Buchst. a",
+    "art": "ausn",
+    "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft die Ergeb",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 6 Buchst. c",
+    "art": "ausn",
+    "text": "es sei denn, der Steuerpflichtige weist nach, dass die ausländische Gesellschaft einen Ges",
+    "grund": "zu grob (63 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 7 Buchst. b",
+    "art": "tb",
+    "text": "Bezüge, die bei der ausländischen Gesellschaft nach § 8b Absatz 4 des Körperschaftsteuerge",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 7 Buchst. c",
+    "art": "tb",
+    "text": "Bezüge, die bei der ausländischen Gesellschaft nach § 8b Absatz 7 des Körperschaftsteuerge",
+    "grund": "zu grob (49 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 8",
+    "art": "tb",
+    "text": "der Veräußerung eines Anteils an einer anderen Gesellschaft sowie aus deren Auflösung oder",
+    "grund": "zu grob (56 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 1 Nr. 9",
+    "art": "ausn",
+    "text": "dies gilt nicht, soweit die Einkünfte auf der Übertragung von Wirtschaftsgütern beruhen, d",
+    "grund": "zu grob (59 Wörter)"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "wenn die ausländische Gesellschaft ihren Sitz oder ihre Geschäftsleitung in einem Mitglied",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "wenn die nach Maßgabe des § 10 Absatz 3 ermittelten Einkünfte, für die die ausländische Ge",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "einer Belastung durch Ertragsteuern von weniger als 15 Prozent unterliegen, ohne dass dies",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 5 Satz 3",
+    "art": "tb",
+    "text": "unterliegen im Sinne des Satzes 1 auch dann einer Belastung durch Ertragsteuern von wenige",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 8",
+    "pfad": "Abs. 5 Satz 3",
+    "art": "tb",
+    "text": "wenn Ertragsteuern von mindestens 15 Prozent zwar rechtlich geschuldet, jedoch nicht tatsä",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 3 Satz 3",
+    "art": "tb",
+    "text": "§ 10 Nummer 2 des Körperschaftsteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 3 Satz 4",
+    "art": "tb",
+    "text": "Steuerliche Vergünstigungen, die an die unbeschränkte Steuerpflicht oder an das Bestehen e",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 10",
+    "pfad": "Abs. 6 Satz 1",
+    "art": "tb",
+    "text": "Soweit die dem Hinzurechnungsbetrag zugrunde liegenden Einkünfte oder Einkunftsquellen zu ",
+    "grund": "zu grob (59 Wörter)"
+  },
+  {
+    "norm": "§ 11",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "für die Hinzurechnungsbeträge nach § 10 Absatz 2 bei ihm der Einkommen- oder Körperschafts",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 11",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "tb",
+    "text": "§ 20 Absatz 1 Nummer 1 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 11",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "begrenzt auf den Betrag, der als Bezug im Sinne der unter Absatz 1 bezeichneten Vorschrift",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 11",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "der nach § 10 Absatz 2 der Einkommen- oder Körperschaftsteuer unterliegende Hinzurechnungs",
+    "grund": "zu grob (55 Wörter)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Sind einem unbeschränkt Steuerpflichtigen allein oder zusammen mit ihm nach § 7 Absatz 3 u",
+    "grund": "zu grob (72 Wörter)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "ausn",
+    "text": "es sei denn, dass mit der Hauptgattung der Aktien der ausländischen Gesellschaft ein wesen",
+    "grund": "zu grob (60 Wörter)"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "sind für den unbeschränkt Steuerpflichtigen nach Absatz 1 Satz 1 unbeachtlich",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 7 Satz 2",
+    "art": "tb",
+    "text": "§ 8b des Körperschaftsteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 8 Satz 2",
+    "art": "tb",
+    "text": "§ 20 Absatz 8 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 9 Satz 1",
+    "art": "tb",
+    "text": "Ist eine ausländische Familienstiftung oder eine andere ausländische Stiftung im Sinne des",
+    "grund": "zu grob (47 Wörter)"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 9 Satz 2",
+    "art": "tb",
+    "text": "§ 7 Absatz 1 Satz 3",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 15",
+    "pfad": "Abs. 10 Satz 1",
+    "art": "tb",
+    "text": "werden Vermögen und Einkünfte einer anderen ausländischen Stiftung, die nicht die Vorausse",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 17",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Ist für die Ermittlung der Einkünfte, für die eine ausländische Gesellschaft Zwischengesel",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 17",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Zinsen und Nutzungsentgelte, die die Gesellschaft für überlassene Wirtschaftsgüter an die ",
+    "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 18",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Die Besteuerungsgrundlagen für die Anwendung der §§ 7 bis 13, insbesondere der Hinzurechnu",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 18",
+    "pfad": "Abs. 1 Satz 4",
+    "art": "tb",
+    "text": "Die Vorschriften der Abgabenordnung",
+    "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
   }
 ]

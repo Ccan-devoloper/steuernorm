@@ -100,6 +100,16 @@ function fehlerklasse(el, gold, normObj) {
   if (/^(Der|Die|Das)\s+\w+(zuschlag|steuer|abgabe)?$/i.test(el.text.trim())) return "nur Normsubjekt";
   if (el.text.split(/\s+/).length > 40) return "zu grob (>40 Wörter)";
   if (/BGBl\.|BStBl\./.test(el.text)) return "Fundstelle statt Merkmal";
+
+  /* GRENZE VERSCHOBEN ist etwas anderes als NICHT IM GOLD, und der Unterschied
+     entscheidet, wo man ansetzt. Das Modell fand „Der Solidaritätszuschlag
+     bemisst sich", das Gold führt „bemisst sich" — dieselbe Rechtsfolge, ein
+     anderer Schnitt. Unter der Deckungsschwelle von 0,6 zählte das als
+     erfundenes Merkmal und schickte die Suche in die falsche Richtung.
+     Eine Berührung derselben Art bei mindestens einem Viertel Deckung ist
+     ein Schnittfehler, kein Erfindungsfehler. */
+  const daneben = gold.find((g) => g.art === el.art && deckung(el.text, g.text) >= 0.25);
+  if (daneben) return `Grenze verschoben (${el.art})`;
   return "nicht im Gold";
 }
 

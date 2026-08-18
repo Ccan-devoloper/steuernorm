@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-18T10:20:51.222Z",
+  "erzeugt": "2026-08-18T10:33:47.056Z",
   "format": 5,
   "modelle": [
     "nur-syntax"
@@ -9,109 +9,109 @@
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 20,
-      "uebernommen": 483,
+      "bearbeitet": 503,
+      "uebernommen": 0,
       "markierbar": 495,
-      "abgelehnt": 7,
+      "abgelehnt": 279,
       "vollstaendig": true
     },
     {
       "abk": "BewG",
       "normen": 204,
-      "bearbeitet": 3,
-      "uebernommen": 201,
+      "bearbeitet": 204,
+      "uebernommen": 0,
       "markierbar": 149,
-      "abgelehnt": 0,
+      "abgelehnt": 155,
       "vollstaendig": true
     },
     {
       "abk": "EStG",
       "normen": 247,
-      "bearbeitet": 3,
-      "uebernommen": 244,
+      "bearbeitet": 247,
+      "uebernommen": 0,
       "markierbar": 221,
-      "abgelehnt": 1,
+      "abgelehnt": 593,
       "vollstaendig": true
     },
     {
       "abk": "KStG",
       "normen": 48,
-      "bearbeitet": 3,
-      "uebernommen": 45,
+      "bearbeitet": 48,
+      "uebernommen": 0,
       "markierbar": 44,
-      "abgelehnt": 0,
+      "abgelehnt": 101,
       "vollstaendig": true
     },
     {
       "abk": "UStG",
       "normen": 93,
-      "bearbeitet": 3,
-      "uebernommen": 90,
+      "bearbeitet": 93,
+      "uebernommen": 0,
       "markierbar": 86,
-      "abgelehnt": 2,
+      "abgelehnt": 164,
       "vollstaendig": true
     },
     {
       "abk": "GewStG",
       "normen": 41,
-      "bearbeitet": 3,
-      "uebernommen": 38,
+      "bearbeitet": 41,
+      "uebernommen": 0,
       "markierbar": 38,
-      "abgelehnt": 1,
+      "abgelehnt": 56,
       "vollstaendig": true
     },
     {
       "abk": "ErbStG",
       "normen": 47,
-      "bearbeitet": 3,
-      "uebernommen": 44,
+      "bearbeitet": 47,
+      "uebernommen": 0,
       "markierbar": 44,
-      "abgelehnt": 2,
+      "abgelehnt": 98,
       "vollstaendig": true
     },
     {
       "abk": "GrStG",
       "normen": 38,
-      "bearbeitet": 3,
-      "uebernommen": 35,
+      "bearbeitet": 38,
+      "uebernommen": 0,
       "markierbar": 38,
-      "abgelehnt": 1,
+      "abgelehnt": 22,
       "vollstaendig": true
     },
     {
       "abk": "FGO",
       "normen": 173,
-      "bearbeitet": 3,
-      "uebernommen": 170,
+      "bearbeitet": 173,
+      "uebernommen": 0,
       "markierbar": 166,
-      "abgelehnt": 0,
+      "abgelehnt": 37,
       "vollstaendig": true
     },
     {
       "abk": "GrEStG",
       "normen": 28,
-      "bearbeitet": 3,
-      "uebernommen": 25,
+      "bearbeitet": 28,
+      "uebernommen": 0,
       "markierbar": 27,
-      "abgelehnt": 0,
+      "abgelehnt": 42,
       "vollstaendig": true
     },
     {
       "abk": "UmwStG",
       "normen": 28,
-      "bearbeitet": 3,
-      "uebernommen": 25,
+      "bearbeitet": 28,
+      "uebernommen": 0,
       "markierbar": 23,
-      "abgelehnt": 0,
+      "abgelehnt": 38,
       "vollstaendig": true
     },
     {
       "abk": "AStG",
       "normen": 23,
-      "bearbeitet": 3,
-      "uebernommen": 20,
+      "bearbeitet": 23,
+      "uebernommen": 0,
       "markierbar": 20,
-      "abgelehnt": 1,
+      "abgelehnt": 52,
       "vollstaendig": true
     },
     {
@@ -126,10 +126,10 @@
     {
       "abk": "InvStG",
       "normen": 58,
-      "bearbeitet": 3,
-      "uebernommen": 55,
+      "bearbeitet": 58,
+      "uebernommen": 0,
       "markierbar": 57,
-      "abgelehnt": 0,
+      "abgelehnt": 89,
       "vollstaendig": true
     }
   ],

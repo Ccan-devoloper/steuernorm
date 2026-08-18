@@ -198,7 +198,19 @@ export function fuehreZusammen({ einheiten, syntax, laeufe, gegenproben = new Ma
          Prüfung 405 Fehler für Spannen, die richtig sind. */
       ...(ctx.katalog ? { katalog: true } : {}),
       junktor: einheit.nr ? junktor(einheiten.filter((e) => e.nr), einheit.text) : null,
-      elemente: elemente.sort((a, b) => a.von - b.von),
+      /* KEINE SCHACHTELN DERSELBEN ART. Der Messlauf vom 18.08. lieferte für
+         BewG § 235 dreimal dasselbe Merkmal in Varianten:
+
+           tb  Größe des Betriebs
+           tb  Für die Größe des Betriebs
+           tb  Für die Größe des Betriebs sowie für den Umfang und den Zustand …
+
+         Das ist ein Merkmal, nicht drei. Die längste Fassung bleibt, die
+         darin enthaltenen kürzeren derselben Art fallen weg — sie kosten
+         Präzision und sagen nichts, was die lange nicht schon sagte.
+         Überlappungen VERSCHIEDENER Art bleiben unangetastet: Tatbestand und
+         Rechtsfolge dürfen sich berühren, das ist keine Dopplung. */
+      elemente: ohneSchachteln(elemente).sort((a, b) => a.von - b.von),
     });
   }
 
@@ -383,4 +395,21 @@ const ROLLE = {
 function absatzAus(pfad) {
   const m = /^Abs\. (\d+[a-z]?)/.exec(String(pfad || ""));
   return m ? `Abs. ${m[1]}` : "";
+}
+
+/**
+ * Entfernt Spannen, die vollständig in einer längeren derselben Art liegen.
+ *
+ * Gemessen wird am Text, nicht an den Positionen: Ein Modell gibt dieselbe
+ * Wendung gern in mehreren Zuschnitten zurück, und die Positionen können durch
+ * mehrteilige Spannen auseinanderfallen.
+ */
+export function ohneSchachteln(elemente) {
+  const raus = [];
+  for (const e of elemente) {
+    const umfasst = elemente.some((a) =>
+      a !== e && a.art === e.art && a.text.length > e.text.length && a.text.includes(e.text));
+    if (!umfasst) raus.push(e);
+  }
+  return raus;
 }
