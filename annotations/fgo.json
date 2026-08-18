@@ -3,15 +3,12 @@
   "titel": "Finanzgerichtsordnung",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "verfahren": "syntaxanalyse",
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
-  "aktualisiert": "2026-08-18T08:48:57.232Z",
+  "laeufe": 0,
+  "aktualisiert": "2026-08-18T10:20:53.797Z",
   "quelle": "https://www.gesetze-im-internet.de/fgo/",
   "stand": [
     {
@@ -124,16 +121,16 @@
       "aktualisiert": "2026-08-14T10:19:49.924Z"
     },
     "2": {
-      "typ": "definition",
+      "typ": "aussage",
       "typen": [
-        "definition"
+        "aussage"
       ],
       "saetze": [
         {
           "pfad": "Satz 1",
           "von": 0,
           "bis": 152,
-          "typ": "definition",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
@@ -144,45 +141,29 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 34,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Substantiv steht im Vorfeld, weshalb die Rechtsfolge vorangestellt ist."
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
               "art": "tb",
-              "text": "in den Ländern die Finanzgerichte als obere Landesgerichte",
+              "text": "in den Ländern die Finanzgerichte als obere Landesgerichte, im Bund der Bundesfinanzhof mit dem Sitz in München",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
               "von": 40,
-              "laenge": 58,
-              "konfidenz": 0.55,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 111,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Substantiv steht im Vorfeld, weshalb die Rechtsfolge vorangestellt ist."
-            },
-            {
-              "art": "tb",
-              "text": "im Bund der Bundesfinanzhof mit dem Sitz in München",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 100,
-              "laenge": 51,
-              "konfidenz": 0.55,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das prädikative Substantiv steht im Vorfeld, weshalb die Rechtsfolge vorangestellt ist."
+              "grund": "Nachfeld trägt die Voraussetzungen"
             }
           ]
         }
@@ -190,28 +171,20 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "in den Ländern die Finanzgerichte als obere Landesgerichte",
+                  "t": "in den Ländern die Finanzgerichte als obere Landesgerichte, im Bund der Bundesfinanzhof mit dem Sitz in München",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.55,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "im Bund der Bundesfinanzhof mit dem Sitz in München",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.55,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -226,7 +199,7 @@
                   "n": "1.",
                   "t": "Gerichte der Finanzgerichtsbarkeit",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.8,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -236,27 +209,26 @@
         }
       ],
       "tb": [
-        "in den Ländern die Finanzgerichte als obere Landesgerichte",
-        "im Bund der Bundesfinanzhof mit dem Sitz in München"
+        "in den Ländern die Finanzgerichte als obere Landesgerichte, im Bund der Bundesfinanzhof mit dem Sitz in München"
       ],
       "rf": [
         "Gerichte der Finanzgerichtsbarkeit"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.633,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 1,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3cb00c649b8106879ab5f82b90e4d2e3b61c5613e161b82f4a7a740587949fa4",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:46:40.857Z"
+      "aktualisiert": "2026-08-18T10:20:53.778Z"
     },
     "3": {
       "typ": "gemischt",
@@ -19364,7 +19336,35 @@
           "bis": 196,
           "typ": "aussage",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf",
+              "anzeige": "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf … bezeichnen",
+              "teile": [
+                {
+                  "text": "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf",
+                  "von": 10,
+                  "laenge": 174
+                },
+                {
+                  "text": "bezeichnen",
+                  "von": 185,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 1 Satz 1",
+              "von": 10,
+              "laenge": 174,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 2",
@@ -19375,19 +19375,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "einen bestimmten Antrag enthalten",
+              "text": "soll einen bestimmten Antrag",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
-              "von": 206,
-              "laenge": 33,
-              "konfidenz": 0.55,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 201,
+              "laenge": 28,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, daher liegt kein Tatbestand vor."
+              "grund": "Hauptsatzprädikat"
             }
           ]
         },
@@ -19406,13 +19406,29 @@
               "pfad": "Abs. 1 Satz 3",
               "von": 241,
               "laenge": 55,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sollen angegeben werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 3",
+              "von": 297,
+              "laenge": 23,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -19422,7 +19438,24 @@
           "bis": 434,
           "typ": "aussage",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "soll eine Abschrift des angefochtenen Verwaltungsakts und der Einspruchsentscheidung beigefügt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 4",
+              "von": 332,
+              "laenge": 101,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            }
+          ]
         },
         {
           "pfad": "Abs. 1 Satz 5",
@@ -19432,20 +19465,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung gilt entsprechend",
+              "art": "tb",
+              "text": "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 5",
               "von": 435,
-              "laenge": 65,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, daher liegt kein Tatbestand vor."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 5",
+              "von": 483,
+              "laenge": 17,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -19453,25 +19502,9 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 502,
           "bis": 756,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
-            {
-              "art": "tb",
-              "text": "Entspricht die Klage diesen Anforderungen nicht",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 502,
-              "laenge": 47,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz, daher liegt ein Tatbestand vor."
-            },
             {
               "art": "rf",
               "text": "Entspricht die Klage diesen Anforderungen nicht, hat der Vorsitzende oder der nach § 21g des Gerichtsverfassungsgesetzes zuständige Berufsrichter (Berichterstatter) den Kläger zu der erforderlichen Ergänzung innerhalb einer bestimmten Frist aufzufordern",
@@ -19480,11 +19513,11 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 502,
               "laenge": 253,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
@@ -19505,13 +19538,13 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 760,
               "laenge": 79,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, der Tatbestand folgt aus dem Konditionalsatz."
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
               "art": "tb",
@@ -19521,13 +19554,13 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 841,
               "laenge": 69,
-              "konfidenz": 0.433,
-              "stimmen": 1,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, der Tatbestand wird durch den Konditionalsatz definiert."
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         },
@@ -19535,7 +19568,7 @@
           "pfad": "Abs. 2 Satz 3",
           "von": 912,
           "bis": 1008,
-          "typ": "verweisung",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -19546,13 +19579,13 @@
               "pfad": "Abs. 2 Satz 3",
               "von": 912,
               "laenge": 72,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein konditionales Adverbial, daher liegt ein Tatbestand vor."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -19562,13 +19595,13 @@
               "pfad": "Abs. 2 Satz 3",
               "von": 985,
               "laenge": 22,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein konditionales Adverbial, daher liegt ein Tatbestand vor."
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         }
@@ -19582,14 +19615,22 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Die zur Begründung dienenden Tatsachen und Beweismittel",
                   "pfad": "Abs. 1 Satz 3",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung",
+                  "pfad": "Abs. 1 Satz 5",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19602,17 +19643,41 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "einen bestimmten Antrag enthalten",
+                  "t": "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf … bezeichnen",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                },
+                {
+                  "n": "2.",
+                  "t": "soll einen bestimmten Antrag",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.55,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
-                  "n": "2.",
-                  "t": "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung gilt entsprechend",
+                  "n": "3.",
+                  "t": "sollen angegeben werden",
+                  "pfad": "Abs. 1 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "soll eine Abschrift des angefochtenen Verwaltungsakts und der Einspruchsentscheidung beigefügt werden",
+                  "pfad": "Abs. 1 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "gilt entsprechend",
                   "pfad": "Abs. 1 Satz 5",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19633,25 +19698,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Entspricht die Klage diesen Anforderungen nicht",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.75,
+                  "t": "wenn es an einem der in Absatz 1 Satz 1 genannten Erfordernisse fehlt",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "wenn es an einem der in Absatz 1 Satz 1 genannten Erfordernisse fehlt",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.433,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "Für die Wiedereinsetzung in den vorigen Stand wegen Versäumung der Frist",
                   "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19666,7 +19723,7 @@
                   "n": "1.",
                   "t": "Entspricht die Klage diesen Anforderungen nicht, hat der Vorsitzende oder der nach § 21g des Gerichtsverfassungsgesetzes zuständige Berufsrichter (Berichterstatter) den Kläger zu der erforderlichen Ergänzung innerhalb einer bestimmten Frist aufzufordern",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -19674,7 +19731,7 @@
                   "n": "2.",
                   "t": "kann dem Kläger für die Ergänzung eine Frist mit ausschließender Wirkung setzen",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.8,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -19682,7 +19739,7 @@
                   "n": "3.",
                   "t": "gilt § 56 entsprechend",
                   "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19693,32 +19750,35 @@
       ],
       "tb": [
         "Die zur Begründung dienenden Tatsachen und Beweismittel",
-        "Entspricht die Klage diesen Anforderungen nicht",
+        "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung",
         "wenn es an einem der in Absatz 1 Satz 1 genannten Erfordernisse fehlt",
         "Für die Wiedereinsetzung in den vorigen Stand wegen Versäumung der Frist"
       ],
       "rf": [
-        "einen bestimmten Antrag enthalten",
-        "§ 253 Absatz 3 Nummer 4 der Zivilprozessordnung gilt entsprechend",
+        "muss den Kläger, den Beklagten, den Gegenstand des Klagebegehrens, bei Anfechtungsklagen auch den Verwaltungsakt und die Entscheidung über den außergerichtlichen Rechtsbehelf",
+        "soll einen bestimmten Antrag",
+        "sollen angegeben werden",
+        "soll eine Abschrift des angefochtenen Verwaltungsakts und der Einspruchsentscheidung beigefügt werden",
+        "gilt entsprechend",
         "Entspricht die Klage diesen Anforderungen nicht, hat der Vorsitzende oder der nach § 21g des Gerichtsverfassungsgesetzes zuständige Berufsrichter (Berichterstatter) den Kläger zu der erforderlichen Ergänzung innerhalb einer bestimmten Frist aufzufordern",
         "kann dem Kläger für die Ergänzung eine Frist mit ausschließender Wirkung setzen",
         "gilt § 56 entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.687,
+      "konfidenz": 0.587,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.667,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3a32371c83c629a0d44779fd21299fd593832a69f395bc48841b0ac99d0cb241",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:47:52.293Z"
+      "aktualisiert": "2026-08-18T10:20:53.786Z"
     },
     "66": {
       "typ": "gemischt",
@@ -33737,13 +33797,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 75,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
             {
               "art": "rf",
@@ -33753,13 +33813,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 80,
               "laenge": 85,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Nachfolgender Hauptsatz"
             }
           ]
         },
@@ -33772,19 +33832,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Das Gericht entscheidet ohne Beweisaufnahme durch Beschluss",
+              "text": "entscheidet ohne Beweisaufnahme durch Beschluss",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 167,
-              "laenge": 59,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "von": 179,
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, daher liegt kein Tatbestandsmerkmal vor."
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -33797,35 +33857,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Der Beschluss ist unanfechtbar",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 2",
-              "von": 228,
-              "laenge": 30,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, daher liegt kein Tatbestandsmerkmal vor."
-            },
-            {
-              "art": "rf",
               "text": "ist unanfechtbar",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
               "von": 242,
               "laenge": 16,
-              "konfidenz": 0.475,
-              "stimmen": 1,
-              "laeufe": 3,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, daher liegt kein Tatbestandsmerkmal vor."
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -33837,6 +33881,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "tb",
+              "text": "Bei der Entscheidung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 3",
+              "von": 260,
+              "laenge": 20,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
               "art": "rf",
               "text": "wirken nur die Richter mit, die beim Urteil mitgewirkt haben",
               "anzeige": null,
@@ -33844,13 +33904,13 @@
               "pfad": "Abs. 2 Satz 3",
               "von": 281,
               "laenge": 60,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein konditionales Adverbial."
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -33869,13 +33929,13 @@
               "pfad": "Abs. 2 Satz 4",
               "von": 343,
               "laenge": 26,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
             {
               "art": "rf",
@@ -33885,13 +33945,13 @@
               "pfad": "Abs. 2 Satz 4",
               "von": 374,
               "laenge": 68,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Nachfolgender Hauptsatz"
             }
           ]
         },
@@ -33904,23 +33964,7 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Der Berichtigungsbeschluss wird auf dem Urteil und den Ausfertigungen vermerkt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 5",
-              "von": 444,
-              "laenge": 78,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, daher liegt kein Tatbestandsmerkmal vor."
-            },
-            {
-              "art": "rf",
-              "text": "wird auf dem Urteil und den Ausfertigungen vermerkt",
+              "text": "wird auf dem Urteil und den Ausfertigungen",
               "anzeige": "wird auf dem Urteil und den Ausfertigungen … vermerkt",
               "teile": [
                 {
@@ -33936,14 +33980,14 @@
               ],
               "pfad": "Abs. 2 Satz 5",
               "von": 471,
-              "laenge": 51,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
+              "laenge": 42,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Satzsubjekt, daher liegt kein Tatbestandsmerkmal vor."
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -33962,13 +34006,13 @@
               "pfad": "Abs. 2 Satz 6",
               "von": 524,
               "laenge": 37,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
             {
               "art": "rf",
@@ -33978,45 +34022,13 @@
               "pfad": "Abs. 2 Satz 6",
               "von": 563,
               "laenge": 89,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
-            },
-            {
-              "art": "rf",
-              "text": "ist auch der Beschluss elektronisch abzufassen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 6",
-              "von": 563,
-              "laenge": 46,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
-            },
-            {
-              "art": "rf",
-              "text": "mit dem Urteil untrennbar zu verbinden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 6",
-              "von": 614,
-              "laenge": 38,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz durch Verberststellung."
+              "grund": "Nachfolgender Hauptsatz"
             }
           ]
         }
@@ -34037,7 +34049,7 @@
                   "n": "1.",
                   "t": "Enthält der Tatbestand des Urteils andere Unrichtigkeiten oder Unklarheiten",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -34052,7 +34064,7 @@
                   "n": "1.",
                   "t": "kann die Berichtigung binnen zwei Wochen nach Zustellung des Urteils beantragt werden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -34073,17 +34085,25 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Ist ein Richter verhindert",
-                  "pfad": "Abs. 2 Satz 4",
-                  "konfidenz": 1,
+                  "t": "Bei der Entscheidung",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "Ist ein Richter verhindert",
+                  "pfad": "Abs. 2 Satz 4",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "Ist das Urteil elektronisch abgefasst",
                   "pfad": "Abs. 2 Satz 6",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -34096,81 +34116,49 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Das Gericht entscheidet ohne Beweisaufnahme durch Beschluss",
+                  "t": "entscheidet ohne Beweisaufnahme durch Beschluss",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "Der Beschluss ist unanfechtbar",
+                  "t": "ist unanfechtbar",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.567,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "ist unanfechtbar",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.475,
+                  "t": "wirken nur die Richter mit, die beim Urteil mitgewirkt haben",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "4.",
-                  "t": "wirken nur die Richter mit, die beim Urteil mitgewirkt haben",
-                  "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 1,
+                  "t": "gibt bei Stimmengleichheit die Stimme des Vorsitzenden den Ausschlag",
+                  "pfad": "Abs. 2 Satz 4",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
-                  "t": "gibt bei Stimmengleichheit die Stimme des Vorsitzenden den Ausschlag",
-                  "pfad": "Abs. 2 Satz 4",
-                  "konfidenz": 1,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "6.",
-                  "t": "Der Berichtigungsbeschluss wird auf dem Urteil und den Ausfertigungen vermerkt",
-                  "pfad": "Abs. 2 Satz 5",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "7.",
                   "t": "wird auf dem Urteil und den Ausfertigungen … vermerkt",
                   "pfad": "Abs. 2 Satz 5",
-                  "konfidenz": 0.633,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "8.",
+                  "n": "6.",
                   "t": "ist auch der Beschluss elektronisch abzufassen und mit dem Urteil untrennbar zu verbinden",
                   "pfad": "Abs. 2 Satz 6",
-                  "konfidenz": 0.633,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "9.",
-                  "t": "ist auch der Beschluss elektronisch abzufassen",
-                  "pfad": "Abs. 2 Satz 6",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "10.",
-                  "t": "mit dem Urteil untrennbar zu verbinden",
-                  "pfad": "Abs. 2 Satz 6",
-                  "konfidenz": 0.567,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -34181,37 +34169,34 @@
       ],
       "tb": [
         "Enthält der Tatbestand des Urteils andere Unrichtigkeiten oder Unklarheiten",
+        "Bei der Entscheidung",
         "Ist ein Richter verhindert",
         "Ist das Urteil elektronisch abgefasst"
       ],
       "rf": [
         "kann die Berichtigung binnen zwei Wochen nach Zustellung des Urteils beantragt werden",
-        "Das Gericht entscheidet ohne Beweisaufnahme durch Beschluss",
-        "Der Beschluss ist unanfechtbar",
+        "entscheidet ohne Beweisaufnahme durch Beschluss",
         "ist unanfechtbar",
         "wirken nur die Richter mit, die beim Urteil mitgewirkt haben",
         "gibt bei Stimmengleichheit die Stimme des Vorsitzenden den Ausschlag",
-        "Der Berichtigungsbeschluss wird auf dem Urteil und den Ausfertigungen vermerkt",
-        "wird auf dem Urteil und den Ausfertigungen vermerkt",
-        "ist auch der Beschluss elektronisch abzufassen und mit dem Urteil untrennbar zu verbinden",
-        "ist auch der Beschluss elektronisch abzufassen",
-        "mit dem Urteil untrennbar zu verbinden"
+        "wird auf dem Urteil und den Ausfertigungen",
+        "ist auch der Beschluss elektronisch abzufassen und mit dem Urteil untrennbar zu verbinden"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.786,
+      "konfidenz": 0.586,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.5,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5a3429257d0817ee685fc94f0eb84efa5eceb95ec28fee405a36f9b96d9a8201",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:48:57.231Z"
+      "aktualisiert": "2026-08-18T10:20:53.792Z"
     },
     "109": {
       "typ": "gemischt",

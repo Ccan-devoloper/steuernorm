@@ -3,15 +3,12 @@
   "titel": "Bewertungsgesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "verfahren": "syntaxanalyse",
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
-  "aktualisiert": "2026-08-18T08:27:20.779Z",
+  "laeufe": 0,
+  "aktualisiert": "2026-08-18T10:20:52.315Z",
   "quelle": "https://www.gesetze-im-internet.de/bewg/",
   "stand": [
     {
@@ -38,36 +35,36 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16) gelten",
+              "art": "tb",
+              "text": "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 59,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 52,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld wird durch das Satzsubjekt besetzt, welches das Normsubjekt benennt, weshalb der Hauptsatz die Rechtsfolge und die Nebensätze den Tatbestand enthalten."
+              "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
-              "art": "tb",
-              "text": "öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
+              "art": "rf",
+              "text": "gelten für alle öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 69,
-              "laenge": 67,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 53,
+              "laenge": 83,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld wird durch das Satzsubjekt besetzt, welches das Normsubjekt benennt, weshalb der Hauptsatz die Rechtsfolge und die Nebensätze den Tatbestand enthalten."
+              "grund": "Hauptsatzprädikat"
             },
             {
               "art": "tb",
@@ -77,13 +74,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 138,
               "laenge": 86,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld wird durch das Satzsubjekt besetzt, welches das Normsubjekt benennt, weshalb der Hauptsatz die Rechtsfolge und die Nebensätze den Tatbestand enthalten."
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -96,19 +93,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Die allgemeinen Bewertungsvorschriften gelten nicht",
+              "text": "Die allgemeinen Bewertungsvorschriften",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 226,
-              "laenge": 51,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "laenge": 38,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normsubjekt, während die Rechtsfolge im Hauptsatz ausgedrückt wird und die Bedingung im Nebensatz folgt."
+              "grund": "Prädikativ im Vorfeld"
             },
             {
               "art": "tb",
@@ -118,11 +115,11 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 265,
               "laenge": 12,
-              "konfidenz": 0.338,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
             },
@@ -134,29 +131,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 279,
               "laenge": 117,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt als Normsubjekt, während die Rechtsfolge im Hauptsatz ausgedrückt wird und die Bedingung im Nebensatz folgt."
-            },
-            {
-              "art": "tb",
-              "text": "in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 323,
-              "laenge": 73,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Normsubjekt, die Rechtsfolge ist die Nichtanwendung, und der Tatbestand wird durch die Bedingung im Nachfeld definiert."
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         }
@@ -175,9 +156,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
+                  "t": "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16)",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -185,7 +166,7 @@
                   "n": "2.",
                   "t": "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -198,9 +179,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16) gelten",
+                  "t": "gelten für alle öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -223,7 +204,7 @@
                   "n": "1.",
                   "t": "gelten nicht",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.338,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -231,15 +212,7 @@
                   "n": "2.",
                   "t": "soweit im Zweiten Teil dieses Gesetzes oder in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.817,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.383,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -252,9 +225,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Die allgemeinen Bewertungsvorschriften gelten nicht",
+                  "t": "Die allgemeinen Bewertungsvorschriften",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -264,31 +237,30 @@
         }
       ],
       "tb": [
-        "öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
+        "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16)",
         "soweit sie durch Bundesfinanzbehörden oder durch Landesfinanzbehörden verwaltet werden",
         "gelten nicht",
-        "soweit im Zweiten Teil dieses Gesetzes oder in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind",
-        "in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind"
+        "soweit im Zweiten Teil dieses Gesetzes oder in anderen Steuergesetzen besondere Bewertungsvorschriften enthalten sind"
       ],
       "rf": [
-        "Die allgemeinen Bewertungsvorschriften (§§ 2 bis 16) gelten",
-        "Die allgemeinen Bewertungsvorschriften gelten nicht"
+        "gelten für alle öffentlich-rechtlichen Abgaben, die durch Bundesrecht geregelt sind",
+        "Die allgemeinen Bewertungsvorschriften"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.72,
+      "konfidenz": 0.575,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.571,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 57 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "855a965c344f3ea938965878615cb4c2429fbdcee405c7aa9688a472cf1a3254",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:25:29.209Z"
+      "aktualisiert": "2026-08-18T10:20:52.267Z"
     },
     "2": {
       "typ": "gemischt",
@@ -24310,13 +24282,13 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 37,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält mit einem konditonalen Adverbial den Tatbestand, während das Nachfeld die Rechtsfolge und eine Ausnahme regelt."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -24337,45 +24309,13 @@
               "pfad": "Satz 1",
               "von": 38,
               "laenge": 163,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
-            },
-            {
-              "art": "ausn",
-              "text": "abweichend von § 161 Abs. 1",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 43,
-              "laenge": 27,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "ausn",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält mit einem konditonalen Adverbial den Tatbestand, während das Nachfeld die Rechtsfolge und eine Ausnahme regelt."
-            },
-            {
-              "art": "rf",
-              "text": "für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde zu legen, das dem Bewertungsstichtag vorangegangen ist",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 71,
-              "laenge": 185,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält mit einem konditonalen Adverbial den Tatbestand, während das Nachfeld die Rechtsfolge und eine Ausnahme regelt."
             }
           ]
         }
@@ -24396,7 +24336,7 @@
                   "n": "1.",
                   "t": "Bei der forstwirtschaftlichen Nutzung",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -24404,21 +24344,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "abweichend von § 161 Abs. 1",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -24426,17 +24351,9 @@
                   "n": "1.",
                   "t": "sind abweichend von § 161 Abs. 1 für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde … zu legen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
-                },
-                {
-                  "n": "2.",
-                  "t": "für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde zu legen, das dem Bewertungsstichtag vorangegangen ist",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
                 }
               ]
             }
@@ -24447,26 +24364,23 @@
         "Bei der forstwirtschaftlichen Nutzung"
       ],
       "rf": [
-        "sind abweichend von § 161 Abs. 1 für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde",
-        "für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde zu legen, das dem Bewertungsstichtag vorangegangen ist"
+        "sind abweichend von § 161 Abs. 1 für den Umfang und den Zustand des Bestands an nicht eingeschlagenem Holz die Verhältnisse am Ende des Wirtschaftsjahres zu Grunde"
       ],
-      "ausnahmen": [
-        "abweichend von § 161 Abs. 1"
-      ],
+      "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.738,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.75,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 75 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "13f12fe7e30514642ef91b5d535f8c7407e2aa6776f150584bb05807cbb7c3a2",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:26:19.218Z"
+      "aktualisiert": "2026-08-18T10:20:52.278Z"
     },
     "173": {
       "typ": "gemischt",
@@ -49130,87 +49044,23 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Für die Größe des Betriebs",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 26,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich (Tatbestand) festlegt, während das Prädikat im Nachfeld die Rechtsfolge bestimmt."
-            },
-            {
-              "art": "tb",
               "text": "Für die Größe des Betriebs sowie für den Umfang und den Zustand der Gebäude",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 75,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
-              "art": "tb",
-              "text": "Größe des Betriebs",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 8,
-              "laenge": 18,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm bestimmt."
-            },
-            {
-              "art": "tb",
-              "text": "für den Umfang und den Zustand der Gebäude",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 33,
-              "laenge": 42,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich (Tatbestand) festlegt, während das Prädikat im Nachfeld die Rechtsfolge bestimmt."
-            },
-            {
-              "art": "tb",
-              "text": "Zustand der Gebäude",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 56,
-              "laenge": 19,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm bestimmt."
-            },
-            {
               "art": "rf",
-              "text": "sind die Verhältnisse im Feststellungszeitpunkt maßgebend",
+              "text": "sind die Verhältnisse im Feststellungszeitpunkt",
               "anzeige": "sind die Verhältnisse im Feststellungszeitpunkt … maßgebend",
               "teile": [
                 {
@@ -49226,14 +49076,14 @@
               ],
               "pfad": "Abs. 1 Satz 1",
               "von": 76,
-              "laenge": 57,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich (Tatbestand) festlegt, während das Prädikat im Nachfeld die Rechtsfolge bestimmt."
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         },
@@ -49245,22 +49095,6 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Für die stehenden und umlaufenden Betriebsmittel",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 135,
-              "laenge": 48,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld ist ein konditionales Adverbial und stellt somit den Tatbestand dar, während das finite Verb und sein Prädikatskomplex die Rechtsfolge bilden."
-            },
-            {
               "art": "rf",
               "text": "stehenden und umlaufenden Betriebsmittel ist der Stand am Ende des Wirtschaftsjahres maßgebend, das dem Feststellungszeitpunkt vorangegangen ist",
               "anzeige": null,
@@ -49268,13 +49102,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 143,
               "laenge": 144,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein konditionales Adverbial und stellt somit den Tatbestand dar, während das finite Verb und sein Prädikatskomplex die Rechtsfolge bilden."
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         }
@@ -49288,46 +49122,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Für die Größe des Betriebs",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "Für die Größe des Betriebs sowie für den Umfang und den Zustand der Gebäude",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Größe des Betriebs",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "für den Umfang und den Zustand der Gebäude",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "Zustand der Gebäude",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.383,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -49342,7 +49144,7 @@
                   "n": "1.",
                   "t": "sind die Verhältnisse im Feststellungszeitpunkt … maßgebend",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.817,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -49357,22 +49159,6 @@
           "schritte": [
             {
               "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Für die stehenden und umlaufenden Betriebsmittel",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -49380,7 +49166,7 @@
                   "n": "1.",
                   "t": "stehenden und umlaufenden Betriebsmittel ist der Stand am Ende des Wirtschaftsjahres maßgebend, das dem Feststellungszeitpunkt vorangegangen ist",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.817,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -49390,32 +49176,27 @@
         }
       ],
       "tb": [
-        "Für die Größe des Betriebs",
-        "Für die Größe des Betriebs sowie für den Umfang und den Zustand der Gebäude",
-        "Größe des Betriebs",
-        "für den Umfang und den Zustand der Gebäude",
-        "Zustand der Gebäude",
-        "Für die stehenden und umlaufenden Betriebsmittel"
+        "Für die Größe des Betriebs sowie für den Umfang und den Zustand der Gebäude"
       ],
       "rf": [
-        "sind die Verhältnisse im Feststellungszeitpunkt maßgebend",
+        "sind die Verhältnisse im Feststellungszeitpunkt",
         "stehenden und umlaufenden Betriebsmittel ist der Stand am Ende des Wirtschaftsjahres maßgebend, das dem Feststellungszeitpunkt vorangegangen ist"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.569,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 0 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "52ec1c4829e191df78a75c876a108b94a3f4b18a1aced87669d51bb55462d24d",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:27:20.779Z"
+      "aktualisiert": "2026-08-18T10:20:52.289Z"
     },
     "236": {
       "typ": "gemischt",

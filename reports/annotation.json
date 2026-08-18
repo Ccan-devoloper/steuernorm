@@ -1,21 +1,18 @@
 {
-  "erzeugt": "2026-08-18T08:06:15.049Z",
+  "erzeugt": "2026-08-18T10:20:51.222Z",
   "format": 5,
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
+  "laeufe": 0,
   "gesetze": [
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 3,
-      "uebernommen": 500,
+      "bearbeitet": 20,
+      "uebernommen": 483,
       "markierbar": 495,
-      "abgelehnt": 1,
+      "abgelehnt": 7,
       "vollstaendig": true
     },
     {
@@ -24,7 +21,7 @@
       "bearbeitet": 3,
       "uebernommen": 201,
       "markierbar": 149,
-      "abgelehnt": 6,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -33,7 +30,7 @@
       "bearbeitet": 3,
       "uebernommen": 244,
       "markierbar": 221,
-      "abgelehnt": 2,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {
@@ -42,7 +39,7 @@
       "bearbeitet": 3,
       "uebernommen": 45,
       "markierbar": 44,
-      "abgelehnt": 23,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -51,7 +48,7 @@
       "bearbeitet": 3,
       "uebernommen": 90,
       "markierbar": 86,
-      "abgelehnt": 7,
+      "abgelehnt": 2,
       "vollstaendig": true
     },
     {
@@ -59,8 +56,8 @@
       "normen": 41,
       "bearbeitet": 3,
       "uebernommen": 38,
-      "markierbar": 37,
-      "abgelehnt": 11,
+      "markierbar": 38,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {
@@ -69,7 +66,7 @@
       "bearbeitet": 3,
       "uebernommen": 44,
       "markierbar": 44,
-      "abgelehnt": 10,
+      "abgelehnt": 2,
       "vollstaendig": true
     },
     {
@@ -78,7 +75,7 @@
       "bearbeitet": 3,
       "uebernommen": 35,
       "markierbar": 38,
-      "abgelehnt": 7,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {
@@ -87,7 +84,7 @@
       "bearbeitet": 3,
       "uebernommen": 170,
       "markierbar": 166,
-      "abgelehnt": 18,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -95,8 +92,8 @@
       "normen": 28,
       "bearbeitet": 3,
       "uebernommen": 25,
-      "markierbar": 26,
-      "abgelehnt": 17,
+      "markierbar": 27,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -104,8 +101,8 @@
       "normen": 28,
       "bearbeitet": 3,
       "uebernommen": 25,
-      "markierbar": 22,
-      "abgelehnt": 15,
+      "markierbar": 23,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -113,8 +110,8 @@
       "normen": 23,
       "bearbeitet": 3,
       "uebernommen": 20,
-      "markierbar": 19,
-      "abgelehnt": 9,
+      "markierbar": 20,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {
@@ -122,8 +119,8 @@
       "normen": 6,
       "bearbeitet": 6,
       "uebernommen": 0,
-      "markierbar": 2,
-      "abgelehnt": 57,
+      "markierbar": 5,
+      "abgelehnt": 4,
       "vollstaendig": true
     },
     {
@@ -132,11 +129,11 @@
       "bearbeitet": 3,
       "uebernommen": 55,
       "markierbar": 57,
-      "abgelehnt": 29,
+      "abgelehnt": 0,
       "vollstaendig": true
     }
   ],
-  "modellaufrufe": 321,
+  "modellaufrufe": 0,
   "belegprobe": {
     "gestuetzt": 0,
     "entfernt": 0,

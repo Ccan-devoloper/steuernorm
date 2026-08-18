@@ -3,15 +3,12 @@
   "titel": "Gewerbesteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "verfahren": "syntaxanalyse",
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
-  "aktualisiert": "2026-08-18T08:42:07.796Z",
+  "laeufe": 0,
+  "aktualisiert": "2026-08-18T10:20:53.654Z",
   "quelle": "https://www.gesetze-im-internet.de/gewstg/",
   "stand": [
     {
@@ -13635,35 +13632,30 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Die Vorauszahlungen auf die Gewerbesteuer entstehen",
-              "anzeige": null,
-              "teile": null,
+              "text": "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind",
+              "anzeige": "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind … mit Begründung der Steuerpflicht",
+              "teile": [
+                {
+                  "text": "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind",
+                  "von": 42,
+                  "laenge": 92
+                },
+                {
+                  "text": "mit Begründung der Steuerpflicht",
+                  "von": 220,
+                  "laenge": 32
+                }
+              ],
               "pfad": "Satz 1",
-              "von": 0,
-              "laenge": 51,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "von": 42,
+              "laenge": 92,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, daher ist die Rechtsfolge das Entstehen der Vorauszahlungen und der Tatbestand die zeitlichen Bedingungen."
-            },
-            {
-              "art": "tb",
-              "text": "Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 56,
-              "laenge": 78,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, daher ist die Rechtsfolge das Entstehen der Vorauszahlungen und der Tatbestand die zeitlichen Bedingungen."
+              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand) (mehrteilig)"
             },
             {
               "art": "tb",
@@ -13673,13 +13665,13 @@
               "pfad": "Satz 1",
               "von": 142,
               "laenge": 76,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist das Normsubjekt, daher ist die Rechtsfolge das Entstehen der Vorauszahlungen und der Tatbestand die zeitlichen Bedingungen."
+              "grund": "Konditionalsatz mit „wenn\""
             }
           ]
         }
@@ -13693,22 +13685,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "wenn die Steuerpflicht erst im Laufe des Kalendervierteljahrs begründet wird",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13721,11 +13705,11 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Die Vorauszahlungen auf die Gewerbesteuer entstehen",
+                  "t": "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind … mit Begründung der Steuerpflicht",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": false
+                  "mehrteilig": true
                 }
               ]
             }
@@ -13733,27 +13717,26 @@
         }
       ],
       "tb": [
-        "Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind",
         "wenn die Steuerpflicht erst im Laufe des Kalendervierteljahrs begründet wird"
       ],
       "rf": [
-        "Die Vorauszahlungen auf die Gewerbesteuer entstehen"
+        "entstehen mit Beginn des Kalendervierteljahrs, in dem die Vorauszahlungen zu entrichten sind"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "konsens",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.833,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 1,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "20e5163d38278d9c8bf5c2dc548ca27b87632a91988671494da12b479c9dfa24",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:42:07.795Z"
+      "aktualisiert": "2026-08-18T10:20:53.651Z"
     },
     "28": {
       "typ": "gemischt",
@@ -16987,33 +16970,50 @@
       "aktualisiert": "2026-08-14T10:19:49.696Z"
     },
     "2a": {
-      "typ": "fiktion",
+      "typ": "gemischt",
       "typen": [
-        "fiktion"
+        "aussage",
+        "konditional"
       ],
       "saetze": [
         {
           "pfad": "Satz 1",
           "von": 0,
           "bis": 175,
-          "typ": "fiktion",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "Gewerbebetrieb gilt nicht die Tätigkeit der Arbeitsgemeinschaften",
+              "text": "Als Gewerbebetrieb",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 4,
-              "laenge": 65,
-              "konfidenz": 0.633,
-              "stimmen": 1,
-              "laeufe": 3,
+              "von": 0,
+              "laenge": 18,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Satzglied 'Als Gewerbebetrieb' steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+            },
+            {
+              "art": "rf",
+              "text": "gilt nicht die Tätigkeit der Arbeitsgemeinschaften",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 19,
+              "laenge": 50,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Rest des Hauptsatzes"
             },
             {
               "art": "tb",
@@ -17023,13 +17023,13 @@
               "pfad": "Satz 1",
               "von": 71,
               "laenge": 103,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Satzglied 'Als Gewerbebetrieb' steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
+              "grund": "Nebensatz trägt die Voraussetzungen"
             }
           ]
         },
@@ -17037,7 +17037,7 @@
           "pfad": "Satz 2",
           "von": 176,
           "bis": 283,
-          "typ": "fiktion",
+          "typ": "konditional",
           "junktor": null,
           "elemente": []
         }
@@ -17045,8 +17045,8 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "fiktion",
-          "rolle": "Fiktion",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -17058,7 +17058,7 @@
                   "n": "1.",
                   "t": "deren alleiniger Zweck in der Erfüllung eines einzigen Werkvertrags oder Werklieferungsvertrags besteht",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -17071,9 +17071,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Gewerbebetrieb gilt nicht die Tätigkeit der Arbeitsgemeinschaften",
+                  "t": "Als Gewerbebetrieb",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.633,
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "gilt nicht die Tätigkeit der Arbeitsgemeinschaften",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -17086,23 +17094,24 @@
         "deren alleiniger Zweck in der Erfüllung eines einzigen Werkvertrags oder Werklieferungsvertrags besteht"
       ],
       "rf": [
-        "Gewerbebetrieb gilt nicht die Tätigkeit der Arbeitsgemeinschaften"
+        "Als Gewerbebetrieb",
+        "gilt nicht die Tätigkeit der Arbeitsgemeinschaften"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.817,
+      "konfidenz": 0.55,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.5,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2bbe59529f8bc4251f840cee48928372764bf2d7b42a429a24752d8b7acb6d98",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:41:09.386Z"
+      "aktualisiert": "2026-08-18T10:20:53.644Z"
     },
     "7a": {
       "typ": "gemischt",
@@ -19692,6 +19701,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "tb",
+              "text": "Der Steuerschuldner (§ 5)",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 0,
+              "laenge": 25,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
               "art": "rf",
               "text": "hat für steuerpflichtige Gewerbebetriebe eine Erklärung zur Festsetzung des Steuermessbetrags und in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
               "anzeige": null,
@@ -19699,61 +19724,13 @@
               "pfad": "Satz 1",
               "von": 26,
               "laenge": 263,
-              "konfidenz": 0.36,
+              "konfidenz": 0.48,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
-            },
-            {
-              "art": "tb",
-              "text": "steuerpflichtige Gewerbebetriebe",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 34,
-              "laenge": 32,
-              "konfidenz": 0.563,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand benennt, daher liegt kein Tatbestand im Vorfeld vor."
-            },
-            {
-              "art": "rf",
-              "text": "in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 124,
-              "laenge": 165,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand benennt, daher liegt kein Tatbestand im Vorfeld vor."
-            },
-            {
-              "art": "tb",
-              "text": "Fällen des § 28",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 131,
-              "laenge": 15,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand benennt, daher liegt kein Tatbestand im Vorfeld vor."
             }
           ]
         },
@@ -19772,11 +19749,11 @@
               "pfad": "Satz 2",
               "von": 291,
               "laenge": 10,
-              "konfidenz": 0.338,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
@@ -19799,13 +19776,29 @@
               "pfad": "Satz 2",
               "von": 302,
               "laenge": 91,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "in diesem Fall",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 406,
+              "laenge": 14,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -19826,11 +19819,11 @@
               "pfad": "Satz 2",
               "von": 421,
               "laenge": 164,
-              "konfidenz": 0.405,
+              "konfidenz": 0.54,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
             }
@@ -19851,25 +19844,25 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "steuerpflichtige Gewerbebetriebe",
+                  "t": "Der Steuerschuldner (§ 5)",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.563,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "Fällen des § 28",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.383,
+                  "t": "Auf Antrag",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "Auf Antrag",
+                  "t": "in diesem Fall",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.338,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19884,31 +19877,23 @@
                   "n": "1.",
                   "t": "hat für steuerpflichtige Gewerbebetriebe eine Erklärung zur Festsetzung des Steuermessbetrags und in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.36,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
                   "t": "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung … verzichten",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
+                  "n": "3.",
                   "t": "ist die Erklärung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerschuldner oder von den in § 34 der Abgabenordnung bezeichneten Personen eigenhändig … zu unterschreiben",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.405,
+                  "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -19918,31 +19903,30 @@
         }
       ],
       "tb": [
-        "steuerpflichtige Gewerbebetriebe",
-        "Fällen des § 28",
-        "Auf Antrag"
+        "Der Steuerschuldner (§ 5)",
+        "Auf Antrag",
+        "in diesem Fall"
       ],
       "rf": [
         "hat für steuerpflichtige Gewerbebetriebe eine Erklärung zur Festsetzung des Steuermessbetrags und in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
-        "in den Fällen des § 28 außerdem eine Zerlegungserklärung nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch zu übermitteln",
         "kann die Finanzbehörde zur Vermeidung unbilliger Härten auf eine elektronische Übermittlung",
         "ist die Erklärung nach amtlich vorgeschriebenem Vordruck abzugeben und vom Steuerschuldner oder von den in § 34 der Abgabenordnung bezeichneten Personen eigenhändig"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "uneinheitlich",
-      "markierbar": false,
-      "konfidenz": 0.438,
+      "status": "syntaktisch",
+      "markierbar": true,
+      "konfidenz": 0.545,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.143,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 14 %. Die Läufe widersprechen einander; die Markierung ist als unsicher gekennzeichnet. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0976bbd31585c808968769345f49e042b3b06670c41e52d3b66b98f9b59bc45a",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:41:41.848Z"
+      "aktualisiert": "2026-08-18T10:20:53.650Z"
     },
     "14b": {
       "typ": "gemischt",

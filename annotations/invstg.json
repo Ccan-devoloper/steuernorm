@@ -3,15 +3,12 @@
   "titel": "Investmentsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "verfahren": "syntaxanalyse",
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
-  "aktualisiert": "2026-08-18T09:05:46.531Z",
+  "laeufe": 0,
+  "aktualisiert": "2026-08-18T10:20:53.963Z",
   "quelle": "https://www.gesetze-im-internet.de/invstg_2018/",
   "stand": [
     {
@@ -5018,7 +5015,6 @@
       "typ": "gemischt",
       "typen": [
         "aussage",
-        "konditional",
         "verweisung"
       ],
       "saetze": [
@@ -5031,19 +5027,35 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Die zuständige Finanzbehörde ist zur Überprüfung der steuerlichen Verhältnisse befugt",
+              "text": "Die zuständige Finanzbehörde",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 85,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "laenge": 28,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein spezifisches Tatbestandsmerkmal vor."
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+            },
+            {
+              "art": "tb",
+              "text": "zur Überprüfung der steuerlichen Verhältnisse befugt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 33,
+              "laenge": 52,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfeld trägt die Voraussetzungen"
             }
           ]
         },
@@ -5051,40 +5063,24 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 87,
           "bis": 161,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "Eine Prüfung nach Absatz 1 ist zulässig",
+              "text": "ist zulässig bei Investmentfonds zur Ermittlung",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 87,
-              "laenge": 39,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "von": 114,
+              "laenge": 47,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das konditionale Adverbial 'bei Investmentfonds' leitet den Anwendungsfall ein."
-            },
-            {
-              "art": "tb",
-              "text": "Investmentfonds",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 131,
-              "laenge": 15,
-              "konfidenz": 0.288,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das konditionale Adverbial 'bei Investmentfonds' leitet den Anwendungsfall ein."
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -5092,28 +5088,79 @@
           "pfad": "Abs. 2 Nr. 1",
           "von": 165,
           "bis": 215,
-          "typ": "konditional",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der steuerlichen Verhältnisse des Investmentfonds",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 165,
+              "laenge": 49,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 2",
           "von": 219,
           "bis": 291,
-          "typ": "konditional",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Voraussetzungen für eine Besteuerung als Spezial-Investmentfonds",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 219,
+              "laenge": 68,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Nr. 3",
           "von": 295,
           "bis": 334,
-          "typ": "konditional",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "und",
-          "elemente": []
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "der Besteuerungsgrundlagen der Anleger",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 3",
+              "von": 295,
+              "laenge": 38,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
         },
         {
           "pfad": "Abs. 2 Satz 2",
@@ -5123,22 +5170,6 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "rf",
-              "text": "Die §§ 194 bis 203 der Abgabenordnung sind entsprechend anzuwenden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 2",
-              "von": 335,
-              "laenge": 66,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ordnet die Anwendung anderer Vorschriften an."
-            },
-            {
               "art": "tb",
               "text": "Die §§ 194 bis 203 der Abgabenordnung",
               "anzeige": null,
@@ -5146,11 +5177,11 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 335,
               "laenge": 37,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
@@ -5173,11 +5204,11 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 373,
               "laenge": 17,
-              "konfidenz": 0.338,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
             }
@@ -5192,45 +5223,15 @@
           "schritte": [
             {
               "n": "I.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Die zuständige Finanzbehörde ist zur Überprüfung der steuerlichen Verhältnisse befugt",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "absatz": "Abs. 2",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
-          "schritte": [
-            {
-              "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Investmentfonds",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.288,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Die §§ 194 bis 203 der Abgabenordnung",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.45,
+                  "t": "zur Überprüfung der steuerlichen Verhältnisse befugt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5243,25 +5244,79 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Eine Prüfung nach Absatz 1 ist zulässig",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.75,
+                  "t": "Die zuständige Finanzbehörde",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 2",
+          "typ": "aussage",
+          "rolle": "Anordnung",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "der steuerlichen Verhältnisse des Investmentfonds",
+                  "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "Die §§ 194 bis 203 der Abgabenordnung sind entsprechend anzuwenden",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.75,
+                  "t": "der Voraussetzungen für eine Besteuerung als Spezial-Investmentfonds",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "der Besteuerungsgrundlagen der Anleger",
+                  "pfad": "Abs. 2 Nr. 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Die §§ 194 bis 203 der Abgabenordnung",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "ist zulässig bei Investmentfonds zur Ermittlung",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "sind entsprechend … anzuwenden",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.338,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -5271,30 +5326,32 @@
         }
       ],
       "tb": [
-        "Investmentfonds",
+        "zur Überprüfung der steuerlichen Verhältnisse befugt",
+        "der steuerlichen Verhältnisse des Investmentfonds",
+        "der Voraussetzungen für eine Besteuerung als Spezial-Investmentfonds",
+        "der Besteuerungsgrundlagen der Anleger",
         "Die §§ 194 bis 203 der Abgabenordnung"
       ],
       "rf": [
-        "Die zuständige Finanzbehörde ist zur Überprüfung der steuerlichen Verhältnisse befugt",
-        "Eine Prüfung nach Absatz 1 ist zulässig",
-        "Die §§ 194 bis 203 der Abgabenordnung sind entsprechend anzuwenden",
+        "Die zuständige Finanzbehörde",
+        "ist zulässig bei Investmentfonds zur Ermittlung",
         "sind entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.554,
+      "konfidenz": 0.581,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.5,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "10606fba09617c1c0d677a5e1554ffc9791823006e1e4267b9507f9cc4ae4fd8",
       "format": 5,
-      "aktualisiert": "2026-08-18T09:04:09.099Z"
+      "aktualisiert": "2026-08-18T10:20:53.946Z"
     },
     "6": {
       "typ": "gemischt",
@@ -19395,34 +19452,18 @@
       "aktualisiert": "2026-08-14T10:19:50.395Z"
     },
     "25": {
-      "typ": "konditional",
+      "typ": "aussage",
       "typen": [
-        "konditional"
+        "aussage"
       ],
       "saetze": [
         {
           "pfad": "Satz 1",
           "von": 0,
           "bis": 169,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
-            {
-              "art": "tb",
-              "text": "Die Vorschriften des Kapitels 2",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 0,
-              "laenge": 31,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine konditionale Struktur vor, die den Anwendungsbereich der Norm festlegt."
-            },
             {
               "art": "rf",
               "text": "sind auf Spezial-Investmentfonds und deren Anleger nicht anzuwenden",
@@ -19431,13 +19472,13 @@
               "pfad": "Satz 1",
               "von": 32,
               "laenge": 67,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine konditionale Struktur vor, die den Anwendungsbereich der Norm festlegt."
+              "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
             },
             {
               "art": "ausn",
@@ -19447,13 +19488,13 @@
               "pfad": "Satz 1",
               "von": 101,
               "laenge": 67,
-              "konfidenz": 0.617,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine konditionale Struktur vor, die den Anwendungsbereich der Norm festlegt."
+              "grund": "Bedingungsausnahme mit „es sei denn\""
             }
           ]
         }
@@ -19461,27 +19502,11 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Die Vorschriften des Kapitels 2",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
               "art": "ausn",
               "t": "Ausnahmen und Rückausnahmen",
               "sub": [
@@ -19489,14 +19514,14 @@
                   "n": "1.",
                   "t": "es sei denn, in Kapitel 3 werden abweichende Bestimmungen getroffen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.617,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
               ]
             },
             {
-              "n": "III.",
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -19504,7 +19529,7 @@
                   "n": "1.",
                   "t": "sind auf Spezial-Investmentfonds und deren Anleger nicht anzuwenden",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.817,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -19513,9 +19538,7 @@
           ]
         }
       ],
-      "tb": [
-        "Die Vorschriften des Kapitels 2"
-      ],
+      "tb": [],
       "rf": [
         "sind auf Spezial-Investmentfonds und deren Anleger nicht anzuwenden"
       ],
@@ -19523,19 +19546,19 @@
         "es sei denn, in Kapitel 3 werden abweichende Bestimmungen getroffen"
       ],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.667,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 0 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "4f99fb7e3d4d62e26704f8f1aed121c60cfceb4213b1b01b56b3447a22c67551",
       "format": 5,
-      "aktualisiert": "2026-08-18T09:04:34.865Z"
+      "aktualisiert": "2026-08-18T10:20:53.951Z"
     },
     "26": {
       "typ": "gemischt",
@@ -26085,34 +26108,17 @@
     "34": {
       "typ": "gemischt",
       "typen": [
-        "definition",
-        "konditional",
-        "verweisung"
+        "aussage",
+        "konditional"
       ],
       "saetze": [
         {
           "pfad": "Abs. 1 Satz 1",
           "von": 0,
           "bis": 69,
-          "typ": "definition",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
-            {
-              "art": "tb",
-              "text": "Erträge aus Spezial-Investmentfonds",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 0,
-              "laenge": 35,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld und definiert den Begriff."
-            },
             {
               "art": "tb",
               "text": "Erträge aus Spezial-Investmentfonds (Spezial- Investmenterträge)",
@@ -26121,11 +26127,11 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 64,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             }
@@ -26135,7 +26141,7 @@
           "pfad": "Abs. 1 Nr. 1",
           "von": 73,
           "bis": 106,
-          "typ": "definition",
+          "typ": "aussage",
           "junktor": "und",
           "elemente": [
             {
@@ -26146,13 +26152,13 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 73,
               "laenge": 32,
-              "konfidenz": 0.617,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Es handelt sich um eine Aufzählung der Definitionselemente."
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
@@ -26160,25 +26166,25 @@
           "pfad": "Abs. 1 Nr. 2",
           "von": 110,
           "bis": 161,
-          "typ": "definition",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
               "von": 110,
               "laenge": 47,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Es handelt sich um eine Aufzählung der Definitionselemente."
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -26186,25 +26192,25 @@
           "pfad": "Abs. 1 Nr. 3",
           "von": 165,
           "bis": 234,
-          "typ": "definition",
+          "typ": "aussage",
           "katalog": true,
           "junktor": "und",
           "elemente": [
             {
-              "art": "rf",
+              "art": "tb",
               "text": "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 3",
               "von": 165,
               "laenge": 68,
-              "konfidenz": 0.367,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Es handelt sich um eine Aufzählung der Definitionselemente."
+              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -26223,13 +26229,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 235,
               "laenge": 29,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das konditionale Adverbial steht im Vorfeld."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -26239,13 +26245,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 265,
               "laenge": 119,
-              "konfidenz": 0.617,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "ausn",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das konditionale Adverbial steht im Vorfeld."
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -26253,24 +26259,24 @@
           "pfad": "Abs. 2 Satz 2",
           "von": 386,
           "bis": 513,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
-              "art": "ausn",
-              "text": "vorbehaltlich des § 42",
+              "art": "tb",
+              "text": "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 473,
-              "laenge": 22,
-              "konfidenz": 0.55,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 386,
+              "laenge": 81,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ist die Nichtanwendung."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "ausn",
@@ -26280,29 +26286,13 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 473,
               "laenge": 39,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "ausn",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Vorbehalt mit „vorbehaltlich\""
-            },
-            {
-              "art": "rf",
-              "text": "nicht anzuwenden",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 2",
-              "von": 496,
-              "laenge": 16,
-              "konfidenz": 0.413,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ist die Nichtanwendung."
             }
           ]
         },
@@ -26310,24 +26300,24 @@
           "pfad": "Abs. 3 Satz 1",
           "von": 514,
           "bis": 680,
-          "typ": "verweisung",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Die Freistellung von ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung",
+              "art": "rf",
+              "text": "Die Freistellung von",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
               "von": 514,
-              "laenge": 133,
-              "konfidenz": 0.567,
-              "stimmen": 2,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "laenge": 20,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Norm verweist auf eine andere Vorschrift."
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
               "art": "tb",
@@ -26337,29 +26327,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 535,
               "laenge": 144,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Nachfeld trägt die Voraussetzungen"
-            },
-            {
-              "art": "rf",
-              "text": "richtet sich nach § 43 Absatz 1",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 3 Satz 1",
-              "von": 648,
-              "laenge": 31,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Norm verweist auf eine andere Vorschrift."
             }
           ]
         },
@@ -26378,29 +26352,40 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 681,
               "laenge": 60,
-              "konfidenz": 0.8,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Die Ausnahme steht im Vorfeld, der Hauptsatz enthält die Rechtsfolge."
+              "grund": "Vorbehalt mit „ungeachtet\""
             },
             {
-              "art": "tb",
-              "text": "Ausschüttungen eines ausländischen Spezial-Investmentfonds",
-              "anzeige": null,
-              "teile": null,
+              "art": "rf",
+              "text": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4",
+              "anzeige": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4 … gewährt",
+              "teile": [
+                {
+                  "text": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4",
+                  "von": 742,
+                  "laenge": 132
+                },
+                {
+                  "text": "gewährt",
+                  "von": 875,
+                  "laenge": 7
+                }
+              ],
               "pfad": "Abs. 3 Satz 2",
-              "von": 768,
-              "laenge": 58,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 742,
+              "laenge": 132,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Die Ausnahme steht im Vorfeld, der Hauptsatz enthält die Rechtsfolge."
+              "grund": "Hauptsatzprädikat (mehrteilig)"
             }
           ]
         }
@@ -26408,8 +26393,8 @@
       "schema": [
         {
           "absatz": "Abs. 1",
-          "typ": "definition",
-          "rolle": "Begriffsbestimmung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
@@ -26419,17 +26404,25 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Erträge aus Spezial-Investmentfonds",
+                  "t": "Erträge aus Spezial-Investmentfonds (Spezial- Investmenterträge)",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "Erträge aus Spezial-Investmentfonds (Spezial- Investmenterträge)",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
+                  "t": "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
+                  "pfad": "Abs. 1 Nr. 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
+                  "pfad": "Abs. 1 Nr. 3",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26444,23 +26437,7 @@
                   "n": "1.",
                   "t": "ausgeschüttete Erträge nach § 35",
                   "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.617,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
-                  "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 0.367,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
-                  "pfad": "Abs. 1 Nr. 3",
-                  "konfidenz": 0.367,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26476,14 +26453,22 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Auf Spezial-Investmenterträge",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26496,17 +26481,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "vorbehaltlich des § 42",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.55,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "vorbehaltlich des § 42 nicht anzuwenden",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26521,15 +26498,7 @@
                   "n": "1.",
                   "t": "sind § 2 Absatz 5b, § 20 Absatz 6 und 9, die §§ 32d und 43 Absatz 5 Satz 1 des Einkommensteuergesetzes nicht anzuwenden",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.617,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "nicht anzuwenden",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.413,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26539,36 +26508,20 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Die Freistellung von ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung",
-                  "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.567,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "Ausschüttungen eines ausländischen Spezial-Investmentfonds",
-                  "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26583,7 +26536,7 @@
                   "n": "1.",
                   "t": "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.8,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -26596,11 +26549,19 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "richtet sich nach § 43 Absatz 1",
+                  "t": "Die Freistellung von",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4 … gewährt",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
                 }
               ]
             }
@@ -26608,40 +26569,37 @@
         }
       ],
       "tb": [
-        "Erträge aus Spezial-Investmentfonds",
         "Erträge aus Spezial-Investmentfonds (Spezial- Investmenterträge)",
+        "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
+        "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
         "Auf Spezial-Investmenterträge",
-        "Die Freistellung von ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung",
-        "ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1",
-        "Ausschüttungen eines ausländischen Spezial-Investmentfonds"
+        "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
+        "ausgeschütteten und ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung der Doppelbesteuerung richtet sich nach § 43 Absatz 1"
       ],
       "rf": [
         "ausgeschüttete Erträge nach § 35",
-        "ausschüttungsgleiche Erträge nach § 36 Absatz 1",
-        "Gewinne aus der Veräußerung von Spezial-Investmentanteilen nach § 49",
         "sind § 2 Absatz 5b, § 20 Absatz 6 und 9, die §§ 32d und 43 Absatz 5 Satz 1 des Einkommensteuergesetzes nicht anzuwenden",
-        "nicht anzuwenden",
-        "richtet sich nach § 43 Absatz 1"
+        "Die Freistellung von",
+        "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur unter den Voraussetzungen des § 16 Absatz 4"
       ],
       "ausnahmen": [
-        "vorbehaltlich des § 42",
         "vorbehaltlich des § 42 nicht anzuwenden",
         "Ungeachtet von Abkommen zur Vermeidung der Doppelbesteuerung"
       ],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.587,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.467,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 47 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "867eb79e5a1aa4ffffe3fe5317c310838b0d1eac1629960fcd87b185d4f7b4ff",
       "format": 5,
-      "aktualisiert": "2026-08-18T09:05:46.531Z"
+      "aktualisiert": "2026-08-18T10:20:53.955Z"
     },
     "35": {
       "typ": "gemischt",

@@ -3,15 +3,12 @@
   "titel": "Erbschaftsteuer- und Schenkungsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+  "verfahren": "syntaxanalyse",
   "modelle": [
-    "gemini-3.7-flash",
-    "gemini-3.5-flash",
-    "gemini-3.1-flash-lite",
-    "gemini-flash-latest"
+    "nur-syntax"
   ],
-  "laeufe": 3,
-  "aktualisiert": "2026-08-18T08:44:11.367Z",
+  "laeufe": 0,
+  "aktualisiert": "2026-08-18T10:20:53.702Z",
   "quelle": "https://www.gesetze-im-internet.de/erbstg_1974/",
   "stand": [
     {
@@ -40,19 +37,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Der Erbschaftsteuer (Schenkungsteuer) unterliegen",
+              "text": "Der Erbschaftsteuer (Schenkungsteuer)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 49,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "laenge": 37,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Objekt steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             }
           ]
         },
@@ -72,13 +69,13 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 53,
               "laenge": 26,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Es handelt sich um ein Aufzählungsglied als Tatbestandsmerkmal."
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -98,13 +95,13 @@
               "pfad": "Abs. 1 Nr. 2",
               "von": 84,
               "laenge": 30,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Es handelt sich um ein Aufzählungsglied als Tatbestandsmerkmal."
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
           ]
         },
@@ -126,35 +123,19 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "eines Vereins, dessen Zweck wesentlich im Interesse einer Familie oder bestimmter Familien auf die Bindung von Vermögen gerichtet ist",
+              "text": "sofern sie wesentlich im Interesse einer Familie oder bestimmter Familien errichtet ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 4",
-              "von": 266,
-              "laenge": 133,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
+              "von": 173,
+              "laenge": 87,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält das konditionale Subjekt, welches den Tatbestand einleitet."
-            },
-            {
-              "art": "tb",
-              "text": "in Zeitabständen von je 30 Jahren seit dem in § 9 Abs. 1 Nr. 4 bestimmten Zeitpunkt",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 4",
-              "von": 401,
-              "laenge": 83,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "tb",
-              "beleg": null,
-              "grund": "Das Vorfeld enthält das konditionale Subjekt, welches den Tatbestand einleitet."
+              "grund": "Konditionalsatz mit „sofern\""
             },
             {
               "art": "rf",
@@ -164,11 +145,11 @@
               "pfad": "Abs. 1 Nr. 4",
               "von": 464,
               "laenge": 20,
-              "konfidenz": 0.338,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat"
             }
@@ -189,13 +170,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 486,
               "laenge": 34,
-              "konfidenz": 0.617,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "ausn",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich einschränkt."
+              "grund": "Konditionalsatz mit „soweit\""
             },
             {
               "art": "rf",
@@ -205,29 +186,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 522,
               "laenge": 114,
-              "konfidenz": 0.817,
-              "stimmen": 2,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich einschränkt."
-            },
-            {
-              "art": "rf",
-              "text": "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 1",
-              "von": 522,
-              "laenge": 72,
-              "konfidenz": 0.383,
-              "stimmen": 1,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das konditionale Adverbial leitet den Tatbestand ein, die Rechtsfolge ordnet die Anwendung anderer Vorschriften an."
+              "grund": "Hauptsatzprädikat"
             }
           ]
         }
@@ -248,7 +213,7 @@
                   "n": "1.",
                   "t": "der Erwerb von Todes wegen",
                   "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -256,23 +221,15 @@
                   "n": "2.",
                   "t": "die Schenkungen unter Lebenden",
                   "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "eines Vereins, dessen Zweck wesentlich im Interesse einer Familie oder bestimmter Familien auf die Bindung von Vermögen gerichtet ist",
+                  "t": "sofern sie wesentlich im Interesse einer Familie oder bestimmter Familien errichtet ist",
                   "pfad": "Abs. 1 Nr. 4",
-                  "konfidenz": 0.75,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
-                  "t": "in Zeitabständen von je 30 Jahren seit dem in § 9 Abs. 1 Nr. 4 bestimmten Zeitpunkt",
-                  "pfad": "Abs. 1 Nr. 4",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -285,9 +242,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Der Erbschaftsteuer (Schenkungsteuer) unterliegen",
+                  "t": "Der Erbschaftsteuer (Schenkungsteuer)",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -295,7 +252,7 @@
                   "n": "2.",
                   "t": "bestimmten Zeitpunkt",
                   "pfad": "Abs. 1 Nr. 4",
-                  "konfidenz": 0.338,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -318,7 +275,7 @@
                   "n": "1.",
                   "t": "Soweit nichts anderes bestimmt ist",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.617,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -333,15 +290,7 @@
                   "n": "1.",
                   "t": "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen auch für Schenkungen und Zweckzuwendungen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.817,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.383,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -353,31 +302,29 @@
       "tb": [
         "der Erwerb von Todes wegen",
         "die Schenkungen unter Lebenden",
-        "eines Vereins, dessen Zweck wesentlich im Interesse einer Familie oder bestimmter Familien auf die Bindung von Vermögen gerichtet ist",
-        "in Zeitabständen von je 30 Jahren seit dem in § 9 Abs. 1 Nr. 4 bestimmten Zeitpunkt",
+        "sofern sie wesentlich im Interesse einer Familie oder bestimmter Familien errichtet ist",
         "Soweit nichts anderes bestimmt ist"
       ],
       "rf": [
-        "Der Erbschaftsteuer (Schenkungsteuer) unterliegen",
+        "Der Erbschaftsteuer (Schenkungsteuer)",
         "bestimmten Zeitpunkt",
-        "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen auch für Schenkungen und Zweckzuwendungen",
-        "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen"
+        "gelten die Vorschriften dieses Gesetzes über die Erwerbe von Todes wegen auch für Schenkungen und Zweckzuwendungen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.739,
+      "konfidenz": 0.579,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.556,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 56 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2142da7ac2176ff102419b1e4ed1f85f9d70ef4c608cf83970470eb80c90997b",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:43:06.186Z"
+      "aktualisiert": "2026-08-18T10:20:53.683Z"
     },
     "2": {
       "typ": "gemischt",
@@ -16310,13 +16257,13 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 126,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Adjektiv steuerfrei steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
+              "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
               "art": "rf",
@@ -16326,29 +16273,13 @@
               "pfad": "Satz 1",
               "von": 128,
               "laenge": 15,
-              "konfidenz": 0.338,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat"
-            },
-            {
-              "art": "rf",
-              "text": "steuerfrei",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 133,
-              "laenge": 10,
-              "konfidenz": 0.563,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
-              "beleg": null,
-              "grund": "Das prädikative Adjektiv steuerfrei steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
             },
             {
               "art": "tb",
@@ -16358,13 +16289,13 @@
               "pfad": "Satz 1",
               "von": 145,
               "laenge": 109,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das prädikative Adjektiv steuerfrei steht im Vorfeld, daher ist die Rechtsfolge vorangestellt."
+              "grund": "Konditionalsatz mit „soweit\""
             }
           ]
         },
@@ -16377,19 +16308,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "§ 13 Abs. 1 Nr. 16 und 18 bleibt unberührt",
+              "text": "unberührt",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 2",
-              "von": 256,
-              "laenge": 42,
-              "konfidenz": 0.55,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "ausn",
+              "von": 289,
+              "laenge": 9,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge wird durch das Prädikat unberührt bleiben definiert."
+              "grund": "Hauptsatzprädikat"
             }
           ]
         }
@@ -16410,7 +16341,7 @@
                   "n": "1.",
                   "t": "Beiträge an Personenvereinigungen und rechtsfähige Vereine, die nicht lediglich die Förderung ihrer Mitglieder zum Zweck haben",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -16418,7 +16349,7 @@
                   "n": "2.",
                   "t": "soweit die von einem Mitglied im Kalenderjahr der Vereinigung geleisteten Beiträge 300 Euro nicht übersteigen",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -16433,23 +16364,15 @@
                   "n": "1.",
                   "t": "sind steuerfrei",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.338,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "steuerfrei",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.563,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "§ 13 Abs. 1 Nr. 16 und 18 bleibt unberührt",
+                  "t": "unberührt",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.55,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -16464,24 +16387,23 @@
       ],
       "rf": [
         "sind steuerfrei",
-        "steuerfrei",
-        "§ 13 Abs. 1 Nr. 16 und 18 bleibt unberührt"
+        "unberührt"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.69,
+      "konfidenz": 0.525,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.8,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 80 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2e3f7fde7915028bc88da41874398d9faae5a0d8cec438dcd47687dcb1f8770c",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:43:38.846Z"
+      "aktualisiert": "2026-08-18T10:20:53.696Z"
     },
     "19": {
       "typ": "gemischt",
@@ -18655,7 +18577,7 @@
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "rechenregel"
+        "aussage"
       ],
       "saetze": [
         {
@@ -18673,13 +18595,13 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 34,
-              "konfidenz": 1,
-              "stimmen": 3,
-              "laeufe": 3,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "tb",
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld enthält ein konditionales Adverbial, welches den Anwendungsbereich der Norm definiert."
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
             {
               "art": "rf",
@@ -18700,11 +18622,11 @@
               "pfad": "Satz 1",
               "von": 35,
               "laenge": 25,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
             }
@@ -18714,24 +18636,24 @@
           "pfad": "Satz 2",
           "von": 162,
           "bis": 296,
-          "typ": "rechenregel",
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "Die Summe der Jahresbeträge umfaßt die Tilgung und die Verzinsung der Steuer",
+              "text": "umfaßt die Tilgung und die Verzinsung der Steuer",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 2",
-              "von": 162,
-              "laenge": 76,
-              "konfidenz": 0.75,
-              "stimmen": 3,
-              "laeufe": 3,
-              "syntax": false,
-              "gegenprobe": "rf",
+              "von": 190,
+              "laenge": 48,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
               "beleg": null,
-              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, daher liegt eine inhaltliche Bestimmung der Rechtsfolge vor."
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             },
             {
               "art": "rf",
@@ -18741,11 +18663,11 @@
               "pfad": "Satz 2",
               "von": 246,
               "laenge": 49,
-              "konfidenz": 0.45,
+              "konfidenz": 0.6,
               "stimmen": 0,
-              "laeufe": 3,
+              "laeufe": 0,
               "syntax": true,
-              "gegenprobe": "rf",
+              "gegenprobe": null,
               "beleg": null,
               "grund": "Tarif — vollständig Rechtsfolge"
             }
@@ -18768,7 +18690,7 @@
                   "n": "1.",
                   "t": "In den Fällen des § 1 Abs. 1 Nr. 4",
                   "pfad": "Satz 1",
-                  "konfidenz": 1,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -18783,15 +18705,15 @@
                   "n": "1.",
                   "t": "kann der Steuerpflichtige … verlangen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "2.",
-                  "t": "Die Summe der Jahresbeträge umfaßt die Tilgung und die Verzinsung der Steuer",
+                  "t": "umfaßt die Tilgung und die Verzinsung der Steuer",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.75,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -18799,7 +18721,7 @@
                   "n": "3.",
                   "t": "ist von einem Zinssatz von 5,5 Prozent auszugehen",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -18813,24 +18735,24 @@
       ],
       "rf": [
         "kann der Steuerpflichtige",
-        "Die Summe der Jahresbeträge umfaßt die Tilgung und die Verzinsung der Steuer",
+        "umfaßt die Tilgung und die Verzinsung der Steuer",
         "ist von einem Zinssatz von 5,5 Prozent auszugehen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.663,
+      "konfidenz": 0.6,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.5,
-      "laeufe": 3,
-      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": null,
+      "laeufe": 0,
+      "verfahren": "syntaxanalyse",
+      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "71545daa216ad81ef94785e8493a88adb6f631e4308c378c1192198668056b04",
       "format": 5,
-      "aktualisiert": "2026-08-18T08:44:11.367Z"
+      "aktualisiert": "2026-08-18T10:20:53.698Z"
     },
     "25": {
       "typ": "gemischt",

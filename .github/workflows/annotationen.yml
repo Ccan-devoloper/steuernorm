@@ -297,7 +297,26 @@ jobs:
           # Ohne diesen Filter liefe das Budget der Reihe nach durch die AO und
           # erreichte keine einzige Norm, die der Goldstandard kennt.
           [ "${INPUT_GOLD:-false}" = "true" ] && args+=(--gold)
-          if [ "${INPUT_OHNE_KI:-false}" = "true" ]; then
+          # DER PLANMÄSSIGE LAUF RECHNET DERZEIT OHNE MODELL.
+          #
+          # Am 18.08. wurden 45 Goldnormen mit drei Modellläufen und Gegenprobe
+          # annotiert — technisch einwandfrei, 321 Aufrufe, kein Abbruch. Die
+          # Messung gegen den Goldstandard fiel trotzdem gegen das Modell aus:
+          #
+          #            Regeln              Modell
+          #     tb     0,68/0,77/0,73      0,63/0,81/0,71
+          #     rf     0,87/0,76/0,81      0,73/0,74/0,73
+          #     ausn   0,92/0,57/0,71      0,77/0,48/0,59
+          #
+          # Es findet mehr und markiert dabei vor allem falsch mehr: „nicht im
+          # Gold" stieg von 6 auf 34, die Vertauschungen nahmen zu statt ab.
+          # Ein nächtlicher Lauf würde deshalb jeden Tag 18 weitere Normen
+          # verschlechtern. Bis Anweisung und Konsensschwelle nachgebessert
+          # sind, rechnet der geplante Lauf auf der Regelbasis; von Hand lässt
+          # sich das Modell weiterhin zuschalten (ohne_ki auf false).
+          if [ "${INPUT_OHNE_KI:-false}" = "true" ] \
+             || [ "${{ github.event_name }}" = "schedule" ] \
+             || [ "${{ github.event_name }}" = "workflow_run" ]; then
             args+=(--ohne-ki)
           else
             args+=(--aufwerten)

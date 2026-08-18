@@ -7,6 +7,7 @@
  *   node tools/annotieren.mjs --gold               nur die Normen des Goldstandards
  *   node tools/annotieren.mjs --normen ustg:10,ao:12
  *   node tools/annotieren.mjs --ohne-ki            nur Syntaxanalyse, kein Netz
+ *   node tools/annotieren.mjs --ohne-ki --auf-syntax   Modellergebnisse zurücknehmen
  *   node tools/annotieren.mjs --laeufe 3           Anzahl unabhängiger Modellläufe
  *   node tools/annotieren.mjs --ohne-gegenprobe    spart Aufrufe
  *   node tools/annotieren.mjs --trocken            nichts schreiben
@@ -77,6 +78,15 @@ const aufwerten = hat("--aufwerten");
    nirgends durch, und die Messung gegen den Goldstandard zeigte den alten
    Stand. Höherwertige KI-Ergebnisse bleiben geschützt (siehe unten). */
 const neuRechnen = hat("--neu");
+/* Setzt Modellergebnisse auf die Regelbasis ZURÜCK.
+   Normalerweise verweigert der Lauf das, und zu Recht: Ein Baseline-Lauf darf
+   nicht versehentlich wegwerfen, was Modellläufe erarbeitet haben. Am
+   18.08. war das Wegwerfen aber die richtige Entscheidung — die Messung gegen
+   den Goldstandard zeigte das Modell in allen drei Kategorien SCHLECHTER als
+   die Regeln (tb 0,71 statt 0,73 · rf 0,73 statt 0,81 · ausn 0,59 statt 0,71).
+   Für so einen Fall braucht es einen ausdrücklichen Schalter, keinen
+   stillen Nebeneffekt. */
+const aufSyntax = hat("--auf-syntax");
 const ohneKi = hat("--ohne-ki") || !TOKEN;
 
 if (!TOKEN && !hat("--ohne-ki")) {
@@ -427,6 +437,9 @@ function wiederverwendbar({ datei, annotation, th }) {
      stammt, bleibt unangetastet: Eine Regeländerung rechtfertigt es nicht,
      geprüfte Modellergebnisse wegzuwerfen. */
   if (neuRechnen && !String(annotation.verfahren || "").includes("mehrfachlauf")) return false;
+
+  /* --auf-syntax: Gerade das Modellergebnis soll weg. */
+  if (aufSyntax && String(annotation.verfahren || "").includes("mehrfachlauf")) return false;
 
   // --aufwerten: alles neu rechnen, was noch rein syntaktisch ist oder keinen Beleg trägt.
   if (aufwerten && !ohneKi) {
