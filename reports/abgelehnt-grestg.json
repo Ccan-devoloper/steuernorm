@@ -292,5 +292,124 @@
     "art": "tb",
     "text": "§ 1 Absatz 4a",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Grundstücke im Sinne dieses Gesetzes",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "Maschinen und sonstige Vorrichtungen aller Art, die zu einer Betriebsanlage gehören",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "Mineralgewinnungsrechte und sonstige Gewerbeberechtigungen",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "das Recht des Grundstückseigentümers auf den Erbbauzins",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "Jedoch",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "tb",
+    "text": "das Recht des Grundstückseigentümers auf den Erbbauzins",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Erbbaurechte",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Gebäude auf fremdem Boden",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "dinglich gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetz",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Den Grundstücken gleichgestellt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Den Grundstücken stehen",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 2",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "rf",
+    "text": "gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetzes und de",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Bescheinigungen der für die Besteuerung zuständigen Finanzämter vorgelegt werden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "darf in das Grundbuch erst dann eingetragen werden",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "wenn eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird (§ 1",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "wenn die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist oder wenn ",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 22",
+    "pfad": "Abs. 2 Satz 4",
+    "art": "rf",
+    "text": "ausgeschlossen",
+    "grund": "Gegenprobe widerspricht (tb)"
   }
 ]

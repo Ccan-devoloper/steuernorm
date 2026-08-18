@@ -7,11 +7,11 @@
   "modelle": [
     "gemini-3.7-flash",
     "gemini-3.5-flash",
-    "gemini-3.5-flash-lite",
-    "gemini-3.1-flash-lite"
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
   "laeufe": 3,
-  "aktualisiert": "2026-08-18T06:35:19.050Z",
+  "aktualisiert": "2026-08-18T08:17:08.109Z",
   "quelle": "https://www.gesetze-im-internet.de/ao_1977/",
   "stand": [
     {
@@ -23,7 +23,6 @@
       "text": "zuletzt geändert durch Art. 15 Abs. 6 G v. 3.7.2026 I Nr. 199"
     }
   ],
-  "unvollstaendig": true,
   "normen": {
     "1": {
       "typ": "gemischt",
@@ -2353,7 +2352,7 @@
               "syntax": true,
               "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Das Vorfeld ist durch eine Verberststellung als Bedingungssatz gebildet, weshalb der Rechtssatz konditional ist."
+              "grund": "Der vorangestellte V1-Konditionalsatz bildet den Tatbestand, der nachfolgende Hauptsatz die kumulative Rechtsfolge."
             },
             {
               "art": "rf",
@@ -2369,23 +2368,23 @@
               "syntax": false,
               "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Das Vorfeld ist durch eine Verberststellung als Bedingungssatz gebildet, weshalb der Rechtssatz konditional ist."
+              "grund": "Der vorangestellte V1-Konditionalsatz bildet den Tatbestand, der nachfolgende Hauptsatz die kumulative Rechtsfolge."
             },
             {
               "art": "rf",
-              "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten",
+              "text": "die gesetzlichen Grenzen des Ermessens einzuhalten",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 66,
-              "laenge": 125,
-              "konfidenz": 0.45,
-              "stimmen": 0,
+              "von": 141,
+              "laenge": 50,
+              "konfidenz": 0.75,
+              "stimmen": 3,
               "laeufe": 3,
-              "syntax": true,
+              "syntax": false,
               "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Der vorangestellte V1-Konditionalsatz bildet den Tatbestand, der nachfolgende Hauptsatz die kumulative Rechtsfolge."
             }
           ]
         }
@@ -2427,9 +2426,9 @@
                 },
                 {
                   "n": "2.",
-                  "t": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten",
+                  "t": "die gesetzlichen Grenzen des Ermessens einzuhalten",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -2443,23 +2442,23 @@
       ],
       "rf": [
         "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben",
-        "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten"
+        "die gesetzlichen Grenzen des Ermessens einzuhalten"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "mehrheit",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.733,
+      "konfidenz": 0.833,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": 0.667,
+      "einstimmigkeit": 1,
       "laeufe": 3,
       "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
-      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "2122de45e791f2573dbded9da4be7d2691433feed92c1793f6bab06ab4e420e6",
       "format": 5,
-      "aktualisiert": "2026-08-18T06:11:59.487Z"
+      "aktualisiert": "2026-08-18T08:07:26.300Z"
     },
     "6": {
       "typ": "gemischt",
@@ -64353,9 +64352,8 @@
       "aktualisiert": "2026-08-14T10:19:45.512Z"
     },
     "129": {
-      "typ": "gemischt",
+      "typ": "konditional",
       "typen": [
-        "aussage",
         "konditional"
       ],
       "saetze": [
@@ -64363,35 +64361,88 @@
           "pfad": "Satz 1",
           "von": 0,
           "bis": 169,
-          "typ": "aussage",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit",
-              "anzeige": "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit … berichtigen",
-              "teile": [
-                {
-                  "text": "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit",
-                  "von": 18,
-                  "laenge": 138
-                },
-                {
-                  "text": "berichtigen",
-                  "von": 157,
-                  "laenge": 11
-                }
-              ],
+              "text": "kann",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Satz 1",
               "von": 18,
-              "laenge": 138,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 4,
+              "konfidenz": 0.425,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld nennt das Normsubjekt, das Objekt mit Relativsatz bildet den Tatbestand und die getrennten Prädikatsteile die Rechtsfolge."
+            },
+            {
+              "art": "tb",
+              "text": "Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 23,
+              "laenge": 122,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld nennt das Normsubjekt, das Objekt mit Relativsatz bildet den Tatbestand und die getrennten Prädikatsteile die Rechtsfolge."
+            },
+            {
+              "art": "tb",
+              "text": "Schreibfehler",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 23,
+              "laenge": 13,
+              "konfidenz": 0.288,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein konditionaler Tatbestand vor."
+            },
+            {
+              "art": "tb",
+              "text": "Rechenfehler",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 38,
+              "laenge": 12,
+              "konfidenz": 0.288,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein konditionaler Tatbestand vor."
+            },
+            {
+              "art": "rf",
+              "text": "jederzeit berichtigen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 147,
+              "laenge": 21,
+              "konfidenz": 0.563,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld nennt das Normsubjekt, das Objekt mit Relativsatz bildet den Tatbestand und die getrennten Prädikatsteile die Rechtsfolge."
             }
           ]
         },
@@ -64410,29 +64461,29 @@
               "pfad": "Satz 2",
               "von": 170,
               "laenge": 42,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld enthält eine konditionale Präpositionalphrase als Tatbestand, das Prädikat im Nachfeld die Rechtsfolge."
             },
             {
               "art": "rf",
-              "text": "zu berichtigen",
+              "text": "ist zu berichtigen",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 2",
-              "von": 217,
-              "laenge": 14,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
+              "von": 213,
+              "laenge": 18,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld enthält eine konditionale Präpositionalphrase als Tatbestand, das Prädikat im Nachfeld die Rechtsfolge."
             }
           ]
         },
@@ -64451,13 +64502,13 @@
               "pfad": "Satz 3",
               "von": 233,
               "laenge": 76,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Der vorangestellte Nebensatz in Verberststellung bildet den Tatbestand, der folgende Hauptsatz die Rechtsfolge."
             },
             {
               "art": "rf",
@@ -64467,13 +64518,13 @@
               "pfad": "Satz 3",
               "von": 311,
               "laenge": 104,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Der vorangestellte Nebensatz in Verberststellung bildet den Tatbestand, der folgende Hauptsatz die Rechtsfolge."
             }
           ]
         }
@@ -64492,17 +64543,41 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Bei berechtigtem Interesse des Beteiligten",
-                  "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "t": "Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "Schreibfehler",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.288,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Rechenfehler",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.288,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Bei berechtigtem Interesse des Beteiligten",
+                  "pfad": "Satz 2",
+                  "konfidenz": 1,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "Wird zu einem schriftlich ergangenen Verwaltungsakt die Berichtigung begehrt",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -64515,25 +64590,33 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit … berichtigen",
+                  "t": "kann",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.425,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "zu berichtigen",
-                  "pfad": "Satz 2",
-                  "konfidenz": 0.45,
+                  "t": "jederzeit berichtigen",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.563,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "ist zu berichtigen",
+                  "pfad": "Satz 2",
+                  "konfidenz": 1,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "ist die Finanzbehörde berechtigt, die Vorlage des Schriftstücks zu verlangen, das berichtigt werden soll",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -64543,29 +64626,33 @@
         }
       ],
       "tb": [
+        "Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind",
+        "Schreibfehler",
+        "Rechenfehler",
         "Bei berechtigtem Interesse des Beteiligten",
         "Wird zu einem schriftlich ergangenen Verwaltungsakt die Berichtigung begehrt"
       ],
       "rf": [
-        "kann Schreibfehler, Rechenfehler und ähnliche offenbare Unrichtigkeiten, die beim Erlass eines Verwaltungsakts unterlaufen sind, jederzeit",
-        "zu berichtigen",
+        "kann",
+        "jederzeit berichtigen",
+        "ist zu berichtigen",
         "ist die Finanzbehörde berechtigt, die Vorlage des Schriftstücks zu verlangen, das berichtigt werden soll"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.702,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.667,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "31099d1788c3a21475460eb1a2d914d3159cb1275c54e974780167eba266a669",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:45.513Z"
+      "aktualisiert": "2026-08-18T08:08:49.214Z"
     },
     "130": {
       "typ": "gemischt",
@@ -138233,11 +138320,11 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 44,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
@@ -138249,13 +138336,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 45,
               "laenge": 22,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das Vorfeld nennt als Satzsubjekt den Normgegenstand, das Prädikat bestimmt die Vollstreckungsform."
             }
           ]
         },
@@ -138268,19 +138355,51 @@
           "elemente": [
             {
               "art": "rf",
+              "text": "Die Pfändung darf nicht weiter ausgedehnt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 69,
+              "laenge": 48,
+              "konfidenz": 0.383,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, die Rechtsfolge ergibt sich aus dem Verbot der Überpfändung."
+            },
+            {
+              "art": "rf",
               "text": "darf nicht weiter ausgedehnt werden, als es zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 82,
               "laenge": 137,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Das Vorfeld ist das Normsubjekt, das Prädikat samt Begrenzung bildet die Rechtsfolge des Übermaßverbots."
+            },
+            {
+              "art": "tb",
+              "text": "zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 126,
+              "laenge": 93,
+              "konfidenz": 0.383,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, die Rechtsfolge ergibt sich aus dem Verbot der Überpfändung."
             }
           ]
         },
@@ -138292,6 +138411,38 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Die Pfändung unterbleibt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 221,
+              "laenge": 24,
+              "konfidenz": 0.383,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, der Tatbestand wird durch den Nebensatz mit wenn eingeleitet."
+            },
+            {
+              "art": "rf",
+              "text": "unterbleibt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 234,
+              "laenge": 11,
+              "konfidenz": 0.425,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Der nachgestellte Konditionalsatz enthält den Tatbestand, das Prädikat des Hauptsatzes die Rechtsfolge."
+            },
+            {
               "art": "tb",
               "text": "wenn die Verwertung der pfändbaren Gegenstände einen Überschuss über die Kosten der Vollstreckung nicht erwarten lässt",
               "anzeige": null,
@@ -138299,13 +138450,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 247,
               "laenge": 118,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Der nachgestellte Konditionalsatz enthält den Tatbestand, das Prädikat des Hauptsatzes die Rechtsfolge."
             }
           ]
         }
@@ -138326,7 +138477,7 @@
                   "n": "1.",
                   "t": "Die Vollstreckung in das bewegliche Vermögen",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -138341,7 +138492,7 @@
                   "n": "1.",
                   "t": "erfolgt durch Pfändung",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.817,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -138356,14 +138507,38 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.383,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Die Pfändung darf nicht weiter ausgedehnt werden",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.383,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "darf nicht weiter ausgedehnt werden, als es zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.817,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -138386,7 +138561,30 @@
                   "n": "1.",
                   "t": "wenn die Verwertung der pfändbaren Gegenstände einen Überschuss über die Kosten der Vollstreckung nicht erwarten lässt",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Die Pfändung unterbleibt",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.383,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "unterbleibt",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.425,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -138397,27 +138595,31 @@
       ],
       "tb": [
         "Die Vollstreckung in das bewegliche Vermögen",
+        "zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
         "wenn die Verwertung der pfändbaren Gegenstände einen Überschuss über die Kosten der Vollstreckung nicht erwarten lässt"
       ],
       "rf": [
         "erfolgt durch Pfändung",
-        "darf nicht weiter ausgedehnt werden, als es zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist"
+        "Die Pfändung darf nicht weiter ausgedehnt werden",
+        "darf nicht weiter ausgedehnt werden, als es zur Deckung der beizutreibenden Geldbeträge und der Kosten der Vollstreckung erforderlich ist",
+        "Die Pfändung unterbleibt",
+        "unterbleibt"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.582,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.125,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 13 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "3bc45e637a894cdf874c02e7ee7feedf6afb6b9d79c62a09c08dda9524f56e0b",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:46.197Z"
+      "aktualisiert": "2026-08-18T08:17:08.108Z"
     },
     "282": {
       "typ": "gemischt",

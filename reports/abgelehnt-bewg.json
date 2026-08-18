@@ -1083,5 +1083,47 @@
     "art": "tb",
     "text": "(Fundstelle: BGBl. I 2019, 1849) Bodenrichtwert oder in EUR/m2 umgerechneter Bodenwert nac",
     "grund": "zu grob (76 Wörter)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "im Zweiten Teil dieses Gesetzes besondere Bewertungsvorschriften enthalten sind",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 235",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Umfang der Gebäude",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 235",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "Verhältnisse im Feststellungszeitpunkt sind maßgebend",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 235",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "stehende Betriebsmittel",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 235",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "umlaufende Betriebsmittel",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 235",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Stand am Ende des Wirtschaftsjahres, das dem Feststellungszeitpunkt vorangegangen ist, ist",
+    "grund": "nicht wörtlich im Normtext"
   }
 ]

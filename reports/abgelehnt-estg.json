@@ -3346,13 +3346,6 @@
     "grund": "zu lang (>600 Zeichen)"
   },
   {
-    "norm": "§ 50f",
-    "pfad": "Abs. 1 Satz 1",
-    "art": "tb",
-    "text": "handelt, wer vorsätzlich oder leichtfertig entgegen § 22a Absatz 1 Satz 1 dort genannte Da",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 50g",
     "pfad": "Abs. 2 Nr. 2",
     "art": "tb",
@@ -3498,5 +3491,12 @@
     "art": "tb",
     "text": "für den Einbau einer Warmwasseranlage zur Versorgung von mehr als einer Zapfstelle und ein",
     "grund": "zu lang (>600 Zeichen)"
+  },
+  {
+    "norm": "§ 4b",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Der Versicherungsanspruch",
+    "grund": "Gegenprobe widerspricht (tb)"
   }
 ]

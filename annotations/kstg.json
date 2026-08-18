@@ -3,12 +3,15 @@
   "titel": "Körperschaftsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:49.101Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:38:33.400Z",
   "quelle": "https://www.gesetze-im-internet.de/kstg_1977/",
   "stand": [
     {
@@ -1279,10 +1282,9 @@
       "aktualisiert": "2026-08-14T10:19:48.960Z"
     },
     "3": {
-      "typ": "gemischt",
+      "typ": "konditional",
       "typen": [
-        "konditional",
-        "aussage"
+        "konditional"
       ],
       "saetze": [
         {
@@ -1293,36 +1295,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen",
+              "art": "rf",
+              "text": "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen sind körperschaftsteuerpflichtig",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 88,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 121,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
-            },
-            {
-              "art": "rf",
-              "text": "sind körperschaftsteuerpflichtig",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 89,
-              "laenge": 32,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld enthält das Normsubjekt, daher ist die Struktur als Konditional mit nachgestellter Bedingung zu erfassen."
             },
             {
               "art": "tb",
@@ -1332,13 +1318,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 123,
               "laenge": 145,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld enthält das Normsubjekt, daher ist die Struktur als Konditional mit nachgestellter Bedingung zu erfassen."
             }
           ]
         },
@@ -1357,13 +1343,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 270,
               "laenge": 133,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm definiert."
             },
             {
               "art": "rf",
@@ -1384,13 +1370,29 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 405,
               "laenge": 87,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm definiert."
+            },
+            {
+              "art": "rf",
+              "text": "der über den Rahmen eines Nebenbetriebs hinausgeht",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 510,
+              "laenge": 50,
+              "konfidenz": 0.383,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm definiert."
             }
           ]
         },
@@ -1398,40 +1400,24 @@
           "pfad": "Abs. 2 Satz 2",
           "von": 562,
           "bis": 639,
-          "typ": "aussage",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "Im Übrigen",
+              "text": "Im Übrigen sind ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
               "von": 562,
-              "laenge": 10,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 76,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
-            },
-            {
-              "art": "tb",
-              "text": "ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 2",
-              "von": 578,
-              "laenge": 60,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen"
+              "grund": "Das Vorfeld enthält ein prädikatives Adverbial, das die Rechtsfolge einleitet."
             }
           ]
         }
@@ -1445,22 +1431,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "wenn ihr Einkommen weder nach diesem Gesetz noch nach dem Einkommensteuergesetz unmittelbar bei einem anderen Steuerpflichtigen zu versteuern ist",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -1473,9 +1451,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind körperschaftsteuerpflichtig",
+                  "t": "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen sind körperschaftsteuerpflichtig",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -1491,22 +1469,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
                   "t": "Hauberg-, Wald-, Forst- und Laubgenossenschaften und ähnliche Realgemeinden, die zu den in § 1 bezeichneten Steuerpflichtigen gehören",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -1521,15 +1491,23 @@
                   "n": "1.",
                   "t": "sind nur insoweit körperschaftsteuerpflichtig, als sie einen Gewerbebetrieb unterhalten … verpachten",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.817,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "2.",
-                  "t": "Im Übrigen",
+                  "t": "der über den Rahmen eines Nebenbetriebs hinausgeht",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.383,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Im Übrigen sind ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -1539,31 +1517,30 @@
         }
       ],
       "tb": [
-        "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen",
         "wenn ihr Einkommen weder nach diesem Gesetz noch nach dem Einkommensteuergesetz unmittelbar bei einem anderen Steuerpflichtigen zu versteuern ist",
-        "Hauberg-, Wald-, Forst- und Laubgenossenschaften und ähnliche Realgemeinden, die zu den in § 1 bezeichneten Steuerpflichtigen gehören",
-        "ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern"
+        "Hauberg-, Wald-, Forst- und Laubgenossenschaften und ähnliche Realgemeinden, die zu den in § 1 bezeichneten Steuerpflichtigen gehören"
       ],
       "rf": [
-        "sind körperschaftsteuerpflichtig",
+        "Personenvereinigungen, nicht rechtsfähige Anstalten, Stiftungen und andere Zweckvermögen sind körperschaftsteuerpflichtig",
         "sind nur insoweit körperschaftsteuerpflichtig, als sie einen Gewerbebetrieb unterhalten",
-        "Im Übrigen"
+        "der über den Rahmen eines Nebenbetriebs hinausgeht",
+        "Im Übrigen sind ihre Einkünfte unmittelbar bei den Beteiligten zu versteuern"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.557,
+      "konfidenz": 0.783,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.667,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "14b619b4e3fa7cfde960174b5afbba14bb602ce706268be8aeb84dd338d99f00",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:48.961Z"
+      "aktualisiert": "2026-08-18T08:36:29.784Z"
     },
     "4": {
       "typ": "gemischt",
@@ -22083,13 +22060,13 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 38,
               "laenge": 41,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22109,13 +22086,13 @@
               "pfad": "Abs. 1 Nr. 2",
               "von": 84,
               "laenge": 40,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22135,13 +22112,13 @@
               "pfad": "Abs. 1 Nr. 3",
               "von": 129,
               "laenge": 40,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22161,13 +22138,13 @@
               "pfad": "Abs. 1 Nr. 4",
               "von": 174,
               "laenge": 40,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 4 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22187,13 +22164,13 @@
               "pfad": "Abs. 1 Nr. 5",
               "von": 219,
               "laenge": 40,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 5 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22213,13 +22190,13 @@
               "pfad": "Abs. 1 Nr. 6",
               "von": 267,
               "laenge": 40,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 6 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt kein prädikatives Adjektiv vor."
             }
           ]
         },
@@ -22238,11 +22215,11 @@
               "pfad": "Abs. 1 Satz 1 (Teil 2)",
               "von": 308,
               "laenge": 31,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
@@ -22263,13 +22240,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 341,
               "laenge": 120,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Das finite Verb steht an erster Stelle, was einen konditionalen Bedingungssatz einleitet."
             },
             {
               "art": "rf",
@@ -22279,13 +22256,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 466,
               "laenge": 61,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Das finite Verb steht an erster Stelle, was einen konditionalen Bedingungssatz einleitet."
             }
           ]
         }
@@ -22306,7 +22283,7 @@
                   "n": "1.",
                   "t": "Veranlagungszeiträume bis 2027 15 Prozent",
                   "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22314,7 +22291,7 @@
                   "n": "2.",
                   "t": "den Veranlagungszeitraum 2028 14 Prozent",
                   "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22322,7 +22299,7 @@
                   "n": "3.",
                   "t": "den Veranlagungszeitraum 2029 13 Prozent",
                   "pfad": "Abs. 1 Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22330,7 +22307,7 @@
                   "n": "4.",
                   "t": "den Veranlagungszeitraum 2030 12 Prozent",
                   "pfad": "Abs. 1 Nr. 4",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22338,7 +22315,7 @@
                   "n": "5.",
                   "t": "den Veranlagungszeitraum 2031 11 Prozent",
                   "pfad": "Abs. 1 Nr. 5",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22346,7 +22323,7 @@
                   "n": "6.",
                   "t": "Veranlagungszeiträume ab 2032 10 Prozent",
                   "pfad": "Abs. 1 Nr. 6",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -22354,7 +22331,7 @@
                   "n": "7.",
                   "t": "des zu versteuernden Einkommens",
                   "pfad": "Abs. 1 Satz 1 (Teil 2)",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -22377,7 +22354,7 @@
                   "n": "1.",
                   "t": "Wird die Einkommensteuer auf Grund der Ermächtigung des § 51 Abs. 3 des Einkommensteuergesetzes herabgesetzt oder erhöht",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -22392,7 +22369,7 @@
                   "n": "1.",
                   "t": "ermäßigt oder erhöht sich die Körperschaftsteuer entsprechend",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.8,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -22416,19 +22393,19 @@
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.917,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.889,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 89 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1899a904c17341006f47192339ff5a1575a0c8b9b104ad10ebb1ac7a59ccdab9",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.052Z"
+      "aktualisiert": "2026-08-18T08:37:41.121Z"
     },
     "24": {
       "typ": "aussage",
@@ -46418,7 +46395,6 @@
       "typ": "gemischt",
       "typen": [
         "konditional",
-        "aussage",
         "verweisung"
       ],
       "saetze": [
@@ -46431,19 +46407,19 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen",
+              "text": "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen, aufgehoben oder geändert wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 133,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 164,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\""
+              "grund": "Das Vorfeld ist ein konditionales Adverbial eingeleitet durch 'Soweit'."
             },
             {
               "art": "rf",
@@ -46453,13 +46429,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 151,
               "laenge": 235,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial eingeleitet durch 'Soweit'."
             }
           ]
         },
@@ -46478,13 +46454,13 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 410,
               "laenge": 104,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Das Vorfeld enthält das Subjekt, die Rechtsfolge beschreibt die Ablaufhemmung."
             }
           ]
         },
@@ -46492,25 +46468,9 @@
           "pfad": "Abs. 1 Satz 3",
           "von": 516,
           "bis": 684,
-          "typ": "aussage",
+          "typ": "verweisung",
           "junktor": null,
           "elemente": [
-            {
-              "art": "tb",
-              "text": "Die Sätze 1 und 2",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 3",
-              "von": 516,
-              "laenge": 17,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
             {
               "art": "rf",
               "text": "gelten auch für verdeckte Gewinnausschüttungen an Empfänger von Bezügen im Sinne des § 20 Abs. 1 Nr. 9 und 10 Buchstabe a des Einkommensteuergesetzes",
@@ -46519,11 +46479,11 @@
               "pfad": "Abs. 1 Satz 3",
               "von": 534,
               "laenge": 149,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
@@ -46538,19 +46498,19 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen",
+              "text": "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen, aufgehoben oder geändert wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 685,
-              "laenge": 153,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 184,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\""
+              "grund": "Das Vorfeld ist ein konditionales Adverbial eingeleitet durch 'Soweit'."
             },
             {
               "art": "rf",
@@ -46560,13 +46520,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 856,
               "laenge": 155,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial eingeleitet durch 'Soweit'."
             }
           ]
         },
@@ -46578,6 +46538,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Absatz 1 Satz 2 gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 2",
+              "von": 1013,
+              "laenge": 33,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das Subjekt 'Absatz 1 Satz 2', die Norm verweist auf die Geltung der Ablaufhemmung."
+            },
+            {
               "art": "tb",
               "text": "Absatz 1 Satz 2",
               "anzeige": null,
@@ -46585,11 +46561,11 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 1013,
               "laenge": 15,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
@@ -46601,11 +46577,11 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 1029,
               "laenge": 17,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
@@ -46621,22 +46597,14 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen",
+                  "t": "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen, aufgehoben oder geändert wird",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Die Sätze 1 und 2",
-                  "pfad": "Abs. 1 Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -46651,7 +46619,7 @@
                   "n": "1.",
                   "t": "geändert wird, kann ein Steuerbescheid oder ein Feststellungsbescheid gegenüber dem Gesellschafter, dem die verdeckte Gewinnausschüttung zuzurechnen ist, oder einer diesem nahe stehenden Person erlassen, aufgehoben oder geändert werden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -46659,7 +46627,7 @@
                   "n": "2.",
                   "t": "endet insoweit nicht vor Ablauf eines Jahres nach Unanfechtbarkeit des Steuerbescheides der Körperschaft",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.633,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -46667,7 +46635,7 @@
                   "n": "3.",
                   "t": "gelten auch für verdeckte Gewinnausschüttungen an Empfänger von Bezügen im Sinne des § 20 Abs. 1 Nr. 9 und 10 Buchstabe a des Einkommensteuergesetzes",
                   "pfad": "Abs. 1 Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -46688,9 +46656,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen",
+                  "t": "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen, aufgehoben oder geändert wird",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -46698,7 +46666,7 @@
                   "n": "2.",
                   "t": "Absatz 1 Satz 2",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -46713,15 +46681,23 @@
                   "n": "1.",
                   "t": "geändert wird, kann ein Steuerbescheid gegenüber der Körperschaft, welcher der Vermögensvorteil zugewendet wurde, aufgehoben, erlassen oder geändert werden",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "Absatz 1 Satz 2 gilt entsprechend",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "gilt entsprechend",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -46731,9 +46707,8 @@
         }
       ],
       "tb": [
-        "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen",
-        "Die Sätze 1 und 2",
-        "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen",
+        "Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen, aufgehoben oder geändert wird",
+        "Soweit gegenüber dem Gesellschafter ein Steuerbescheid oder ein Feststellungsbescheid hinsichtlich der Berücksichtigung einer verdeckten Einlage erlassen, aufgehoben oder geändert wird",
         "Absatz 1 Satz 2"
       ],
       "rf": [
@@ -46741,23 +46716,24 @@
         "endet insoweit nicht vor Ablauf eines Jahres nach Unanfechtbarkeit des Steuerbescheides der Körperschaft",
         "gelten auch für verdeckte Gewinnausschüttungen an Empfänger von Bezügen im Sinne des § 20 Abs. 1 Nr. 9 und 10 Buchstabe a des Einkommensteuergesetzes",
         "geändert wird, kann ein Steuerbescheid gegenüber der Körperschaft, welcher der Vermögensvorteil zugewendet wurde, aufgehoben, erlassen oder geändert werden",
+        "Absatz 1 Satz 2 gilt entsprechend",
         "gilt entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.583,
+      "konfidenz": 0.736,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.556,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 56 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "0f5eb11d4837d540ea3174d10ec0461ca5c083502961fbc362d175d0722444df",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.077Z"
+      "aktualisiert": "2026-08-18T08:38:33.399Z"
     }
   }
 }

@@ -3,12 +3,15 @@
   "titel": "Grunderwerbsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:50.167Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:51:59.338Z",
   "quelle": "https://www.gesetze-im-internet.de/grestg_1983/",
   "stand": [
     {
@@ -2781,7 +2784,6 @@
       "typen": [
         "definition",
         "aussage",
-        "gleichstellung",
         "fiktion"
       ],
       "saetze": [
@@ -2800,13 +2802,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 43,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Definition festlegt."
             },
             {
               "art": "rf",
@@ -2816,13 +2818,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 44,
               "laenge": 49,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Definition festlegt."
             }
           ]
         },
@@ -2835,35 +2837,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "Jedoch",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 2",
-              "von": 108,
-              "laenge": 6,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
-            },
-            {
-              "art": "tb",
               "text": "nicht zu den Grundstücken gerechnet",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
               "von": 122,
               "laenge": 35,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "ausn",
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen"
+              "grund": "Das Vorfeld enthält das Prädikat, während das Nachfeld die Tatbestandsmerkmale der Ausnahme auflistet."
             }
           ]
         },
@@ -2883,11 +2869,11 @@
               "pfad": "Abs. 1 Nr. 1",
               "von": 162,
               "laenge": 83,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
@@ -2909,11 +2895,11 @@
               "pfad": "Abs. 1 Nr. 2",
               "von": 250,
               "laenge": 58,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
@@ -2926,60 +2912,15 @@
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "das Recht des Grundstückseigentümers auf den Erbbauzins",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Nr. 3",
-              "von": 313,
-              "laenge": 55,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 3 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Abs. 2 Satz 1",
           "von": 370,
           "bis": 400,
-          "typ": "gleichstellung",
+          "typ": "fiktion",
           "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "Den Grundstücken stehen",
-              "anzeige": "Den Grundstücken stehen … gleich",
-              "teile": [
-                {
-                  "text": "Den Grundstücken stehen",
-                  "von": 370,
-                  "laenge": 23
-                },
-                {
-                  "text": "gleich",
-                  "von": 394,
-                  "laenge": 6
-                }
-              ],
-              "pfad": "Abs. 2 Satz 1",
-              "von": 370,
-              "laenge": 23,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Gleichstellungsanordnung (mehrteilig)"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Abs. 2 Nr. 1",
@@ -2997,11 +2938,11 @@
               "pfad": "Abs. 2 Nr. 1",
               "von": 404,
               "laenge": 12,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
             }
@@ -3023,11 +2964,11 @@
               "pfad": "Abs. 2 Nr. 2",
               "von": 421,
               "laenge": 25,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
             }
@@ -3048,29 +2989,13 @@
               "pfad": "Abs. 2 Nr. 3",
               "von": 451,
               "laenge": 8,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetzes und des § 1010 des Bürgerlichen Gesetzbuchs",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Nr. 3",
-              "von": 460,
-              "laenge": 127,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
         },
@@ -3089,13 +3014,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 589,
               "laenge": 101,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Die Verberststellung leitet einen konditionalen Bedingungssatz ein."
             },
             {
               "art": "rf",
@@ -3105,13 +3030,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 695,
               "laenge": 53,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Die Verberststellung leitet einen konditionalen Bedingungssatz ein."
             }
           ]
         },
@@ -3130,13 +3055,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 750,
               "laenge": 77,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Die Verberststellung leitet einen konditionalen Bedingungssatz ein."
             },
             {
               "art": "rf",
@@ -3146,13 +3071,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 832,
               "laenge": 47,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Die Verberststellung leitet einen konditionalen Bedingungssatz ein."
             }
           ]
         }
@@ -3173,39 +3098,23 @@
                   "n": "1.",
                   "t": "Unter Grundstücken im Sinne dieses Gesetzes",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.633,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "nicht zu den Grundstücken gerechnet",
-                  "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "t": "Maschinen und sonstige Vorrichtungen aller Art, die zu einer Betriebsanlage gehören",
+                  "pfad": "Abs. 1 Nr. 1",
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "Maschinen und sonstige Vorrichtungen aller Art, die zu einer Betriebsanlage gehören",
-                  "pfad": "Abs. 1 Nr. 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "4.",
                   "t": "Mineralgewinnungsrechte und sonstige Gewerbeberechtigungen",
                   "pfad": "Abs. 1 Nr. 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "5.",
-                  "t": "das Recht des Grundstückseigentümers auf den Erbbauzins",
-                  "pfad": "Abs. 1 Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3220,15 +3129,15 @@
                   "n": "1.",
                   "t": "sind Grundstücke im Sinne des bürgerlichen Rechts",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.8,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "Jedoch",
+                  "t": "nicht zu den Grundstücken gerechnet",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.55,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3251,7 +3160,7 @@
                   "n": "1.",
                   "t": "Erbbaurechte",
                   "pfad": "Abs. 2 Nr. 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -3259,7 +3168,7 @@
                   "n": "2.",
                   "t": "Gebäude auf fremdem Boden",
                   "pfad": "Abs. 2 Nr. 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -3267,30 +3176,7 @@
                   "n": "3.",
                   "t": "dinglich",
                   "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "Den Grundstücken stehen … gleich",
-                  "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": true
-                },
-                {
-                  "n": "2.",
-                  "t": "gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetzes und des § 1010 des Bürgerlichen Gesetzbuchs",
-                  "pfad": "Abs. 2 Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3313,7 +3199,7 @@
                   "n": "1.",
                   "t": "Bezieht sich ein Rechtsvorgang auf mehrere Grundstücke, die zu einer wirtschaftlichen Einheit gehören",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -3321,7 +3207,7 @@
                   "n": "2.",
                   "t": "Bezieht sich ein Rechtsvorgang auf einen oder mehrere Teile eines Grundstücks",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3336,7 +3222,7 @@
                   "n": "1.",
                   "t": "werden diese Grundstücke als ein Grundstück behandelt",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -3344,7 +3230,7 @@
                   "n": "2.",
                   "t": "werden diese Teile als ein Grundstück behandelt",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3355,10 +3241,8 @@
       ],
       "tb": [
         "Unter Grundstücken im Sinne dieses Gesetzes",
-        "nicht zu den Grundstücken gerechnet",
         "Maschinen und sonstige Vorrichtungen aller Art, die zu einer Betriebsanlage gehören",
         "Mineralgewinnungsrechte und sonstige Gewerbeberechtigungen",
-        "das Recht des Grundstückseigentümers auf den Erbbauzins",
         "Erbbaurechte",
         "Gebäude auf fremdem Boden",
         "dinglich",
@@ -3367,27 +3251,25 @@
       ],
       "rf": [
         "sind Grundstücke im Sinne des bürgerlichen Rechts",
-        "Jedoch",
-        "Den Grundstücken stehen",
-        "gesicherte Sondernutzungsrechte nach den Vorschriften des Wohnungseigentumsgesetzes und des § 1010 des Bürgerlichen Gesetzbuchs",
+        "nicht zu den Grundstücken gerechnet",
         "werden diese Grundstücke als ein Grundstück behandelt",
         "werden diese Teile als ein Grundstück behandelt"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.572,
+      "konfidenz": 0.667,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.5,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "83634c3b68cedd75692613ea55e6638963d9f8e82b3c71c4e3b1fe2b86dac218",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.122Z"
+      "aktualisiert": "2026-08-18T08:50:29.098Z"
     },
     "3": {
       "typ": "gemischt",
@@ -8750,11 +8632,11 @@
               "pfad": "Nr. 1",
               "von": 24,
               "laenge": 88,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
             }
@@ -8775,11 +8657,11 @@
               "pfad": "Nr. 2",
               "von": 149,
               "laenge": 48,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionalsatz mit „wenn\""
             }
@@ -8802,7 +8684,7 @@
                   "n": "1.",
                   "t": "wenn die Wirksamkeit eines Erwerbsvorgangs von dem Eintritt einer Bedingung abhängig ist",
                   "pfad": "Nr. 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -8810,7 +8692,7 @@
                   "n": "2.",
                   "t": "wenn ein Erwerbsvorgang einer Genehmigung bedarf",
                   "pfad": "Nr. 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -8826,19 +8708,19 @@
       "rf": [],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
-      "markierbar": true,
-      "konfidenz": 0.6,
+      "status": "uneinheitlich",
+      "markierbar": false,
+      "konfidenz": 0.45,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 0 %. Die Läufe widersprechen einander; die Markierung ist als unsicher gekennzeichnet. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "24c525156c1ca1fe3d83a8793737da83d566827bf06247e0058a266207c1da0b",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.141Z"
+      "aktualisiert": "2026-08-18T08:51:00.652Z"
     },
     "15": {
       "typ": "aussage",
@@ -13195,6 +13077,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Der Erwerber eines Grundstücks darf in das Grundbuch erst dann eingetragen werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 0,
+              "laenge": 81,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält das Subjekt, der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
+            },
+            {
               "art": "tb",
               "text": "Der Erwerber eines Grundstücks",
               "anzeige": null,
@@ -13202,56 +13100,45 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 30,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld"
             },
             {
-              "art": "rf",
-              "text": "darf in das Grundbuch erst dann eingetragen werden",
-              "anzeige": "darf in das Grundbuch erst dann eingetragen werden … daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
-              "teile": [
-                {
-                  "text": "darf in das Grundbuch erst dann eingetragen werden",
-                  "von": 31,
-                  "laenge": 50
-                },
-                {
-                  "text": "daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
-                  "von": 298,
-                  "laenge": 60
-                }
-              ],
-              "pfad": "Abs. 1 Satz 1",
-              "von": 31,
-              "laenge": 50,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
-            },
-            {
               "art": "tb",
-              "text": "wenn eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird (§ 17 Abs. 1 Satz 1) oder Bescheinigungen der für die Besteuerung zuständigen Finanzämter (§ 17 Abs. 1 Satz 2) vorgelegt werden",
+              "text": "eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 83,
-              "laenge": 213,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 88,
+              "laenge": 80,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld enthält das Subjekt, der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
+            },
+            {
+              "art": "rf",
+              "text": "daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 298,
+              "laenge": 60,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält das Subjekt, der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
             }
           ]
         },
@@ -13263,6 +13150,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Die obersten Finanzbehörden der Länder können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 360,
+              "laenge": 121,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält das Normsubjekt, daher liegt keine konditionale Struktur vor."
+            },
+            {
               "art": "tb",
               "text": "Die obersten Finanzbehörden der Länder",
               "anzeige": null,
@@ -13270,11 +13173,11 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 360,
               "laenge": 38,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             },
@@ -13286,11 +13189,11 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 399,
               "laenge": 82,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
@@ -13305,35 +13208,51 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "hat die Bescheinigung zu erteilen",
+              "text": "Das Finanzamt hat die Bescheinigung zu erteilen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 497,
-              "laenge": 33,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "von": 483,
+              "laenge": 47,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "grund": "Der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
             },
             {
               "art": "tb",
-              "text": "wenn die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist oder wenn Steuerfreiheit gegeben ist",
+              "text": "die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 532,
-              "laenge": 116,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 537,
+              "laenge": 74,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
+            },
+            {
+              "art": "tb",
+              "text": "Steuerfreiheit gegeben ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 622,
+              "laenge": 26,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
             }
           ]
         },
@@ -13346,19 +13265,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "darf die Bescheinigung auch in anderen Fällen erteilen",
+              "text": "Es darf die Bescheinigung auch in anderen Fällen erteilen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 653,
-              "laenge": 54,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "von": 650,
+              "laenge": 57,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "grund": "Der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
             },
             {
               "art": "tb",
@@ -13368,13 +13287,13 @@
               "pfad": "Abs. 2 Satz 2",
               "von": 709,
               "laenge": 65,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Der Konditionalsatz mit 'wenn' leitet den Tatbestand ein."
             }
           ]
         },
@@ -13385,6 +13304,22 @@
           "typ": "aussage",
           "junktor": null,
           "elemente": [
+            {
+              "art": "rf",
+              "text": "Das Finanzamt hat die Bescheinigung schriftlich zu erteilen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 3",
+              "von": 776,
+              "laenge": 59,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält das Normsubjekt, es handelt sich um eine bloße Anordnung."
+            },
             {
               "art": "rf",
               "text": "hat die Bescheinigung schriftlich",
@@ -13404,11 +13339,11 @@
               "pfad": "Abs. 2 Satz 3",
               "von": 790,
               "laenge": 33,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
             }
@@ -13422,36 +13357,20 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Eine elektronische Übermittlung der Bescheinigung",
+              "art": "rf",
+              "text": "Eine elektronische Übermittlung der Bescheinigung ist ausgeschlossen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 4",
               "von": 837,
-              "laenge": 49,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 68,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "ausgeschlossen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2 Satz 4",
-              "von": 891,
-              "laenge": 14,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld enthält das Normsubjekt, es handelt sich um eine bloße Anordnung."
             }
           ]
         }
@@ -13472,15 +13391,15 @@
                   "n": "1.",
                   "t": "Der Erwerber eines Grundstücks",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "wenn eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird (§ 17 Abs. 1 Satz 1) oder Bescheinigungen der für die Besteuerung zuständigen Finanzämter (§ 17 Abs. 1 Satz 2) vorgelegt werden",
+                  "t": "eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -13488,7 +13407,7 @@
                   "n": "3.",
                   "t": "Die obersten Finanzbehörden der Länder",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13501,17 +13420,33 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "darf in das Grundbuch erst dann eingetragen werden … daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
+                  "t": "Der Erwerber eines Grundstücks darf in das Grundbuch erst dann eingetragen werden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.55,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Die obersten Finanzbehörden der Länder können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13532,25 +13467,25 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wenn die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist oder wenn Steuerfreiheit gegeben ist",
+                  "t": "die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "wenn nach seinem Ermessen die Steuerforderung nicht gefährdet ist",
-                  "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.6,
+                  "t": "Steuerfreiheit gegeben ist",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "Eine elektronische Übermittlung der Bescheinigung",
-                  "pfad": "Abs. 2 Satz 4",
-                  "konfidenz": 0.6,
+                  "t": "wenn nach seinem Ermessen die Steuerforderung nicht gefährdet ist",
+                  "pfad": "Abs. 2 Satz 2",
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13563,33 +13498,41 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "hat die Bescheinigung zu erteilen",
+                  "t": "Das Finanzamt hat die Bescheinigung zu erteilen",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "darf die Bescheinigung auch in anderen Fällen erteilen",
+                  "t": "Es darf die Bescheinigung auch in anderen Fällen erteilen",
                   "pfad": "Abs. 2 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "Das Finanzamt hat die Bescheinigung schriftlich zu erteilen",
+                  "pfad": "Abs. 2 Satz 3",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "hat die Bescheinigung schriftlich … zu erteilen",
                   "pfad": "Abs. 2 Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
-                  "n": "4.",
-                  "t": "ausgeschlossen",
+                  "n": "5.",
+                  "t": "Eine elektronische Übermittlung der Bescheinigung ist ausgeschlossen",
                   "pfad": "Abs. 2 Satz 4",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -13600,35 +13543,38 @@
       ],
       "tb": [
         "Der Erwerber eines Grundstücks",
-        "wenn eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird (§ 17 Abs. 1 Satz 1) oder Bescheinigungen der für die Besteuerung zuständigen Finanzämter (§ 17 Abs. 1 Satz 2) vorgelegt werden",
+        "eine Bescheinigung des für die Besteuerung zuständigen Finanzamts vorgelegt wird",
         "Die obersten Finanzbehörden der Länder",
-        "wenn die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist oder wenn Steuerfreiheit gegeben ist",
-        "wenn nach seinem Ermessen die Steuerforderung nicht gefährdet ist",
-        "Eine elektronische Übermittlung der Bescheinigung"
+        "die Grunderwerbsteuer entrichtet, sichergestellt oder gestundet worden ist",
+        "Steuerfreiheit gegeben ist",
+        "wenn nach seinem Ermessen die Steuerforderung nicht gefährdet ist"
       ],
       "rf": [
-        "darf in das Grundbuch erst dann eingetragen werden",
+        "Der Erwerber eines Grundstücks darf in das Grundbuch erst dann eingetragen werden",
+        "daß der Eintragung steuerliche Bedenken nicht entgegenstehen",
+        "Die obersten Finanzbehörden der Länder können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
         "können im Einvernehmen mit den Landesjustizverwaltungen Ausnahmen hiervon vorsehen",
-        "hat die Bescheinigung zu erteilen",
-        "darf die Bescheinigung auch in anderen Fällen erteilen",
+        "Das Finanzamt hat die Bescheinigung zu erteilen",
+        "Es darf die Bescheinigung auch in anderen Fällen erteilen",
+        "Das Finanzamt hat die Bescheinigung schriftlich zu erteilen",
         "hat die Bescheinigung schriftlich",
-        "ausgeschlossen"
+        "Eine elektronische Übermittlung der Bescheinigung ist ausgeschlossen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.577,
+      "konfidenz": 0.707,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.733,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 73 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "64b5839d9cd43878dda1933c5e60c6302ac30f840e5cfe5095a6b34d084b055a",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.154Z"
+      "aktualisiert": "2026-08-18T08:51:59.338Z"
     },
     "23": {
       "typ": "gemischt",

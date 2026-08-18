@@ -1,5 +1,285 @@
 [
   {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Festsetzung des Solidaritätszuschlags",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Vorschriften des Einkommensteuergesetzes sind entsprechend anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Vorschriften des Körperschaftsteuergesetzes sind entsprechend anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "ausn",
+    "text": "§ 36a des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Vorschriften des Einkommensteuergesetzes und des Körperschaftsteuergesetzes sind entsprech",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Vorschriften des Einkommensteuergesetzes und des Körperschaftsteuergesetzes entsprechend a",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "ausn",
+    "text": "mit Ausnahme des § 36a des Einkommensteuergesetzes und des Körperschaftsteuergesetzes ents",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Einkommensteuer wird im Wege des Steuerabzugs erhoben",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Körperschaftsteuer wird im Wege des Steuerabzugs erhoben",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "rf",
+    "text": "personenbezogene Daten dürfen für die Erhebung des Solidaritätszuschlags im Wege des Steue",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Einkommensteuer im Wege des Steuerabzugs erhoben",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "rf",
+    "text": "personenbezogene Daten dürfen auch für die Erhebung des Solidaritätszuschlags im Wege des ",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Wird die Einkommen- oder Körperschaftsteuer im Wege des Steuerabzugs erhoben",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkommensteuer für Einkünfte durch Steuerabzug abgegolten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Körperschaftsteuer für Einkünfte durch Steuerabzug abgegolten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte werden bei der Veranlagung nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte werden beim Lohnsteuer-Jahresausgleich nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte bei der Veranlagung nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte beim Lohnsteuer-Jahresausgleich nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkommensteuer für Einkünfte durch den Steuerabzug abgegolten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Körperschaftsteuer für Einkünfte durch den Steuerabzug abgegolten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte bei der Veranlagung zur Einkommensteuer nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Einkünfte bei der Veranlagung zur Körperschaftsteuer nicht erfasst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "tb",
+    "text": "festgesetzte Vorauszahlungen auf die Einkommensteuer",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "tb",
+    "text": "festgesetzte Vorauszahlungen auf die Körperschaftsteuer",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "Vorauszahlungen auf den Solidaritätszuschlag sind gleichzeitig zu entrichten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "ausn",
+    "text": "§ 37 Abs. 5 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "rf",
+    "text": "sind gleichzeitig mit den festgesetzten Vorauszahlungen auf die Einkommensteuer oder Körpe",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 1",
+    "art": "ausn",
+    "text": "§ 37 Abs. 5 des Einkommensteuergesetzes ist nicht anzuwenden",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "rf",
+    "text": "Vorauszahlungen sind ohne besondere Aufforderung nach Maßgabe der geltenden Vorschriften z",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 2",
+    "art": "rf",
+    "text": "Vorauszahlungen sind ohne besondere Aufforderung nach Maßgabe der für den Solidaritätszusc",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 3",
+    "art": "rf",
+    "text": "gilt sinngemäß",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 4 Satz 3",
+    "art": "ausn",
+    "text": "§ 240 Abs. 1 Satz 3 der Abgabenordnung ist insoweit nicht anzuwenden",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "Bemessungsgrundlage kann nicht angegriffen werden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "Höhe des zu versteuernden Einkommens kann nicht angegriffen werden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "weder Bemessungsgrundlage noch Höhe des zu versteuernden Einkommens können angegriffen wer",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "rf",
+    "text": "weder die Bemessungsgrundlage noch die Höhe des zu versteuernden Einkommens kann angegriff",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 1",
+    "art": "tb",
+    "text": "Mit einem Rechtsbehelf",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "tb",
+    "text": "Bemessungsgrundlage wird geändert",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 5 Satz 2",
+    "art": "rf",
+    "text": "Solidaritätszuschlag ändert sich entsprechend",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
     "norm": "§ 3",
     "pfad": "Abs. 1 Nr. 3",
     "art": "rf",
@@ -8,10 +288,66 @@
   },
   {
     "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "Bemessungsgrundlage für den Solidaritätszuschlag ist die Einkommensteuer",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
     "pfad": "Abs. 2a Satz 1",
     "art": "tb",
     "text": "wenn der nach § 39b Absatz 2 Satz 5 des Einkommensteuergesetzes zu versteuernde Jahresbetr",
     "grund": "zu grob (81 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer na",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer na",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "die Bemessungsgrundlage nach Absatz 1 Nummer 1 und 2, vermindert um die Einkommensteuer na",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "ist von einkommensteuerpflichtigen Personen nur zu erheben",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Nr. 2",
+    "art": "tb",
+    "text": "in anderen Fällen 20 350 Euro",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 3 Satz 1 (Teil 2)",
+    "art": "rf",
+    "text": "übersteigt",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 4a Nr. 2",
+    "art": "tb",
+    "text": "in der Steuerklasse III den Betrag nach Absatz 3 Satz 1 Nummer 1",
+    "grund": "Gegenprobe widerspricht (rf)"
   },
   {
     "norm": "§ 3",
@@ -23,8 +359,43 @@
   {
     "norm": "§ 4",
     "pfad": "Satz 4",
+    "art": "rf",
+    "text": "beträgt 5,5 Prozent",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Satz 4",
+    "art": "rf",
+    "text": "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommenst",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Satz 4",
     "art": "tb",
     "text": "Der Solidaritätszuschlag auf die Einkommensteuer nach § 32d Absatz 3 und 4 des Einkommenst",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Satz 4",
+    "art": "rf",
+    "text": "5 Prozent",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "auf Grund eines Abkommens zur Vermeidung der Doppelbesteuerung im Geltungsbereich dieses G",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "diese Ermäßigung ist zuerst auf den Solidaritätszuschlag zu beziehen",
+    "grund": "nicht wörtlich im Normtext"
   }
 ]

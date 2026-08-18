@@ -14,13 +14,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 2a",
-    "pfad": "Satz 2",
-    "art": "rf",
-    "text": "gelten insoweit anteilig als Betriebsstätten der",
-    "grund": "Fragment: endet auf Artikel oder Präposition"
-  },
-  {
     "norm": "§ 3",
     "pfad": "Nr. 2",
     "art": "tb",
@@ -390,5 +383,82 @@
     "art": "tb",
     "text": "Voraussetzung für die Umsetzung von Satz 1",
     "grund": "Tarifnorm ohne konditionales Vorfeld — kein Tatbestandsmerkmal"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "nicht die Tätigkeit der Arbeitsgemeinschaften als Gewerbebetrieb",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Als Gewerbebetrieb",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "Die Betriebsstätten der Arbeitsgemeinschaften gelten anteilig als Betriebsstätten der Bete",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "gelten insoweit anteilig als Betriebsstätten der Beteiligten",
+    "grund": "Fragment: endet auf Artikel oder Präposition"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "insoweit",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "Die Betriebsstätten der Arbeitsgemeinschaften",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Erklärung zur Festsetzung des Steuermessbetrags nach amtlich vorgeschriebenem Datensatz üb",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "Erklärung zur Festsetzung des Steuermessbetrags elektronisch zu übermitteln",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "in den Fällen des § 28 Zerlegungserklärung elektronisch zu übermitteln",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "Der Steuerschuldner (§ 5)",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 14a",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "in diesem Fall",
+    "grund": "Gegenprobe: kein normatives Merkmal"
   }
 ]

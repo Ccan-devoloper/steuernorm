@@ -3,12 +3,15 @@
   "titel": "Umsatzsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:49.570Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:40:36.726Z",
   "quelle": "https://www.gesetze-im-internet.de/ustg_1980/",
   "stand": [
     {
@@ -59432,46 +59435,35 @@
           "elemente": [
             {
               "art": "tb",
-              "text": "Wer im Inland ein neues Fahrzeug",
+              "text": "Wer im Inland ein neues Fahrzeug liefert",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
               "von": 0,
-              "laenge": 32,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 40,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, daher liegt kein prädikatives Adjektiv oder Konditionaladverbial vor."
             },
             {
-              "art": "rf",
-              "text": "liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt, wird",
-              "anzeige": "liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt, wird … für diese Lieferung wie ein Unternehmer behandelt",
-              "teile": [
-                {
-                  "text": "liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt, wird",
-                  "von": 33,
-                  "laenge": 78
-                },
-                {
-                  "text": "für diese Lieferung wie ein Unternehmer behandelt",
-                  "von": 161,
-                  "laenge": 49
-                }
-              ],
+              "art": "tb",
+              "text": "das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Satz 1",
-              "von": 33,
-              "laenge": 78,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 42,
+              "laenge": 63,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, daher liegt kein prädikatives Adjektiv oder Konditionaladverbial vor."
             },
             {
               "art": "tb",
@@ -59481,13 +59473,13 @@
               "pfad": "Satz 1",
               "von": 113,
               "laenge": 46,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld ist ein bloßes Satzsubjekt, daher liegt kein prädikatives Adjektiv oder Konditionaladverbial vor."
             }
           ]
         },
@@ -59497,7 +59489,56 @@
           "bis": 360,
           "typ": "konditional",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "Dasselbe gilt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 212,
+              "laenge": 13,
+              "konfidenz": 0.288,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält die Rechtsfolge in Form eines Pronomens, das auf den vorangegangenen Satz verweist."
+            },
+            {
+              "art": "tb",
+              "text": "der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 232,
+              "laenge": 67,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz, der den Tatbestand einleitet."
+            },
+            {
+              "art": "tb",
+              "text": "die Lieferung nicht im Rahmen des Unternehmens ausführt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 304,
+              "laenge": 55,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein uneingeleiteter Bedingungssatz, der den Tatbestand einleitet."
+            }
+          ]
         }
       ],
       "schema": [
@@ -59514,17 +59555,41 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Wer im Inland ein neues Fahrzeug",
+                  "t": "Wer im Inland ein neues Fahrzeug liefert",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "wenn er nicht Unternehmer im Sinne des § 2 ist",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "die Lieferung nicht im Rahmen des Unternehmens ausführt",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -59537,11 +59602,11 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt, wird … für diese Lieferung wie ein Unternehmer behandelt",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "t": "Dasselbe gilt",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.288,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 }
               ]
             }
@@ -59549,27 +59614,30 @@
         }
       ],
       "tb": [
-        "Wer im Inland ein neues Fahrzeug",
-        "wenn er nicht Unternehmer im Sinne des § 2 ist"
+        "Wer im Inland ein neues Fahrzeug liefert",
+        "das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt",
+        "wenn er nicht Unternehmer im Sinne des § 2 ist",
+        "der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist",
+        "die Lieferung nicht im Rahmen des Unternehmens ausführt"
       ],
       "rf": [
-        "liefert, das bei der Lieferung in das übrige Gemeinschaftsgebiet gelangt, wird"
+        "Dasselbe gilt"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.756,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.833,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 83 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "7b3148d1939908008c0ed26f3322246e8f9b69a048503c10066715e93cc9da01",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.172Z"
+      "aktualisiert": "2026-08-18T08:39:05.767Z"
     },
     "2b": {
       "typ": "gemischt",
@@ -84688,7 +84756,8 @@
       "typ": "gemischt",
       "typen": [
         "aussage",
-        "verweisung"
+        "verweisung",
+        "konditional"
       ],
       "saetze": [
         {
@@ -84706,11 +84775,11 @@
               "pfad": "Satz 1",
               "von": 19,
               "laenge": 226,
-              "konfidenz": 0.48,
+              "konfidenz": 0.36,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
@@ -84732,6 +84801,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "§ 97 Absatz 2 der Abgabenordnung gilt entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 3",
+              "von": 444,
+              "laenge": 50,
+              "konfidenz": 0.567,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das Normsubjekt, die Rechtsfolge ist die Anordnung der entsprechenden Geltung."
+            },
+            {
               "art": "tb",
               "text": "§ 97 Absatz 2 der Abgabenordnung",
               "anzeige": null,
@@ -84739,13 +84824,13 @@
               "pfad": "Satz 3",
               "von": 444,
               "laenge": 32,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld ist das Subjekt, die Rechtsfolge ist das Prädikat."
             },
             {
               "art": "rf",
@@ -84755,13 +84840,13 @@
               "pfad": "Satz 3",
               "von": 477,
               "laenge": 17,
-              "konfidenz": 0.45,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.475,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das Vorfeld ist das Subjekt, die Rechtsfolge ist das Prädikat."
             }
           ]
         },
@@ -84769,7 +84854,7 @@
           "pfad": "Satz 4",
           "von": 496,
           "bis": 597,
-          "typ": "aussage",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -84791,13 +84876,29 @@
               "pfad": "Satz 4",
               "von": 512,
               "laenge": 73,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "auf Verlangen der Finanzbehörde",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 4",
+              "von": 516,
+              "laenge": 31,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, welches den Tatbestand einleitet."
             }
           ]
         }
@@ -84811,14 +84912,22 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "§ 97 Absatz 2 der Abgabenordnung",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.633,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "auf Verlangen der Finanzbehörde",
+                  "pfad": "Satz 4",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -84833,23 +84942,31 @@
                   "n": "1.",
                   "t": "sind zur Erfüllung der Auskunftsverpflichtung nach der Verordnung (EU) Nr. 904/2010 des Rates vom 7. Oktober 2010 über die Zusammenarbeit der Verwaltungsbehörden und die Betrugsbekämpfung auf dem Gebiet der Mehrwertsteuer (ABl",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.36,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "gilt entsprechend",
+                  "t": "§ 97 Absatz 2 der Abgabenordnung gilt entsprechend",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.567,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
+                  "t": "gilt entsprechend",
+                  "pfad": "Satz 3",
+                  "konfidenz": 0.475,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
                   "t": "hat auf Verlangen der Finanzbehörde die in Satz 1 bezeichneten Unterlagen … vorzulegen",
                   "pfad": "Satz 4",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -84859,28 +84976,30 @@
         }
       ],
       "tb": [
-        "§ 97 Absatz 2 der Abgabenordnung"
+        "§ 97 Absatz 2 der Abgabenordnung",
+        "auf Verlangen der Finanzbehörde"
       ],
       "rf": [
         "sind zur Erfüllung der Auskunftsverpflichtung nach der Verordnung (EU) Nr. 904/2010 des Rates vom 7. Oktober 2010 über die Zusammenarbeit der Verwaltungsbehörden und die Betrugsbekämpfung auf dem Gebiet der Mehrwertsteuer (ABl",
+        "§ 97 Absatz 2 der Abgabenordnung gilt entsprechend",
         "gilt entsprechend",
         "hat auf Verlangen der Finanzbehörde die in Satz 1 bezeichneten Unterlagen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.532,
+      "konfidenz": 0.539,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.167,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 17 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "acf2cd2e1fd60095bda14faf9e70b331c4b29eebd412ae119ee556b9ffe3877a",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.393Z"
+      "aktualisiert": "2026-08-18T08:39:51.198Z"
     },
     "18e": {
       "typ": "aussage",
@@ -95285,19 +95404,19 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "hat folgende Angaben zu enthalten",
+              "text": "Die Rechnung hat folgende Angaben zu enthalten",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 13,
-              "laenge": 33,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "von": 0,
+              "laenge": 46,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Das Vorfeld ist das Satzsubjekt, welches den Normgegenstand benennt."
             }
           ]
         },
@@ -95308,24 +95427,7 @@
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "den Hinweis auf die Fiskalvertretung",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Nr. 1",
-              "von": 51,
-              "laenge": 36,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
-            }
-          ]
+          "elemente": []
         },
         {
           "pfad": "Nr. 2",
@@ -95343,13 +95445,13 @@
               "pfad": "Nr. 2",
               "von": 92,
               "laenge": 48,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+              "grund": "Es handelt sich um eine Aufzählung von Tatbestandsmerkmalen, die in der Rechnung enthalten sein müssen."
             }
           ]
         },
@@ -95362,35 +95464,35 @@
           "elemente": [
             {
               "art": "tb",
+              "text": "die dem Fiskalvertreter nach § 22d Abs. 1 erteilte Umsatzsteuer-Identifikationsnummer",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Nr. 3",
+              "von": 145,
+              "laenge": 85,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Es handelt sich um eine Aufzählung von Tatbestandsmerkmalen, die in der Rechnung enthalten sein müssen."
+            },
+            {
+              "art": "tb",
               "text": "die dem Fiskalvertreter nach § 22d Abs. 1",
               "anzeige": null,
               "teile": null,
               "pfad": "Nr. 3",
               "von": 145,
               "laenge": 41,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "erteilte Umsatzsteuer-Identifikationsnummer",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Nr. 3",
-              "von": 187,
-              "laenge": 43,
               "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
             }
           ]
         }
@@ -95409,17 +95511,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "den Hinweis auf die Fiskalvertretung",
-                  "pfad": "Nr. 1",
-                  "konfidenz": 0.6,
+                  "t": "den Namen und die Anschrift des Fiskalvertreters",
+                  "pfad": "Nr. 2",
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "den Namen und die Anschrift des Fiskalvertreters",
-                  "pfad": "Nr. 2",
-                  "konfidenz": 0.6,
+                  "t": "die dem Fiskalvertreter nach § 22d Abs. 1 erteilte Umsatzsteuer-Identifikationsnummer",
+                  "pfad": "Nr. 3",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -95427,7 +95529,7 @@
                   "n": "3.",
                   "t": "die dem Fiskalvertreter nach § 22d Abs. 1",
                   "pfad": "Nr. 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -95440,17 +95542,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "hat folgende Angaben zu enthalten",
+                  "t": "Die Rechnung hat folgende Angaben zu enthalten",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "erteilte Umsatzsteuer-Identifikationsnummer",
-                  "pfad": "Nr. 3",
-                  "konfidenz": 0.45,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -95460,29 +95554,28 @@
         }
       ],
       "tb": [
-        "den Hinweis auf die Fiskalvertretung",
         "den Namen und die Anschrift des Fiskalvertreters",
+        "die dem Fiskalvertreter nach § 22d Abs. 1 erteilte Umsatzsteuer-Identifikationsnummer",
         "die dem Fiskalvertreter nach § 22d Abs. 1"
       ],
       "rf": [
-        "hat folgende Angaben zu enthalten",
-        "erteilte Umsatzsteuer-Identifikationsnummer"
+        "Die Rechnung hat folgende Angaben zu enthalten"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.8,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.75,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 75 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "77dca298245552b8b61bfd519956dc4abe62b5aee748b31b5716caeb95adcb5c",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.465Z"
+      "aktualisiert": "2026-08-18T08:40:36.726Z"
     },
     "22d": {
       "typ": "aussage",

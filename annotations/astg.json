@@ -3,12 +3,15 @@
   "titel": "Außensteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:50.310Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:55:26.069Z",
   "quelle": "https://www.gesetze-im-internet.de/astg/",
   "stand": [
     {
@@ -5573,10 +5576,9 @@
       "aktualisiert": "2026-08-14T10:19:50.273Z"
     },
     "4": {
-      "typ": "gemischt",
+      "typ": "konditional",
       "typen": [
-        "konditional",
-        "tarif"
+        "konditional"
       ],
       "saetze": [
         {
@@ -5594,29 +5596,45 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 107,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Das Vorfeld ist durch die Verberststellung als Bedingungssatz gekennzeichnet."
             },
             {
               "art": "rf",
-              "text": "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein, deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+              "text": "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 112,
-              "laenge": 311,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 172,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Das Vorfeld ist durch die Verberststellung als Bedingungssatz gekennzeichnet."
+            },
+            {
+              "art": "rf",
+              "text": "deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 286,
+              "laenge": 137,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist durch die Verberststellung als Bedingungssatz gekennzeichnet."
             }
           ]
         },
@@ -5624,9 +5642,26 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 425,
           "bis": 848,
-          "typ": "tarif",
+          "typ": "konditional",
           "junktor": null,
-          "elemente": []
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "Absatz 1 findet keine Anwendung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 425,
+              "laenge": 31,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist durch das konditionale Adverbial 'wenn' als Tatbestand gekennzeichnet."
+            }
+          ]
         }
       ],
       "schema": [
@@ -5645,7 +5680,7 @@
                   "n": "1.",
                   "t": "War bei einem Erblasser oder Schenker zur Zeit der Entstehung der Steuerschuld § 2 Abs. 1 Satz 1 anzuwenden",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5658,9 +5693,39 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein, deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+                  "t": "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.55,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 2",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Absatz 1 findet keine Anwendung",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.55,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5673,23 +5738,25 @@
         "War bei einem Erblasser oder Schenker zur Zeit der Entstehung der Steuerschuld § 2 Abs. 1 Satz 1 anzuwenden"
       ],
       "rf": [
-        "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein, deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären"
+        "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Steuerpflicht über den dort bezeichneten Umfang hinaus für alle Teile des Erwerbs ein",
+        "deren Erträge bei unbeschränkter Einkommensteuerpflicht nicht ausländische Einkünfte im Sinne des § 34d des Einkommensteuergesetzes wären",
+        "Absatz 1 findet keine Anwendung"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.54,
+      "konfidenz": 0.712,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 1,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b16419a2b43ad7ad2cfb634788cb7c556e6964e2b64e3efa2f6096c4f39b1fe",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.273Z"
+      "aktualisiert": "2026-08-18T08:54:15.913Z"
     },
     "5": {
       "typ": "gemischt",
@@ -10943,22 +11010,6 @@
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Für die Anwendung des § 7 Absatz 1",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 1",
-              "von": 0,
-              "laenge": 34,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
-            },
-            {
               "art": "rf",
               "text": "sind Einkünfte eines maßgebenden Wirtschaftsjahres im Sinne des § 7 Absatz 2, für die eine ausländische Gesellschaft Zwischengesellschaft ist, außer Ansatz zu lassen",
               "anzeige": null,
@@ -10966,29 +11017,45 @@
               "pfad": "Satz 1",
               "von": 35,
               "laenge": 165,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.617,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm festlegt."
             },
             {
               "art": "tb",
-              "text": "wenn die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen und die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
+              "text": "die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 202,
-              "laenge": 231,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 207,
+              "laenge": 103,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, weshalb der gesamte Satz als Tatbestand für die Rechtsfolge des Außeransatzlassens zu werten ist."
+            },
+            {
+              "art": "tb",
+              "text": "die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 315,
+              "laenge": 118,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, weshalb der gesamte Satz als Tatbestand für die Rechtsfolge des Außeransatzlassens zu werten ist."
             }
           ]
         }
@@ -11007,17 +11074,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Für die Anwendung des § 7 Absatz 1",
+                  "t": "die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "wenn die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen und die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
+                  "t": "die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -11032,7 +11099,7 @@
                   "n": "1.",
                   "t": "sind Einkünfte eines maßgebenden Wirtschaftsjahres im Sinne des § 7 Absatz 2, für die eine ausländische Gesellschaft Zwischengesellschaft ist, außer Ansatz zu lassen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.617,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -11042,27 +11109,27 @@
         }
       ],
       "tb": [
-        "Für die Anwendung des § 7 Absatz 1",
-        "wenn die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen und die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen"
+        "die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Gesellschaft betragen",
+        "die bei einer Zwischengesellschaft hiernach außer Ansatz zu lassenden Beträge insgesamt 100 000 Euro nicht übersteigen"
       ],
       "rf": [
         "sind Einkünfte eines maßgebenden Wirtschaftsjahres im Sinne des § 7 Absatz 2, für die eine ausländische Gesellschaft Zwischengesellschaft ist, außer Ansatz zu lassen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.56,
+      "konfidenz": 0.706,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.667,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6535cbaa94c6725ed62a6a804260fecdb5162e563f12bfd63239b9b44526a96f",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.291Z"
+      "aktualisiert": "2026-08-18T08:54:42.169Z"
     },
     "10": {
       "typ": "gemischt",
@@ -15729,29 +15796,29 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 522,
-              "konfidenz": 0.48,
+              "konfidenz": 0.36,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
             },
             {
-              "art": "tb",
-              "text": "wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
+              "art": "rf",
+              "text": "ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet, wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 524,
-              "laenge": 181,
-              "konfidenz": 0.54,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 425,
+              "laenge": 280,
+              "konfidenz": 0.385,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, das den Anwendungsfall durch das Verb 'Beantragt' einleitet."
             }
           ]
         },
@@ -15781,13 +15848,29 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 728,
               "laenge": 214,
-              "konfidenz": 0.48,
+              "konfidenz": 0.36,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig)"
+            },
+            {
+              "art": "tb",
+              "text": "auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 851,
+              "laenge": 58,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das Subjekt, die Bedingung für die Rechtsfolge ist das Verlangen des Finanzamts."
             }
           ]
         }
@@ -15800,22 +15883,6 @@
           "schritte": [
             {
               "n": "I.",
-              "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.54,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -15823,7 +15890,15 @@
                   "n": "1.",
                   "t": "Beantragt ein Steuerpflichtiger unter Berufung auf Geschäftsbeziehungen mit einer ausländischen Gesellschaft oder einer im Ausland ansässigen Person oder Personengesellschaft, die mit ihren Einkünften, die in Zusammenhang mit den Geschäftsbeziehungen zu dem Steuerpflichtigen stehen, nicht oder nur unwesentlich besteuert wird, die Absetzung von Schulden oder anderen Lasten oder von Betriebsausgaben oder Werbungskosten, so ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.36,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet, wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.385,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -15838,6 +15913,22 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -15845,7 +15936,7 @@
                   "n": "1.",
                   "t": "hat über die Richtigkeit und Vollständigkeit seiner Angaben und über die Behauptung, daß ihm Tatsachen nicht bekannt sind, auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung eine Versicherung an Eides Statt … abzugeben",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.36,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -15855,27 +15946,28 @@
         }
       ],
       "tb": [
-        "wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben"
+        "auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung"
       ],
       "rf": [
         "Beantragt ein Steuerpflichtiger unter Berufung auf Geschäftsbeziehungen mit einer ausländischen Gesellschaft oder einer im Ausland ansässigen Person oder Personengesellschaft, die mit ihren Einkünften, die in Zusammenhang mit den Geschäftsbeziehungen zu dem Steuerpflichtigen stehen, nicht oder nur unwesentlich besteuert wird, die Absetzung von Schulden oder anderen Lasten oder von Betriebsausgaben oder Werbungskosten, so ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet",
+        "ist im Sinne des § 160 der Abgabenordnung der Gläubiger oder Empfänger erst dann genau bezeichnet, wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwischen ihm und der Gesellschaft, Person oder Personengesellschaft bestehen und bestanden haben",
         "hat über die Richtigkeit und Vollständigkeit seiner Angaben und über die Behauptung, daß ihm Tatsachen nicht bekannt sind, auf Verlangen des Finanzamts gemäß § 95 der Abgabenordnung eine Versicherung an Eides Statt"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
-      "markierbar": true,
-      "konfidenz": 0.5,
+      "status": "uneinheitlich",
+      "markierbar": false,
+      "konfidenz": 0.464,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.5,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 50 %. Die Läufe widersprechen einander; die Markierung ist als unsicher gekennzeichnet. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "968a035dc79c683387b7aed61db6c6e039d65931d68aceb8137ab9d2823b49dc",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.304Z"
+      "aktualisiert": "2026-08-18T08:55:26.069Z"
     },
     "17": {
       "typ": "gemischt",

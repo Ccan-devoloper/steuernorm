@@ -28,13 +28,6 @@
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
   },
   {
-    "norm": "§ 2a",
-    "pfad": "Satz 2",
-    "art": "tb",
-    "text": "wenn der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist und die Lieferung",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 3",
     "pfad": "Abs. 5 Satz 2",
     "art": "tb",
@@ -658,13 +651,6 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
-    "norm": "§ 18d",
-    "pfad": "Satz 2",
-    "art": "tb",
-    "text": "L 268 vom 12.10.2010, S. 1) berechtigt, von Unternehmern die Vorlage der jeweils erforderl",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 18g",
     "pfad": "Satz 1",
     "art": "tb",
@@ -1146,5 +1132,54 @@
     "art": "rf",
     "text": "ergibt sich aus folgendem Berechnungsschema: Vorsteuer im maßgeblichen Zeitraum aller Unte",
     "grund": "zu grob (82 Wörter)"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "wird für diese Lieferung wie ein Unternehmer behandelt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "wird für diese Lieferung wie ein Unternehmer behandelt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 2a",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "wenn der Lieferer eines neuen Fahrzeugs Unternehmer im Sinne des § 2 ist und die Lieferung",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 18d",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "L 268 vom 12.10.2010, S. 1) berechtigt, von Unternehmern die Vorlage der jeweils erforderl",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 18d",
+    "pfad": "Satz 4",
+    "art": "rf",
+    "text": "der Unternehmer hat die in Satz 1 bezeichneten Unterlagen vorzulegen",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 22c",
+    "pfad": "Nr. 1",
+    "art": "tb",
+    "text": "den Hinweis auf die Fiskalvertretung",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 22c",
+    "pfad": "Nr. 3",
+    "art": "rf",
+    "text": "erteilte Umsatzsteuer-Identifikationsnummer",
+    "grund": "Gegenprobe widerspricht (tb)"
   }
 ]

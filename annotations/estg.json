@@ -3,12 +3,15 @@
   "titel": "Einkommensteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:48.830Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:35:50.812Z",
   "quelle": "https://www.gesetze-im-internet.de/estg/",
   "stand": [
     {
@@ -130959,8 +130962,9 @@
       "aktualisiert": "2026-08-14T10:19:48.705Z"
     },
     "95": {
-      "typ": "konditional",
+      "typ": "gemischt",
       "typen": [
+        "verweisung",
         "konditional"
       ],
       "saetze": [
@@ -130968,9 +130972,25 @@
           "pfad": "Satz 1",
           "von": 0,
           "bis": 569,
-          "typ": "konditional",
+          "typ": "verweisung",
           "junktor": null,
           "elemente": [
+            {
+              "art": "rf",
+              "text": "Die §§ 93 und 94 gelten entsprechend",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 0,
+              "laenge": 36,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher ist es eine Verweisung mit konditionalem Nachfeld."
+            },
             {
               "art": "rf",
               "text": "gelten entsprechend",
@@ -130990,11 +131010,11 @@
               "pfad": "Satz 1",
               "von": 17,
               "laenge": 19,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat (mehrteilig) (um Ausnahme gekürzt)"
             },
@@ -131006,29 +131026,29 @@
               "pfad": "Satz 1",
               "von": 38,
               "laenge": 271,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher ist es eine Verweisung mit konditionalem Nachfeld."
             },
             {
-              "art": "ausn",
-              "text": "ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
+              "art": "tb",
+              "text": "der Zulageberechtigte ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 343,
-              "laenge": 225,
+              "von": 321,
+              "laenge": 247,
               "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Vorbehalt mit „ungeachtet\""
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher ist es eine Verweisung mit konditionalem Nachfeld."
             }
           ]
         },
@@ -131040,6 +131060,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Satz 1 gilt nicht",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 570,
+              "laenge": 17,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ist eine Ausnahme von der Geltung des ersten Satzes."
+            },
+            {
               "art": "ausn",
               "text": "Satz 1 gilt nicht, sofern sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet und der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist",
               "anzeige": null,
@@ -131047,13 +131083,45 @@
               "pfad": "Satz 2",
               "von": 570,
               "laenge": 268,
-              "konfidenz": 0.48,
+              "konfidenz": 0.36,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "ausn",
               "beleg": null,
               "grund": "Satzausnahme: „Satz 1 gilt nicht\""
+            },
+            {
+              "art": "tb",
+              "text": "sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 596,
+              "laenge": 179,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ist eine Ausnahme von der Geltung des ersten Satzes."
+            },
+            {
+              "art": "tb",
+              "text": "der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 780,
+              "laenge": 58,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, die Rechtsfolge ist eine Ausnahme von der Geltung des ersten Satzes."
             }
           ]
         }
@@ -131061,20 +131129,44 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "verweisung",
+          "rolle": "Verweisung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
                   "t": "wenn sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten ab Beginn der Auszahlungsphase außerhalb der Mitgliedstaaten der Europäischen Union und der Staaten befindet, auf die das Abkommen über den Europäischen Wirtschaftsraum (EWR-Abkommen) anwendbar ist",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.8,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "der Zulageberechtigte ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -131087,17 +131179,9 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
                   "t": "Satz 1 gilt nicht, sofern sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet und der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.36,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -131110,11 +131194,27 @@
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Die §§ 93 und 94 gelten entsprechend",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "gelten entsprechend … oder wenn der Zulageberechtigte",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": true
+                },
+                {
+                  "n": "3.",
+                  "t": "Satz 1 gilt nicht",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -131122,29 +131222,33 @@
         }
       ],
       "tb": [
-        "wenn sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten ab Beginn der Auszahlungsphase außerhalb der Mitgliedstaaten der Europäischen Union und der Staaten befindet, auf die das Abkommen über den Europäischen Wirtschaftsraum (EWR-Abkommen) anwendbar ist"
+        "wenn sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten ab Beginn der Auszahlungsphase außerhalb der Mitgliedstaaten der Europäischen Union und der Staaten befindet, auf die das Abkommen über den Europäischen Wirtschaftsraum (EWR-Abkommen) anwendbar ist",
+        "der Zulageberechtigte ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
+        "sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet",
+        "der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist"
       ],
       "rf": [
-        "gelten entsprechend"
+        "Die §§ 93 und 94 gelten entsprechend",
+        "gelten entsprechend",
+        "Satz 1 gilt nicht"
       ],
       "ausnahmen": [
-        "ungeachtet eines Wohnsitzes oder gewöhnlichen Aufenthaltes in einem dieser Staaten nach einem Abkommen zur Vermeidung der Doppelbesteuerung mit einem dritten Staat als außerhalb des Hoheitsgebiets dieser Staaten ansässig gilt",
         "Satz 1 gilt nicht, sofern sich der Wohnsitz oder gewöhnliche Aufenthalt des Zulageberechtigten bereits seit dem 22. Juni 2016 ununterbrochen im Vereinigten Königreich Großbritannien und Nordirland befindet und der Vertrag vor dem 23. Juni 2016 abgeschlossen worden ist"
       ],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.502,
+      "konfidenz": 0.637,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.75,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 75 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "6015e104ed50297bdd633a6741ac1783fbaa057308d7082fd528d7c3f13c4a6a",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:48.706Z"
+      "aktualisiert": "2026-08-18T08:35:50.811Z"
     },
     "96": {
       "typ": "gemischt",
@@ -147415,13 +147519,13 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 131,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld"
+              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand nennt, weshalb die Voraussetzungen im konditionalen Nebensatz und den Attributen liegen."
             },
             {
               "art": "rf",
@@ -147442,29 +147546,29 @@
               "pfad": "Satz 1",
               "von": 133,
               "laenge": 64,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand nennt, weshalb die Voraussetzungen im konditionalen Nebensatz und den Attributen liegen."
             },
             {
               "art": "tb",
-              "text": "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist",
+              "text": "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist, oder ihre Hinterbliebenen bezugsberechtigt sind",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
               "von": 199,
-              "laenge": 153,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 202,
+              "konfidenz": 0.8,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "ausn",
               "beleg": null,
-              "grund": "Konditionalsatz mit „soweit\""
+              "grund": "Das Vorfeld enthält das Satzsubjekt, welches den Normgegenstand nennt, weshalb die Voraussetzungen im konditionalen Nebensatz und den Attributen liegen."
             }
           ]
         },
@@ -147476,6 +147580,22 @@
           "junktor": null,
           "elemente": [
             {
+              "art": "rf",
+              "text": "Das gilt auch",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 403,
+              "laenge": 13,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld wird durch das Demonstrativpronomen gebildet, welches auf die Rechtsfolge des vorherigen Satzes verweist."
+            },
+            {
               "art": "tb",
               "text": "wenn der Steuerpflichtige die Ansprüche aus dem Versicherungsvertrag abgetreten oder beliehen hat",
               "anzeige": null,
@@ -147483,29 +147603,29 @@
               "pfad": "Satz 2",
               "von": 418,
               "laenge": 97,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionalsatz mit „wenn\""
+              "grund": "Das Vorfeld wird durch das Demonstrativpronomen gebildet, welches auf die Rechtsfolge des vorherigen Satzes verweist."
             },
             {
-              "art": "rf",
+              "art": "tb",
               "text": "sofern er sich der bezugsberechtigten Person gegenüber schriftlich verpflichtet, sie bei Eintritt des Versicherungsfalls so zu stellen, als ob die Abtretung oder Beleihung nicht erfolgt wäre",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 2",
               "von": 517,
               "laenge": 190,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (Vorfeld ist Normgegenstand)"
+              "grund": "Das Vorfeld wird durch das Demonstrativpronomen gebildet, welches auf die Rechtsfolge des vorherigen Satzes verweist."
             }
           ]
         }
@@ -147526,15 +147646,15 @@
                   "n": "1.",
                   "t": "Der Versicherungsanspruch aus einer Direktversicherung, die von einem Steuerpflichtigen aus betrieblichem Anlass abgeschlossen wird",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist",
+                  "t": "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist, oder ihre Hinterbliebenen bezugsberechtigt sind",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.8,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -147542,7 +147662,15 @@
                   "n": "3.",
                   "t": "wenn der Steuerpflichtige die Ansprüche aus dem Versicherungsvertrag abgetreten oder beliehen hat",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "sofern er sich der bezugsberechtigten Person gegenüber schriftlich verpflichtet, sie bei Eintritt des Versicherungsfalls so zu stellen, als ob die Abtretung oder Beleihung nicht erfolgt wäre",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -147557,15 +147685,15 @@
                   "n": "1.",
                   "t": "ist dem Betriebsvermögen des Steuerpflichtigen nicht zuzurechnen … oder ihre Hinterbliebenen bezugsberechtigt sind",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": true
                 },
                 {
                   "n": "2.",
-                  "t": "sofern er sich der bezugsberechtigten Person gegenüber schriftlich verpflichtet, sie bei Eintritt des Versicherungsfalls so zu stellen, als ob die Abtretung oder Beleihung nicht erfolgt wäre",
+                  "t": "Das gilt auch",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -147576,28 +147704,29 @@
       ],
       "tb": [
         "Der Versicherungsanspruch aus einer Direktversicherung, die von einem Steuerpflichtigen aus betrieblichem Anlass abgeschlossen wird",
-        "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist",
-        "wenn der Steuerpflichtige die Ansprüche aus dem Versicherungsvertrag abgetreten oder beliehen hat"
+        "soweit am Schluss des Wirtschaftsjahres hinsichtlich der Leistungen des Versicherers die Person, auf deren Leben die Lebensversicherung abgeschlossen ist, oder ihre Hinterbliebenen bezugsberechtigt sind",
+        "wenn der Steuerpflichtige die Ansprüche aus dem Versicherungsvertrag abgetreten oder beliehen hat",
+        "sofern er sich der bezugsberechtigten Person gegenüber schriftlich verpflichtet, sie bei Eintritt des Versicherungsfalls so zu stellen, als ob die Abtretung oder Beleihung nicht erfolgt wäre"
       ],
       "rf": [
         "ist dem Betriebsvermögen des Steuerpflichtigen nicht zuzurechnen",
-        "sofern er sich der bezugsberechtigten Person gegenüber schriftlich verpflichtet, sie bei Eintritt des Versicherungsfalls so zu stellen, als ob die Abtretung oder Beleihung nicht erfolgt wäre"
+        "Das gilt auch"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.883,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 1,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 100 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "57fa6ad6de781d8eb05b2e5b92ee43025dd439ef974246a42cd6b4618ddf8cd0",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:47.568Z"
+      "aktualisiert": "2026-08-18T08:34:39.542Z"
     },
     "4c": {
       "typ": "konditional",
@@ -273048,9 +273177,11 @@
       "aktualisiert": "2026-08-14T10:19:48.390Z"
     },
     "50f": {
-      "typ": "aussage",
+      "typ": "gemischt",
       "typen": [
-        "aussage"
+        "aussage",
+        "tarif",
+        "definition"
       ],
       "saetze": [
         {
@@ -273062,19 +273193,67 @@
           "elemente": [
             {
               "art": "rf",
+              "text": "Ordnungswidrig handelt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 0,
+              "laenge": 22,
+              "konfidenz": 0.563,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das prädikative Adjektiv 'Ordnungswidrig' steht im Vorfeld und bildet die Rechtsfolge."
+            },
+            {
+              "art": "rf",
               "text": "Ordnungswidrig",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 14,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+            },
+            {
+              "art": "tb",
+              "text": "vorsätzlich oder leichtfertig entgegen § 22a Absatz 1 Satz 1 dort genannte Daten nicht, nicht vollständig oder nicht rechtzeitig übermittelt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 28,
+              "laenge": 140,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das prädikative Adjektiv 'Ordnungswidrig' steht im Vorfeld und bildet die Rechtsfolge."
+            },
+            {
+              "art": "tb",
+              "text": "eine dort genannte Mitteilung nicht, nicht vollständig oder nicht rechtzeitig macht",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 174,
+              "laenge": 83,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das prädikative Adjektiv 'Ordnungswidrig' steht im Vorfeld und bildet die Rechtsfolge."
             }
           ]
         },
@@ -273082,7 +273261,7 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 259,
           "bis": 349,
-          "typ": "aussage",
+          "typ": "tarif",
           "junktor": null,
           "elemente": [
             {
@@ -273093,13 +273272,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 282,
               "laenge": 66,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Das Vorfeld ist das Normsubjekt, daher liegt kein Tatbestand vor, sondern eine tarifähnliche Festsetzung des Strafrahmens."
             }
           ]
         },
@@ -273107,7 +273286,7 @@
           "pfad": "Abs. 3 Satz 1",
           "von": 350,
           "bis": 478,
-          "typ": "aussage",
+          "typ": "definition",
           "junktor": null,
           "elemente": [
             {
@@ -273118,13 +273297,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 350,
               "laenge": 93,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das prädikative Substantiv 'Verwaltungsbehörde' steht im Vorfeld und definiert den Begriff."
             },
             {
               "art": "rf",
@@ -273134,13 +273313,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 444,
               "laenge": 33,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das prädikative Substantiv 'Verwaltungsbehörde' steht im Vorfeld und definiert den Begriff."
             }
           ]
         }
@@ -273153,14 +273332,46 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vorsätzlich oder leichtfertig entgegen § 22a Absatz 1 Satz 1 dort genannte Daten nicht, nicht vollständig oder nicht rechtzeitig übermittelt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "eine dort genannte Mitteilung nicht, nicht vollständig oder nicht rechtzeitig macht",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Ordnungswidrig handelt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.563,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Ordnungswidrig",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -273170,8 +273381,8 @@
         },
         {
           "absatz": "Abs. 2",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "tarif",
+          "rolle": "Bemessung und Satz",
           "schritte": [
             {
               "n": "I.",
@@ -273182,7 +273393,7 @@
                   "n": "1.",
                   "t": "kann mit einer Geldbuße bis zu fünfzigtausend Euro geahndet werden",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -273192,8 +273403,8 @@
         },
         {
           "absatz": "Abs. 3",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "definition",
+          "rolle": "Begriffsbestimmung",
           "schritte": [
             {
               "n": "I.",
@@ -273205,7 +273416,7 @@
                   "n": "1.",
                   "t": "Verwaltungsbehörde im Sinne des § 36 Absatz 1 Nummer 1 des Gesetzes über Ordnungswidrigkeiten",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -273220,7 +273431,7 @@
                   "n": "1.",
                   "t": "ist die zentrale Stelle nach § 81",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -273230,28 +273441,31 @@
         }
       ],
       "tb": [
+        "vorsätzlich oder leichtfertig entgegen § 22a Absatz 1 Satz 1 dort genannte Daten nicht, nicht vollständig oder nicht rechtzeitig übermittelt",
+        "eine dort genannte Mitteilung nicht, nicht vollständig oder nicht rechtzeitig macht",
         "Verwaltungsbehörde im Sinne des § 36 Absatz 1 Nummer 1 des Gesetzes über Ordnungswidrigkeiten"
       ],
       "rf": [
+        "Ordnungswidrig handelt",
         "Ordnungswidrig",
         "kann mit einer Geldbuße bis zu fünfzigtausend Euro geahndet werden",
         "ist die zentrale Stelle nach § 81"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.563,
+      "konfidenz": 0.772,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.857,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 86 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22229596915fdd07b1bd8ca7a30bd68d3bee22ed1a782cef3129584660aa9625",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:48.391Z"
+      "aktualisiert": "2026-08-18T08:35:19.046Z"
     },
     "50g": {
       "typ": "gemischt",

@@ -91,13 +91,6 @@
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
   },
   {
-    "norm": "§ 4",
-    "pfad": "Abs. 2 Satz 1",
-    "art": "ausn",
-    "text": "Absatz 1 findet keine Anwendung, wenn nachgewiesen wird, daß für die Teile des Erwerbs, di",
-    "grund": "zu grob (62 Wörter)"
-  },
-  {
     "norm": "§ 5",
     "pfad": "Abs. 1 Satz 1",
     "art": "tb",
@@ -362,5 +355,68 @@
     "art": "tb",
     "text": "Die Vorschriften der Abgabenordnung",
     "grund": "Fragment: beginnt mit Konjunktion oder finitem Verb"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "tritt bei Erbschaftsteuerpflicht nach § 2 Abs. 1 Nr. 3 des Erbschaftsteuergesetzes die Ste",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "nachgewiesen wird, daß für die Teile des Erwerbs, die nach dieser Vorschrift über § 2 Abs.",
+    "grund": "zu grob (56 Wörter)"
+  },
+  {
+    "norm": "§ 4",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "ausn",
+    "text": "Absatz 1 findet keine Anwendung, wenn nachgewiesen wird, daß für die Teile des Erwerbs, di",
+    "grund": "zu grob (62 Wörter)"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "sind außer Ansatz zu lassen",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "Für die Anwendung des § 7 Absatz 1",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 9",
+    "pfad": "Satz 1",
+    "art": "tb",
+    "text": "wenn die Einkünfte nicht mehr als ein Drittel der gesamten Einkünfte der ausländischen Ges",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "Beantragt ein Steuerpflichtiger unter Berufung auf Geschäftsbeziehungen mit einer ausländi",
+    "grund": "zu grob (51 Wörter)"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "wenn der Steuerpflichtige alle Beziehungen offenlegt, die unmittelbar oder mittelbar zwisc",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 16",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "hat der Steuerpflichtige über die Richtigkeit und Vollständigkeit seiner Angaben und über ",
+    "grund": "nicht wörtlich im Normtext"
   }
 ]

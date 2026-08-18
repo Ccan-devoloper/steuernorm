@@ -469,13 +469,6 @@
     "grund": "Gegenprobe widerspricht (tb)"
   },
   {
-    "norm": "§ 5",
-    "pfad": "Satz 1",
-    "art": "rf",
-    "text": "hat sie die gesetzlichen Grenzen des Ermessens einzuhalten",
-    "grund": "nicht wörtlich im Normtext"
-  },
-  {
     "norm": "§ 6",
     "pfad": "Abs. 1a Satz 1",
     "art": "rf",
@@ -1097,5 +1090,12 @@
     "art": "tb",
     "text": "im Fall der Nummer 8 die häusliche Gemeinschaft nicht mehr besteht, sofern die Personen we",
     "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Satz 1",
+    "art": "rf",
+    "text": "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung auszuüben und die gesetzliche",
+    "grund": "Gegenprobe widerspricht (tb)"
   }
 ]

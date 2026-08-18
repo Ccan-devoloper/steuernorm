@@ -1,90 +1,90 @@
 
 ══ AO ══════════════════════════════════════════════════════
   § 5    Soll  2 · erkannt  2 · übrig  1 · fehlt  0   Typ ok  (konditional / konditional)
-  § 129  Soll  6 · erkannt  5 · übrig  0 · fehlt  1   Typ ok  (konditional / gemischt)
-  § 281  Soll  5 · erkannt  3 · übrig  1 · fehlt  2   Typ ok  (konditional / gemischt)
+  § 129  Soll  6 · erkannt  6 · übrig  3 · fehlt  0   Typ ok  (konditional / konditional)
+  § 281  Soll  5 · erkannt  5 · übrig  3 · fehlt  0   Typ ok  (konditional / gemischt)
 
 ══ AStG ════════════════════════════════════════════════════
-  § 4    Soll  5 · erkannt  2 · übrig  0 · fehlt  3   Typ ok  (konditional / gemischt)
-  § 9    Soll  3 · erkannt  3 · übrig  0 · fehlt  0   Typ ok  (konditional / konditional)
-  § 16   Soll  5 · erkannt  3 · übrig  0 · fehlt  2   Typ ok  (konditional / konditional)
+  § 4    Soll  5 · erkannt  2 · übrig  2 · fehlt  3   Typ ok  (konditional / konditional)
+  § 9    Soll  3 · erkannt  2 · übrig  1 · fehlt  1   Typ ok  (konditional / konditional)
+  § 16   Soll  5 · erkannt  3 · übrig  1 · fehlt  2   Typ ok  (konditional / konditional)
 
 ══ BewG ════════════════════════════════════════════════════
-  § 1    Soll  4 · erkannt  2 · übrig  4 · fehlt  2   Typ ok  (gemischt / konditional)
-  § 172  Soll  3 · erkannt  1 · übrig  1 · fehlt  2   Typ ok  (konditional / konditional)
-  § 235  Soll  4 · erkannt  3 · übrig  0 · fehlt  1   Typ ok  (konditional / konditional)
+  § 1    Soll  4 · erkannt  2 · übrig  5 · fehlt  2   Typ ok  (gemischt / konditional)
+  § 172  Soll  3 · erkannt  2 · übrig  2 · fehlt  1   Typ ok  (konditional / konditional)
+  § 235  Soll  4 · erkannt  4 · übrig  4 · fehlt  0   Typ ok  (konditional / konditional)
 
 ══ ErbStG ══════════════════════════════════════════════════
-  § 1    Soll  7 · erkannt  6 · übrig  1 · fehlt  1   Typ ok  (konditional / gemischt)
-  § 18   Soll  4 · erkannt  4 · übrig  0 · fehlt  0   Typ ok  (konditional / gemischt)
+  § 1    Soll  7 · erkannt  6 · übrig  3 · fehlt  1   Typ ok  (konditional / gemischt)
+  § 18   Soll  4 · erkannt  4 · übrig  1 · fehlt  0   Typ ok  (konditional / gemischt)
   § 24   Soll  4 · erkannt  4 · übrig  0 · fehlt  0   Typ ok  (konditional / gemischt)
 
 ══ EStG ════════════════════════════════════════════════════
-  § 95   Soll  4 · erkannt  3 · übrig  1 · fehlt  1   Typ ok  (gemischt / konditional)
-  § 4b   Soll  6 · erkannt  4 · übrig  1 · fehlt  2   Typ ok  (konditional / konditional)
-  § 50f  Soll  4 · erkannt  3 · übrig  1 · fehlt  1   Typ ‼   (gemischt / aussage)
+  § 95   Soll  4 · erkannt  4 · übrig  4 · fehlt  0   Typ ok  (gemischt / gemischt)
+  § 4b   Soll  6 · erkannt  6 · übrig  0 · fehlt  0   Typ ok  (konditional / konditional)
+  § 50f  Soll  4 · erkannt  4 · übrig  3 · fehlt  0   Typ ok  (gemischt / gemischt)
 
 ══ FGO ═════════════════════════════════════════════════════
-  § 2    Soll  1 · erkannt  1 · übrig  1 · fehlt  0   Typ ok  (aussage / aussage)
-  § 65   Soll 11 · erkannt 10 · übrig  2 · fehlt  1   Typ ok  (gemischt / gemischt)
-  § 108  Soll 10 · erkannt 10 · übrig  1 · fehlt  0   Typ ok  (konditional / gemischt)
+  § 2    Soll  1 · erkannt  1 · übrig  2 · fehlt  0   Typ ‼   (aussage / definition)
+  § 65   Soll 11 · erkannt  8 · übrig  1 · fehlt  3   Typ ok  (gemischt / gemischt)
+  § 108  Soll 10 · erkannt 10 · übrig  4 · fehlt  0   Typ ok  (konditional / gemischt)
 
 ══ GewStG ══════════════════════════════════════════════════
-  § 21   Soll  3 · erkannt  2 · übrig  0 · fehlt  1   Typ ok  (konditional / konditional)
-  § 2a   Soll  3 · erkannt  2 · übrig  1 · fehlt  1   Typ ok  (fiktion / gemischt)
-  § 14a  Soll  6 · erkannt  5 · übrig  1 · fehlt  1   Typ ok  (konditional / gemischt)
+  § 21   Soll  3 · erkannt  2 · übrig  1 · fehlt  1   Typ ok  (konditional / konditional)
+  § 2a   Soll  3 · erkannt  2 · übrig  0 · fehlt  1   Typ ok  (fiktion / fiktion)
+  § 14a  Soll  6 · erkannt  5 · übrig  2 · fehlt  1   Typ ok  (konditional / gemischt)
 
 ══ GrEStG ══════════════════════════════════════════════════
-  § 2    Soll 13 · erkannt  9 · übrig  7 · fehlt  4   Typ ok  (gemischt / gemischt)
+  § 2    Soll 13 · erkannt  8 · übrig  4 · fehlt  5   Typ ok  (gemischt / gemischt)
   § 14   Soll  5 · erkannt  2 · übrig  0 · fehlt  3   Typ ok  (konditional / gemischt)
-  § 22   Soll  9 · erkannt  8 · übrig  4 · fehlt  1   Typ ok  (konditional / gemischt)
+  § 22   Soll  9 · erkannt  8 · übrig  7 · fehlt  1   Typ ok  (konditional / gemischt)
 
 ══ GrStG ═══════════════════════════════════════════════════
-  § 1    Soll  5 · erkannt  5 · übrig  0 · fehlt  0   Typ ok  (konditional / konditional)
+  § 1    Soll  5 · erkannt  5 · übrig  1 · fehlt  0   Typ ok  (konditional / konditional)
   § 13   Soll  3 · erkannt  2 · übrig  0 · fehlt  1   Typ ok  (konditional / gemischt)
-  § 27   Soll  9 · erkannt  8 · übrig  1 · fehlt  1   Typ ok  (konditional / gemischt)
+  § 27   Soll  9 · erkannt  8 · übrig  3 · fehlt  1   Typ ok  (konditional / gemischt)
 
 ══ InvStG ══════════════════════════════════════════════════
-  § 5    Soll  7 · erkannt  3 · übrig  5 · fehlt  4   Typ ok  (gemischt / gemischt)
-  § 25   Soll  2 · erkannt  1 · übrig  1 · fehlt  1   Typ ‼   (gemischt / aussage)
-  § 34   Soll  9 · erkannt  6 · übrig  6 · fehlt  3   Typ ok  (gemischt / gemischt)
+  § 5    Soll  7 · erkannt  4 · übrig  2 · fehlt  3   Typ ok  (gemischt / gemischt)
+  § 25   Soll  2 · erkannt  1 · übrig  2 · fehlt  1   Typ ok  (gemischt / konditional)
+  § 34   Soll  9 · erkannt  3 · übrig 12 · fehlt  6   Typ ok  (gemischt / gemischt)
 
 ══ KStG ════════════════════════════════════════════════════
-  § 3    Soll  8 · erkannt  5 · übrig  2 · fehlt  3   Typ ok  (konditional / gemischt)
+  § 3    Soll  8 · erkannt  5 · übrig  1 · fehlt  3   Typ ok  (konditional / konditional)
   § 23   Soll 10 · erkannt  2 · übrig  7 · fehlt  8   Typ ok  (tarif / gemischt)
   § 32a  Soll  7 · erkannt  7 · übrig  2 · fehlt  0   Typ ok  (konditional / gemischt)
 
 ══ SolzG ═══════════════════════════════════════════════════
-  § 1    Soll 21 · erkannt 19 · übrig  1 · fehlt  2   Typ ok  (gemischt / gemischt)
+  § 1    Soll 21 · erkannt 16 · übrig  4 · fehlt  5   Typ ok  (gemischt / gemischt)
   § 2    Soll  4 · erkannt  4 · übrig  0 · fehlt  0   Typ ok  (konditional / gemischt)
-  § 3    Soll 61 · erkannt 47 · übrig  5 · fehlt 14   Typ ok  (gemischt / gemischt)
-  § 4    Soll  6 · erkannt  5 · übrig  0 · fehlt  1   Typ ok  (tarif / gemischt)
+  § 3    Soll 61 · erkannt 47 · übrig  7 · fehlt 14   Typ ok  (gemischt / gemischt)
+  § 4    Soll  6 · erkannt  4 · übrig  0 · fehlt  2   Typ ok  (tarif / gemischt)
   § 5    Soll  2 · erkannt  2 · übrig  0 · fehlt  0   Typ ok  (konditional / konditional)
   § 6    Soll  0 · erkannt  0 · übrig  0 · fehlt  0   Typ ok  (anwendung / anwendung)
 
 ══ UmwStG ══════════════════════════════════════════════════
-  § 7    Soll  3 · erkannt  2 · übrig  2 · fehlt  1   Typ ok  (konditional / gemischt)
-  § 9    Soll  5 · erkannt  5 · übrig  1 · fehlt  0   Typ ok  (gemischt / gemischt)
-  § 19   Soll  4 · erkannt  4 · übrig  0 · fehlt  0   Typ ok  (konditional / konditional)
+  § 7    Soll  3 · erkannt  1 · übrig  4 · fehlt  2   Typ ok  (konditional / gemischt)
+  § 9    Soll  5 · erkannt  5 · übrig  2 · fehlt  0   Typ ok  (gemischt / gemischt)
+  § 19   Soll  4 · erkannt  4 · übrig  0 · fehlt  0   Typ ok  (konditional / gemischt)
 
 ══ UStG ════════════════════════════════════════════════════
-  § 2a   Soll  5 · erkannt  2 · übrig  1 · fehlt  3   Typ ok  (fiktion / konditional)
-  § 18d  Soll  4 · erkannt  2 · übrig  2 · fehlt  2   Typ ok  (gemischt / gemischt)
-  § 22c  Soll  4 · erkannt  2 · übrig  3 · fehlt  2   Typ ‼   (gemischt / aussage)
+  § 2a   Soll  5 · erkannt  4 · übrig  2 · fehlt  1   Typ ok  (fiktion / konditional)
+  § 18d  Soll  4 · erkannt  3 · übrig  3 · fehlt  1   Typ ok  (gemischt / gemischt)
+  § 22c  Soll  4 · erkannt  1 · übrig  3 · fehlt  3   Typ ‼   (gemischt / aussage)
 
 ────────────────────────────────────────────────────────────
 Bilanz
 
   Kategorie   Precision   Recall   F1     tp/fp/fn
-  tb              0.68     0.77   0.73   102/47/30
-  rf              0.86     0.76   0.81   116/19/37
-  ausn            0.92     0.57   0.71   12/1/9
+  tb              0.63     0.81   0.71   107/64/25
+  rf              0.73     0.74   0.73   113/42/40
+  ausn            0.77     0.48   0.59   10/3/11
 
-  Normtyp korrekt: 42/45 (93 %)
+  Normtyp korrekt: 43/45 (96 %)
 
   Fehlzuordnungen nach Ursache:
-     34  vertauscht (soll rf)
-     15  vertauscht (soll ausn)
-     11  vertauscht (soll tb)
-      7  nicht im Gold
+     40  vertauscht (soll rf)
+     34  nicht im Gold
+     20  vertauscht (soll ausn)
+     15  vertauscht (soll tb)
 

@@ -3,12 +3,15 @@
   "titel": "Grundsteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:49.903Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:46:14.779Z",
   "quelle": "https://www.gesetze-im-internet.de/grstg_1973/",
   "stand": [
     {
@@ -38,13 +41,29 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 13,
               "laenge": 85,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "tb",
+              "text": "in ihrem Gebiet liegenden Grundbesitz",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 34,
+              "laenge": 37,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das Subjekt, daher ist die Zuordnung als Normsubjekt korrekt."
             }
           ]
         },
@@ -63,13 +82,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 100,
               "laenge": 38,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Die Verberststellung leitet einen Bedingungssatz ein, der den Tatbestand definiert."
             },
             {
               "art": "rf",
@@ -79,11 +98,11 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 143,
               "laenge": 95,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Nachfolgender Hauptsatz"
             }
@@ -104,13 +123,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 240,
               "laenge": 56,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das konditionale Adverbial im Vorfeld bildet den Anwendungsfall für die Rechtsfolge."
             },
             {
               "art": "rf",
@@ -120,13 +139,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 297,
               "laenge": 123,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das konditionale Adverbial im Vorfeld bildet den Anwendungsfall für die Rechtsfolge."
             }
           ]
         }
@@ -139,6 +158,22 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "in ihrem Gebiet liegenden Grundbesitz",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -146,7 +181,7 @@
                   "n": "1.",
                   "t": "bestimmt, ob von dem in ihrem Gebiet liegenden Grundbesitz Grundsteuer zu erheben ist",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -169,7 +204,7 @@
                   "n": "1.",
                   "t": "Bestehen in einem Land keine Gemeinden",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -184,7 +219,7 @@
                   "n": "1.",
                   "t": "stehen das Recht des Absatzes 1 und die in diesem Gesetz bestimmten weiteren Rechte dem Land zu",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -207,7 +242,7 @@
                   "n": "1.",
                   "t": "Für den in gemeindefreien Gebieten liegenden Grundbesitz",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -222,7 +257,7 @@
                   "n": "1.",
                   "t": "bestimmt die Landesregierung durch Rechtsverordnung, wer die nach diesem Gesetz den Gemeinden zustehenden Befugnisse ausübt",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -232,6 +267,7 @@
         }
       ],
       "tb": [
+        "in ihrem Gebiet liegenden Grundbesitz",
         "Bestehen in einem Land keine Gemeinden",
         "Für den in gemeindefreien Gebieten liegenden Grundbesitz"
       ],
@@ -242,19 +278,19 @@
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.775,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.667,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 67 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "9bf9ba9942f6721a92612e76cd6583b5da68befdfab2c978584b9414d0ee1c71",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.862Z"
+      "aktualisiert": "2026-08-18T08:44:50.292Z"
     },
     "2": {
       "typ": "gemischt",
@@ -3675,17 +3711,17 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 34,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm festlegt."
             },
             {
               "art": "rf",
-              "text": "ist von einem Steuermessbetrag",
+              "text": "ist von einem Steuermessbetrag auszugehen",
               "anzeige": "ist von einem Steuermessbetrag … auszugehen",
               "teile": [
                 {
@@ -3701,14 +3737,14 @@
               ],
               "pfad": "Satz 1",
               "von": 35,
-              "laenge": 30,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "laenge": 41,
+              "konfidenz": 0.633,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsbereich der Norm festlegt."
             }
           ]
         },
@@ -3737,7 +3773,7 @@
                   "n": "1.",
                   "t": "Bei der Berechnung der Grundsteuer",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.633,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -3752,7 +3788,7 @@
                   "n": "1.",
                   "t": "ist von einem Steuermessbetrag … auszugehen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.633,
                   "beleg": null,
                   "mehrteilig": true
                 }
@@ -3765,23 +3801,23 @@
         "Bei der Berechnung der Grundsteuer"
       ],
       "rf": [
-        "ist von einem Steuermessbetrag"
+        "ist von einem Steuermessbetrag auszugehen"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.633,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 0 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "fce85cded2154ad807e1d74d97ecc57372013c4a132184f72f45f9704592658a",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.871Z"
+      "aktualisiert": "2026-08-18T08:45:22.831Z"
     },
     "14": {
       "typ": "tarif",
@@ -9652,7 +9688,8 @@
       "typ": "gemischt",
       "typen": [
         "aussage",
-        "konditional"
+        "konditional",
+        "fiktion"
       ],
       "saetze": [
         {
@@ -9664,19 +9701,35 @@
           "elemente": [
             {
               "art": "rf",
+              "text": "Die Grundsteuer wird für das Kalenderjahr festgesetzt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 0,
+              "laenge": 53,
+              "konfidenz": 0.383,
+              "stimmen": 1,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "rf",
+              "beleg": null,
+              "grund": "Das Vorfeld enthält lediglich das Subjekt, daher liegt kein Tatbestandsmerkmal vor."
+            },
+            {
+              "art": "rf",
               "text": "wird für das Kalenderjahr festgesetzt",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 16,
               "laenge": 37,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+              "grund": "Das Vorfeld enthält lediglich das Subjekt, daher liegt kein Tatbestandsmerkmal vor."
             }
           ]
         },
@@ -9695,13 +9748,13 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 55,
               "laenge": 58,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Die Verberststellung leitet einen Bedingungssatz ein, der den Tatbestand definiert."
             },
             {
               "art": "rf",
@@ -9711,13 +9764,13 @@
               "pfad": "Abs. 1 Satz 2",
               "von": 115,
               "laenge": 115,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Die Verberststellung leitet einen Bedingungssatz ein, der den Tatbestand definiert."
             }
           ]
         },
@@ -9730,17 +9783,33 @@
           "elemente": [
             {
               "art": "tb",
+              "text": "Wird der Hebesatz geändert",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 232,
+              "laenge": 26,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Die Verberststellung markiert den Tatbestand als Bedingung für die Rechtsfolge."
+            },
+            {
+              "art": "tb",
               "text": "Wird der Hebesatz geändert (§ 25 Abs. 3)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 232,
               "laenge": 40,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
             },
@@ -9752,13 +9821,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 277,
               "laenge": 43,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Die Verberststellung markiert den Tatbestand als Bedingung für die Rechtsfolge."
             }
           ]
         },
@@ -9777,13 +9846,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 322,
               "laenge": 115,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, das den Anwendungsbereich der Norm festlegt."
             },
             {
               "art": "rf",
@@ -9793,13 +9862,13 @@
               "pfad": "Abs. 3 Satz 1",
               "von": 439,
               "laenge": 72,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, das den Anwendungsbereich der Norm festlegt."
             }
           ]
         },
@@ -9807,7 +9876,7 @@
           "pfad": "Abs. 3 Satz 2",
           "von": 513,
           "bis": 702,
-          "typ": "konditional",
+          "typ": "fiktion",
           "junktor": null,
           "elemente": [
             {
@@ -9818,13 +9887,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 513,
               "laenge": 23,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, die Rechtsfolge ordnet eine rechtliche Gleichstellung an."
             },
             {
               "art": "rf",
@@ -9834,13 +9903,13 @@
               "pfad": "Abs. 3 Satz 2",
               "von": 537,
               "laenge": 164,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das Vorfeld ist ein konditionales Adverbial, die Rechtsfolge ordnet eine rechtliche Gleichstellung an."
             }
           ]
         }
@@ -9861,7 +9930,7 @@
                   "n": "1.",
                   "t": "Ist der Hebesatz für mehr als ein Kalenderjahr festgesetzt",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9874,17 +9943,25 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "wird für das Kalenderjahr festgesetzt",
+                  "t": "Die Grundsteuer wird für das Kalenderjahr festgesetzt",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.383,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
+                  "t": "wird für das Kalenderjahr festgesetzt",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.817,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "kann auch die jährlich zu erhebende Grundsteuer für die einzelnen Kalenderjahre dieses Zeitraums festgesetzt werden",
                   "pfad": "Abs. 1 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9900,14 +9977,22 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "Wird der Hebesatz geändert",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
                   "t": "Wird der Hebesatz geändert (§ 25 Abs. 3)",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9922,7 +10007,7 @@
                   "n": "1.",
                   "t": "ist die Festsetzung nach Absatz 1 zu ändern",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9945,7 +10030,7 @@
                   "n": "1.",
                   "t": "Für diejenigen Steuerschuldner, die für das Kalenderjahr die gleiche Grundsteuer wie im Vorjahr zu entrichten haben",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -9953,7 +10038,7 @@
                   "n": "2.",
                   "t": "Für die Steuerschuldner",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9968,7 +10053,7 @@
                   "n": "1.",
                   "t": "kann die Grundsteuer durch öffentliche Bekanntmachung festgesetzt werden",
                   "pfad": "Abs. 3 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -9976,7 +10061,7 @@
                   "n": "2.",
                   "t": "treten mit dem Tage der öffentlichen Bekanntmachung die gleichen Rechtswirkungen ein, wie wenn ihnen an diesem Tage ein schriftlicher Steuerbescheid zugegangen wäre",
                   "pfad": "Abs. 3 Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9987,11 +10072,13 @@
       ],
       "tb": [
         "Ist der Hebesatz für mehr als ein Kalenderjahr festgesetzt",
+        "Wird der Hebesatz geändert",
         "Wird der Hebesatz geändert (§ 25 Abs. 3)",
         "Für diejenigen Steuerschuldner, die für das Kalenderjahr die gleiche Grundsteuer wie im Vorjahr zu entrichten haben",
         "Für die Steuerschuldner"
       ],
       "rf": [
+        "Die Grundsteuer wird für das Kalenderjahr festgesetzt",
         "wird für das Kalenderjahr festgesetzt",
         "kann auch die jährlich zu erhebende Grundsteuer für die einzelnen Kalenderjahre dieses Zeitraums festgesetzt werden",
         "ist die Festsetzung nach Absatz 1 zu ändern",
@@ -10000,19 +10087,19 @@
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.855,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.727,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 73 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "897f0904b6d893b4c6fe51a47a7f44fe77eac7c82e4e0ff336f541a06228b32c",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:49.894Z"
+      "aktualisiert": "2026-08-18T08:46:14.779Z"
     },
     "28": {
       "typ": "gemischt",

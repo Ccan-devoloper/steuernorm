@@ -705,5 +705,166 @@
     "art": "tb",
     "text": "Ein sich nach § 36 Abs. 7 ergebender positiver Endbetrag des Teilbetrags im Sinne des § 30",
     "grund": "zu grob (54 Wörter)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "sind körperschaftsteuerpflichtig",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind nur insoweit körperschaftsteuerpflichtig, als sie einen Gewerbebetrieb verpachten",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind nur insoweit körperschaftsteuerpflichtig, als sie einen Gewerbebetrieb unterhalten, d",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind nur insoweit körperschaftsteuerpflichtig, als sie einen Gewerbebetrieb verpachten, de",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "sind körperschaftsteuerpflichtig",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "sie einen Gewerbebetrieb unterhalten oder verpachten, der über den Rahmen eines Nebenbetri",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "ausn",
+    "text": "nur insoweit",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 3",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "Im Übrigen",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "rf",
+    "text": "15 Prozent des zu versteuernden Einkommens",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "rf",
+    "text": "14 Prozent des zu versteuernden Einkommens",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "rf",
+    "text": "13 Prozent des zu versteuernden Einkommens",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 4",
+    "art": "rf",
+    "text": "12 Prozent des zu versteuernden Einkommens",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 5",
+    "art": "rf",
+    "text": "11 Prozent des zu versteuernden Einkommens",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 1 Nr. 6",
+    "art": "rf",
+    "text": "10 Prozent des zu versteuernden Einkommens",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 23",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "Wird die Einkommensteuer auf Grund der Ermächtigung des § 51 Abs. 3 des Einkommensteuerges",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "rf",
+    "text": "Die Festsetzungsfrist endet nicht vor Ablauf eines Jahres nach Unanfechtbarkeit des Steuer",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "Bei der Festsetzungsfrist",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 2",
+    "art": "tb",
+    "text": "insoweit",
+    "grund": "Gegenprobe: kein normatives Merkmal"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "tb",
+    "text": "Für verdeckte Gewinnausschüttungen an Empfänger von Bezügen im Sinne des § 20 Abs. 1 Nr. 9",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "rf",
+    "text": "Die Sätze 1 und 2 gelten auch für diese Empfänger",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "rf",
+    "text": "gelten die Sätze 1 und 2",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "rf",
+    "text": "Die Sätze 1 und 2 gelten auch",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 32a",
+    "pfad": "Abs. 1 Satz 3",
+    "art": "tb",
+    "text": "Die Sätze 1 und 2",
+    "grund": "Gegenprobe widerspricht (rf)"
   }
 ]

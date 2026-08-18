@@ -621,5 +621,208 @@
     "art": "tb",
     "text": "Bei der Ermittlung des Fonds-Aktiengewinns, des Fonds-Abkommensgewinns und des Fonds-Teilf",
     "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "Die zuständige Finanzbehörde",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "tb",
+    "text": "zur Überprüfung der steuerlichen Verhältnisse befugt",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "bei Investmentfonds zur Ermittlung der steuerlichen Verhältnisse des Investmentfonds",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "bei Investmentfonds zur Ermittlung der Voraussetzungen für eine Besteuerung als Spezial-In",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "tb",
+    "text": "bei Investmentfonds zur Ermittlung der Besteuerungsgrundlagen der Anleger",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "ist zulässig bei Investmentfonds zur Ermittlung",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Nr. 1",
+    "art": "tb",
+    "text": "Ermittlung der steuerlichen Verhältnisse des Investmentfonds",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Nr. 2",
+    "art": "tb",
+    "text": "Ermittlung der Voraussetzungen für eine Besteuerung als Spezial-Investmentfonds",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 5",
+    "pfad": "Abs. 2 Nr. 3",
+    "art": "tb",
+    "text": "Ermittlung der Besteuerungsgrundlagen der Anleger",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "Spezial-Investmenterträge",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 1 Nr. 1",
+    "art": "rf",
+    "text": "Spezial-Investmenterträge",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 1 Nr. 2",
+    "art": "rf",
+    "text": "Spezial-Investmenterträge",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 1 Nr. 3",
+    "art": "rf",
+    "text": "Spezial-Investmenterträge",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "§ 2 Absatz 5b des Einkommensteuergesetzes nicht anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "§ 20 Absatz 6 des Einkommensteuergesetzes nicht anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "§ 20 Absatz 9 des Einkommensteuergesetzes nicht anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "§ 32d des Einkommensteuergesetzes nicht anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "§ 43 Absatz 5 Satz 1 des Einkommensteuergesetzes nicht anzuwenden",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "§ 3 Nummer 40 des Einkommensteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "§ 8b des Körperschaftsteuergesetzes",
+    "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 2 Satz 2",
+    "art": "tb",
+    "text": "§ 3 Nummer 40 des Einkommensteuergesetzes und § 8b des Körperschaftsteuergesetzes",
+    "grund": "Gegenprobe widerspricht (rf)"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Freistellung von ausgeschütteten Erträgen aufgrund eines Abkommens zur Vermeidung der Dopp",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "tb",
+    "text": "Freistellung von ausschüttungsgleichen Erträgen aufgrund eines Abkommens zur Vermeidung de",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 1",
+    "art": "rf",
+    "text": "Die Freistellung von",
+    "grund": "Gegenprobe widerspricht (tb)"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "rf",
+    "text": "wird die Freistellung nur unter den Voraussetzungen des § 16 Absatz 4 gewährt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "rf",
+    "text": "wird die Freistellung gewährt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "rf",
+    "text": "Freistellung wird nur unter den Voraussetzungen des § 16 Absatz 4 gewährt",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "tb",
+    "text": "Voraussetzungen des § 16 Absatz 4",
+    "grund": "Gegenprobe widerspricht (ausn)"
+  },
+  {
+    "norm": "§ 34",
+    "pfad": "Abs. 3 Satz 2",
+    "art": "rf",
+    "text": "wird die Freistellung von Ausschüttungen eines ausländischen Spezial-Investmentfonds nur u",
+    "grund": "Gegenprobe widerspricht (tb)"
   }
 ]

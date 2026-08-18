@@ -1,18 +1,18 @@
 {
-  "erzeugt": "2026-08-18T06:35:20.440Z",
+  "erzeugt": "2026-08-18T09:05:48.130Z",
   "schwellen": {
     "min": 4,
     "quote": 0.8
   },
-  "wendungen": 9195,
-  "verdaechtig": 19,
+  "wendungen": 9228,
+  "verdaechtig": 20,
   "funde": [
     {
       "wendung": "gilt entsprechend",
       "schluessel": "gilt entsprechend",
       "verteilung": {
         "tb": 6,
-        "rf": 180,
+        "rf": 179,
         "ausn": 0
       },
       "mehrheit": "rf",
@@ -108,7 +108,7 @@
       "schluessel": "im übrigen",
       "verteilung": {
         "tb": 3,
-        "rf": 20,
+        "rf": 19,
         "ausn": 0
       },
       "mehrheit": "rf",
@@ -168,6 +168,26 @@
       ]
     },
     {
+      "wendung": "§ 181 Absatz 5 der Abgabenordnung",
+      "schluessel": "§ der abgabenordnung",
+      "verteilung": {
+        "tb": 25,
+        "rf": 0,
+        "ausn": 1
+      },
+      "mehrheit": "tb",
+      "ausreisser": [
+        {
+          "gesetz": "SolzG",
+          "norm": "1",
+          "pfad": "Abs. 4 Satz 3",
+          "art": "ausn",
+          "konfidenz": 0.55,
+          "status": "mehrheit"
+        }
+      ]
+    },
+    {
       "wendung": "darüber hinaus",
       "schluessel": "darüber hinaus",
       "verteilung": {
@@ -202,8 +222,8 @@
           "norm": "1",
           "pfad": "Abs. 2 Satz 1",
           "art": "tb",
-          "konfidenz": 0.45,
-          "status": "syntaktisch"
+          "konfidenz": 0.338,
+          "status": "mehrheit"
         }
       ]
     },

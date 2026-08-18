@@ -35,13 +35,6 @@
     "grund": "Fragment: endet auf Artikel oder Präposition"
   },
   {
-    "norm": "§ 13",
-    "pfad": "Satz 2",
-    "art": "tb",
-    "text": "durch Anwendung eines Promillesatzes (Steuermesszahl) auf den Grundsteuerwert oder seinen ",
-    "grund": "deckt praktisch den ganzen Rechtssatz ab"
-  },
-  {
     "norm": "§ 15",
     "pfad": "Abs. 2 Nr. 1",
     "art": "tb",
@@ -152,5 +145,54 @@
     "art": "tb",
     "text": "§ 21 Satz 2",
     "grund": "reiner Paragrafenverweis ohne Merkmalsgehalt"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 1 Satz 1",
+    "art": "rf",
+    "text": "bestimmt, ob Grundsteuer zu erheben ist",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "stehen das Recht des Absatzes 1 dem Land zu",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 1",
+    "pfad": "Abs. 2 Satz 1",
+    "art": "rf",
+    "text": "stehen die in diesem Gesetz bestimmten weiteren Rechte dem Land zu",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "Grundsteuerwert oder sein steuerpflichtiger Teil ist nach dem Bewertungsgesetz im Veranlag",
+    "grund": "nicht wörtlich im Normtext"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "rf",
+    "text": "Steuermessbetrag",
+    "grund": "steht in einem anderen Rechtssatz als angegeben"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "durch Anwendung eines Promillesatzes (Steuermesszahl) auf den Grundsteuerwert oder seinen ",
+    "grund": "deckt praktisch den ganzen Rechtssatz ab"
+  },
+  {
+    "norm": "§ 13",
+    "pfad": "Satz 2",
+    "art": "tb",
+    "text": "Anwendung eines Promillesatzes (Steuermesszahl) auf den Grundsteuerwert oder seinen steuer",
+    "grund": "Gegenprobe widerspricht (rf)"
   }
 ]

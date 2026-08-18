@@ -3,12 +3,15 @@
   "titel": "Umwandlungssteuergesetz",
   "format": 5,
   "automatisch": true,
-  "verfahren": "syntaxanalyse",
+  "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
   "modelle": [
-    "nur-syntax"
+    "gemini-3.7-flash",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest"
   ],
-  "laeufe": 0,
-  "aktualisiert": "2026-08-14T10:19:50.241Z",
+  "laeufe": 3,
+  "aktualisiert": "2026-08-18T08:53:43.810Z",
   "quelle": "https://www.gesetze-im-internet.de/umwstg_2006/",
   "stand": [
     {
@@ -5373,15 +5376,15 @@
     "7": {
       "typ": "gemischt",
       "typen": [
-        "aussage",
-        "konditional"
+        "konditional",
+        "aussage"
       ],
       "saetze": [
         {
           "pfad": "Satz 1",
           "von": 0,
           "bis": 448,
-          "typ": "aussage",
+          "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
@@ -5392,29 +5395,45 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 17,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
-              "art": "rf",
-              "text": "ist der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
+              "art": "tb",
+              "text": "der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 1",
-              "von": 18,
-              "laenge": 167,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 22,
+              "laenge": 163,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Rest des Hauptsatzes"
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine Aussage über die Zurechnung vor, die inhaltlich die Tatbestandsvoraussetzungen für die Zurechnung als Einnahme definiert."
+            },
+            {
+              "art": "tb",
+              "text": "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 187,
+              "laenge": 77,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine Aussage über die Zurechnung vor, die inhaltlich die Tatbestandsvoraussetzungen für die Zurechnung als Einnahme definiert."
             },
             {
               "art": "tb",
@@ -5424,13 +5443,29 @@
               "pfad": "Satz 1",
               "von": 187,
               "laenge": 260,
-              "konfidenz": 0.48,
+              "konfidenz": 0.36,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
               "grund": "Nebensatz trägt die Voraussetzungen"
+            },
+            {
+              "art": "tb",
+              "text": "in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 1",
+              "von": 266,
+              "laenge": 76,
+              "konfidenz": 0.75,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Satzsubjekt steht im Vorfeld, daher liegt eine Aussage über die Zurechnung vor, die inhaltlich die Tatbestandsvoraussetzungen für die Zurechnung als Einnahme definiert."
             }
           ]
         },
@@ -5438,45 +5473,52 @@
           "pfad": "Satz 2",
           "von": 449,
           "bis": 577,
-          "typ": "konditional",
+          "typ": "aussage",
           "junktor": null,
-          "elemente": [
-            {
-              "art": "rf",
-              "text": "gilt unabhängig davon, ob für den Anteilseigner ein Übernahmegewinn oder Übernahmeverlust nach § 4 oder § 5 ermittelt wird",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Satz 2",
-              "von": 454,
-              "laenge": 122,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
-            }
-          ]
+          "elemente": []
         }
       ],
       "schema": [
         {
           "absatz": "",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
               "sub": [
                 {
                   "n": "1.",
+                  "t": "der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
                   "t": "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt, in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft als Einnahmen aus Kapitalvermögen im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes zuzurechnen",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.48,
+                  "konfidenz": 0.36,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft",
+                  "pfad": "Satz 1",
+                  "konfidenz": 0.75,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5491,23 +5533,7 @@
                   "n": "1.",
                   "t": "Dem Anteilseigner",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.45,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "ist der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
-                  "pfad": "Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "3.",
-                  "t": "gilt unabhängig davon, ob für den Anteilseigner ein Übernahmegewinn oder Übernahmeverlust nach § 4 oder § 5 ermittelt wird",
-                  "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5517,28 +5543,29 @@
         }
       ],
       "tb": [
-        "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt, in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft als Einnahmen aus Kapitalvermögen im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes zuzurechnen"
+        "der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
+        "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt",
+        "der sich nach Anwendung des § 29 Abs. 1 des Körperschaftsteuergesetzes ergibt, in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft als Einnahmen aus Kapitalvermögen im Sinne des § 20 Abs. 1 Nr. 1 des Einkommensteuergesetzes zuzurechnen",
+        "in dem Verhältnis der Anteile zum Nennkapital der übertragenden Körperschaft"
       ],
       "rf": [
-        "Dem Anteilseigner",
-        "ist der Teil des in der Steuerbilanz ausgewiesenen Eigenkapitals abzüglich des Bestands des steuerlichen Einlagekontos im Sinne des § 27 des Körperschaftsteuergesetzes",
-        "gilt unabhängig davon, ob für den Anteilseigner ein Übernahmegewinn oder Übernahmeverlust nach § 4 oder § 5 ermittelt wird"
+        "Dem Anteilseigner"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "mehrheit",
       "markierbar": true,
-      "konfidenz": 0.532,
+      "konfidenz": 0.59,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.6,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 60 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "1b19c12fad0c8657076fa12f0e54448e2e0aef801d03b97d893e37d1458d9d22",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.197Z"
+      "aktualisiert": "2026-08-18T08:52:32.057Z"
     },
     "8": {
       "typ": "gemischt",
@@ -5799,40 +5826,29 @@
               "pfad": "Satz 1",
               "von": 0,
               "laenge": 80,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.433,
+              "stimmen": 1,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsfall beschreibt."
             },
             {
               "art": "rf",
-              "text": "sind die §§ 3 bis 8 und 10 entsprechend",
-              "anzeige": "sind die §§ 3 bis 8 und 10 entsprechend … anzuwenden",
-              "teile": [
-                {
-                  "text": "sind die §§ 3 bis 8 und 10 entsprechend",
-                  "von": 81,
-                  "laenge": 39
-                },
-                {
-                  "text": "anzuwenden",
-                  "von": 121,
-                  "laenge": 10
-                }
-              ],
+              "text": "die §§ 3 bis 8 und 10 entsprechend anzuwenden",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Satz 1",
-              "von": 81,
-              "laenge": 39,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "von": 86,
+              "laenge": 45,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Das Vorfeld enthält ein konditionales Adverbial, das den Anwendungsfall der Norm beschreibt."
             }
           ]
         },
@@ -5851,13 +5867,29 @@
               "pfad": "Satz 2",
               "von": 157,
               "laenge": 167,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            },
+            {
+              "art": "tb",
+              "text": "Formwechsel wirksam wird",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 214,
+              "laenge": 24,
+              "konfidenz": 0.567,
+              "stimmen": 2,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
+              "beleg": null,
+              "grund": "Das Vorfeld ist das Normsubjekt, daher liegt kein spezifisches Tatbestandsmerkmal im Vorfeld vor."
             }
           ]
         },
@@ -5865,7 +5897,7 @@
           "pfad": "Satz 3",
           "von": 326,
           "bis": 574,
-          "typ": "aussage",
+          "typ": "verweisung",
           "junktor": null,
           "elemente": [
             {
@@ -5876,29 +5908,29 @@
               "pfad": "Satz 3",
               "von": 351,
               "laenge": 184,
-              "konfidenz": 0.6,
+              "konfidenz": 0.45,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             },
             {
-              "art": "tb",
-              "text": "§ 2 Absatz 3 bis 5",
+              "art": "rf",
+              "text": "§ 2 Absatz 3 bis 5 gilt entsprechend",
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 3",
               "von": 537,
-              "laenge": 18,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
+              "laenge": 36,
+              "konfidenz": 0.55,
+              "stimmen": 3,
+              "laeufe": 3,
+              "syntax": false,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das Vorfeld ist das Normsubjekt, die Rechtsfolge umfasst die Wahlmöglichkeit des Stichtags und die Verweisung."
             },
             {
               "art": "rf",
@@ -5908,11 +5940,11 @@
               "pfad": "Satz 3",
               "von": 556,
               "laenge": 17,
-              "konfidenz": 0.45,
+              "konfidenz": 0.338,
               "stimmen": 0,
-              "laeufe": 0,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
@@ -5922,8 +5954,8 @@
       "schema": [
         {
           "absatz": "",
-          "typ": "aussage",
-          "rolle": "Anordnung",
+          "typ": "verweisung",
+          "rolle": "Verweisung",
           "schritte": [
             {
               "n": "I.",
@@ -5935,15 +5967,15 @@
                   "n": "1.",
                   "t": "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.433,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "2.",
-                  "t": "§ 2 Absatz 3 bis 5",
-                  "pfad": "Satz 3",
-                  "konfidenz": 0.6,
+                  "t": "Formwechsel wirksam wird",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.567,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5956,17 +5988,17 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind die §§ 3 bis 8 und 10 entsprechend … anzuwenden",
+                  "t": "die §§ 3 bis 8 und 10 entsprechend anzuwenden",
                   "pfad": "Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.55,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "2.",
                   "t": "hat für steuerliche Zwecke auf den Zeitpunkt, in dem der Formwechsel wirksam wird, eine Übertragungsbilanz, die Personengesellschaft eine Eröffnungsbilanz aufzustellen",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
@@ -5974,15 +6006,23 @@
                   "n": "3.",
                   "t": "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "4.",
+                  "t": "§ 2 Absatz 3 bis 5 gilt entsprechend",
+                  "pfad": "Satz 3",
+                  "konfidenz": 0.55,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
                   "t": "gilt entsprechend",
                   "pfad": "Satz 3",
-                  "konfidenz": 0.45,
+                  "konfidenz": 0.338,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -5993,29 +6033,30 @@
       ],
       "tb": [
         "Im Falle des Formwechsels einer Kapitalgesellschaft in eine Personengesellschaft",
-        "§ 2 Absatz 3 bis 5"
+        "Formwechsel wirksam wird"
       ],
       "rf": [
-        "sind die §§ 3 bis 8 und 10 entsprechend",
+        "die §§ 3 bis 8 und 10 entsprechend anzuwenden",
         "hat für steuerliche Zwecke auf den Zeitpunkt, in dem der Formwechsel wirksam wird, eine Übertragungsbilanz, die Personengesellschaft eine Eröffnungsbilanz aufzustellen",
         "können auch für einen Stichtag aufgestellt werden, der höchstens acht Monate vor der Anmeldung des Formwechsels zur Eintragung in ein öffentliches Register liegt (Übertragungsstichtag)",
+        "§ 2 Absatz 3 bis 5 gilt entsprechend",
         "gilt entsprechend"
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
-      "markierbar": true,
-      "konfidenz": 0.575,
+      "status": "uneinheitlich",
+      "markierbar": false,
+      "konfidenz": 0.477,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.286,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 29 %. Die Läufe widersprechen einander; die Markierung ist als unsicher gekennzeichnet. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "5f59fe61fae6b917a310d2b6a06756db2db2f09012ca3cd5ecd5576e23e82e75",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.198Z"
+      "aktualisiert": "2026-08-18T08:53:11.659Z"
     },
     "10": {
       "typ": "gemischt",
@@ -9466,9 +9507,10 @@
       "aktualisiert": "2026-08-14T10:19:50.207Z"
     },
     "19": {
-      "typ": "konditional",
+      "typ": "gemischt",
       "typen": [
-        "konditional"
+        "konditional",
+        "verweisung"
       ],
       "saetze": [
         {
@@ -9486,13 +9528,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
               "laenge": 82,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
+              "grund": "Das finite Verb steht an erster Stelle, was einen uneingeleiteten Bedingungssatz als Tatbestand konstituiert."
             },
             {
               "art": "rf",
@@ -9502,13 +9544,13 @@
               "pfad": "Abs. 1 Satz 1",
               "von": 84,
               "laenge": 66,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
+              "grund": "Das finite Verb steht an erster Stelle, was einen uneingeleiteten Bedingungssatz als Tatbestand konstituiert."
             }
           ]
         },
@@ -9516,7 +9558,7 @@
           "pfad": "Abs. 2 Satz 1",
           "von": 152,
           "bis": 312,
-          "typ": "konditional",
+          "typ": "verweisung",
           "junktor": null,
           "elemente": [
             {
@@ -9527,13 +9569,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 152,
               "laenge": 111,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 1,
+              "stimmen": 3,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "tb",
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Das konditionale Adverbial im Vorfeld bestimmt den Anwendungsbereich, während die Rechtsfolge eine Verweisung auf andere Normen enthält."
             },
             {
               "art": "rf",
@@ -9543,13 +9585,13 @@
               "pfad": "Abs. 2 Satz 1",
               "von": 264,
               "laenge": 47,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
+              "konfidenz": 0.817,
+              "stimmen": 2,
+              "laeufe": 3,
               "syntax": true,
-              "gegenprobe": null,
+              "gegenprobe": "rf",
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Das konditionale Adverbial im Vorfeld bestimmt den Anwendungsbereich, während die Rechtsfolge eine Verweisung auf andere Normen enthält."
             }
           ]
         }
@@ -9570,7 +9612,7 @@
                   "n": "1.",
                   "t": "Geht das Vermögen der übertragenden Körperschaft auf eine andere Körperschaft über",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9585,7 +9627,7 @@
                   "n": "1.",
                   "t": "gelten die §§ 11 bis 15 auch für die Ermittlung des Gewerbeertrags",
                   "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9595,8 +9637,8 @@
         },
         {
           "absatz": "Abs. 2",
-          "typ": "konditional",
-          "rolle": "Voraussetzungen und Rechtsfolge",
+          "typ": "verweisung",
+          "rolle": "Verweisung",
           "schritte": [
             {
               "n": "I.",
@@ -9608,7 +9650,7 @@
                   "n": "1.",
                   "t": "Für die vortragsfähigen Fehlbeträge der übertragenden Körperschaft im Sinne des § 10a des Gewerbesteuergesetzes",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 1,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9623,7 +9665,7 @@
                   "n": "1.",
                   "t": "gelten § 12 Abs. 3 und § 15 Abs. 3 entsprechend",
                   "pfad": "Abs. 2 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.817,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -9642,19 +9684,19 @@
       ],
       "ausnahmen": [],
       "definitionen": [],
-      "status": "syntaktisch",
+      "status": "konsens",
       "markierbar": true,
-      "konfidenz": 0.6,
+      "konfidenz": 0.954,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
-      "einstimmigkeit": null,
-      "laeufe": 0,
-      "verfahren": "syntaxanalyse",
-      "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
+      "einstimmigkeit": 0.75,
+      "laeufe": 3,
+      "verfahren": "syntaxanalyse+mehrfachlauf+gegenprobe",
+      "hinweis": "Aus 3 unabhängigen Modellläufen und einer Syntaxanalyse zusammengeführt; Übereinstimmung 75 %. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
       "text_hash": "22ce9304e0af7106c9ee0c115d3eac01eeefaf2492521de2b2073abfe571ceac",
       "format": 5,
-      "aktualisiert": "2026-08-14T10:19:50.207Z"
+      "aktualisiert": "2026-08-18T08:53:43.810Z"
     },
     "20": {
       "typ": "gemischt",
