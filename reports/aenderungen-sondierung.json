@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-08-15T13:06:23.649Z",
+ "erzeugt": "2026-09-01T11:09:07.260Z",
  "basis": "https://testphase.rechtsinformationen.bund.de",
  "gesetz": "Solidaritätszuschlaggesetz",
  "proben": [
@@ -4140,67 +4140,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
-       "name": "Berufsbildungsgesetz",
-       "legislationIdentifier": "eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931",
-        "legislationIdentifier": "eli/bund/bgbl-1/2005/s931",
-        "legislationDate": "2005-03-23",
-        "datePublished": "2005-03-31",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2005 931"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "BBiG",
-       "alternateName": null,
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 34 Einrichten, Führen",
-        "text": "Nummer 1 nach dem Wort „Anschrift,” die Wörter „Identifikationsnummer nach dem Identifikationsnummerngesetz und” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
-        "location": "art-z34"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 36 Antrag und Mitteilungspflichten",
-        "text": "Wort „Tatsachen” die Wörter „mit Ausnahme der Identifikationsnummer nach dem Identifikationsnummerngesetz” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
-        "location": "art-z36"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/2023/204/2023-07-26/1/deu",
        "name": "Gesetz zur Regelung einzelner dem Schutz der finanziellen Interessen der Union dienender Bestimmungen im Rahmen der Gemeinsamen Agrarpolitik",
        "legislationIdentifier": "eli/bund/bgbl-1/2023/204/2023-07-26/1/deu",
@@ -4316,6 +4255,73 @@
         "name": "§ 7 Einzelangaben",
         "text": "Die mit der Durchführung der Zusatzaufbereitungen einschließlich der Entwicklung und des Betriebs von Mikrosimulationsmodellen beauftragten Personen müssen Amtsträger oder für den öffentlichen Dienst besonders Verpflichtete (§ 30 Abs. 3 Nr. 1 der <mark>Abgabenordnung</mark>) sein.",
         "location": "art-z7"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
+       "name": "Investitionszulagengesetz 2007",
+       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614",
+        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614",
+        "legislationDate": "2006-07-15",
+        "datePublished": "2006-07-20",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2006 1614"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "InvZulG 2007",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 11 Verzinsung des Rückforderungsanspruchs",
+        "text": "Ist der Bescheid über die Investitionszulage aufgehoben oder zuungunsten des Anspruchsberechtigten geändert worden, ist der Rückzahlungsanspruch nach § 238 der <mark>Abgabenordnung</mark> vom Tag der Auszahlung der Investitionszulage, in den Fällen des § 175 Abs. 1 Satz 1 Nr. 2 der <mark>Abgabenordnung</mark> vom Tag des Eintritts des rückwirkenden",
+        "location": "art-z11"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 13 Anwendung der <mark>Abgabenordnung</mark>",
+        "text": "Die für Steuervergütungen geltenden Vorschriften der <mark>Abgabenordnung</mark> sind mit Ausnahme des § 163 entsprechend anzuwenden. In öffentlich-rechtlichen Streitigkeiten über die aufgrund dieses Gesetzes ergehenden Verwaltungsakte der Finanzbehörden ist der Finanzrechtsweg gegeben.",
+        "location": "art-z13"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 14 Verfolgung von Straftaten",
+        "text": "Für die Verfolgung einer Straftat nach den §§ 263 und 264 des Strafgesetzbuches, die sich auf die Investitionszulage bezieht, sowie der Begünstigung einer Person, die eine solche Straftat begangen hat, gelten die Vorschriften der <mark>Abgabenordnung</mark> über die Verfolgung von Steuerstraftaten entsprechend.",
+        "location": "art-z14"
        }
       ]
      },
@@ -4511,73 +4517,6 @@
         "name": "§ 2 Aufgaben und Leistungen der Bundesanstalt",
         "text": "Die Einbindung Dritter bei einer Tätigkeit der Bundesanstalt im Anwendungsbereich der <mark>Abgabenordnung</mark> richtet sich nach § 10 Absatz 3. (6) Die Bundesanstalt erbringt ihre Leistungen in einem Auftraggeber-/Auftragnehmer-Verhältnis im Regelfall auf der Grundlage standardisierter Prozesse.",
         "location": "art-z2"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
-       "name": "Investitionszulagengesetz 2007",
-       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614",
-        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1614",
-        "legislationDate": "2006-07-15",
-        "datePublished": "2006-07-20",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2006 1614"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "InvZulG 2007",
-       "alternateName": null,
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1614/2008-12-11/1/deu/2010-03-22.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 11 Verzinsung des Rückforderungsanspruchs",
-        "text": "Ist der Bescheid über die Investitionszulage aufgehoben oder zuungunsten des Anspruchsberechtigten geändert worden, ist der Rückzahlungsanspruch nach § 238 der <mark>Abgabenordnung</mark> vom Tag der Auszahlung der Investitionszulage, in den Fällen des § 175 Abs. 1 Satz 1 Nr. 2 der <mark>Abgabenordnung</mark> vom Tag des Eintritts des rückwirkenden",
-        "location": "art-z11"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 13 Anwendung der <mark>Abgabenordnung</mark>",
-        "text": "Die für Steuervergütungen geltenden Vorschriften der <mark>Abgabenordnung</mark> sind mit Ausnahme des § 163 entsprechend anzuwenden. In öffentlich-rechtlichen Streitigkeiten über die aufgrund dieses Gesetzes ergehenden Verwaltungsakte der Finanzbehörden ist der Finanzrechtsweg gegeben.",
-        "location": "art-z13"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 14 Verfolgung von Straftaten",
-        "text": "Für die Verfolgung einer Straftat nach den §§ 263 und 264 des Strafgesetzbuches, die sich auf die Investitionszulage bezieht, sowie der Begünstigung einer Person, die eine solche Straftat begangen hat, gelten die Vorschriften der <mark>Abgabenordnung</mark> über die Verfolgung von Steuerstraftaten entsprechend.",
-        "location": "art-z14"
        }
       ]
      },
@@ -4847,6 +4786,67 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
+       "name": "Berufsbildungsgesetz",
+       "legislationIdentifier": "eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931",
+        "legislationIdentifier": "eli/bund/bgbl-1/2005/s931",
+        "legislationDate": "2005-03-23",
+        "datePublished": "2005-03-31",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2005 931"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BBiG",
+       "alternateName": null,
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2005/s931/2025-11-01/1/deu/2025-10-31.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 34 Einrichten, Führen",
+        "text": "Nummer 1 nach dem Wort „Anschrift,” die Wörter „Identifikationsnummer nach dem Identifikationsnummerngesetz und” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
+        "location": "art-z34"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 36 Antrag und Mitteilungspflichten",
+        "text": "Wort „Tatsachen” die Wörter „mit Ausnahme der Identifikationsnummer nach dem Identifikationsnummerngesetz” eingefügt an dem Tag, an dem das Bundesministerium des Innern und für Heimat im Bundesgesetzblatt bekannt gibt, dass die technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer nach § 139b der <mark>Abgabenordnung</mark>",
+        "location": "art-z36"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1992/s2125/2026-04-02/1/deu",
        "name": "Zollverwaltungsgesetz",
        "legislationIdentifier": "eli/bund/bgbl-1/1992/s2125/2026-04-02/1/deu",
@@ -4907,6 +4907,73 @@
         "name": "§ 19 Beistand",
         "text": "Dies gilt auch für nach § 111 Absatz 1 der <mark>Abgabenordnung</mark> zur Amtshilfe verpflichtete Verwaltungen des Bundes, sofern sie diese Aufgaben durch Bundesbeamte wahrnehmen. (2) Die in Absatz 1 genannten Verwaltungen und Unternehmen und die nach § 111 Absatz 4 der <mark>Abgabenordnung</mark> zu Zollhilfsorganen bestellten Unternehmen haben",
         "location": "art-z19"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
+       "name": "Verordnung zur Durchführung des Energiesteuergesetzes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753",
+        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753",
+        "legislationDate": "2006-07-31",
+        "datePublished": "2006-08-03",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2006 1753"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "EnergieStV",
+       "alternateName": "Energiesteuer-Durchführungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 53 Erteilung der Erlaubnis",
+        "text": "Die Erlaubnis kann mit Nebenbestimmungen nach § 120 Absatz 2 der <mark>Abgabenordnung</mark> verbunden werden.",
+        "location": "art-z53"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 78 Anmeldung für Lieferer, Entnehmer und Bezieher von Erdgas",
+        "text": "Der Anmeldung sind beizufügen: ein Verzeichnis der Betriebsstätten im Steuergebiet nach § 12 der <mark>Abgabenordnung</mark>,eine Darstellung der Mengenermittlung und -abrechnung,von Unternehmen, die in das Handels-, Genossenschafts- oder Vereinsregister eingetragen sind, ein Registerauszug nach dem neuesten Stand,gegebenenfalls eine",
+        "location": "art-z78"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 84 Erteilung, Überprüfung und Erlöschen der Erlaubnis",
+        "text": "Die Erlaubnis kann mit Nebenbestimmungen nach § 120 Absatz 2 der <mark>Abgabenordnung</mark> verbunden werden. (2) Für die Überprüfung und das Erlöschen der Erlaubnis gilt § 54 sinngemäß.",
+        "location": "art-z84"
        }
       ]
      },
@@ -5029,73 +5096,6 @@
         "name": "§ 9 Datenübermittlung an das Bundeszentralamt für Steuern",
         "text": "zur Zuteilung der Identifikationsnummer oder zur Aktualisierung der beim Bundeszentralamt für Steuern gemäß § 139b Absatz 3 der <mark>Abgabenordnung</mark> gespeicherten Daten unverzüglich folgende Daten (BZSt-Mitteilung): Blattnummer des DSMeld (Datenblatt) 1.Familienname0101a bis 0105a, 2.Geburtsname0201a, 3.Vornamen0301, 0302, 4",
         "location": "art-z9"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
-       "name": "Verordnung zur Durchführung des Energiesteuergesetzes",
-       "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753",
-        "legislationIdentifier": "eli/bund/bgbl-1/2006/s1753",
-        "legislationDate": "2006-07-31",
-        "datePublished": "2006-08-03",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2006 1753"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "EnergieStV",
-       "alternateName": "Energiesteuer-Durchführungsverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2006/s1753/2026-05-01/1/deu/2026-04-30.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 53 Erteilung der Erlaubnis",
-        "text": "Die Erlaubnis kann mit Nebenbestimmungen nach § 120 Absatz 2 der <mark>Abgabenordnung</mark> verbunden werden.",
-        "location": "art-z53"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 78 Anmeldung für Lieferer, Entnehmer und Bezieher von Erdgas",
-        "text": "Der Anmeldung sind beizufügen: ein Verzeichnis der Betriebsstätten im Steuergebiet nach § 12 der <mark>Abgabenordnung</mark>,eine Darstellung der Mengenermittlung und -abrechnung,von Unternehmen, die in das Handels-, Genossenschafts- oder Vereinsregister eingetragen sind, ein Registerauszug nach dem neuesten Stand,gegebenenfalls eine",
-        "location": "art-z78"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 84 Erteilung, Überprüfung und Erlöschen der Erlaubnis",
-        "text": "Die Erlaubnis kann mit Nebenbestimmungen nach § 120 Absatz 2 der <mark>Abgabenordnung</mark> verbunden werden. (2) Für die Überprüfung und das Erlöschen der Erlaubnis gilt § 54 sinngemäß.",
-        "location": "art-z84"
        }
       ]
      },
@@ -6401,67 +6401,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu",
-       "name": "Verordnung über den Zeitpunkt der Einführung der elektronischen Aktenführung in Strafsachen im Geschäftsbereich des Bundes",
-       "legislationIdentifier": "eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355",
-        "legislationIdentifier": "eli/bund/bgbl-1/2020/s2355",
-        "legislationDate": "2020-11-09",
-        "datePublished": "2020-11-13",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2020 2355"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "BEStrafAktEV",
-       "alternateName": "Bundes-E-Strafakten-Einführungsverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 1 Anwendungsbereich",
-        "text": "Diese Verordnung gilt für die Führung elektronischer Strafverfahrensakten bei dem Generalbundesanwalt beim Bundesgerichtshof,den Finanzbehörden des Bundes in Ermittlungsverfahren nach § 386 Absatz 2 der <mark>Abgabenordnung</mark> und § 14a des Schwarzarbeitsbekämpfungsgesetzes unddem Bundesgerichtshof.",
-        "location": "art-z1"
-       },
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 2 Einführung der elektronischen Akte",
-        "text": "November 2020 elektronisch geführt werden. (2) Die Präsidentin oder der Präsident des Bundesgerichtshofs, der Generalbundesanwalt beim Bundesgerichtshof sowie vorbehaltlich des Satzes 2 die jeweilige Leiterin oder der jeweilige Leiter derjenigen Finanzbehörden des Bundes, die Ermittlungsverfahren nach § 386 Absatz 2 der <mark>Abgabenordnung</mark>",
-        "location": "art-z2"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/2009/s3302/2023-02-13/1/deu",
        "name": "Verordnung zur Durchführung des Schaumwein- und Zwischenerzeugnissteuergesetzes",
        "legislationIdentifier": "eli/bund/bgbl-1/2009/s3302/2023-02-13/1/deu",
@@ -6522,6 +6461,67 @@
         "name": "§ 49 Registrierter Versender",
         "text": "Die Erlaubnis kann mit Nebenbestimmungen nach § 120 der <mark>Abgabenordnung</mark> versehen werden. (3) Für das Führen eines Beleghefts sowie für die Aufzeichnungen gilt § 47 entsprechend.",
         "location": "art-z49"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu",
+       "name": "Verordnung über den Zeitpunkt der Einführung der elektronischen Aktenführung in Strafsachen im Geschäftsbereich des Bundes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355",
+        "legislationIdentifier": "eli/bund/bgbl-1/2020/s2355",
+        "legislationDate": "2020-11-09",
+        "datePublished": "2020-11-13",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2020 2355"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "BEStrafAktEV",
+       "alternateName": "Bundes-E-Strafakten-Einführungsverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2020/s2355/2020-11-09/1/deu/2020-11-13.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 1 Anwendungsbereich",
+        "text": "Diese Verordnung gilt für die Führung elektronischer Strafverfahrensakten bei dem Generalbundesanwalt beim Bundesgerichtshof,den Finanzbehörden des Bundes in Ermittlungsverfahren nach § 386 Absatz 2 der <mark>Abgabenordnung</mark> und § 14a des Schwarzarbeitsbekämpfungsgesetzes unddem Bundesgerichtshof.",
+        "location": "art-z1"
+       },
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Einführung der elektronischen Akte",
+        "text": "November 2020 elektronisch geführt werden. (2) Die Präsidentin oder der Präsident des Bundesgerichtshofs, der Generalbundesanwalt beim Bundesgerichtshof sowie vorbehaltlich des Satzes 2 die jeweilige Leiterin oder der jeweilige Leiter derjenigen Finanzbehörden des Bundes, die Ermittlungsverfahren nach § 386 Absatz 2 der <mark>Abgabenordnung</mark>",
+        "location": "art-z2"
        }
       ]
      },
@@ -7169,61 +7169,6 @@
       "@type": "SearchResult",
       "item": {
        "@type": "Legislation",
-       "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu",
-       "name": "Verordnung über den automatisierten Abruf von Kindergelddaten durch die Bezügestellen des öffentlichen Dienstes",
-       "legislationIdentifier": "eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu",
-       "exampleOfWork": {
-        "@type": "Legislation",
-        "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527",
-        "legislationIdentifier": "eli/bund/bgbl-1/2018/s527",
-        "legislationDate": "2018-04-24",
-        "datePublished": "2018-04-30",
-        "isPartOf": {
-         "@type": "PublicationIssue",
-         "name": "BGBl I, 2018 527"
-        }
-       },
-       "temporalCoverage": null,
-       "abbreviation": "KiGAbV",
-       "alternateName": "Kindergelddaten-Abrufverordnung",
-       "legislationLegalForce": "InForce",
-       "encoding": [
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1/html",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1.html",
-         "encodingFormat": "text/html",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1/xml",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1.xml",
-         "encodingFormat": "application/xml",
-         "inLanguage": "de"
-        },
-        {
-         "@type": "LegislationObject",
-         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/zip",
-         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27.zip",
-         "encodingFormat": "application/zip",
-         "inLanguage": "de"
-        }
-       ]
-      },
-      "textMatches": [
-       {
-        "@type": "SearchResultMatch",
-        "name": "§ 2 Abrufberechtigung",
-        "text": "Betracht für Personen als Beschäftigte der in § 1 genannten Bezügestellen, sofern Bestandteile der Bezüge davon abhängen, dass Kindergeld nach dem Einkommensteuergesetz zusteht oderKindergeld ohne Berücksichtigung der §§ 64 und 65 des Einkommensteuergesetzes zustünde. (2) Personen nach Absatz 1 sind Amtsträger (§ 7 der <mark>Abgabenordnung</mark>",
-        "location": "art-z2"
-       }
-      ]
-     },
-     {
-      "@type": "SearchResult",
-      "item": {
-       "@type": "Legislation",
        "@id": "/v1/legislation/eli/bund/bgbl-1/1971/s1234/2020-06-27/1/deu",
        "name": "Gesetz zur Verminderung von Luftverunreinigungen durch Bleiverbindungen in Ottokraftstoffen für Kraftfahrzeugmotore",
        "legislationIdentifier": "eli/bund/bgbl-1/1971/s1234/2020-06-27/1/deu",
@@ -7278,6 +7223,61 @@
         "name": "§ 5 Überwachung",
         "text": "Die Kosten, die bei der Entnahme der Proben und deren Untersuchung entstehen, trägt der Auskunftspflichtige. (4) Auf die nach den Absätzen 1 und 3 erlangten Kenntnisse und Unterlagen sind §§ 93, 97, 105 Abs. 1, § 111 Abs. 5 in Verbindung mit § 105 Abs. 1 sowie § 116 Abs. 1 der <mark>Abgabenordnung</mark> nicht anzuwenden.",
         "location": "art-z5"
+       }
+      ]
+     },
+     {
+      "@type": "SearchResult",
+      "item": {
+       "@type": "Legislation",
+       "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu",
+       "name": "Verordnung über den automatisierten Abruf von Kindergelddaten durch die Bezügestellen des öffentlichen Dienstes",
+       "legislationIdentifier": "eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu",
+       "exampleOfWork": {
+        "@type": "Legislation",
+        "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527",
+        "legislationIdentifier": "eli/bund/bgbl-1/2018/s527",
+        "legislationDate": "2018-04-24",
+        "datePublished": "2018-04-30",
+        "isPartOf": {
+         "@type": "PublicationIssue",
+         "name": "BGBl I, 2018 527"
+        }
+       },
+       "temporalCoverage": null,
+       "abbreviation": "KiGAbV",
+       "alternateName": "Kindergelddaten-Abrufverordnung",
+       "legislationLegalForce": "InForce",
+       "encoding": [
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1/html",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1.html",
+         "encodingFormat": "text/html",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1/xml",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/regelungstext-verkuendung-1.xml",
+         "encodingFormat": "application/xml",
+         "inLanguage": "de"
+        },
+        {
+         "@type": "LegislationObject",
+         "@id": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27/zip",
+         "contentUrl": "/v1/legislation/eli/bund/bgbl-1/2018/s527/2018-05-26/1/deu/2018-11-27.zip",
+         "encodingFormat": "application/zip",
+         "inLanguage": "de"
+        }
+       ]
+      },
+      "textMatches": [
+       {
+        "@type": "SearchResultMatch",
+        "name": "§ 2 Abrufberechtigung",
+        "text": "Betracht für Personen als Beschäftigte der in § 1 genannten Bezügestellen, sofern Bestandteile der Bezüge davon abhängen, dass Kindergeld nach dem Einkommensteuergesetz zusteht oderKindergeld ohne Berücksichtigung der §§ 64 und 65 des Einkommensteuergesetzes zustünde. (2) Personen nach Absatz 1 sind Amtsträger (§ 7 der <mark>Abgabenordnung</mark>",
+        "location": "art-z2"
        }
       ]
      },
