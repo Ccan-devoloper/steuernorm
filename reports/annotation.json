@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-01T09:25:02.836Z",
+  "erzeugt": "2026-09-01T10:03:43.990Z",
   "format": 5,
   "modelle": [
     "nur-syntax"
@@ -9,10 +9,10 @@
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 5,
-      "uebernommen": 498,
+      "bearbeitet": 0,
+      "uebernommen": 503,
       "markierbar": 495,
-      "abgelehnt": 7,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -45,8 +45,8 @@
     {
       "abk": "UStG",
       "normen": 93,
-      "bearbeitet": 2,
-      "uebernommen": 91,
+      "bearbeitet": 0,
+      "uebernommen": 93,
       "markierbar": 86,
       "abgelehnt": 0,
       "vollstaendig": true
@@ -81,10 +81,10 @@
     {
       "abk": "FGO",
       "normen": 173,
-      "bearbeitet": 2,
-      "uebernommen": 171,
+      "bearbeitet": 0,
+      "uebernommen": 173,
       "markierbar": 166,
-      "abgelehnt": 2,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
