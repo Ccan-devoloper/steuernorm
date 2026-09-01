@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-31T11:34:32.039Z",
+  "aktualisiert": "2026-09-01T09:25:03.126Z",
   "quelle": "https://www.gesetze-im-internet.de/ao_1977/",
   "stand": [
     {
@@ -32761,18 +32761,18 @@
         {
           "pfad": "Abs. 2 Satz 1",
           "von": 447,
-          "bis": 631,
+          "bis": 634,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
               "art": "tb",
-              "text": "Bei Personen und Vereinigungen im Sinne der §§ 3 und 4 Nummer 11 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
+              "text": "Bei Personen und Vereinigungen im Sinne der §§ 3, 4 und 4c Absatz 2 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 447,
-              "laenge": 131,
+              "laenge": 134,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -32788,17 +32788,17 @@
               "teile": [
                 {
                   "text": "wird eine ordnungsgemäße Bevollmächtigung",
-                  "von": 580,
+                  "von": 583,
                   "laenge": 41
                 },
                 {
                   "text": "vermutet",
-                  "von": 622,
+                  "von": 625,
                   "laenge": 8
                 }
               ],
               "pfad": "Abs. 2 Satz 1",
-              "von": 580,
+              "von": 583,
               "laenge": 41,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32812,8 +32812,8 @@
         },
         {
           "pfad": "Abs. 2 Satz 2",
-          "von": 632,
-          "bis": 811,
+          "von": 635,
+          "bis": 814,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -32823,7 +32823,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 632,
+              "von": 635,
               "laenge": 65,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32840,17 +32840,17 @@
               "teile": [
                 {
                   "text": "gespeicherten Daten wird eine ordnungsgemäße Bevollmächtigung nur nach Maßgabe des § 80a Absatz 2 und 3",
-                  "von": 698,
+                  "von": 701,
                   "laenge": 103
                 },
                 {
                   "text": "vermutet",
-                  "von": 802,
+                  "von": 805,
                   "laenge": 8
                 }
               ],
               "pfad": "Abs. 2 Satz 2",
-              "von": 698,
+              "von": 701,
               "laenge": 103,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32864,8 +32864,8 @@
         },
         {
           "pfad": "Abs. 3 Satz 1",
-          "von": 812,
-          "bis": 889,
+          "von": 815,
+          "bis": 892,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -32876,17 +32876,17 @@
               "teile": [
                 {
                   "text": "kann auch ohne Anlass den Nachweis der Vollmacht",
-                  "von": 830,
+                  "von": 833,
                   "laenge": 48
                 },
                 {
                   "text": "verlangen",
-                  "von": 879,
+                  "von": 882,
                   "laenge": 9
                 }
               ],
               "pfad": "Abs. 3 Satz 1",
-              "von": 830,
+              "von": 833,
               "laenge": 48,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32900,8 +32900,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 1",
-          "von": 890,
-          "bis": 1076,
+          "von": 893,
+          "bis": 1079,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -32912,17 +32912,17 @@
               "teile": [
                 {
                   "text": "wird weder durch den Tod des Vollmachtgebers noch durch eine Veränderung in seiner Handlungsfähigkeit oder durch eine Veränderung seiner gesetzlichen Vertretung",
-                  "von": 904,
+                  "von": 907,
                   "laenge": 160
                 },
                 {
                   "text": "aufgehoben",
-                  "von": 1065,
+                  "von": 1068,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 4 Satz 1",
-              "von": 904,
+              "von": 907,
               "laenge": 160,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32936,8 +32936,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 2",
-          "von": 1077,
-          "bis": 1220,
+          "von": 1080,
+          "bis": 1223,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -32947,7 +32947,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 2",
-              "von": 1097,
+              "von": 1100,
               "laenge": 10,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -32963,7 +32963,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 2",
-              "von": 1109,
+              "von": 1112,
               "laenge": 110,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -32977,8 +32977,8 @@
         },
         {
           "pfad": "Abs. 5 Satz 1",
-          "von": 1221,
-          "bis": 1319,
+          "von": 1224,
+          "bis": 1322,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -32988,7 +32988,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
-              "von": 1221,
+              "von": 1224,
               "laenge": 51,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33004,7 +33004,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
-              "von": 1277,
+              "von": 1280,
               "laenge": 41,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33018,8 +33018,8 @@
         },
         {
           "pfad": "Abs. 5 Satz 2",
-          "von": 1320,
-          "bis": 1410,
+          "von": 1323,
+          "bis": 1413,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33029,7 +33029,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 2",
-              "von": 1324,
+              "von": 1327,
               "laenge": 42,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33045,7 +33045,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 2",
-              "von": 1368,
+              "von": 1371,
               "laenge": 41,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33059,8 +33059,8 @@
         },
         {
           "pfad": "Abs. 5 Satz 3",
-          "von": 1411,
-          "bis": 1508,
+          "von": 1414,
+          "bis": 1511,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -33070,7 +33070,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 3",
-              "von": 1411,
+              "von": 1414,
               "laenge": 96,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33084,8 +33084,8 @@
         },
         {
           "pfad": "Abs. 5 Satz 4",
-          "von": 1509,
-          "bis": 1609,
+          "von": 1512,
+          "bis": 1612,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33095,7 +33095,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 4",
-              "von": 1509,
+              "von": 1512,
               "laenge": 66,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33111,7 +33111,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 4",
-              "von": 1576,
+              "von": 1579,
               "laenge": 32,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33125,8 +33125,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 1",
-          "von": 1610,
-          "bis": 1696,
+          "von": 1613,
+          "bis": 1699,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -33137,17 +33137,17 @@
               "teile": [
                 {
                   "text": "kann zu Verhandlungen und Besprechungen mit einem Beistand",
-                  "von": 1626,
+                  "von": 1629,
                   "laenge": 58
                 },
                 {
                   "text": "erscheinen",
-                  "von": 1685,
+                  "von": 1688,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 6 Satz 1",
-              "von": 1626,
+              "von": 1629,
               "laenge": 58,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33161,8 +33161,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 2",
-          "von": 1697,
-          "bis": 1819,
+          "von": 1700,
+          "bis": 1822,
           "typ": "fiktion",
           "junktor": null,
           "elemente": [
@@ -33172,7 +33172,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 2",
-              "von": 1697,
+              "von": 1700,
               "laenge": 33,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33188,7 +33188,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 2",
-              "von": 1731,
+              "von": 1734,
               "laenge": 40,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33204,7 +33204,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 2",
-              "von": 1773,
+              "von": 1776,
               "laenge": 45,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33218,8 +33218,8 @@
         },
         {
           "pfad": "Abs. 7 Satz 1",
-          "von": 1820,
-          "bis": 2072,
+          "von": 1823,
+          "bis": 2075,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33229,7 +33229,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 1820,
+              "von": 1823,
               "laenge": 72,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33245,7 +33245,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 1894,
+              "von": 1897,
               "laenge": 9,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33261,7 +33261,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 1904,
+              "von": 1907,
               "laenge": 167,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33275,8 +33275,8 @@
         },
         {
           "pfad": "Abs. 7 Satz 2",
-          "von": 2073,
-          "bis": 2156,
+          "von": 2076,
+          "bis": 2159,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -33286,7 +33286,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 2",
-              "von": 2091,
+              "von": 2094,
               "laenge": 55,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33300,8 +33300,8 @@
         },
         {
           "pfad": "Abs. 7 Satz 3",
-          "von": 2157,
-          "bis": 2269,
+          "von": 2160,
+          "bis": 2272,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -33312,17 +33312,17 @@
               "teile": [
                 {
                   "text": "ist befugt, andere Finanzbehörden über die Zurückweisung des Bevollmächtigten",
-                  "von": 2175,
+                  "von": 2178,
                   "laenge": 77
                 },
                 {
                   "text": "zu unterrichten",
-                  "von": 2253,
+                  "von": 2256,
                   "laenge": 15
                 }
               ],
               "pfad": "Abs. 7 Satz 3",
-              "von": 2175,
+              "von": 2178,
               "laenge": 77,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33336,8 +33336,8 @@
         },
         {
           "pfad": "Abs. 8 Satz 1",
-          "von": 2270,
-          "bis": 2415,
+          "von": 2273,
+          "bis": 2418,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33347,7 +33347,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 1",
-              "von": 2291,
+              "von": 2294,
               "laenge": 90,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33363,7 +33363,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 1",
-              "von": 2383,
+              "von": 2386,
               "laenge": 31,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33377,16 +33377,16 @@
         },
         {
           "pfad": "Abs. 8 Satz 2",
-          "von": 2416,
-          "bis": 2757,
+          "von": 2419,
+          "bis": 2764,
           "typ": "aussage",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 8 Satz 3",
-          "von": 2758,
-          "bis": 2841,
+          "von": 2765,
+          "bis": 2848,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -33396,7 +33396,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 8 Satz 3",
-              "von": 2776,
+              "von": 2783,
               "laenge": 55,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33410,8 +33410,8 @@
         },
         {
           "pfad": "Abs. 9 Satz 1",
-          "von": 2842,
-          "bis": 3129,
+          "von": 2849,
+          "bis": 3136,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33421,7 +33421,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 1",
-              "von": 2842,
+              "von": 2849,
               "laenge": 64,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33437,7 +33437,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 1",
-              "von": 2908,
+              "von": 2915,
               "laenge": 9,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33453,7 +33453,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 1",
-              "von": 2918,
+              "von": 2925,
               "laenge": 169,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33469,7 +33469,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 1",
-              "von": 3089,
+              "von": 3096,
               "laenge": 21,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33485,7 +33485,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 1",
-              "von": 3111,
+              "von": 3118,
               "laenge": 17,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33499,8 +33499,8 @@
         },
         {
           "pfad": "Abs. 9 Satz 2",
-          "von": 3130,
-          "bis": 3334,
+          "von": 3137,
+          "bis": 3341,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33510,7 +33510,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 2",
-              "von": 3130,
+              "von": 3137,
               "laenge": 6,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33526,7 +33526,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 2",
-              "von": 3137,
+              "von": 3144,
               "laenge": 87,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33542,7 +33542,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 2",
-              "von": 3226,
+              "von": 3233,
               "laenge": 66,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33558,7 +33558,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 2",
-              "von": 3294,
+              "von": 3301,
               "laenge": 21,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33574,7 +33574,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 9 Satz 2",
-              "von": 3316,
+              "von": 3323,
               "laenge": 17,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33588,8 +33588,8 @@
         },
         {
           "pfad": "Abs. 10 Satz 1",
-          "von": 3335,
-          "bis": 3483,
+          "von": 3342,
+          "bis": 3490,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -33599,7 +33599,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 10 Satz 1",
-              "von": 3335,
+              "von": 3342,
               "laenge": 131,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -33615,7 +33615,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 10 Satz 1",
-              "von": 3468,
+              "von": 3475,
               "laenge": 14,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -33720,7 +33720,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Bei Personen und Vereinigungen im Sinne der §§ 3 und 4 Nummer 11 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
+                  "t": "Bei Personen und Vereinigungen im Sinne der §§ 3, 4 und 4c Absatz 2 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -34213,7 +34213,7 @@
       "tb": [
         "sofern sich aus ihrem Inhalt nicht etwas anderes ergibt",
         "wenn er ihr zugeht",
-        "Bei Personen und Vereinigungen im Sinne der §§ 3 und 4 Nummer 11 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
+        "Bei Personen und Vereinigungen im Sinne der §§ 3, 4 und 4c Absatz 2 des Steuerberatungsgesetzes, die für den Steuerpflichtigen handeln",
         "Für den Abruf von bei den Landesfinanzbehörden zum Vollmachtgeber",
         "wenn er für den Rechtsnachfolger im Verwaltungsverfahren auftritt, dessen Vollmacht auf Verlangen nachzuweisen",
         "Ist für das Verfahren ein Bevollmächtigter bestellt",
@@ -34272,9 +34272,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "a404ff0cd516941ec8ab18eb369e757b91befddc2c9ff509ea2a62269827e2be",
+      "text_hash": "9c8563c9d5d0fa7a73b1d297224df62143e8613907656ca0907f1303bcc48695",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.458Z"
+      "aktualisiert": "2026-09-01T09:25:02.985Z"
     },
     "81": {
       "typ": "gemischt",
@@ -68764,26 +68764,27 @@
       "aktualisiert": "2026-08-18T10:33:47.809Z"
     },
     "142": {
-      "typ": "aussage",
+      "typ": "gemischt",
       "typen": [
-        "aussage"
+        "aussage",
+        "konditional"
       ],
       "saetze": [
         {
-          "pfad": "Satz 1",
+          "pfad": "Abs. 1 Satz 1",
           "von": 0,
-          "bis": 204,
+          "bis": 211,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "tb",
-              "text": "Land- und Forstwirte, die nach § 141 Absatz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
+              "text": "Land- und Forstwirte, die nach § 141 Absatz 1 Satz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 1",
+              "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 95,
+              "laenge": 102,
               "konfidenz": 0.54,
               "stimmen": 0,
               "laeufe": 0,
@@ -68799,17 +68800,17 @@
               "teile": [
                 {
                   "text": "haben neben den jährlichen Bestandsaufnahmen und den jährlichen Abschlüssen ein Anbauverzeichnis",
-                  "von": 97,
+                  "von": 104,
                   "laenge": 96
                 },
                 {
                   "text": "zu führen",
-                  "von": 194,
+                  "von": 201,
                   "laenge": 9
                 }
               ],
-              "pfad": "Satz 1",
-              "von": 97,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 104,
               "laenge": 96,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -68822,9 +68823,9 @@
           ]
         },
         {
-          "pfad": "Satz 2",
-          "von": 205,
-          "bis": 353,
+          "pfad": "Abs. 1 Satz 2",
+          "von": 212,
+          "bis": 360,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -68833,8 +68834,8 @@
               "text": "In dem Anbauverzeichnis",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 2",
-              "von": 205,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 212,
               "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -68849,8 +68850,8 @@
               "text": "nachzuweisen, mit welchen Fruchtarten die selbstbewirtschafteten Flächen im abgelaufenen Wirtschaftsjahr bestellt waren",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 2",
-              "von": 233,
+              "pfad": "Abs. 1 Satz 2",
+              "von": 240,
               "laenge": 119,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -68861,11 +68862,191 @@
               "grund": "Nachfeld trägt die Voraussetzungen"
             }
           ]
+        },
+        {
+          "pfad": "Abs. 2 Satz 1",
+          "von": 361,
+          "bis": 593,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Bei forstwirtschaftlichen Betrieben",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 361,
+              "laenge": 35,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "kann auf das Führen eines Anbauverzeichnisses nach Absatz 1 verzichtet werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 397,
+              "laenge": 77,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "wenn ein Forstbetriebswerk oder ein amtlich anerkanntes Betriebsgutachten für das jeweilige Wirtschaftsjahr vorliegt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 476,
+              "laenge": 116,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 3 Satz 1",
+          "von": 594,
+          "bis": 834,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Bei landwirtschaftlichen Betrieben",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 594,
+              "laenge": 34,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "kann die zuständige Finanzbehörde von der Pflicht zur Führung eines Anbauverzeichnisses nach Absatz 1 befreien",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 629,
+              "laenge": 110,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "wenn ein geeigneter Flächen- und Nutzungsnachweis für das jeweilige Wirtschaftsjahr vorliegt",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 1",
+              "von": 741,
+              "laenge": 92,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 3 Satz 2",
+          "von": 835,
+          "bis": 927,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "In dem Flächen- und Nutzungsnachweis",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 835,
+              "laenge": 36,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "müssen die Angaben nach Absatz 1 Satz 2 enthalten sein",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 2",
+              "von": 872,
+              "laenge": 54,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 3 Satz 3",
+          "von": 928,
+          "bis": 965,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "kann widerrufen werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 942,
+              "laenge": 22,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
+            }
+          ]
         }
       ],
       "schema": [
         {
-          "absatz": "",
+          "absatz": "Abs. 1",
           "typ": "aussage",
           "rolle": "Anordnung",
           "schritte": [
@@ -68877,8 +69058,8 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Land- und Forstwirte, die nach § 141 Absatz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
-                  "pfad": "Satz 1",
+                  "t": "Land- und Forstwirte, die nach § 141 Absatz 1 Satz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
+                  "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": false
@@ -68886,7 +69067,7 @@
                 {
                   "n": "2.",
                   "t": "nachzuweisen, mit welchen Fruchtarten die selbstbewirtschafteten Flächen im abgelaufenen Wirtschaftsjahr bestellt waren",
-                  "pfad": "Satz 2",
+                  "pfad": "Abs. 1 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -68901,7 +69082,7 @@
                 {
                   "n": "1.",
                   "t": "haben neben den jährlichen Bestandsaufnahmen und den jährlichen Abschlüssen ein Anbauverzeichnis … zu führen",
-                  "pfad": "Satz 1",
+                  "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": true
@@ -68909,7 +69090,123 @@
                 {
                   "n": "2.",
                   "t": "In dem Anbauverzeichnis",
-                  "pfad": "Satz 2",
+                  "pfad": "Abs. 1 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 2",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Bei forstwirtschaftlichen Betrieben",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "wenn ein Forstbetriebswerk oder ein amtlich anerkanntes Betriebsgutachten für das jeweilige Wirtschaftsjahr vorliegt",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "kann auf das Führen eines Anbauverzeichnisses nach Absatz 1 verzichtet werden",
+                  "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 3",
+          "typ": "aussage",
+          "rolle": "Anordnung",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzungen (kumulativ)",
+              "junktor": "und",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Bei landwirtschaftlichen Betrieben",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "wenn ein geeigneter Flächen- und Nutzungsnachweis für das jeweilige Wirtschaftsjahr vorliegt",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "In dem Flächen- und Nutzungsnachweis",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "kann die zuständige Finanzbehörde von der Pflicht zur Führung eines Anbauverzeichnisses nach Absatz 1 befreien",
+                  "pfad": "Abs. 3 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "müssen die Angaben nach Absatz 1 Satz 2 enthalten sein",
+                  "pfad": "Abs. 3 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "kann widerrufen werden",
+                  "pfad": "Abs. 3 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -68920,18 +69217,27 @@
         }
       ],
       "tb": [
-        "Land- und Forstwirte, die nach § 141 Absatz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
-        "nachzuweisen, mit welchen Fruchtarten die selbstbewirtschafteten Flächen im abgelaufenen Wirtschaftsjahr bestellt waren"
+        "Land- und Forstwirte, die nach § 141 Absatz 1 Satz 1 Nummer 1 oder 5 zur Buchführung verpflichtet sind",
+        "nachzuweisen, mit welchen Fruchtarten die selbstbewirtschafteten Flächen im abgelaufenen Wirtschaftsjahr bestellt waren",
+        "Bei forstwirtschaftlichen Betrieben",
+        "wenn ein Forstbetriebswerk oder ein amtlich anerkanntes Betriebsgutachten für das jeweilige Wirtschaftsjahr vorliegt",
+        "Bei landwirtschaftlichen Betrieben",
+        "wenn ein geeigneter Flächen- und Nutzungsnachweis für das jeweilige Wirtschaftsjahr vorliegt",
+        "In dem Flächen- und Nutzungsnachweis"
       ],
       "rf": [
         "haben neben den jährlichen Bestandsaufnahmen und den jährlichen Abschlüssen ein Anbauverzeichnis",
-        "In dem Anbauverzeichnis"
+        "In dem Anbauverzeichnis",
+        "kann auf das Führen eines Anbauverzeichnisses nach Absatz 1 verzichtet werden",
+        "kann die zuständige Finanzbehörde von der Pflicht zur Führung eines Anbauverzeichnisses nach Absatz 1 befreien",
+        "müssen die Angaben nach Absatz 1 Satz 2 enthalten sein",
+        "kann widerrufen werden"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.585,
+      "konfidenz": 0.595,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -68939,9 +69245,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "d45c4a65189f8355b97f0bf17762a7b3097ad87d2b83bab7e1e9db72a619af16",
+      "text_hash": "20fa05de85fe4bade3a0848ab3abe16799f69805d45d1334b8767fdf0d956fde",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.809Z"
+      "aktualisiert": "2026-09-01T09:25:03.045Z"
     },
     "143": {
       "typ": "gemischt",
@@ -73305,18 +73611,18 @@
         {
           "pfad": "Abs. 6 Satz 4",
           "von": 4079,
-          "bis": 4286,
+          "bis": 4292,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
             {
               "art": "tb",
-              "text": "In Fällen des Satzes 3",
+              "text": "In den Fällen des Satzes 2",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 4",
               "von": 4079,
-              "laenge": 22,
+              "laenge": 26,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -73327,23 +73633,23 @@
             },
             {
               "art": "rf",
-              "text": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 und § 4 Nummer 1 und 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
-              "anzeige": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 und § 4 Nummer 1 und 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist … anzukündigen",
+              "text": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 Satz 1 und § 4c Absatz 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
+              "anzeige": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 Satz 1 und § 4c Absatz 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist … anzukündigen",
               "teile": [
                 {
-                  "text": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 und § 4 Nummer 1 und 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
-                  "von": 4102,
-                  "laenge": 170
+                  "text": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 Satz 1 und § 4c Absatz 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
+                  "von": 4106,
+                  "laenge": 172
                 },
                 {
                   "text": "anzukündigen",
-                  "von": 4273,
+                  "von": 4279,
                   "laenge": 12
                 }
               ],
               "pfad": "Abs. 6 Satz 4",
-              "von": 4102,
-              "laenge": 170,
+              "von": 4106,
+              "laenge": 172,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -73356,8 +73662,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 5",
-          "von": 4287,
-          "bis": 4782,
+          "von": 4293,
+          "bis": 4788,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -73367,7 +73673,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 5",
-              "von": 4287,
+              "von": 4293,
               "laenge": 55,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -73383,7 +73689,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 5",
-              "von": 4344,
+              "von": 4350,
               "laenge": 437,
               "konfidenz": 0.42,
               "stimmen": 0,
@@ -73397,8 +73703,8 @@
         },
         {
           "pfad": "Abs. 7 Satz 1",
-          "von": 4783,
-          "bis": 4974,
+          "von": 4789,
+          "bis": 4980,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -73408,7 +73714,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 4783,
+              "von": 4789,
               "laenge": 65,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -73424,7 +73730,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 1",
-              "von": 4849,
+              "von": 4855,
               "laenge": 124,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -73438,8 +73744,8 @@
         },
         {
           "pfad": "Abs. 7 Satz 2",
-          "von": 4975,
-          "bis": 5225,
+          "von": 4981,
+          "bis": 5231,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -73449,7 +73755,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 7 Satz 2",
-              "von": 4993,
+              "von": 4999,
               "laenge": 231,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -73888,7 +74194,7 @@
                 },
                 {
                   "n": "6.",
-                  "t": "In Fällen des Satzes 3",
+                  "t": "In den Fällen des Satzes 2",
                   "pfad": "Abs. 6 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -73983,7 +74289,7 @@
                 },
                 {
                   "n": "10.",
-                  "t": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 und § 4 Nummer 1 und 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist … anzukündigen",
+                  "t": "hat der mit der Außenprüfung betraute Amtsträger den in § 3 Satz 1 und § 4c Absatz 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist … anzukündigen",
                   "pfad": "Abs. 6 Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -74072,7 +74378,7 @@
         "der Finanzbehörde Einsicht in die für den Steuerpflichtigen",
         "diese Daten nach den Vorgaben der Finanzbehörde maschinell",
         "ihr nach ihren Vorgaben die für den Steuerpflichtigen",
-        "In Fällen des Satzes 3",
+        "In den Fällen des Satzes 2",
         "Sofern noch nicht mit einer Außenprüfung begonnen wurde",
         "Die Verarbeitung und Aufbewahrung der nach Absatz 6 zur Verfügung"
       ],
@@ -74097,7 +74403,7 @@
         "auszuwerten",
         "gespeicherten Daten in einem maschinell auswertbaren Format zu übertragen",
         "trägt der Steuerpflichtige",
-        "hat der mit der Außenprüfung betraute Amtsträger den in § 3 und § 4 Nummer 1 und 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
+        "hat der mit der Außenprüfung betraute Amtsträger den in § 3 Satz 1 und § 4c Absatz 2 des Steuerberatungsgesetzes bezeichneten Personen sein Erscheinen in angemessener Frist",
         "ist es im Fall eines Wechsels des Datenverarbeitungssystems oder im Fall der Auslagerung von aufzeichnungs- und aufbewahrungspflichtigen Daten aus dem Produktivsystem in ein anderes Datenverarbeitungssystem ausreichend, wenn der Steuerpflichtige nach Ablauf des fünften Kalenderjahres, das auf die Umstellung oder Auslagerung folgt, diese Daten ausschließlich auf einem maschinell lesbaren und maschinell auswertbaren Datenträger vorhält",
         "gestellten Daten ist auch auf mobilen Datenverarbeitungssystemen der Finanzbehörden unabhängig von deren Einsatzort zulässig",
         "darf die nach Absatz 6 zur Verfügung gestellten und gespeicherten Daten bis zur Unanfechtbarkeit der die Daten betreffenden Verwaltungsakte auch auf den mobilen Datenverarbeitungssystemen unabhängig von deren Einsatzort aufbewahren"
@@ -74118,9 +74424,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "f84809b7954d02b164810badbe19c224403a5c35129db81116873e33d194a99b",
+      "text_hash": "ad821053d362f3e3e9f69c05cbd073acfb3a676086855109ad56493471975ebd",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.830Z"
+      "aktualisiert": "2026-09-01T09:25:03.056Z"
     },
     "148": {
       "typ": "gemischt",
@@ -74562,7 +74868,7 @@
         {
           "pfad": "Abs. 3 Satz 1",
           "von": 969,
-          "bis": 1146,
+          "bis": 1153,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -74584,12 +74890,12 @@
             },
             {
               "art": "tb",
-              "text": "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 des Steuerberatungsgesetzes",
+              "text": "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 bis 4d des Steuerberatungsgesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
               "von": 986,
-              "laenge": 121,
+              "laenge": 128,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -74604,7 +74910,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 1108,
+              "von": 1115,
               "laenge": 38,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74618,8 +74924,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 1",
-          "von": 1150,
-          "bis": 1332,
+          "von": 1157,
+          "bis": 1339,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74630,7 +74936,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 1",
-              "von": 1150,
+              "von": 1157,
               "laenge": 181,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74644,8 +74950,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 2",
-          "von": 1336,
-          "bis": 1672,
+          "von": 1343,
+          "bis": 1679,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74653,8 +74959,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 3",
-          "von": 1676,
-          "bis": 1797,
+          "von": 1683,
+          "bis": 1804,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74665,7 +74971,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 3",
-              "von": 1676,
+              "von": 1683,
               "laenge": 120,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74679,8 +74985,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 4",
-          "von": 1801,
-          "bis": 1890,
+          "von": 1808,
+          "bis": 1897,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74691,7 +74997,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 4",
-              "von": 1801,
+              "von": 1808,
               "laenge": 88,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74705,16 +75011,16 @@
         },
         {
           "pfad": "Abs. 3 Nr. 5",
-          "von": 1894,
-          "bis": 2122,
+          "von": 1901,
+          "bis": 2129,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": []
         },
         {
           "pfad": "Abs. 3 Nr. 6",
-          "von": 2126,
-          "bis": 2315,
+          "von": 2133,
+          "bis": 2322,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74725,7 +75031,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 6",
-              "von": 2126,
+              "von": 2133,
               "laenge": 184,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74739,8 +75045,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 7",
-          "von": 2319,
-          "bis": 2421,
+          "von": 2326,
+          "bis": 2428,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74751,7 +75057,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 7",
-              "von": 2319,
+              "von": 2326,
               "laenge": 101,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74765,8 +75071,8 @@
         },
         {
           "pfad": "Abs. 3 Satz 1 (Teil 2)",
-          "von": 2422,
-          "bis": 2660,
+          "von": 2429,
+          "bis": 2667,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -74776,7 +75082,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1 (Teil 2)",
-              "von": 2425,
+              "von": 2432,
               "laenge": 22,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74792,7 +75098,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1 (Teil 2)",
-              "von": 2448,
+              "von": 2455,
               "laenge": 211,
               "konfidenz": 0.48,
               "stimmen": 0,
@@ -74806,8 +75112,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 1",
-          "von": 2661,
-          "bis": 2856,
+          "von": 2668,
+          "bis": 2863,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -74817,7 +75123,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
-              "von": 2675,
+              "von": 2682,
               "laenge": 175,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74831,8 +75137,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1",
-          "von": 2860,
-          "bis": 2897,
+          "von": 2867,
+          "bis": 2904,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -74843,7 +75149,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1",
-              "von": 2860,
+              "von": 2867,
               "laenge": 37,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74857,8 +75163,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. a",
-          "von": 2901,
-          "bis": 2996,
+          "von": 2908,
+          "bis": 3003,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -74868,7 +75174,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. a",
-              "von": 2901,
+              "von": 2908,
               "laenge": 62,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74884,7 +75190,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. a",
-              "von": 2969,
+              "von": 2976,
               "laenge": 26,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74898,8 +75204,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. b",
-          "von": 3000,
-          "bis": 3255,
+          "von": 3007,
+          "bis": 3262,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -74909,7 +75215,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. b",
-              "von": 3236,
+              "von": 3243,
               "laenge": 18,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -74923,8 +75229,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. c",
-          "von": 3259,
-          "bis": 3352,
+          "von": 3266,
+          "bis": 3359,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -74934,7 +75240,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. c",
-              "von": 3259,
+              "von": 3266,
               "laenge": 72,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -74950,7 +75256,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. c",
-              "von": 3332,
+              "von": 3339,
               "laenge": 19,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -74964,8 +75270,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. d",
-          "von": 3356,
-          "bis": 3532,
+          "von": 3363,
+          "bis": 3539,
           "typ": "tarif",
           "junktor": "oder",
           "elemente": [
@@ -74975,7 +75281,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. d",
-              "von": 3520,
+              "von": 3527,
               "laenge": 11,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -74989,8 +75295,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. e",
-          "von": 3536,
-          "bis": 3716,
+          "von": 3543,
+          "bis": 3723,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -75000,7 +75306,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. e",
-              "von": 3700,
+              "von": 3707,
               "laenge": 11,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -75014,8 +75320,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 1 Buchst. f",
-          "von": 3720,
-          "bis": 3753,
+          "von": 3727,
+          "bis": 3760,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -75025,7 +75331,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 1 Buchst. f",
-              "von": 3738,
+              "von": 3745,
               "laenge": 14,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -75039,8 +75345,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 2",
-          "von": 3757,
-          "bis": 3861,
+          "von": 3764,
+          "bis": 3868,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -75050,7 +75356,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 2",
-              "von": 3757,
+              "von": 3764,
               "laenge": 69,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75066,7 +75372,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 2",
-              "von": 3827,
+              "von": 3834,
               "laenge": 29,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75080,8 +75386,8 @@
         },
         {
           "pfad": "Abs. 4 Nr. 3",
-          "von": 3865,
-          "bis": 3946,
+          "von": 3872,
+          "bis": 3953,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -75091,7 +75397,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 3",
-              "von": 3865,
+              "von": 3872,
               "laenge": 61,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75107,7 +75413,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Nr. 3",
-              "von": 3927,
+              "von": 3934,
               "laenge": 18,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -75121,8 +75427,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 2",
-          "von": 3947,
-          "bis": 4051,
+          "von": 3954,
+          "bis": 4058,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75132,7 +75438,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 2",
-              "von": 3947,
+              "von": 3954,
               "laenge": 30,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75149,17 +75455,17 @@
               "teile": [
                 {
                   "text": "ist eine Frist von vier Monaten nach Bekanntgabe der Anordnung",
-                  "von": 3978,
+                  "von": 3985,
                   "laenge": 62
                 },
                 {
                   "text": "zu setzen",
-                  "von": 4041,
+                  "von": 4048,
                   "laenge": 9
                 }
               ],
               "pfad": "Abs. 4 Satz 2",
-              "von": 3978,
+              "von": 3985,
               "laenge": 62,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75173,8 +75479,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 3",
-          "von": 4052,
-          "bis": 4378,
+          "von": 4059,
+          "bis": 4385,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75184,7 +75490,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
-              "von": 4052,
+              "von": 4059,
               "laenge": 6,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -75200,7 +75506,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
-              "von": 4059,
+              "von": 4066,
               "laenge": 92,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75216,7 +75522,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 3",
-              "von": 4153,
+              "von": 4160,
               "laenge": 224,
               "konfidenz": 0.48,
               "stimmen": 0,
@@ -75230,8 +75536,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 4",
-          "von": 4379,
-          "bis": 4546,
+          "von": 4386,
+          "bis": 4553,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75241,7 +75547,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 4",
-              "von": 4379,
+              "von": 4386,
               "laenge": 31,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75258,17 +75564,17 @@
               "teile": [
                 {
                   "text": "ist darauf",
-                  "von": 4411,
+                  "von": 4418,
                   "laenge": 10
                 },
                 {
                   "text": "hinzuweisen",
-                  "von": 4422,
+                  "von": 4429,
                   "laenge": 11
                 }
               ],
               "pfad": "Abs. 4 Satz 4",
-              "von": 4411,
+              "von": 4418,
               "laenge": 10,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -75284,7 +75590,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 4",
-              "von": 4499,
+              "von": 4506,
               "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75300,7 +75606,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 4",
-              "von": 4523,
+              "von": 4530,
               "laenge": 22,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75314,8 +75620,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 5",
-          "von": 4547,
-          "bis": 4719,
+          "von": 4554,
+          "bis": 4726,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75325,7 +75631,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 5",
-              "von": 4547,
+              "von": 4554,
               "laenge": 35,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75341,7 +75647,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 5",
-              "von": 4583,
+              "von": 4590,
               "laenge": 135,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75355,8 +75661,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 6",
-          "von": 4720,
-          "bis": 4850,
+          "von": 4727,
+          "bis": 4857,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -75366,7 +75672,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 6",
-              "von": 4759,
+              "von": 4766,
               "laenge": 90,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75380,8 +75686,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 7",
-          "von": 4851,
-          "bis": 5077,
+          "von": 4858,
+          "bis": 5084,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75391,7 +75697,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 7",
-              "von": 4851,
+              "von": 4858,
               "laenge": 31,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75407,7 +75713,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 7",
-              "von": 4883,
+              "von": 4890,
               "laenge": 193,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75421,8 +75727,8 @@
         },
         {
           "pfad": "Abs. 5 Satz 1",
-          "von": 5078,
-          "bis": 5252,
+          "von": 5085,
+          "bis": 5259,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75432,7 +75738,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 5 Satz 1",
-              "von": 5078,
+              "von": 5085,
               "laenge": 173,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75446,8 +75752,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 1",
-          "von": 5253,
-          "bis": 5601,
+          "von": 5260,
+          "bis": 5608,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75457,7 +75763,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 1",
-              "von": 5253,
+              "von": 5260,
               "laenge": 79,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75473,7 +75779,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 1",
-              "von": 5333,
+              "von": 5340,
               "laenge": 267,
               "konfidenz": 0.48,
               "stimmen": 0,
@@ -75487,8 +75793,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 2",
-          "von": 5602,
-          "bis": 5730,
+          "von": 5609,
+          "bis": 5737,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -75498,7 +75804,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 2",
-              "von": 5602,
+              "von": 5609,
               "laenge": 89,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75514,7 +75820,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 2",
-              "von": 5693,
+              "von": 5700,
               "laenge": 36,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75528,8 +75834,8 @@
         },
         {
           "pfad": "Abs. 6 Satz 3",
-          "von": 5731,
-          "bis": 5853,
+          "von": 5738,
+          "bis": 5860,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -75539,7 +75845,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 3",
-              "von": 5731,
+              "von": 5738,
               "laenge": 44,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75555,7 +75861,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 6 Satz 3",
-              "von": 5776,
+              "von": 5783,
               "laenge": 76,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -75714,7 +76020,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 des Steuerberatungsgesetzes",
+                  "t": "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 bis 4d des Steuerberatungsgesetzes",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -76148,7 +76454,7 @@
         "Soweit die Steuergesetze nichts anderes bestimmen",
         "Bei Steuerpflichtigen, die den Gewinn aus Land- und Forstwirtschaft nach einem vom Kalenderjahr abweichenden Wirtschaftsjahr ermitteln",
         "Sofern Personen",
-        "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 des Steuerberatungsgesetzes",
+        "Gesellschaften, Verbände, Vereinigungen, Behörden oder Körperschaften im Sinne der §§ 3 und 4 bis 4d des Steuerberatungsgesetzes",
         "Einkommensteuererklärungen nach § 25 Absatz 3 des Einkommensteuergesetzes mit Ausnahme der Einkommensteuererklärungen im Sinne des § 46 Absatz 2 Nummer 8 des Einkommensteuergesetzes",
         "Erklärungen zur Festsetzung des Gewerbesteuermessbetrags oder Zerlegungserklärungen nach § 14a des Gewerbesteuergesetzes",
         "Umsatzsteuererklärungen für das Kalenderjahr nach § 18 Absatz 3 des Umsatzsteuergesetzes",
@@ -76213,9 +76519,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "0836df5717df8a2bce12f34a59f1dba60c3e308dc0c20e7131a9ea1d9f01af18",
+      "text_hash": "f41ea62ab2395d7dd887db7b09ef7c270482fb8efae377b89977ea48089cdf4e",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.838Z"
+      "aktualisiert": "2026-09-01T09:25:03.064Z"
     },
     "150": {
       "typ": "gemischt",
@@ -202080,7 +202386,7 @@
         {
           "pfad": "Abs. 3 Satz 1",
           "von": 1441,
-          "bis": 1743,
+          "bis": 1721,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -202102,12 +202408,12 @@
             },
             {
               "art": "tb",
-              "text": "gilt entsprechend für Vollmachtsdaten, die von einem anerkannten Lohnsteuerhilfeverein im Sinne des § 4 Nummer 11 des Steuerberatungsgesetzes übermittelt werden",
+              "text": "gilt entsprechend für Vollmachtsdaten, die von einem Lohnsteuerhilfeverein im Sinne des § 4 des Steuerberatungsgesetzes übermittelt werden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
               "von": 1450,
-              "laenge": 160,
+              "laenge": 138,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -202122,7 +202428,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 1612,
+              "von": 1590,
               "laenge": 130,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -202297,7 +202603,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "gilt entsprechend für Vollmachtsdaten, die von einem anerkannten Lohnsteuerhilfeverein im Sinne des § 4 Nummer 11 des Steuerberatungsgesetzes übermittelt werden",
+                  "t": "gilt entsprechend für Vollmachtsdaten, die von einem Lohnsteuerhilfeverein im Sinne des § 4 des Steuerberatungsgesetzes übermittelt werden",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -202338,7 +202644,7 @@
         "Wird eine Vollmacht, die nach Satz 1 übermittelt worden ist, vom Vollmachtgeber gegenüber dem Bevollmächtigten widerrufen oder verändert",
         "Werden die Vollmachtsdaten von einem Bevollmächtigten, der nach § 3 des Steuerberatungsgesetzes zur geschäftsmäßigen Hilfeleistung in Steuersachen befugt ist, nach Maßgabe des Absatzes 1 übermittelt",
         "Die für den Bevollmächtigten zuständige Kammer",
-        "gilt entsprechend für Vollmachtsdaten, die von einem anerkannten Lohnsteuerhilfeverein im Sinne des § 4 Nummer 11 des Steuerberatungsgesetzes übermittelt werden",
+        "gilt entsprechend für Vollmachtsdaten, die von einem Lohnsteuerhilfeverein im Sinne des § 4 des Steuerberatungsgesetzes übermittelt werden",
         "sofern die für die Aufsicht zuständige Stelle in einem automatisierten Verfahren die Zulassung zur Hilfe in Steuersachen bestätigt"
       ],
       "rf": [
@@ -202363,9 +202669,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "6b971685a0946daa34341983ca116cf4ca789328ce8ef73ff922ae7163f522c8",
+      "text_hash": "fc681937feebf3134a3bcb4777bdc81c4ec77e4b9ce06cb9087f3d84df332fca",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.460Z"
+      "aktualisiert": "2026-09-01T09:25:02.988Z"
     },
     "87a": {
       "typ": "gemischt",

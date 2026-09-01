@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-08-31T11:34:32.572Z",
+  "aktualisiert": "2026-09-01T09:25:03.670Z",
   "quelle": "https://www.gesetze-im-internet.de/ustg_1980/",
   "stand": [
     {
@@ -94703,7 +94703,7 @@
         {
           "pfad": "Abs. 2 Satz 1",
           "von": 339,
-          "bis": 468,
+          "bis": 372,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -94725,37 +94725,103 @@
             },
             {
               "art": "rf",
-              "text": "sind die in § 3 Nr. 1 bis 3 und § 4 Nr. 9 Buchstabe c des Steuerberatungsgesetzes genannten Personen",
-              "anzeige": "sind die in § 3 Nr. 1 bis 3 und § 4 Nr. 9 Buchstabe c des Steuerberatungsgesetzes genannten Personen … befugt",
-              "teile": [
-                {
-                  "text": "sind die in § 3 Nr. 1 bis 3 und § 4 Nr. 9 Buchstabe c des Steuerberatungsgesetzes genannten Personen",
-                  "von": 360,
-                  "laenge": 100
-                },
-                {
-                  "text": "befugt",
-                  "von": 461,
-                  "laenge": 6
-                }
-              ],
+              "text": "sind befugt",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Abs. 2 Satz 1",
               "von": 360,
-              "laenge": 100,
+              "laenge": 11,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 1",
+          "von": 376,
+          "bis": 461,
+          "typ": "aussage",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Personen und Gesellschaften im Sinne des § 3 Satz 1 des Steuerberatungsgesetzes",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 376,
+              "laenge": 79,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Aufzählungsglied Nr. 1 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Nr. 2",
+          "von": 465,
+          "bis": 599,
+          "typ": "konditional",
+          "katalog": true,
+          "junktor": "oder",
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Spediteure und sonstige Zollvertreter, soweit sie nach § 4d des Steuerberatungsgesetzes zur Hilfeleistung in Steuersachen befugt sind",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 465,
+              "laenge": 133,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Aufzählungsglied Nr. 2 — Merkmalsvariante des Einleitungssatzes"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Satz 2",
+          "von": 600,
+          "bis": 785,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "muss im Geltungsbereich des Steuerberatungsgesetzes ansässig sein und darf die Regelung für Kleinunternehmer nach § 19 nicht in Anspruch nehmen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 2 Satz 2",
+              "von": 641,
+              "laenge": 143,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
         {
           "pfad": "Abs. 3 Satz 1",
-          "von": 469,
-          "bis": 549,
+          "von": 786,
+          "bis": 866,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -94765,7 +94831,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 489,
+              "von": 806,
               "laenge": 59,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -94825,14 +94891,30 @@
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzung",
-              "junktor": null,
+              "t": "Voraussetzungen (eine genügt)",
+              "junktor": "oder",
               "sub": [
                 {
                   "n": "1.",
                   "t": "Zur Fiskalvertretung",
                   "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "Personen und Gesellschaften im Sinne des § 3 Satz 1 des Steuerberatungsgesetzes",
+                  "pfad": "Abs. 2 Nr. 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "Spediteure und sonstige Zollvertreter, soweit sie nach § 4d des Steuerberatungsgesetzes zur Hilfeleistung in Steuersachen befugt sind",
+                  "pfad": "Abs. 2 Nr. 2",
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 }
@@ -94845,11 +94927,19 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "sind die in § 3 Nr. 1 bis 3 und § 4 Nr. 9 Buchstabe c des Steuerberatungsgesetzes genannten Personen … befugt",
+                  "t": "sind befugt",
                   "pfad": "Abs. 2 Satz 1",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "muss im Geltungsbereich des Steuerberatungsgesetzes ansässig sein und darf die Regelung für Kleinunternehmer nach § 19 nicht in Anspruch nehmen",
+                  "pfad": "Abs. 2 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 }
               ]
             }
@@ -94880,18 +94970,21 @@
       ],
       "tb": [
         "Ein Unternehmer, der weder im Inland noch in einem der in § 1 Abs. 3 genannten Gebiete seinen Wohnsitz, seinen Sitz, seine Geschäftsleitung oder eine Zweigniederlassung",
-        "Zur Fiskalvertretung"
+        "Zur Fiskalvertretung",
+        "Personen und Gesellschaften im Sinne des § 3 Satz 1 des Steuerberatungsgesetzes",
+        "Spediteure und sonstige Zollvertreter, soweit sie nach § 4d des Steuerberatungsgesetzes zur Hilfeleistung in Steuersachen befugt sind"
       ],
       "rf": [
         "hat und im Inland ausschließlich steuerfreie Umsätze ausführt und keine Vorsteuerbeträge abziehen kann, kann sich im Inland durch einen Fiskalvertreter vertreten lassen",
-        "sind die in § 3 Nr. 1 bis 3 und § 4 Nr. 9 Buchstabe c des Steuerberatungsgesetzes genannten Personen",
+        "sind befugt",
+        "muss im Geltungsbereich des Steuerberatungsgesetzes ansässig sein und darf die Regelung für Kleinunternehmer nach § 19 nicht in Anspruch nehmen",
         "bedarf der Vollmacht des im Ausland ansässigen Unternehmers"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.563,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -94899,9 +94992,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "40ec37b2ced8b8edb0ad677c8529241c73fd6bfcde4c0a33b37376544ba5db53",
+      "text_hash": "a2ef87b36a7920d8b582fe54f96cdd811a50ccf10aad9b0122caa8ebe36e1569",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:52.297Z"
+      "aktualisiert": "2026-09-01T09:25:03.657Z"
     },
     "22b": {
       "typ": "gemischt",
@@ -95628,7 +95721,7 @@
         {
           "pfad": "Abs. 1 Satz 1",
           "von": 0,
-          "bis": 295,
+          "bis": 267,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -95650,35 +95743,19 @@
             },
             {
               "art": "tb",
-              "text": "kann die Fiskalvertretung der in § 22a Abs. 2",
+              "text": "kann eine Fiskalvertretung durch die in § 22a Absatz 2 Satz 1 Nummer 2 genannte Person untersagen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 29,
-              "laenge": 45,
+              "laenge": 97,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Nachfeld trägt die Voraussetzungen (um Ausnahme gekürzt)"
-            },
-            {
-              "art": "ausn",
-              "text": "mit Ausnahme der in § 3 des Steuerberatungsgesetzes genannten Person untersagen",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 1 Satz 1",
-              "von": 75,
-              "laenge": 79,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Bereichsausnahme mit „mit ausnahme der\""
+              "grund": "Nachfeld trägt die Voraussetzungen"
             },
             {
               "art": "tb",
@@ -95686,7 +95763,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 156,
+              "von": 128,
               "laenge": 138,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -95700,8 +95777,8 @@
         },
         {
           "pfad": "Abs. 2 Satz 1",
-          "von": 296,
-          "bis": 432,
+          "von": 268,
+          "bis": 404,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -95711,7 +95788,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 296,
+              "von": 268,
               "laenge": 32,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -95727,7 +95804,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 329,
+              "von": 301,
               "laenge": 102,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -95754,7 +95831,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "kann die Fiskalvertretung der in § 22a Abs. 2",
+                  "t": "kann eine Fiskalvertretung durch die in § 22a Absatz 2 Satz 1 Nummer 2 genannte Person untersagen",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -95772,21 +95849,6 @@
             },
             {
               "n": "II.",
-              "art": "ausn",
-              "t": "Ausnahmen und Rückausnahmen",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "mit Ausnahme der in § 3 des Steuerberatungsgesetzes genannten Person untersagen",
-                  "pfad": "Abs. 1 Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "III.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
@@ -95842,7 +95904,7 @@
         }
       ],
       "tb": [
-        "kann die Fiskalvertretung der in § 22a Abs. 2",
+        "kann eine Fiskalvertretung durch die in § 22a Absatz 2 Satz 1 Nummer 2 genannte Person untersagen",
         "wenn der Fiskalvertreter wiederholt gegen die ihm auferlegten Pflichten nach § 22b verstößt oder ordnungswidrig im Sinne des § 26a handelt",
         "Für den vorläufigen Rechtsschutz"
       ],
@@ -95850,9 +95912,7 @@
         "Die zuständige Finanzbehörde",
         "gegen die Untersagung gelten § 361 Abs. 4 der Abgabenordnung und § 69 Abs. 5 der Finanzgerichtsordnung"
       ],
-      "ausnahmen": [
-        "mit Ausnahme der in § 3 des Steuerberatungsgesetzes genannten Person untersagen"
-      ],
+      "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
@@ -95864,9 +95924,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "27ca446120c8f54f735f532915c3ab41e81c2c692c196dc826f0baddd6b0ab22",
+      "text_hash": "f8b0699ddda8ac91602b07efbed67f788077884247eddc83d039e529781eb950",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:52.300Z"
+      "aktualisiert": "2026-09-01T09:25:03.658Z"
     },
     "22f": {
       "typ": "gemischt",
