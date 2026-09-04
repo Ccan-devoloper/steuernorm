@@ -24,7 +24,7 @@
  * `activate` alle älteren Ablagen weg.
  */
 
-const FASSUNG = "steuernorm-v8-mappe-fassungen";
+const FASSUNG = "steuernorm-v9-beitraege";
 const GERUEST = `${FASSUNG}-geruest`;
 const INHALTE = `${FASSUNG}-inhalte`;
 
@@ -35,6 +35,10 @@ const GRUNDBESTAND = [
   "./schriften/schriften.css",
   "./data/index.json",
   "./data/verweise.json",
+  /* Der Index der Beiträge ist klein und wird auf der Startseite gebraucht.
+     Fehlt er (Kopie ohne den täglichen Lauf), scheitert nur dieser eine
+     Eintrag — `install` legt jede Datei einzeln ab. */
+  "./beitraege/index.json",
 ];
 
 self.addEventListener("install", (e) => {
@@ -63,6 +67,7 @@ self.addEventListener("activate", (e) => {
 /** Gesetzestexte und Annotationen — alles, was beim Lesen nachgeladen wird. */
 function istInhalt(url) {
   return /\/(data|annotations|belege|struktur|verwaltung|fassungen)\/[^/]+\.json$/.test(url.pathname)
+    || /\/beitraege\/[^/]+\.json$/.test(url.pathname)
     || /\/schriften\/[^/]+\.(woff2|css)$/.test(url.pathname);
 }
 

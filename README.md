@@ -1,4 +1,4 @@
-# steuernorm — Fassung 7
+# steuernorm — Fassung 8
 
 Die deutschen Steuergesetze im Volltext, als **Arbeitsplatz**: mehrere Normen
 gleichzeitig geöffnet, links das Gesetz, in der Mitte der Lesetext, rechts ein
@@ -15,6 +15,13 @@ Drei Auszeichnungsebenen im Normtext, gleichzeitig lesbar:
 Der Normtext bleibt dabei unangetastet. Was die Farben bedeuten, sagt allein
 die Legende darüber — im Wortlaut steht kein Wort dazu.
 
+**Neu in Fassung 8:** **Beitrag des Tages** — täglich eine Norm, aus dem
+Bestand zusammengestellt und nicht geschrieben, auf der Seite unter
+`#/beitraege` und automatisch auf Instagram. Kein Satz darin ist formuliert;
+`tools/beitraege-pruefen.mjs` weist das nach, bevor etwas hinausgeht.
+Herleitung und Einrichtung in
+[`docs/07-beitraege-und-instagram.md`](docs/07-beitraege-und-instagram.md).
+
 **Neu in Fassung 7:** Dunkelmodus mit Umschalter hell · dunkel · System ·
 **Sammelmappe** für Normen und markierte Stellen · **Fassungsvergleich** zweier
 Zeitstände derselben Norm, wortweise · drittes Datenformat `fassungen/`.
@@ -29,7 +36,8 @@ und [`docs/05-oberflaeche-arbeitsplatz.md`](docs/05-oberflaeche-arbeitsplatz.md)
 die der Erkennung in
 [`docs/04-erkennung-und-oberflaeche-fassung-5.md`](docs/04-erkennung-und-oberflaeche-fassung-5.md).
 
-**Geprüft:** `node tools/pruefen.mjs` über alle 14 Gesetze — 1 537 Normen,
+**Geprüft:** `node tools/beitraege-pruefen.mjs` über jeden Beitrag (jeder Auszug
+wörtlich im Bestand wiedergefunden), `node tools/pruefen.mjs` über alle 14 Gesetze — 1 537 Normen,
 25 236 Spannen, 0 Fehler, 0 Warnungen. `node tools/frontend-pruefen.mjs`
 (jsdom, 27 Prüfungen) und `node tools/browser-pruefen.mjs` (Chromium, 130
 Prüfungen: Spaltenmaße, Absturzfreiheit, vier Fensterbreiten, Zuordnung der
@@ -66,6 +74,11 @@ tools/struktur.mjs                NEU  erzeugt struktur/<gesetz>.json
 tools/fassungen.mjs               NEU  erzeugt fassungen/<gesetz>.json aus dem
                                        Git-Verlauf von data/
 tools/schriften-holen.mjs         NEU  legt die Schriften ins Repository
+
+tools/beitrag.mjs                 NEU  stellt den Beitrag des Tages zusammen
+tools/beitrag-bild.mjs            NEU  rendert das Bild dazu (1080×1350, JPEG)
+tools/instagram.mjs               NEU  veröffentlicht über die Graph-Schnittstelle
+tools/beitraege-pruefen.mjs       NEU  weist nach, dass kein Satz formuliert ist
 sw.js                             NEU  Offlinezugriff
 tools/lib/validatoren.mjs         hartes Veto gegen unbrauchbare Spannen
 tools/lib/konsens.mjs             Zusammenführung, Konfidenz, Schema, Belegvalidator
@@ -76,18 +89,23 @@ tools/lib/rechtsprechung.mjs      NEU  Rechtsinformationsportal des Bundes
 tools/lib/belegprobe.mjs          NEU  prüft, ob ein Beleg die Zuordnung trägt
 
 .github/workflows/annotationen.yml  geändert: Push erzwingt nicht mehr --ohne-ki
+.github/workflows/beitraege.yml     NEU  täglich 06:10 UTC
 .github/workflows/belege.yml        NEU
 
 struktur/<gesetz>.json            NEU  Zeichenpositionen der Kategorien
 verwaltung/<gesetz>.json          NEU  Richtlinien und BMF-Schreiben je Stelle
 fassungen/<gesetz>.json           NEU  Zeitstände für den Fassungsvergleich
+beitraege/index.json              NEU  Verzeichnis der Beiträge
+beitraege/<datum>-<norm>.json     NEU  ein Beitrag
+beitraege/bilder/<…>.jpg          NEU  das Bild dazu
 
 docs/01-befund-und-quellenanbindung.md
 docs/02-ui-ux-analyse.md
 docs/03-richtigkeit-und-grenzen.md
 docs/04-erkennung-und-oberflaeche-fassung-5.md
 docs/05-oberflaeche-arbeitsplatz.md
-docs/06-mappe-und-fassungsvergleich.md            NEU
+docs/06-mappe-und-fassungsvergleich.md
+docs/07-beitraege-und-instagram.md               NEU
 ```
 
 ---
@@ -216,6 +234,32 @@ SolzG:
 Alle Ausreißer haben Konfidenz 0,45 — das Verfahren markiert also genau die Stellen, an
 denen es selbst unsicher war. Das ist die billigste Fehlerquelle im ganzen Bestand.
 
+### Beitrag des Tages
+
+Einmal am Tag eine Norm: auf der Seite unter `#/beitraege`, als Teaser auf der
+Startseite und als Bild mit Bildunterschrift auf Instagram. Der tägliche Lauf
+steht in `.github/workflows/beitraege.yml`.
+
+**Zusammengestellt, nicht geschrieben.** Der Beitrag nimmt den Wortlaut aus
+`data/`, die Einfärbung aus `struktur/`, die Verwaltungsanweisung aus `belege/`
+und die Rückverweise aus `data/verweise.json`. Er kennt kein Modell und braucht
+kein Netz. Ein Modell, das über eine Norm frei formuliert, erzeugt genau die
+Sorte plausibler Falschaussage, gegen die dieses Verfahren im Übrigen anläuft —
+nur ohne Prüfer und mit Reichweite.
+
+Nachgewiesen wird das, statt behauptet: `beitraege-pruefen.mjs` baut den
+Normtext aus `data/` neu auf und sucht jeden Auszug darin, Zeichen für Zeichen.
+Ein eingefügtes „zwingend" lässt den Lauf fehlschlagen, bevor der Beitrag
+irgendwo steht. Dazu die Formalien von Instagram, die sonst erst mitten im
+Anlegen auffallen: JPEG, 4:5, unter 8 MB, Bildunterschrift unter 2 200 Zeichen.
+
+Instagram lädt das Bild selbst von einer öffentlichen Adresse — hochladen kann
+man es nicht. Deshalb die Reihenfolge: schreiben, rendern, prüfen,
+festschreiben, schieben, **dann** veröffentlichen, mit der Rohadresse genau
+dieses Commits. Ohne `IG_TOKEN` und `IG_KONTO` entfällt der letzte Schritt; der
+Beitrag auf der Website entsteht trotzdem. Einrichtung Schritt für Schritt in
+`docs/07-beitraege-und-instagram.md`.
+
 ### Frontend
 
 Alle acht Punkte der UI-Analyse. Die wichtigsten:
@@ -251,7 +295,11 @@ Alle acht Punkte der UI-Analyse. Die wichtigsten:
 "fassungen":    "node tools/fassungen.mjs",
 "frontend":     "node tools/frontend-pruefen.mjs",
 "browser":      "node tools/browser-pruefen.mjs",
-"eval":         "node tools/eval.mjs"
+"eval":         "node tools/eval.mjs",
+"beitrag":      "node tools/beitrag.mjs",
+"beitrag:bild": "node tools/beitrag-bild.mjs",
+"beitrag:pruefen": "node tools/beitraege-pruefen.mjs",
+"instagram":    "node tools/instagram.mjs"
 ```
 
 Zusätzliche Schalter für `annotieren.mjs`: `--aufwerten`, `--ohne-belegprobe`,

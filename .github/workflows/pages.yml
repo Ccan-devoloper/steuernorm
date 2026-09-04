@@ -14,6 +14,7 @@ on:
       - "struktur/**"
       - "verwaltung/**"
       - "fassungen/**"
+      - "beitraege/**"
       - "schriften/**"
       - ".github/workflows/pages.yml"
   workflow_run:
@@ -79,16 +80,20 @@ jobs:
           cp -a struktur _site/struktur
           cp -a verwaltung _site/verwaltung
           cp -a fassungen _site/fassungen
+          # Die Beiträge samt Bildern. Ohne sie zeigt die Startseite den
+          # „Beitrag des Tages" nicht und `#/beitraege` bleibt leer.
+          cp -a beitraege _site/beitraege
           cp -a schriften _site/schriften
           touch _site/.nojekyll
 
           # Nachweis, dass wirklich alles mitgeht.
-          for ordner in data annotations belege struktur verwaltung fassungen schriften; do
+          for ordner in data annotations belege struktur verwaltung fassungen beitraege schriften; do
             test -d "_site/$ordner" || { echo "::error::_site/$ordner fehlt"; exit 1; }
           done
           test -s _site/struktur/solzg.json
           test -s _site/verwaltung/solzg.json
           test -s _site/fassungen/gewstg.json
+          test -s _site/beitraege/index.json
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v5

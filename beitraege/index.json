@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "aktualisiert": "2026-09-04T16:14:56.852Z",
+  "hinweis": "Täglich aus dem Bestand zusammengestellt. Kein Satz ist frei formuliert; alle Auszüge stehen wörtlich im Normtext oder in einer amtlichen Verwaltungsanweisung.",
+  "beitraege": [
+    {
+      "id": "2026-09-04-ao-175b",
+      "datum": "2026-09-04",
+      "titel": "§ 175b AO — Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte",
+      "gesetz": "AO",
+      "norm": "175b",
+      "normtitel": "Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte",
+      "ziel": "#/ao/175b",
+      "datei": "beitraege/2026-09-04-ao-175b.json",
+      "bild": "beitraege/bilder/2026-09-04-ao-175b.jpg",
+      "kurz": "Ein Steuerbescheid ist aufzuheben oder zu ändern, soweit von der mitteilungspflichtigen Stelle an die Finanzbehörden übermittelte Daten im Sinne des § 93c bei der Steuerfestsetzung nicht oder nicht zutreffend berücksichtigt wurden.",
+      "kennzahlen": {
+        "zeichen": 910,
+        "absaetze": 4,
+        "erkannteSpannen": 9,
+        "verwaltungsstellen": 1,
+        "zitiertVon": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "id": "2026-09-04-ao-175b",
+  "datum": "2026-09-04",
+  "erzeugt": "2026-09-04T16:14:56.850Z",
+  "verfahren": "auszug",
+  "hinweis": "Automatisch aus dem Bestand dieser Seite zusammengestellt: Wortlaut, maschinell erkannte Struktur und amtliche Verwaltungsanweisungen. Kein Satz ist frei formuliert. Nicht redaktionell geprüft, keine Rechtsberatung; maßgeblich ist der im Bundesgesetzblatt verkündete Wortlaut.",
+  "gesetz": {
+    "abk": "AO",
+    "slug": "ao",
+    "titel": "Abgabenordnung",
+    "quelle": "https://www.gesetze-im-internet.de/ao_1977/"
+  },
+  "norm": {
+    "id": "175b",
+    "enbez": "§ 175b",
+    "titel": "Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte",
+    "gliederung": "III. Bestandskraft"
+  },
+  "titel": "§ 175b AO — Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte",
+  "aufhaenger": "Was ordnet sie an?",
+  "ziel": "#/ao/175b",
+  "amtlich": "https://www.gesetze-im-internet.de/ao_1977/__175b.html",
+  "stand": "zuletzt geändert durch Art. 15 Abs. 6 G v. 3.7.2026 I Nr. 199",
+  "kennzahlen": {
+    "zeichen": 910,
+    "absaetze": 4,
+    "erkannteSpannen": 9,
+    "verwaltungsstellen": 1,
+    "zitiertVon": 1
+  },
+  "abschnitte": [
+    {
+      "art": "wortlaut",
+      "titel": "Der Wortlaut",
+      "text": "Ein Steuerbescheid ist aufzuheben oder zu ändern, soweit von der mitteilungspflichtigen Stelle an die Finanzbehörden übermittelte Daten im Sinne des § 93c bei der Steuerfestsetzung nicht oder nicht zutreffend berücksichtigt wurden. Gelten Daten, die von mitteilungspflichtigen Stellen nach Maßgabe des § 93c an die Finanzverwaltung übermittelt wurden, nach § 150 Absatz 7 Satz 2 als Angaben des Steuerpflichtigen, ist der Steuerbescheid aufzuheben oder zu ändern, soweit diese Daten zu Ungunsten des Steuerpflichtigen unrichtig sind.",
+      "gekuerzt": true,
+      "spannen": [
+        {
+          "typ": "rechtsfolge",
+          "von": 19,
+          "bis": 48
+        },
+        {
+          "typ": "tatbestand",
+          "von": 50,
+          "bis": 230
+        },
+        {
+          "typ": "tatbestand",
+          "von": 232,
+          "bis": 412
+        },
+        {
+          "typ": "rechtsfolge",
+          "von": 414,
+          "bis": 532
+        }
+      ]
+    },
+    {
+      "art": "struktur",
+      "titel": "Wie die Norm gebaut ist",
+      "hinweis": "Maschinell erkannt, nicht redaktionell geprüft.",
+      "punkte": [
+        {
+          "kategorie": "tatbestand",
+          "marke": "Tatbestand",
+          "pfad": "Abs. 1 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 230,
+          "text": "soweit von der mitteilungspflichtigen Stelle an die Finanzbehörden übermittelte Daten im Sinne des § 93c bei der Steuerfestsetzung nicht oder nicht zutreffend berücksichtigt wurden"
+        },
+        {
+          "kategorie": "tatbestand",
+          "marke": "Tatbestand",
+          "pfad": "Abs. 2 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 412,
+          "text": "Gelten Daten, die von mitteilungspflichtigen Stellen nach Maßgabe des § 93c an die Finanzverwaltung übermittelt wurden, nach § 150 Absatz 7 Satz 2 als Angaben des Steuerpflichtigen"
+        },
+        {
+          "kategorie": "rechtsfolge",
+          "marke": "Rechtsfolge",
+          "pfad": "Abs. 2 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 532,
+          "text": "ist der Steuerbescheid aufzuheben oder zu ändern, soweit diese Daten zu Ungunsten des Steuerpflichtigen unrichtig sind"
+        },
+        {
+          "kategorie": "tatbestand",
+          "marke": "Tatbestand",
+          "pfad": "Abs. 3 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 709,
+          "text": "Ist eine Einwilligung des Steuerpflichtigen in die Übermittlung von Daten im Sinne des § 93c an die Finanzbehörden Voraussetzung für die steuerliche Berücksichtigung der Daten"
+        },
+        {
+          "kategorie": "rechtsfolge",
+          "marke": "Rechtsfolge",
+          "pfad": "Abs. 3 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 802,
+          "text": "ist ein Steuerbescheid aufzuheben oder zu ändern, soweit die Einwilligung nicht vorliegt"
+        },
+        {
+          "kategorie": "tatbestand",
+          "marke": "Tatbestand",
+          "pfad": "Abs. 4 Satz 1",
+          "konfidenz": 0.6,
+          "bis": 909,
+          "text": "wenn Daten nach § 93c Absatz 1 oder Absatz 3 nicht rechtserheblich sind"
+        }
+      ]
+    },
+    {
+      "art": "verwaltung",
+      "titel": "Was die Verwaltung dazu sagt",
+      "hinweis": "Wörtlich aus dem amtlichen Handbuch, gekürzt an der Satzgrenze.",
+      "punkte": [
+        {
+          "quelle": "AEAO (2025)",
+          "fundstelle": "AEAO zu § 175b - Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte",
+          "url": "https://amtliche-handbuecher.bundesfinanzministerium.de/ao/2025/Abgabenordnung/Vierter-Teil/Dritter-Abschnitt/Erster-Unterabschnitt/III/Paragraf-175b/inhalt.html",
+          "text": "Auf eine Verletzung der Mitwirkungspflichten seitens des Steuerpflichtigen oder der Ermittlungspflichten durch die Finanzbehörde kommt es in den Fällen des § 175b AO - anders als in den Fällen des § 173 AO - nicht an."
+        }
+      ]
+    },
+    {
+      "art": "verweise",
+      "titel": "Wer darauf verweist",
+      "anzahl": 1,
+      "punkte": [
+        {
+          "gesetz": "AO",
+          "norm": "138b",
+          "anzeige": "§ 138b AO",
+          "ziel": "#/ao/138b"
+        }
+      ]
+    }
+  ],
+  "bild": "beitraege/bilder/2026-09-04-ao-175b.jpg",
+  "instagram": {
+    "text": "§ 175b AO — Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte\n\nEin Steuerbescheid ist aufzuheben oder zu ändern, soweit von der mitteilungspflichtigen Stelle an die Finanzbehörden übermittelte Daten im Sinne des § 93c bei der Steuerfestsetzung nicht oder nicht zutreffend berücksichtigt wurden.\n\nTatbestand (Abs. 1 Satz 1): soweit von der mitteilungspflichtigen Stelle an die Finanzbehörden übermittelte Daten im Sinne des § 93c bei der Steuerfestsetzung nicht oder nicht zutreffend berücksichtigt wurden\nTatbestand (Abs. 2 Satz 1): Gelten Daten, die von mitteilungspflichtigen Stellen nach Maßgabe des § 93c an die Finanzverwaltung übermittelt wurden, nach § 150 Absatz 7 Satz 2 als Angaben des Steuerpflichtigen\nRechtsfolge (Abs. 2 Satz 1): ist der Steuerbescheid aufzuheben oder zu ändern, soweit diese Daten zu Ungunsten des Steuerpflichtigen unrichtig sind\n\nVerwaltung — AEAO (2025), AEAO zu § 175b - Änderung von Steuerbescheiden bei Datenübermittlung durch Dritte: Auf eine Verletzung der Mitwirkungspflichten seitens des Steuerpflichtigen oder der Ermittlungspflichten durch die Finanzbehörde kommt es in den Fällen des § 175b AO - anders als in den Fällen des § 173 AO - nicht an.\n\nStruktur maschinell erkannt, nicht redaktionell geprüft. Keine Rechtsberatung; maßgeblich ist der im Bundesgesetzblatt verkündete Wortlaut.\nVolltext, Struktur und Nachweise: steuernorm (Link im Profil).\n\n#steuerrecht #steuern #ao #gesetz #steuerberatung #rechtimwortlaut #steuernorm",
+    "hashtags": [
+      "#steuerrecht",
+      "#steuern",
+      "#ao",
+      "#gesetz",
+      "#steuerberatung",
+      "#rechtimwortlaut",
+      "#steuernorm"
+    ],
+    "laenge": 1488
+  }
+}

@@ -1,0 +1,206 @@
+name: Beitrag des Tages
+
+# WOZU. Einmal am Tag eine Norm nach draußen tragen: als Beitrag auf der
+# Website und als Bild mit Bildunterschrift auf Instagram.
+#
+# Die Reihenfolge ist nicht beliebig. Instagram lädt das Bild SELBST von einer
+# öffentlichen Adresse; es kann nicht hochgeladen werden. Das Bild muss also
+# im Netz stehen, bevor der Beitrag angelegt wird. Deshalb: erst schreiben,
+# dann festschreiben und schieben, dann veröffentlichen — mit der Rohadresse
+# genau dieses Commits, die sofort antwortet, während GitHub Pages erst nach
+# der nächsten Veröffentlichung so weit ist.
+#
+# Fehlen die Zugangsdaten, entfällt der letzte Schritt. Der Beitrag auf der
+# Website entsteht trotzdem; er hängt an keinem fremden Dienst.
+
+on:
+  schedule:
+    # 06:10 UTC — 08:10 MESZ, 07:10 MEZ. Nicht zur vollen Stunde: Dann ist die
+    # Warteschlange von GitHub Actions am längsten und der Lauf verspätet sich.
+    - cron: "10 6 * * *"
+  workflow_dispatch:
+    inputs:
+      datum:
+        description: "Tag des Beitrags (JJJJ-MM-TT, leer = heute)"
+        required: false
+        default: ""
+      norm:
+        description: "Bestimmte Norm erzwingen, z. B. estg/15 (leer = Auswahl des Verfahrens)"
+        required: false
+        default: ""
+      neu:
+        description: "Vorhandenen Beitrag des Tages ersetzen"
+        type: boolean
+        required: false
+        default: false
+      ohne_instagram:
+        description: "Nur Website, nicht veröffentlichen"
+        type: boolean
+        required: false
+        default: false
+  pull_request:
+    paths:
+      - "tools/beitrag.mjs"
+      - "tools/beitrag-bild.mjs"
+      - "tools/instagram.mjs"
+      - "tools/beitraege-pruefen.mjs"
+      - ".github/workflows/beitraege.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  # Nicht abbrechen: Ein Lauf, der zwischen „Bild geschoben" und „auf Instagram
+  # veröffentlicht" abgeräumt wird, hinterlässt einen Beitrag ohne Bild im Netz.
+  group: steuernorm-beitraege
+  cancel-in-progress: false
+
+jobs:
+  # Auf einem Pull Request wird nichts geschrieben und nichts veröffentlicht —
+  # geprüft wird nur, dass die Werkzeuge übersetzen und der Bestand trägt.
+  pruefen:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+      - name: Werkzeuge übersetzen
+        run: |
+          set -euo pipefail
+          for datei in tools/beitrag.mjs tools/beitrag-bild.mjs tools/instagram.mjs tools/beitraege-pruefen.mjs; do
+            node --check "$datei"
+          done
+      - name: Beitrag probeweise zusammenstellen
+        run: node tools/beitrag.mjs --trocken
+      - name: Vorhandene Beiträge prüfen
+        run: node tools/beitraege-pruefen.mjs --ohne-bilder
+
+  beitrag:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "22" }
+
+      - name: Chromium bereitstellen
+        run: |
+          set -euo pipefail
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Beitrag zusammenstellen
+        env:
+          EINGABE_DATUM: ${{ inputs.datum }}
+          EINGABE_NORM: ${{ inputs.norm }}
+          EINGABE_NEU: ${{ inputs.neu }}
+        run: |
+          set -euo pipefail
+          args=()
+          [ -n "${EINGABE_DATUM:-}" ] && args+=(--datum "$EINGABE_DATUM")
+          [ -n "${EINGABE_NORM:-}" ] && args+=(--norm "$EINGABE_NORM")
+          [ "${EINGABE_NEU:-false}" = "true" ] && args+=(--neu)
+          node tools/beitrag.mjs "${args[@]}" | tee beitrag-lauf.txt
+
+      - name: Bild rendern
+        run: node tools/beitrag-bild.mjs
+
+      - name: Beitrag prüfen
+        run: node tools/beitraege-pruefen.mjs
+
+      - name: Festschreiben und schieben
+        id: schieben
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A beitraege
+          if git diff --cached --quiet; then
+            echo "geaendert=nein" >> "$GITHUB_OUTPUT"
+            echo "Kein neuer Beitrag — der heutige steht bereits."
+          else
+            git commit -m "Beitrag des Tages ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main
+            for versuch in 1 2 3 4; do
+              if git push origin HEAD:main; then break; fi
+              [ "$versuch" -eq 4 ] && exit 1
+              sleep $((2 ** versuch))
+            done
+            echo "geaendert=ja" >> "$GITHUB_OUTPUT"
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # Die Rohadresse dieses Commits. Sie ist ohne Anmeldung erreichbar,
+      # liefert JPEG als JPEG aus und ändert sich nie — genau das, was die
+      # Graph-Schnittstelle braucht. Ein privates Repositorium kann das nicht;
+      # dort trägt die Variable BILDBASIS eine eigene öffentliche Adresse.
+      - name: Auf Instagram veröffentlichen
+        if: >-
+          steps.schieben.outputs.geaendert == 'ja'
+          && inputs.ohne_instagram != true
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_KONTO: ${{ secrets.IG_KONTO }}
+          BILDBASIS_EIGEN: ${{ vars.BILDBASIS }}
+          SHA: ${{ steps.schieben.outputs.sha }}
+        run: |
+          set -euo pipefail
+          if [ -z "${IG_TOKEN:-}" ] || [ -z "${IG_KONTO:-}" ]; then
+            {
+              echo "### Instagram übersprungen"
+              echo ""
+              echo "Die Geheimnisse \`IG_TOKEN\` und \`IG_KONTO\` sind nicht gesetzt."
+              echo "Der Beitrag steht auf der Website; die Einrichtung steht in"
+              echo "\`docs/07-beitraege-und-instagram.md\`."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ -n "${BILDBASIS_EIGEN:-}" ]; then
+            export IG_BILDBASIS="$BILDBASIS_EIGEN"
+          else
+            export IG_BILDBASIS="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${SHA}/"
+          fi
+          node tools/instagram.mjs | tee instagram-lauf.txt
+
+      - name: Veröffentlichung protokollieren
+        if: always()
+        run: |
+          set -euo pipefail
+          {
+            echo "### Beitrag des Tages"
+            echo ""
+            echo '```'
+            cat beitrag-lauf.txt 2>/dev/null || echo "(kein Lauf)"
+            echo '```'
+            if [ -f instagram-lauf.txt ]; then
+              echo ""
+              echo "### Instagram"
+              echo ""
+              echo '```'
+              cat instagram-lauf.txt
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Veröffentlichungsstand festschreiben
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A beitraege reports/instagram.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nichts nachzutragen."
+          else
+            git commit -m "Instagram-Veröffentlichung vermerken"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi

@@ -14,6 +14,9 @@
  *   node tools/browser-pruefen.mjs [http://localhost:8123]
  */
 
+import { readFileSync } from "node:fs";
+import path from "node:path";
+
 import { chromium } from "playwright";
 
 const WURZEL = process.argv[2] || "http://localhost:8123";
@@ -25,9 +28,32 @@ const PROBEN = [
   "#/astg/2", "#/fgo/1", "#/bewg/1", "#/kstg/1", "#/erbstg/1", "#/gewstg/1",
 ];
 const PROBEN_OHNE_TEXT = ["/", "#/solzg", "#/suche/Vorsteuer",
+  /* Die Beiträge: Liste und ein einzelner Beitrag. Der Beitrag wird aus dem
+     Index gelesen, damit die Probe nicht an einem festgeschriebenen Datum
+     hängt — siehe unten, `beitragsziel`. */
+  "#/beitraege",
+  ...beitragsziel(),
   /* Der Vergleich in beiden Ausprägungen: mit zwei Zeitständen und mit einem.
      Der zweite Fall ist der häufigere und darf genauso wenig abstürzen. */
   "#/gewstg/16/fassungen", "#/solzg/3/fassungen"];
+
+/**
+ * Der jüngste Beitrag als Probe.
+ *
+ * Das Datum im Verweis wechselt täglich; festgeschrieben wäre die Probe nach
+ * einem Tag grün und leer. Steht kein Beitrag im Bestand — eine Kopie ohne den
+ * täglichen Lauf —, entfällt die Probe, statt zu scheitern.
+ */
+function beitragsziel() {
+  try {
+    const index = JSON.parse(readFileSync(
+      path.join(import.meta.dirname, "..", "beitraege", "index.json"), "utf8"));
+    const jung = (index.beitraege || [])[0];
+    return jung ? [`#/beitrag/${jung.id}`] : [];
+  } catch (fehler) {
+    return [];
+  }
+}
 
 const pruef = [];
 const ok = (name, bedingung, zusatz = "") => pruef.push({ name, bestanden: Boolean(bedingung), zusatz });
@@ -1599,6 +1625,45 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   ok("Keine vergessene helle Fläche im Dunkelmodus",
     helleFlecken.length === 0, helleFlecken.join(" | "));
   await ctx.close();
+}
+
+/* ── 5b. Beiträge ──
+   Die Rubrik lebt von einer Datei, die täglich neu geschrieben wird. Geprüft
+   wird deshalb nicht ihr Inhalt, sondern dass die Kette hält: Startseite →
+   Beitrag des Tages → Beitrag, und dass im Beitrag die Einfärbung wirklich
+   ankommt (sie hängt hier NICHT am Regler der Kopfleiste). */
+{
+  const ziel = beitragsziel();
+  if (ziel.length) {
+    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    const seite = await ctx.newPage();
+
+    await seite.goto(WURZEL + "/", { waitUntil: "domcontentloaded" });
+    await seite.waitForTimeout(1600);
+    ok("Startseite zeigt den Beitrag des Tages", Boolean(await seite.$(".beitragsteaser .titel")),
+      ((await seite.textContent(".beitragsteaser .titel").catch(() => "")) || "").slice(0, 60));
+
+    await seite.goto(WURZEL + "/" + ziel[0], { waitUntil: "domcontentloaded" });
+    await seite.waitForTimeout(1600);
+    const titel = ((await seite.textContent(".beitrag h1").catch(() => "")) || "").trim();
+    ok("Beitrag hat eine Überschrift", titel.length > 5, titel.slice(0, 60));
+    const marken = await seite.$$eval(".beitrag .auszug mark", (k) => k.length).catch(() => 0);
+    ok("Der Auszug ist eingefärbt", marken > 0, marken + " Spannen");
+    const gefaerbt = await seite.evaluate(() => {
+      const m = document.querySelector(".beitrag .auszug mark");
+      if (!m) return "";
+      return getComputedStyle(m).backgroundColor;
+    });
+    ok("Die Einfärbung hängt nicht am Regler",
+      gefaerbt && gefaerbt !== "rgba(0, 0, 0, 0)", gefaerbt);
+    ok("Kein waagerechter Überlauf im Beitrag", !(await ueberlauf(seite)));
+
+    await seite.goto(WURZEL + "/#/beitrag/gibt-es-nicht", { waitUntil: "domcontentloaded" });
+    await seite.waitForTimeout(1200);
+    ok("Unbekannter Beitrag meldet sich, statt zu leeren",
+      Boolean(await seite.$(".melder")));
+    await ctx.close();
+  }
 }
 
 /* ── 6. Ohne Netz ── */

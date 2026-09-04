@@ -2,7 +2,7 @@
   "name": "steuernorm",
   "version": "7.0.0",
   "private": true,
-  "description": "Deutsche Steuergesetze im Volltext — Arbeitsplatz mit erkannter Struktur, eigenen Markierungen, Verwaltungsstellen, Sammelmappe und Fassungsvergleich",
+  "description": "Deutsche Steuergesetze im Volltext — Arbeitsplatz mit erkannter Struktur, eigenen Markierungen, Verwaltungsstellen, Sammelmappe, Fassungsvergleich und täglichem Beitrag",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8000",
@@ -19,9 +19,14 @@
     "browser": "node tools/browser-pruefen.mjs",
     "struktur": "node tools/struktur.mjs",
     "fassungen": "node tools/fassungen.mjs",
+    "beitrag": "node tools/beitrag.mjs",
+    "beitrag:bild": "node tools/beitrag-bild.mjs",
+    "beitrag:pruefen": "node tools/beitraege-pruefen.mjs",
+    "instagram": "node tools/instagram.mjs",
+    "instagram:trocken": "node tools/instagram.mjs --trocken",
     "modelle": "node tools/modelle-zeigen.mjs",
     "schriften": "node tools/schriften-holen.mjs",
-    "pruefen:alle": "node tools/pruefen.mjs && node tools/frontend-pruefen.mjs && node tools/browser-pruefen.mjs"
+    "pruefen:alle": "node tools/pruefen.mjs && node tools/beitraege-pruefen.mjs && node tools/frontend-pruefen.mjs && node tools/browser-pruefen.mjs"
   },
   "license": "MIT"
 }

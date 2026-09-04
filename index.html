@@ -505,6 +505,8 @@ header{position:sticky;top:0;z-index:40}
 body[data-ansicht=start] .griff,
 body[data-ansicht=uebersicht] .griff,
 body[data-ansicht=suche] .griff,
+body[data-ansicht=beitraege] .griff,
+body[data-ansicht=beitrag] .griff,
 body[data-ansicht=vergleich] #griff-apparat{display:none}
 
 /* ── Mittelspalte ── */
@@ -1134,7 +1136,14 @@ body[data-ansicht=start] .apparat,
 body[data-ansicht=uebersicht] .navspalte,
 body[data-ansicht=uebersicht] .apparat,
 body[data-ansicht=suche] .navspalte,
-body[data-ansicht=suche] .apparat{display:none}
+body[data-ansicht=suche] .apparat,
+/* Die Beiträge kennen weder Normenverzeichnis noch Apparat. Ohne diese Zeilen
+   blieben zwei leere Spalten mit ihren Trennlinien stehen — sichtbar als
+   zwei Striche neben dem Text, die auf nichts zeigen. */
+body[data-ansicht=beitraege] .navspalte,
+body[data-ansicht=beitraege] .apparat,
+body[data-ansicht=beitrag] .navspalte,
+body[data-ansicht=beitrag] .apparat{display:none}
 /* Im Vergleich bleibt das Normenverzeichnis stehen — man springt von hier
    zur nächsten Norm. Der Apparat geht: Er zeigt Hinweise zur geltenden
    Fassung, und neben zwei Zeitständen ist nicht zu sagen, zu welchem. */
@@ -1148,6 +1157,8 @@ body[data-ansicht=vergleich] .einfaerben,
 body[data-ansicht=vergleich] #satzbildgruppe,
 body[data-ansicht=vergleich] .trenner-einfaerben{display:none}
 body[data-ansicht=start] .reiterleiste,
+body[data-ansicht=beitraege] .reiterleiste,
+body[data-ansicht=beitrag] .reiterleiste,
 body[data-ansicht=suche] .reiterleiste{display:none}
 /* Ohne Normtext gibt es nichts einzufärben und nichts zu vergrößern — beide
    Schalter gehören dort nicht hin. Die Darstellung (hell/dunkel) bleibt: Sie
@@ -1159,8 +1170,14 @@ body[data-ansicht=suche] .einfaerben,
 body[data-ansicht=start] .schriftgruppe,
 body[data-ansicht=uebersicht] .schriftgruppe,
 body[data-ansicht=suche] .schriftgruppe,
+body[data-ansicht=beitraege] .einfaerben,
+body[data-ansicht=beitrag] .einfaerben,
+body[data-ansicht=beitraege] .schriftgruppe,
+body[data-ansicht=beitrag] .schriftgruppe,
 body[data-ansicht=start] .trenner-einfaerben,
 body[data-ansicht=uebersicht] .trenner-einfaerben,
+body[data-ansicht=beitraege] .trenner-einfaerben,
+body[data-ansicht=beitrag] .trenner-einfaerben,
 body[data-ansicht=suche] .trenner-einfaerben{display:none}
 /* Auf der Startseite steht das große Suchfeld — die Kopfleiste bleibt schlank. */
 body[data-ansicht=start] .suchfeld{display:none}
@@ -1548,6 +1565,101 @@ body[data-ansicht=start] .suchfeld{display:none}
   .vergleich-bilanz,.vergleich-quelle{font-size:8pt;color:#444}
 }
 
+
+/* ══════════════════════════════════════════════════════════════════════
+   Beiträge
+
+   Der Beitrag des Tages ist kein Blog. Er trägt nichts vor, was nicht schon
+   im Bestand steht: einen Auszug aus dem Wortlaut mit der erkannten
+   Struktur darin, dazu die Verwaltungsanweisung und die Rückverweise. Die
+   Ansicht ist deshalb dieselbe Typografie wie der Arbeitsplatz — nur ohne
+   Apparat und ohne Werkzeuge, weil hier nicht gearbeitet, sondern gelesen
+   wird.
+   ══════════════════════════════════════════════════════════════════════ */
+.beitragsliste{display:flex;flex-direction:column;margin:0 0 30px}
+.beitragszeile{
+  display:grid;grid-template-columns:88px 1fr;gap:18px;align-items:baseline;
+  width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;
+  background:none;border:0;border-bottom:1px solid var(--linie-zart);
+  padding:14px 10px;border-radius:var(--r-chip);
+}
+.beitragszeile:hover{background:var(--zeile-weich)}
+.beitragszeile .zeitpunkt{font-family:var(--mono);font-size:12px;color:var(--text-5);white-space:nowrap}
+.beitragszeile .titel{font-family:var(--serif);font-size:17.5px;line-height:1.38;color:var(--text)}
+.beitragszeile .kurz{
+  display:block;font-family:var(--sans);font-size:12.5px;line-height:1.6;
+  color:var(--text-3);margin-top:6px;
+}
+.beitragszeile .marken{
+  display:block;font-family:var(--mono);font-size:11px;color:var(--text-5);margin-top:7px;
+}
+
+.beitrag{max-width:44rem}
+.beitrag h1{
+  font-family:var(--serif);font-weight:300;font-size:31px;line-height:1.24;
+  letter-spacing:-.01em;margin:6px 0 0;
+}
+.beitrag .kopfzeile{
+  font-family:var(--mono);font-size:12px;color:var(--text-5);
+  display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;
+}
+.beitrag h2{
+  font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--text-4);margin:34px 0 12px;
+}
+.beitrag .auszug{
+  font-family:var(--serif);font-size:19px;line-height:1.68;color:var(--text);
+  text-wrap:pretty;margin:0;
+}
+/* Die Einfärbung steht hier fest und hängt nicht am Regler der Kopfleiste:
+   Der Beitrag ZEIGT die Erkennung, sie ist sein Gegenstand. */
+.beitrag .auszug .s-tatbestand{background:var(--tb-voll);box-shadow:0 0 0 2px var(--tb-voll);border-radius:2px}
+.beitrag .auszug .s-rechtsfolge{background:var(--rf-voll);box-shadow:0 0 0 2px var(--rf-voll);border-radius:2px}
+.beitrag .auszug .s-ausnahme{background:var(--au-voll);box-shadow:0 0 0 2px var(--au-voll);border-radius:2px}
+.beitrag .bauteil{
+  display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:baseline;
+  padding:10px 0;border-top:1px solid var(--linie-zart);
+}
+.beitrag .bauteil .marke{font-family:var(--mono);font-size:11.5px;color:var(--text-3);line-height:1.5}
+.beitrag .bauteil .marke i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.beitrag .bauteil .marke .pfad{display:block;color:var(--text-5);margin-top:3px}
+.beitrag .bauteil .text{font-family:var(--serif);font-size:16.5px;line-height:1.6;color:var(--text-2)}
+.beitrag .vwstelle{
+  border-left:2px solid var(--vw-rand);background:var(--vw-grund);
+  padding:12px 16px;margin:0 0 10px;border-radius:0 var(--r-chip) var(--r-chip) 0;
+}
+.beitrag .vwstelle .fundstelle{
+  display:block;font-family:var(--mono);font-size:11px;color:var(--vw);margin-bottom:6px;
+}
+.beitrag .vwstelle p{font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--text-2);margin:0}
+.beitrag .zitatreihe{display:flex;flex-wrap:wrap;gap:6px}
+.beitrag .fusshinweis{
+  font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--text-4);
+  border-top:1px solid var(--linie);margin-top:34px;padding-top:14px;
+}
+.beitrag .weiterlesen{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+/* Zwei der drei Wege führen aus der Seite hinaus und sind deshalb Anker, keine
+   Knöpfe. Sie sollen aussehen wie die Pille daneben. */
+.beitrag .weiterlesen a.pille{text-decoration:none;display:inline-block;line-height:1.5}
+
+.beitragsteaser{
+  border:1px solid var(--linie-schwach);border-radius:var(--r-chip);
+  padding:14px 16px;margin-bottom:28px;background:var(--flaeche);
+}
+.beitragsteaser .zeitpunkt{font-family:var(--mono);font-size:11px;color:var(--text-5)}
+.beitragsteaser .titel{
+  display:block;font-family:var(--serif);font-size:17px;line-height:1.38;
+  color:var(--text);margin:6px 0 0;text-align:left;
+}
+.beitragsteaser p{font-size:12.5px;line-height:1.6;color:var(--text-3);margin:7px 0 0}
+.beitragsteaser .auf{background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;text-align:left}
+.beitragsteaser .auf:hover .titel{text-decoration:underline;text-underline-offset:3px}
+
+@media (max-width:900px){
+  .beitragszeile{grid-template-columns:1fr;gap:4px}
+  .beitrag .bauteil{grid-template-columns:1fr;gap:4px}
+}
+
 /* Nur im Druck sichtbar. */
 .druckkopf,.druckfuss{display:none}
 
@@ -1696,6 +1808,8 @@ const S = {
   spalten: { nav: 216, apparat: 340 }, // Breite links/rechts in px, localStorage
   letzteFarbe: "#F2C744",  // localStorage
   filterGesetze: new Set(),// Trefferliste: eingeschränkte Auswahl
+  beitraege: null,         // beitraege/index.json — täglicher Beitrag
+  beitragCache: new Map(), // id → beitraege/<id>.json
 };
 
 /* Voreinstellungen der Farbwahl, dazu ein freier Wähler. */
@@ -4966,6 +5080,352 @@ function hauptStilZuruecksetzen(){
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   Beiträge
+
+   `beitraege/index.json` ist eine ZUTAT wie die Rückverweise: Fehlt die
+   Datei — etwa bei einer Kopie ohne den täglichen Lauf —, fällt die Rubrik
+   still weg, und alles andere arbeitet weiter. Keine Fehlermeldung für
+   etwas, das niemand vermisst.
+   ══════════════════════════════════════════════════════════════════════ */
+async function beitraegeLaden(){
+  if (S.beitraege) return S.beitraege;
+  try { S.beitraege = await holen("beitraege/index.json"); }
+  catch (fehler) { S.beitraege = { beitraege: [] }; }
+  if (!Array.isArray(S.beitraege.beitraege)) S.beitraege.beitraege = [];
+  return S.beitraege;
+}
+
+async function beitragHolen(zeile){
+  if (S.beitragCache.has(zeile.id)) return S.beitragCache.get(zeile.id);
+  const beitrag = await holen(zeile.datei);
+  S.beitragCache.set(zeile.id, beitrag);
+  return beitrag;
+}
+
+function beitragsdatum(iso, kurzform){
+  const d = new Date(String(iso) + "T12:00:00Z");
+  if (Number.isNaN(d.getTime())) return String(iso);
+  /* In der Liste steht das Datum in einer schmalen Spalte neben dem Titel;
+     dort ist der ausgeschriebene Monat 130 px breit und schöbe sich in die
+     Überschrift. Im Beitrag selbst ist Platz. */
+  return d.toLocaleDateString("de-DE", kurzform
+    ? { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" }
+    : { day: "2-digit", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
+const BEITRAG_MARKE = {
+  tatbestand: "Tatbestand", rechtsfolge: "Rechtsfolge", ausnahme: "Ausnahme",
+};
+
+/**
+ * Der Auszug mit den erkannten Spannen.
+ *
+ * Die Positionen zählen Zeichen im Auszug und überschneiden sich nicht —
+ * dafür sorgt `tools/beitrag.mjs`. Gebaut wird ohne `innerHTML`: Der Text
+ * kommt aus einer Datei, und eine Datei ist kein Grund, Markup zu erlauben.
+ */
+function auszugMitStruktur(text, spannen){
+  const stueck = document.createDocumentFragment();
+  let cursor = 0;
+  for (const s of (spannen || [])){
+    if (!BEITRAG_MARKE[s.typ]) continue;
+    if (!(s.von >= cursor) || !(s.bis > s.von)) continue;
+    if (s.von > cursor) stueck.appendChild(document.createTextNode(text.slice(cursor, s.von)));
+    const marke = document.createElement("mark");
+    marke.className = "s-" + s.typ;
+    marke.textContent = text.slice(s.von, s.bis);
+    marke.title = BEITRAG_MARKE[s.typ] + " — maschinell erkannt";
+    stueck.appendChild(marke);
+    cursor = s.bis;
+  }
+  if (cursor < text.length) stueck.appendChild(document.createTextNode(text.slice(cursor)));
+  return stueck;
+}
+
+async function beitraegeZeichnen(){
+  document.body.dataset.ansicht = "beitraege";
+  werkzeugleisteBauen();
+  vergleichKnopfSetzen();
+  const haupt = el("haupt");
+  haupt.className = "breit";
+  haupt.innerHTML = "";
+  el("navspalte").innerHTML = "";
+  el("apparat").innerHTML = "";
+
+  const mitte = document.createElement("div");
+  mitte.className = "mitte";
+
+  const h1 = document.createElement("h1");
+  h1.appendChild(document.createTextNode("Eine Norm am Tag."));
+  const zweite = document.createElement("span");
+  zweite.className = "zweite";
+  zweite.textContent = "Zusammengestellt aus dem Bestand, nicht geschrieben.";
+  h1.appendChild(zweite);
+  mitte.appendChild(h1);
+
+  const stand = await beitraegeLaden();
+  const liste = document.createElement("div");
+  liste.className = "beitragsliste";
+
+  if (!stand.beitraege.length){
+    const p = document.createElement("p");
+    p.className = "platzhalter";
+    p.textContent = "Noch kein Beitrag vorhanden. Der tägliche Lauf legt den ersten an.";
+    liste.appendChild(p);
+  }
+
+  for (const b of stand.beitraege){
+    const zeile = knopf("beitragszeile");
+    const zeitpunkt = document.createElement("span");
+    zeitpunkt.className = "zeitpunkt";
+    zeitpunkt.textContent = beitragsdatum(b.datum, true);
+    const rechts = document.createElement("span");
+    const titel = document.createElement("span");
+    titel.className = "titel";
+    titel.textContent = b.titel;
+    const kurz = document.createElement("span");
+    kurz.className = "kurz";
+    kurz.textContent = b.kurz || "";
+    rechts.append(titel, kurz);
+    if (b.kennzahlen){
+      const marken = document.createElement("span");
+      marken.className = "marken";
+      const teile = [b.kennzahlen.erkannteSpannen + " erkannte Spannen"];
+      if (b.kennzahlen.verwaltungsstellen) teile.push(b.kennzahlen.verwaltungsstellen + " Verwaltungsstellen");
+      if (b.kennzahlen.zitiertVon) teile.push("zitiert von " + b.kennzahlen.zitiertVon);
+      marken.textContent = teile.join(" · ");
+      rechts.appendChild(marken);
+    }
+    zeile.append(zeitpunkt, rechts);
+    zeile.onclick = () => { location.hash = "#/beitrag/" + b.id; };
+    liste.appendChild(zeile);
+  }
+  mitte.appendChild(liste);
+
+  const kasten = document.createElement("div");
+  kasten.className = "kasten";
+  const k1 = document.createElement("p");
+  k1.textContent = "Jeder Beitrag ist zusammengestellt, nicht formuliert: Jeder Satz darin steht "
+    + "wörtlich im Normtext oder in einer amtlichen Verwaltungsanweisung. Die Auswahl der Norm "
+    + "und der Zuschnitt der Auszüge sind maschinell.";
+  const k2 = document.createElement("p");
+  k2.textContent = "Die Einfärbung zeigt, was das Verfahren als Tatbestand, Rechtsfolge und "
+    + "Ausnahme erkannt hat. Sie ist nicht redaktionell geprüft und keine Rechtsberatung.";
+  kasten.append(k1, k2);
+  mitte.appendChild(kasten);
+
+  haupt.appendChild(mitte);
+  reiterZeichnen();
+  document.title = "Beiträge — steuernorm";
+}
+
+async function beitragZeichnen(id){
+  document.body.dataset.ansicht = "beitrag";
+  werkzeugleisteBauen();
+  vergleichKnopfSetzen();
+  const haupt = el("haupt");
+  haupt.className = "breit";
+  haupt.innerHTML = "";
+  el("navspalte").innerHTML = "";
+  el("apparat").innerHTML = "";
+
+  const stand = await beitraegeLaden();
+  const zeile = stand.beitraege.find(b => b.id === id);
+  const mitte = document.createElement("div");
+  mitte.className = "mitte";
+
+  if (!zeile){
+    const melder = document.createElement("div");
+    melder.className = "melder";
+    const stark = document.createElement("strong");
+    stark.textContent = "Diesen Beitrag gibt es nicht.";
+    const b = knopf("pille", "Alle Beiträge");
+    b.onclick = () => { location.hash = "#/beitraege"; };
+    melder.append(stark, b);
+    mitte.appendChild(melder);
+    haupt.appendChild(mitte);
+    return;
+  }
+
+  let beitrag;
+  try { beitrag = await beitragHolen(zeile); }
+  catch (fehler){
+    const melder = document.createElement("div");
+    melder.className = "melder";
+    const stark = document.createElement("strong");
+    stark.textContent = "Der Beitrag konnte nicht geladen werden.";
+    const p = document.createElement("p");
+    p.textContent = fehler.message;
+    melder.append(stark, p);
+    mitte.appendChild(melder);
+    haupt.appendChild(mitte);
+    return;
+  }
+
+  const rumpf = document.createElement("article");
+  rumpf.className = "beitrag";
+
+  const krume = document.createElement("div");
+  krume.className = "brotkrume";
+  const zurueck = knopf("", "Beiträge");
+  zurueck.onclick = () => { location.hash = "#/beitraege"; };
+  krume.append(zurueck, document.createTextNode(" › "),
+    document.createTextNode(beitrag.gesetz.abk + " " + beitrag.norm.enbez));
+  rumpf.appendChild(krume);
+
+  const kopfzeile = document.createElement("div");
+  kopfzeile.className = "kopfzeile";
+  const datum = document.createElement("span");
+  datum.textContent = beitragsdatum(beitrag.datum);
+  kopfzeile.appendChild(datum);
+  if (beitrag.norm.gliederung){
+    const gl = document.createElement("span");
+    gl.textContent = beitrag.norm.gliederung;
+    kopfzeile.appendChild(gl);
+  }
+  rumpf.appendChild(kopfzeile);
+
+  const h1 = document.createElement("h1");
+  h1.textContent = beitrag.titel;
+  rumpf.appendChild(h1);
+
+  for (const abschnitt of beitrag.abschnitte){
+    const h2 = document.createElement("h2");
+    h2.textContent = abschnitt.titel;
+    rumpf.appendChild(h2);
+
+    if (abschnitt.art === "wortlaut"){
+      const p = document.createElement("p");
+      p.className = "auszug";
+      p.appendChild(auszugMitStruktur(abschnitt.text, abschnitt.spannen));
+      if (abschnitt.gekuerzt){
+        const zusatz = document.createElement("span");
+        zusatz.style.color = "var(--text-5)";
+        zusatz.textContent = " […]";
+        p.appendChild(zusatz);
+      }
+      rumpf.appendChild(p);
+      continue;
+    }
+
+    if (abschnitt.art === "struktur"){
+      for (const punkt of abschnitt.punkte){
+        const reihe = document.createElement("div");
+        reihe.className = "bauteil";
+        const marke = document.createElement("div");
+        marke.className = "marke";
+        const farbe = document.createElement("i");
+        farbe.className = "s-" + punkt.kategorie;
+        farbe.style.background = "var(--" + ({ tatbestand: "tb", rechtsfolge: "rf", ausnahme: "au" }[punkt.kategorie]) + "-voll)";
+        marke.append(farbe, document.createTextNode(punkt.marke));
+        if (punkt.pfad){
+          const pfad = document.createElement("span");
+          pfad.className = "pfad";
+          pfad.textContent = punkt.pfad;
+          marke.appendChild(pfad);
+        }
+        const text = document.createElement("div");
+        text.className = "text";
+        text.textContent = punkt.text;
+        reihe.append(marke, text);
+        rumpf.appendChild(reihe);
+      }
+      if (abschnitt.hinweis){
+        const h = document.createElement("p");
+        h.className = "fusshinweis";
+        h.style.borderTop = "0";
+        h.style.marginTop = "10px";
+        h.textContent = abschnitt.hinweis;
+        rumpf.appendChild(h);
+      }
+      continue;
+    }
+
+    if (abschnitt.art === "verwaltung"){
+      for (const punkt of abschnitt.punkte){
+        const kasten = document.createElement("div");
+        kasten.className = "vwstelle";
+        const fund = document.createElement("span");
+        fund.className = "fundstelle";
+        fund.textContent = [punkt.quelle, punkt.fundstelle].filter(Boolean).join(" · ");
+        const p = document.createElement("p");
+        p.textContent = punkt.text;
+        kasten.append(fund, p);
+        if (punkt.url){
+          const a = document.createElement("a");
+          a.href = punkt.url;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.className = "fundstelle";
+          a.style.display = "inline-block";
+          a.style.marginTop = "8px";
+          a.textContent = "amtliche Fundstelle ↗";
+          kasten.appendChild(a);
+        }
+        rumpf.appendChild(kasten);
+      }
+      continue;
+    }
+
+    if (abschnitt.art === "verweise"){
+      const reihe = document.createElement("div");
+      reihe.className = "zitatreihe";
+      for (const punkt of abschnitt.punkte){
+        const b = knopf("zitat", punkt.anzeige);
+        b.onclick = () => { location.hash = punkt.ziel; };
+        reihe.appendChild(b);
+      }
+      rumpf.appendChild(reihe);
+      if (abschnitt.anzahl > abschnitt.punkte.length){
+        const mehr = document.createElement("p");
+        mehr.className = "fusshinweis";
+        mehr.style.borderTop = "0";
+        mehr.style.marginTop = "10px";
+        mehr.textContent = "und " + (abschnitt.anzahl - abschnitt.punkte.length) + " weitere.";
+        rumpf.appendChild(mehr);
+      }
+    }
+  }
+
+  const weiter = document.createElement("div");
+  weiter.className = "weiterlesen";
+  const zurNorm = knopf("pille", "Norm im Arbeitsplatz öffnen");
+  zurNorm.onclick = () => { location.hash = beitrag.ziel; };
+  weiter.appendChild(zurNorm);
+  if (beitrag.amtlich){
+    const a = document.createElement("a");
+    a.className = "pille";
+    a.href = beitrag.amtlich;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "Amtlicher Wortlaut ↗";
+    weiter.appendChild(a);
+  }
+  if (beitrag.veroeffentlicht && beitrag.veroeffentlicht.instagram
+      && beitrag.veroeffentlicht.instagram.permalink){
+    const a = document.createElement("a");
+    a.className = "pille";
+    a.href = beitrag.veroeffentlicht.instagram.permalink;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "Auf Instagram ↗";
+    weiter.appendChild(a);
+  }
+  rumpf.appendChild(weiter);
+
+  const fuss = document.createElement("p");
+  fuss.className = "fusshinweis";
+  fuss.textContent = beitrag.hinweis
+    + (beitrag.stand ? " Stand des Gesetzes: " + beitrag.stand : "");
+  rumpf.appendChild(fuss);
+
+  mitte.appendChild(rumpf);
+  haupt.appendChild(mitte);
+  reiterZeichnen();
+  document.title = beitrag.titel + " — steuernorm";
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    Startseite
    ══════════════════════════════════════════════════════════════════════ */
 function startseiteZeichnen(){
@@ -5059,6 +5519,40 @@ function startseiteZeichnen(){
     }
     rechts.appendChild(l);
   }
+  /* Beitrag des Tages. Er wird NACHGELADEN und nicht erwartet: Die Startseite
+     darf nicht auf eine Zutat warten, und eine Kopie ohne den täglichen Lauf
+     zeigt hier einfach nichts. */
+  const beitragsfach = document.createElement("div");
+  rechts.appendChild(beitragsfach);
+  beitraegeLaden().then((stand) => {
+    const jung = stand.beitraege[0];
+    if (!jung || !beitragsfach.isConnected) return;
+    const kopf = document.createElement("p");
+    kopf.className = "spaltenkopf";
+    kopf.textContent = "Beitrag des Tages";
+    const kasten = document.createElement("div");
+    kasten.className = "beitragsteaser";
+    const auf = document.createElement("button");
+    auf.type = "button";
+    auf.className = "auf";
+    const zeitpunkt = document.createElement("span");
+    zeitpunkt.className = "zeitpunkt";
+    zeitpunkt.textContent = beitragsdatum(jung.datum, true);
+    const titel = document.createElement("span");
+    titel.className = "titel";
+    titel.textContent = jung.titel;
+    auf.append(zeitpunkt, titel);
+    auf.onclick = () => { location.hash = "#/beitrag/" + jung.id; };
+    const p = document.createElement("p");
+    p.textContent = jung.kurz || "";
+    kasten.append(auf, p);
+    const alle = knopf("pille", "Alle Beiträge");
+    alle.style.marginTop = "12px";
+    alle.onclick = () => { location.hash = "#/beitraege"; };
+    kasten.appendChild(alle);
+    beitragsfach.append(kopf, kasten);
+  }).catch(() => {});
+
   const k2 = document.createElement("p");
   k2.className = "spaltenkopf";
   k2.textContent = "Über die Daten";
@@ -5734,6 +6228,29 @@ async function wegweiser(){
   if (teile[0] === "suche"){
     hauptStilZuruecksetzen();
     trefferZeichnen(teile.slice(1).join("/"));
+    return;
+  }
+
+  /* Die Beiträge stehen VOR der Gesetzesauflösung: „beitraege" ist kein
+     Gesetzeskürzel, und ohne diesen Zweig fiele der Aufruf auf das erste
+     Gesetz des Registers zurück. */
+  if (teile[0] === "beitraege"){
+    await beitraegeLaden();
+    if (ueberholt()) return;          // in der Zwischenzeit weitergeklickt
+    hauptStilZuruecksetzen();
+    await beitraegeZeichnen();
+    return;
+  }
+  if (teile[0] === "beitrag"){
+    const kennung = teile.slice(1).join("/");
+    /* Erst holen, dann prüfen, dann zeichnen: Wer während des Ladens
+       weiterklickt, darf nicht den vorletzten Beitrag zu sehen bekommen. */
+    const stand = await beitraegeLaden();
+    const gesucht = stand.beitraege.find(b => b.id === kennung);
+    if (gesucht){ try { await beitragHolen(gesucht); } catch (fehler) { /* der Zeichner meldet es */ } }
+    if (ueberholt()) return;
+    hauptStilZuruecksetzen();
+    await beitragZeichnen(kennung);
     return;
   }
 
