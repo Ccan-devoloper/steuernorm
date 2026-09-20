@@ -1,0 +1,1120 @@
+{
+  "abk": "EStG",
+  "format": 1,
+  "stand": "2026-09-20",
+  "quelle": "EStG – Beck-Prüfstand – Zwischenstand 20.09.2026",
+  "methode": "manuelle Beck-Verifikation; keine automatische juristische Klassifikation",
+  "prioritaet": "redaktionelle Befunde übersteuern maschinelle Struktur, soweit die Fundstelle eindeutig auflösbar ist",
+  "anzahl": 179,
+  "kategorien": {
+    "tatbestand": 49,
+    "rechtsfolge": 66,
+    "definition": 29,
+    "ausnahme": 35
+  },
+  "befunde": [
+    {
+      "id": "E001",
+      "fundstelle": "§ 1 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E002",
+      "fundstelle": "§ 1 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E003",
+      "fundstelle": "§ 2 Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E004",
+      "fundstelle": "§ 2 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E005",
+      "fundstelle": "§ 2 Abs. 3",
+      "typ": "definition"
+    },
+    {
+      "id": "E006",
+      "fundstelle": "§ 2 Abs. 4",
+      "typ": "definition"
+    },
+    {
+      "id": "E007",
+      "fundstelle": "§ 2 Abs. 5",
+      "typ": "definition"
+    },
+    {
+      "id": "E008",
+      "fundstelle": "§ 2 Abs. 5a S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E009",
+      "fundstelle": "§ 2 Abs. 5a S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E010",
+      "fundstelle": "§ 2 Abs. 5a S. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E011",
+      "fundstelle": "§ 2 Abs. 5a S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E012",
+      "fundstelle": "§ 2 Abs. 5b",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E013",
+      "fundstelle": "§ 2 Abs. 6",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E014",
+      "fundstelle": "§ 2 Abs. 7 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E015",
+      "fundstelle": "§ 2 Abs. 7 S. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E016",
+      "fundstelle": "§ 2 Abs. 7 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E017",
+      "fundstelle": "§ 2 Abs. 8",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E018",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E019",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E020",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E021",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E022",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E023",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E024",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E025",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E026",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E027",
+      "fundstelle": "§ 2a Abs. 2a S. 1 Nr. 1–2",
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 4663,
+          "bis": 4757
+        },
+        {
+          "von": 4761,
+          "bis": 4936
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E028",
+      "fundstelle": "§ 2a Abs. 2a S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E029",
+      "fundstelle": "§ 3 Nr. 71 Buchst. b S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E030",
+      "fundstelle": "§ 3a Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E031",
+      "fundstelle": "§ 4 Abs. 1 S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E032",
+      "fundstelle": "§ 5a Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E033",
+      "fundstelle": "§ 8 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E034",
+      "fundstelle": "§ 9 Abs. 4 S. 1-7",
+      "typ": "definition"
+    },
+    {
+      "id": "E035",
+      "fundstelle": "§ 9 Abs. 6 S. 2-3",
+      "typ": "definition"
+    },
+    {
+      "id": "E036",
+      "fundstelle": "§ 9 Abs. 6 S. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E037",
+      "fundstelle": "§ 9 Abs. 6 S. 5",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E038",
+      "fundstelle": "§ 10 Abs. 4b S. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E039",
+      "fundstelle": "§ 10 Abs. 4b S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E040",
+      "fundstelle": "§ 10 Abs. 4b S. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E041",
+      "fundstelle": "§ 10 Abs. 4b S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E042",
+      "fundstelle": "§ 10d Abs. 1 S. 1-2",
+      "typ": "definition"
+    },
+    {
+      "id": "E043",
+      "fundstelle": "§ 10d Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E044",
+      "fundstelle": "§ 10d Abs. 4 S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E045",
+      "fundstelle": "§ 15 Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E046",
+      "fundstelle": "§ 15a Abs. 1a S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E047",
+      "fundstelle": "§ 15b Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E048",
+      "fundstelle": "§ 15b Abs. 1 S. 1-2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E049",
+      "fundstelle": "§ 15b Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E050",
+      "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 1",
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 199,
+          "bis": 390
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E051",
+      "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 2",
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 391,
+          "bis": 763
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E052",
+      "fundstelle": "§ 32d Abs. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E053",
+      "fundstelle": "§ 34 Abs. 2 Nr. 4",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E054",
+      "fundstelle": "§ 49 Abs. 1 Nr. 9",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E055",
+      "fundstelle": "§ 81",
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 82
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E056",
+      "fundstelle": "§ 88",
+      "typ": "definition"
+    },
+    {
+      "id": "E057",
+      "fundstelle": "§ 88",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E058",
+      "fundstelle": "§ 93 Abs. 1 S. 1",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 404
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E059",
+      "fundstelle": "§ 93",
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 1188,
+          "bis": 2807
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E060",
+      "fundstelle": "§ 94 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E061",
+      "fundstelle": "§ 94 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E062",
+      "fundstelle": "§ 96 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E063",
+      "fundstelle": "§ 98",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E064",
+      "fundstelle": "§ 99 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E065",
+      "fundstelle": "§ 100",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E066",
+      "fundstelle": "§ 100 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E067",
+      "fundstelle": "§ 101 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E068",
+      "fundstelle": "§ 101 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E069",
+      "fundstelle": "§ 101 S. 4",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E070",
+      "fundstelle": "§ 102",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E071",
+      "fundstelle": "§ 102",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E072",
+      "fundstelle": "§ 103",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E073",
+      "fundstelle": "§ 103",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E074",
+      "fundstelle": "§ 104 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E075",
+      "fundstelle": "§ 104 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E076",
+      "fundstelle": "§ 105 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E077",
+      "fundstelle": "§ 105 Abs. 1 S. 2",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 143,
+          "bis": 195
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E078",
+      "fundstelle": "§ 105 Abs. 1 S. 2",
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 130,
+          "bis": 141
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E079",
+      "fundstelle": "§ 106",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E080",
+      "fundstelle": "§ 107",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E081",
+      "fundstelle": "§ 107",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E082",
+      "fundstelle": "§ 108",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E083",
+      "fundstelle": "§ 109",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E084",
+      "fundstelle": "§ 110 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E085",
+      "fundstelle": "§ 110 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E086",
+      "fundstelle": "§ 110 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E087",
+      "fundstelle": "§ 111 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E088",
+      "fundstelle": "§ 111 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E089",
+      "fundstelle": "§ 111 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E090",
+      "fundstelle": "§ 111 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E091",
+      "fundstelle": "§ 112 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E092",
+      "fundstelle": "§ 112 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E093",
+      "fundstelle": "§ 113",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E094",
+      "fundstelle": "§ 113",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E095",
+      "fundstelle": "§ 114",
+      "typ": "tatbestand",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund nennt einen Tatbestand in § 114; der aktuelle Normtext enthält dort nur die Entstehensregel am 1.9.2022."
+    },
+    {
+      "id": "E096",
+      "fundstelle": "§ 114",
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 73
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E097",
+      "fundstelle": "§ 115 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E098",
+      "fundstelle": "§ 115 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E099",
+      "fundstelle": "§ 115",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E100",
+      "fundstelle": "§ 116 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E101",
+      "fundstelle": "§ 116 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E102",
+      "fundstelle": "§ 116",
+      "typ": "ausnahme",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund beschreibt die unterbleibende Festsetzung/Anrechnung bei Arbeitgeberauszahlung, ohne in § 116 eine textgleiche Teilspanne zu benennen."
+    },
+    {
+      "id": "E103",
+      "fundstelle": "§ 117 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E104",
+      "fundstelle": "§ 117 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E105",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E106",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E107",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E108",
+      "fundstelle": "§ 119 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E109",
+      "fundstelle": "§ 119 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E110",
+      "fundstelle": "§ 120 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E111",
+      "fundstelle": "§ 120 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E112",
+      "fundstelle": "§ 121",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E113",
+      "fundstelle": "§ 122",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E114",
+      "fundstelle": "§ 122",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E115",
+      "fundstelle": "§ 85",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E116",
+      "fundstelle": "§ 85",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E117",
+      "fundstelle": "§ 85",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E118",
+      "fundstelle": "§ 85",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E119",
+      "fundstelle": "§ 86 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E120",
+      "fundstelle": "§ 90 Abs. 3 S. 1",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 1384,
+          "bis": 1631
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E121",
+      "fundstelle": "§ 90 Abs. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E122",
+      "fundstelle": "§ 92 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E123",
+      "fundstelle": "§ 92 S. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E124",
+      "fundstelle": "§ 96 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E125",
+      "fundstelle": "§ 96 Abs. 3 S. 3",
+      "typ": "ausnahme",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund verweist auf § 96 Abs. 3 S. 3; der aktuelle Normtext/Gliederungsdatensatz führt dort keinen Satz 3."
+    },
+    {
+      "id": "E126",
+      "fundstelle": "§ 119 Abs. 1 S. 2",
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 253,
+          "bis": 317
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E127",
+      "fundstelle": "§ 119 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E128",
+      "fundstelle": "§ 119 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E129",
+      "fundstelle": "§ 119 Abs. 2 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E130",
+      "fundstelle": "§ 91 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E131",
+      "fundstelle": "§ 92a Abs. 4 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E132",
+      "fundstelle": "§ 92a Abs. 4 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E133",
+      "fundstelle": "§ 92b Abs. 1 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E134",
+      "fundstelle": "§ 93 Abs. 3 S. 2",
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 5928,
+          "bis": 6623
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E135",
+      "fundstelle": "§ 93 Abs. 1 S. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E136",
+      "fundstelle": "§ 94 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E137",
+      "fundstelle": "§ 95",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E138",
+      "fundstelle": "§ 96 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E139",
+      "fundstelle": "§ 97 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E140",
+      "fundstelle": "§ 97 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E141",
+      "fundstelle": "§ 92b Abs. 1 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E142",
+      "fundstelle": "§ 93 Abs. 1 S. 4 Buchst. a-d",
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 1188,
+          "bis": 2807
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E143",
+      "fundstelle": "§ 97 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E144",
+      "fundstelle": "§ 82 Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E145",
+      "fundstelle": "§ 82 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E146",
+      "fundstelle": "§ 84",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E147",
+      "fundstelle": "§ 84",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E148",
+      "fundstelle": "§ 84",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E149",
+      "fundstelle": "§ 87 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E150",
+      "fundstelle": "§ 87",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E151",
+      "fundstelle": "§ 87",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E152",
+      "fundstelle": "§ 92a Abs. 3 S. 9",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E153",
+      "fundstelle": "§ 92a Abs. 4 S. 1 Nr. 1-3",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 16187,
+          "bis": 16649
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E154",
+      "fundstelle": "§ 92b Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E155",
+      "fundstelle": "§ 92b Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E156",
+      "fundstelle": "§ 93 Abs. 1a",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E157",
+      "fundstelle": "§ 93 Abs. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E158",
+      "fundstelle": "§ 93 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E159",
+      "fundstelle": "§ 93 Abs. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E160",
+      "fundstelle": "§ 96 Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E161",
+      "fundstelle": "§ 100 Abs. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E162",
+      "fundstelle": "§ 100 Abs. 3 Nr. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E163",
+      "fundstelle": "§ 100 Abs. 3 Nr. 2",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 1257,
+          "bis": 1485
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E164",
+      "fundstelle": "§ 100 Abs. 3 Nr. 4",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E165",
+      "fundstelle": "§ 100 Abs. 6 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E166",
+      "fundstelle": "§ 105 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E167",
+      "fundstelle": "§ 112 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E168",
+      "fundstelle": "§ 117 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E169",
+      "fundstelle": "§ 117 Abs. 2 S. 2-3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E170",
+      "fundstelle": "§ 117 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E171",
+      "fundstelle": "§ 117 Abs. 4",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E172",
+      "fundstelle": "§ 118 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E173",
+      "fundstelle": "§ 122 S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E174",
+      "fundstelle": "Anlage 1 zu § 4d Abs. 1",
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 604
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E175",
+      "fundstelle": "Anlage 1a Nr. 1 zu § 13a",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E176",
+      "fundstelle": "Anlage 1a Nr. 2 zu § 13a",
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 453,
+          "bis": 1158
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E177",
+      "fundstelle": "Anlage 1a Nr. 3 zu § 13a",
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 1162,
+          "bis": 1265
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
+    },
+    {
+      "id": "E178",
+      "fundstelle": "Anlage 2 zu § 43b",
+      "typ": "definition"
+    },
+    {
+      "id": "E179",
+      "fundstelle": "Anlage 3 zu § 50g",
+      "typ": "definition"
+    }
+  ],
+  "text_hashes": {
+    "1": "fffd0696138b1cd5c6afb438b2742f8d281cb9f7f2e72ddffb7bc3b03d7d7d7b",
+    "2": "b74ef4fd40a48593b14c2026e6d0e4cd1399e61af7b1a302e74136c5e6c1f0a5",
+    "3": "e0213255352a9b527ba50b8b6dc1ba00c99c2dc06008010d2e9ce4e35b4c678a",
+    "4": "8827f254662d18aeb2f872cb68b3b54f361937c3a7ce7272e66b47dad3235325",
+    "8": "2a6fbddf2a8a9ade8bb42990ca647efa361b81f09345f215ff29f8488523bb58",
+    "9": "dd23999eac1964fa9aa50deae26570e6e14a92aedd034d72c2357170589834c1",
+    "10": "4cc5142d918ec2fce271459150001414466bf2157abe60071bf76f1d3dbedec0",
+    "15": "686b147d5e9e705eb852ec9682e9eaf6bf2e1224799524cea3bf6a73f49feb27",
+    "19": "cc6be527eb6b2caffdc4fdeb5cd93b68960385e773cb4462c934c3d4f29425d1",
+    "34": "9d63305d12535a7ff8834cbeb7665540af2fa534bfcfcb29ee9a21a2c24796bd",
+    "49": "ddec299eee44e7adf351c7a0bd42ad7dbfa67325d5028a00ae52372365451a55",
+    "81": "1aa20de748c9a8d828900fa50e5f25c24d1510185a920d343ee095000193498f",
+    "82": "a88c38bc8a5ed8a36559532cbad84fbe4d2f7b5d95596d8d8a76046e2747f460",
+    "84": "60385c75efab345e2cbc7e56c4048136ddcd040a11151ffdfe5d6eef4ea5197d",
+    "85": "5c3792ddb16b680987f43168b2ba4333be42a7c75e7263067102247dfb56789b",
+    "86": "abfa5bb29a9454c42b43ae397e31fd79b9366fa24eed69610a686a3ec56f0aa3",
+    "87": "be2f1307cb163593e14e5f29dc263fcd26202c57664bb48b5d61d539fd9692b6",
+    "88": "74ef02357508dcc685595d7538608f88153bf5c74745bbbe04edbf47e89fad9c",
+    "90": "767dfc3a256c2011217689ad1a3ca395b1793d6392fbb2a226a7f7de0198c435",
+    "91": "6823421a80fa58b7ce5c6277d1d544078f5505053b680e2ed069ece535216708",
+    "92": "14c2d3c8fc10ec7b4499bf2e4cf7fcb4fcbf0dd01000ac1c5d00437c77415888",
+    "93": "d3f8dbd9435dc6f90029c881101df7c1c5b28470e852810999166e88501584c4",
+    "94": "7dd7d4db80cc00395fe42b7f88d6d473fd0a0c376cf0ac2b050e6598a8fb0be0",
+    "95": "6015e104ed50297bdd633a6741ac1783fbaa057308d7082fd528d7c3f13c4a6a",
+    "96": "8db8a7a79b39aef32cb3f20185a3866fc58d6b905652703dce90d763552e3573",
+    "97": "26f572157d17051d9af9812fcdd43ded799e199b4b4a84ada2e6a1f8598eeb8b",
+    "98": "a1297fc6aece91784cc588661dcd83276649ff854eb4b8e14c8e9a3a4069b8f4",
+    "99": "b617366a8d7d66540f775831ce3443d901827db51b66563bc6295d3a080fd4cc",
+    "100": "f446d36ca9e725ef23b2f9714e3da5d3f8f88fd6b7aa7f463df9190dc0ec7da9",
+    "101": "af83aa07c74f45aa0672c9050efbb80a3fa2dce1c53a034983da98a2300b97bc",
+    "102": "676826c3367525999ebd0e66477ee1b2c63b7c77b032c2acd6b6625e50771ef7",
+    "103": "0545359fb58e2a053298e34f0e81ac219ccc669f1f0cedd56c160f02f1a1d565",
+    "104": "c4a7a5813f94350841c25f279118a6e7ef591128b9c7c7e3b33557230e04aeed",
+    "105": "33967606e442378fd73d57722b7fee90013f7eb3760dc48265fda746d15ab954",
+    "106": "7544db998dcd169d0485ed1d699ebae392acfb81ea4c56fbef554e8f2ae70e75",
+    "107": "488115fb79b2192c1ca5e82a1e5aae3da63f2d6f995e584aeaeb20928d87ac42",
+    "108": "3379c889840494c76145cff1a676fba8229789b03d6a3fae7b13e866f5691a31",
+    "109": "86c07a0df56eb5d22d1974337b8152efd6ee9391de9124e62c9737e543b769cc",
+    "110": "868535755293b97ea4ab328de6034f15ca0bc3e7f642a063d5e90b6b750f6a2e",
+    "111": "e633a5d2183d5a9920a823db5ba08752acb3aa070c55a71f7a85d55cad5e62d6",
+    "112": "8c4efd360a62e674f807b4cd7d6a57d42f7a17acba5fb9da64300ec868cc03db",
+    "113": "0454fac02e35218ff7ab0e273a67b1aae5d466e98c0b340983e7ae0af8461fc7",
+    "114": "0bc6f9e92894a82af86cf21907ec613ca002f4b66ffad7100a525e2acada1fc1",
+    "115": "0cd7aa993680fe08dc73dd1cad6e8c82ef4ce1513d55185c02578f2de46bf33b",
+    "116": "05d3f56ba52ee956109b2a234246789d2b4392057dca5ca3b35b0bafa261a839",
+    "117": "43b553f416749bab6fdc8ed85ac965f0682d679224831dd5959e0bccb89f0c31",
+    "118": "fc6982e9544742af69d17aeb81d3fa07db7cebbac70ad142e2dc3593eb2b34d6",
+    "119": "824aa2d065dc53d02cbd6f18ecd9748acd2b9bc3a7c4b599fea15bae952fb8ea",
+    "120": "99204bd51270ab2ebdf03c9eedfa9888a7fd3db1087479e3c0f4f1073cb8d00f",
+    "121": "2059755d050355eb8710e4b0f0ce305357a826f7079b40e8f4fea329eea37626",
+    "122": "1a418b6def0a106e8de378c109da7a16dc2b41d008b852f44b6c9a764c24c24f",
+    "2a": "83fb77895669b38c91193e9b496859536c305a5edade7ac4ad833961670d0b19",
+    "3a": "9d737b770f7efb6058997078ef2dd9acdb836b8e8a57d372e6fcd8c7dbc8c1cf",
+    "5a": "309e36875c73b86975ba49039e33ecce2bc5457233e51fa1f36d24011da47775",
+    "10d": "a3b40a04556613b123da6301823c7f93d888283e26917533dae7409e84357de3",
+    "15a": "58c723949ad7ac807ba5bf73e01cf4ee416b23dc4b2f357fc59f8833f0af1fa7",
+    "15b": "62f0cb3e06ff4420f95c3bea2ff0e2783e116044c570ff71512e77db0e85c6e6",
+    "32d": "4c45578e0ade71da0ed73bc1b89d3ac6749069a7b91f408ce5d50932a894c631",
+    "92a": "6b4df9237990aab47acedb1b97c06e1e65da4be5d0fa48365c253c424b21a0b7",
+    "92b": "ecc7f6e8c037ed4f4d3c491d898ba3147032890c5eaec207371945b4df8b4701",
+    "anlage-1": "0a46f6800be8bdd7ddc5e5a0217f652a95585d5d387b26b2f4e9966fb5d42d3a",
+    "anlage-1a": "47fef14112819ba3130a83065faed5d84f91ccfd5728d19d65c2b937c0a566f1",
+    "anlage-2": "3df19750c8d202fef964cd2679b9b4d7f045865334224869c634172c9b0f9a2b",
+    "anlage-3": "b2db16a72559dd8047b86c13e357009086a826e9c57c86fb39848afd8b4a601c"
+  },
+  "aufloesung": {
+    "automatisch": "Fundstelle gegen Gliederung/Struktur aufgelöst; passende maschinelle Teilspannen werden redaktionell bestätigt.",
+    "explizit": 18,
+    "nicht_textgenau": 3,
+    "schutz": "Alle redaktionellen Segmente sind an den Text-Hash der jeweiligen Norm gebunden; bei Wortlautänderung werden sie nicht ungeprüft übernommen."
+  }
+}

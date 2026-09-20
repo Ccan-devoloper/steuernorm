@@ -8,12 +8,19 @@ Drei Auszeichnungsebenen im Normtext, gleichzeitig lesbar:
 
 | Ebene | Kodierung |
 |---|---|
-| **Maschinelle Struktur** — Tatbestand · Rechtsfolge · Ausnahme/Vorbehalt | Fläche, in drei Stufen (aus · dezent · voll) |
+| **Struktur** — Tatbestand · Rechtsfolge · Ausnahme/Vorbehalt · Definition/Legaldefinition | Fläche, in drei Stufen (aus · dezent · voll); redaktionell verifizierte EStG-Stellen haben Vorrang vor der Automatik |
 | **Eigene Markierung** — freie Farbe, Notiz | Fläche 45 % mit farbiger Unterkante |
 | **Verwaltungsstelle** — Richtlinie, BMF-Schreiben | Punktlinie mit Fundstellen-Chip |
 
 Der Normtext bleibt dabei unangetastet. Was die Farben bedeuten, sagt allein
 die Legende darüber — im Wortlaut steht kein Wort dazu.
+
+**EStG-Prüfstand 20.09.2026:** 179 manuell über Beck verifizierte Befunde liegen
+in `redaktion/estg.json` (49 Tatbestand · 66 Rechtsfolge · 35 Ausnahme ·
+29 Definition/Legaldefinition). 176 Befunde sind textgenau in `struktur/estg.json`
+materialisiert; E095, E102 und E125 bleiben ausdrücklich offen, weil der aktuelle
+Repo-Wortlaut keine textgleiche Teilstelle trägt. Es wird dort keine Färbung
+erfunden. Definitionen haben eine eigene blaue Strukturfarbe.
 
 **Neu in Fassung 7:** Dunkelmodus mit Umschalter hell · dunkel · System ·
 **Sammelmappe** für Normen und markierte Stellen · **Fassungsvergleich** zweier
@@ -78,7 +85,8 @@ tools/lib/belegprobe.mjs          NEU  prüft, ob ein Beleg die Zuordnung trägt
 .github/workflows/annotationen.yml  geändert: Push erzwingt nicht mehr --ohne-ki
 .github/workflows/belege.yml        NEU
 
-struktur/<gesetz>.json            NEU  Zeichenpositionen der Kategorien
+struktur/<gesetz>.json            NEU  Zeichenpositionen der maschinellen Kategorien
+redaktion/<gesetz>.json           redaktionell verifizierte Korrekturschicht; derzeit EStG/Beck-Prüfstand
 verwaltung/<gesetz>.json          NEU  Richtlinien und BMF-Schreiben je Stelle
 fassungen/<gesetz>.json           NEU  Zeitstände für den Fassungsvergleich
 

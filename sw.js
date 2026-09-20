@@ -24,7 +24,7 @@
  * `activate` alle älteren Ablagen weg.
  */
 
-const FASSUNG = "steuernorm-v8-mappe-fassungen";
+const FASSUNG = "steuernorm-v9-redaktion-definitionen";
 const GERUEST = `${FASSUNG}-geruest`;
 const INHALTE = `${FASSUNG}-inhalte`;
 
@@ -62,7 +62,7 @@ self.addEventListener("activate", (e) => {
 
 /** Gesetzestexte und Annotationen — alles, was beim Lesen nachgeladen wird. */
 function istInhalt(url) {
-  return /\/(data|annotations|belege|struktur|verwaltung|fassungen)\/[^/]+\.json$/.test(url.pathname)
+  return /\/(data|annotations|belege|struktur|redaktion|verwaltung|fassungen)\/[^/]+\.json$/.test(url.pathname)
     || /\/schriften\/[^/]+\.(woff2|css)$/.test(url.pathname);
 }
 

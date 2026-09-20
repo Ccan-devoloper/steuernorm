@@ -600,9 +600,10 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     farben.au[0] === "vorbehaltlich der Absätze 2 bis 5", String(farben.au[0]));
   ok("„soweit …“ ist Tatbestand",
     String(farben.tb[0]).startsWith("soweit eine Veranlagung"), String(farben.tb[0]).slice(0, 32));
-  ok("Legende erklärt die drei Kategorien",
+  ok("Legende erklärt alle vier Strukturkategorien",
     farben.legende.includes("Tatbestand") && farben.legende.includes("Rechtsfolge")
-    && farben.legende.includes("Ausnahme / Vorbehalt"));
+    && farben.legende.includes("Ausnahme / Vorbehalt")
+    && farben.legende.includes("Definition / Legaldefinition"));
   ok("Legende weist die Maschine aus",
     farben.legende.includes("maschinell erkannt, nicht redaktionell geprüft"));
 
@@ -620,6 +621,44 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     ausgeschaltet.grund);
   ok("Stufe „aus“ sagt es auch",
     ausgeschaltet.hinweis.includes("reiner Wortlaut"), ausgeschaltet.hinweis);
+  await ctx.close();
+}
+
+/* ── 4b.1 Redaktioneller EStG-Prüfstand und Legaldefinitionen ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/2", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const redaktion = await seite.evaluate(() => {
+    const definitionen = [...document.querySelectorAll(".lesespalte .s-definition")];
+    const titel = definitionen.map((x) => x.title || "");
+    return {
+      anzahl: definitionen.length,
+      text: definitionen.map((x) => x.textContent).join(" "),
+      titel,
+      legende: (document.querySelector(".legende") || {}).textContent || "",
+      meta: (document.querySelector(".meta") || {}).textContent || "",
+      voll: getComputedStyle(document.documentElement).getPropertyValue("--def-voll").trim(),
+    };
+  });
+
+  ok("EStG § 2 zeigt redaktionelle Definitionen", redaktion.anzahl >= 5,
+    redaktion.anzahl + " Definitionsspannen");
+  ok("Gesamtbetrag der Einkünfte ist als Definition markiert",
+    redaktion.text.includes("Gesamtbetrag der Einkünfte"), redaktion.text.slice(0, 120));
+  ok("Definitionen sind als redaktionell verifiziert ausgewiesen",
+    redaktion.titel.some((t) => t.includes("redaktionell verifiziert")), redaktion.titel.slice(0, 3).join(" | "));
+  ok("Legende führt Definition als vierte Strukturkategorie",
+    redaktion.legende.includes("Definition / Legaldefinition"), redaktion.legende);
+  ok("Legende weist den Beck-Prüfstand aus",
+    redaktion.legende.includes("Beck-Prüfstand"), redaktion.legende);
+  ok("Metadaten unterscheiden Redaktion und Automatik",
+    redaktion.meta.includes("redaktionell verifizierte Korrekturen"), redaktion.meta);
+  ok("Definitionsfarbe entspricht dem Prüfstand-Blau",
+    redaktion.voll.toUpperCase() === "#CFE7FF", redaktion.voll);
+
   await ctx.close();
 }
 
@@ -1520,6 +1559,11 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
 
   const dunkel = await seite.evaluate(() => {
     const g = (wahl, eigenschaft) => getComputedStyle(document.querySelector(wahl))[eigenschaft];
+    const probe = document.createElement("span");
+    probe.className = "s s-definition";
+    document.querySelector(".lesespalte").appendChild(probe);
+    const def = getComputedStyle(probe).backgroundColor;
+    probe.remove();
     return {
       kopf: g("header .kopf", "backgroundColor"),
       papier: g("body", "backgroundColor"),
@@ -1527,6 +1571,7 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
       tb: g(".lesespalte .s-tatbestand", "backgroundColor"),
       rf: g(".lesespalte .s-rechtsfolge", "backgroundColor"),
       au: g(".lesespalte .s-ausnahme", "backgroundColor"),
+      def,
       deckkraft: getComputedStyle(document.documentElement).getPropertyValue("--eigen-deckkraft").trim(),
       gewaehlt: [...document.querySelectorAll("#darstellung button")]
         .find((b) => b.getAttribute("aria-checked") === "true").textContent,
@@ -1538,7 +1583,7 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   ok("Marker-Deckkraft sinkt auf .22", dunkel.deckkraft === ".22", dunkel.deckkraft);
 
   /* Die Spezifikation fordert 7:1 für Normtext über den „voll“-Tönen. */
-  for (const [name, ton] of [["Tatbestand", dunkel.tb], ["Rechtsfolge", dunkel.rf], ["Ausnahme", dunkel.au]]) {
+  for (const [name, ton] of [["Tatbestand", dunkel.tb], ["Rechtsfolge", dunkel.rf], ["Ausnahme", dunkel.au], ["Definition", dunkel.def]]) {
     const wert = kontrast(dunkel.text, ton);
     ok(`Kontrast über ${name} hält 7:1 (dunkel)`, wert >= 7, wert.toFixed(1) + ":1");
   }

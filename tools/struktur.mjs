@@ -3,6 +3,7 @@
  * struktur.mjs — erzeugt `struktur/<gesetz>.json` aus `annotations/`.
  *
  * Die Oberfläche färbt Tatbestand, Rechtsfolge und Ausnahme im Normtext ein.
+ * Redaktionell verifizierte Dateien können zusätzlich Definitionen enthalten.
  * Dafür braucht sie Zeichenbereiche, sonst nichts. Die Annotationen enthalten
  * diese Bereiche längst, aber eingebettet in alles Übrige: Begründungen,
  * Konfidenzen, Prüfungsschema, Belege. Für das Frontend sind das je Gesetz
@@ -17,9 +18,11 @@
  * bildet. Das Frontend baut dieselbe Zeichenkette aus dem DOM auf; nur wenn
  * beide Seiten identisch rechnen, sitzen die Farben richtig.
  *
- * Übernommen werden ausschließlich die drei Kategorien, die der Entwurf kennt.
- * Das Definiendum (`def`) hat in der Legende keine Marke und bleibt draußen —
- * lieber keine Farbe als eine, die niemand erklärt.
+ * Aus der AUTOMATIK werden weiterhin ausschließlich Tatbestand, Rechtsfolge
+ * und Ausnahme übernommen. Definitionen kommen nicht aus dem bloßen
+ * `def`-Tag, sondern nur aus einer redaktionell verifizierten Korrekturschicht.
+ * So wird aus einem maschinell erkannten Definiendum nicht ungeprüft eine
+ * Legaldefinition.
  *
  *   node tools/struktur.mjs                 alle Gesetze
  *   node tools/struktur.mjs --nur solzg
@@ -39,8 +42,32 @@ const nurRoh = args.includes("--nur") ? args[args.indexOf("--nur") + 1] : null;
 const kurz = (s) => String(s || "").toLowerCase().replace(/\.json$/, "").replace(/[^a-z0-9]/g, "");
 const nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null;
 
-/** Die drei Kategorien der Legende. Alles andere wird nicht eingefärbt. */
+/** Die drei maschinellen Kategorien. Definition ist ausschließlich redaktionell. */
 const TYP = { tb: "tatbestand", rf: "rechtsfolge", ausn: "ausnahme" };
+
+function ueberlappt(a, b){
+  return a.von < b.bis && a.bis > b.von;
+}
+
+/* Redaktionelle Segmente aus dem bisherigen Strukturdatensatz bleiben bei
+ * einem Neu-Lauf erhalten, solange der Normtext denselben Hash hat. Beim
+ * Überlagern wird ein maschinelles Segment an den Rändern sauber geteilt,
+ * statt sein nicht betroffenes Stück mit zu löschen. */
+function redaktionBewahren(maschine, redaktionelle){
+  let raus = maschine.map((x) => ({ ...x }));
+  for (const neu of redaktionelle) {
+    const bereich = { von:neu.von, bis:neu.bis };
+    const naechste = [];
+    for (const alt of raus) {
+      if (!ueberlappt(alt, bereich)) { naechste.push(alt); continue; }
+      if (alt.von < neu.von) naechste.push({ ...alt, bis:neu.von });
+      if (alt.bis > neu.bis) naechste.push({ ...alt, von:neu.bis });
+    }
+    naechste.push({ ...neu });
+    raus = naechste;
+  }
+  return raus.sort((a,b) => a.von - b.von || a.bis - b.bis);
+}
 
 /**
  * Satzgrenzen einer Norm.
@@ -107,6 +134,18 @@ for (const meta of gesetze) {
      `gliederung.mjs` und brauchen die Norm selbst. */
   const gesetz = JSON.parse(await readFile(path.join(WURZEL, "data", meta.datei), "utf8"));
 
+  /* Redaktion ist optional. Sie wird NICHT aus den Annotationen rekonstruiert:
+     ihr Inhalt ist manuell verifiziert. Der bisherige Strukturdatensatz liefert
+     die bereits textgenau aufgelösten Segmente; der Text-Hash schützt davor,
+     sie nach einer Gesetzesänderung blind weiterzuverwenden. */
+  let redaktion = null, bisher = null;
+  try {
+    redaktion = JSON.parse(await readFile(path.join(WURZEL, "redaktion", meta.datei), "utf8"));
+    bisher = JSON.parse(await readFile(path.join(ZIEL, meta.datei), "utf8"));
+  } catch {
+    redaktion = null; bisher = null;
+  }
+
   const normen = {};
   let segmenteImGesetz = 0;
   let saetzeImGesetz = 0;
@@ -147,16 +186,30 @@ for (const meta of gesetze) {
     }
 
     segmente.sort((a, b) => a.von - b.von || a.bis - b.bis);
+
+    let endSegmente = segmente;
+    let redaktionNorm = null;
+    const erwartet = redaktion?.text_hashes?.[normId] || null;
+    const alt = bisher?.normen?.[normId] || null;
+    if (erwartet && alt && anm.text_hash === erwartet) {
+      const redSegmente = (alt.segmente || []).filter((x) => x.redaktionell);
+      if (redSegmente.length) endSegmente = redaktionBewahren(endSegmente, redSegmente);
+      if (alt.redaktion) redaktionNorm = alt.redaktion;
+    } else if (erwartet && anm.text_hash && anm.text_hash !== erwartet) {
+      console.warn(`  ⚠ ${meta.abk} ${norm.enbez}: redaktionelle Segmente wegen geändertem Text-Hash nicht übernommen`);
+    }
+
     const saetze = satzgrenzen(norm);
     /* Eine Norm ohne Segmente KANN Satzgrenzen haben — 127 Normen tragen
        keine erkannte Struktur, ihre Sätze sind trotzdem adressierbar. Nur wo
        beides fehlt, gibt es nichts zu schreiben. */
-    if (!segmente.length && !saetze.length) continue;
+    if (!endSegmente.length && !saetze.length) continue;
     normen[normId] = {
-      ...(segmente.length ? { segmente } : {}),
+      ...(endSegmente.length ? { segmente:endSegmente } : {}),
       ...(saetze.length ? { saetze } : {}),
+      ...(redaktionNorm ? { redaktion:redaktionNorm } : {}),
     };
-    segmenteImGesetz += segmente.length;
+    segmenteImGesetz += endSegmente.length;
     saetzeImGesetz += saetze.length;
     gesamtNormen++;
   }
@@ -168,8 +221,13 @@ for (const meta of gesetze) {
     erzeugt: new Date().toISOString(),
     quelle: "annotations/" + meta.datei,
     verfahren: annotation.verfahren || null,
-    hinweis: "Maschinell erkannt, nicht redaktionell geprüft. "
-      + "Zeichenpositionen beziehen sich auf den kanonischen Volltext der Norm.",
+    hinweis: redaktion && bisher?.redaktion
+      ? "Maschinelle Grundstruktur mit redaktionell verifizierter Korrekturschicht. "
+        + "Redaktionelle Segmente haben bei unverändertem Normtext Vorrang; "
+        + "Zeichenpositionen beziehen sich auf den kanonischen Volltext der Norm."
+      : "Maschinell erkannt, nicht redaktionell geprüft. "
+        + "Zeichenpositionen beziehen sich auf den kanonischen Volltext der Norm.",
+    ...(redaktion && bisher?.redaktion ? { redaktion:bisher.redaktion } : {}),
     normen,
   };
 

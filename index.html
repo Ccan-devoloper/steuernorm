@@ -64,10 +64,11 @@
   --treffer:#FBEEA8;
   --treffer-ohne:#EDEFF1;    /* Treffer ohne geladenen Datensatz */
 
-  /* ── Struktur-Einfärbung: Tatbestand · Rechtsfolge · Ausnahme ── */
+  /* ── Struktur-Einfärbung: Tatbestand · Rechtsfolge · Ausnahme · Definition ── */
   --tb-dezent:#FAF3E4;  --tb-voll:#F3E3B8;  --tb-rand:#E0CE9E;
   --rf-dezent:#EDF4EE;  --rf-voll:#D6E9DB;  --rf-rand:#B4D2BC;
   --au-dezent:#FBEEEC;  --au-voll:#F5D9D4;  --au-rand:#E3B7B0;
+  --def-dezent:#EFF7FF; --def-voll:#CFE7FF; --def-rand:#A8CAE8;
 
   /* ── Schriften ── */
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -199,6 +200,7 @@
     --tb-dezent:#2E2A17;  --tb-voll:#463D14;  --tb-rand:#C9AE4A;
     --rf-dezent:#192720;  --rf-voll:#1C3826;  --rf-rand:#6FB588;
     --au-dezent:#2A1E1D;  --au-voll:#3E2621;  --au-rand:#CE8B72;
+    --def-dezent:#172A3D; --def-voll:#1E3B56; --def-rand:#79AAD3;
 
     --legende-eigen:rgba(242,199,68,.22);
     --legende-eigen-kante:#F2C744;
@@ -254,6 +256,7 @@
   --tb-dezent:#2E2A17;  --tb-voll:#463D14;  --tb-rand:#C9AE4A;
   --rf-dezent:#192720;  --rf-voll:#1C3826;  --rf-rand:#6FB588;
   --au-dezent:#2A1E1D;  --au-voll:#3E2621;  --au-rand:#CE8B72;
+  --def-dezent:#172A3D; --def-voll:#1E3B56; --def-rand:#79AAD3;
 
   --legende-eigen:rgba(242,199,68,.22);
   --legende-eigen-kante:#F2C744;
@@ -284,6 +287,7 @@
     --linie-stark:#C4C9CF; --linie:#D8DBE0; --linie-schwach:#E4E7EA; --linie-zart:#F0F2F4;
     --verweis:#2F5FA8; --verweis-kante:#C6D5EA;
     --vw:#6A4C93; --vw-grund:#F3F0F8; --vw-rand:#D9CFEA;
+    --def-dezent:#EFF7FF; --def-voll:#CFE7FF; --def-rand:#A8CAE8;
     color-scheme:light;
   }
 }
@@ -625,10 +629,12 @@ body[data-ansicht=norm] .blaettern{margin-left:auto;margin-right:auto}
 body[data-struktur=dezent] .s-tatbestand{background:var(--tb-dezent);box-shadow:0 0 0 1px var(--tb-dezent)}
 body[data-struktur=dezent] .s-rechtsfolge{background:var(--rf-dezent);box-shadow:0 0 0 1px var(--rf-dezent)}
 body[data-struktur=dezent] .s-ausnahme{background:var(--au-dezent);box-shadow:0 0 0 1px var(--au-dezent)}
+body[data-struktur=dezent] .s-definition{background:var(--def-dezent);box-shadow:0 0 0 1px var(--def-dezent)}
 
 body[data-struktur=voll] .s-tatbestand{background:var(--tb-voll);box-shadow:0 0 0 2px var(--tb-voll)}
 body[data-struktur=voll] .s-rechtsfolge{background:var(--rf-voll);box-shadow:0 0 0 2px var(--rf-voll)}
 body[data-struktur=voll] .s-ausnahme{background:var(--au-voll);box-shadow:0 0 0 2px var(--au-voll)}
+body[data-struktur=voll] .s-definition{background:var(--def-voll);box-shadow:0 0 0 2px var(--def-voll)}
 
 /* Stufe „aus“ entfernt jede Struktur-Tönung. Eigene Markierungen und
    Verwaltungsstellen bleiben in allen Stufen sichtbar — sie sind keine
@@ -652,12 +658,15 @@ body[data-struktur=aus] .s{background:transparent;box-shadow:none}
 .legende .m-tatbestand{box-shadow:inset 0 0 0 1px var(--tb-rand)}
 .legende .m-rechtsfolge{box-shadow:inset 0 0 0 1px var(--rf-rand)}
 .legende .m-ausnahme{box-shadow:inset 0 0 0 1px var(--au-rand)}
+.legende .m-definition{box-shadow:inset 0 0 0 1px var(--def-rand)}
 body[data-struktur=dezent] .legende .m-tatbestand{background:var(--tb-dezent)}
 body[data-struktur=dezent] .legende .m-rechtsfolge{background:var(--rf-dezent)}
 body[data-struktur=dezent] .legende .m-ausnahme{background:var(--au-dezent)}
+body[data-struktur=dezent] .legende .m-definition{background:var(--def-dezent)}
 body[data-struktur=voll] .legende .m-tatbestand{background:var(--tb-voll)}
 body[data-struktur=voll] .legende .m-rechtsfolge{background:var(--rf-voll)}
 body[data-struktur=voll] .legende .m-ausnahme{background:var(--au-voll)}
+body[data-struktur=voll] .legende .m-definition{background:var(--def-voll)}
 .legende .m-eigen{background:var(--legende-eigen);border-bottom:2px solid var(--legende-eigen-kante)}
 .legende .m-verwaltung{border-bottom:2px dotted var(--vw)}
 .legende .anmerkung{color:var(--text-5);flex-basis:100%}
@@ -1680,6 +1689,7 @@ const S = {
   anmerkungen: {},         // abk → annotations/<gesetz>.json .normen
   belege: {},              // abk → belege/<gesetz>.json
   struktur: {},            // abk → struktur/<gesetz>.json .normen
+  redaktion: {},            // abk → redaktion/<gesetz>.json; manuell verifizierte Korrekturen
   verweise: null,          // data/verweise.json .normen — Rückverweise
   verwaltung: {},          // abk → verwaltung/<gesetz>.json
   aktiveVerwaltung: null,  // id | null — flüchtig
@@ -1756,6 +1766,10 @@ async function zutatenLaden(abk){
     try { S.struktur[abk] = (await holen("struktur/" + schluessel + ".json")).normen || {}; }
     catch (e) { S.struktur[abk] = null; }
   }
+  if (!(abk in S.redaktion)){
+    try { S.redaktion[abk] = await holen("redaktion/" + schluessel + ".json"); }
+    catch (e) { S.redaktion[abk] = null; }
+  }
   if (!(abk in S.verwaltung)){
     try { S.verwaltung[abk] = await holen("verwaltung/" + schluessel + ".json"); }
     catch (e) { S.verwaltung[abk] = null; }
@@ -1786,6 +1800,259 @@ function strukturDerNorm(){
   if (!gesetz) return null;
   const eintrag = gesetz[S.normId];
   return eintrag && Array.isArray(eintrag.segmente) ? eintrag.segmente : [];
+}
+
+/** Redaktionelle Befunde der laufenden Norm. Die Datei enthält bewusst keine
+ * automatisch abgeleiteten Kategorien: Sie ist die manuelle Prüfschicht. */
+function redaktionDerNorm(){
+  const datei = S.redaktion[S.abk];
+  if (!datei || !Array.isArray(datei.befunde)) return [];
+  return datei.befunde.filter((b) => fundNormId(b.fundstelle) === S.normId);
+}
+
+function fundNormId(fundstelle){
+  const f = String(fundstelle || "").trim();
+  let m = /^§\s*([0-9]+[a-z]?)/i.exec(f);
+  if (m) return m[1].toLowerCase();
+  m = /^Anlage\s+([0-9]+[a-z]?)/i.exec(f);
+  return m ? "anlage-" + m[1].toLowerCase() : null;
+}
+
+function fundRest(fundstelle){
+  let f = String(fundstelle || "").trim();
+  f = f.replace(/^§\s*[0-9]+[a-z]?\s*/i, "");
+  f = f.replace(/^Anlage\s+[0-9]+[a-z]?\s*/i, "");
+  f = f.replace(/\s+zu\s+§.*$/i, "");
+  return f.trim();
+}
+
+function fundTokens(text){
+  const raus = [];
+  const re = /(Abs\.|Satz|S\.|Nr\.|Buchst\.)\s*([0-9]+[a-z]?|[a-z])(?:\s*[-–]\s*([0-9]+[a-z]?|[a-z]))?/gi;
+  for (const m of String(text || "").matchAll(re)){
+    const art = /^Abs/i.test(m[1]) ? "abs"
+      : /^(Satz|S\.)/i.test(m[1]) ? "satz"
+      : /^Nr/i.test(m[1]) ? "nr" : "buchst";
+    raus.push({ art, von: m[2].toLowerCase(), bis: (m[3] || m[2]).toLowerCase() });
+  }
+  return raus;
+}
+
+function tokenImBereich(wert, von, bis){
+  if (von === bis) return wert === von;
+  const n = Number(wert), a = Number(von), b = Number(bis);
+  if (Number.isFinite(n) && Number.isFinite(a) && Number.isFinite(b)) return n >= a && n <= b;
+  return wert >= von && wert <= bis;
+}
+
+/* Fundstellen und Gliederungspfade benutzen dieselben Begriffe, aber nicht
+ * dieselbe Abkürzung. Die Prüfung ist geordnet: Abs. 1 Satz 1 Nr. 1a Satz 2
+ * wird nicht versehentlich einem anderen Satz in demselben Absatz zugeordnet. */
+function pfadPasst(fundstelle, pfad){
+  const soll = fundTokens(fundRest(fundstelle));
+  if (!soll.length) return true;
+  const ist = fundTokens(pfad);
+  let j = 0;
+  for (const token of soll){
+    let gefunden = false;
+    while (j < ist.length){
+      const kandidat = ist[j++];
+      if (kandidat.art === token.art && tokenImBereich(kandidat.von, token.von, token.bis)){
+        gefunden = true; break;
+      }
+    }
+    if (!gefunden) return false;
+  }
+  return true;
+}
+
+function bereicheVereinigen(bereiche){
+  const sortiert = bereiche
+    .filter((b) => Number.isInteger(b.von) && Number.isInteger(b.bis) && b.bis > b.von)
+    .sort((a,b) => a.von - b.von || a.bis - b.bis);
+  const raus = [];
+  for (const b of sortiert){
+    const letztes = raus[raus.length - 1];
+    if (letztes && b.von <= letztes.bis) letztes.bis = Math.max(letztes.bis, b.bis);
+    else raus.push({ von:b.von, bis:b.bis });
+  }
+  return raus;
+}
+
+function bereicheFuerFundstelle(fundstelle, kanonisch){
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  let treffer = (anm && Array.isArray(anm.saetze) ? anm.saetze : [])
+    .filter((x) => pfadPasst(fundstelle, x.pfad))
+    .map((x) => ({ von:x.von, bis:x.bis }));
+  if (treffer.length) return bereicheVereinigen(treffer);
+
+  treffer = saetzeDerNorm()
+    .filter((x) => pfadPasst(fundstelle, x.pfad))
+    .map((x) => ({ von:x.von, bis:x.bis }));
+  if (treffer.length) return bereicheVereinigen(treffer);
+
+  const maschine = strukturDerNorm() || [];
+  treffer = maschine
+    .filter((x) => pfadPasst(fundstelle, x.pfad))
+    .map((x) => ({ von:x.von, bis:x.bis }));
+  if (treffer.length) return bereicheVereinigen(treffer);
+
+  return fundTokens(fundRest(fundstelle)).length ? [] : [{ von:0, bis:kanonisch.length }];
+}
+
+function definitionsElemente(fundstelle){
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const raus = [];
+  for (const satz of (anm && anm.saetze) || []){
+    if (!pfadPasst(fundstelle, satz.pfad)) continue;
+    for (const e of satz.elemente || []){
+      if (e.art !== "def") continue;
+      const teile = Array.isArray(e.teile) && e.teile.length ? e.teile : [{ von:e.von, laenge:e.laenge }];
+      for (const t of teile){
+        if (Number.isInteger(t.von) && Number.isInteger(t.laenge) && t.laenge > 0)
+          raus.push({ von:t.von, bis:t.von + t.laenge });
+      }
+    }
+  }
+  return bereicheVereinigen(raus);
+}
+
+function ueberlappt(seg, bereich){
+  return seg.von < bereich.bis && seg.bis > bereich.von;
+}
+
+/* Eine redaktionelle Teilspanne darf den nicht betroffenen Rest eines
+ * maschinellen Segments nicht mitlöschen. Beispiel: § 90 Abs. 3 S. 1 enthält
+ * Tatbestand UND Rechtsfolge, während die Automatik bislang den ganzen Satz
+ * als Rechtsfolge markiert. */
+function bereichEintragen(segmente, bereich, neu){
+  const raus = [];
+  for (const seg of segmente){
+    if (!ueberlappt(seg, bereich)){ raus.push(seg); continue; }
+    if (seg.redaktionell && seg.typ === neu.typ
+        && seg.von === bereich.von && seg.bis === bereich.bis){
+      raus.push({
+        ...seg,
+        belegIds:[...new Set([...(seg.belegIds || []), ...(neu.belegIds || [])])],
+      });
+      continue;
+    }
+    if (seg.von < bereich.von) raus.push({ ...seg, bis:bereich.von });
+    if (seg.bis > bereich.bis) raus.push({ ...seg, von:bereich.bis });
+  }
+  if (!raus.some((x) => x.redaktionell && x.typ === neu.typ
+      && x.von === bereich.von && x.bis === bereich.bis)){
+    raus.push({ ...neu, von:bereich.von, bis:bereich.bis });
+  }
+  return raus;
+}
+
+function redaktionOffenDerNorm(){
+  const datei = S.redaktion[S.abk];
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  return redaktionDerNorm().filter((f) => {
+    if (f.umsetzung === "nicht textgenau auflösbar") return true;
+    if (!Array.isArray(f.bereiche) || !f.bereiche.length) return false;
+    const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
+    return Boolean(erwartet && anm && anm.text_hash && erwartet !== anm.text_hash);
+  });
+}
+
+/**
+ * Manuelle Verifikation schlägt Automatik, aber nur soweit die Fundstelle
+ * eindeutig genug ist. 18 im Prüfstand grob adressierte Stellen tragen
+ * zusätzlich explizite Zeichenbereiche. Diese werden nur bei unverändertem
+ * Normtext (Text-Hash) verwendet; ein später geänderter Wortlaut wird niemals
+ * mit veralteten Offsets eingefärbt.
+ */
+function redaktionAnwenden(segmente, kanonisch){
+  let raus = (segmente || []).map((x) => ({ ...x }));
+  const funde = redaktionDerNorm();
+  if (!funde.length) return raus;
+
+  /* Der bevorzugte Zustand ist bereits in struktur/<gesetz>.json materialisiert.
+     Dann darf die Laufzeit-Schicht ihn nicht ein zweites Mal zerlegen. Das
+     Overlay bleibt als Rückwärtskompatibilität für ältere Strukturdateien. */
+  const struktureintrag = S.struktur[S.abk]?.[S.normId] || null;
+  const datei = S.redaktion[S.abk];
+  if (struktureintrag?.redaktion?.stand
+      && struktureintrag.redaktion.stand === datei?.stand) return raus;
+
+
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
+  const hashPasst = !erwartet || (anm && anm.text_hash === erwartet);
+
+  /* Explizite Teilspannen zuerst. Sie lösen genau die Fälle, in denen die
+     Fundstellenadresse allein nicht fein genug ist (verschachtelte Listen,
+     leere Syntaxelemente, Tabellen/Anlagen). */
+  for (const f of funde){
+    if (!Array.isArray(f.bereiche) || !f.bereiche.length || !hashPasst) continue;
+    for (const b of f.bereiche){
+      if (!Number.isInteger(b.von) || !Number.isInteger(b.bis)
+          || b.von < 0 || b.bis <= b.von || b.bis > kanonisch.length) continue;
+      raus = bereichEintragen(raus, b, {
+        typ:f.typ, pfad:f.fundstelle, konfidenz:1,
+        redaktionell:true, belegIds:[f.id],
+      });
+    }
+  }
+
+  const automatisch = funde.filter((f) =>
+    (!Array.isArray(f.bereiche) || !f.bereiche.length)
+    && f.umsetzung !== "nicht textgenau auflösbar"
+  );
+  const gruppen = new Map();
+  for (const f of automatisch){
+    if (!gruppen.has(f.fundstelle)) gruppen.set(f.fundstelle, []);
+    gruppen.get(f.fundstelle).push(f);
+  }
+
+  for (const [fundstelle, gruppe] of gruppen){
+    const typen = new Set(gruppe.map((x) => x.typ));
+    const ids = gruppe.map((x) => x.id);
+    const bereiche = bereicheFuerFundstelle(fundstelle, kanonisch);
+    if (!bereiche.length) continue;
+
+    /* Bestehende passende Teilspannen werden als redaktionell bestätigt. */
+    raus = raus.map((seg) => {
+      if (!typen.has(seg.typ) || !bereiche.some((b) => ueberlappt(seg,b))) return seg;
+      return { ...seg, redaktionell:true, belegIds:[...(seg.belegIds || []), ...ids] };
+    });
+
+    if (typen.has("definition")){
+      let defBereiche = [];
+      if (typen.size === 1 && fundTokens(fundRest(fundstelle)).length){
+        defBereiche = bereiche;
+      } else if (typen.size === 1 && /^Anlage\s/i.test(fundstelle)){
+        defBereiche = bereiche;
+      } else {
+        defBereiche = definitionsElemente(fundstelle);
+      }
+      for (const b of defBereiche){
+        raus = bereichEintragen(raus, b, {
+          typ:"definition", pfad:fundstelle,
+          konfidenz:1, redaktionell:true, belegIds:ids,
+        });
+      }
+    }
+
+    /* Eine ausdrücklich als Ausnahme geprüfte, konkrete Untergliederung darf
+       die dortige automatische Einordnung vollständig ersetzen. Ein bloßes
+       „§ 93 Ausnahme“ ist dagegen nur ein Befund über Teilstellen und färbt
+       niemals die ganze Norm rot. */
+    if (typen.size === 1 && typen.has("ausnahme") && fundTokens(fundRest(fundstelle)).length){
+      for (const b of bereiche){
+        raus = bereichEintragen(raus, b, {
+          typ:"ausnahme", pfad:fundstelle,
+          konfidenz:1, redaktionell:true, belegIds:ids,
+        });
+      }
+    }
+  }
+
+  raus.sort((a,b) => a.von - b.von || a.bis - b.bis);
+  return raus;
 }
 
 /** Satzgrenzen der laufenden Norm — leer, wenn es keinen Datensatz gibt. */
@@ -2155,7 +2422,8 @@ function strukturSetzen(modus, nurAnzeige = false){
      „aus" und ist gesperrt — mit einem Titel, der sagt, warum. Das ist der
      Unterschied zwischen „ausgeschaltet" und „nicht vorhanden". */
   const segmente = S.abk ? strukturDerNorm() : null;
-  const moeglich = Array.isArray(segmente) && segmente.length > 0;
+  const hatRedaktion = S.abk ? redaktionDerNorm().length > 0 : false;
+  const moeglich = (Array.isArray(segmente) && segmente.length > 0) || hatRedaktion;
   const angezeigt = moeglich ? S.strukturModus : "aus";
 
   document.body.dataset.struktur = angezeigt;
@@ -3936,7 +4204,13 @@ function hauptZeichnen(){
     : "kein Datensatz");
   meta.appendChild(e2);
   const e3 = document.createElement("span");
-  e3.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
+  if (redaktionDerNorm().length){
+    const offen = redaktionOffenDerNorm().length;
+    e3.textContent = "Beck-Prüfstand: redaktionell verifizierte Korrekturen; übrige Struktur automatisch erzeugt"
+      + (offen ? " · " + offen + " Befund" + (offen === 1 ? "" : "e") + " ohne textgenaue Färbung" : "");
+  } else {
+    e3.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
+  }
   meta.appendChild(e3);
   haupt.appendChild(meta);
 
@@ -3991,24 +4265,25 @@ function hauptZeichnen(){
      Knotengrenzen verschöben sich unnötig. */
   const stand = strukturSetzen(S.strukturModus, true);
   const segmente = strukturDerNorm();
+  const { text: kanonisch } = textindex(lese);
+  const segmenteEffektiv = redaktionAnwenden(segmente, kanonisch);
   const spannen = [];
 
   if (stand.moeglich){
-    for (const seg of segmente){
+    for (const seg of segmenteEffektiv){
       spannen.push({
         von: seg.von,
         bis: seg.bis,
         klasse: "s s-" + seg.typ,
         schluessel: "s" + seg.von + "-" + seg.bis,
-        titel: BESCHREIBUNG[seg.typ] || "",
-        datensatz: seg.pfad ? { pfad: seg.pfad } : null,
+        titel: beschreibungSegment(seg),
+        datensatz: seg.pfad ? { pfad: seg.pfad, redaktionell:Boolean(seg.redaktionell), belegIds:seg.belegIds || [] } : null,
       });
     }
   }
 
   /* Eigene Markierungen liegen ÜBER der Struktur, aber sie löschen sie nicht:
      spannenLegen führt je Zeichen eine Liste, beide Klassen bleiben stehen. */
-  const { text: kanonisch } = textindex(lese);
   let verschoben = 0;
   for (const m of markierungenDerNorm()){
     const von = markierungVerorten(kanonisch, m);
@@ -4060,7 +4335,7 @@ function hauptZeichnen(){
 
   const spalte = document.createElement("div");
   spalte.className = "lesespalte-huelle";
-  spalte.append(legendeBauen(stand, segmente), lese);
+  spalte.append(legendeBauen(stand, segmenteEffektiv), lese);
   leseraum.append(rinne, spalte);
   haupt.appendChild(leseraum);
 
@@ -4140,7 +4415,9 @@ function hauptZeichnen(){
   druckfuss.textContent = location.href
     + " · abgerufen am " + heute
     + " · Quelle: Gesetze im Internet (BMJ/BfJ)"
-    + " · Struktur maschinell erkannt, nicht redaktionell geprüft."
+    + (redaktionDerNorm().length
+      ? " · Struktur mit redaktionell verifizierten Beck-Korrekturen; übrige Einfärbung maschinell erkannt."
+      : " · Struktur maschinell erkannt, nicht redaktionell geprüft.")
     + " Maßgeblich ist die im Bundesgesetzblatt verkündete Fassung.";
   haupt.appendChild(druckfuss);
 
@@ -4151,10 +4428,18 @@ function hauptZeichnen(){
 
 /** Was die Farben bedeuten — für den Titel der Spanne, nicht für den Text. */
 const BESCHREIBUNG = {
-  tatbestand: "Tatbestand (maschinell erkannt)",
-  rechtsfolge: "Rechtsfolge (maschinell erkannt)",
-  ausnahme: "Ausnahme oder Vorbehalt (maschinell erkannt)",
+  tatbestand: "Tatbestand",
+  rechtsfolge: "Rechtsfolge",
+  ausnahme: "Ausnahme oder Vorbehalt",
+  definition: "Definition / Legaldefinition",
 };
+function beschreibungSegment(seg){
+  const basis = BESCHREIBUNG[seg.typ] || "";
+  if (!basis) return "";
+  return basis + (seg.redaktionell
+    ? " (redaktionell verifiziert – Beck-Prüfstand)"
+    : " (maschinell erkannt)");
+}
 
 /**
  * Die Legende ist der einzige Ort, an dem die Kategorien benannt werden.
@@ -4186,6 +4471,7 @@ function legendeBauen(stand, segmente){
     d.appendChild(marke("tatbestand", "Tatbestand"));
     d.appendChild(marke("rechtsfolge", "Rechtsfolge"));
     d.appendChild(marke("ausnahme", "Ausnahme / Vorbehalt"));
+    d.appendChild(marke("definition", "Definition / Legaldefinition"));
   }
 
   const eigen = document.createElement("span");
@@ -4202,9 +4488,14 @@ function legendeBauen(stand, segmente){
 
   const anmerkung = document.createElement("span");
   anmerkung.className = "anmerkung";
+  const redaktionell = Array.isArray(segmente) && segmente.some((x) => x.redaktionell);
+  const offen = redaktionOffenDerNorm().length;
   anmerkung.textContent = stand.angezeigt === "aus"
     ? "Struktur ausgeblendet — reiner Wortlaut."
-    : "Einfärbung maschinell erkannt, nicht redaktionell geprüft.";
+    : redaktionell
+      ? "Beck-Prüfstand: redaktionell verifizierte Stellen haben Vorrang; übrige Einfärbung ist maschinell erkannt."
+        + (offen ? " " + offen + " Befund" + (offen === 1 ? "" : "e") + " bleibt ohne textgenaue Färbung." : "")
+      : "Einfärbung maschinell erkannt, nicht redaktionell geprüft.";
   d.appendChild(anmerkung);
 
   return d;
