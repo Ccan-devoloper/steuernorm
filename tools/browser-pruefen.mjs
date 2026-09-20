@@ -662,6 +662,32 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4b.2 Enger redaktioneller Ausnahmebereich in EStG § 96 ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/96", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const haftung = await seite.evaluate(() => {
+    const red = [...document.querySelectorAll(".lesespalte .s-ausnahme")]
+      .filter((x) => (x.title || "").includes("redaktionell verifiziert"));
+    return {
+      text: red.map((x) => x.textContent).join(" "),
+      titel: red.map((x) => x.title || ""),
+    };
+  });
+  ok("E125 markiert die Kenntnisbeschränkung als Ausnahme",
+    haftung.text.includes("wenn er weiß") && haftung.text.includes("pflichtwidrig nicht übermittelt hat"),
+    haftung.text);
+  ok("E125 färbt nicht pauschal die Haftungsrechtsfolge",
+    !haftung.text.includes("haftet als Gesamtschuldner neben dem Anbieter"), haftung.text);
+  ok("E125 bleibt als redaktionell verifiziert gekennzeichnet",
+    haftung.titel.some((t) => t.includes("redaktionell verifiziert")), haftung.titel.join(" | "));
+
+  await ctx.close();
+}
+
 /* ── 4c. Eigene Markierungen ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
