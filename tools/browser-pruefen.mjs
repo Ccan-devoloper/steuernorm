@@ -662,6 +662,69 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4b.2 EStG-Restfälle: satzgenaue Redaktion statt Vollabsatz ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/93", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const rest = await seite.evaluate(async () => {
+    const [red, struktur] = await Promise.all([
+      fetch("redaktion/estg.json").then((r) => r.json()),
+      fetch("struktur/estg.json").then((r) => r.json()),
+    ]);
+    const altOffen = [
+      "E027","E050","E051","E055","E058","E059","E077","E078","E095","E096","E102",
+      "E120","E125","E126","E134","E142","E153","E163","E174","E176","E177",
+    ];
+    const segmenteMit = (id) => Object.entries(struktur.normen || {}).flatMap(([norm, eintrag]) =>
+      (eintrag.segmente || []).filter((s) => (s.belegIds || []).includes(id))
+        .map((s) => ({ norm, typ:s.typ, von:s.von, bis:s.bis })));
+    const angewandt = altOffen.filter((id) => segmenteMit(id).length);
+    const n93 = struktur.normen["93"] || {};
+    const e142 = segmenteMit("E142").map((s) => [s.von, s.bis]);
+    const e134 = segmenteMit("E134");
+    const rotInDefinition = (n93.segmente || []).filter((s) =>
+      s.redaktionell && s.typ === "ausnahme" && s.von < 6623 && s.bis > 5928);
+    const definitionText = [...document.querySelectorAll(".lesespalte .s-definition")]
+      .map((x) => x.textContent).join(" ");
+    const e125 = (struktur.normen["96"]?.segmente || [])
+      .filter((s) => (s.belegIds || []).includes("E125"))
+      .map((s) => ({ typ:s.typ, von:s.von, bis:s.bis }));
+    const befund125 = (red.befunde || []).find((b) => b.id === "E125");
+    return {
+      angewandt,
+      offen:[...(struktur.redaktion?.offen || [])].sort(),
+      e125, fund125:befund125?.fundstelle, original125:befund125?.fundstelle_original,
+      e134, rotInDefinition, e142, definitionText,
+    };
+  });
+
+  ok("Von den 21 früher offenen EStG-Befunden sind 19 textgenau materialisiert",
+    rest.angewandt.length === 19 && !rest.angewandt.includes("E095") && !rest.angewandt.includes("E102"),
+    rest.angewandt.length + " materialisiert");
+  ok("Nur E095 und E102 bleiben bewusst offen",
+    rest.offen.join(",") === "E095,E102", rest.offen.join(","));
+  ok("E125 ist auf § 96 Abs. 2 S. 3 korrigiert und nur als Kenntnisvoraussetzung markiert",
+    rest.fund125 === "§ 96 Abs. 2 S. 3"
+      && rest.original125 === "§ 96 Abs. 3 S. 3"
+      && rest.e125.length === 1 && rest.e125[0].typ === "ausnahme"
+      && rest.e125[0].von === 723 && rest.e125[0].bis === 851,
+    JSON.stringify(rest.e125));
+  ok("Kleinbetragsrente bleibt vollständig blaue Definition",
+    rest.e134.some((s) => s.typ === "definition" && s.von === 5928 && s.bis === 6623)
+      && rest.rotInDefinition.length === 0
+      && rest.definitionText.includes("Eine Kleinbetragsrente ist"),
+    rest.definitionText.slice(0, 180));
+  ok("§ 93 Abs. 1 S. 4 Buchst. a-d ist in vier Einzelbereiche zerlegt",
+    JSON.stringify(rest.e142) === JSON.stringify([
+      [1287,1632],[1636,1837],[1841,2751],[2755,2807],
+    ]), JSON.stringify(rest.e142));
+
+  await ctx.close();
+}
+
 /* ── 4c. Eigene Markierungen ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
