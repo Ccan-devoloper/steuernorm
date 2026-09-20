@@ -146,7 +146,18 @@
     {
       "id": "E027",
       "fundstelle": "§ 2a Abs. 2a S. 1 Nr. 1–2",
-      "typ": "definition"
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 4663,
+          "bis": 4757
+        },
+        {
+          "von": 4761,
+          "bis": 4936
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E028",
@@ -261,12 +272,26 @@
     {
       "id": "E050",
       "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 1",
-      "typ": "definition"
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 199,
+          "bis": 390
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E051",
       "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 2",
-      "typ": "definition"
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 391,
+          "bis": 763
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E052",
@@ -286,7 +311,14 @@
     {
       "id": "E055",
       "fundstelle": "§ 81",
-      "typ": "definition"
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 82
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E056",
@@ -301,12 +333,26 @@
     {
       "id": "E058",
       "fundstelle": "§ 93 Abs. 1 S. 1",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 404
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E059",
       "fundstelle": "§ 93",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 1188,
+          "bis": 2807
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E060",
@@ -396,12 +442,26 @@
     {
       "id": "E077",
       "fundstelle": "§ 105 Abs. 1 S. 2",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 143,
+          "bis": 195
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E078",
       "fundstelle": "§ 105 Abs. 1 S. 2",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 130,
+          "bis": 141
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E079",
@@ -486,12 +546,21 @@
     {
       "id": "E095",
       "fundstelle": "§ 114",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund nennt einen Tatbestand in § 114; der aktuelle Normtext enthält dort nur die Entstehensregel am 1.9.2022."
     },
     {
       "id": "E096",
       "fundstelle": "§ 114",
-      "typ": "rechtsfolge"
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 73
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E097",
@@ -521,7 +590,9 @@
     {
       "id": "E102",
       "fundstelle": "§ 116",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund beschreibt die unterbleibende Festsetzung/Anrechnung bei Arbeitgeberauszahlung, ohne in § 116 eine textgleiche Teilspanne zu benennen."
     },
     {
       "id": "E103",
@@ -611,7 +682,14 @@
     {
       "id": "E120",
       "fundstelle": "§ 90 Abs. 3 S. 1",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 1384,
+          "bis": 1631
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E121",
@@ -636,12 +714,21 @@
     {
       "id": "E125",
       "fundstelle": "§ 96 Abs. 3 S. 3",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "umsetzung": "nicht textgenau auflösbar",
+      "hinweis": "Der Befund verweist auf § 96 Abs. 3 S. 3; der aktuelle Normtext/Gliederungsdatensatz führt dort keinen Satz 3."
     },
     {
       "id": "E126",
       "fundstelle": "§ 119 Abs. 1 S. 2",
-      "typ": "rechtsfolge"
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 253,
+          "bis": 317
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E127",
@@ -681,7 +768,14 @@
     {
       "id": "E134",
       "fundstelle": "§ 93 Abs. 3 S. 2",
-      "typ": "definition"
+      "typ": "definition",
+      "bereiche": [
+        {
+          "von": 5928,
+          "bis": 6623
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E135",
@@ -721,7 +815,14 @@
     {
       "id": "E142",
       "fundstelle": "§ 93 Abs. 1 S. 4 Buchst. a-d",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 1188,
+          "bis": 2807
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E143",
@@ -776,7 +877,14 @@
     {
       "id": "E153",
       "fundstelle": "§ 92a Abs. 4 S. 1 Nr. 1-3",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 16187,
+          "bis": 16649
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E154",
@@ -826,7 +934,14 @@
     {
       "id": "E163",
       "fundstelle": "§ 100 Abs. 3 Nr. 2",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 1257,
+          "bis": 1485
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E164",
@@ -881,7 +996,14 @@
     {
       "id": "E174",
       "fundstelle": "Anlage 1 zu § 4d Abs. 1",
-      "typ": "rechtsfolge"
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 0,
+          "bis": 604
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E175",
@@ -891,12 +1013,26 @@
     {
       "id": "E176",
       "fundstelle": "Anlage 1a Nr. 2 zu § 13a",
-      "typ": "tatbestand"
+      "typ": "tatbestand",
+      "bereiche": [
+        {
+          "von": 453,
+          "bis": 1158
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E177",
       "fundstelle": "Anlage 1a Nr. 3 zu § 13a",
-      "typ": "rechtsfolge"
+      "typ": "rechtsfolge",
+      "bereiche": [
+        {
+          "von": 1162,
+          "bis": 1265
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E178",
@@ -908,5 +1044,25 @@
       "fundstelle": "Anlage 3 zu § 50g",
       "typ": "definition"
     }
-  ]
+  ],
+  "text_hashes": {
+    "19": "cc6be527eb6b2caffdc4fdeb5cd93b68960385e773cb4462c934c3d4f29425d1",
+    "81": "1aa20de748c9a8d828900fa50e5f25c24d1510185a920d343ee095000193498f",
+    "90": "767dfc3a256c2011217689ad1a3ca395b1793d6392fbb2a226a7f7de0198c435",
+    "93": "d3f8dbd9435dc6f90029c881101df7c1c5b28470e852810999166e88501584c4",
+    "100": "f446d36ca9e725ef23b2f9714e3da5d3f8f88fd6b7aa7f463df9190dc0ec7da9",
+    "105": "33967606e442378fd73d57722b7fee90013f7eb3760dc48265fda746d15ab954",
+    "114": "0bc6f9e92894a82af86cf21907ec613ca002f4b66ffad7100a525e2acada1fc1",
+    "119": "824aa2d065dc53d02cbd6f18ecd9748acd2b9bc3a7c4b599fea15bae952fb8ea",
+    "2a": "83fb77895669b38c91193e9b496859536c305a5edade7ac4ad833961670d0b19",
+    "92a": "6b4df9237990aab47acedb1b97c06e1e65da4be5d0fa48365c253c424b21a0b7",
+    "anlage-1": "0a46f6800be8bdd7ddc5e5a0217f652a95585d5d387b26b2f4e9966fb5d42d3a",
+    "anlage-1a": "47fef14112819ba3130a83065faed5d84f91ccfd5728d19d65c2b937c0a566f1"
+  },
+  "aufloesung": {
+    "automatisch": "Fundstelle gegen Gliederung/Struktur aufgelöst; passende maschinelle Teilspannen werden redaktionell bestätigt.",
+    "explizit": 18,
+    "nicht_textgenau": 3,
+    "schutz": "Explizite Zeichenbereiche gelten nur, solange der Text-Hash der Norm dem geprüften Stand entspricht."
+  }
 }
