@@ -1,0 +1,912 @@
+{
+  "abk": "EStG",
+  "format": 1,
+  "stand": "2026-09-20",
+  "quelle": "EStG – Beck-Prüfstand – Zwischenstand 20.09.2026",
+  "methode": "manuelle Beck-Verifikation; keine automatische juristische Klassifikation",
+  "prioritaet": "redaktionelle Befunde übersteuern maschinelle Struktur, soweit die Fundstelle eindeutig auflösbar ist",
+  "anzahl": 179,
+  "kategorien": {
+    "tatbestand": 49,
+    "rechtsfolge": 66,
+    "definition": 29,
+    "ausnahme": 35
+  },
+  "befunde": [
+    {
+      "id": "E001",
+      "fundstelle": "§ 1 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E002",
+      "fundstelle": "§ 1 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E003",
+      "fundstelle": "§ 2 Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E004",
+      "fundstelle": "§ 2 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E005",
+      "fundstelle": "§ 2 Abs. 3",
+      "typ": "definition"
+    },
+    {
+      "id": "E006",
+      "fundstelle": "§ 2 Abs. 4",
+      "typ": "definition"
+    },
+    {
+      "id": "E007",
+      "fundstelle": "§ 2 Abs. 5",
+      "typ": "definition"
+    },
+    {
+      "id": "E008",
+      "fundstelle": "§ 2 Abs. 5a S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E009",
+      "fundstelle": "§ 2 Abs. 5a S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E010",
+      "fundstelle": "§ 2 Abs. 5a S. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E011",
+      "fundstelle": "§ 2 Abs. 5a S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E012",
+      "fundstelle": "§ 2 Abs. 5b",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E013",
+      "fundstelle": "§ 2 Abs. 6",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E014",
+      "fundstelle": "§ 2 Abs. 7 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E015",
+      "fundstelle": "§ 2 Abs. 7 S. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E016",
+      "fundstelle": "§ 2 Abs. 7 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E017",
+      "fundstelle": "§ 2 Abs. 8",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E018",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E019",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E020",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E021",
+      "fundstelle": "§ 2a Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E022",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E023",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E024",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E025",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E026",
+      "fundstelle": "§ 2a Abs. 2 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E027",
+      "fundstelle": "§ 2a Abs. 2a S. 1 Nr. 1–2",
+      "typ": "definition"
+    },
+    {
+      "id": "E028",
+      "fundstelle": "§ 2a Abs. 2a S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E029",
+      "fundstelle": "§ 3 Nr. 71 Buchst. b S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E030",
+      "fundstelle": "§ 3a Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E031",
+      "fundstelle": "§ 4 Abs. 1 S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E032",
+      "fundstelle": "§ 5a Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E033",
+      "fundstelle": "§ 8 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E034",
+      "fundstelle": "§ 9 Abs. 4 S. 1-7",
+      "typ": "definition"
+    },
+    {
+      "id": "E035",
+      "fundstelle": "§ 9 Abs. 6 S. 2-3",
+      "typ": "definition"
+    },
+    {
+      "id": "E036",
+      "fundstelle": "§ 9 Abs. 6 S. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E037",
+      "fundstelle": "§ 9 Abs. 6 S. 5",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E038",
+      "fundstelle": "§ 10 Abs. 4b S. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E039",
+      "fundstelle": "§ 10 Abs. 4b S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E040",
+      "fundstelle": "§ 10 Abs. 4b S. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E041",
+      "fundstelle": "§ 10 Abs. 4b S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E042",
+      "fundstelle": "§ 10d Abs. 1 S. 1-2",
+      "typ": "definition"
+    },
+    {
+      "id": "E043",
+      "fundstelle": "§ 10d Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E044",
+      "fundstelle": "§ 10d Abs. 4 S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E045",
+      "fundstelle": "§ 15 Abs. 2 S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E046",
+      "fundstelle": "§ 15a Abs. 1a S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E047",
+      "fundstelle": "§ 15b Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E048",
+      "fundstelle": "§ 15b Abs. 1 S. 1-2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E049",
+      "fundstelle": "§ 15b Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E050",
+      "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E051",
+      "fundstelle": "§ 19 Abs. 1 S. 1 Nr. 1a S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E052",
+      "fundstelle": "§ 32d Abs. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E053",
+      "fundstelle": "§ 34 Abs. 2 Nr. 4",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E054",
+      "fundstelle": "§ 49 Abs. 1 Nr. 9",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E055",
+      "fundstelle": "§ 81",
+      "typ": "definition"
+    },
+    {
+      "id": "E056",
+      "fundstelle": "§ 88",
+      "typ": "definition"
+    },
+    {
+      "id": "E057",
+      "fundstelle": "§ 88",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E058",
+      "fundstelle": "§ 93 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E059",
+      "fundstelle": "§ 93",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E060",
+      "fundstelle": "§ 94 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E061",
+      "fundstelle": "§ 94 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E062",
+      "fundstelle": "§ 96 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E063",
+      "fundstelle": "§ 98",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E064",
+      "fundstelle": "§ 99 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E065",
+      "fundstelle": "§ 100",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E066",
+      "fundstelle": "§ 100 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E067",
+      "fundstelle": "§ 101 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E068",
+      "fundstelle": "§ 101 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E069",
+      "fundstelle": "§ 101 S. 4",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E070",
+      "fundstelle": "§ 102",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E071",
+      "fundstelle": "§ 102",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E072",
+      "fundstelle": "§ 103",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E073",
+      "fundstelle": "§ 103",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E074",
+      "fundstelle": "§ 104 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E075",
+      "fundstelle": "§ 104 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E076",
+      "fundstelle": "§ 105 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E077",
+      "fundstelle": "§ 105 Abs. 1 S. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E078",
+      "fundstelle": "§ 105 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E079",
+      "fundstelle": "§ 106",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E080",
+      "fundstelle": "§ 107",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E081",
+      "fundstelle": "§ 107",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E082",
+      "fundstelle": "§ 108",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E083",
+      "fundstelle": "§ 109",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E084",
+      "fundstelle": "§ 110 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E085",
+      "fundstelle": "§ 110 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E086",
+      "fundstelle": "§ 110 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E087",
+      "fundstelle": "§ 111 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E088",
+      "fundstelle": "§ 111 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E089",
+      "fundstelle": "§ 111 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E090",
+      "fundstelle": "§ 111 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E091",
+      "fundstelle": "§ 112 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E092",
+      "fundstelle": "§ 112 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E093",
+      "fundstelle": "§ 113",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E094",
+      "fundstelle": "§ 113",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E095",
+      "fundstelle": "§ 114",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E096",
+      "fundstelle": "§ 114",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E097",
+      "fundstelle": "§ 115 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E098",
+      "fundstelle": "§ 115 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E099",
+      "fundstelle": "§ 115",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E100",
+      "fundstelle": "§ 116 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E101",
+      "fundstelle": "§ 116 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E102",
+      "fundstelle": "§ 116",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E103",
+      "fundstelle": "§ 117 Abs. 1",
+      "typ": "definition"
+    },
+    {
+      "id": "E104",
+      "fundstelle": "§ 117 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E105",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E106",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E107",
+      "fundstelle": "§ 118 Abs. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E108",
+      "fundstelle": "§ 119 Abs. 1 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E109",
+      "fundstelle": "§ 119 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E110",
+      "fundstelle": "§ 120 Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E111",
+      "fundstelle": "§ 120 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E112",
+      "fundstelle": "§ 121",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E113",
+      "fundstelle": "§ 122",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E114",
+      "fundstelle": "§ 122",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E115",
+      "fundstelle": "§ 85",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E116",
+      "fundstelle": "§ 85",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E117",
+      "fundstelle": "§ 85",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E118",
+      "fundstelle": "§ 85",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E119",
+      "fundstelle": "§ 86 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E120",
+      "fundstelle": "§ 90 Abs. 3 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E121",
+      "fundstelle": "§ 90 Abs. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E122",
+      "fundstelle": "§ 92 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E123",
+      "fundstelle": "§ 92 S. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E124",
+      "fundstelle": "§ 96 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E125",
+      "fundstelle": "§ 96 Abs. 3 S. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E126",
+      "fundstelle": "§ 119 Abs. 1 S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E127",
+      "fundstelle": "§ 119 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E128",
+      "fundstelle": "§ 119 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E129",
+      "fundstelle": "§ 119 Abs. 2 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E130",
+      "fundstelle": "§ 91 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E131",
+      "fundstelle": "§ 92a Abs. 4 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E132",
+      "fundstelle": "§ 92a Abs. 4 S. 1",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E133",
+      "fundstelle": "§ 92b Abs. 1 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E134",
+      "fundstelle": "§ 93 Abs. 3 S. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E135",
+      "fundstelle": "§ 93 Abs. 1 S. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E136",
+      "fundstelle": "§ 94 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E137",
+      "fundstelle": "§ 95",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E138",
+      "fundstelle": "§ 96 Abs. 1 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E139",
+      "fundstelle": "§ 97 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E140",
+      "fundstelle": "§ 97 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E141",
+      "fundstelle": "§ 92b Abs. 1 S. 3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E142",
+      "fundstelle": "§ 93 Abs. 1 S. 4 Buchst. a-d",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E143",
+      "fundstelle": "§ 97 S. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E144",
+      "fundstelle": "§ 82 Abs. 2",
+      "typ": "definition"
+    },
+    {
+      "id": "E145",
+      "fundstelle": "§ 82 Abs. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E146",
+      "fundstelle": "§ 84",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E147",
+      "fundstelle": "§ 84",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E148",
+      "fundstelle": "§ 84",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E149",
+      "fundstelle": "§ 87 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E150",
+      "fundstelle": "§ 87",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E151",
+      "fundstelle": "§ 87",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E152",
+      "fundstelle": "§ 92a Abs. 3 S. 9",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E153",
+      "fundstelle": "§ 92a Abs. 4 S. 1 Nr. 1-3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E154",
+      "fundstelle": "§ 92b Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E155",
+      "fundstelle": "§ 92b Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E156",
+      "fundstelle": "§ 93 Abs. 1a",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E157",
+      "fundstelle": "§ 93 Abs. 2",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E158",
+      "fundstelle": "§ 93 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E159",
+      "fundstelle": "§ 93 Abs. 4",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E160",
+      "fundstelle": "§ 96 Abs. 2 S. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E161",
+      "fundstelle": "§ 100 Abs. 3",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E162",
+      "fundstelle": "§ 100 Abs. 3 Nr. 1",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E163",
+      "fundstelle": "§ 100 Abs. 3 Nr. 2",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E164",
+      "fundstelle": "§ 100 Abs. 3 Nr. 4",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E165",
+      "fundstelle": "§ 100 Abs. 6 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E166",
+      "fundstelle": "§ 105 Abs. 1 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E167",
+      "fundstelle": "§ 112 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E168",
+      "fundstelle": "§ 117 Abs. 2 S. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E169",
+      "fundstelle": "§ 117 Abs. 2 S. 2-3",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E170",
+      "fundstelle": "§ 117 Abs. 3",
+      "typ": "ausnahme"
+    },
+    {
+      "id": "E171",
+      "fundstelle": "§ 117 Abs. 4",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E172",
+      "fundstelle": "§ 118 Abs. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E173",
+      "fundstelle": "§ 122 S. 2",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E174",
+      "fundstelle": "Anlage 1 zu § 4d Abs. 1",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E175",
+      "fundstelle": "Anlage 1a Nr. 1 zu § 13a",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E176",
+      "fundstelle": "Anlage 1a Nr. 2 zu § 13a",
+      "typ": "tatbestand"
+    },
+    {
+      "id": "E177",
+      "fundstelle": "Anlage 1a Nr. 3 zu § 13a",
+      "typ": "rechtsfolge"
+    },
+    {
+      "id": "E178",
+      "fundstelle": "Anlage 2 zu § 43b",
+      "typ": "definition"
+    },
+    {
+      "id": "E179",
+      "fundstelle": "Anlage 3 zu § 50g",
+      "typ": "definition"
+    }
+  ]
+}
