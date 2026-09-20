@@ -600,9 +600,10 @@ const ueberlauf = (seite) => seite.evaluate(() =>
     farben.au[0] === "vorbehaltlich der Absätze 2 bis 5", String(farben.au[0]));
   ok("„soweit …“ ist Tatbestand",
     String(farben.tb[0]).startsWith("soweit eine Veranlagung"), String(farben.tb[0]).slice(0, 32));
-  ok("Legende erklärt die drei Kategorien",
+  ok("Legende erklärt alle vier Strukturkategorien",
     farben.legende.includes("Tatbestand") && farben.legende.includes("Rechtsfolge")
-    && farben.legende.includes("Ausnahme / Vorbehalt"));
+    && farben.legende.includes("Ausnahme / Vorbehalt")
+    && farben.legende.includes("Definition / Legaldefinition"));
   ok("Legende weist die Maschine aus",
     farben.legende.includes("maschinell erkannt, nicht redaktionell geprüft"));
 
@@ -1558,6 +1559,11 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
 
   const dunkel = await seite.evaluate(() => {
     const g = (wahl, eigenschaft) => getComputedStyle(document.querySelector(wahl))[eigenschaft];
+    const probe = document.createElement("span");
+    probe.className = "s s-definition";
+    document.querySelector(".lesespalte").appendChild(probe);
+    const def = getComputedStyle(probe).backgroundColor;
+    probe.remove();
     return {
       kopf: g("header .kopf", "backgroundColor"),
       papier: g("body", "backgroundColor"),
@@ -1565,6 +1571,7 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
       tb: g(".lesespalte .s-tatbestand", "backgroundColor"),
       rf: g(".lesespalte .s-rechtsfolge", "backgroundColor"),
       au: g(".lesespalte .s-ausnahme", "backgroundColor"),
+      def,
       deckkraft: getComputedStyle(document.documentElement).getPropertyValue("--eigen-deckkraft").trim(),
       gewaehlt: [...document.querySelectorAll("#darstellung button")]
         .find((b) => b.getAttribute("aria-checked") === "true").textContent,
@@ -1576,7 +1583,7 @@ for (const [name, breite, hoehe] of [["1200 px", 1200, 900], ["1024 px", 1024, 8
   ok("Marker-Deckkraft sinkt auf .22", dunkel.deckkraft === ".22", dunkel.deckkraft);
 
   /* Die Spezifikation fordert 7:1 für Normtext über den „voll“-Tönen. */
-  for (const [name, ton] of [["Tatbestand", dunkel.tb], ["Rechtsfolge", dunkel.rf], ["Ausnahme", dunkel.au]]) {
+  for (const [name, ton] of [["Tatbestand", dunkel.tb], ["Rechtsfolge", dunkel.rf], ["Ausnahme", dunkel.au], ["Definition", dunkel.def]]) {
     const wert = kontrast(dunkel.text, ton);
     ok(`Kontrast über ${name} hält 7:1 (dunkel)`, wert >= 7, wert.toFixed(1) + ":1");
   }
