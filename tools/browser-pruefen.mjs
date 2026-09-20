@@ -623,6 +623,44 @@ const ueberlauf = (seite) => seite.evaluate(() =>
   await ctx.close();
 }
 
+/* ── 4b.1 Redaktioneller EStG-Prüfstand und Legaldefinitionen ── */
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+  const seite = await ctx.newPage();
+  await seite.goto(WURZEL + "/#/estg/2", { waitUntil: "networkidle" });
+  await seite.waitForTimeout(1500);
+
+  const redaktion = await seite.evaluate(() => {
+    const definitionen = [...document.querySelectorAll(".lesespalte .s-definition")];
+    const titel = definitionen.map((x) => x.title || "");
+    return {
+      anzahl: definitionen.length,
+      text: definitionen.map((x) => x.textContent).join(" "),
+      titel,
+      legende: (document.querySelector(".legende") || {}).textContent || "",
+      meta: (document.querySelector(".meta") || {}).textContent || "",
+      voll: getComputedStyle(document.documentElement).getPropertyValue("--def-voll").trim(),
+    };
+  });
+
+  ok("EStG § 2 zeigt redaktionelle Definitionen", redaktion.anzahl >= 5,
+    redaktion.anzahl + " Definitionsspannen");
+  ok("Gesamtbetrag der Einkünfte ist als Definition markiert",
+    redaktion.text.includes("Gesamtbetrag der Einkünfte"), redaktion.text.slice(0, 120));
+  ok("Definitionen sind als redaktionell verifiziert ausgewiesen",
+    redaktion.titel.some((t) => t.includes("redaktionell verifiziert")), redaktion.titel.slice(0, 3).join(" | "));
+  ok("Legende führt Definition als vierte Strukturkategorie",
+    redaktion.legende.includes("Definition / Legaldefinition"), redaktion.legende);
+  ok("Legende weist den Beck-Prüfstand aus",
+    redaktion.legende.includes("Beck-Prüfstand"), redaktion.legende);
+  ok("Metadaten unterscheiden Redaktion und Automatik",
+    redaktion.meta.includes("redaktionell verifizierte Korrekturen"), redaktion.meta);
+  ok("Definitionsfarbe entspricht dem Prüfstand-Blau",
+    redaktion.voll.toUpperCase() === "#CFE7FF", redaktion.voll);
+
+  await ctx.close();
+}
+
 /* ── 4c. Eigene Markierungen ── */
 {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
