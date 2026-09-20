@@ -340,7 +340,8 @@
           "bis": 404
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "Wird gefördertes Altersvorsorgevermögen nicht unter den in § 1 Absatz 1 Satz 1 Nummer 4 und 10 Buchstabe c des Altersvorsorgeverträge-Zertifizierungsgesetzes oder § 1 Absatz 1 Satz 1 Nummer 4, 5 und 10 Buchstabe c des Altersvorsorgeverträge-Zertifizierungsgesetzes in der bis zum 31. Dezember 2004 geltenden Fassung genannten Voraussetzungen an den Zulageberechtigten ausgezahlt (schädliche Verwendung)"
     },
     {
       "id": "E059",
@@ -449,7 +450,8 @@
           "bis": 195
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "wenn die Mobilitätsprämie mindestens 10 Euro beträgt"
     },
     {
       "id": "E078",
@@ -461,7 +463,8 @@
           "bis": 141
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "erfolgt nur"
     },
     {
       "id": "E079",
@@ -548,7 +551,8 @@
       "fundstelle": "§ 114",
       "typ": "tatbestand",
       "umsetzung": "nicht textgenau auflösbar",
-      "hinweis": "Der Befund nennt einen Tatbestand in § 114; der aktuelle Normtext enthält dort nur die Entstehensregel am 1.9.2022."
+      "hinweis": "Der Befund nennt einen Tatbestand in § 114; der aktuelle Normtext enthält dort nur die Entstehensregel am 1.9.2022.",
+      "anker": "Der Anspruch auf die Energiepreispauschale"
     },
     {
       "id": "E096",
@@ -560,7 +564,8 @@
           "bis": 73
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "entsteht am 1. September 2022"
     },
     {
       "id": "E097",
@@ -592,7 +597,8 @@
       "fundstelle": "§ 116",
       "typ": "ausnahme",
       "umsetzung": "nicht textgenau auflösbar",
-      "hinweis": "Der Befund beschreibt die unterbleibende Festsetzung/Anrechnung bei Arbeitgeberauszahlung, ohne in § 116 eine textgleiche Teilspanne zu benennen."
+      "hinweis": "Der aktuelle Repo-Wortlaut von § 116 enthält keinen textlich abgrenzbaren Ausnahmetatbestand. Nicht pauschal umgefärbt.",
+      "status": "nicht_aufloesbar"
     },
     {
       "id": "E103",
@@ -689,7 +695,8 @@
           "bis": 1631
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "Erkennt die zentrale Stelle bis zum Ende des zweiten auf die Ermittlung der Zulage folgenden Jahres nachträglich auf Grund neuer, berichtigter oder stornierter Daten, dass der Zulageanspruch ganz oder teilweise nicht besteht oder weggefallen ist"
     },
     {
       "id": "E121",
@@ -716,7 +723,8 @@
       "fundstelle": "§ 96 Abs. 3 S. 3",
       "typ": "ausnahme",
       "umsetzung": "nicht textgenau auflösbar",
-      "hinweis": "Der Befund verweist auf § 96 Abs. 3 S. 3; der aktuelle Normtext/Gliederungsdatensatz führt dort keinen Satz 3."
+      "hinweis": "Der aktuelle Repo-Wortlaut von § 96 Absatz 3 enthält nur einen Satz; eine Fundstelle Absatz 3 Satz 3 ist nicht vorhanden.",
+      "status": "nicht_aufloesbar"
     },
     {
       "id": "E126",
@@ -728,7 +736,8 @@
           "bis": 317
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "anker": "Dies gilt nicht für pauschal besteuerten Arbeitslohn nach § 40a."
     },
     {
       "id": "E127",
@@ -775,7 +784,8 @@
           "bis": 6623
         }
       ],
-      "umsetzung": "explizite redaktionelle Teilspanne"
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "hinweis": "Definition umfasst Satz 2 einschließlich der nachfolgenden Nummern 1 und 2."
     },
     {
       "id": "E135",
@@ -1115,6 +1125,11 @@
     "automatisch": "Fundstelle gegen Gliederung/Struktur aufgelöst; passende maschinelle Teilspannen werden redaktionell bestätigt.",
     "explizit": 18,
     "nicht_textgenau": 3,
-    "schutz": "Alle redaktionellen Segmente sind an den Text-Hash der jeweiligen Norm gebunden; bei Wortlautänderung werden sie nicht ungeprüft übernommen."
+    "schutz": "Alle redaktionellen Segmente sind an den Text-Hash der jeweiligen Norm gebunden; bei Wortlautänderung werden sie nicht ungeprüft übernommen.",
+    "strategie": "Fundstellen werden gegen die kanonischen Gliederungspfade aufgelöst; präzise Anker/Bereiche schlagen maschinelle Spannen.",
+    "nicht_aufloesbar": [
+      "E102",
+      "E125"
+    ]
   }
 }
