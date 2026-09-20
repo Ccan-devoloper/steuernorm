@@ -1921,20 +1921,81 @@ function ueberlappt(seg, bereich){
   return seg.von < bereich.bis && seg.bis > bereich.von;
 }
 
+/* Eine redaktionelle Teilspanne darf den nicht betroffenen Rest eines
+ * maschinellen Segments nicht mitlöschen. Beispiel: § 90 Abs. 3 S. 1 enthält
+ * Tatbestand UND Rechtsfolge, während die Automatik bislang den ganzen Satz
+ * als Rechtsfolge markiert. */
+function bereichEintragen(segmente, bereich, neu){
+  const raus = [];
+  for (const seg of segmente){
+    if (!ueberlappt(seg, bereich)){ raus.push(seg); continue; }
+    if (seg.redaktionell && seg.typ === neu.typ
+        && seg.von === bereich.von && seg.bis === bereich.bis){
+      raus.push({
+        ...seg,
+        belegIds:[...new Set([...(seg.belegIds || []), ...(neu.belegIds || [])])],
+      });
+      continue;
+    }
+    if (seg.von < bereich.von) raus.push({ ...seg, bis:bereich.von });
+    if (seg.bis > bereich.bis) raus.push({ ...seg, von:bereich.bis });
+  }
+  if (!raus.some((x) => x.redaktionell && x.typ === neu.typ
+      && x.von === bereich.von && x.bis === bereich.bis)){
+    raus.push({ ...neu, von:bereich.von, bis:bereich.bis });
+  }
+  return raus;
+}
+
+function redaktionOffenDerNorm(){
+  const datei = S.redaktion[S.abk];
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  return redaktionDerNorm().filter((f) => {
+    if (f.umsetzung === "nicht textgenau auflösbar") return true;
+    if (!Array.isArray(f.bereiche) || !f.bereiche.length) return false;
+    const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
+    return Boolean(erwartet && anm && anm.text_hash && erwartet !== anm.text_hash);
+  });
+}
+
 /**
  * Manuelle Verifikation schlägt Automatik, aber nur soweit die Fundstelle
- * eindeutig genug ist. Definitionen werden bei einer eindeutig allein als
- * Definition geprüften Fundstelle als eigene blaue Kategorie gesetzt.
- * Bei gemischten Stellen wird nur das bereits erkannte Definiendum blau;
- * Tatbestand/Rechtsfolge bleiben in ihren verifizierten Teilspannen erhalten.
+ * eindeutig genug ist. 18 im Prüfstand grob adressierte Stellen tragen
+ * zusätzlich explizite Zeichenbereiche. Diese werden nur bei unverändertem
+ * Normtext (Text-Hash) verwendet; ein später geänderter Wortlaut wird niemals
+ * mit veralteten Offsets eingefärbt.
  */
 function redaktionAnwenden(segmente, kanonisch){
   let raus = (segmente || []).map((x) => ({ ...x }));
   const funde = redaktionDerNorm();
   if (!funde.length) return raus;
 
-  const gruppen = new Map();
+  const datei = S.redaktion[S.abk];
+  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
+  const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
+  const hashPasst = !erwartet || (anm && anm.text_hash === erwartet);
+
+  /* Explizite Teilspannen zuerst. Sie lösen genau die Fälle, in denen die
+     Fundstellenadresse allein nicht fein genug ist (verschachtelte Listen,
+     leere Syntaxelemente, Tabellen/Anlagen). */
   for (const f of funde){
+    if (!Array.isArray(f.bereiche) || !f.bereiche.length || !hashPasst) continue;
+    for (const b of f.bereiche){
+      if (!Number.isInteger(b.von) || !Number.isInteger(b.bis)
+          || b.von < 0 || b.bis <= b.von || b.bis > kanonisch.length) continue;
+      raus = bereichEintragen(raus, b, {
+        typ:f.typ, pfad:f.fundstelle, konfidenz:1,
+        redaktionell:true, belegIds:[f.id],
+      });
+    }
+  }
+
+  const automatisch = funde.filter((f) =>
+    (!Array.isArray(f.bereiche) || !f.bereiche.length)
+    && f.umsetzung !== "nicht textgenau auflösbar"
+  );
+  const gruppen = new Map();
+  for (const f of automatisch){
     if (!gruppen.has(f.fundstelle)) gruppen.set(f.fundstelle, []);
     gruppen.get(f.fundstelle).push(f);
   }
@@ -1961,9 +2022,8 @@ function redaktionAnwenden(segmente, kanonisch){
         defBereiche = definitionsElemente(fundstelle);
       }
       for (const b of defBereiche){
-        raus = raus.filter((seg) => !ueberlappt(seg,b));
-        raus.push({
-          typ:"definition", von:b.von, bis:b.bis, pfad:fundstelle,
+        raus = bereichEintragen(raus, b, {
+          typ:"definition", pfad:fundstelle,
           konfidenz:1, redaktionell:true, belegIds:ids,
         });
       }
@@ -1975,9 +2035,8 @@ function redaktionAnwenden(segmente, kanonisch){
        niemals die ganze Norm rot. */
     if (typen.size === 1 && typen.has("ausnahme") && fundTokens(fundRest(fundstelle)).length){
       for (const b of bereiche){
-        raus = raus.filter((seg) => !ueberlappt(seg,b));
-        raus.push({
-          typ:"ausnahme", von:b.von, bis:b.bis, pfad:fundstelle,
+        raus = bereichEintragen(raus, b, {
+          typ:"ausnahme", pfad:fundstelle,
           konfidenz:1, redaktionell:true, belegIds:ids,
         });
       }
@@ -4137,9 +4196,13 @@ function hauptZeichnen(){
     : "kein Datensatz");
   meta.appendChild(e2);
   const e3 = document.createElement("span");
-  e3.textContent = redaktionDerNorm().length
-    ? "Beck-Prüfstand: redaktionell verifizierte Korrekturen; übrige Struktur automatisch erzeugt"
-    : "automatisch erzeugt, nicht redaktionell geprüft";
+  if (redaktionDerNorm().length){
+    const offen = redaktionOffenDerNorm().length;
+    e3.textContent = "Beck-Prüfstand: redaktionell verifizierte Korrekturen; übrige Struktur automatisch erzeugt"
+      + (offen ? " · " + offen + " Befund" + (offen === 1 ? "" : "e") + " ohne textgenaue Färbung" : "");
+  } else {
+    e3.textContent = "automatisch erzeugt, nicht redaktionell geprüft";
+  }
   meta.appendChild(e3);
   haupt.appendChild(meta);
 
@@ -4418,10 +4481,12 @@ function legendeBauen(stand, segmente){
   const anmerkung = document.createElement("span");
   anmerkung.className = "anmerkung";
   const redaktionell = Array.isArray(segmente) && segmente.some((x) => x.redaktionell);
+  const offen = redaktionOffenDerNorm().length;
   anmerkung.textContent = stand.angezeigt === "aus"
     ? "Struktur ausgeblendet — reiner Wortlaut."
     : redaktionell
       ? "Beck-Prüfstand: redaktionell verifizierte Stellen haben Vorrang; übrige Einfärbung ist maschinell erkannt."
+        + (offen ? " " + offen + " Befund" + (offen === 1 ? "" : "e") + " bleibt ohne textgenaue Färbung." : "")
       : "Einfärbung maschinell erkannt, nicht redaktionell geprüft.";
   d.appendChild(anmerkung);
 
