@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "redaktion/**"
+      - "tools/struktur.mjs"
+      - "tools/redaktion-pruefen.mjs"
       - "config/handbuecher.json"
       - "tools/annotieren.mjs"
       - "tools/belege.mjs"
@@ -118,6 +121,7 @@ jobs:
           node tools/annotieren.mjs --nur solzg --ohne-ki --laeufe 1
           node tools/pruefen.mjs --nur solzg --streng
           node tools/konsistenz.mjs --nur solzg
+          node tools/redaktion-pruefen.mjs
 
           # Der Anbieter steckt in der Umgebung, nicht im Code. Geprüft wird
           # beides: die Voreinstellung und ein fremder Endpunkt mit Schrägstrich
@@ -166,6 +170,7 @@ jobs:
           find tools -name '*.mjs' -print0 | xargs -0 -n1 node --check
           node tools/pruefen.mjs --streng
           node tools/konsistenz.mjs
+          node tools/redaktion-pruefen.mjs
           if [ -f reports/belege-annotation.json ]; then
             node -e 'const b=require("./reports/belege-annotation.json");if(!b.vollstaendig||b.handbuecherMitBelegen!==8)throw new Error("Belegeinbettung unvollständig")'
           fi
