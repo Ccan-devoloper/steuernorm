@@ -52,9 +52,15 @@ DOM auf und führt eine Karte Zeichen → Textknoten mit. **Nur wenn beide Seite
 identisch rechnen, sitzen die Farben richtig** — weicht eine ab, verschiebt
 sich alles ab der ersten Abweichung.
 
-Für alle 14 Gesetze: 1 412 Normen, 27 133 Segmente, 2,3 MB — gegenüber 30 MB
-Annotationen. Übernommen werden nur die drei Kategorien der Legende; das
-Definiendum bleibt draußen, weil die Legende keine Marke dafür hat.
+Für alle Gesetze bleibt die automatische Projektion auf drei Kategorien
+beschränkt: Tatbestand, Rechtsfolge und Ausnahme/Vorbehalt. Ein maschinelles
+`def` wird weiterhin **nicht** ungeprüft als Legaldefinition ausgegeben.
+
+Für redaktionell verifizierte Bestände kann `struktur/<gesetz>.json` zusätzlich
+die vierte Kategorie **Definition/Legaldefinition** tragen. Der EStG-Prüfstand
+vom 20.09.2026 nutzt dafür eine blaue Fläche; die zugrunde liegenden Befunde
+liegen separat in `redaktion/estg.json` und sind an den geprüften Text-Hash
+der jeweiligen Norm gebunden.
 
 ### `verwaltung/<gesetz>.json`
 
