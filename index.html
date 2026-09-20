@@ -1970,7 +1970,15 @@ function redaktionAnwenden(segmente, kanonisch){
   const funde = redaktionDerNorm();
   if (!funde.length) return raus;
 
+  /* Der bevorzugte Zustand ist bereits in struktur/<gesetz>.json materialisiert.
+     Dann darf die Laufzeit-Schicht ihn nicht ein zweites Mal zerlegen. Das
+     Overlay bleibt als Rückwärtskompatibilität für ältere Strukturdateien. */
+  const struktureintrag = S.struktur[S.abk]?.[S.normId] || null;
   const datei = S.redaktion[S.abk];
+  if (struktureintrag?.redaktion?.stand
+      && struktureintrag.redaktion.stand === datei?.stand) return raus;
+
+
   const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
   const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
   const hashPasst = !erwartet || (anm && anm.text_hash === erwartet);
