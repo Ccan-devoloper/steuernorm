@@ -17,9 +17,10 @@ die Legende darüber — im Wortlaut steht kein Wort dazu.
 
 **EStG-Prüfstand 20.09.2026:** 179 manuell über Beck verifizierte Befunde liegen
 in `redaktion/estg.json` (49 Tatbestand · 66 Rechtsfolge · 35 Ausnahme ·
-29 Definition/Legaldefinition). Die redaktionelle Schicht übersteuert nur
-eindeutig auflösbare automatische Markierungen; gemischte Stellen werden nicht
-pauschal umgefärbt. Definitionen haben eine eigene blaue Strukturfarbe.
+29 Definition/Legaldefinition). 176 Befunde sind textgenau in `struktur/estg.json`
+materialisiert; E095, E102 und E125 bleiben ausdrücklich offen, weil der aktuelle
+Repo-Wortlaut keine textgleiche Teilstelle trägt. Es wird dort keine Färbung
+erfunden. Definitionen haben eine eigene blaue Strukturfarbe.
 
 **Neu in Fassung 7:** Dunkelmodus mit Umschalter hell · dunkel · System ·
 **Sammelmappe** für Normen und markierte Stellen · **Fassungsvergleich** zweier
