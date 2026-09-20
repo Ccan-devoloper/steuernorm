@@ -18,6 +18,36 @@ const WURZEL = path.resolve(import.meta.dirname, "..");
 const ORDNER = path.join(WURZEL, "redaktion");
 const TYPEN = new Set(["tatbestand", "rechtsfolge", "ausnahme", "definition"]);
 
+
+/* Regression der 21 Stellen, die beim ersten Abgleich 158/179 noch offen
+ * waren. Die Anker sind bewusst textgenau: Eine spätere Vergröberung auf
+ * ganze Absätze soll den Test brechen. E095 und E102 bleiben dagegen offen,
+ * weil ihr Kommentarinhalt im zitierten Normwortlaut keine korrespondierende
+ * Teilspanne hat. */
+const REGRESSION_ESTG_20260920 = {
+  E027:{ norm:"2a", typ:"definition", segmente:[[4663,4757],[4761,4936]] },
+  E050:{ norm:"19", typ:"definition", segmente:[[199,390]] },
+  E051:{ norm:"19", typ:"definition", segmente:[[391,763]] },
+  E055:{ norm:"81", typ:"definition", segmente:[[0,82]] },
+  E058:{ norm:"93", typ:"tatbestand", segmente:[[0,404]] },
+  E059:{ norm:"93", typ:"ausnahme", segmente:[[1283,2807]] },
+  E077:{ norm:"105", typ:"tatbestand", segmente:[[143,195]] },
+  E078:{ norm:"105", typ:"ausnahme", segmente:[[130,141]] },
+  E095:{ norm:"114", offen:true },
+  E096:{ norm:"114", typ:"rechtsfolge", segmente:[[0,73]] },
+  E102:{ norm:"116", offen:true },
+  E120:{ norm:"90", typ:"tatbestand", segmente:[[1384,1631]] },
+  E125:{ norm:"96", typ:"ausnahme", segmente:[[723,850]], fundstelle:"§ 96 Abs. 2 S. 3" },
+  E126:{ norm:"119", typ:"rechtsfolge", segmente:[[253,317]] },
+  E134:{ norm:"93", typ:"definition", segmente:[[5954,5958],[6222,6226]] },
+  E142:{ norm:"93", typ:"ausnahme", segmente:[[1283,2807]] },
+  E153:{ norm:"92a", typ:"tatbestand", segmente:[[16187,16649]] },
+  E163:{ norm:"100", typ:"tatbestand", segmente:[[1257,1485]] },
+  E174:{ norm:"anlage-1", typ:"rechtsfolge", segmente:[[0,604]] },
+  E176:{ norm:"anlage-1a", typ:"tatbestand", segmente:[[453,1158]] },
+  E177:{ norm:"anlage-1a", typ:"rechtsfolge", segmente:[[1162,1265]] },
+};
+
 function normId(fundstelle){
   const f = String(fundstelle || "").trim();
   let m = /^§\s*([0-9]+[a-z]?)/i.exec(f);
@@ -114,6 +144,33 @@ for (const datei of dateien) {
     .map((b) => b.id).sort();
   if (!gleich(rootOffen, erwartetOffen))
     fail(`${datei}: offene Befunde stimmen nicht (${rootOffen.join(", ")})`);
+
+  if (datei === "estg.json") {
+    const nachId = new Map(befunde.map((b) => [b.id, b]));
+    for (const [id, soll] of Object.entries(REGRESSION_ESTG_20260920)) {
+      const b = nachId.get(id);
+      const n = struktur.normen?.[soll.norm];
+      const segmente = (n?.segmente || []).filter((x) => (x.belegIds || []).includes(id));
+      if (!b) { fail(`estg.json: Regressionsbefund ${id} fehlt`); continue; }
+      if (soll.fundstelle && b.fundstelle !== soll.fundstelle)
+        fail(`estg.json ${id}: Fundstelle ${b.fundstelle} ≠ ${soll.fundstelle}`);
+      if (soll.offen) {
+        if (b.umsetzung !== "nicht textgenau auflösbar")
+          fail(`estg.json ${id}: muss ausdrücklich nicht textgenau auflösbar bleiben`);
+        if (segmente.length)
+          fail(`estg.json ${id}: offener Befund darf keine redaktionelle Textspanne färben`);
+        if (!(n?.redaktion?.offen || []).includes(id))
+          fail(`estg.json ${id}: fehlt in normbezogener Offen-Liste`);
+        continue;
+      }
+      for (const [von, bis] of soll.segmente || []) {
+        if (!segmente.some((x) => x.typ === soll.typ && x.von === von && x.bis === bis))
+          fail(`estg.json ${id}: erwartete ${soll.typ}-Spanne ${von}–${bis} fehlt`);
+      }
+    }
+    if (red.aufloesung?.explizit !== 19 || red.aufloesung?.nicht_textgenau !== 2)
+      fail(`estg.json: Auflösungsbilanz stimmt nicht (${JSON.stringify(red.aufloesung)})`);
+  }
 
   console.log(`${red.abk || datei}: ${befunde.length} Befunde · ${angewandt} angewandt · ${offen} offen · Text-Hashes geprüft`);
 }
