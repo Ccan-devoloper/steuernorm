@@ -1822,6 +1822,9 @@ function fundRest(fundstelle){
   let f = String(fundstelle || "").trim();
   f = f.replace(/^§\s*[0-9]+[a-z]?\s*/i, "");
   f = f.replace(/^Anlage\s+[0-9]+[a-z]?\s*/i, "");
+  /* Anlagen tragen „zu § …“ direkt nach der Anlagenummer; nach dem Entfernen
+     der Nummer steht „zu“ am Stringanfang, nicht hinter einem Leerzeichen. */
+  f = f.replace(/^zu\s+§.*$/i, "");
   f = f.replace(/\s+zu\s+§.*$/i, "");
   return f.trim();
 }
@@ -1851,17 +1854,41 @@ function tokenImBereich(wert, von, bis){
 function pfadPasst(fundstelle, pfad){
   const soll = fundTokens(fundRest(fundstelle));
   if (!soll.length) return true;
-  const ist = fundTokens(pfad);
+
+  /* Die Gliederung aus gesetze-im-internet lässt bei § 19 Abs. 1 Nr. 1a das
+     Wort „Nr.“ aus („Abs. 1 1a Satz 2“). Für die redaktionelle Fundstelle ist
+     es trotzdem dieselbe Adresse. */
+  const normal = String(pfad || "").replace(
+    /(Abs\.\s*[0-9]+[a-z]?)\s+([0-9]+[a-z])\s+(Satz)/gi,
+    "$1 Nr. $2 $3",
+  );
+  const ist = fundTokens(normal);
   let j = 0;
-  for (const token of soll){
-    let gefunden = false;
-    while (j < ist.length){
-      const kandidat = ist[j++];
+
+  for (let i = 0; i < soll.length; i++){
+    const token = soll[i];
+    let k = j, gefunden = false;
+    for (; k < ist.length; k++){
+      const kandidat = ist[k];
       if (kandidat.art === token.art && tokenImBereich(kandidat.von, token.von, token.bis)){
-        gefunden = true; break;
+        gefunden = true;
+        j = k + 1;
+        break;
       }
     }
-    if (!gefunden) return false;
+    if (gefunden) continue;
+
+    /* Aufzählungsglieder hängen im kanonischen Pfad oft direkt am Absatz:
+       „Abs. 2a Nr. 1“ gehört zu „Abs. 2a Satz 1 Nr. 1“, obwohl „Satz 1“ im
+       Pfad des Listeneintrags nicht wiederholt wird. Dasselbe gilt für
+       Buchstaben unter einem Satz. */
+    const nachher = soll.slice(i + 1);
+    const satzNurStrukturell = token.art === "satz"
+      && nachher.some((x) => x.art === "nr" || x.art === "buchst")
+      && ist.slice(j).some((x) => x.art === "nr" || x.art === "buchst");
+    if (satzNurStrukturell) continue;
+
+    return false;
   }
   return true;
 }
@@ -1921,6 +1948,42 @@ function ueberlappt(seg, bereich){
   return seg.von < bereich.bis && seg.bis > bereich.von;
 }
 
+function bereichUeberschreiben(segmente, bereich, typ, fund){
+  const geerbt = new Set(fund.belegIds || [fund.id]);
+  const raus = [];
+  for (const seg of segmente){
+    if (!ueberlappt(seg, bereich)){
+      raus.push(seg); continue;
+    }
+    for (const id of seg.belegIds || []) geerbt.add(id);
+    if (seg.von < bereich.von) raus.push({ ...seg, bis:bereich.von });
+    if (seg.bis > bereich.bis) raus.push({ ...seg, von:bereich.bis });
+  }
+  raus.push({
+    typ,
+    von: bereich.von,
+    bis: bereich.bis,
+    pfad: fund.fundstelle,
+    konfidenz: 1,
+    redaktionell: true,
+    belegIds: [...geerbt],
+  });
+  return raus;
+}
+
+function ankerBereich(fund, kanonisch){
+  if (!fund.anker) return null;
+  const ziele = bereicheFuerFundstelle(fund.fundstelle, kanonisch);
+  for (const z of ziele){
+    const teil = kanonisch.slice(z.von, z.bis);
+    const lokal = teil.indexOf(fund.anker);
+    if (lokal >= 0) return { von:z.von + lokal, bis:z.von + lokal + fund.anker.length };
+  }
+  const global = kanonisch.indexOf(fund.anker);
+  return global >= 0 ? { von:global, bis:global + fund.anker.length } : null;
+}
+
+
 /* Eine redaktionelle Teilspanne darf den nicht betroffenen Rest eines
  * maschinellen Segments nicht mitlöschen. Beispiel: § 90 Abs. 3 S. 1 enthält
  * Tatbestand UND Rechtsfolge, während die Automatik bislang den ganzen Satz
@@ -1970,40 +2033,23 @@ function redaktionAnwenden(segmente, kanonisch){
   const funde = redaktionDerNorm();
   if (!funde.length) return raus;
 
-  /* Der bevorzugte Zustand ist bereits in struktur/<gesetz>.json materialisiert.
-     Dann darf die Laufzeit-Schicht ihn nicht ein zweites Mal zerlegen. Das
-     Overlay bleibt als Rückwärtskompatibilität für ältere Strukturdateien. */
-  const struktureintrag = S.struktur[S.abk]?.[S.normId] || null;
-  const datei = S.redaktion[S.abk];
-  if (struktureintrag?.redaktion?.stand
-      && struktureintrag.redaktion.stand === datei?.stand) return raus;
-
-
-  const anm = S.anmerkungen[S.abk] ? S.anmerkungen[S.abk][S.normId] : null;
-  const erwartet = datei && datei.text_hashes ? datei.text_hashes[S.normId] : null;
-  const hashPasst = !erwartet || (anm && anm.text_hash === erwartet);
-
-  /* Explizite Teilspannen zuerst. Sie lösen genau die Fälle, in denen die
-     Fundstellenadresse allein nicht fein genug ist (verschachtelte Listen,
-     leere Syntaxelemente, Tabellen/Anlagen). */
+  /* Präzise manuelle Anker und explizite Zeichenbereiche zuerst. Sie sind die
+     schärfste Form des Prüfstandsbefunds und dürfen eine zu grobe automatische
+     Spanne auch in der Mitte teilen. */
+  const erledigt = new Set();
   for (const f of funde){
-    if (!Array.isArray(f.bereiche) || !f.bereiche.length || !hashPasst) continue;
-    for (const b of f.bereiche){
-      if (!Number.isInteger(b.von) || !Number.isInteger(b.bis)
-          || b.von < 0 || b.bis <= b.von || b.bis > kanonisch.length) continue;
-      raus = bereichEintragen(raus, b, {
-        typ:f.typ, pfad:f.fundstelle, konfidenz:1,
-        redaktionell:true, belegIds:[f.id],
-      });
-    }
+    if (f.status === "nicht_aufloesbar") continue;
+    const direkt = Array.isArray(f.bereiche) && f.bereiche.length
+      ? f.bereiche
+      : (f.anker ? [ankerBereich(f, kanonisch)].filter(Boolean) : []);
+    if (!direkt.length) continue;
+    for (const b of direkt) raus = bereichUeberschreiben(raus, b, f.typ, f);
+    erledigt.add(f.id);
   }
 
-  const automatisch = funde.filter((f) =>
-    (!Array.isArray(f.bereiche) || !f.bereiche.length)
-    && f.umsetzung !== "nicht textgenau auflösbar"
-  );
   const gruppen = new Map();
-  for (const f of automatisch){
+  for (const f of funde){
+    if (erledigt.has(f.id) || f.status === "nicht_aufloesbar") continue;
     if (!gruppen.has(f.fundstelle)) gruppen.set(f.fundstelle, []);
     gruppen.get(f.fundstelle).push(f);
   }
@@ -2014,40 +2060,30 @@ function redaktionAnwenden(segmente, kanonisch){
     const bereiche = bereicheFuerFundstelle(fundstelle, kanonisch);
     if (!bereiche.length) continue;
 
-    /* Bestehende passende Teilspannen werden als redaktionell bestätigt. */
+    /* Bestehende passende Teilspannen gelten durch den Prüfstand als
+       redaktionell bestätigt. Breite Fundstellen wie „§ 93 – Ausnahme“
+       bestätigen damit nur tatsächlich vorhandene Ausnahmespannen und färben
+       nicht die ganze Norm um. */
     raus = raus.map((seg) => {
       if (!typen.has(seg.typ) || !bereiche.some((b) => ueberlappt(seg,b))) return seg;
-      return { ...seg, redaktionell:true, belegIds:[...(seg.belegIds || []), ...ids] };
+      return { ...seg, redaktionell:true, belegIds:[...new Set([...(seg.belegIds || []), ...ids])] };
     });
 
-    if (typen.has("definition")){
-      let defBereiche = [];
-      if (typen.size === 1 && fundTokens(fundRest(fundstelle)).length){
-        defBereiche = bereiche;
-      } else if (typen.size === 1 && /^Anlage\s/i.test(fundstelle)){
-        defBereiche = bereiche;
-      } else {
-        defBereiche = definitionsElemente(fundstelle);
-      }
-      for (const b of defBereiche){
-        raus = bereichEintragen(raus, b, {
-          typ:"definition", pfad:fundstelle,
-          konfidenz:1, redaktionell:true, belegIds:ids,
-        });
-      }
-    }
+    /* Ist an einer konkreten Fundstelle genau EINE Kategorie verifiziert,
+       ersetzt sie dort die automatische Zuordnung. Das ist der eigentliche
+       Korrekturfall des Prüfstands. Bei gemischten Fundstellen bleiben die
+       vorhandenen Teilspannen erhalten; ohne exakten Anker wäre jede weitere
+       Trennung geraten. */
+    const konkret = fundTokens(fundRest(fundstelle)).length > 0;
+    const anlage = /^Anlage\s/i.test(fundstelle);
+    const ganzeEinSatzDefinition = typen.size === 1 && typen.has("definition")
+      && !konkret && !anlage
+      && ((S.anmerkungen[S.abk]?.[S.normId]?.saetze || []).length === 1);
 
-    /* Eine ausdrücklich als Ausnahme geprüfte, konkrete Untergliederung darf
-       die dortige automatische Einordnung vollständig ersetzen. Ein bloßes
-       „§ 93 Ausnahme“ ist dagegen nur ein Befund über Teilstellen und färbt
-       niemals die ganze Norm rot. */
-    if (typen.size === 1 && typen.has("ausnahme") && fundTokens(fundRest(fundstelle)).length){
-      for (const b of bereiche){
-        raus = bereichEintragen(raus, b, {
-          typ:"ausnahme", pfad:fundstelle,
-          konfidenz:1, redaktionell:true, belegIds:ids,
-        });
-      }
+    if (typen.size === 1 && (konkret || anlage || ganzeEinSatzDefinition)){
+      const typ = [...typen][0];
+      const fund = { ...gruppe[0], belegIds:ids };
+      for (const b of bereiche) raus = bereichUeberschreiben(raus, b, typ, fund);
     }
   }
 
