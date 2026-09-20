@@ -713,10 +713,17 @@
     },
     {
       "id": "E125",
-      "fundstelle": "§ 96 Abs. 3 S. 3",
+      "fundstelle": "§ 96 Abs. 2 S. 3",
       "typ": "ausnahme",
-      "umsetzung": "nicht textgenau auflösbar",
-      "hinweis": "Der Befund verweist auf § 96 Abs. 3 S. 3; der aktuelle Normtext/Gliederungsdatensatz führt dort keinen Satz 3."
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "hinweis": "Die Fundstellenzeile des Prüfstands nennt irrtümlich § 96 Abs. 3 S. 3. Zielbeschreibung, Beck-Pfad und geltender Wortlaut korrespondieren zu § 96 Abs. 2 S. 3. Markiert wird nur die Haftungsbeschränkung „wenn er weiß, dass … hat“.",
+      "fundstelle_original": "§ 96 Abs. 3 S. 3",
+      "bereiche": [
+        {
+          "von": 723,
+          "bis": 850
+        }
+      ]
     },
     {
       "id": "E126",
@@ -1113,8 +1120,8 @@
   },
   "aufloesung": {
     "automatisch": "Fundstelle gegen Gliederung/Struktur aufgelöst; passende maschinelle Teilspannen werden redaktionell bestätigt.",
-    "explizit": 18,
-    "nicht_textgenau": 3,
+    "explizit": 19,
+    "nicht_textgenau": 2,
     "schutz": "Alle redaktionellen Segmente sind an den Text-Hash der jeweiligen Norm gebunden; bei Wortlautänderung werden sie nicht ungeprüft übernommen."
   }
 }
