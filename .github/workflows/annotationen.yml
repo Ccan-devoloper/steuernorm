@@ -154,6 +154,20 @@ jobs:
           grep -q "Normfilter: 1 Normen in 1 Gesetzen" filter2.txt
           rm -f filter.txt filter2.txt
 
+      - name: Oberfläche in Chromium prüfen
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/steuernorm-http.log 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for i in {1..30}; do
+            curl -fsS http://127.0.0.1:8123/ >/dev/null && break
+            sleep 0.2
+          done
+          node tools/browser-pruefen.mjs http://127.0.0.1:8123
+
   push-check:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest

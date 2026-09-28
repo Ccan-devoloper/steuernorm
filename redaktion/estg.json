@@ -349,6 +349,22 @@
       "bereiche": [
         {
           "von": 1188,
+          "bis": 1283
+        },
+        {
+          "von": 1287,
+          "bis": 1632
+        },
+        {
+          "von": 1636,
+          "bis": 1837
+        },
+        {
+          "von": 1841,
+          "bis": 2751
+        },
+        {
+          "von": 2755,
           "bis": 2807
         }
       ],
@@ -713,10 +729,17 @@
     },
     {
       "id": "E125",
-      "fundstelle": "§ 96 Abs. 3 S. 3",
+      "fundstelle": "§ 96 Abs. 2 S. 3",
       "typ": "ausnahme",
-      "umsetzung": "nicht textgenau auflösbar",
-      "hinweis": "Der Befund verweist auf § 96 Abs. 3 S. 3; der aktuelle Normtext/Gliederungsdatensatz führt dort keinen Satz 3."
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "hinweis": "Der Prüfstand nennt versehentlich § 96 Abs. 3 S. 3. Der belegte Zieltext steht im aktuellen Wortlaut in § 96 Abs. 2 S. 3; markiert wird ausschließlich die Kenntnisvoraussetzung („wenn er weiß, dass …“).",
+      "fundstelle_original": "§ 96 Abs. 3 S. 3",
+      "bereiche": [
+        {
+          "von": 723,
+          "bis": 851
+        }
+      ]
     },
     {
       "id": "E126",
@@ -780,7 +803,30 @@
     {
       "id": "E135",
       "fundstelle": "§ 93 Abs. 1 S. 4",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 1188,
+          "bis": 1283
+        },
+        {
+          "von": 1287,
+          "bis": 1632
+        },
+        {
+          "von": 1636,
+          "bis": 1837
+        },
+        {
+          "von": 1841,
+          "bis": 2751
+        },
+        {
+          "von": 2755,
+          "bis": 2807
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne"
     },
     {
       "id": "E136",
@@ -818,7 +864,19 @@
       "typ": "ausnahme",
       "bereiche": [
         {
-          "von": 1188,
+          "von": 1287,
+          "bis": 1632
+        },
+        {
+          "von": 1636,
+          "bis": 1837
+        },
+        {
+          "von": 1841,
+          "bis": 2751
+        },
+        {
+          "von": 2755,
           "bis": 2807
         }
       ],
@@ -909,7 +967,15 @@
     {
       "id": "E158",
       "fundstelle": "§ 93 Abs. 3",
-      "typ": "ausnahme"
+      "typ": "ausnahme",
+      "bereiche": [
+        {
+          "von": 5806,
+          "bis": 5927
+        }
+      ],
+      "umsetzung": "explizite redaktionelle Teilspanne",
+      "hinweis": "Nur § 93 Abs. 3 S. 1 ist als Ausnahme markiert; die Legaldefinition der Kleinbetragsrente in Satz 2 bleibt Definition/Legaldefinition."
     },
     {
       "id": "E159",
@@ -1113,8 +1179,8 @@
   },
   "aufloesung": {
     "automatisch": "Fundstelle gegen Gliederung/Struktur aufgelöst; passende maschinelle Teilspannen werden redaktionell bestätigt.",
-    "explizit": 18,
-    "nicht_textgenau": 3,
+    "explizit": 21,
+    "nicht_textgenau": 2,
     "schutz": "Alle redaktionellen Segmente sind an den Text-Hash der jeweiligen Norm gebunden; bei Wortlautänderung werden sie nicht ungeprüft übernommen."
   }
 }

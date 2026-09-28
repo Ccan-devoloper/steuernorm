@@ -45,8 +45,58 @@ const nur = nurRoh ? new Set(nurRoh.split(",").map(kurz).filter(Boolean)) : null
 /** Die drei maschinellen Kategorien. Definition ist ausschließlich redaktionell. */
 const TYP = { tb: "tatbestand", rf: "rechtsfolge", ausn: "ausnahme" };
 
+function fundNormId(fundstelle){
+  const f = String(fundstelle || "").trim();
+  let m = /^§\s*([0-9]+[a-z]?)/i.exec(f);
+  if (m) return m[1].toLowerCase();
+  m = /^Anlage\s+([0-9]+[a-z]?)/i.exec(f);
+  return m ? "anlage-" + m[1].toLowerCase() : null;
+}
+
 function ueberlappt(a, b){
   return a.von < b.bis && a.bis > b.von;
+}
+
+/* Explizite redaktionelle Zeichenbereiche kommen aus redaktion/<gesetz>.json
+ * selbst. Damit überleben satzgenaue Korrekturen einen Neuaufbau von
+ * struktur/, statt nur zufällig aus der vorherigen Ausgabedatei konserviert
+ * zu werden. Gleiche Bereiche derselben Kategorie werden mit allen Beleg-IDs
+ * zusammengeführt. */
+function expliziteRedaktion(redaktion, normId){
+  const gruppen = new Map();
+  for (const b of redaktion?.befunde || []) {
+    if (fundNormId(b.fundstelle) !== normId
+        || b.umsetzung !== "explizite redaktionelle Teilspanne"
+        || !Array.isArray(b.bereiche)) continue;
+    for (const r of b.bereiche) {
+      if (!Number.isInteger(r.von) || !Number.isInteger(r.bis) || r.bis <= r.von) continue;
+      const key = `${b.typ}:${r.von}:${r.bis}`;
+      const alt = gruppen.get(key);
+      if (alt) {
+        alt.belegIds = [...new Set([...(alt.belegIds || []), b.id])];
+        alt.pfad = b.fundstelle;
+      } else {
+        gruppen.set(key, {
+          typ:b.typ, von:r.von, bis:r.bis, pfad:b.fundstelle,
+          konfidenz:1, redaktionell:true, belegIds:[b.id],
+        });
+      }
+    }
+  }
+  return [...gruppen.values()];
+}
+
+function ohneExpliziteIds(segmente, ids){
+  if (!ids.size) return segmente;
+  const raus = [];
+  for (const seg of segmente) {
+    const alt = Array.isArray(seg.belegIds) ? seg.belegIds : null;
+    if (!alt) { raus.push(seg); continue; }
+    const neu = alt.filter((id) => !ids.has(id));
+    if (!neu.length) continue;
+    raus.push(neu.length === alt.length ? seg : { ...seg, belegIds:neu });
+  }
+  return raus;
 }
 
 /* Redaktionelle Segmente aus dem bisherigen Strukturdatensatz bleiben bei
@@ -191,10 +241,14 @@ for (const meta of gesetze) {
     let redaktionNorm = null;
     const erwartet = redaktion?.text_hashes?.[normId] || null;
     const alt = bisher?.normen?.[normId] || null;
-    if (erwartet && alt && anm.text_hash === erwartet) {
-      const redSegmente = (alt.segmente || []).filter((x) => x.redaktionell);
+    const explizit = expliziteRedaktion(redaktion, normId);
+    const expliziteIds = new Set(explizit.flatMap((x) => x.belegIds || []));
+    if (erwartet && anm.text_hash === erwartet) {
+      let redSegmente = (alt?.segmente || []).filter((x) => x.redaktionell);
+      redSegmente = ohneExpliziteIds(redSegmente, expliziteIds);
       if (redSegmente.length) endSegmente = redaktionBewahren(endSegmente, redSegmente);
-      if (alt.redaktion) redaktionNorm = alt.redaktion;
+      if (explizit.length) endSegmente = redaktionBewahren(endSegmente, explizit);
+      if (alt?.redaktion) redaktionNorm = alt.redaktion;
     } else if (erwartet && anm.text_hash && anm.text_hash !== erwartet) {
       console.warn(`  ⚠ ${meta.abk} ${norm.enbez}: redaktionelle Segmente wegen geändertem Text-Hash nicht übernommen`);
     }
