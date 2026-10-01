@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-09-30T11:09:10.337Z",
+  "aktualisiert": "2026-10-01T10:57:59.179Z",
   "quelle": "https://www.gesetze-im-internet.de/bewg/",
   "stand": [
     {
@@ -26667,43 +26667,32 @@
         {
           "pfad": "Satz 2",
           "von": 128,
-          "bis": 251,
+          "bis": 385,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln und den Finanzämtern",
-              "anzeige": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln und den Finanzämtern … mitzuteilen",
-              "teile": [
-                {
-                  "text": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln und den Finanzämtern",
-                  "von": 148,
-                  "laenge": 90
-                },
-                {
-                  "text": "mitzuteilen",
-                  "von": 239,
-                  "laenge": 11
-                }
-              ],
+              "text": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln, zu veröffentlichen und nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch an die zuständigen Finanzbehörden zu übermitteln",
+              "anzeige": null,
+              "teile": null,
               "pfad": "Satz 2",
               "von": 148,
-              "laenge": 90,
+              "laenge": 236,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat (mehrteilig)"
+              "grund": "Vorfeld ist Normgegenstand, kein Tatbestandsmerkmal"
             }
           ]
         },
         {
           "pfad": "Satz 3",
-          "von": 252,
-          "bis": 395,
+          "von": 386,
+          "bis": 529,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -26713,7 +26702,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 3",
-              "von": 252,
+              "von": 386,
               "laenge": 22,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -26730,17 +26719,17 @@
               "teile": [
                 {
                   "text": "ist stets der Bodenrichtwert",
-                  "von": 275,
+                  "von": 409,
                   "laenge": 28
                 },
                 {
                   "text": "anzusetzen",
-                  "von": 304,
+                  "von": 438,
                   "laenge": 10
                 }
               ],
               "pfad": "Satz 3",
-              "von": 275,
+              "von": 409,
               "laenge": 28,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -26754,8 +26743,8 @@
         },
         {
           "pfad": "Satz 4",
-          "von": 396,
-          "bis": 528,
+          "von": 530,
+          "bis": 662,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -26765,7 +26754,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 4",
-              "von": 396,
+              "von": 530,
               "laenge": 63,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -26781,7 +26770,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Satz 4",
-              "von": 461,
+              "von": 595,
               "laenge": 66,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -26847,11 +26836,11 @@
                 },
                 {
                   "n": "2.",
-                  "t": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln und den Finanzämtern … mitzuteilen",
+                  "t": "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln, zu veröffentlichen und nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch an die zuständigen Finanzbehörden zu übermitteln",
                   "pfad": "Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
-                  "mehrteilig": true
+                  "mehrteilig": false
                 },
                 {
                   "n": "3.",
@@ -26881,7 +26870,7 @@
       ],
       "rf": [
         "bestimmt sich regelmäßig nach ihrer Fläche und den Bodenrichtwerten (§ 196 des Baugesetzbuchs)",
-        "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln und den Finanzämtern",
+        "sind von den Gutachterausschüssen nach dem Baugesetzbuch zu ermitteln, zu veröffentlichen und nach amtlich vorgeschriebenem Datensatz über die amtlich bestimmte Schnittstelle elektronisch an die zuständigen Finanzbehörden zu übermitteln",
         "ist stets der Bodenrichtwert",
         "ist der Bodenwert aus den Werten vergleichbarer Flächen abzuleiten"
       ],
@@ -26897,9 +26886,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "c4f5dc065f1f7fb9ca000b1de6a69bf7946701230c8f07314b83d78c20114b0e",
+      "text_hash": "6fe643d65e57774a31914ead96a65448ad58b98ca76d29f20521aace0ac21f42",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:49.395Z"
+      "aktualisiert": "2026-10-01T10:57:59.158Z"
     },
     "180": {
       "typ": "gemischt",

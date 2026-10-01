@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-09-30T11:09:10.751Z",
+  "aktualisiert": "2026-10-01T10:57:59.591Z",
   "quelle": "https://www.gesetze-im-internet.de/fgo/",
   "stand": [
     {
@@ -47219,6 +47219,58 @@
               "grund": "Hauptsatzprädikat → Rechtsfolge"
             }
           ]
+        },
+        {
+          "pfad": "Abs. 5 Satz 1",
+          "von": 852,
+          "bis": 1098,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Die §§ 752a und 753a der Zivilprozessordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 5 Satz 1",
+              "von": 852,
+              "laenge": 44,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "sind mit der Maßgabe",
+              "anzeige": "sind mit der Maßgabe … anzuwenden",
+              "teile": [
+                {
+                  "text": "sind mit der Maßgabe",
+                  "von": 897,
+                  "laenge": 20
+                },
+                {
+                  "text": "anzuwenden",
+                  "von": 918,
+                  "laenge": 10
+                }
+              ],
+              "pfad": "Abs. 5 Satz 1",
+              "von": 897,
+              "laenge": 20,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat (mehrteilig)"
+            }
+          ]
         }
       ],
       "schema": [
@@ -47412,6 +47464,44 @@
               ]
             }
           ]
+        },
+        {
+          "absatz": "Abs. 5",
+          "typ": "konditional",
+          "rolle": "Voraussetzungen und Rechtsfolge",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Die §§ 752a und 753a der Zivilprozessordnung",
+                  "pfad": "Abs. 5 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "sind mit der Maßgabe … anzuwenden",
+                  "pfad": "Abs. 5 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "tb": [
@@ -47419,7 +47509,8 @@
         "aus einstweiligen Anordnungen",
         "aus Kostenfestsetzungsbeschlüssen",
         "Urteile auf Anfechtungs- und Verpflichtungsklagen",
-        "Für die Vollstreckung"
+        "Für die Vollstreckung",
+        "Die §§ 752a und 753a der Zivilprozessordnung"
       ],
       "rf": [
         "gilt für die Zwangsvollstreckung das Achte Buch der Zivilprozessordnung sinngemäß",
@@ -47427,7 +47518,8 @@
         "Vollstreckt",
         "rechtskräftigen und aus vorläufig vollstreckbaren gerichtlichen Entscheidungen",
         "können nur wegen der Kosten für vorläufig vollstreckbar erklärt werden",
-        "können den Beteiligten auf ihren Antrag Ausfertigungen des Urteils ohne Tatbestand und ohne Entscheidungsgründe erteilt werden, deren Zustellung in den Wirkungen der Zustellung eines vollständigen Urteils gleichsteht"
+        "können den Beteiligten auf ihren Antrag Ausfertigungen des Urteils ohne Tatbestand und ohne Entscheidungsgründe erteilt werden, deren Zustellung in den Wirkungen der Zustellung eines vollständigen Urteils gleichsteht",
+        "sind mit der Maßgabe"
       ],
       "ausnahmen": [],
       "definitionen": [
@@ -47435,7 +47527,7 @@
       ],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.55,
+      "konfidenz": 0.557,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -47443,9 +47535,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "111ca9cdde0b5e46afbd995712a9a5e4a67234df67b7dacef345ac4e90bb5e52",
+      "text_hash": "6af28e86091cbec2101361308ec56c2b3a88662e01a2b789bc29b4af9f7848c4",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:52.996Z"
+      "aktualisiert": "2026-10-01T10:57:59.590Z"
     },
     "152": {
       "typ": "gemischt",

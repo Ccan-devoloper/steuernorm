@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-30T11:09:09.853Z",
+  "erzeugt": "2026-10-01T10:57:58.801Z",
   "format": 5,
   "modelle": [
     "nur-syntax"
@@ -9,17 +9,17 @@
     {
       "abk": "AO",
       "normen": 503,
-      "bearbeitet": 0,
-      "uebernommen": 503,
+      "bearbeitet": 4,
+      "uebernommen": 499,
       "markierbar": 495,
-      "abgelehnt": 0,
+      "abgelehnt": 4,
       "vollstaendig": true
     },
     {
       "abk": "BewG",
       "normen": 204,
-      "bearbeitet": 0,
-      "uebernommen": 204,
+      "bearbeitet": 1,
+      "uebernommen": 203,
       "markierbar": 149,
       "abgelehnt": 0,
       "vollstaendig": true
@@ -81,19 +81,19 @@
     {
       "abk": "FGO",
       "normen": 173,
-      "bearbeitet": 0,
-      "uebernommen": 173,
+      "bearbeitet": 1,
+      "uebernommen": 172,
       "markierbar": 166,
-      "abgelehnt": 0,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {
       "abk": "GrEStG",
       "normen": 28,
-      "bearbeitet": 0,
-      "uebernommen": 28,
+      "bearbeitet": 2,
+      "uebernommen": 26,
       "markierbar": 27,
-      "abgelehnt": 0,
+      "abgelehnt": 1,
       "vollstaendig": true
     },
     {

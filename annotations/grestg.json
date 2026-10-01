@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-09-30T11:09:10.772Z",
+  "aktualisiert": "2026-10-01T10:57:59.621Z",
   "quelle": "https://www.gesetze-im-internet.de/grestg_1983/",
   "stand": [
     {
@@ -10439,60 +10439,60 @@
         {
           "pfad": "Abs. 1 Satz 1",
           "von": 0,
-          "bis": 138,
+          "bis": 130,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
-              "art": "tb",
-              "text": "Gerichte, Behörden und Notare",
+              "art": "rf",
+              "text": "Gerichte und Behörden",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
               "von": 0,
-              "laenge": 29,
+              "laenge": 21,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
             },
             {
-              "art": "rf",
-              "text": "haben dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
+              "art": "tb",
+              "text": "dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 1",
-              "von": 30,
-              "laenge": 108,
+              "von": 28,
+              "laenge": 102,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Nachfeld trägt die Voraussetzungen"
             }
           ]
         },
         {
           "pfad": "Abs. 1 Nr. 1",
-          "von": 142,
-          "bis": 349,
+          "von": 134,
+          "bis": 347,
           "typ": "konditional",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+              "text": "Rechtsvorgänge, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 1",
-              "von": 142,
-              "laenge": 206,
+              "von": 134,
+              "laenge": 212,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -10505,20 +10505,20 @@
         },
         {
           "pfad": "Abs. 1 Nr. 2",
-          "von": 353,
-          "bis": 584,
+          "von": 351,
+          "bis": 589,
           "typ": "konditional",
           "katalog": true,
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
+              "text": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, dass der Grundstückseigentümer gewechselt hat",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 2",
-              "von": 353,
-              "laenge": 230,
+              "von": 351,
+              "laenge": 237,
               "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
@@ -10530,9 +10530,9 @@
           ]
         },
         {
-          "pfad": "Abs. 1 Nr. 3 Satz 1",
-          "von": 588,
-          "bis": 749,
+          "pfad": "Abs. 1 Nr. 3",
+          "von": 593,
+          "bis": 914,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -10541,8 +10541,8 @@
               "text": "Zuschlagsbeschlüsse im Zwangsversteigerungsverfahren, Enteignungsbeschlüsse und andere Entscheidungen, durch die ein Wechsel im Grundstückseigentum",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Nr. 3 Satz 1",
-              "von": 588,
+              "pfad": "Abs. 1 Nr. 3",
+              "von": 593,
               "laenge": 147,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10557,8 +10557,8 @@
               "text": "bewirkt wird",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Nr. 3 Satz 1",
-              "von": 736,
+              "pfad": "Abs. 1 Nr. 3",
+              "von": 741,
               "laenge": 12,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -10567,23 +10567,14 @@
               "gegenprobe": null,
               "beleg": null,
               "grund": "Hauptsatzprädikat → Rechtsfolge"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 1 Nr. 3 Satz 2",
-          "von": 750,
-          "bis": 909,
-          "typ": "aussage",
-          "junktor": "oder",
-          "elemente": [
+            },
             {
               "art": "rf",
               "text": "besteht auch beim Wechsel im Grundstückseigentum auf Grund einer Eintragung im Handels-, Genossenschafts- oder Vereinsregister",
               "anzeige": null,
               "teile": null,
-              "pfad": "Abs. 1 Nr. 3 Satz 2",
-              "von": 782,
+              "pfad": "Abs. 1 Nr. 3",
+              "von": 787,
               "laenge": 126,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10597,19 +10588,19 @@
         },
         {
           "pfad": "Abs. 1 Nr. 4",
-          "von": 913,
-          "bis": 1012,
+          "von": 918,
+          "bis": 1021,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
             {
               "art": "tb",
-              "text": "nachträgliche Änderungen oder Berichtigungen eines der unter Nummern 1 bis 3",
+              "text": "nachträgliche Änderungen oder Berichtigungen eines der unter den Nummern 1 bis 3",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 4",
-              "von": 913,
-              "laenge": 76,
+              "von": 918,
+              "laenge": 80,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -10624,7 +10615,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Nr. 4",
-              "von": 990,
+              "von": 999,
               "laenge": 21,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -10638,8 +10629,8 @@
         },
         {
           "pfad": "Abs. 1 Satz 2",
-          "von": 1013,
-          "bis": 1202,
+          "von": 1022,
+          "bis": 1253,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -10649,7 +10640,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 2",
-              "von": 1013,
+              "von": 1022,
               "laenge": 6,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -10663,19 +10654,19 @@
         },
         {
           "pfad": "Abs. 1 Satz 3",
-          "von": 1203,
-          "bis": 1328,
+          "von": 1254,
+          "bis": 1380,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluß oder die Entscheidung beizufügen",
+              "text": "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluss oder die Entscheidung beizufügen",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 1 Satz 3",
-              "von": 1215,
-              "laenge": 112,
+              "von": 1266,
+              "laenge": 113,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -10688,8 +10679,8 @@
         },
         {
           "pfad": "Abs. 2 Satz 1",
-          "von": 1329,
-          "bis": 1445,
+          "von": 1381,
+          "bis": 1497,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -10699,7 +10690,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 1",
-              "von": 1348,
+              "von": 1400,
               "laenge": 96,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10713,8 +10704,8 @@
         },
         {
           "pfad": "Abs. 2 Satz 2",
-          "von": 1446,
-          "bis": 1736,
+          "von": 1498,
+          "bis": 1788,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -10724,7 +10715,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 1450,
+              "von": 1502,
               "laenge": 182,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10740,7 +10731,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2 Satz 2",
-              "von": 1634,
+              "von": 1686,
               "laenge": 101,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10754,8 +10745,8 @@
         },
         {
           "pfad": "Abs. 3 Satz 1",
-          "von": 1737,
-          "bis": 2042,
+          "von": 1789,
+          "bis": 2094,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -10765,7 +10756,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 1750,
+              "von": 1802,
               "laenge": 157,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10781,7 +10772,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
-              "von": 1909,
+              "von": 1961,
               "laenge": 132,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10795,8 +10786,8 @@
         },
         {
           "pfad": "Abs. 3 Satz 2",
-          "von": 2043,
-          "bis": 2135,
+          "von": 2095,
+          "bis": 2187,
           "typ": "definition",
           "junktor": null,
           "elemente": [
@@ -10806,7 +10797,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 2",
-              "von": 2052,
+              "von": 2104,
               "laenge": 82,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10819,32 +10810,73 @@
           ]
         },
         {
-          "pfad": "Abs. 4 Satz 1",
-          "von": 2136,
-          "bis": 2357,
+          "pfad": "Abs. 3 Satz 3",
+          "von": 2188,
+          "bis": 2263,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "rf",
-              "text": "ist auf der Urschrift der Urkunde, in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
-              "anzeige": "ist auf der Urschrift der Urkunde, in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift … zu vermerken",
+              "text": "In begründeten Ausnahmefällen",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 2188,
+              "laenge": 29,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+            },
+            {
+              "art": "tb",
+              "text": "die Frist nach Satz 1 verlängert werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 3 Satz 3",
+              "von": 2223,
+              "laenge": 39,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfeld trägt die Voraussetzungen"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 4 Satz 1",
+          "von": 2264,
+          "bis": 2519,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "ist von den Gerichten und Behörden auf der Urschrift der Urkunde und in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
+              "anzeige": "ist von den Gerichten und Behörden auf der Urschrift der Urkunde und in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift … zu vermerken",
               "teile": [
                 {
-                  "text": "ist auf der Urschrift der Urkunde, in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
-                  "von": 2162,
-                  "laenge": 181
+                  "text": "ist von den Gerichten und Behörden auf der Urschrift der Urkunde und in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
+                  "von": 2290,
+                  "laenge": 215
                 },
                 {
                   "text": "zu vermerken",
-                  "von": 2344,
+                  "von": 2506,
                   "laenge": 12
                 }
               ],
               "pfad": "Abs. 4 Satz 1",
-              "von": 2162,
-              "laenge": 181,
-              "konfidenz": 0.6,
+              "von": 2290,
+              "laenge": 215,
+              "konfidenz": 0.48,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
@@ -10855,9 +10887,50 @@
           ]
         },
         {
+          "pfad": "Abs. 4 Satz 2",
+          "von": 2520,
+          "bis": 2586,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "rf",
+              "text": "Notare",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2",
+              "von": 2520,
+              "laenge": 6,
+              "konfidenz": 0.45,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Prädikativ im Vorfeld → Rechtsfolge vorangestellt"
+            },
+            {
+              "art": "tb",
+              "text": "vermerken die Absendung der Anzeige im Urkundenverzeichnis",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 4 Satz 2",
+              "von": 2527,
+              "laenge": 58,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Nachfeld trägt die Voraussetzungen"
+            }
+          ]
+        },
+        {
           "pfad": "Abs. 5 Satz 1",
-          "von": 2358,
-          "bis": 2511,
+          "von": 2587,
+          "bis": 2740,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -10868,17 +10941,17 @@
               "teile": [
                 {
                   "text": "sind an das für die Besteuerung, in den Fällen des § 17 Abs. 2 und 3 an das für die gesonderte Feststellung zuständige Finanzamt",
-                  "von": 2371,
+                  "von": 2600,
                   "laenge": 128
                 },
                 {
                   "text": "zu richten",
-                  "von": 2500,
+                  "von": 2729,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 5 Satz 1",
-              "von": 2371,
+              "von": 2600,
               "laenge": 128,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -10905,7 +10978,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Gerichte, Behörden und Notare",
+                  "t": "dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10913,7 +10986,7 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+                  "t": "Rechtsvorgänge, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
                   "pfad": "Abs. 1 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10921,7 +10994,7 @@
                 },
                 {
                   "n": "3.",
-                  "t": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
+                  "t": "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, dass der Grundstückseigentümer gewechselt hat",
                   "pfad": "Abs. 1 Nr. 2",
                   "konfidenz": 0.48,
                   "beleg": null,
@@ -10930,14 +11003,14 @@
                 {
                   "n": "4.",
                   "t": "Zuschlagsbeschlüsse im Zwangsversteigerungsverfahren, Enteignungsbeschlüsse und andere Entscheidungen, durch die ein Wechsel im Grundstückseigentum",
-                  "pfad": "Abs. 1 Nr. 3 Satz 1",
+                  "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "5.",
-                  "t": "nachträgliche Änderungen oder Berichtigungen eines der unter Nummern 1 bis 3",
+                  "t": "nachträgliche Änderungen oder Berichtigungen eines der unter den Nummern 1 bis 3",
                   "pfad": "Abs. 1 Nr. 4",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10952,7 +11025,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "haben dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
+                  "t": "Gerichte und Behörden",
                   "pfad": "Abs. 1 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -10961,7 +11034,7 @@
                 {
                   "n": "2.",
                   "t": "bewirkt wird",
-                  "pfad": "Abs. 1 Nr. 3 Satz 1",
+                  "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -10969,7 +11042,7 @@
                 {
                   "n": "3.",
                   "t": "besteht auch beim Wechsel im Grundstückseigentum auf Grund einer Eintragung im Handels-, Genossenschafts- oder Vereinsregister",
-                  "pfad": "Abs. 1 Nr. 3 Satz 2",
+                  "pfad": "Abs. 1 Nr. 3",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -10992,7 +11065,7 @@
                 },
                 {
                   "n": "6.",
-                  "t": "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluß oder die Entscheidung beizufügen",
+                  "t": "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluss oder die Entscheidung beizufügen",
                   "pfad": "Abs. 1 Satz 3",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -11074,6 +11147,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "3.",
+                  "t": "die Frist nach Satz 1 verlängert werden",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             },
@@ -11089,6 +11170,14 @@
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
+                },
+                {
+                  "n": "2.",
+                  "t": "In begründeten Ausnahmefällen",
+                  "pfad": "Abs. 3 Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -11101,16 +11190,40 @@
           "schritte": [
             {
               "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "vermerken die Absendung der Anzeige im Urkundenverzeichnis",
+                  "pfad": "Abs. 4 Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
               "art": "rf",
               "t": "Rechtsfolge",
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist auf der Urschrift der Urkunde, in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift … zu vermerken",
+                  "t": "ist von den Gerichten und Behörden auf der Urschrift der Urkunde und in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift … zu vermerken",
                   "pfad": "Abs. 4 Satz 1",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": true
+                },
+                {
+                  "n": "2.",
+                  "t": "Notare",
+                  "pfad": "Abs. 4 Satz 2",
+                  "konfidenz": 0.45,
+                  "beleg": null,
+                  "mehrteilig": false
                 }
               ]
             }
@@ -11140,33 +11253,37 @@
         }
       ],
       "tb": [
-        "Gerichte, Behörden und Notare",
-        "Rechtsvorgänge, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
-        "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, daß der Grundstückseigentümer gewechselt hat",
+        "dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
+        "Rechtsvorgänge, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn die Rechtsvorgänge ein Grundstück im Geltungsbereich dieses Gesetzes betreffen",
+        "Anträge auf Berichtigung des Grundbuchs, die sie beurkundet haben oder über die sie eine Urkunde entworfen und darauf eine Unterschrift beglaubigt haben, wenn der Antrag darauf gestützt wird, dass der Grundstückseigentümer gewechselt hat",
         "Zuschlagsbeschlüsse im Zwangsversteigerungsverfahren, Enteignungsbeschlüsse und andere Entscheidungen, durch die ein Wechsel im Grundstückseigentum",
-        "nachträgliche Änderungen oder Berichtigungen eines der unter Nummern 1 bis 3",
+        "nachträgliche Änderungen oder Berichtigungen eines der unter den Nummern 1 bis 3",
         "wenn zum Vermögen der Gesellschaft ein im Geltungsbereich dieses Gesetzes liegendes Grundstück gehört",
         "wenn die Wirksamkeit des Rechtsvorgangs vom Eintritt einer Bedingung, vom Ablauf einer Frist oder von einer Genehmigung abhängig ist",
-        "auch dann zu erstatten, wenn der Rechtsvorgang von der Besteuerung ausgenommen ist"
+        "auch dann zu erstatten, wenn der Rechtsvorgang von der Besteuerung ausgenommen ist",
+        "die Frist nach Satz 1 verlängert werden",
+        "vermerken die Absendung der Anzeige im Urkundenverzeichnis"
       ],
       "rf": [
-        "haben dem zuständigen Finanzamt schriftlich Anzeige nach amtlich vorgeschriebenem Vordruck zu erstatten über",
+        "Gerichte und Behörden",
         "bewirkt wird",
         "besteht auch beim Wechsel im Grundstückseigentum auf Grund einer Eintragung im Handels-, Genossenschafts- oder Vereinsregister",
         "aufgeführten Vorgänge",
         "Notare",
-        "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluß oder die Entscheidung beizufügen",
+        "ist eine Abschrift der Urkunde über den Rechtsvorgang, den Antrag, den Beschluss oder die Entscheidung beizufügen",
         "bezieht sich auch auf Vorgänge, die ein Erbbaurecht oder ein Gebäude auf fremdem Boden betreffen",
         "gilt außerdem für Vorgänge, die die Übertragung von Anteilen an einer Kapitalgesellschaft, einer Personenhandelsgesellschaft oder einer Gesellschaft des bürgerlichen Rechts betreffen",
         "sind innerhalb von zwei Wochen nach der Beurkundung oder der Unterschriftsbeglaubigung oder der Bekanntgabe der Entscheidung zu erstatten, und zwar auch dann",
-        "ist auf der Urschrift der Urkunde, in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
+        "In begründeten Ausnahmefällen",
+        "ist von den Gerichten und Behörden auf der Urschrift der Urkunde und in den Fällen, in denen eine Urkunde entworfen und darauf eine Unterschrift beglaubigt worden ist, auf der zurückbehaltenen beglaubigten Abschrift",
+        "Notare",
         "sind an das für die Besteuerung, in den Fällen des § 17 Abs. 2 und 3 an das für die gesonderte Feststellung zuständige Finanzamt"
       ],
       "ausnahmen": [],
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.57,
+      "konfidenz": 0.563,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -11174,9 +11291,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "04d0b19f648927575e836296e891bd128961477072acc65de45d59bc6dd9ced3",
+      "text_hash": "3cac33f3fc49700d17128bb3fae79acc99fdcad342190bc163f546e193a36a6b",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:53.084Z"
+      "aktualisiert": "2026-10-01T10:57:59.617Z"
     },
     "19": {
       "typ": "gemischt",
@@ -15299,9 +15416,50 @@
       ],
       "saetze": [
         {
-          "pfad": "Satz 1",
+          "pfad": "Abs. 1 Satz 1",
           "von": 0,
-          "bis": 410,
+          "bis": 231,
+          "typ": "aussage",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Die elektronische Erstattung der Anzeige durch die Notare nach § 18 Absatz 1 Satz 2 und die Übersendung der Abschrift der Urkunde nach § 18 Absatz 1 Satz 3",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 0,
+              "laenge": 155,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
+            },
+            {
+              "art": "rf",
+              "text": "erfolgt über ein sicheres Verfahren nach § 87a Absatz 6 der Abgabenordnung",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Abs. 1 Satz 1",
+              "von": 156,
+              "laenge": 74,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat → Rechtsfolge"
+            }
+          ]
+        },
+        {
+          "pfad": "Abs. 2 Satz 1",
+          "von": 232,
+          "bis": 642,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -15310,8 +15468,8 @@
               "text": "wird ermächtigt, im Einvernehmen mit dem Bundesministerium der Justiz und für Verbraucherschutz sowie mit Zustimmung des Bundesrates für Anzeigen nach § 18 Absatz 1 Satz 2, für die Abschrift der Urkunde nach § 18 Absatz 1 Satz 3 und für elektronisch zu erteilende Bescheinigungen nach § 22 Absatz 2 Satz 5 in der ab dem 1. Januar 2028 geltenden Fassung durch Rechtsverordnung",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 1",
-              "von": 35,
+              "pfad": "Abs. 2 Satz 1",
+              "von": 267,
               "laenge": 375,
               "konfidenz": 0.48,
               "stimmen": 0,
@@ -15324,9 +15482,9 @@
           ]
         },
         {
-          "pfad": "Nr. 1",
-          "von": 414,
-          "bis": 618,
+          "pfad": "Abs. 2 Nr. 1",
+          "von": 646,
+          "bis": 850,
           "typ": "aussage",
           "junktor": "und",
           "elemente": [
@@ -15335,8 +15493,8 @@
               "text": "Einzelheiten der Datenübermittlung und Datenbereitstellung zu",
               "anzeige": null,
               "teile": null,
-              "pfad": "Nr. 1",
-              "von": 414,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 646,
               "laenge": 61,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -15351,8 +15509,8 @@
               "text": "regeln sowie Dateiformate und Anforderungen an die Barrierefreiheit für die zu übermittelnden und bereitzustellenden Dokumente festzulegen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Nr. 1",
-              "von": 476,
+              "pfad": "Abs. 2 Nr. 1",
+              "von": 708,
               "laenge": 138,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -15365,9 +15523,9 @@
           ]
         },
         {
-          "pfad": "Nr. 2",
-          "von": 622,
-          "bis": 872,
+          "pfad": "Abs. 2 Nr. 2",
+          "von": 854,
+          "bis": 1104,
           "typ": "konditional",
           "katalog": true,
           "junktor": "und",
@@ -15377,8 +15535,8 @@
               "text": "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen",
               "anzeige": null,
               "teile": null,
-              "pfad": "Nr. 2",
-              "von": 622,
+              "pfad": "Abs. 2 Nr. 2",
+              "von": 854,
               "laenge": 249,
               "konfidenz": 0.54,
               "stimmen": 0,
@@ -15393,7 +15551,45 @@
       ],
       "schema": [
         {
-          "absatz": "",
+          "absatz": "Abs. 1",
+          "typ": "aussage",
+          "rolle": "Anordnung",
+          "schritte": [
+            {
+              "n": "I.",
+              "art": "tb",
+              "t": "Voraussetzung",
+              "junktor": null,
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "Die elektronische Erstattung der Anzeige durch die Notare nach § 18 Absatz 1 Satz 2 und die Übersendung der Abschrift der Urkunde nach § 18 Absatz 1 Satz 3",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            },
+            {
+              "n": "II.",
+              "art": "rf",
+              "t": "Rechtsfolge",
+              "sub": [
+                {
+                  "n": "1.",
+                  "t": "erfolgt über ein sicheres Verfahren nach § 87a Absatz 6 der Abgabenordnung",
+                  "pfad": "Abs. 1 Satz 1",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "absatz": "Abs. 2",
           "typ": "aussage",
           "rolle": "Anordnung",
           "schritte": [
@@ -15406,7 +15602,7 @@
                 {
                   "n": "1.",
                   "t": "Einzelheiten der Datenübermittlung und Datenbereitstellung zu",
-                  "pfad": "Nr. 1",
+                  "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15414,7 +15610,7 @@
                 {
                   "n": "2.",
                   "t": "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen",
-                  "pfad": "Nr. 2",
+                  "pfad": "Abs. 2 Nr. 2",
                   "konfidenz": 0.54,
                   "beleg": null,
                   "mehrteilig": false
@@ -15429,7 +15625,7 @@
                 {
                   "n": "1.",
                   "t": "wird ermächtigt, im Einvernehmen mit dem Bundesministerium der Justiz und für Verbraucherschutz sowie mit Zustimmung des Bundesrates für Anzeigen nach § 18 Absatz 1 Satz 2, für die Abschrift der Urkunde nach § 18 Absatz 1 Satz 3 und für elektronisch zu erteilende Bescheinigungen nach § 22 Absatz 2 Satz 5 in der ab dem 1. Januar 2028 geltenden Fassung durch Rechtsverordnung",
-                  "pfad": "Satz 1",
+                  "pfad": "Abs. 2 Satz 1",
                   "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
@@ -15437,7 +15633,7 @@
                 {
                   "n": "2.",
                   "t": "regeln sowie Dateiformate und Anforderungen an die Barrierefreiheit für die zu übermittelnden und bereitzustellenden Dokumente festzulegen",
-                  "pfad": "Nr. 1",
+                  "pfad": "Abs. 2 Nr. 1",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -15448,10 +15644,12 @@
         }
       ],
       "tb": [
+        "Die elektronische Erstattung der Anzeige durch die Notare nach § 18 Absatz 1 Satz 2 und die Übersendung der Abschrift der Urkunde nach § 18 Absatz 1 Satz 3",
         "Einzelheiten der Datenübermittlung und Datenbereitstellung zu",
         "zu bestimmen, dass Notare und Finanzämter neben dem elektronischen Dokument oder in diesem elektronischen Dokument die dort enthaltenen Angaben vollständig oder teilweise in strukturierter maschinenlesbarer Form übermitteln oder bereitstellen müssen"
       ],
       "rf": [
+        "erfolgt über ein sicheres Verfahren nach § 87a Absatz 6 der Abgabenordnung",
         "wird ermächtigt, im Einvernehmen mit dem Bundesministerium der Justiz und für Verbraucherschutz sowie mit Zustimmung des Bundesrates für Anzeigen nach § 18 Absatz 1 Satz 2, für die Abschrift der Urkunde nach § 18 Absatz 1 Satz 3 und für elektronisch zu erteilende Bescheinigungen nach § 22 Absatz 2 Satz 5 in der ab dem 1. Januar 2028 geltenden Fassung durch Rechtsverordnung",
         "regeln sowie Dateiformate und Anforderungen an die Barrierefreiheit für die zu übermittelnden und bereitzustellenden Dokumente festzulegen"
       ],
@@ -15459,7 +15657,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.555,
+      "konfidenz": 0.57,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -15467,9 +15665,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "566d78d42a80084f58de1154ed8c752ec22d886603349dee47e870f3fe77d465",
+      "text_hash": "5b38038801e6778d50b3875f6211fd94454e0dda12714fcffa05cb784ccad96f",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:53.098Z"
+      "aktualisiert": "2026-10-01T10:57:59.620Z"
     },
     "(xxxx)-§§-25-bis-27": {
       "typ": "gemischt",

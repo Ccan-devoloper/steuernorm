@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-09-30T11:09:10.177Z",
+  "aktualisiert": "2026-10-01T10:57:59.032Z",
   "quelle": "https://www.gesetze-im-internet.de/ao_1977/",
   "stand": [
     {
@@ -158644,7 +158644,7 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "beträgt 28,60 Euro",
+              "text": "beträgt 31,20 Euro",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
@@ -158965,7 +158965,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "beträgt 28,60 Euro",
+                  "t": "beträgt 31,20 Euro",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -159091,7 +159091,7 @@
         "wird erhoben für die Pfändung von beweglichen Sachen, von Tieren, von Früchten, die vom Boden noch nicht getrennt sind, von Forderungen und von anderen",
         "unternommen hat",
         "gepfändet werden soll",
-        "beträgt 28,60 Euro",
+        "beträgt 31,20 Euro",
         "erhoben",
         "abgewendet wird",
         "geleistet wird, nachdem sich der Vollziehungsbeamte an Ort und Stelle begeben hat",
@@ -159110,9 +159110,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "03ab499e1db86d8eb0ce2a3b5099de7868755d15af1fcf491337c6d738fcdace",
+      "text_hash": "8599b8f0e5809d10e9e6533b0cbfabbbba03ea95e380fcbaa8910dad2b8ef79d",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:48.591Z"
+      "aktualisiert": "2026-10-01T10:57:58.973Z"
     },
     "340": {
       "typ": "gemischt",
@@ -159245,7 +159245,7 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "beträgt 28,60 Euro",
+              "text": "beträgt 31,20 Euro",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
@@ -159400,7 +159400,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "beträgt 28,60 Euro",
+                  "t": "beträgt 31,20 Euro",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -159427,7 +159427,7 @@
         "wird für die Wegnahme beweglicher Sachen einschließlich Urkunden in den Fällen der §§ 310, 315 Absatz 2 Satz 5, §§ 318, 321, 331 und 336",
         "gilt auch dann",
         "ist entsprechend",
-        "beträgt 28,60 Euro",
+        "beträgt 31,20 Euro",
         "wird auch erhoben"
       ],
       "ausnahmen": [],
@@ -159442,9 +159442,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "cf8159148941e134c5f3399946676bcd44337dd30fba9d90069cfe169dcd0526",
+      "text_hash": "f3fb64d10378fde6c32afb32e470d29b772980b5432bf95825255532c0dde4ad",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:48.592Z"
+      "aktualisiert": "2026-10-01T10:57:58.979Z"
     },
     "341": {
       "typ": "gemischt",
@@ -159524,7 +159524,7 @@
           "elemente": [
             {
               "art": "rf",
-              "text": "beträgt 57,20 Euro",
+              "text": "beträgt 62,40 Euro",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Satz 1",
@@ -159565,7 +159565,7 @@
             },
             {
               "art": "rf",
-              "text": "ist eine Gebühr von 28,60 Euro zu erheben",
+              "text": "ist eine Gebühr von 31,20 Euro zu erheben",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
@@ -159639,7 +159639,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "beträgt 57,20 Euro",
+                  "t": "beträgt 62,40 Euro",
                   "pfad": "Abs. 3 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -159677,7 +159677,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "ist eine Gebühr von 28,60 Euro zu erheben",
+                  "t": "ist eine Gebühr von 31,20 Euro zu erheben",
                   "pfad": "Abs. 4 Satz 1",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -159694,8 +159694,8 @@
       "rf": [
         "wird für die Versteigerung und andere Verwertung von Gegenständen",
         "entsteht, sobald der Vollziehungsbeamte oder ein anderer Beauftragter Schritte zur Ausführung des Verwertungsauftrags unternommen hat",
-        "beträgt 57,20 Euro",
-        "ist eine Gebühr von 28,60 Euro zu erheben"
+        "beträgt 62,40 Euro",
+        "ist eine Gebühr von 31,20 Euro zu erheben"
       ],
       "ausnahmen": [],
       "definitionen": [],
@@ -159709,9 +159709,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "970e19ef67e95d1766128ab24a150160f7ba3a2fb6887ee85dcbaf026ff5ca7e",
+      "text_hash": "b8dd366d731077a74597e65e3ad164e57e06463af4cf1a47c5acdcaf089e9d0e",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:48.593Z"
+      "aktualisiert": "2026-10-01T10:57:59.018Z"
     },
     "342": {
       "typ": "gemischt",
@@ -191597,89 +191597,32 @@
         {
           "pfad": "Abs. 2b Satz 1",
           "von": 2556,
-          "bis": 3042,
-          "typ": "verweisung",
+          "bis": 2569,
+          "typ": "aussage",
           "junktor": null,
           "elemente": [
             {
               "art": "tb",
-              "text": "Wird von der Verordnungsermächtigung des § 22a des Grunderwerbsteuergesetzes zur elektronischen Übermittlung der Anzeige im Sinne des § 18 des Grunderwerbsteuergesetzes Gebrauch gemacht",
+              "text": "(weggefallen)",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 2b Satz 1",
               "von": 2556,
-              "laenge": 185,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Verberststellung: uneingeleiteter Bedingungssatz"
-            },
-            {
-              "art": "rf",
-              "text": "übermitteln die Landesfinanzbehörden die dort eingegangenen Datensätze nach Maßgabe des § 31 Absatz 5a des Geldwäschegesetzes der Zentralstelle für Finanztransaktionsuntersuchungen zur Wahrnehmung ihrer Aufgaben nach § 28 Absatz 1 Satz 2 Nummer 2 des Geldwäschegesetzes im automatisierten Verfahren",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2b Satz 1",
-              "von": 2743,
-              "laenge": 298,
-              "konfidenz": 0.48,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Nachfolgender Hauptsatz"
-            }
-          ]
-        },
-        {
-          "pfad": "Abs. 2b Satz 2",
-          "von": 3043,
-          "bis": 3077,
-          "typ": "verweisung",
-          "junktor": null,
-          "elemente": [
-            {
-              "art": "tb",
-              "text": "Absatz 2 Satz 2",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2b Satz 2",
-              "von": 3043,
-              "laenge": 15,
-              "konfidenz": 0.6,
-              "stimmen": 0,
-              "laeufe": 0,
-              "syntax": true,
-              "gegenprobe": null,
-              "beleg": null,
-              "grund": "Konditionales Adverbial im Vorfeld → Anwendungsfall"
-            },
-            {
-              "art": "rf",
-              "text": "gilt entsprechend",
-              "anzeige": null,
-              "teile": null,
-              "pfad": "Abs. 2b Satz 2",
-              "von": 3059,
-              "laenge": 17,
+              "laenge": 13,
               "konfidenz": 0.45,
               "stimmen": 0,
               "laeufe": 0,
               "syntax": true,
               "gegenprobe": null,
               "beleg": null,
-              "grund": "Hauptsatzprädikat → Rechtsfolge"
+              "grund": "Kein finites Verb erkannt — Satz unzerlegt"
             }
           ]
         },
         {
           "pfad": "Abs. 3 Satz 1",
-          "von": 3078,
-          "bis": 3214,
+          "von": 2570,
+          "bis": 2706,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -191690,17 +191633,17 @@
               "teile": [
                 {
                   "text": "haben der zuständigen Verwaltungsbehörde unverzüglich solche Tatsachen",
-                  "von": 3097,
+                  "von": 2589,
                   "laenge": 70
                 },
                 {
                   "text": "mitzuteilen",
-                  "von": 3168,
+                  "von": 2660,
                   "laenge": 11
                 }
               ],
               "pfad": "Abs. 3 Satz 1",
-              "von": 3097,
+              "von": 2589,
               "laenge": 70,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -191714,8 +191657,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 1",
-          "von": 3218,
-          "bis": 3381,
+          "von": 2710,
+          "bis": 2873,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -191725,7 +191668,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 1",
-              "von": 3218,
+              "von": 2710,
               "laenge": 133,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -191741,7 +191684,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 1",
-              "von": 3352,
+              "von": 2844,
               "laenge": 24,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -191755,8 +191698,8 @@
         },
         {
           "pfad": "Abs. 3 Nr. 2",
-          "von": 3385,
-          "bis": 3589,
+          "von": 2877,
+          "bis": 3081,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -191766,7 +191709,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3 Nr. 2",
-              "von": 3576,
+              "von": 3068,
               "laenge": 12,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -191780,8 +191723,8 @@
         },
         {
           "pfad": "Abs. 3a Satz 1",
-          "von": 3590,
-          "bis": 3964,
+          "von": 3082,
+          "bis": 3456,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -191791,7 +191734,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3a Satz 1",
-              "von": 3609,
+              "von": 3101,
               "laenge": 354,
               "konfidenz": 0.42,
               "stimmen": 0,
@@ -191805,8 +191748,8 @@
         },
         {
           "pfad": "Abs. 3a Satz 2",
-          "von": 3965,
-          "bis": 3994,
+          "von": 3457,
+          "bis": 3486,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -191816,7 +191759,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3a Satz 2",
-              "von": 3965,
+              "von": 3457,
               "laenge": 14,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -191832,7 +191775,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3a Satz 2",
-              "von": 3985,
+              "von": 3477,
               "laenge": 8,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -191846,8 +191789,8 @@
         },
         {
           "pfad": "Abs. 3a Satz 3",
-          "von": 3995,
-          "bis": 4292,
+          "von": 3487,
+          "bis": 3784,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -191857,7 +191800,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3a Satz 3",
-              "von": 3995,
+              "von": 3487,
               "laenge": 103,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -191873,7 +191816,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 3a Satz 3",
-              "von": 4099,
+              "von": 3591,
               "laenge": 192,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -191887,8 +191830,8 @@
         },
         {
           "pfad": "Abs. 4 Satz 1",
-          "von": 4293,
-          "bis": 4348,
+          "von": 3785,
+          "bis": 3840,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -191898,7 +191841,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 4 Satz 1",
-              "von": 4330,
+              "von": 3822,
               "laenge": 17,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -192164,50 +192107,19 @@
         },
         {
           "absatz": "Abs. 2b",
-          "typ": "verweisung",
-          "rolle": "Verweisung",
+          "typ": "aussage",
+          "rolle": "Anordnung",
           "schritte": [
             {
               "n": "I.",
               "art": "tb",
-              "t": "Voraussetzungen (kumulativ)",
-              "junktor": "und",
+              "t": "Voraussetzung",
+              "junktor": null,
               "sub": [
                 {
                   "n": "1.",
-                  "t": "Wird von der Verordnungsermächtigung des § 22a des Grunderwerbsteuergesetzes zur elektronischen Übermittlung der Anzeige im Sinne des § 18 des Grunderwerbsteuergesetzes Gebrauch gemacht",
+                  "t": "(weggefallen)",
                   "pfad": "Abs. 2b Satz 1",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "Absatz 2 Satz 2",
-                  "pfad": "Abs. 2b Satz 2",
-                  "konfidenz": 0.6,
-                  "beleg": null,
-                  "mehrteilig": false
-                }
-              ]
-            },
-            {
-              "n": "II.",
-              "art": "rf",
-              "t": "Rechtsfolge",
-              "sub": [
-                {
-                  "n": "1.",
-                  "t": "übermitteln die Landesfinanzbehörden die dort eingegangenen Datensätze nach Maßgabe des § 31 Absatz 5a des Geldwäschegesetzes der Zentralstelle für Finanztransaktionsuntersuchungen zur Wahrnehmung ihrer Aufgaben nach § 28 Absatz 1 Satz 2 Nummer 2 des Geldwäschegesetzes im automatisierten Verfahren",
-                  "pfad": "Abs. 2b Satz 1",
-                  "konfidenz": 0.48,
-                  "beleg": null,
-                  "mehrteilig": false
-                },
-                {
-                  "n": "2.",
-                  "t": "gilt entsprechend",
-                  "pfad": "Abs. 2b Satz 2",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -192370,8 +192282,7 @@
         "soweit dies zur Wahrnehmung der Aufgaben der Zentralstelle für Finanztransaktionsuntersuchungen nach § 28 Absatz 1 Satz 2 Nummer 2 des Geldwäschegesetzes erforderlich ist",
         "beim Bundeszentralamt für Steuern die nach § 5 Absatz 1 Nummer 13 des Finanzverwaltungsgesetzes vorgehaltenen Daten",
         "bei den Landesfinanzbehörden die zu einem Steuerpflichtigen",
-        "Wird von der Verordnungsermächtigung des § 22a des Grunderwerbsteuergesetzes zur elektronischen Übermittlung der Anzeige im Sinne des § 18 des Grunderwerbsteuergesetzes Gebrauch gemacht",
-        "Absatz 2 Satz 2",
+        "(weggefallen)",
         "ein Verpflichteter nach § 2 Absatz 1 Nummer 13 bis 16 des Geldwäschegesetzes eine Ordnungswidrigkeit nach § 56 des Geldwäschegesetzes",
         "zulässig",
         "Die von den Finanzbehörden an die zuständigen Koordinierenden Stellen nach § 50c des Geldwäschegesetzes"
@@ -192386,8 +192297,6 @@
         "gilt entsprechend",
         "übermitteln der Zentralstelle für Finanztransaktionsuntersuchungen folgende Daten nach Maßgabe des § 31 Absatz 5 des Geldwäschegesetzes im automatisierten Verfahren",
         "gespeicherten Grundinformationen, die die Steuernummer, die Gewerbekennzahl, die Grund- und Zusatzkennbuchstaben, die Bankverbindung, die vergebene Umsatzsteuer-Identifikationsnummer sowie das zuständige Finanzamt umfassen",
-        "übermitteln die Landesfinanzbehörden die dort eingegangenen Datensätze nach Maßgabe des § 31 Absatz 5a des Geldwäschegesetzes der Zentralstelle für Finanztransaktionsuntersuchungen zur Wahrnehmung ihrer Aufgaben nach § 28 Absatz 1 Satz 2 Nummer 2 des Geldwäschegesetzes im automatisierten Verfahren",
-        "gilt entsprechend",
         "haben der zuständigen Verwaltungsbehörde unverzüglich solche Tatsachen",
         "begangen hat oder begeht",
         "gegeben sind",
@@ -192408,9 +192317,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "6ab41775a55a48068f4475c7a50c3d36f2eb1858ba4b52aa49aad8812d0450ad",
+      "text_hash": "bbc33492792abab72b646ec74a6300cccc6db2d1cf71d05e103c40f09ed362f3",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:47.305Z"
+      "aktualisiert": "2026-10-01T10:57:58.891Z"
     },
     "31c": {
       "typ": "gemischt",
