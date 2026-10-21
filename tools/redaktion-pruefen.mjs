@@ -30,6 +30,20 @@ function gleich(a, b){
   return JSON.stringify(a) === JSON.stringify(b);
 }
 
+function bereichAbgedeckt(segmente, bereich, typ){
+  let pos = bereich.von;
+  const passend = (segmente || [])
+    .filter((s) => s.redaktionell && s.typ === typ && s.von < bereich.bis && s.bis > bereich.von)
+    .sort((a,b) => a.von - b.von || a.bis - b.bis);
+  for (const s of passend) {
+    if (s.bis <= pos) continue;
+    if (s.von > pos) return false;
+    pos = Math.max(pos, s.bis);
+    if (pos >= bereich.bis) return true;
+  }
+  return pos >= bereich.bis;
+}
+
 let fehler = 0;
 const fail = (text) => { console.error("FEHLER " + text); fehler++; };
 
@@ -85,6 +99,26 @@ for (const datei of dateien) {
             || r.von < 0 || r.bis <= r.von || r.bis > maxBis)
           fail(`${datei} ${b.id}: ungültiger Bereich ${JSON.stringify(r)} (Text bis ${maxBis})`);
       }
+    }
+
+    if (b.umsetzung === "explizite redaktionelle Teilspanne") {
+      if (!Array.isArray(b.bereiche) || !b.bereiche.length) {
+        fail(`${datei} ${b.id}: explizite Teilspanne ohne Bereiche`);
+      } else {
+        const mitId = (s.segmente || []).filter((x) => (x.belegIds || []).includes(b.id));
+        for (const seg of mitId) {
+          if (seg.typ !== b.typ)
+            fail(`${datei} ${b.id}: Segmenttyp ${seg.typ} statt ${b.typ}`);
+          if (!b.bereiche.some((r) => seg.von >= r.von && seg.bis <= r.bis))
+            fail(`${datei} ${b.id}: Segment ${seg.von}–${seg.bis} liegt außerhalb der verifizierten Bereiche`);
+        }
+        for (const r of b.bereiche) {
+          if (!bereichAbgedeckt(s.segmente, r, b.typ))
+            fail(`${datei} ${b.id}: Bereich ${r.von}–${r.bis} ist nicht vollständig als ${b.typ} materialisiert`);
+        }
+      }
+    } else if (b.umsetzung === "nicht textgenau auflösbar" && Array.isArray(b.bereiche) && b.bereiche.length) {
+      fail(`${datei} ${b.id}: offener Befund darf keine Zeichenbereiche tragen`);
     }
 
     const direkt = (s.redaktion?.angewandt || []).includes(b.id)
