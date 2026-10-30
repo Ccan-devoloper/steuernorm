@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-10-29T11:29:43.718Z",
+  "aktualisiert": "2026-10-30T11:22:26.511Z",
   "quelle": "https://www.gesetze-im-internet.de/fgo/",
   "stand": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "typ": "Hinweis",
-      "text": "Änderung durch Art. 14 G v. 22.10.2026 I Nr. 321 mWv 28.10.2026 noch nicht berücksichtigt"
+      "text": "Änderung durch Art. 14 G v. 22.10.2026 I Nr. 321 textlich nachgewiesen, dokumentarisch noch nicht abschließend bearbeitet"
     },
     {
       "typ": "Sonst",
@@ -49404,6 +49404,7 @@
       "typ": "gemischt",
       "typen": [
         "aussage",
+        "konditional",
         "verweisung"
       ],
       "saetze": [
@@ -49451,7 +49452,64 @@
         {
           "pfad": "Satz 2",
           "von": 294,
-          "bis": 555,
+          "bis": 726,
+          "typ": "konditional",
+          "junktor": null,
+          "elemente": [
+            {
+              "art": "tb",
+              "text": "Akten, in denen Dokumente und Aktenteile",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 294,
+              "laenge": 40,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionales Adverbial im Vorfeld"
+            },
+            {
+              "art": "rf",
+              "text": "enthalten sind, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache höher als VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind, dürfen bis einschließlich 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform erstellt, geführt und übermittelt werden",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 335,
+              "laenge": 293,
+              "konfidenz": 0.48,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Hauptsatzprädikat"
+            },
+            {
+              "art": "tb",
+              "text": "wenn eine teilweise elektronische Aktenführung nur mit unverhältnismäßigem Aufwand möglich wäre",
+              "anzeige": null,
+              "teile": null,
+              "pfad": "Satz 2",
+              "von": 630,
+              "laenge": 95,
+              "konfidenz": 0.6,
+              "stimmen": 0,
+              "laeufe": 0,
+              "syntax": true,
+              "gegenprobe": null,
+              "beleg": null,
+              "grund": "Konditionalsatz mit „wenn\""
+            }
+          ]
+        },
+        {
+          "pfad": "Satz 3",
+          "von": 727,
+          "bis": 988,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -49460,8 +49518,8 @@
               "text": "Dokumente und Aktenteile, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 2",
-              "von": 294,
+              "pfad": "Satz 3",
+              "von": 727,
               "laenge": 159,
               "konfidenz": 0.54,
               "stimmen": 0,
@@ -49476,8 +49534,8 @@
               "text": "dürfen bis zum 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform übermittelt werden",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 2",
-              "von": 455,
+              "pfad": "Satz 3",
+              "von": 888,
               "laenge": 99,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -49490,9 +49548,9 @@
           ]
         },
         {
-          "pfad": "Satz 3",
-          "von": 556,
-          "bis": 653,
+          "pfad": "Satz 4",
+          "von": 989,
+          "bis": 1086,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -49501,8 +49559,8 @@
               "text": "Die für die Handhabung von Verschlusssachen geltenden Geheimschutzvorschriften",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 3",
-              "von": 556,
+              "pfad": "Satz 4",
+              "von": 989,
               "laenge": 78,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -49517,8 +49575,8 @@
               "text": "unberührt",
               "anzeige": null,
               "teile": null,
-              "pfad": "Satz 3",
-              "von": 643,
+              "pfad": "Satz 4",
+              "von": 1076,
               "laenge": 9,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -49553,16 +49611,32 @@
                 },
                 {
                   "n": "2.",
-                  "t": "Dokumente und Aktenteile, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind",
+                  "t": "Akten, in denen Dokumente und Aktenteile",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.54,
+                  "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "Die für die Handhabung von Verschlusssachen geltenden Geheimschutzvorschriften",
+                  "t": "wenn eine teilweise elektronische Aktenführung nur mit unverhältnismäßigem Aufwand möglich wäre",
+                  "pfad": "Satz 2",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "Dokumente und Aktenteile, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind",
                   "pfad": "Satz 3",
+                  "konfidenz": 0.54,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "5.",
+                  "t": "Die für die Handhabung von Verschlusssachen geltenden Geheimschutzvorschriften",
+                  "pfad": "Satz 4",
                   "konfidenz": 0.6,
                   "beleg": null,
                   "mehrteilig": false
@@ -49584,16 +49658,24 @@
                 },
                 {
                   "n": "2.",
-                  "t": "dürfen bis zum 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform übermittelt werden",
+                  "t": "enthalten sind, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache höher als VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind, dürfen bis einschließlich 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform erstellt, geführt und übermittelt werden",
                   "pfad": "Satz 2",
-                  "konfidenz": 0.6,
+                  "konfidenz": 0.48,
                   "beleg": null,
                   "mehrteilig": false
                 },
                 {
                   "n": "3.",
-                  "t": "unberührt",
+                  "t": "dürfen bis zum 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform übermittelt werden",
                   "pfad": "Satz 3",
+                  "konfidenz": 0.6,
+                  "beleg": null,
+                  "mehrteilig": false
+                },
+                {
+                  "n": "4.",
+                  "t": "unberührt",
+                  "pfad": "Satz 4",
                   "konfidenz": 0.45,
                   "beleg": null,
                   "mehrteilig": false
@@ -49605,11 +49687,14 @@
       ],
       "tb": [
         "Dokumente und Aktenteile, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache höher als VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind",
+        "Akten, in denen Dokumente und Aktenteile",
+        "wenn eine teilweise elektronische Aktenführung nur mit unverhältnismäßigem Aufwand möglich wäre",
         "Dokumente und Aktenteile, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind",
         "Die für die Handhabung von Verschlusssachen geltenden Geheimschutzvorschriften"
       ],
       "rf": [
         "dürfen bis zum 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform erstellt, geführt und übermittelt werden",
+        "enthalten sind, die nach den Verschlusssachenanweisungen des Bundes oder der Länder als Verschlusssache höher als VS-NUR FÜR DEN DIENSTGEBRAUCH eingestuft sind, dürfen bis einschließlich 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform erstellt, geführt und übermittelt werden",
         "dürfen bis zum 31. Dezember 2035 abweichend von den §§ 52a bis 52d in Papierform übermittelt werden",
         "unberührt"
       ],
@@ -49617,7 +49702,7 @@
       "definitionen": [],
       "status": "syntaktisch",
       "markierbar": true,
-      "konfidenz": 0.555,
+      "konfidenz": 0.557,
       "belegquote": 0,
       "belege": [],
       "strittig": false,
@@ -49625,9 +49710,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "f6a7316b892782246c0c9242a5abe0c7752caf74152eab258062bbe5753c4694",
+      "text_hash": "be1c0483c591bb4b27bf114a05693acabdac3f07dce4264970b8590cd0dee285",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:53.001Z"
+      "aktualisiert": "2026-10-30T11:22:26.511Z"
     },
     "184": {
       "typ": "aussage",
