@@ -8,7 +8,7 @@
     "nur-syntax"
   ],
   "laeufe": 0,
-  "aktualisiert": "2026-11-17T14:20:01.994Z",
+  "aktualisiert": "2026-11-18T13:03:12.771Z",
   "quelle": "https://www.gesetze-im-internet.de/ustg_1980/",
   "stand": [
     {
@@ -53947,7 +53947,7 @@
         {
           "pfad": "Abs. 33 Satz 2",
           "von": 13232,
-          "bis": 13420,
+          "bis": 13419,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -53969,12 +53969,12 @@
             },
             {
               "art": "rf",
-              "text": "be-ziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
+              "text": "beziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 33 Satz 2",
               "von": 13331,
-              "laenge": 88,
+              "laenge": 87,
               "konfidenz": 0.6,
               "stimmen": 0,
               "laeufe": 0,
@@ -53987,16 +53987,16 @@
         },
         {
           "pfad": "Abs. 34 Satz 1",
-          "von": 13421,
-          "bis": 13780,
+          "von": 13420,
+          "bis": 13779,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 34 Satz 2",
-          "von": 13781,
-          "bis": 13961,
+          "von": 13780,
+          "bis": 13960,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -54006,7 +54006,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 34 Satz 2",
-              "von": 13781,
+              "von": 13780,
               "laenge": 96,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54023,17 +54023,17 @@
               "teile": [
                 {
                   "text": "sind letztmalig auf Umsätze",
-                  "von": 13878,
+                  "von": 13877,
                   "laenge": 27
                 },
                 {
                   "text": "anzuwenden",
-                  "von": 13906,
+                  "von": 13905,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 34 Satz 2",
-              "von": 13878,
+              "von": 13877,
               "laenge": 27,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54047,40 +54047,40 @@
         },
         {
           "pfad": "Abs. 35 Satz 1",
-          "von": 13962,
-          "bis": 14127,
+          "von": 13961,
+          "bis": 14126,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 35 Satz 2",
-          "von": 14128,
-          "bis": 14295,
+          "von": 14127,
+          "bis": 14294,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 36 Satz 1",
-          "von": 14296,
-          "bis": 14487,
+          "von": 14295,
+          "bis": 14486,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 37 Satz 1",
-          "von": 14488,
-          "bis": 14660,
+          "von": 14487,
+          "bis": 14659,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 38 Satz 1",
-          "von": 14661,
-          "bis": 14714,
+          "von": 14660,
+          "bis": 14713,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -54090,7 +54090,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Satz 1",
-              "von": 14661,
+              "von": 14660,
               "laenge": 34,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54106,7 +54106,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Satz 1",
-              "von": 14696,
+              "von": 14695,
               "laenge": 18,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54120,8 +54120,8 @@
         },
         {
           "pfad": "Abs. 38 Nr. 1",
-          "von": 14718,
-          "bis": 14982,
+          "von": 14717,
+          "bis": 14981,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -54131,7 +54131,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 1",
-              "von": 14718,
+              "von": 14717,
               "laenge": 89,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54148,17 +54148,17 @@
               "teile": [
                 {
                   "text": "ausgeführten Umsatz auf Papier",
-                  "von": 14808,
+                  "von": 14807,
                   "laenge": 30
                 },
                 {
                   "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-                  "von": 14920,
+                  "von": 14919,
                   "laenge": 61
                 }
               ],
               "pfad": "Abs. 38 Nr. 1",
-              "von": 14808,
+              "von": 14807,
               "laenge": 30,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54174,7 +54174,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 1",
-              "von": 14844,
+              "von": 14843,
               "laenge": 74,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54188,8 +54188,8 @@
         },
         {
           "pfad": "Abs. 38 Nr. 2",
-          "von": 14986,
-          "bis": 15406,
+          "von": 14985,
+          "bis": 15405,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -54199,7 +54199,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 2",
-              "von": 14986,
+              "von": 14985,
               "laenge": 89,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54216,17 +54216,17 @@
               "teile": [
                 {
                   "text": "ausgeführten Umsatz auf Papier",
-                  "von": 15076,
+                  "von": 15075,
                   "laenge": 30
                 },
                 {
                   "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, übermittelt werden",
-                  "von": 15188,
+                  "von": 15187,
                   "laenge": 61
                 }
               ],
               "pfad": "Abs. 38 Nr. 2",
-              "von": 15076,
+              "von": 15075,
               "laenge": 30,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54242,7 +54242,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 2",
-              "von": 15112,
+              "von": 15111,
               "laenge": 74,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54258,7 +54258,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 2",
-              "von": 15251,
+              "von": 15250,
               "laenge": 154,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54272,8 +54272,8 @@
         },
         {
           "pfad": "Abs. 38 Nr. 3 Satz 1",
-          "von": 15410,
-          "bis": 15860,
+          "von": 15409,
+          "bis": 15859,
           "typ": "konditional",
           "junktor": "oder",
           "elemente": [
@@ -54283,7 +54283,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 3 Satz 1",
-              "von": 15410,
+              "von": 15409,
               "laenge": 89,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54300,17 +54300,17 @@
               "teile": [
                 {
                   "text": "ausgeführten Umsatz",
-                  "von": 15500,
+                  "von": 15499,
                   "laenge": 19
                 },
                 {
                   "text": "das nicht § 14 Absatz 1 Satz 6 entspricht, ausgestellt werden",
-                  "von": 15596,
+                  "von": 15595,
                   "laenge": 61
                 }
               ],
               "pfad": "Abs. 38 Nr. 3 Satz 1",
-              "von": 15500,
+              "von": 15499,
               "laenge": 19,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -54326,7 +54326,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 3 Satz 1",
-              "von": 15520,
+              "von": 15519,
               "laenge": 74,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54342,7 +54342,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 3 Satz 1",
-              "von": 15659,
+              "von": 15658,
               "laenge": 200,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54356,8 +54356,8 @@
         },
         {
           "pfad": "Abs. 38 Nr. 3 Satz 2",
-          "von": 15861,
-          "bis": 15907,
+          "von": 15860,
+          "bis": 15906,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -54367,7 +54367,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Nr. 3 Satz 2",
-              "von": 15890,
+              "von": 15889,
               "laenge": 16,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -54381,8 +54381,8 @@
         },
         {
           "pfad": "Abs. 38 Satz 2",
-          "von": 15908,
-          "bis": 15948,
+          "von": 15907,
+          "bis": 15947,
           "typ": "verweisung",
           "junktor": null,
           "elemente": [
@@ -54392,7 +54392,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Satz 2",
-              "von": 15908,
+              "von": 15907,
               "laenge": 21,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54408,7 +54408,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 38 Satz 2",
-              "von": 15938,
+              "von": 15937,
               "laenge": 9,
               "konfidenz": 0.45,
               "stimmen": 0,
@@ -54422,16 +54422,16 @@
         },
         {
           "pfad": "Abs. 39 Satz 1",
-          "von": 15949,
-          "bis": 16184,
+          "von": 15948,
+          "bis": 16183,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 40 Satz 1",
-          "von": 16185,
-          "bis": 16362,
+          "von": 16184,
+          "bis": 16361,
           "typ": "aussage",
           "junktor": null,
           "elemente": [
@@ -54441,7 +54441,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40 Satz 1",
-              "von": 16185,
+              "von": 16184,
               "laenge": 68,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54458,17 +54458,17 @@
               "teile": [
                 {
                   "text": "ist auf alle Rechnungen",
-                  "von": 16254,
+                  "von": 16253,
                   "laenge": 23
                 },
                 {
                   "text": "anzuwenden",
-                  "von": 16278,
+                  "von": 16277,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 40 Satz 1",
-              "von": 16254,
+              "von": 16253,
               "laenge": 23,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54482,16 +54482,16 @@
         },
         {
           "pfad": "Abs. 40 Satz 2",
-          "von": 16363,
-          "bis": 16383,
+          "von": 16362,
+          "bis": 16382,
           "typ": "aussage",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 40 Nr. 1",
-          "von": 16387,
-          "bis": 16516,
+          "von": 16386,
+          "bis": 16515,
           "typ": "aussage",
           "junktor": "oder",
           "elemente": [
@@ -54501,7 +54501,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40 Nr. 1",
-              "von": 16387,
+              "von": 16386,
               "laenge": 60,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54517,7 +54517,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40 Nr. 1",
-              "von": 16448,
+              "von": 16447,
               "laenge": 67,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54531,8 +54531,8 @@
         },
         {
           "pfad": "Abs. 40 Nr. 2",
-          "von": 16520,
-          "bis": 16602,
+          "von": 16519,
+          "bis": 16601,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -54543,7 +54543,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40 Nr. 2",
-              "von": 16520,
+              "von": 16519,
               "laenge": 77,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54557,8 +54557,8 @@
         },
         {
           "pfad": "Abs. 40 Nr. 3",
-          "von": 16606,
-          "bis": 16689,
+          "von": 16605,
+          "bis": 16688,
           "typ": "aussage",
           "katalog": true,
           "junktor": "oder",
@@ -54569,7 +54569,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40 Nr. 3",
-              "von": 16606,
+              "von": 16605,
               "laenge": 82,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54583,8 +54583,8 @@
         },
         {
           "pfad": "Abs. 40 Satz 2 (Teil 2)",
-          "von": 16690,
-          "bis": 16979,
+          "von": 16689,
+          "bis": 16978,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -54595,17 +54595,17 @@
               "teile": [
                 {
                   "text": "ist § 14b Absatz 1 Satz 1 in der ab dem 1. Januar 2025 geltenden Fassung abweichend von Satz 1 erstmals auf Unterlagen",
-                  "von": 16690,
+                  "von": 16689,
                   "laenge": 118
                 },
                 {
                   "text": "anzuwenden",
-                  "von": 16809,
+                  "von": 16808,
                   "laenge": 10
                 }
               ],
               "pfad": "Abs. 40 Satz 2 (Teil 2)",
-              "von": 16690,
+              "von": 16689,
               "laenge": 118,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54619,16 +54619,16 @@
         },
         {
           "pfad": "Abs. 40a Satz 1",
-          "von": 16980,
-          "bis": 17435,
+          "von": 16979,
+          "bis": 17434,
           "typ": "anwendung",
           "junktor": null,
           "elemente": []
         },
         {
           "pfad": "Abs. 40a Satz 2",
-          "von": 17436,
-          "bis": 17657,
+          "von": 17435,
+          "bis": 17656,
           "typ": "konditional",
           "junktor": null,
           "elemente": [
@@ -54638,7 +54638,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40a Satz 2",
-              "von": 17436,
+              "von": 17435,
               "laenge": 32,
               "konfidenz": 0.6,
               "stimmen": 0,
@@ -54654,7 +54654,7 @@
               "anzeige": null,
               "teile": null,
               "pfad": "Abs. 40a Satz 2",
-              "von": 17469,
+              "von": 17468,
               "laenge": 187,
               "konfidenz": 0.48,
               "stimmen": 0,
@@ -55596,7 +55596,7 @@
               "sub": [
                 {
                   "n": "1.",
-                  "t": "be-ziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
+                  "t": "beziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
                   "pfad": "Abs. 33 Satz 2",
                   "konfidenz": 0.6,
                   "beleg": null,
@@ -55999,7 +55999,7 @@
         "gilt die Erklärung auch für sämtliche Leistungen, die nach dem 31. Dezember 2020 und vor dem 1. Januar 2027 ausgeführt werden",
         "kann auch für Zeiträume nach dem 31. Dezember 2020 nur mit Wirkung vom Beginn eines auf die Abgabe folgenden Kalenderjahres an widerrufen werden",
         "gilt bis zu den Zeitpunkten nach § 412 Absatz 1 Satz 4 des Fünften Buches Sozialgesetzbuch sowie § 412 Absatz 5 Satz 9 in Verbindung mit § 412 Absatz 1 Satz 4 des Fünften Buches Sozialgesetzbuch fort",
-        "be-ziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
+        "beziehen sich auf die jeweilige Fassung der Artikel 13 und 14 des vorgenannten Gesetzes",
         "sind letztmalig auf Umsätze",
         "kann eine Rechnung",
         "ausgeführten Umsatz auf Papier",
@@ -56030,9 +56030,9 @@
       "laeufe": 0,
       "verfahren": "syntaxanalyse",
       "hinweis": "Rein syntaktisch erzeugt, ohne Modelllauf. Automatisch erzeugt und nicht redaktionell geprüft. Keine Rechtsberatung.",
-      "text_hash": "b34ceec2fc31d83c21299cb08a5347f9c6cfcaf8ab40586603b0c92b6d0ca650",
+      "text_hash": "260516d15675292b43c54297ba96c9e674cc08e2e7258a3469f9d41d558eaf09",
       "format": 5,
-      "aktualisiert": "2026-08-18T10:33:52.383Z"
+      "aktualisiert": "2026-11-18T13:03:12.767Z"
     },
     "28": {
       "typ": "gemischt",
