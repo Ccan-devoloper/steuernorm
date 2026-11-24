@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-11-24T14:53:20.117Z",
+  "erzeugt": "2026-11-24T15:49:43.327Z",
   "format": 5,
   "modelle": [
     "nur-syntax"
@@ -27,10 +27,10 @@
     {
       "abk": "EStG",
       "normen": 247,
-      "bearbeitet": 3,
-      "uebernommen": 244,
+      "bearbeitet": 0,
+      "uebernommen": 247,
       "markierbar": 221,
-      "abgelehnt": 20,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
@@ -45,10 +45,10 @@
     {
       "abk": "UStG",
       "normen": 93,
-      "bearbeitet": 1,
-      "uebernommen": 92,
+      "bearbeitet": 0,
+      "uebernommen": 93,
       "markierbar": 86,
-      "abgelehnt": 17,
+      "abgelehnt": 0,
       "vollstaendig": true
     },
     {
